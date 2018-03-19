@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_NBit_2x1.xst" -ofn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_NBit_2x1.syr" 

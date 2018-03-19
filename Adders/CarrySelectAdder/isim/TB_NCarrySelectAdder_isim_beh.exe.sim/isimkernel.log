@@ -1,0 +1,29 @@
+Command line:
+   TB_NCarrySelectAdder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50903
+
+Sat Oct 07 11:26:20 2017
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 851.689 Meg
+
+ Total Signals          : 771
+ Total Nets             : 458
+ Total Signal Drivers   : 339
+ Total Blocks           : 252
+ Total Primitive Blocks : 82
+ Total Processes        : 337
+ Total Traceable Variables  : 120
+ Total Scalar Nets and Variables : 1048
+Total Line Count : 441
+
+ Total Simulation Time: 0.453125 sec
+
+ Current Memory Usage: 695.19 Meg
+
+Sat Oct 07 11:27:23 2017
+

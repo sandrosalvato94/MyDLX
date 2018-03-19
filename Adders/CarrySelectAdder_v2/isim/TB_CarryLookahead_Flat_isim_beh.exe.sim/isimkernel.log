@@ -1,0 +1,29 @@
+Command line:
+   TB_CarryLookahead_Flat_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52737
+
+Sat Oct 07 13:02:36 2017
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 851.231 Meg
+
+ Total Signals          : 34
+ Total Nets             : 23
+ Total Signal Drivers   : 16
+ Total Blocks           : 13
+ Total Primitive Blocks : 6
+ Total Processes        : 14
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 512
+Total Line Count : 86
+
+ Total Simulation Time: 0.65625 sec
+
+ Current Memory Usage: 1167.38 Meg
+
+Sat Oct 07 13:03:16 2017
+

@@ -1,0 +1,4 @@
+vhdl isim_temp "Mux_NBit_2x1.vhd"
+vhdl isim_temp "constants.vhd"
+vhdl isim_temp "Barrel_Shifter.vhd"
+vhdl isim_temp "TB_Barrel_Shifter.vhd"

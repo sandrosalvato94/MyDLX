@@ -1,0 +1,6 @@
+[Inputs]
+Rst
+=Addr[31:0]=
+[Outputs]
+=Dout[31:0]=
+[BiDir]

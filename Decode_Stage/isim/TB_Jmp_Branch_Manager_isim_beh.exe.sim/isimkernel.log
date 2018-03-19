@@ -1,0 +1,29 @@
+Command line:
+   TB_Jmp_Branch_Manager_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63438
+
+Tue Oct 17 17:57:21 2017
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 851.821 Meg
+
+ Total Signals          : 182
+ Total Nets             : 429
+ Total Signal Drivers   : 229
+ Total Blocks           : 169
+ Total Primitive Blocks : 99
+ Total Processes        : 230
+ Total Traceable Variables  : 112
+ Total Scalar Nets and Variables : 924
+Total Line Count : 204
+
+ Total Simulation Time: 0.09375 sec
+
+ Current Memory Usage: 851.821 Meg
+
+Tue Oct 17 17:57:32 2017
+

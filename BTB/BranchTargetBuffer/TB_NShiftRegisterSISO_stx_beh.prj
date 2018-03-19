@@ -1,0 +1,4 @@
+vhdl isim_temp "Mux_Bit.vhd"
+vhdl isim_temp "D_FF_rst.vhd"
+vhdl isim_temp "NShiftRegisterSISO.vhd"
+vhdl isim_temp "TB_NShiftRegisterSISO.vhd"

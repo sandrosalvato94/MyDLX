@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder_v2/NCarrySelectAdder.xst" -ofn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder_v2/NCarrySelectAdder.syr" 

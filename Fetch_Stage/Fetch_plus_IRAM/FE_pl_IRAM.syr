@@ -1,0 +1,164 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: FE_pl_IRAM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FE_pl_IRAM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FE_pl_IRAM"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : FE_pl_IRAM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\PG_cell.vhd" into library work
+Parsing entity <PG_cell>.
+Parsing architecture <Behavioral> of entity <pg_cell>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\Sum_Network.vhd" into library work
+Parsing entity <Sum_Network>.
+Parsing architecture <Behavioral> of entity <sum_network>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\PG_network.vhd" into library work
+Parsing entity <PG_network>.
+Parsing architecture <Behavioral> of entity <pg_network>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\Carry_Network.vhd" into library work
+Parsing entity <Carry_Network>.
+Parsing architecture <Behavioral> of entity <carry_network>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\PropagateCarryLookahead.vhd" into library work
+Parsing entity <PropagateCarryLookahead>.
+Parsing architecture <Behavioral> of entity <propagatecarrylookahead>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\NRegister.vhd" into library work
+Parsing entity <NRegister>.
+Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\Fetch.vhd" into library work
+Parsing entity <Fetch>.
+Parsing architecture <Structural> of entity <fetch>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\a.c-IRAM.vhd" into library work
+Parsing entity <IRAM>.
+Parsing architecture <IRam_Bhe> of entity <iram>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\FE_pl_IRAM.vhd" into library work
+Parsing entity <FE_pl_IRAM>.
+Parsing architecture <Behavioral> of entity <fe_pl_iram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <FE_pl_IRAM> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Fetch> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <PropagateCarryLookahead> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <PG_network> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\PG_network.vhd" Line 61: Assignment to tmp1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Fetch_Stage\Fetch_plus_IRAM\PG_network.vhd" Line 62: Assignment to tmp2 ignored, since the identifier is never used
+
+Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Carry_Network> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Sum_Network> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <IRAM> (architecture <IRam_Bhe>) with generics from library <work>.
+Non-constant loop found; will execute up to 5000 iterations

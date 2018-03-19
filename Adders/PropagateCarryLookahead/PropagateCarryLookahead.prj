@@ -1,0 +1,5 @@
+vhdl work "PG_cell.vhd"
+vhdl work "Sum_Network.vhd"
+vhdl work "PG_network.vhd"
+vhdl work "Carry_Network.vhd"
+vhdl work "PropagateCarryLookahead.vhd"

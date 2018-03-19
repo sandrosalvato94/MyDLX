@@ -1,0 +1,769 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: BTB.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BTB.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BTB"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : BTB
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff_rst1.vhd" into library work
+Parsing entity <t_ff_rst1>.
+Parsing architecture <Behavioral> of entity <t_ff_rst1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff.vhd" into library work
+Parsing entity <t_ff_rst0>.
+Parsing architecture <behavioral> of entity <t_ff_rst0>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\constants.vhd" into library work
+Parsing package <CONSTANTS>.
+Parsing package body <CONSTANTS>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ud_counter.vhd" into library work
+Parsing entity <UD_COUNTER>.
+Parsing architecture <STR> of entity <ud_counter>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NORGate_NX1.vhd" into library work
+Parsing entity <NORGate_NX1>.
+Parsing architecture <Behavioral> of entity <norgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_Bit.vhd" into library work
+Parsing entity <Mux_Bit>.
+Parsing architecture <Behavioral> of entity <mux_bit>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\D_FF.vhd" into library work
+Parsing entity <D_FF>.
+Parsing architecture <Behavioral> of entity <d_ff>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\CU_SatCounter.vhd" into library work
+Parsing entity <CU_SatCounter>.
+Parsing architecture <Behavioral> of entity <cu_satcounter>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ComparatorWithEnable.vhd" into library work
+Parsing entity <ComparatorWithEnable>.
+Parsing architecture <Behavioral> of entity <comparatorwithenable>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ANDGate_NX1.vhd" into library work
+Parsing entity <ANDGate_NX1>.
+Parsing architecture <Behavioral> of entity <andgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\SAT_Counter.vhd" into library work
+Parsing entity <SAT_Counter_BTB>.
+Parsing architecture <Structural> of entity <sat_counter_btb>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Reg1Bit.vhd" into library work
+Parsing entity <Reg1Bit>.
+Parsing architecture <Behavioral> of entity <reg1bit>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ORGate_NX1.vhd" into library work
+Parsing entity <ORGate_NX1>.
+Parsing architecture <Behavioral> of entity <orgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" into library work
+Parsing entity <NRotateRegister>.
+Parsing architecture <Behavioral> of entity <nrotateregister>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRegister.vhd" into library work
+Parsing entity <NRegister>.
+Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NPriorityEncoder.vhd" into library work
+Parsing entity <NPriorityEncoder>.
+Parsing architecture <Behavioral> of entity <npriorityencoder>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NComparatorWithEnable.vhd" into library work
+Parsing entity <NComparatorWithEnable>.
+Parsing architecture <Behavioral> of entity <ncomparatorwithenable>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\BTB.vhd" into library work
+Parsing entity <BTB>.
+Parsing architecture <Structural> of entity <btb>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <BTB> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <NComparatorWithEnable> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ComparatorWithEnable> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <NPriorityEncoder> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NPriorityEncoder.vhd" Line 59: Using initial value "00000000000000000000000000000000" for s_zeros since it is never assigned
+WARNING:HDLCompiler:92 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NPriorityEncoder.vhd" Line 68: s_zeros should be on the sensitivity list of the process
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Reg1Bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <NRotateRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <D_FF> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mux_Bit> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" Line 86: Net <dataIN[30]> does not have a driver.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <SAT_Counter_BTB> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <UD_COUNTER> (architecture <STR>) with generics from library <work>.
+
+Elaborating entity <t_ff_rst0> (architecture <behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff.vhd" Line 23: tff_t should be on the sensitivity list of the process
+
+Elaborating entity <t_ff_rst1> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff_rst1.vhd" Line 42: tff_t should be on the sensitivity list of the process
+
+Elaborating entity <CU_SatCounter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ANDGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <NORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_Bit> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <BTB>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\BTB.vhd".
+        N_ENTRY = 32
+        NBIT_ENTRY = 32
+        NBIT_TARGET = 32
+        NBIT_PREDICTION = 2
+    Summary:
+	no macro.
+Unit <BTB> synthesized.
+
+Synthesizing Unit <NComparatorWithEnable>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NComparatorWithEnable.vhd".
+        NBIT = 32
+    Summary:
+	no macro.
+Unit <NComparatorWithEnable> synthesized.
+
+Synthesizing Unit <ComparatorWithEnable>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ComparatorWithEnable.vhd".
+    Summary:
+	no macro.
+Unit <ComparatorWithEnable> synthesized.
+
+Synthesizing Unit <ORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ORGate_NX1.vhd".
+        N = 32
+    Summary:
+	no macro.
+Unit <ORGate_NX1> synthesized.
+
+Synthesizing Unit <NPriorityEncoder>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NPriorityEncoder.vhd".
+        NBIT_OUT = 5
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   5 Latch(s).
+	inferred 134 Multiplexer(s).
+Unit <NPriorityEncoder> synthesized.
+
+Synthesizing Unit <NRegister>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRegister.vhd".
+        N = 32
+    Found 32-bit register for signal <data_out>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <NRegister> synthesized.
+
+Synthesizing Unit <Reg1Bit>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Reg1Bit.vhd".
+    Found 1-bit register for signal <data_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Reg1Bit> synthesized.
+
+Synthesizing Unit <NRotateRegister>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd".
+        N = 32
+WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <load> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[0].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[1].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[2].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[3].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[4].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[5].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[6].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[7].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[8].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[9].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[10].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[11].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[12].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[13].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[14].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[15].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[16].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[17].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[18].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[19].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[20].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[21].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[22].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[23].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[24].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[25].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[26].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[27].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[28].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[29].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[30].DFF_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NRotateRegister.vhd" line 109: Output port <Not_Q> of the instance <GEN_FF[31].DFF_i> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'dataIN<30:0>', unconnected in block 'NRotateRegister', is tied to its initial value (0000000000000000000000000000000).
+    Summary:
+	no macro.
+Unit <NRotateRegister> synthesized.
+
+Synthesizing Unit <D_FF>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\D_FF.vhd".
+    Found 1-bit register for signal <Not_Q>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <D_FF> synthesized.
+
+Synthesizing Unit <Mux_Bit_1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_Bit.vhd".
+        NBIT_Sel = 2
+    Found 1-bit 4-to-1 multiplexer for signal <output> created at line 45.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_Bit_1> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1> synthesized.
+
+Synthesizing Unit <SAT_Counter_BTB>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\SAT_Counter.vhd".
+        N = 2
+    Summary:
+	no macro.
+Unit <SAT_Counter_BTB> synthesized.
+
+Synthesizing Unit <UD_COUNTER>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ud_counter.vhd".
+        UDC_NBIT = 2
+    Summary:
+	no macro.
+Unit <UD_COUNTER> synthesized.
+
+Synthesizing Unit <t_ff_rst0>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff.vhd".
+    Found 1-bit register for signal <data>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <t_ff_rst0> synthesized.
+
+Synthesizing Unit <t_ff_rst1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\t_ff_rst1.vhd".
+    Found 1-bit register for signal <data>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <t_ff_rst1> synthesized.
+
+Synthesizing Unit <CU_SatCounter>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\CU_SatCounter.vhd".
+    Summary:
+	inferred  18 Multiplexer(s).
+Unit <CU_SatCounter> synthesized.
+
+Synthesizing Unit <ANDGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\ANDGate_NX1.vhd".
+        N = 2
+    Summary:
+	no macro.
+Unit <ANDGate_NX1> synthesized.
+
+Synthesizing Unit <NORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\NORGate_NX1.vhd".
+        N = 2
+    Summary:
+	no macro.
+Unit <NORGate_NX1> synthesized.
+
+Synthesizing Unit <Mux_Bit_2>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_Bit.vhd".
+        NBIT_Sel = 5
+    Found 1-bit 32-to-1 multiplexer for signal <output> created at line 45.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_Bit_2> synthesized.
+
+Synthesizing Unit <Mux_1Bit_2X1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\BTB\BranchTargetBuffer\Mux_1Bit_2X1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1Bit_2X1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 194
+ 1-bit register                                        : 129
+ 32-bit register                                       : 65
+# Latches                                              : 5
+ 1-bit latch                                           : 5
+# Multiplexers                                         : 779
+ 1-bit 2-to-1 multiplexer                              : 711
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 35
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2209
+ Flip-Flops                                            : 2209
+# Multiplexers                                         : 778
+ 1-bit 2-to-1 multiplexer                              : 710
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 35
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <GEN_FF[31].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[30].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[29].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[28].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[27].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[26].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[25].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[24].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[23].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[22].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[21].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[20].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[19].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[18].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[17].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[16].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[15].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[14].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[13].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[12].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[11].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[10].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[9].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[8].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[7].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[6].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[5].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[4].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[3].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[2].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[1].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:2677 - Node <GEN_FF[0].DFF_i/Not_Q> of sequential type is unconnected in block <NRotateRegister>.
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    data_out_4 in unit <NPriorityEncoder>
+    data_out_0 in unit <NPriorityEncoder>
+    data_out_1 in unit <NPriorityEncoder>
+    data_out_2 in unit <NPriorityEncoder>
+    data_out_3 in unit <NPriorityEncoder>
+
+
+Optimizing unit <BTB> ...
+
+Optimizing unit <NRegister> ...
+
+Optimizing unit <NRotateRegister> ...
+
+Optimizing unit <NPriorityEncoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BTB, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2177
+ Flip-Flops                                            : 2177
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : BTB.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1924
+#      LUT2                        : 157
+#      LUT3                        : 129
+#      LUT4                        : 210
+#      LUT5                        : 409
+#      LUT6                        : 1015
+#      MUXF7                       : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 2182
+#      FD                          : 32
+#      FDC                         : 32
+#      FDCE                        : 2081
+#      FDP                         : 32
+#      LD                          : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 133
+#      IBUF                        : 100
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2182  out of  126800     1%  
+ Number of Slice LUTs:                 1920  out of  63400     3%  
+    Number used as Logic:              1920  out of  63400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3325
+   Number with an unused Flip Flop:    1143  out of   3325    34%  
+   Number with an unused LUT:          1405  out of   3325    42%  
+   Number of fully used LUT-FF pairs:   777  out of   3325    23%  
+   Number of unique control sets:        67
+
+IO Utilization: 
+ Number of IOs:                         134
+ Number of bonded IOBs:                 134  out of    210    63%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)               | Load  |
+-----------------------------------+-------------------------------------+-------+
+BTB_clk                            | BUFGP                               | 2177  |
+N0                                 | NONE(PriorityEncoder32X5/data_out_4)| 5     |
+-----------------------------------+-------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.075ns (Maximum Frequency: 245.423MHz)
+   Minimum input arrival time before clock: 4.506ns
+   Maximum output required time after clock: 6.349ns
+   Maximum combinational path delay: 6.781ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'BTB_clk'
+  Clock period: 4.075ns (frequency: 245.423MHz)
+  Total number of paths / destination ports: 10671 / 2241
+-------------------------------------------------------------------------
+Delay:               4.075ns (Levels of Logic = 7)
+  Source:            GEN_ENTR_REG[8].EntrReg_i/data_out_26 (FF)
+  Destination:       HitMissReg/data_out (FF)
+  Source Clock:      BTB_clk rising
+  Destination Clock: BTB_clk rising
+
+  Data Path: GEN_ENTR_REG[8].EntrReg_i/data_out_26 to HitMissReg/data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.361   0.511  GEN_ENTR_REG[8].EntrReg_i/data_out_26 (GEN_ENTR_REG[8].EntrReg_i/data_out_26)
+     LUT6:I3->O            4   0.097   0.309  GEN_NCmp[8].NCmp_i/matrix<0><5><0>311 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>31)
+     LUT6:I5->O            1   0.097   0.379  GEN_NCmp[8].NCmp_i/matrix<0><5><0>531 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>53)
+     LUT6:I4->O            2   0.097   0.300  GEN_NCmp[8].NCmp_i/matrix<0><5><0>54 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>5)
+     LUT4:I3->O            1   0.097   0.511  GEN_NCmp[8].NCmp_i/matrix<0><5><0>1011 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>101)
+     LUT6:I3->O            6   0.097   0.716  GEN_NCmp[8].NCmp_i/matrix<0><5><0>18 (s_cmpbits_Fcmp_Tencoder<8>)
+     LUT6:I0->O            2   0.097   0.299  ORGate32X1/matrix<0><5><0>7 (ORGate32X1/matrix<0><5><0>6)
+     LUT6:I5->O            1   0.097   0.000  ORGate32X1/matrix<0><5><0>8_1 (ORGate32X1/matrix<0><5><0>8)
+     FDCE:D                    0.008          HitMissReg/data_out
+    ----------------------------------------
+    Total                      4.075ns (1.048ns logic, 3.027ns route)
+                                       (25.7% logic, 74.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BTB_clk'
+  Total number of paths / destination ports: 14855 / 6403
+-------------------------------------------------------------------------
+Offset:              4.506ns (Levels of Logic = 8)
+  Source:            BTB_PC_From_IF<11> (PAD)
+  Destination:       HitMissReg/data_out (FF)
+  Destination Clock: BTB_clk rising
+
+  Data Path: BTB_PC_From_IF<11> to HitMissReg/data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            55   0.001   0.622  BTB_PC_From_IF_11_IBUF (BTB_PC_From_IF_11_IBUF)
+     LUT3:I0->O           12   0.097   0.734  SF131101 (SF13110)
+     LUT5:I0->O            1   0.097   0.295  GEN_NCmp[25].NCmp_i/matrix<0><5><0>9_SW0_SW0 (N408)
+     LUT6:I5->O            1   0.097   0.683  GEN_NCmp[25].NCmp_i/matrix<0><5><0>9 (GEN_NCmp[25].NCmp_i/matrix<0><5><0>10)
+     LUT6:I1->O            7   0.097   0.721  GEN_NCmp[25].NCmp_i/matrix<0><5><0>31 (s_cmpbits_Fcmp_Tencoder<25>)
+     LUT6:I0->O            1   0.097   0.379  ORGate32X1/matrix<0><5><0>2 (ORGate32X1/matrix<0><5><0>1)
+     LUT6:I4->O            2   0.097   0.383  ORGate32X1/matrix<0><5><0>4_SW0 (N186)
+     LUT6:I4->O            1   0.097   0.000  ORGate32X1/matrix<0><5><0>8_1 (ORGate32X1/matrix<0><5><0>8)
+     FDCE:D                    0.008          HitMissReg/data_out
+    ----------------------------------------
+    Total                      4.506ns (0.688ns logic, 3.818ns route)
+                                       (15.3% logic, 84.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BTB_clk'
+  Total number of paths / destination ports: 398405 / 33
+-------------------------------------------------------------------------
+Offset:              6.349ns (Levels of Logic = 11)
+  Source:            GEN_ENTR_REG[8].EntrReg_i/data_out_26 (FF)
+  Destination:       BTB_target_prediction<26> (PAD)
+  Source Clock:      BTB_clk rising
+
+  Data Path: GEN_ENTR_REG[8].EntrReg_i/data_out_26 to BTB_target_prediction<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.361   0.511  GEN_ENTR_REG[8].EntrReg_i/data_out_26 (GEN_ENTR_REG[8].EntrReg_i/data_out_26)
+     LUT6:I3->O            4   0.097   0.309  GEN_NCmp[8].NCmp_i/matrix<0><5><0>311 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>31)
+     LUT6:I5->O            1   0.097   0.379  GEN_NCmp[8].NCmp_i/matrix<0><5><0>531 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>53)
+     LUT6:I4->O            2   0.097   0.299  GEN_NCmp[8].NCmp_i/matrix<0><5><0>54 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>5)
+     LUT4:I3->O            1   0.097   0.511  GEN_NCmp[8].NCmp_i/matrix<0><5><0>1011 (GEN_NCmp[8].NCmp_i/matrix<0><5><0>101)
+     LUT6:I3->O            6   0.097   0.716  GEN_NCmp[8].NCmp_i/matrix<0><5><0>18 (s_cmpbits_Fcmp_Tencoder<8>)
+     LUT6:I0->O            2   0.097   0.299  ORGate32X1/matrix<0><5><0>7 (ORGate32X1/matrix<0><5><0>6)
+     LUT6:I5->O           26   0.097   0.617  ORGate32X1/matrix<0><5><0>8 (s_HIT_miss)
+     LUT3:I0->O           32   0.097   0.800  MuxTargOut/Mmux_portY10131 (MuxTargOut/Mmux_portY1013)
+     LUT6:I0->O            1   0.097   0.295  MuxTargOut/Mmux_portY908 (MuxTargOut/Mmux_portY907)
+     LUT5:I4->O            1   0.097   0.279  MuxTargOut/Mmux_portY9018 (BTB_target_prediction_25_OBUF)
+     OBUF:I->O                 0.000          BTB_target_prediction_25_OBUF (BTB_target_prediction<25>)
+    ----------------------------------------
+    Total                      6.349ns (1.331ns logic, 5.018ns route)
+                                       (21.0% logic, 79.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 400932 / 33
+-------------------------------------------------------------------------
+Delay:               6.781ns (Levels of Logic = 12)
+  Source:            BTB_PC_From_IF<11> (PAD)
+  Destination:       BTB_target_prediction<26> (PAD)
+
+  Data Path: BTB_PC_From_IF<11> to BTB_target_prediction<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            55   0.001   0.622  BTB_PC_From_IF_11_IBUF (BTB_PC_From_IF_11_IBUF)
+     LUT3:I0->O           12   0.097   0.734  SF131101 (SF13110)
+     LUT5:I0->O            1   0.097   0.295  GEN_NCmp[25].NCmp_i/matrix<0><5><0>9_SW0_SW0 (N408)
+     LUT6:I5->O            1   0.097   0.683  GEN_NCmp[25].NCmp_i/matrix<0><5><0>9 (GEN_NCmp[25].NCmp_i/matrix<0><5><0>10)
+     LUT6:I1->O            7   0.097   0.721  GEN_NCmp[25].NCmp_i/matrix<0><5><0>31 (s_cmpbits_Fcmp_Tencoder<25>)
+     LUT6:I0->O            1   0.097   0.379  ORGate32X1/matrix<0><5><0>2 (ORGate32X1/matrix<0><5><0>1)
+     LUT6:I4->O            2   0.097   0.384  ORGate32X1/matrix<0><5><0>4_SW0 (N186)
+     LUT6:I4->O           26   0.097   0.617  ORGate32X1/matrix<0><5><0>8 (s_HIT_miss)
+     LUT3:I0->O           32   0.097   0.800  MuxTargOut/Mmux_portY10131 (MuxTargOut/Mmux_portY1013)
+     LUT6:I0->O            1   0.097   0.295  MuxTargOut/Mmux_portY908 (MuxTargOut/Mmux_portY907)
+     LUT5:I4->O            1   0.097   0.279  MuxTargOut/Mmux_portY9018 (BTB_target_prediction_25_OBUF)
+     OBUF:I->O                 0.000          BTB_target_prediction_25_OBUF (BTB_target_prediction<25>)
+    ----------------------------------------
+    Total                      6.781ns (0.971ns logic, 5.810ns route)
+                                       (14.3% logic, 85.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock BTB_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BTB_clk        |    4.075|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 130.00 secs
+Total CPU time to Xst completion: 129.55 secs
+ 
+--> 
+
+Total memory usage is 391624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+

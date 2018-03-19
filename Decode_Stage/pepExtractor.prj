@@ -1,0 +1,7 @@
+work	"Carry_Network.vhd"
+work	"Jmp_Branch_Manager.vhd"
+work	"Mux_NBit_2x1.vhd"
+work	"PG_cell.vhd"
+work	"PG_network.vhd"
+work	"PropagateCarryLookahead.vhd"
+work	"Sum_Network.vhd"

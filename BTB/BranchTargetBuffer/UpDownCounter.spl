@@ -1,0 +1,8 @@
+[Inputs]
+UPD_clk
+UPD_reset
+UPD_enable
+UPD_Ud
+[Outputs]
+=UPD_out[1:0]=
+[BiDir]

@@ -1,0 +1,4 @@
+vhdl work "Mux_Bit.vhd"
+vhdl work "D_FF.vhd"
+vhdl work "NRotateRegister.vhd"
+vhdl work "TB_NRotateRegister.vhd"

@@ -1,0 +1,10 @@
+[Inputs]
+SAT_clk
+SAT_reset
+SAT_enable
+SAT_Ud
+SAT_update
+SAT_setToDef
+[Outputs]
+SAT_SO
+[BiDir]

@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/TB_NCarrySelectAdder_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/TB_NCarrySelectAdder_beh.prj work.TB_NCarrySelectAdder 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/Full_adder.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/RippleCarryAdder.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/Mux_1Bit_2X1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/CarrySelectAdder.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/NCarrySelectAdder.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/TB_NCarrySelectAdder.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 164040 KB
+Fuse CPU Usage: 375 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture structural of entity Full_adder [full_adder_default]
+Compiling architecture behavioral of entity RippleCarryAdder [\RippleCarryAdder(4)\]
+Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(4)\]
+Compiling architecture structural of entity CarrySelectAdder [\CarrySelectAdder(4)\]
+Compiling architecture behavioral of entity NCarrySelectAdder [\NCarrySelectAdder(32)\]
+Compiling architecture behavior of entity tb_ncarryselectadder
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/CarrySelectAdder/TB_NCarrySelectAdder_isim_beh.exe
+Fuse Memory Usage: 181544 KB
+Fuse CPU Usage: 593 ms
