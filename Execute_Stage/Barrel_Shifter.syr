@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Barrel_Shifter.prj
 
@@ -190,16 +190,13 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[2].L0.L1.L3.MUXi>, <musk_cyc[2].mux_cyc[3].L0.L1.L3.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[2].L0.L1.L3.MUXi>, <musk_cyc[3].mux_cyc[4].L0.L1.L3.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[3].L0.L1.L3.MUXi>, <musk_cyc[2].mux_cyc[4].L0.L1.L3.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[0].mux_cyc[3].L0.L1.L3.MUXi>, <musk_cyc[1].mux_cyc[4].L0.L1.L3.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[1].L0.L1.L2.MUXi>, <musk_cyc[2].mux_cyc[0].L0.L1.L2.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L0.L4.MUXi>, <musk_cyc[2].mux_cyc[2].L0.L4.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L0.L4.MUXi>, <musk_cyc[3].mux_cyc[0].L0.L4.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L0.L4.MUXi>, <musk_cyc[3].mux_cyc[1].L0.L4.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L0.L4.MUXi>, <musk_cyc[3].mux_cyc[2].L0.L4.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L0.L4.MUXi>, <musk_cyc[3].mux_cyc[3].L0.L4.MUXi> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[3].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[2].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[1].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 
 Optimizing unit <Barrel_Shifter> ...
 
@@ -234,13 +231,13 @@ Top Level Output File Name         : Barrel_Shifter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 147
-#      LUT2                        : 3
-#      LUT3                        : 17
-#      LUT4                        : 9
-#      LUT5                        : 10
-#      LUT6                        : 107
-#      MUXF7                       : 1
+# BELS                             : 169
+#      LUT2                        : 2
+#      LUT3                        : 7
+#      LUT4                        : 14
+#      LUT5                        : 28
+#      LUT6                        : 113
+#      MUXF7                       : 5
 # IO Buffers                       : 71
 #      IBUF                        : 39
 #      OBUF                        : 32
@@ -252,14 +249,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  146  out of  63400     0%  
-    Number used as Logic:               146  out of  63400     0%  
+ Number of Slice LUTs:                  164  out of  63400     0%  
+    Number used as Logic:               164  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    146
-   Number with an unused Flip Flop:     146  out of    146   100%  
-   Number with an unused LUT:             0  out of    146     0%  
-   Number of fully used LUT-FF pairs:     0  out of    146     0%  
+ Number of LUT Flip Flop pairs used:    164
+   Number with an unused Flip Flop:     164  out of    164   100%  
+   Number with an unused LUT:             0  out of    164     0%  
+   Number of fully used LUT-FF pairs:     0  out of    164     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -299,7 +296,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.551ns
+   Maximum combinational path delay: 3.423ns
 
 Timing Details:
 ---------------
@@ -307,26 +304,26 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2960 / 32
+  Total number of paths / destination ports: 3519 / 32
 -------------------------------------------------------------------------
-Delay:               3.551ns (Levels of Logic = 7)
-  Source:            BS_opcode<1> (PAD)
-  Destination:       BS_data_out<19> (PAD)
+Delay:               3.423ns (Levels of Logic = 7)
+  Source:            BS_amount<4> (PAD)
+  Destination:       BS_data_out<3> (PAD)
 
-  Data Path: BS_opcode<1> to BS_data_out<19>
+  Data Path: BS_amount<4> to BS_data_out<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            54   0.001   0.489  BS_opcode_1_IBUF (BS_opcode_1_IBUF)
-     LUT2:I0->O           23   0.097   0.781  MSB_MUX/sel_INV_1_o11 (MSB_MUX/sel_INV_1_o_mmx_out)
-     LUT6:I1->O            1   0.097   0.556  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o33_SW0 (N38)
-     LUT5:I1->O            5   0.097   0.575  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o33 (depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o_mmx_out5)
-     LUT6:I2->O            2   0.097   0.383  depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o241 (depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o_mmx_out6)
-     LUT6:I4->O            1   0.097   0.279  MUX2/Mmux_portY71 (BS_data_out_13_OBUF)
-     OBUF:I->O                 0.000          BS_data_out_13_OBUF (BS_data_out<13>)
+     IBUF:I->O            63   0.001   0.795  BS_amount_4_IBUF (BS_amount_4_IBUF)
+     LUT5:I0->O            1   0.097   0.295  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o111 (depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o11)
+     LUT6:I5->O            5   0.097   0.575  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o113 (depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o_mmx_out1)
+     LUT6:I2->O            2   0.097   0.299  depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o121 (depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o_mmx_out2)
+     LUT5:I4->O            1   0.097   0.693  MUX2/Mmux_portY311 (MUX2/Mmux_portY31)
+     LUT6:I0->O            1   0.097   0.279  MUX2/Mmux_portY312 (BS_data_out_3_OBUF)
+     OBUF:I->O                 0.000          BS_data_out_3_OBUF (BS_data_out<3>)
     ----------------------------------------
-    Total                      3.551ns (0.486ns logic, 3.065ns route)
-                                       (13.7% logic, 86.3% route)
+    Total                      3.423ns (0.486ns logic, 2.937ns route)
+                                       (14.2% logic, 85.8% route)
 
 =========================================================================
 
@@ -336,14 +333,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.04 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.07 secs
  
 --> 
 
-Total memory usage is 317216 kilobytes
+Total memory usage is 294080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

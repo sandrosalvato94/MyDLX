@@ -72,12 +72,13 @@ architecture Structural of Barrel_Shifter is
 	
 	type matrix_mask 		is array (0 to NBIT_DATA/8 - 1) of std_logic_vector(NBIT_DATA+8-1 downto 0);
 	type matrix_sign 		is array (0 to NBIT_DATA/8 + 1) of std_logic_vector(7 downto 0);
-	type matrixX2_mask 		is array(0 to NBIT_DATA/8) of matrix_mask;
+	type matrixX2_mask 		is array (0 to NBIT_DATA/8 - 1) of matrix_mask;
 	type matrix_out		is array (0 to 7) of std_logic_vector(NBIT_DATA-1 downto 0);
 	type matrix_third_stage 	is array (0 to 4) of matrix_out;
 	
 	constant s_zeros	: std_logic_vector(7 downto 0) := (others => '0'); 
 	constant L 	: integer := log2(NBIT_DATA/8);
+	
 	
 	signal s_msb		: std_logic_vector(7 downto 0);
 	signal s_masks		: matrix_mask;
@@ -86,6 +87,8 @@ architecture Structural of Barrel_Shifter is
 	signal s_selected_mask 	: std_logic_vector(NBIT_DATA+8-1 downto 0);
 	signal s_out_mask		: matrix_third_stage;
 	signal s_is_shift		: std_logic;
+	signal s_amount, s_not_amount	: std_logic_vector(2 downto 0);
+	signal s_direction		: std_logic;
 begin
 
 -----------------------------------------------------------------------------------------------------------
@@ -116,7 +119,7 @@ begin
 --FIRST STAGE----------------------------------------------------------------------------------------------
 
 	musk_cyc : for i in 0 to NBIT_DATA/8-1 generate
-		mux_cyc : for j in 0 to NBIT_DATA/8 generate
+		mux_cyc : for j in 0 to NBIT_DATA/8 generate -- the inner loop runs a further one wrt the former
 		
 --		L : if (i = 0) generate
 --			MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
@@ -128,45 +131,45 @@ begin
 --		end generate L;
 		
 		
-		L0 : if (i >= 0) generate
-			L1 : if ((j <= i) XOR (j >= NBIT_DATA/8 - i - 1)) generate
-				L2 : if (j <= i) generate
-					MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
+--		L0 : if (i >= 0) generate
+			L1 : if ((j <= i) XOR (j >= NBIT_DATA/8 - i)) generate
+				CASE2 : if (j <= i) generate
+					MUX2 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(0),
-						port1 => s_m(i+j+2),
+						port1 => s_m(i+j+1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
-				end generate L2;
+				end generate CASE2;
 				
-				L3 : if (j >= NBIT_DATA/8 - i - 1) generate
-					MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
+				CASE3 : if (j >= NBIT_DATA/8 - i) generate
+					MUX3 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(j-i),
 						port1 => s_m(NBIT_DATA/8 + 1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
-				end generate L3;
+				end generate CASE3;
 			end generate L1;
 			
-			L4 : if ((j<=i) AND (j >= NBIT_DATA/8 - i - 1)) generate
-				MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
+			CASE4 : if ((j<=i) AND (j >= NBIT_DATA/8 - i)) generate
+				MUX4 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(0),
 						port1 => s_m(NBIT_DATA/8 + 1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
-			end generate L4;
+			end generate CASE4;
 			
-			L5 : if ((j<=i) NOR (j >= NBIT_DATA/8 - i - 1)) generate
-				MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
-						port0 => s_m(j-1),
-						port1 => s_m(i+j+2),
+			CASE1 : if ((j<=i) NOR (j >= NBIT_DATA/8 - i)) generate
+				MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
+						port0 => s_m(j-I),
+						port1 => s_m(i+j+1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
-			end generate L5;
-		end generate L0;
+			end generate CASE1;
+--		end generate L0;
 		end generate mux_cyc;
 	end generate musk_cyc;
 
@@ -192,8 +195,16 @@ begin
 
 --THIRD STAGE----------------------------------------------------------------------------------------------
 	third_stage_prepare_cyc : for i in 1 to 8 generate
-		s_out_mask(0)(8-i) <= s_selected_mask(NBIT_DATA+i-1 downto i); 
+		s_out_mask(0)(8-i) <= s_selected_mask(NBIT_DATA+i-1 downto i-1); 
 	end generate third_stage_prepare_cyc;
+	
+	s_amount <= BS_amount(2 downto 0);
+	
+	s_not_amount_cyc : for i in 0 to 2 generate
+		s_not_amount(i) = NOT(BS_amount(i));
+	end generate s_not_amount_cyc;
+	
+	--s_direction <= 
 	
 	depth2: for i in 0 to 2 generate 				
 		width2: for j in 0 to 7 generate 	         
