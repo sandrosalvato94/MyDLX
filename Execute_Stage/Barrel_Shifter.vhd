@@ -12,13 +12,13 @@
 --
 -- Dependencies: 
 --
--- Revision 0.6
+-- Revision 1.0
 -- Additional Comments: 
 --	BS_opcode 
---			00 :
---			01 :
---			10 :
---			11 :
+--			00 : transparent mode
+--			01 : SLR
+--			10 : SLL
+--			11 : SAR
 --
 --	Version 0.1 : all components tied up. Ready for testing.
 --	Version 0.2 : changed mat_cyc lenght and s_m assignements. T1 passed.
@@ -34,6 +34,9 @@
 --	Version 0.6 : Changed definition of s_out_mask in third_stage_prepare_cyc.
 --		    Inverted the enumeration of the third stage multiplexer.
 --		    T1, T2, T3 (with right inputs) passed.
+--	Version 1.0 : Running. T1, T2, T3, T4, T5, T6, T7a, T7b passed. This codes
+--		    is not yet synthetised. Rubbish code is not yet erased from
+--		    the source code.
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -85,10 +88,16 @@ architecture Structural of Barrel_Shifter is
 	signal s_m		: matrix_sign;
 	signal s_mX2		: matrixX2_mask;
 	signal s_selected_mask 	: std_logic_vector(NBIT_DATA+8-1 downto 0);
+	signal s_selected_mask_right	: std_logic_vector(NBIT_DATA+8-1 downto 0);
+	signal s_selected_mask_left	: std_logic_vector(NBIT_DATA+8-1 downto 0);
 	signal s_out_mask		: matrix_third_stage;
 	signal s_is_shift		: std_logic;
 	signal s_amount, s_not_amount	: std_logic_vector(2 downto 0);
 	signal s_direction		: std_logic;
+	signal s_or_opcode		: std_logic;
+	signal s_op0, s_op1		: std_logic;
+	signal s_sel_third		: std_logic;
+	signal s_sel_out		: std_logic_vector(2 downto 0);
 begin
 
 -----------------------------------------------------------------------------------------------------------
@@ -190,21 +199,46 @@ begin
 		end generate width1;
 	end generate depth1;
 	
-	s_selected_mask <= s_mX2(L)(0);
+	s_selected_mask_left <= s_mx2(L)(0);
+	
+	bit_handling_right_cyc : for i in NBIT_DATA+8-1 downto 1 generate
+		s_selected_mask_right(i) <= s_mx2(L)(0)(i-1);
+	end generate bit_handling_right_cyc;
+		s_selected_mask_right(0) <= '0';
+	
+	MUX_selected_mask : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA+8)
+				   PORT MAP (port0 => s_selected_mask_left,
+					   port1 => s_selected_mask_right,
+					   Sel => BS_opcode(0),
+					   portY => s_selected_mask);
+	
+--	s_selected_mask <= s_mX2(L)(0);
 -----------------------------------------------------------------------------------------------------------
 
 --THIRD STAGE----------------------------------------------------------------------------------------------
-	third_stage_prepare_cyc : for i in 1 to 8 generate
-		s_out_mask(0)(8-i) <= s_selected_mask(NBIT_DATA+i-1 downto i-1); 
+	third_stage_prepare_cyc : for i in 0 to 7 generate
+		--s_out_mask(0)(8-i) <= s_selected_mask(NBIT_DATA+i-1 downto i-1); 
+		s_out_mask(0)(7-i) <= s_selected_mask(NBIT_DATA+i downto i+1); 
 	end generate third_stage_prepare_cyc;
 	
-	s_amount <= BS_amount(2 downto 0);
+	s_or_opcode <= BS_opcode(1) OR BS_opcode(0);
+	
+	third_stage_prepare_cyc2 : for i in 0 to 2 generate
+		s_amount(i) <= BS_amount(i) AND s_or_opcode;
+	end generate third_stage_prepare_cyc2;
 	
 	s_not_amount_cyc : for i in 0 to 2 generate
-		s_not_amount(i) = NOT(BS_amount(i));
+		s_not_amount(i) <= NOT(s_amount(i));
 	end generate s_not_amount_cyc;
 	
-	--s_direction <= 
+	s_op1 <= NOT(BS_opcode(1));
+	s_sel_third <= BS_opcode(0) AND s_op1;
+	
+	MUX3x1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 3)
+			  PORT MAP (port0 => s_amount,
+				  port1 => s_not_amount,
+				  Sel => BS_opcode(0),
+				  portY => s_sel_out);
 	
 	depth2: for i in 0 to 2 generate 				
 		width2: for j in 0 to 7 generate 	         
@@ -212,24 +246,24 @@ begin
 				MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) 
 				           PORT MAP (port0 => s_out_mask(i)(j),
 						 port1 => s_out_mask(i)(j+2**i),
-						 Sel => BS_amount(i),
+						 Sel => s_sel_out(i), -- to be changed
 						 portY => s_out_mask(i+1)(j));
 			end generate mod_if2;
 			
 		end generate width2;
 	end generate depth2;
 	
-	--BS_data_out <= s_out_mask(3)(0);
+	BS_data_out <= s_out_mask(3)(0);
 -----------------------------------------------------------------------------------------------------------
 
 --OUTPUT MUX-----------------------------------------------------------------------------------------------
-	s_is_shift <= BS_opcode(0) OR BS_opcode(1);
-	
-	MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) 
-				         PORT MAP (port0 => s_selected_mask(NBIT_DATA+8-1 downto 8),
-					         port1 => s_out_mask(3)(0),
-					         Sel => s_is_shift,
-					         portY => BS_data_out);
+--	s_is_shift <= BS_opcode(0) OR BS_opcode(1);
+--	
+--	MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) 
+--				         PORT MAP (port0 => s_selected_mask(NBIT_DATA+8-1 downto 8),
+--					         port1 => s_out_mask(3)(0),
+--					         Sel => s_is_shift,
+--					         portY => BS_data_out);
 -----------------------------------------------------------------------------------------------------------
 
 end Structural;

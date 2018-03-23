@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Barrel_Shifter.prj
 
@@ -114,7 +114,7 @@ Parsing package body <CONSTANTS>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" into library work
 Parsing entity <Barrel_Shifter>.
 Parsing architecture <Structural> of entity <barrel_shifter>.
-WARNING:HDLCompiler:946 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 94: Actual for formal port port1 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 103: Actual for formal port port1 is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -123,6 +123,9 @@ WARNING:HDLCompiler:946 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea 
 Elaborating entity <Barrel_Shifter> (architecture <Structural>) with generics from library <work>.
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 232: Assignment to s_sel_third ignored, since the identifier is never used
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
@@ -155,18 +158,26 @@ Unit <Mux_NBit_2x1_2> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1_3>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
-        NBIT_IN = 32
+        NBIT_IN = 3
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1_3> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1_4>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_4> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 32
- 32-bit 2-to-1 multiplexer                             : 8
- 40-bit 2-to-1 multiplexer                             : 3
+# Multiplexers                                         : 33
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 7
+ 40-bit 2-to-1 multiplexer                             : 4
  8-bit 2-to-1 multiplexer                              : 21
 
 =========================================================================
@@ -180,9 +191,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 32
- 32-bit 2-to-1 multiplexer                             : 8
- 40-bit 2-to-1 multiplexer                             : 3
+# Multiplexers                                         : 33
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 7
+ 40-bit 2-to-1 multiplexer                             : 4
  8-bit 2-to-1 multiplexer                              : 21
 
 =========================================================================
@@ -231,13 +243,12 @@ Top Level Output File Name         : Barrel_Shifter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 169
-#      LUT2                        : 2
-#      LUT3                        : 7
-#      LUT4                        : 14
-#      LUT5                        : 28
-#      LUT6                        : 113
-#      MUXF7                       : 5
+# BELS                             : 162
+#      LUT3                        : 15
+#      LUT4                        : 13
+#      LUT5                        : 48
+#      LUT6                        : 82
+#      MUXF7                       : 4
 # IO Buffers                       : 71
 #      IBUF                        : 39
 #      OBUF                        : 32
@@ -249,14 +260,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  164  out of  63400     0%  
-    Number used as Logic:               164  out of  63400     0%  
+ Number of Slice LUTs:                  158  out of  63400     0%  
+    Number used as Logic:               158  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    164
-   Number with an unused Flip Flop:     164  out of    164   100%  
-   Number with an unused LUT:             0  out of    164     0%  
-   Number of fully used LUT-FF pairs:     0  out of    164     0%  
+ Number of LUT Flip Flop pairs used:    158
+   Number with an unused Flip Flop:     158  out of    158   100%  
+   Number with an unused LUT:             0  out of    158     0%  
+   Number of fully used LUT-FF pairs:     0  out of    158     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -296,7 +307,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.423ns
+   Maximum combinational path delay: 3.238ns
 
 Timing Details:
 ---------------
@@ -304,26 +315,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3519 / 32
+  Total number of paths / destination ports: 3625 / 32
 -------------------------------------------------------------------------
-Delay:               3.423ns (Levels of Logic = 7)
-  Source:            BS_amount<4> (PAD)
-  Destination:       BS_data_out<3> (PAD)
+Delay:               3.238ns (Levels of Logic = 6)
+  Source:            BS_amount<3> (PAD)
+  Destination:       BS_data_out<29> (PAD)
 
-  Data Path: BS_amount<4> to BS_data_out<3>
+  Data Path: BS_amount<3> to BS_data_out<29>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            63   0.001   0.795  BS_amount_4_IBUF (BS_amount_4_IBUF)
-     LUT5:I0->O            1   0.097   0.295  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o111 (depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o11)
-     LUT6:I5->O            5   0.097   0.575  depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o113 (depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o_mmx_out1)
-     LUT6:I2->O            2   0.097   0.299  depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o121 (depth2[1].width2[0].mod_if2.MUX2/sel_INV_3_o_mmx_out2)
-     LUT5:I4->O            1   0.097   0.693  MUX2/Mmux_portY311 (MUX2/Mmux_portY31)
-     LUT6:I0->O            1   0.097   0.279  MUX2/Mmux_portY312 (BS_data_out_3_OBUF)
-     OBUF:I->O                 0.000          BS_data_out_3_OBUF (BS_data_out<3>)
+     IBUF:I->O            61   0.001   0.805  BS_amount_3_IBUF (BS_amount_3_IBUF)
+     LUT6:I0->O            1   0.097   0.511  MUX3x1/sel_INV_7_o19_SW0 (N38)
+     LUT4:I1->O            4   0.097   0.697  MUX3x1/sel_INV_7_o19 (MUX3x1/sel_INV_7_o_mmx_out26)
+     LUT6:I1->O            1   0.097   0.556  depth2[2].width2[0].mod_if2.MUX2/Mmux_portY22_SW0 (N24)
+     LUT5:I1->O            1   0.097   0.279  depth2[2].width2[0].mod_if2.MUX2/Mmux_portY22 (BS_data_out_28_OBUF)
+     OBUF:I->O                 0.000          BS_data_out_28_OBUF (BS_data_out<28>)
     ----------------------------------------
-    Total                      3.423ns (0.486ns logic, 2.937ns route)
-                                       (14.2% logic, 85.8% route)
+    Total                      3.238ns (0.389ns logic, 2.849ns route)
+                                       (12.0% logic, 88.0% route)
 
 =========================================================================
 
@@ -333,14 +343,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.07 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.13 secs
  
 --> 
 
-Total memory usage is 294080 kilobytes
+Total memory usage is 383744 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

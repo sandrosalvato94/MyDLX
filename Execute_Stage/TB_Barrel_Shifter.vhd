@@ -113,13 +113,60 @@ BEGIN
       --TEST 3: left shift all bits long-------
       BS_data_in <= (31 => '1', others => '0');
       BS_opcode <= "01";
-      BS_amount <= "10001";
+      BS_amount <= "00001";
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
+      --TEST 3: left shift all bits long-------
+      BS_data_in <= (31 => '1', others => '0');
+      BS_opcode <= "01";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
+      
+      --TEST 4: right arith shift -------------
+      BS_data_in <= (31 => '1', others => '0');
+      BS_opcode <= "11";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
+      
+      --TEST 5: left shift overbouncing--------
+      BS_data_in <= (16 => '1', others => '0');
+      BS_opcode <= "10";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
+      
+      --TEST 6: right shift overbouncing-------
+      BS_data_in <= (16 => '1', others => '0');
+      BS_opcode <= "01";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
+      
+      --TEST 7a: right arith shift overbouncing-
+      BS_data_in <= (16 => '1', others => '0');
+      BS_opcode <= "11";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
+      
+      --TEST 7b: right arith shift overbouncing-
+      BS_data_in <= (31 => '1', others => '0');
+      BS_opcode <= "11";
+      BS_amount <= "11111";
+      --BS_is_shift <= '0';
+      wait for 10 ns;	
+      -----------------------------------------
 
-      -- insert stimulus here 
+      
 
       wait;
    end process;

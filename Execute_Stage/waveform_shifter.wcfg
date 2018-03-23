@@ -12,7 +12,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/tb_barrel_shifter/bs_data_in" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bs_data_in[31:0]</obj_property>
       <obj_property name="ObjectShortName">bs_data_in[31:0]</obj_property>
@@ -24,10 +24,13 @@
    <wvobject fp_name="/tb_barrel_shifter/bs_amount" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bs_amount[4:0]</obj_property>
       <obj_property name="ObjectShortName">bs_amount[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_barrel_shifter/bs_data_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bs_data_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">bs_data_out[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_barrel_shifter/uut/s_msb" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_msb[7:0]</obj_property>
@@ -42,12 +45,40 @@
       <obj_property name="ObjectShortName">s_m[0:5]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_barrel_shifter/uut/s_mx2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_mx2[0:4]</obj_property>
-      <obj_property name="ObjectShortName">s_mx2[0:4]</obj_property>
+      <obj_property name="ElementShortName">s_mx2[0:3]</obj_property>
+      <obj_property name="ObjectShortName">s_mx2[0:3]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_barrel_shifter/uut/s_selected_mask" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_selected_mask[39:0]</obj_property>
-      <obj_property name="ObjectShortName">s_selected_mask[39:0]</obj_property>
+      <obj_property name="ElementShortName">s_selected_mask[40:1]</obj_property>
+      <obj_property name="ObjectShortName">s_selected_mask[40:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_selected_mask_right" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_selected_mask_right[40:1]</obj_property>
+      <obj_property name="ObjectShortName">s_selected_mask_right[40:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_selected_mask_left" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_selected_mask_left[40:1]</obj_property>
+      <obj_property name="ObjectShortName">s_selected_mask_left[40:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/bs_opcode[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">bs_opcode[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_amount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_amount[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_amount[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_not_amount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_not_amount[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_not_amount[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_sel_third" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_sel_third</obj_property>
+      <obj_property name="ObjectShortName">s_sel_third</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_barrel_shifter/uut/s_sel_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_sel_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_sel_out[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_barrel_shifter/uut/s_out_mask" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_out_mask[0:4]</obj_property>
