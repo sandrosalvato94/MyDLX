@@ -52,11 +52,12 @@ use work.constants.all;
 --use UNISIM.VComponents.all;
 
 entity Barrel_Shifter is
-	generic(NBIT_DATA : integer := 32);
+	generic(NBIT_DATA : integer := 32;
+	        NBIT_AMOUNT : integer := 5);
 	port(
 		BS_data_in	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		BS_opcode		: in  std_logic_vector(1 downto 0); 
-		BS_amount		: in  std_logic_vector(log2(NBIT_DATA)-1 downto 0);
+		BS_amount		: in  std_logic_vector(NBIT_AMOUNT-1 downto 0);
 		--BS_is_shift	: in  std_logic;
 		BS_data_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
@@ -83,7 +84,7 @@ architecture Structural of Barrel_Shifter is
 	constant L 	: integer := log2(NBIT_DATA/8);
 	
 	
-	signal s_msb		: std_logic_vector(7 downto 0);
+	signal s_msb, s_msb_tmp		: std_logic_vector(7 downto 0);
 	signal s_masks		: matrix_mask;
 	signal s_m		: matrix_sign;
 	signal s_mX2		: matrixX2_mask;
@@ -101,9 +102,11 @@ architecture Structural of Barrel_Shifter is
 begin
 
 -----------------------------------------------------------------------------------------------------------
+	s_msb_tmp <= (others => BS_data_in(NBIT_DATA-1));
+	
 	MSB_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => (others => '0'),
-						port1 => (others => BS_data_in(NBIT_DATA-1)),
+						port1 => s_msb_tmp,
 						sel => BS_opcode(1), 
 						portY => s_msb
 						);

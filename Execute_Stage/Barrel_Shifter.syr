@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Barrel_Shifter.prj
 
@@ -114,7 +114,6 @@ Parsing package body <CONSTANTS>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" into library work
 Parsing entity <Barrel_Shifter>.
 Parsing architecture <Structural> of entity <barrel_shifter>.
-WARNING:HDLCompiler:946 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 103: Actual for formal port port1 is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -125,7 +124,7 @@ Elaborating entity <Barrel_Shifter> (architecture <Structural>) with generics fr
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 232: Assignment to s_sel_third ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 238: Assignment to s_sel_third ignored, since the identifier is never used
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
@@ -138,6 +137,7 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 Synthesizing Unit <Barrel_Shifter>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd".
         NBIT_DATA = 32
+        NBIT_AMOUNT = 5
     Summary:
 	no macro.
 Unit <Barrel_Shifter> synthesized.
@@ -343,14 +343,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.13 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.89 secs
  
 --> 
 
-Total memory usage is 383744 kilobytes
+Total memory usage is 373888 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
