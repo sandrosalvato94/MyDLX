@@ -42,10 +42,21 @@ entity ALU is
 	);
 end ALU;
 
-architecture Behavioral of ALU is
+architecture Structural of ALU is
+
+	component Barrel_Shifter is
+	generic(--NBIT_DATA : integer := 16; NBIT_DATA = 2**NBIT_AMOUNT
+	        NBIT_AMOUNT : integer := 5);
+	port(
+		BS_data_in	: in  std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
+		BS_opcode		: in  std_logic_vector(1 downto 0); 
+		BS_amount		: in  std_logic_vector(NBIT_AMOUNT-1 downto 0);
+		BS_data_out	: out std_logic_vector(2**NBIT_AMOUNT-1 downto 0)
+	);
+	end component;
 
 begin
 
 
-end Behavioral;
+end Structural;
 

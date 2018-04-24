@@ -79,6 +79,10 @@
     <transform xil_pn:end_ts="1524555969" xil_pn:in_ck="-9166434066762804461" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1524555969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="AdderN.vhd"/>
       <outfile xil_pn:name="BOOTHMUL.vhd"/>
@@ -111,6 +115,11 @@
     <transform xil_pn:end_ts="1524555969" xil_pn:in_ck="-9166434066762804461" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1524555969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="AdderN.vhd"/>
       <outfile xil_pn:name="BOOTHMUL.vhd"/>
@@ -131,6 +140,12 @@
     <transform xil_pn:end_ts="1524555973" xil_pn:in_ck="-9166434066762804461" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6641552026903517698" xil_pn:start_ts="1524555969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Barrel_Shifter_beh.prj"/>
       <outfile xil_pn:name="TB_Barrel_Shifter_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -141,6 +156,10 @@
     <transform xil_pn:end_ts="1524555973" xil_pn:in_ck="4370823164244436646" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2063529261617256395" xil_pn:start_ts="1524555973">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Barrel_Shifter_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -177,6 +196,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Barrel_Shifter.lso"/>
       <outfile xil_pn:name="Barrel_Shifter.ngc"/>
       <outfile xil_pn:name="Barrel_Shifter.ngr"/>
