@@ -60,7 +60,7 @@ use work.constants.all;
 --use UNISIM.VComponents.all;
 
 entity Barrel_Shifter is
-	generic(--NBIT_DATA : integer := 16;
+	generic(--NBIT_DATA : integer := 16; NBIT_DATA = 2**NBIT_AMOUNT
 	        NBIT_AMOUNT : integer := 5);
 	port(
 		BS_data_in	: in  std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
