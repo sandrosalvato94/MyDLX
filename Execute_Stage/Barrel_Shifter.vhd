@@ -12,7 +12,7 @@
 --
 -- Dependencies: 
 --
--- Revision 1.0
+-- Revision 1.1
 -- Additional Comments: 
 --	BS_opcode 
 --			00 : transparent mode
@@ -37,6 +37,14 @@
 --	Version 1.0 : Running. T1, T2, T3, T4, T5, T6, T7a, T7b passed. This codes
 --		    is not yet synthetised. Rubbish code is not yet erased from
 --		    the source code.
+--	Version 1.1 : Replaced the generics list. NBIT_AMOUNT in place of NBIT_DATA,
+--		    as NBIT_DATA = 2**NBIT_AMOUNT. If I had used NBIT_DATA, I would
+--		    have performed the logaritm function in a port declaration. I can't 
+--		    do that because of some issues, so I decided to pass the NBIT_AMOUNT
+--		    parameter to this entity.
+--		    Xilinx RTL synthesis and simulation work with 
+--		    NBIT_AMOUNT = 3, 4, 5, 6; every test passed.
+--		    Rubbish code is not yet erased from the source code.		    
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -52,14 +60,14 @@ use work.constants.all;
 --use UNISIM.VComponents.all;
 
 entity Barrel_Shifter is
-	generic(NBIT_DATA : integer := 32;
+	generic(--NBIT_DATA : integer := 16;
 	        NBIT_AMOUNT : integer := 5);
 	port(
-		BS_data_in	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		BS_data_in	: in  std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
 		BS_opcode		: in  std_logic_vector(1 downto 0); 
 		BS_amount		: in  std_logic_vector(NBIT_AMOUNT-1 downto 0);
 		--BS_is_shift	: in  std_logic;
-		BS_data_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
+		BS_data_out	: out std_logic_vector(2**NBIT_AMOUNT-1 downto 0)
 	);
 end Barrel_Shifter;
 
@@ -74,23 +82,23 @@ architecture Structural of Barrel_Shifter is
 	);
 	end component;
 	
-	type matrix_mask 		is array (0 to NBIT_DATA/8 - 1) of std_logic_vector(NBIT_DATA+8-1 downto 0);
-	type matrix_sign 		is array (0 to NBIT_DATA/8 + 1) of std_logic_vector(7 downto 0);
-	type matrixX2_mask 		is array (0 to NBIT_DATA/8 - 1) of matrix_mask;
-	type matrix_out		is array (0 to 7) of std_logic_vector(NBIT_DATA-1 downto 0);
+	type matrix_mask 		is array (0 to 2**NBIT_AMOUNT/8 - 1) of std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
+	type matrix_sign 		is array (0 to 2**NBIT_AMOUNT/8 + 1) of std_logic_vector(7 downto 0);
+	type matrixX2_mask 		is array (0 to 2**NBIT_AMOUNT/8 - 1) of matrix_mask;
+	type matrix_out		is array (0 to 7) of std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
 	type matrix_third_stage 	is array (0 to 4) of matrix_out;
 	
 	constant s_zeros	: std_logic_vector(7 downto 0) := (others => '0'); 
-	constant L 	: integer := log2(NBIT_DATA/8);
+	constant L 	: integer := log2(2**NBIT_AMOUNT/8);
 	
 	
 	signal s_msb, s_msb_tmp		: std_logic_vector(7 downto 0);
 	signal s_masks		: matrix_mask;
 	signal s_m		: matrix_sign;
 	signal s_mX2		: matrixX2_mask;
-	signal s_selected_mask 	: std_logic_vector(NBIT_DATA+8-1 downto 0);
-	signal s_selected_mask_right	: std_logic_vector(NBIT_DATA+8-1 downto 0);
-	signal s_selected_mask_left	: std_logic_vector(NBIT_DATA+8-1 downto 0);
+	signal s_selected_mask 	: std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
+	signal s_selected_mask_right	: std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
+	signal s_selected_mask_left	: std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
 	signal s_out_mask		: matrix_third_stage;
 	signal s_is_shift		: std_logic;
 	signal s_amount, s_not_amount	: std_logic_vector(2 downto 0);
@@ -102,7 +110,7 @@ architecture Structural of Barrel_Shifter is
 begin
 
 -----------------------------------------------------------------------------------------------------------
-	s_msb_tmp <= (others => BS_data_in(NBIT_DATA-1));
+	s_msb_tmp <= (others => BS_data_in(2**NBIT_AMOUNT-1));
 	
 	MSB_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => (others => '0'),
@@ -113,16 +121,16 @@ begin
 -----------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------
-	mat_cyc : for i in 0 to NBIT_DATA/8+1 generate
+	mat_cyc : for i in 0 to 2**NBIT_AMOUNT/8+1 generate
 		if0 : if (i = 0) generate
 			s_m(i) <= s_zeros;
 		end generate if0;
 		
-		ifi : if (i > 0 AND i < NBIT_DATA/8+1) generate
+		ifi : if (i > 0 AND i < 2**NBIT_AMOUNT/8+1) generate
 			s_m(i) <= BS_data_in(i*8-1 downto (i-1)*8);
 		end generate ifi; 
 		
-		ifN : if (i = NBIT_DATA/8+1) generate
+		ifN : if (i = 2**NBIT_AMOUNT/8+1) generate
 			s_m(i) <= s_msb;
 		end generate ifN;
 	end generate mat_cyc;
@@ -130,8 +138,8 @@ begin
 
 --FIRST STAGE----------------------------------------------------------------------------------------------
 
-	musk_cyc : for i in 0 to NBIT_DATA/8-1 generate
-		mux_cyc : for j in 0 to NBIT_DATA/8 generate -- the inner loop runs a further one wrt the former
+	musk_cyc : for i in 0 to 2**NBIT_AMOUNT/8-1 generate
+		mux_cyc : for j in 0 to 2**NBIT_AMOUNT/8 generate -- the inner loop runs a further one wrt the former
 		
 --		L : if (i = 0) generate
 --			MUXi : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
@@ -144,7 +152,7 @@ begin
 		
 		
 --		L0 : if (i >= 0) generate
-			L1 : if ((j <= i) XOR (j >= NBIT_DATA/8 - i)) generate
+			L1 : if ((j <= i) XOR (j >= 2**NBIT_AMOUNT/8 - i)) generate
 				CASE2 : if (j <= i) generate
 					MUX2 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(0),
@@ -154,26 +162,26 @@ begin
 						);
 				end generate CASE2;
 				
-				CASE3 : if (j >= NBIT_DATA/8 - i) generate
+				CASE3 : if (j >= 2**NBIT_AMOUNT/8 - i) generate
 					MUX3 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(j-i),
-						port1 => s_m(NBIT_DATA/8 + 1),
+						port1 => s_m(2**NBIT_AMOUNT/8 + 1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
 				end generate CASE3;
 			end generate L1;
 			
-			CASE4 : if ((j<=i) AND (j >= NBIT_DATA/8 - i)) generate
+			CASE4 : if ((j<=i) AND (j >= 2**NBIT_AMOUNT/8 - i)) generate
 				MUX4 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(0),
-						port1 => s_m(NBIT_DATA/8 + 1),
+						port1 => s_m(2**NBIT_AMOUNT/8 + 1),
 						sel => BS_opcode(0), 
 						portY => s_masks(i)((j+1)*8-1 downto j*8)
 						);
 			end generate CASE4;
 			
-			CASE1 : if ((j<=i) NOR (j >= NBIT_DATA/8 - i)) generate
+			CASE1 : if ((j<=i) NOR (j >= 2**NBIT_AMOUNT/8 - i)) generate
 				MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 8) PORT MAP (
 						port0 => s_m(j-I),
 						port1 => s_m(i+j+1),
@@ -190,9 +198,9 @@ begin
 
 --SECOND STAGE-------------------------------------------------------------------------------------------
 	depth1: for i in 0 to L-1 generate 				
-		width1: for j in 0 to NBIT_DATA/8-1 generate 	         
+		width1: for j in 0 to 2**NBIT_AMOUNT/8-1 generate 	         
 			mod_if1: if(j mod(2**(i+1)) = 0) generate 	
-				MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA+8) 
+				MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 2**NBIT_AMOUNT+8) 
 				           PORT MAP (port0 => s_mX2(i)(j),
 						 port1 => s_mX2(i)(j+2**i),
 						 Sel => BS_amount(3+i),
@@ -204,12 +212,12 @@ begin
 	
 	s_selected_mask_left <= s_mx2(L)(0);
 	
-	bit_handling_right_cyc : for i in NBIT_DATA+8-1 downto 1 generate
+	bit_handling_right_cyc : for i in 2**NBIT_AMOUNT+8-1 downto 1 generate
 		s_selected_mask_right(i) <= s_mx2(L)(0)(i-1);
 	end generate bit_handling_right_cyc;
 		s_selected_mask_right(0) <= '0';
 	
-	MUX_selected_mask : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA+8)
+	MUX_selected_mask : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 2**NBIT_AMOUNT+8)
 				   PORT MAP (port0 => s_selected_mask_left,
 					   port1 => s_selected_mask_right,
 					   Sel => BS_opcode(0),
@@ -221,7 +229,7 @@ begin
 --THIRD STAGE----------------------------------------------------------------------------------------------
 	third_stage_prepare_cyc : for i in 0 to 7 generate
 		--s_out_mask(0)(8-i) <= s_selected_mask(NBIT_DATA+i-1 downto i-1); 
-		s_out_mask(0)(7-i) <= s_selected_mask(NBIT_DATA+i downto i+1); 
+		s_out_mask(0)(7-i) <= s_selected_mask(2**NBIT_AMOUNT+i downto i+1); 
 	end generate third_stage_prepare_cyc;
 	
 	s_or_opcode <= BS_opcode(1) OR BS_opcode(0);
@@ -246,7 +254,7 @@ begin
 	depth2: for i in 0 to 2 generate 				
 		width2: for j in 0 to 7 generate 	         
 			mod_if2: if(j mod(2**(i+1)) = 0) generate 	
-				MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) 
+				MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 2**NBIT_AMOUNT) 
 				           PORT MAP (port0 => s_out_mask(i)(j),
 						 port1 => s_out_mask(i)(j+2**i),
 						 Sel => s_sel_out(i), -- to be changed

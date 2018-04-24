@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter_beh.prj work.TB_Barrel_Shifter 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter_beh.prj TB_Barrel_Shifter 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
@@ -6,25 +6,24 @@ Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Mux_NBit_2x1.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/constants.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Barrel_Shifter.vhd" into library work
-WARNING:HDLCompiler:946 - "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Barrel_Shifter.vhd" Line 103: Actual for formal port port1 is neither a static name nor a globally static expression
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter.vhd" into library work
 Starting static elaboration
+WARNING:HDLCompiler:746 - "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Barrel_Shifter.vhd" Line 192: Range is empty (null range)
 Completed static elaboration
-Fuse Memory Usage: 197188 KB
-Fuse CPU Usage: 390 ms
+Fuse Memory Usage: 193452 KB
+Fuse CPU Usage: 389 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package constants
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(8)\]
-Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(40)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(16)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
-Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(32)\]
-Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(32)\]
+Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(3)\]
 Compiling architecture behavior of entity tb_barrel_shifter
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 15 VHDL Units
+Compiled 13 VHDL Units
 Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Barrel_Shifter_isim_beh.exe
-Fuse Memory Usage: 217068 KB
-Fuse CPU Usage: 733 ms
+Fuse Memory Usage: 213332 KB
+Fuse CPU Usage: 671 ms

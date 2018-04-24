@@ -36,28 +36,38 @@ ENTITY TB_Barrel_Shifter IS
 END TB_Barrel_Shifter;
  
 ARCHITECTURE behavior OF TB_Barrel_Shifter IS 
+
+    --constant NBIT_DATA   : integer := 16;
+    
+    
+    --------CHANGES HERE GENERICS---------
+    constant NBIT_AMOUNT : integer := 5;
+    --------------------------------------
  
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT Barrel_Shifter
+    GENERIC(
+	--NBIT_DATA : integer := 32;
+	NBIT_AMOUNT : integer := 5);
     PORT(
-         BS_data_in : IN  std_logic_vector(31 downto 0);
+         BS_data_in : IN  std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
          BS_opcode : IN  std_logic_vector(1 downto 0);
-         BS_amount : IN  std_logic_vector(4 downto 0);
+         BS_amount : IN  std_logic_vector(NBIT_AMOUNT-1 downto 0);
          --BS_is_shift : in  std_logic;
-         BS_data_out : OUT  std_logic_vector(31 downto 0)
+         BS_data_out : OUT  std_logic_vector(2**NBIT_AMOUNT-1 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal BS_data_in : std_logic_vector(31 downto 0) := (others => '0');
+   signal BS_data_in : std_logic_vector(2**NBIT_AMOUNT-1 downto 0) := (others => '0');
    signal BS_opcode : std_logic_vector(1 downto 0) := (others => '0');
-   signal BS_amount : std_logic_vector(4 downto 0) := (others => '0');
+   signal BS_amount : std_logic_vector(NBIT_AMOUNT-1 downto 0) := (others => '0');
    --signal BS_is_shift : std_logic := '0';
 
  	--Outputs
-   signal BS_data_out : std_logic_vector(31 downto 0);
+   signal BS_data_out : std_logic_vector(2**NBIT_AMOUNT-1 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
@@ -66,7 +76,9 @@ ARCHITECTURE behavior OF TB_Barrel_Shifter IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Barrel_Shifter PORT MAP (
+   uut: Barrel_Shifter GENERIC MAP(--NBIT_DATA => NBIT_DATA,
+			     NBIT_AMOUNT => NBIT_AMOUNT)
+	PORT MAP (
           BS_data_in => BS_data_in,
           BS_opcode => BS_opcode,
           BS_amount => BS_amount,
@@ -87,81 +99,81 @@ BEGIN
       -----------------------------------------
       
       --TEST 2: transapernt mode---------------
-      BS_data_in <= std_logic_vector(to_unsigned(4, 32));
+      BS_data_in <= std_logic_vector(to_unsigned(3, 2**NBIT_AMOUNT));
       BS_opcode <= "00";
-      BS_amount <= "00111";
+      BS_amount <=  std_logic_vector(to_unsigned(7, NBIT_AMOUNT));
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
       --TEST 2: transapernt mode---------------
-      BS_data_in <= std_logic_vector(to_unsigned(27, 32));
+      BS_data_in <= std_logic_vector(to_unsigned(27, 2**NBIT_AMOUNT));
       BS_opcode <= "00";
-      BS_amount <= "00001";
+      BS_amount <= std_logic_vector(to_unsigned(1, NBIT_AMOUNT));
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
-      --TEST 3: left shift all bits long-------
-      BS_data_in <= std_logic_vector(to_unsigned(1, 32));
+      --TEST NBIT_AMOUNT-1: left shift all bits long-------
+      BS_data_in <= std_logic_vector(to_unsigned(1, 2**NBIT_AMOUNT));
       BS_opcode <= "10";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
-      --TEST 3: left shift all bits long-------
-      BS_data_in <= (31 => '1', others => '0');
+      --TEST NBIT_AMOUNT-1: left shift all bits long-------
+      BS_data_in <= (2**NBIT_AMOUNT-1 => '1', others => '0');
       BS_opcode <= "01";
-      BS_amount <= "00001";
+      BS_amount <= std_logic_vector(to_unsigned(1, NBIT_AMOUNT));
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
-      --TEST 3: left shift all bits long-------
-      BS_data_in <= (31 => '1', others => '0');
+      --TEST NBIT_AMOUNT-1: left shift all bits long-------
+      BS_data_in <= (2**NBIT_AMOUNT-1 => '1', others => '0');
       BS_opcode <= "01";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
-      --TEST 4: right arith shift -------------
-      BS_data_in <= (31 => '1', others => '0');
+      --TEST NBIT_AMOUNT-1: right arith shift -------------
+      BS_data_in <= (2**NBIT_AMOUNT-1 => '1', others => '0');
       BS_opcode <= "11";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
       --TEST 5: left shift overbouncing--------
-      BS_data_in <= (16 => '1', others => '0');
+      BS_data_in <= (7 => '1', others => '0');
       BS_opcode <= "10";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
       --TEST 6: right shift overbouncing-------
-      BS_data_in <= (16 => '1', others => '0');
+      BS_data_in <= (7 => '1', others => '0');
       BS_opcode <= "01";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
       --TEST 7a: right arith shift overbouncing-
-      BS_data_in <= (16 => '1', others => '0');
+      BS_data_in <= (7 => '1', others => '0');
       BS_opcode <= "11";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------
       
       --TEST 7b: right arith shift overbouncing-
-      BS_data_in <= (31 => '1', others => '0');
+      BS_data_in <= (7  => '1', others => '0');
       BS_opcode <= "11";
-      BS_amount <= "11111";
+      BS_amount <= (others => '1');
       --BS_is_shift <= '0';
       wait for 10 ns;	
       -----------------------------------------

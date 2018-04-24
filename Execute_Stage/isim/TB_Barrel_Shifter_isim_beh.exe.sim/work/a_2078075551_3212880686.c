@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea M
 
 
 
-static void work_a_3604777672_3212880686_p_0(char *t0)
+static void work_a_2078075551_3212880686_p_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -65,7 +65,7 @@ LAB2:    xsi_set_current_line(48, ng0);
     t7 = *((char **)t6);
     t8 = (t7 + 40U);
     t9 = *((char **)t8);
-    memcpy(t9, t5, 32U);
+    memcpy(t9, t5, 16U);
     xsi_driver_first_trans_fast_port(t1);
     goto LAB3;
 
@@ -77,16 +77,16 @@ LAB5:    xsi_set_current_line(50, ng0);
     t7 = *((char **)t6);
     t8 = (t7 + 40U);
     t9 = *((char **)t8);
-    memcpy(t9, t5, 32U);
+    memcpy(t9, t5, 16U);
     xsi_driver_first_trans_fast_port(t1);
     goto LAB3;
 
 }
 
 
-extern void work_a_3604777672_3212880686_init()
+extern void work_a_2078075551_3212880686_init()
 {
-	static char *pe[] = {(void *)work_a_3604777672_3212880686_p_0};
-	xsi_register_didat("work_a_3604777672_3212880686", "isim/TB_Barrel_Shifter_isim_beh.exe.sim/work/a_3604777672_3212880686.didat");
+	static char *pe[] = {(void *)work_a_2078075551_3212880686_p_0};
+	xsi_register_didat("work_a_2078075551_3212880686", "isim/TB_Barrel_Shifter_isim_beh.exe.sim/work/a_2078075551_3212880686.didat");
 	xsi_register_executes(pe);
 }

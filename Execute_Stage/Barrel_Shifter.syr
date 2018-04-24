@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Barrel_Shifter.prj
 
@@ -136,7 +136,6 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 
 Synthesizing Unit <Barrel_Shifter>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd".
-        NBIT_DATA = 32
         NBIT_AMOUNT = 5
     Summary:
 	no macro.
@@ -343,12 +342,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.89 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.76 secs
  
 --> 
 
-Total memory usage is 373888 kilobytes
+Total memory usage is 408616 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    8 (   0 filtered)
