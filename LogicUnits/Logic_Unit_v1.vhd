@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Alessandro Salvato
 -- 
 -- Create Date:    12:05:44 04/24/2018 
 -- Design Name: 
@@ -25,16 +25,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
-entity Logic_Unit_v1 is
+entity Logic_Unit is
 	generic(NBIT_DATA : integer := 32);
 	port(
 		LU_OpA 	: in  std_logic_vector(NBIT_DATA-1 downto 0);
@@ -42,9 +33,9 @@ entity Logic_Unit_v1 is
 		LU_Opcode	: in  std_logic_vector(1 downto 0);
 		LU_Y	: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
-end Logic_Unit_v1;
+end Logic_Unit;
 
-architecture Behavioral of Logic_Unit_v1 is
+architecture Behavioral of Logic_Unit is
 
 	signal s1, s2, s3, s4, s5, s6, s7, s8 : std_logic_vector(NBIT_DATA-1 downto 0);
 	

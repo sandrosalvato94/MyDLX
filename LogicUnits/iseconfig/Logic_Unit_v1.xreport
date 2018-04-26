@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-04-24T12:28:42</DateModified>
+  <DateModified>2018-04-26T09:50:30</DateModified>
   <ModuleName>Logic_Unit_v1</ModuleName>
   <SummaryTimeStamp>2018-04-24T12:13:54</SummaryTimeStamp>
   <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/LogicUnits/iseconfig/Logic_Unit_v1.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/LogicUnits</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/LogicUnits\</ImplementationReportsDirectory>
   <DateInitialized>2018-04-24T12:05:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
