@@ -14,7 +14,7 @@
 --	CMP_sgn_usgn : 1	SIGNED
 --
 --
--- Revision 0.3
+-- Revision 1.0
 --  	Version	0.1 - Layout defined. Tests not yet performed.
 --	Version	0.2 - The previous versions did non take into account the
 --		      very important difference between the role of the MSB
