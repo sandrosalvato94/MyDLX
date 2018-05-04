@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Comparator.prj
 
@@ -134,13 +134,13 @@ Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work
 
 Synthesizing Unit <Comparator>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\Comparator.vhd".
-        NBIT_DATA = 32
+        NBIT_DATA = 8
     Summary:
 Unit <Comparator> synthesized.
 
 Synthesizing Unit <ORGate_NX1>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\ORGate_NX1.vhd".
-        N = 32
+        N = 8
     Summary:
 	no macro.
 Unit <ORGate_NX1> synthesized.
@@ -157,8 +157,8 @@ HDL Synthesis Report
 Macro Statistics
 # Multiplexers                                         : 2
  1-bit 2-to-1 multiplexer                              : 2
-# Xors                                                 : 32
- 1-bit xor2                                            : 32
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
 
 =========================================================================
 
@@ -173,8 +173,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multiplexers                                         : 2
  1-bit 2-to-1 multiplexer                              : 2
-# Xors                                                 : 32
- 1-bit xor2                                            : 32
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
 
 =========================================================================
 
@@ -215,12 +215,13 @@ Top Level Output File Name         : Comparator.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 71
-#      LUT3                        : 20
-#      LUT5                        : 17
-#      LUT6                        : 34
-# IO Buffers                       : 71
-#      IBUF                        : 66
+# BELS                             : 16
+#      LUT2                        : 1
+#      LUT4                        : 4
+#      LUT5                        : 5
+#      LUT6                        : 6
+# IO Buffers                       : 22
+#      IBUF                        : 17
 #      OBUF                        : 5
 
 Device utilization summary:
@@ -230,19 +231,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   71  out of  63400     0%  
-    Number used as Logic:                71  out of  63400     0%  
+ Number of Slice LUTs:                   16  out of  63400     0%  
+    Number used as Logic:                16  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     71
-   Number with an unused Flip Flop:      71  out of     71   100%  
-   Number with an unused LUT:             0  out of     71     0%  
-   Number of fully used LUT-FF pairs:     0  out of     71     0%  
+ Number of LUT Flip Flop pairs used:     16
+   Number with an unused Flip Flop:      16  out of     16   100%  
+   Number with an unused LUT:             0  out of     16     0%  
+   Number of fully used LUT-FF pairs:     0  out of     16     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          71
- Number of bonded IOBs:                  71  out of    210    33%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    210    10%  
 
 Specific Feature Utilization:
 
@@ -277,7 +278,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 14.745ns
+   Maximum combinational path delay: 3.155ns
 
 Timing Details:
 ---------------
@@ -285,40 +286,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6567 / 5
+  Total number of paths / destination ports: 287 / 5
 -------------------------------------------------------------------------
-Delay:               14.745ns (Levels of Logic = 21)
-  Source:            CMP_OpA<31> (PAD)
-  Destination:       CMP_A_le_B (PAD)
+Delay:               3.155ns (Levels of Logic = 6)
+  Source:            CMP_OpA<5> (PAD)
+  Destination:       CMP_A_eq_B (PAD)
 
-  Data Path: CMP_OpA<31> to CMP_A_le_B
+  Data Path: CMP_OpA<5> to CMP_A_eq_B
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.693  CMP_OpA_31_IBUF (CMP_OpA_31_IBUF)
-     LUT5:I0->O            1   0.097   0.683  Mxor_s_neq_eq<28>_xo<0>1 (Mxor_s_neq_eq<28>_xo<0>)
-     LUT5:I0->O            6   0.097   0.706  Mxor_s_neq_eq<28>_xo<0>2 (s_neq_eq<28>)
-     LUT5:I0->O            5   0.097   0.702  Mxor_s_neq_eq<26>_xo<0>1 (s_neq_eq<26>)
-     LUT5:I0->O            6   0.097   0.706  Mxor_s_neq_eq<24>_xo<0>1 (s_neq_eq<24>)
-     LUT6:I1->O            1   0.097   0.693  OR_lt/matrix<0><5><0>5 (OR_lt/matrix<0><5><0>5)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>6 (OR_lt/matrix<0><5><0>6)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>7 (OR_lt/matrix<0><5><0>7)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>8 (OR_lt/matrix<0><5><0>8)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>9 (OR_lt/matrix<0><5><0>9)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>10 (OR_lt/matrix<0><5><0>10)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>12 (OR_lt/matrix<0><5><0>11)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>13 (OR_lt/matrix<0><5><0>12)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>14 (OR_lt/matrix<0><5><0>13)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>15 (OR_lt/matrix<0><5><0>14)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>16 (OR_lt/matrix<0><5><0>15)
-     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>17 (OR_lt/matrix<0><5><0>16)
-     LUT6:I0->O            1   0.097   0.511  OR_lt/matrix<0><5><0>18 (s_tmp_lt)
-     LUT3:I0->O            2   0.097   0.299  MUX_lt/Mmux_portY11 (CMP_A_lt_B_OBUF)
-     LUT6:I5->O            1   0.097   0.279  CMP_A_le_B1 (CMP_A_le_B_OBUF)
-     OBUF:I->O                 0.000          CMP_A_le_B_OBUF (CMP_A_le_B)
+     IBUF:I->O             3   0.001   0.703  CMP_OpA_5_IBUF (CMP_OpA_5_IBUF)
+     LUT6:I0->O            3   0.097   0.703  s_enable_next_step<5>1 (s_enable_next_step<5>)
+     LUT6:I0->O            2   0.097   0.383  s_enable_next_step<2> (s_enable_next_step<2>)
+     LUT5:I3->O            4   0.097   0.697  OR_lt/matrix<0><3><0>4 (s_tmp_lt)
+     LUT5:I0->O            1   0.097   0.279  CMP_A_eq_B1 (CMP_A_eq_B_OBUF)
+     OBUF:I->O                 0.000          CMP_A_eq_B_OBUF (CMP_A_eq_B)
     ----------------------------------------
-    Total                     14.745ns (1.844ns logic, 12.901ns route)
-                                       (12.5% logic, 87.5% route)
+    Total                      3.155ns (0.389ns logic, 2.766ns route)
+                                       (12.3% logic, 87.7% route)
 
 =========================================================================
 
@@ -329,11 +315,11 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.28 secs
+Total CPU time to Xst completion: 7.31 secs
  
 --> 
 
-Total memory usage is 419968 kilobytes
+Total memory usage is 413312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

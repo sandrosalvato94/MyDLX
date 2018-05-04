@@ -50,7 +50,7 @@ ARCHITECTURE behavior OF TB_Comparator IS
          CMP_OpA : IN  std_logic_vector(NBIT_DATA-1 downto 0);
          CMP_OpB : IN  std_logic_vector(NBIT_DATA-1 downto 0);
          CMP_sgn_usgn : in  std_logic;
-         CMP_enable : IN  std_logic;
+         --CMP_enable : IN  std_logic;
          CMP_A_gt_B : OUT  std_logic;
          CMP_A_ge_B : OUT  std_logic;
          CMP_A_lt_B : OUT  std_logic;
@@ -84,7 +84,7 @@ BEGIN
           CMP_OpA => CMP_OpA,
           CMP_OpB => CMP_OpB,
 	CMP_sgn_usgn => CMP_sgn_usgn,
-          CMP_enable => CMP_enable,
+          --CMP_enable => CMP_enable,
           CMP_A_gt_B => CMP_A_gt_B,
           CMP_A_ge_B => CMP_A_ge_B,
           CMP_A_lt_B => CMP_A_lt_B,
@@ -100,56 +100,56 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 10 ns;	
 	
-	--TEST 1: do not anything without enabling--
+	--TEST 1: random values on the input---------
 	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-40 , NBIT_DATA));
-	CMP_enable <= '0';
+	CMP_OpB <= std_logic_vector(to_signed(-4 , NBIT_DATA));
+	--CMP_enable <= '0';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	
 	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-40 , NBIT_DATA));
-	CMP_enable <= '0';
+	CMP_OpB <= std_logic_vector(to_signed(-4 , NBIT_DATA));
+	--CMP_enable <= '0';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_unsigned(40 , NBIT_DATA));
+	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
 	CMP_OpB <= std_logic_vector(to_signed(-5 , NBIT_DATA));
-	CMP_enable <= '0';
+	--CMP_enable <= '0';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_unsigned(40 , NBIT_DATA));
+	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
 	CMP_OpB <= std_logic_vector(to_signed(-5 , NBIT_DATA));
-	CMP_enable <= '0';
+	--CMP_enable <= '0';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	--TEST 2: compare unsigned best scenario--
 	CMP_OpA <= (NBIT_DATA-1 => '1', others => '0');
-	CMP_OpB <= std_logic_vector(to_unsigned(40 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpB <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_unsigned(40 , NBIT_DATA));
+	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
 	CMP_OpB <= (NBIT_DATA-1 => '1', others => '0');
-	CMP_enable <= '1';
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	--TEST 3: compare unsigned middle scenario--
-	CMP_OpA <= std_logic_vector(to_unsigned(50 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_unsigned(100 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_unsigned(5 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_unsigned(1 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_unsigned(40 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_unsigned(440 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_unsigned(4 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_unsigned(5 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	--------------------------------------------
@@ -157,73 +157,111 @@ BEGIN
 	--TEST 4: compare unsigned worst scenario--
 	CMP_OpA <= (others => '0');
 	CMP_OpB <= (0 => '1', others => '0');
-	CMP_enable <= '1';
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	
 	CMP_OpA <= (0 => '1', others => '0');
 	CMP_OpB <= (others => '0');
-	CMP_enable <= '1';
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	--TEST 5: compare signed both positive----
-	CMP_OpA <= std_logic_vector(to_signed(50 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(100 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(5 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(7 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_signed(40 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(440 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(4 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(7 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	--TEST 6: compare signed both negative------
-	CMP_OpA <= std_logic_vector(to_signed(-50 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-100 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(-5 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(-6 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_signed(-40 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-440 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(-4 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(-3 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	--TEST 7: compare signed discordant numbers-
-	CMP_OpA <= std_logic_vector(to_signed(-50 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(100 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(-5 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(1 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_signed(40 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-440 , NBIT_DATA));
-	CMP_enable <= '1';
+	CMP_OpA <= std_logic_vector(to_signed(4, NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(-3 , NBIT_DATA));
+	--CMP_enable <= '1';
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	--------------------------------------------
 	
 	
-	--TEST 8: go off----------------------------
-	CMP_OpA <= std_logic_vector(to_signed(-50 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(100 , NBIT_DATA));
-	CMP_enable <= '0';
+	--TEST 8: equality of zero-----------------
+	CMP_OpA <= std_logic_vector(to_signed(0 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(0 , NBIT_DATA));
 	CMP_sgn_usgn <= '1';
 	wait for 10 ns;
 	
-	CMP_OpA <= std_logic_vector(to_signed(40 , NBIT_DATA));
-	CMP_OpB <= std_logic_vector(to_signed(-440 , NBIT_DATA));
-	CMP_enable <= '0';
+	CMP_OpA <= std_logic_vector(to_signed(0 , NBIT_DATA));
+	CMP_OpB <= std_logic_vector(to_signed(0 , NBIT_DATA));
 	CMP_sgn_usgn <= '0';
 	wait for 10 ns;
 	--------------------------------------------
+	
+	--TEST 9: equality of unsigned---------------
+	CMP_OpA <= (NBIT_DATA-1 => '1', others => '0');
+	CMP_OpB <= (NBIT_DATA-1 => '1', others => '0');
+	CMP_sgn_usgn <= '0';
+	wait for 10 ns;
+	
+	CMP_OpA <= (NBIT_DATA-2 => '1', others => '0');
+	CMP_OpB <= (NBIT_DATA-2 => '1', others => '0');
+	CMP_sgn_usgn <= '0';
+	wait for 10 ns;
+	
+	CMP_OpA <= (others => '1');
+	CMP_OpB <= (others => '1');
+	CMP_sgn_usgn <= '0';
+	wait for 10 ns;
+	--------------------------------------------
+	
+	--TEST 10: equality of signed---------------
+	CMP_OpA <= (NBIT_DATA-1 => '1', others => '0');
+	CMP_OpB <= (NBIT_DATA-1 => '1', others => '0');
+	CMP_sgn_usgn <= '1';
+	wait for 10 ns;
+	
+	CMP_OpA <= (NBIT_DATA-2 => '1', others => '0');
+	CMP_OpB <= (NBIT_DATA-2 => '1', others => '0');
+	CMP_sgn_usgn <= '1';
+	wait for 10 ns;
+	
+	CMP_OpA <= (NBIT_DATA-1 => '1', others => '0');
+	CMP_OpB <= (NBIT_DATA-2 => '1', others => '0');
+	CMP_sgn_usgn <= '1';
+	wait for 10 ns;
+	
+	CMP_OpA <= (others => '1');
+	CMP_OpB <= (others => '1');
+	CMP_sgn_usgn <= '1';
+	wait for 10 ns;
+	----------------------------------------------
+
 	
 
       

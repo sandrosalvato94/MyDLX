@@ -10,19 +10,19 @@ Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistra
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 196868 KB
-Fuse CPU Usage: 358 ms
+Fuse Memory Usage: 197316 KB
+Fuse CPU Usage: 374 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package constants
-Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(32)\]
+Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(8)\]
 Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
-Compiling architecture structural of entity Comparator [\Comparator(32)\]
+Compiling architecture structural of entity Comparator [\Comparator(8)\]
 Compiling architecture behavior of entity tb_comparator
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 11 VHDL Units
 Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator_isim_beh.exe
-Fuse Memory Usage: 216548 KB
-Fuse CPU Usage: 733 ms
+Fuse Memory Usage: 215972 KB
+Fuse CPU Usage: 671 ms
