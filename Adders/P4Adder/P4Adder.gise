@@ -46,41 +46,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1507216477" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1507216477">
+    <transform xil_pn:end_ts="1525281151" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1525281151">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507216477" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1507216477">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CarryGenerator.vhd"/>
-      <outfile xil_pn:name="CarrySelect.vhd"/>
-      <outfile xil_pn:name="CarrySelectBlock.vhd"/>
-      <outfile xil_pn:name="GeneralGenerate.vhd"/>
-      <outfile xil_pn:name="GeneralPropagate.vhd"/>
-      <outfile xil_pn:name="P4Adder.vhd"/>
-      <outfile xil_pn:name="PG_cell.vhd"/>
-      <outfile xil_pn:name="PG_network.vhd"/>
-      <outfile xil_pn:name="TB_P4Adder.vhd"/>
-      <outfile xil_pn:name="constants.vhd"/>
-      <outfile xil_pn:name="fa.vhd"/>
-      <outfile xil_pn:name="mux21.vhd"/>
-      <outfile xil_pn:name="mux_generic.vhd"/>
-      <outfile xil_pn:name="rca.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1507216477" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3176768938716289489" xil_pn:start_ts="1507216477">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1507216477" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7753897412510289267" xil_pn:start_ts="1507216477">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1507216477" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9063234860169917773" xil_pn:start_ts="1507216477">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1507216477" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1507216477">
+    <transform xil_pn:end_ts="1525281151" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525281151">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CarryGenerator.vhd"/>
@@ -98,7 +68,37 @@
       <outfile xil_pn:name="mux_generic.vhd"/>
       <outfile xil_pn:name="rca.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1507216482" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7044820016073942322" xil_pn:start_ts="1507216477">
+    <transform xil_pn:end_ts="1525281151" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3176768938716289489" xil_pn:start_ts="1525281151">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525281151" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7753897412510289267" xil_pn:start_ts="1525281151">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525281151" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9063234860169917773" xil_pn:start_ts="1525281151">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525281151" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525281151">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="CarryGenerator.vhd"/>
+      <outfile xil_pn:name="CarrySelect.vhd"/>
+      <outfile xil_pn:name="CarrySelectBlock.vhd"/>
+      <outfile xil_pn:name="GeneralGenerate.vhd"/>
+      <outfile xil_pn:name="GeneralPropagate.vhd"/>
+      <outfile xil_pn:name="P4Adder.vhd"/>
+      <outfile xil_pn:name="PG_cell.vhd"/>
+      <outfile xil_pn:name="PG_network.vhd"/>
+      <outfile xil_pn:name="TB_P4Adder.vhd"/>
+      <outfile xil_pn:name="constants.vhd"/>
+      <outfile xil_pn:name="fa.vhd"/>
+      <outfile xil_pn:name="mux21.vhd"/>
+      <outfile xil_pn:name="mux_generic.vhd"/>
+      <outfile xil_pn:name="rca.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1525281156" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7044820016073942322" xil_pn:start_ts="1525281151">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TB_P4Adder_beh.prj"/>
@@ -107,7 +107,7 @@
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1507365636" xil_pn:in_ck="4191843100693978056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5611032509801559163" xil_pn:start_ts="1507365636">
+    <transform xil_pn:end_ts="1525283698" xil_pn:in_ck="4191843100693978056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5611032509801559163" xil_pn:start_ts="1525283696">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

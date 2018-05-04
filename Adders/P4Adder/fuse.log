@@ -19,8 +19,8 @@ Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistra
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/P4Adder/TB_P4Adder.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 165064 KB
-Fuse CPU Usage: 389 ms
+Fuse Memory Usage: 194348 KB
+Fuse CPU Usage: 608 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -30,20 +30,20 @@ Compiling package math_real
 Compiling package constants
 Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
 Compiling architecture behavioral of entity PG_cell [pg_cell_default]
-Compiling architecture behavioral of entity PG_network [\PG_network(32)\]
+Compiling architecture behavioral of entity PG_network [\PG_network(4)\]
 Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
-Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(32,8)\]
+Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(4,1)\]
 Compiling architecture behavioral of entity FA [fa_default]
 Compiling architecture structural of entity RCA [\RCA(4)\]
 Compiling architecture behavioral of entity MUX21 [mux21_default]
 Compiling architecture structural of entity MUX21_GENERIC [\MUX21_GENERIC(4)\]
 Compiling architecture structural of entity CarrySelectBlock [\CarrySelectBlock(4)\]
-Compiling architecture structural of entity CarrySelect [\CarrySelect(32,4)\]
-Compiling architecture behavioral of entity P4Adder [\P4Adder(32)\]
+Compiling architecture structural of entity CarrySelect [\CarrySelect(4,4)\]
+Compiling architecture behavioral of entity P4Adder [\P4Adder(4)\]
 Compiling architecture behavior of entity tb_p4adder
 Time Resolution for simulation is 1ps.
-Waiting for 4 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 32 VHDL Units
 Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Adders/P4Adder/TB_P4Adder_isim_beh.exe
-Fuse Memory Usage: 193320 KB
-Fuse CPU Usage: 875 ms
+Fuse Memory Usage: 221780 KB
+Fuse CPU Usage: 1296 ms

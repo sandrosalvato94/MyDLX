@@ -39,7 +39,7 @@ END TB_P4Adder;
 ARCHITECTURE behavior OF TB_P4Adder IS 
  
     -- *******CHANGE HERE TO PARAMETRIZE********
-	constant N: integer:= 32;		
+	constant N: integer:= 4;		
     --******************************************
     
     COMPONENT P4Adder
@@ -113,19 +113,19 @@ BEGIN
      B <= std_logic_vector(to_unsigned(3, N)) ;
 
      wait for 50 ns;
+--     
+--      A <= std_logic_vector(to_unsigned(10, N)); 
+--     B <= std_logic_vector(to_unsigned(256, N)) ;
+--
+--     wait for 50 ns;
+--     
+--     A <= std_logic_vector(to_unsigned(65535, N)); 
+--     B <= std_logic_vector(to_unsigned(1, N)) ;
+--
+--     wait for 50 ns;
      
-      A <= std_logic_vector(to_unsigned(10, N)); 
-     B <= std_logic_vector(to_unsigned(256, N)) ;
-
-     wait for 50 ns;
-     
-     A <= std_logic_vector(to_unsigned(65535, N)); 
-     B <= std_logic_vector(to_unsigned(1, N)) ;
-
-     wait for 50 ns;
-     
-      A <= std_logic_vector(to_unsigned(65535, N)); 
-     B <= std_logic_vector(to_unsigned(0, N)) ;
+--      A <= std_logic_vector(to_unsigned(65535, N)); 
+--     B <= std_logic_vector(to_unsigned(0, N)) ;
 
      wait for 50 ns;
      
@@ -193,6 +193,12 @@ BEGIN
      A <= (N-1 => '1', others => '0'); 
      B <= (N-1 => '1', others => '0');
      c_in <= '1';
+     
+     A <= std_logic_vector(to_unsigned(0, N)); 
+     B <= std_logic_vector(to_unsigned(7, N));
+     c_in <= '1';
+     
+     wait for 50 ns;
      
      wait for 50 ns;
 

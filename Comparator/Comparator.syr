@@ -1,0 +1,341 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Comparator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Comparator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Comparator"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Comparator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\constants.vhd" into library work
+Parsing package <CONSTANTS>.
+Parsing package body <CONSTANTS>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\ORGate_NX1.vhd" into library work
+Parsing entity <ORGate_NX1>.
+Parsing architecture <Behavioral> of entity <orgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\Comparator.vhd" into library work
+Parsing entity <Comparator>.
+Parsing architecture <Structural> of entity <comparator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Comparator> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <ORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Comparator>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\Comparator.vhd".
+        NBIT_DATA = 32
+    Summary:
+Unit <Comparator> synthesized.
+
+Synthesizing Unit <ORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\ORGate_NX1.vhd".
+        N = 32
+    Summary:
+	no macro.
+Unit <ORGate_NX1> synthesized.
+
+Synthesizing Unit <Mux_1Bit_2X1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Comparator\Mux_1Bit_2X1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1Bit_2X1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Comparator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Comparator, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Comparator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 71
+#      LUT3                        : 20
+#      LUT5                        : 17
+#      LUT6                        : 34
+# IO Buffers                       : 71
+#      IBUF                        : 66
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   71  out of  63400     0%  
+    Number used as Logic:                71  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     71
+   Number with an unused Flip Flop:      71  out of     71   100%  
+   Number with an unused LUT:             0  out of     71     0%  
+   Number of fully used LUT-FF pairs:     0  out of     71     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          71
+ Number of bonded IOBs:                  71  out of    210    33%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 14.745ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6567 / 5
+-------------------------------------------------------------------------
+Delay:               14.745ns (Levels of Logic = 21)
+  Source:            CMP_OpA<31> (PAD)
+  Destination:       CMP_A_le_B (PAD)
+
+  Data Path: CMP_OpA<31> to CMP_A_le_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.693  CMP_OpA_31_IBUF (CMP_OpA_31_IBUF)
+     LUT5:I0->O            1   0.097   0.683  Mxor_s_neq_eq<28>_xo<0>1 (Mxor_s_neq_eq<28>_xo<0>)
+     LUT5:I0->O            6   0.097   0.706  Mxor_s_neq_eq<28>_xo<0>2 (s_neq_eq<28>)
+     LUT5:I0->O            5   0.097   0.702  Mxor_s_neq_eq<26>_xo<0>1 (s_neq_eq<26>)
+     LUT5:I0->O            6   0.097   0.706  Mxor_s_neq_eq<24>_xo<0>1 (s_neq_eq<24>)
+     LUT6:I1->O            1   0.097   0.693  OR_lt/matrix<0><5><0>5 (OR_lt/matrix<0><5><0>5)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>6 (OR_lt/matrix<0><5><0>6)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>7 (OR_lt/matrix<0><5><0>7)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>8 (OR_lt/matrix<0><5><0>8)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>9 (OR_lt/matrix<0><5><0>9)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>10 (OR_lt/matrix<0><5><0>10)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>12 (OR_lt/matrix<0><5><0>11)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>13 (OR_lt/matrix<0><5><0>12)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>14 (OR_lt/matrix<0><5><0>13)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>15 (OR_lt/matrix<0><5><0>14)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>16 (OR_lt/matrix<0><5><0>15)
+     LUT6:I0->O            1   0.097   0.693  OR_lt/matrix<0><5><0>17 (OR_lt/matrix<0><5><0>16)
+     LUT6:I0->O            1   0.097   0.511  OR_lt/matrix<0><5><0>18 (s_tmp_lt)
+     LUT3:I0->O            2   0.097   0.299  MUX_lt/Mmux_portY11 (CMP_A_lt_B_OBUF)
+     LUT6:I5->O            1   0.097   0.279  CMP_A_le_B1 (CMP_A_le_B_OBUF)
+     OBUF:I->O                 0.000          CMP_A_le_B_OBUF (CMP_A_le_B)
+    ----------------------------------------
+    Total                     14.745ns (1.844ns logic, 12.901ns route)
+                                       (12.5% logic, 87.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.28 secs
+ 
+--> 
+
+Total memory usage is 419968 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

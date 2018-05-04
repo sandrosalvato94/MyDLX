@@ -2,29 +2,28 @@ Command line:
    TB_P4Adder_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50699
+     -socket  50172
 
-Sat Oct 07 10:40:38 2017
+Wed May 02 20:55:06 2018
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.078125 sec
 
- Current Memory Usage: 851.853 Meg
+ Current Memory Usage: 571.904 Meg
 
- Total Signals          : 1011
- Total Nets             : 765
- Total Signal Drivers   : 358
- Total Blocks           : 534
- Total Primitive Blocks : 228
- Total Processes        : 355
- Total Traceable Variables  : 348
- Total Scalar Nets and Variables : 1693
-Total Line Count : 482
-Total Line Count : 482
+ Total Signals          : 141
+ Total Nets             : 76
+ Total Signal Drivers   : 47
+ Total Blocks           : 75
+ Total Primitive Blocks : 33
+ Total Processes        : 44
+ Total Traceable Variables  : 99
+ Total Scalar Nets and Variables : 755
+Total Line Count : 120
 
- Total Simulation Time: 0.25 sec
+ Total Simulation Time: 0.171875 sec
 
- Current Memory Usage: 694.305 Meg
+ Current Memory Usage: 887.001 Meg
 
-Sat Oct 07 10:42:30 2017
+Wed May 02 20:57:06 2018
 
