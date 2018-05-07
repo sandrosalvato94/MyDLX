@@ -53,6 +53,10 @@
     <transform xil_pn:end_ts="1525682156" xil_pn:in_ck="855624589350730179" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525682156">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Multiplier.vhd"/>
       <outfile xil_pn:name="TB_Multiplier.vhd"/>
     </transform>
@@ -71,12 +75,22 @@
     <transform xil_pn:end_ts="1525682156" xil_pn:in_ck="855624589350730179" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525682156">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Multiplier.vhd"/>
       <outfile xil_pn:name="TB_Multiplier.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1525682159" xil_pn:in_ck="855624589350730179" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6184296115083285165" xil_pn:start_ts="1525682156">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Multiplier_beh.prj"/>
       <outfile xil_pn:name="TB_Multiplier_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -87,6 +101,9 @@
     <transform xil_pn:end_ts="1525682160" xil_pn:in_ck="-7743546882441631669" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6554164177751275782" xil_pn:start_ts="1525682159">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Multiplier_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -121,6 +138,8 @@
     <transform xil_pn:end_ts="1525681847" xil_pn:in_ck="-6773744887081659657" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="662520540966656720" xil_pn:start_ts="1525681836">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Multiplier.lso"/>
       <outfile xil_pn:name="Multiplier.ngc"/>
       <outfile xil_pn:name="Multiplier.ngr"/>
