@@ -29,9 +29,9 @@ int main(int argc, char **argv)
     ieee_p_2592010699_init();
     ieee_p_1242562249_init();
     work_p_3647430093_init();
-    work_a_1344535767_3212880686_init();
+    work_a_2278385363_3212880686_init();
     work_a_3734057397_3212880686_init();
-    work_a_0883098610_1181938964_init();
+    work_a_3433902699_1181938964_init();
     work_a_3228852636_2372691052_init();
 
 
