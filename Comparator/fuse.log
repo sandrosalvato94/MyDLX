@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator_beh.prj work.TB_Comparator 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic_beh.prj work.TB_Comparison_Logic 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
@@ -7,11 +7,12 @@ Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistra
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/ORGate_NX1.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/Mux_1Bit_2X1.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/Comparator.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/Comparison_Logic.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 198084 KB
-Fuse CPU Usage: 531 ms
+Fuse Memory Usage: 197316 KB
+Fuse CPU Usage: 453 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -19,10 +20,10 @@ Compiling package constants
 Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(32)\]
 Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
 Compiling architecture structural of entity Comparator [\Comparator(32)\]
-Compiling architecture behavior of entity tb_comparator
+Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(32)\]
+Compiling architecture behavior of entity tb_comparison_logic
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 11 VHDL Units
-Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparator_isim_beh.exe
-Fuse Memory Usage: 216740 KB
-Fuse CPU Usage: 1015 ms
+Compiled 13 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic_isim_beh.exe
+Fuse Memory Usage: 217196 KB
+Fuse CPU Usage: 889 ms
