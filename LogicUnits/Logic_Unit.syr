@@ -3,16 +3,16 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
---> Reading design: Logic_Unit2.prj
+--> Reading design: Logic_Unit.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -40,16 +40,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "Logic_Unit2.prj"
+Input File Name                    : "Logic_Unit.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "Logic_Unit2"
+Output File Name                   : "Logic_Unit"
 Output Format                      : NGC
 Target Device                      : xc7a100t-3-csg324
 
 ---- Source Options
-Top Module Name                    : Logic_Unit2
+Top Module Name                    : Logic_Unit
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -105,31 +105,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v2.vhd" into library work
-Parsing entity <Logic_Unit2>.
-Parsing architecture <Behavioral> of entity <logic_unit2>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v1.vhd" into library work
+Parsing entity <Logic_Unit>.
+Parsing architecture <Behavioral> of entity <logic_unit>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating entity <Logic_Unit2> (architecture <Behavioral>) with generics from library <work>.
+Elaborating entity <Logic_Unit> (architecture <Behavioral>) with generics from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <Logic_Unit2>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v2.vhd".
+Synthesizing Unit <Logic_Unit>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v1.vhd".
         NBIT_DATA = 32
     Summary:
-	no macro.
-Unit <Logic_Unit2> synthesized.
+Unit <Logic_Unit> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
 =========================================================================
 
 =========================================================================
@@ -140,18 +142,21 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <Logic_Unit2> ...
+Optimizing unit <Logic_Unit> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Logic_Unit2, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block Logic_Unit, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -176,14 +181,14 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : Logic_Unit2.ngc
+Top Level Output File Name         : Logic_Unit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
 # BELS                             : 32
-#      LUT3                        : 32
-# IO Buffers                       : 97
-#      IBUF                        : 65
+#      LUT4                        : 32
+# IO Buffers                       : 98
+#      IBUF                        : 66
 #      OBUF                        : 32
 
 Device utilization summary:
@@ -204,8 +209,8 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         100
- Number of bonded IOBs:                  97  out of    210    46%  
+ Number of IOs:                          98
+ Number of bonded IOBs:                  98  out of    210    46%  
 
 Specific Feature Utilization:
 
@@ -240,7 +245,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 0.889ns
+   Maximum combinational path delay: 0.934ns
 
 Timing Details:
 ---------------
@@ -248,9 +253,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 96 / 32
+  Total number of paths / destination ports: 128 / 32
 -------------------------------------------------------------------------
-Delay:               0.889ns (Levels of Logic = 3)
+Delay:               0.934ns (Levels of Logic = 3)
   Source:            LU_OpB<31> (PAD)
   Destination:       LU_Y<31> (PAD)
 
@@ -258,12 +263,12 @@ Delay:               0.889ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.511  LU_OpB_31_IBUF (LU_OpB_31_IBUF)
-     LUT3:I0->O            1   0.097   0.279  LU_Y<31>1 (LU_Y_31_OBUF)
+     IBUF:I->O             1   0.001   0.556  LU_OpB_31_IBUF (LU_OpB_31_IBUF)
+     LUT4:I0->O            1   0.097   0.279  LU_Y<31><31>1 (LU_Y_31_OBUF)
      OBUF:I->O                 0.000          LU_Y_31_OBUF (LU_Y<31>)
     ----------------------------------------
-    Total                      0.889ns (0.098ns logic, 0.791ns route)
-                                       (11.0% logic, 89.0% route)
+    Total                      0.934ns (0.098ns logic, 0.836ns route)
+                                       (10.5% logic, 89.5% route)
 
 =========================================================================
 
@@ -273,12 +278,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.61 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.15 secs
  
 --> 
 
-Total memory usage is 416360 kilobytes
+Total memory usage is 413824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
