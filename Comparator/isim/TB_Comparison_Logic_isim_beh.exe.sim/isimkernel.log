@@ -2,14 +2,14 @@ Command line:
    TB_Comparison_Logic_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52529
+     -socket  56251
 
-Tue May 08 12:00:38 2018
+Thu May 10 09:56:42 2018
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 1043.09 Meg
+ Current Memory Usage: 571.884 Meg
 
  Total Signals          : 56
  Total Nets             : 787
@@ -20,11 +20,10 @@ Tue May 08 12:00:38 2018
  Total Traceable Variables  : 467
  Total Scalar Nets and Variables : 1806
 Total Line Count : 433
-Total Line Count : 433
 
- Total Simulation Time: 1.15625 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 885.539 Meg
+ Current Memory Usage: 571.884 Meg
 
-Tue May 08 12:03:48 2018
+Thu May 10 09:56:57 2018
 

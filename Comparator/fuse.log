@@ -11,8 +11,8 @@ Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistra
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 197316 KB
-Fuse CPU Usage: 453 ms
+Fuse Memory Usage: 139972 KB
+Fuse CPU Usage: 390 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -23,7 +23,8 @@ Compiling architecture structural of entity Comparator [\Comparator(32)\]
 Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(32)\]
 Compiling architecture behavior of entity tb_comparison_logic
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 13 VHDL Units
 Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Comparator/TB_Comparison_Logic_isim_beh.exe
-Fuse Memory Usage: 217196 KB
-Fuse CPU Usage: 889 ms
+Fuse Memory Usage: 158828 KB
+Fuse CPU Usage: 780 ms
