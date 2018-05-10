@@ -18,8 +18,9 @@
 --			
 -- Dependencies: 
 --
--- Revision	0.9 - All components tied up. Tests T1, T2, T3, T4, T5, T6 passed.
+-- Revision	1.1 - All components tied up. Tests T1, T2, T3, T4, T5, T6 passed.
 --		      Ready for synthesis. 
+--		      Synthesis on Synopsys ok.
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

@@ -47,32 +47,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1525941703" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1525941703">
+    <transform xil_pn:end_ts="1525943466" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525941703" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525941703">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Flag_Generator.vhd"/>
-      <outfile xil_pn:name="NORGate_NX1.vhd"/>
-      <outfile xil_pn:name="TB_Flag_Generator.vhd"/>
-      <outfile xil_pn:name="XNORGate_NX1.vhd"/>
-      <outfile xil_pn:name="constants.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1525941703" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3250128661451188139" xil_pn:start_ts="1525941703">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1525941703" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2021748706266706423" xil_pn:start_ts="1525941703">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1525941703" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3626390229821113481" xil_pn:start_ts="1525941703">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1525941703" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525941703">
+    <transform xil_pn:end_ts="1525943466" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Flag_Generator.vhd"/>
@@ -81,7 +60,28 @@
       <outfile xil_pn:name="XNORGate_NX1.vhd"/>
       <outfile xil_pn:name="constants.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1525941707" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9038979748441608026" xil_pn:start_ts="1525941703">
+    <transform xil_pn:end_ts="1525943466" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3250128661451188139" xil_pn:start_ts="1525943466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525943466" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2021748706266706423" xil_pn:start_ts="1525943466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525943466" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5635245562688145541" xil_pn:start_ts="1525943466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1525943466" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525943466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Flag_Generator.vhd"/>
+      <outfile xil_pn:name="NORGate_NX1.vhd"/>
+      <outfile xil_pn:name="TB_Flag_Generator.vhd"/>
+      <outfile xil_pn:name="XNORGate_NX1.vhd"/>
+      <outfile xil_pn:name="constants.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1525943470" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9038979748441608026" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TB_Flag_Generator_beh.prj"/>
@@ -91,7 +91,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1525941707" xil_pn:in_ck="9105159270298669220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5218033150099881459" xil_pn:start_ts="1525941707">
+    <transform xil_pn:end_ts="1525943470" xil_pn:in_ck="9105159270298669220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5218033150099881459" xil_pn:start_ts="1525943470">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TB_Flag_Generator_isim_beh.wdb"/>
@@ -105,10 +105,12 @@
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1270763429649763103" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3626390229821113481" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -117,19 +119,25 @@
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5121763783165331459" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1525940077" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8432904408715403283" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1525940086" xil_pn:in_ck="-5501531486621974687" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="3086877103859682640" xil_pn:start_ts="1525940077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Flag_Generator.lso"/>
       <outfile xil_pn:name="Flag_Generator.ngc"/>

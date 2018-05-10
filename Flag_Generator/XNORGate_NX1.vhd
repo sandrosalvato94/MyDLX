@@ -20,7 +20,7 @@ architecture Behavioral of XNORGate_NX1 is
 begin
 	
 	cyc0: for i in 0 to N-1 generate
-		matrix(i)(0) <= A(i) or B(i);
+		matrix(i)(0) <= A(i) xor B(i);
 	end generate cyc0;
 	
 	cyc1: for stage in 1 to L generate

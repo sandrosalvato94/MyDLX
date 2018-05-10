@@ -28,7 +28,7 @@ unsigned char ieee_p_2592010699_sub_1605435078_503743352(char *, unsigned char ,
 unsigned char ieee_p_2592010699_sub_1690584930_503743352(char *, unsigned char );
 
 
-static void work_a_0110497899_3212880686_p_0(char *t0)
+static void work_a_0110497899_1181938964_p_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -48,7 +48,7 @@ static void work_a_0110497899_3212880686_p_0(char *t0)
     char *t16;
     char *t17;
 
-LAB0:    xsi_set_current_line(94, ng0);
+LAB0:    xsi_set_current_line(91, ng0);
 
 LAB3:    t1 = (t0 + 592U);
     t2 = *((char **)t1);
@@ -79,7 +79,7 @@ LAB4:    goto LAB2;
 
 }
 
-static void work_a_0110497899_3212880686_p_1(char *t0)
+static void work_a_0110497899_1181938964_p_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -91,7 +91,7 @@ static void work_a_0110497899_3212880686_p_1(char *t0)
     char *t8;
     char *t9;
 
-LAB0:    xsi_set_current_line(99, ng0);
+LAB0:    xsi_set_current_line(96, ng0);
 
 LAB3:    t1 = (t0 + 684U);
     t2 = *((char **)t1);
@@ -113,7 +113,7 @@ LAB4:    goto LAB2;
 
 }
 
-static void work_a_0110497899_3212880686_p_2(char *t0)
+static void work_a_0110497899_1181938964_p_2(char *t0)
 {
     char *t1;
     char *t2;
@@ -127,7 +127,7 @@ static void work_a_0110497899_3212880686_p_2(char *t0)
     char *t10;
     char *t11;
 
-LAB0:    xsi_set_current_line(100, ng0);
+LAB0:    xsi_set_current_line(97, ng0);
 
 LAB3:    t1 = (t0 + 1328U);
     t2 = *((char **)t1);
@@ -152,7 +152,7 @@ LAB4:    goto LAB2;
 
 }
 
-static void work_a_0110497899_3212880686_p_3(char *t0)
+static void work_a_0110497899_1181938964_p_3(char *t0)
 {
     char *t1;
     char *t2;
@@ -166,7 +166,7 @@ static void work_a_0110497899_3212880686_p_3(char *t0)
     char *t10;
     char *t11;
 
-LAB0:    xsi_set_current_line(105, ng0);
+LAB0:    xsi_set_current_line(102, ng0);
 
 LAB3:    t1 = (t0 + 684U);
     t2 = *((char **)t1);
@@ -192,9 +192,9 @@ LAB4:    goto LAB2;
 }
 
 
-extern void work_a_0110497899_3212880686_init()
+extern void work_a_0110497899_1181938964_init()
 {
-	static char *pe[] = {(void *)work_a_0110497899_3212880686_p_0,(void *)work_a_0110497899_3212880686_p_1,(void *)work_a_0110497899_3212880686_p_2,(void *)work_a_0110497899_3212880686_p_3};
-	xsi_register_didat("work_a_0110497899_3212880686", "isim/TB_Flag_Generator_isim_beh.exe.sim/work/a_0110497899_3212880686.didat");
+	static char *pe[] = {(void *)work_a_0110497899_1181938964_p_0,(void *)work_a_0110497899_1181938964_p_1,(void *)work_a_0110497899_1181938964_p_2,(void *)work_a_0110497899_1181938964_p_3};
+	xsi_register_didat("work_a_0110497899_1181938964", "isim/TB_Flag_Generator_isim_beh.exe.sim/work/a_0110497899_1181938964.didat");
 	xsi_register_executes(pe);
 }
