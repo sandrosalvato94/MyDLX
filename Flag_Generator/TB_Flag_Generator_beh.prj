@@ -1,0 +1,5 @@
+vhdl work "constants.vhd"
+vhdl work "XNORGate_NX1.vhd"
+vhdl work "NORGate_NX1.vhd"
+vhdl work "Flag_Generator.vhd"
+vhdl work "TB_Flag_Generator.vhd"

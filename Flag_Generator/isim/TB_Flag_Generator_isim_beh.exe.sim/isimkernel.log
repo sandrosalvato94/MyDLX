@@ -1,0 +1,30 @@
+Command line:
+   TB_Flag_Generator_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60282
+
+Thu May 10 11:41:50 2018
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 1043.31 Meg
+
+ Total Signals          : 27
+ Total Nets             : 488
+ Total Signal Drivers   : 135
+ Total Blocks           : 463
+ Total Primitive Blocks : 387
+ Total Processes        : 133
+ Total Traceable Variables  : 422
+ Total Scalar Nets and Variables : 1380
+Total Line Count : 132
+Total Line Count : 132
+
+ Total Simulation Time: 0.890625 sec
+
+ Current Memory Usage: 885.764 Meg
+
+Thu May 10 11:44:28 2018
+

@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/TB_Flag_Generator_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/TB_Flag_Generator_beh.prj work.TB_Flag_Generator 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/constants.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/XNORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/NORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/Flag_Generator.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/TB_Flag_Generator.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 196996 KB
+Fuse CPU Usage: 421 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package constants
+Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(32)\]
+Compiling architecture behavioral of entity XNORGate_NX1 [\XNORGate_NX1(32)\]
+Compiling architecture behavioral of entity Flag_Generator [\Flag_Generator(32)\]
+Compiling architecture behavior of entity tb_flag_generator
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Flag_Generator/TB_Flag_Generator_isim_beh.exe
+Fuse Memory Usage: 216676 KB
+Fuse CPU Usage: 796 ms
