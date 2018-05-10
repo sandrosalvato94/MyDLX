@@ -54,6 +54,10 @@
     <transform xil_pn:end_ts="1525943466" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Flag_Generator.vhd"/>
       <outfile xil_pn:name="NORGate_NX1.vhd"/>
       <outfile xil_pn:name="TB_Flag_Generator.vhd"/>
@@ -75,6 +79,11 @@
     <transform xil_pn:end_ts="1525943466" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Flag_Generator.vhd"/>
       <outfile xil_pn:name="NORGate_NX1.vhd"/>
       <outfile xil_pn:name="TB_Flag_Generator.vhd"/>
@@ -84,6 +93,11 @@
     <transform xil_pn:end_ts="1525943470" xil_pn:in_ck="-796451706692291738" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9038979748441608026" xil_pn:start_ts="1525943466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Flag_Generator_beh.prj"/>
       <outfile xil_pn:name="TB_Flag_Generator_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -94,6 +108,9 @@
     <transform xil_pn:end_ts="1525943470" xil_pn:in_ck="9105159270298669220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5218033150099881459" xil_pn:start_ts="1525943470">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Flag_Generator_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
