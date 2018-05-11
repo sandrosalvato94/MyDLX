@@ -16,9 +16,9 @@
 -- Additional Comments: 
 --	BS_opcode 
 --			00 : transparent mode
---			01 : SLR
+--			01 : SRL
 --			10 : SLL
---			11 : SAR
+--			11 : SRA
 --
 --	Version 0.1 : all components tied up. Ready for testing.
 --	Version 0.2 : changed mat_cyc lenght and s_m assignements. T1 passed.

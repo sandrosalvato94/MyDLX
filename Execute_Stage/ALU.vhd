@@ -36,9 +36,7 @@ entity ALU is
 	port(
 		ALU_OpA		: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		ALU_OpB		: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		--ALU_func_unit_enable: in  std_logic_vector(1 downto 0); --2 bits as 3 functional unit
 		ALU_Opcode	: in  std_logic_vector(4 downto 0);
-		
 		ALU_output	: out std_logic_vector(NBIT_DATA-1 downto 0);
 		ALU_flags		: out std_logic_vector(4 downto 0)
 	);
@@ -114,6 +112,8 @@ architecture Structural of ALU is
 	end component;
 	
 	constant L: integer := log2(NBIT_DATA);
+	
+	constant
 
 begin
 

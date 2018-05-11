@@ -18,6 +18,7 @@
 --	   0010		  SLEUI/SLEU
 --	   0011               SGEUI/SGEU
 --	   0100		  SEQI/SEQ
+--	   0101		  SNEI/SNE
 --	   1000               SLTI/SLT
 --	   1001               SGTI/SGT
 --	   1010               SLEI/SLE
@@ -30,6 +31,9 @@
 -- Dependencies: 
 --
 -- Revision: 1.0 	Tests T1, T2, T3, T4, T5, T5, T6, T7, T8, T9 passed.
+--	   1.1	I forgot the case for SNE and SNEI instructions.
+--		Fortunately, it's a simple case, because there isn't 
+--		any different between signed and usnigned numbers.
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -75,6 +79,7 @@ architecture Structural of Comparison_Logic is
 	constant OP_LE	: std_logic_vector(2 downto 0) := "010";
 	constant OP_GE	: std_logic_vector(2 downto 0) := "011";
 	constant OP_EQ	: std_logic_vector(2 downto 0) := "100";
+	constant OP_NEQ	: std_logic_vector(2 downto 0) := "101";
 	
 	signal s_A_gt_B, s_A_lt_B, s_A_ge_B, s_A_le_B, s_A_eq_B	: std_logic;
 	signal s_out					: std_logic;
@@ -126,6 +131,12 @@ begin
 				
 			when OP_EQ  => 
 				if(s_A_eq_B = '1') then
+					s_out <= '1';
+				else
+					s_out <= '0';
+				end if;
+			when OP_NEQ  => 
+				if(s_A_eq_B = '0') then
 					s_out <= '1';
 				else
 					s_out <= '0';

@@ -45,6 +45,15 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Barrel_Shifter_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Barrel_Shifter_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Barrel_Shifter_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Comparison_Logic.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Comparison_Logic.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Comparison_Logic.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Comparison_Logic.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Comparison_Logic.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Comparison_Logic.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Comparison_Logic.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Comparison_Logic.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Comparison_Logic_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Enable_Interface.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Enable_Interface.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Enable_Interface.ngc"/>
@@ -124,7 +133,7 @@
     </transform>
     <transform xil_pn:end_ts="1524555973" xil_pn:in_ck="-9166434066762804461" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6641552026903517698" xil_pn:start_ts="1524555969">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -145,48 +154,45 @@
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="474611390803491487" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4387480580838597627" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1955383413678725977" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3902482827199669651" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1133457711139025151" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2652138386298421159" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944917" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7268819829533897329" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030208" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8483858944830734217" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525944927" xil_pn:in_ck="-6543906136482456188" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="3836896040870361902" xil_pn:start_ts="1525944917">
+    <transform xil_pn:end_ts="1526030222" xil_pn:in_ck="-6543906136482456188" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5877784034219484852" xil_pn:start_ts="1526030208">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="ALU.lso"/>
-      <outfile xil_pn:name="ALU.ngc"/>
-      <outfile xil_pn:name="ALU.ngr"/>
-      <outfile xil_pn:name="ALU.prj"/>
-      <outfile xil_pn:name="ALU.stx"/>
-      <outfile xil_pn:name="ALU.syr"/>
-      <outfile xil_pn:name="ALU.xst"/>
-      <outfile xil_pn:name="ALU_xst.xrpt"/>
+      <outfile xil_pn:name="Comparison_Logic.lso"/>
+      <outfile xil_pn:name="Comparison_Logic.ngc"/>
+      <outfile xil_pn:name="Comparison_Logic.ngr"/>
+      <outfile xil_pn:name="Comparison_Logic.prj"/>
+      <outfile xil_pn:name="Comparison_Logic.stx"/>
+      <outfile xil_pn:name="Comparison_Logic.syr"/>
+      <outfile xil_pn:name="Comparison_Logic.xst"/>
+      <outfile xil_pn:name="Comparison_Logic_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
