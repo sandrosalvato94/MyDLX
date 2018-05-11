@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Comparison_Logic.prj
 
@@ -140,7 +140,7 @@ Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work
 Synthesizing Unit <Comparison_Logic>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparison_Logic.vhd".
         NBIT_DATA = 32
-    Found 1-bit 7-to-1 multiplexer for signal <s_out> created at line 100.
+    Found 1-bit 7-to-1 multiplexer for signal <s_out> created at line 103.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Comparison_Logic> synthesized.
@@ -349,8 +349,8 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.08 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.94 secs
  
 --> 
 

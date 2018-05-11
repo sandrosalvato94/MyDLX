@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: ALU.prj
 
@@ -105,9 +105,79 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\mux21.vhd" into library work
+Parsing entity <MUX21>.
+Parsing architecture <BEHAVIORAL> of entity <mux21>.
+Parsing configuration <CFG_MUX21_BEHAVIORAL>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\fa.vhd" into library work
+Parsing entity <FA>.
+Parsing architecture <BEHAVIORAL> of entity <fa>.
+Parsing configuration <CFG_FA_BEHAVIORAL>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\rca.vhd" into library work
+Parsing entity <RCA>.
+Parsing architecture <STRUCTURAL> of entity <rca>.
+Parsing configuration <CFG_RCA_STRUCTURAL>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\PG_cell.vhd" into library work
+Parsing entity <PG_cell>.
+Parsing architecture <Behavioral> of entity <pg_cell>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\mux_generic.vhd" into library work
+Parsing entity <MUX21_GENERIC>.
+Parsing architecture <STRUCTURAL> of entity <mux21_generic>.
+Parsing configuration <CFG_MUX21_GEN_STRUCTURAL>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\GeneralGenerate.vhd" into library work
+Parsing entity <GeneralGenerate>.
+Parsing architecture <Behavioral> of entity <generalgenerate>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\constants.vhd" into library work
 Parsing package <CONSTANTS>.
 Parsing package body <CONSTANTS>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\PG_network.vhd" into library work
+Parsing entity <PG_network>.
+Parsing architecture <Behavioral> of entity <pg_network>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ORGate_NX1.vhd" into library work
+Parsing entity <ORGate_NX1>.
+Parsing architecture <Behavioral> of entity <orgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\GeneralPropagate.vhd" into library work
+Parsing entity <GeneralPropagate>.
+Parsing architecture <Behavioral> of entity <generalpropagate>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd" into library work
+Parsing entity <CarrySelectBlock>.
+Parsing architecture <Structural> of entity <carryselectblock>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\XNORGate_NX1.vhd" into library work
+Parsing entity <XNORGate_NX1>.
+Parsing architecture <Behavioral> of entity <xnorgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\NORGate_NX1.vhd" into library work
+Parsing entity <NORGate_NX1>.
+Parsing architecture <Behavioral> of entity <norgate_nx1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparator.vhd" into library work
+Parsing entity <Comparator>.
+Parsing architecture <Structural> of entity <comparator>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelect.vhd" into library work
+Parsing entity <CarrySelect>.
+Parsing architecture <Structural> of entity <carryselect>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarryGenerator.vhd" into library work
+Parsing entity <CarryGenerator>.
+Parsing architecture <Behavioral> of entity <carrygenerator>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\P4Adder.vhd" into library work
+Parsing entity <P4Adder>.
+Parsing architecture <Behavioral> of entity <p4adder>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Logic_Unit.vhd" into library work
+Parsing entity <Logic_Unit>.
+Parsing architecture <Structural> of entity <logic_unit>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Flag_Generator.vhd" into library work
+Parsing entity <Flag_Generator>.
+Parsing architecture <Structural> of entity <flag_generator>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparison_Logic.vhd" into library work
+Parsing entity <Comparison_Logic>.
+Parsing architecture <Structural> of entity <comparison_logic>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" into library work
+Parsing entity <Barrel_Shifter>.
+Parsing architecture <Structural> of entity <barrel_shifter>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" into library work
 Parsing entity <ALU>.
 Parsing architecture <Structural> of entity <alu>.
@@ -118,24 +188,249 @@ Parsing architecture <Structural> of entity <alu>.
 
 Elaborating entity <ALU> (architecture <Structural>) with generics from library <work>.
 
+Elaborating entity <Barrel_Shifter> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 246: Assignment to s_sel_third ignored, since the identifier is never used
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <P4Adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <CarryGenerator> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <PG_network> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <GeneralGenerate> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <GeneralPropagate> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CarrySelect> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <CarrySelectBlock> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <RCA> (architecture <STRUCTURAL>) with generics from library <work>.
+
+Elaborating entity <FA> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <MUX21_GENERIC> (architecture <STRUCTURAL>) with generics from library <work>.
+
+Elaborating entity <MUX21> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Logic_Unit> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Comparison_Logic> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Comparator> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <ORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Flag_Generator> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <NORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <XNORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" Line 135: Net <s_mux_signals[1][2][31]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" line 204. All outputs of instance <CMPL> of block <Comparison_Logic> are unconnected in block <ALU>. Underlying logic will be removed.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ALU>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd".
-        NBIT_DATA = 32
-WARNING:Xst:647 - Input <ALU_OpA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ALU_OpB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ALU_Opcode> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+        NBIT_ALU = 32
+        NBIT_BS_AMOUNT = 5
+WARNING:Xst:2935 - Signal 's_mux_signals<1><2>', unconnected in block 'ALU', is tied to its initial value (00000000000000000000000000000000).
     Summary:
 	no macro.
 Unit <ALU> synthesized.
 
+Synthesizing Unit <Barrel_Shifter>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd".
+        NBIT_AMOUNT = 5
+    Summary:
+	no macro.
+Unit <Barrel_Shifter> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1_1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 8
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_1> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1_2>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 40
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_2> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1_3>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 3
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_3> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1_4>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_4> synthesized.
+
+Synthesizing Unit <P4Adder>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\P4Adder.vhd".
+        N = 32
+    Summary:
+	no macro.
+Unit <P4Adder> synthesized.
+
+Synthesizing Unit <CarryGenerator>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarryGenerator.vhd".
+        N = 32
+        K = 8
+    Summary:
+	no macro.
+Unit <CarryGenerator> synthesized.
+
+Synthesizing Unit <PG_network>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\PG_network.vhd".
+        N = 32
+WARNING:Xst:653 - Signal <P<0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+Unit <PG_network> synthesized.
+
+Synthesizing Unit <GeneralGenerate>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\GeneralGenerate.vhd".
+    Summary:
+	no macro.
+Unit <GeneralGenerate> synthesized.
+
+Synthesizing Unit <PG_cell>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\PG_cell.vhd".
+    Summary:
+Unit <PG_cell> synthesized.
+
+Synthesizing Unit <GeneralPropagate>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\GeneralPropagate.vhd".
+    Summary:
+	no macro.
+Unit <GeneralPropagate> synthesized.
+
+Synthesizing Unit <CarrySelect>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelect.vhd".
+        N = 32
+        K = 4
+    Summary:
+	no macro.
+Unit <CarrySelect> synthesized.
+
+Synthesizing Unit <CarrySelectBlock>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd".
+        N = 4
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd" line 41: Output port <Co> of the instance <rca1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd" line 50: Output port <Co> of the instance <rca2> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <CarrySelectBlock> synthesized.
+
+Synthesizing Unit <RCA>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\rca.vhd".
+        N = 4
+    Summary:
+	no macro.
+Unit <RCA> synthesized.
+
+Synthesizing Unit <FA>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\fa.vhd".
+    Summary:
+Unit <FA> synthesized.
+
+Synthesizing Unit <MUX21_GENERIC>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\mux_generic.vhd".
+        N = 4
+    Summary:
+	no macro.
+Unit <MUX21_GENERIC> synthesized.
+
+Synthesizing Unit <MUX21>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\mux21.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MUX21> synthesized.
+
+Synthesizing Unit <Logic_Unit>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Logic_Unit.vhd".
+        NBIT_DATA = 32
+    Summary:
+	no macro.
+Unit <Logic_Unit> synthesized.
+
+Synthesizing Unit <Comparator>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparator.vhd".
+        NBIT_DATA = 32
+    Summary:
+	no macro.
+Unit <Comparator> synthesized.
+
+Synthesizing Unit <ORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ORGate_NX1.vhd".
+        N = 32
+    Summary:
+	no macro.
+Unit <ORGate_NX1> synthesized.
+
+Synthesizing Unit <Mux_1Bit_2X1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_1Bit_2X1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1Bit_2X1> synthesized.
+
+Synthesizing Unit <Flag_Generator>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Flag_Generator.vhd".
+        NBIT_ALU = 32
+    Summary:
+	no macro.
+Unit <Flag_Generator> synthesized.
+
+Synthesizing Unit <NORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\NORGate_NX1.vhd".
+        N = 32
+    Summary:
+	no macro.
+Unit <NORGate_NX1> synthesized.
+
+Synthesizing Unit <XNORGate_NX1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\XNORGate_NX1.vhd".
+        N = 32
+    Summary:
+Unit <XNORGate_NX1> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 32
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 10
+ 40-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 21
+# Xors                                                 : 161
+ 1-bit xor2                                            : 160
+ 1-bit xor32                                           : 1
+
 =========================================================================
 
 =========================================================================
@@ -146,14 +441,37 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 32
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 10
+ 40-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 21
+# Xors                                                 : 161
+ 1-bit xor2                                            : 160
+ 1-bit xor32                                           : 1
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[3].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[2].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[1].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 
 Optimizing unit <ALU> ...
+
+Optimizing unit <Barrel_Shifter> ...
+
+Optimizing unit <CarryGenerator> ...
+
+Optimizing unit <CarrySelect> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -186,6 +504,16 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 287
+#      LUT2                        : 1
+#      LUT3                        : 46
+#      LUT4                        : 40
+#      LUT5                        : 32
+#      LUT6                        : 163
+#      MUXF7                       : 5
+# IO Buffers                       : 111
+#      IBUF                        : 74
+#      OBUF                        : 37
 
 Device utilization summary:
 ---------------------------
@@ -194,17 +522,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                  282  out of  63400     0%  
+    Number used as Logic:               282  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
+ Number of LUT Flip Flop pairs used:    282
+   Number with an unused Flip Flop:     282  out of    282   100%  
+   Number with an unused LUT:             0  out of    282     0%  
+   Number of fully used LUT-FF pairs:     0  out of    282     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         106
- Number of bonded IOBs:                   0  out of    210     0%  
+ Number of IOs:                         112
+ Number of bonded IOBs:                 111  out of    210    52%  
 
 Specific Feature Utilization:
 
@@ -239,11 +569,51 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 11.957ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 270750 / 37
+-------------------------------------------------------------------------
+Delay:               11.957ns (Levels of Logic = 24)
+  Source:            ALU_Opcode<2> (PAD)
+  Destination:       ALU_flags<2> (PAD)
+
+  Data Path: ALU_Opcode<2> to ALU_flags<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.001   0.562  ALU_Opcode_2_IBUF (ALU_Opcode_2_IBUF)
+     LUT3:I0->O           43   0.097   0.792  s_BS_opcode<0>1 (s_BS_opcode<0>)
+     LUT5:I0->O            5   0.097   0.575  BS/MUX3x1/sel_INV_7_o282 (BS/MUX3x1/sel_INV_7_o_mmx_out34)
+     LUT6:I2->O            1   0.097   0.000  BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY133_F (N80)
+     MUXF7:I0->O           4   0.277   0.697  BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY133 (s_from_BS_to_units_opA<1>)
+     LUT5:I0->O            1   0.097   0.295  P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
+     LUT6:I5->O            5   0.097   0.398  P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (P4/carry_tmp<1>)
+     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
+     LUT5:I4->O            5   0.097   0.398  P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (P4/carry_tmp<2>)
+     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij1 (P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij)
+     LUT5:I4->O            5   0.097   0.712  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij2 (P4/carry_tmp<3>)
+     LUT6:I0->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij3_SW0 (N76)
+     LUT5:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij3 (P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij2)
+     LUT5:I4->O            5   0.097   0.314  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij4 (P4/carry_tmp<4>)
+     LUT6:I5->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[2].L7.PM13/G_ij_SW0 (N74)
+     LUT5:I4->O            5   0.097   0.314  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[2].L7.PM13/G_ij (P4/carry_tmp<5>)
+     LUT6:I5->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij1 (P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij)
+     LUT5:I4->O            5   0.097   0.398  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij2 (P4/carry_tmp<6>)
+     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij1 (P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij)
+     LUT5:I4->O            5   0.097   0.712  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij2 (P4/carry_tmp<7>)
+     LUT6:I0->O            1   0.097   0.556  P4/CS/S<31>11 (P4/CS/S<31>_bdd0)
+     LUT6:I2->O            4   0.097   0.570  depth1[1].width1[0].mod_if1.MUX1/Mmux_portY25 (ALU_output_31_OBUF)
+     LUT4:I0->O            1   0.097   0.279  FG/FG_SF1 (ALU_flags_2_OBUF)
+     OBUF:I->O                 0.000          ALU_flags_2_OBUF (ALU_flags<2>)
+    ----------------------------------------
+    Total                     11.957ns (2.315ns logic, 9.642ns route)
+                                       (19.4% logic, 80.6% route)
 
 =========================================================================
 
@@ -253,14 +623,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.22 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.10 secs
  
 --> 
 
-Total memory usage is 373056 kilobytes
+Total memory usage is 372968 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

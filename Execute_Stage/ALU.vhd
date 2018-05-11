@@ -32,12 +32,14 @@ use work.constants.all;
 --use UNISIM.VComponents.all;
 
 entity ALU is
-	generic(NBIT_DATA : integer := 32);
+	generic(NBIT_ALU 	   : integer := 32;
+	        NBIT_BS_AMOUNT : integer := 5);
 	port(
-		ALU_OpA		: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		ALU_OpB		: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		ALU_Opcode	: in  std_logic_vector(4 downto 0);
-		ALU_output	: out std_logic_vector(NBIT_DATA-1 downto 0);
+		ALU_OpA		: in  std_logic_vector(NBIT_ALU-1 downto 0);
+		ALU_OpB		: in  std_logic_vector(NBIT_ALU-1 downto 0);
+		ALU_Opcode	: in  std_logic_vector(5 downto 0);
+		ALU_BS_amount	: in  std_logic_vector(NBIT_BS_AMOUNT -1 downto 0);
+		ALU_output	: out std_logic_vector(NBIT_ALU-1 downto 0);
 		ALU_flags		: out std_logic_vector(4 downto 0)
 	);
 end ALU;
@@ -111,31 +113,137 @@ architecture Structural of ALU is
 	);
 	end component;
 	
-	constant L: integer := log2(NBIT_DATA);
+	type collection_data is array (0 to 3) of std_logic_vector (NBIT_ALU-1 downto 0);
+	type matrix_data is array(0 to 3) of collection_data;
 	
-	constant
-
+	--constant L: integer := log2(NBIT_ALU);
+	
+	signal s_BS_enable		: std_logic;
+	signal s_BS_opcode		: std_logic_vector(1 downto 0);
+	signal s_from_BS_to_units_opA	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_P4_cin		: std_logic;
+	signal s_not_opB, s_sel_opB	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_from_P4_c_out	: std_logic;
+	signal s_from_P4_to_out_sum	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_LU_enable		: std_logic;
+	signal s_tmp1, s_tmp2	: std_logic;
+	signal s_LU_opcode		: std_logic_vector(3 downto 0);
+	signal s_from_LU_to_out_mux	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_CMP_enable		: std_logic;
+	signal s_CMP_opcode		: std_logic_vector(3 downto 0);
+	signal s_from_CMP_to_out_mux	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_mux_signals	: matrix_data :=(others => (others => (others => '0')));
 begin
 
---	type collectionEntry  is array (0 to N_ENTRY-1) of std_logic_vector (NBIT_ENTRY-1 downto 0);
---	type collectionTarget is array (0 to N_ENTRY-1) of std_logic_vector (NBIT_TARGET-1 downto 0);
---	type matrixTarget is array(0 to N_ENTRY-1) of collectionTarget;
---	
---	signal s_mux_signals		: matrixTarget :=(others => (others => (others => '0')));
+---------------------------------------------------------------------------------------------
+	
+	s_BS_enable <= ALU_Opcode(5) NOR ALU_Opcode(4);
+	
+	s_BS_opcode(1) <= ALU_Opcode(3) AND s_BS_enable;
+	s_BS_opcode(0) <= ALU_Opcode(2) AND s_BS_enable;
+	
+	
+	BS : Barrel_Shifter GENERIC MAP (NBIT_AMOUNT => NBIT_BS_AMOUNT) PORT MAP (
+						BS_data_in => ALU_OpA,
+						BS_opcode => s_BS_opcode,
+						BS_amount => ALU_BS_amount,
+						BS_data_out => s_from_BS_to_units_opA
+						);
 
---	depth1: for i in 0 to L-1 generate 				--0,  1, 2,  3
---		width1: for j in 0 to N_ENTRY-1 generate 	         --15,  7, 3,  1
---			mod_if1: if(j mod(2**(i+1)) = 0) generate 	--2,  4, 8, 16
---				MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_TARGET) 
---				           PORT MAP (port0 => s_mux_signals(i)(j),
---						 port1 => s_mux_signals(i)(j+2**i),
---						 Sel => s_selmuxes_Fencoder_Tmuxes(i),
---						 portY => s_mux_signals(i+1)(j));
---			end generate mod_if1;
---			
---		end generate width1;
---	end generate depth1;
+---------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
+	
+	cyc_not_opb : for i in 0 to NBIT_ALU-1 generate
+		s_not_opb(i) <= NOT(ALU_Opb(i));
+	end generate cyc_not_opb;
+	
+	s_P4_cin  <= ALU_Opcode(0) AND s_BS_enable;
+	
+	MuxP4 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) PORT MAP (
+						port0 => ALU_Opb,
+						port1 => s_not_opb,
+						sel => s_P4_cin,
+						portY => s_sel_opB
+						);
+	
+	P4 : P4Adder GENERIC MAP (N => NBIT_ALU) PORT MAP (
+					A => s_from_BS_to_units_opA,
+					B => s_sel_opB,
+					C_in => s_P4_cin,
+					C_out => s_from_P4_c_out,
+					Sum => s_from_P4_to_out_sum
+					);
+	
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+	s_tmp1 <= NOT(ALU_Opcode(5));
+	s_LU_enable <= s_tmp1 AND ALU_Opcode(4);
+	s_LU_opcode(3) <= s_LU_enable AND ALU_Opcode(3);
+	s_LU_opcode(2) <= s_LU_enable AND ALU_Opcode(2);
+	s_LU_opcode(1) <= s_LU_enable AND ALU_Opcode(1);
+	s_LU_opcode(0) <= s_LU_enable AND ALU_Opcode(0);
+
+	LU : Logic_Unit GENERIC MAP (NBIT_DATA => NBIT_ALU) PORT MAP (
+						LU_OpA => s_from_BS_to_units_opA,
+						LU_OpB => ALU_OpB,
+						LU_Opcode => s_LU_opcode,
+						LU_Y => s_from_LU_to_out_mux
+						);
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+	s_tmp2 <= NOT(ALU_Opcode(4));
+	s_CMP_enable <= s_tmp2 AND ALU_Opcode(5);
+	s_CMP_opcode(3) <= s_CMP_enable AND ALU_Opcode(3);
+	s_CMP_opcode(2) <= s_CMP_enable AND ALU_Opcode(2);
+	s_CMP_opcode(1) <= s_CMP_enable AND ALU_Opcode(1);
+	s_CMP_opcode(0) <= s_CMP_enable AND ALU_Opcode(0);
+	
+	CMPL : Comparison_Logic GENERIC MAP (NBIT_DATA => NBIT_ALU) PORT MAP (
+							CMPL_OpA => s_from_BS_to_units_opA,
+							CMPL_OpB => ALU_OpB,
+							CMPL_OPCODE => s_CMP_opcode,
+							CMPL_Y => s_from_CMP_to_out_mux
+							);
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+	
+	s_mux_signals(0)(0) <= s_from_P4_to_out_sum;
+	s_mux_signals(0)(1) <= s_from_LU_to_out_mux;
+	s_mux_signals(0)(2) <= s_from_CMP_to_out_mux;
+	
+	depth1: for i in 0 to 1 generate 				--0,  1, 2,  3
+		width1: for j in 0 to 1 generate 	         --15,  7, 3,  1
+			mod_if1: if(j mod(2**(i+1)) = 0) generate 	--2,  4, 8, 16
+				MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) 
+				           PORT MAP (port0 => s_mux_signals(i)(j),
+						 port1 => s_mux_signals(i)(j+2**i),
+						 Sel => ALU_Opcode(5-i),
+						 portY => s_mux_signals(i+1)(j));
+			end generate mod_if1;
+			
+		end generate width1;
+	end generate depth1;
+	
+	ALU_output <= s_mux_signals(2)(0);
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+	FG : Flag_Generator GENERIC MAP (NBIT_ALU => NBIT_ALU) PORT MAP (
+							FG_ALU_out => s_mux_signals(2)(0),
+							FG_sgn_usgn => s_CMP_opcode(3), --it's a SIGNED/unsigned bit
+							FG_carry => s_from_P4_c_out,
+							FG_ZF => ALU_flags(0),
+							FG_PF => ALU_flags(1),
+							FG_SF => ALU_flags(2),
+							FG_CF => ALU_flags(3),
+							FG_OF => ALU_flags(4)
+							);
+	
+---------------------------------------------------------------------------------------------
 
 end Structural;
 
