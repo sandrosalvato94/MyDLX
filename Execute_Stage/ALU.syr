@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: ALU.prj
 
@@ -238,8 +238,6 @@ Elaborating entity <Flag_Generator> (architecture <Structural>) with generics fr
 Elaborating entity <NORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <XNORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" Line 135: Net <s_mux_signals[1][2][31]> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" line 204. All outputs of instance <CMPL> of block <Comparison_Logic> are unconnected in block <ALU>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -247,16 +245,15 @@ WARNING:Xst:2972 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistr
 
 Synthesizing Unit <ALU>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd".
-        NBIT_ALU = 32
-        NBIT_BS_AMOUNT = 5
-WARNING:Xst:2935 - Signal 's_mux_signals<1><2>', unconnected in block 'ALU', is tied to its initial value (00000000000000000000000000000000).
+        NBIT_ALU = 128
+        NBIT_BS_AMOUNT = 7
     Summary:
 	no macro.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <Barrel_Shifter>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd".
-        NBIT_AMOUNT = 5
+        NBIT_AMOUNT = 7
     Summary:
 	no macro.
 Unit <Barrel_Shifter> synthesized.
@@ -270,9 +267,9 @@ Unit <Mux_NBit_2x1_1> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1_2>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
-        NBIT_IN = 40
+        NBIT_IN = 136
     Summary:
-	inferred   1 Multiplexer(s).
+	no macro.
 Unit <Mux_NBit_2x1_2> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1_3>.
@@ -284,29 +281,29 @@ Unit <Mux_NBit_2x1_3> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1_4>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Mux_NBit_2x1.vhd".
-        NBIT_IN = 32
+        NBIT_IN = 128
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1_4> synthesized.
 
 Synthesizing Unit <P4Adder>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\P4Adder.vhd".
-        N = 32
+        N = 128
     Summary:
 	no macro.
 Unit <P4Adder> synthesized.
 
 Synthesizing Unit <CarryGenerator>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarryGenerator.vhd".
-        N = 32
-        K = 8
+        N = 128
+        K = 32
     Summary:
 	no macro.
 Unit <CarryGenerator> synthesized.
 
 Synthesizing Unit <PG_network>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\PG_network.vhd".
-        N = 32
+        N = 128
 WARNING:Xst:653 - Signal <P<0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 Unit <PG_network> synthesized.
@@ -330,7 +327,7 @@ Unit <GeneralPropagate> synthesized.
 
 Synthesizing Unit <CarrySelect>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelect.vhd".
-        N = 32
+        N = 128
         K = 4
     Summary:
 	no macro.
@@ -372,21 +369,28 @@ Unit <MUX21> synthesized.
 
 Synthesizing Unit <Logic_Unit>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Logic_Unit.vhd".
-        NBIT_DATA = 32
+        NBIT_DATA = 128
     Summary:
 	no macro.
 Unit <Logic_Unit> synthesized.
 
+Synthesizing Unit <Comparison_Logic>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparison_Logic.vhd".
+        NBIT_DATA = 128
+    Found 1-bit 7-to-1 multiplexer for signal <s_out> created at line 103.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Comparison_Logic> synthesized.
+
 Synthesizing Unit <Comparator>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Comparator.vhd".
-        NBIT_DATA = 32
+        NBIT_DATA = 128
     Summary:
-	no macro.
 Unit <Comparator> synthesized.
 
 Synthesizing Unit <ORGate_NX1>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ORGate_NX1.vhd".
-        N = 32
+        N = 128
     Summary:
 	no macro.
 Unit <ORGate_NX1> synthesized.
@@ -399,21 +403,21 @@ Unit <Mux_1Bit_2X1> synthesized.
 
 Synthesizing Unit <Flag_Generator>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Flag_Generator.vhd".
-        NBIT_ALU = 32
+        NBIT_ALU = 128
     Summary:
 	no macro.
 Unit <Flag_Generator> synthesized.
 
 Synthesizing Unit <NORGate_NX1>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\NORGate_NX1.vhd".
-        N = 32
+        N = 128
     Summary:
 	no macro.
 Unit <NORGate_NX1> synthesized.
 
 Synthesizing Unit <XNORGate_NX1>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\XNORGate_NX1.vhd".
-        N = 32
+        N = 128
     Summary:
 Unit <XNORGate_NX1> synthesized.
 
@@ -421,15 +425,15 @@ Unit <XNORGate_NX1> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 68
- 1-bit 2-to-1 multiplexer                              : 32
+# Multiplexers                                         : 416
+ 1-bit 2-to-1 multiplexer                              : 130
+ 1-bit 7-to-1 multiplexer                              : 1
+ 128-bit 2-to-1 multiplexer                            : 11
  3-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 10
- 40-bit 2-to-1 multiplexer                             : 4
- 8-bit 2-to-1 multiplexer                              : 21
-# Xors                                                 : 161
- 1-bit xor2                                            : 160
- 1-bit xor32                                           : 1
+ 8-bit 2-to-1 multiplexer                              : 273
+# Xors                                                 : 769
+ 1-bit xor128                                          : 1
+ 1-bit xor2                                            : 768
 
 =========================================================================
 
@@ -442,32 +446,202 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 68
- 1-bit 2-to-1 multiplexer                              : 32
+# Multiplexers                                         : 416
+ 1-bit 2-to-1 multiplexer                              : 130
+ 1-bit 7-to-1 multiplexer                              : 1
+ 128-bit 2-to-1 multiplexer                            : 11
  3-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 10
- 40-bit 2-to-1 multiplexer                             : 4
- 8-bit 2-to-1 multiplexer                              : 21
-# Xors                                                 : 161
- 1-bit xor2                                            : 160
- 1-bit xor32                                           : 1
+ 8-bit 2-to-1 multiplexer                              : 273
+# Xors                                                 : 769
+ 1-bit xor128                                          : 1
+ 1-bit xor2                                            : 768
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[3].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[3].L1.CASE3.MUX3>, <musk_cyc[2].mux_cyc[4].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[10].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[11].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[11].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[12].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[13].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[14].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[15].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[10].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[11].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[11].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[12].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[13].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3>, <musk_cyc[14].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[11].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[11].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[12].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[13].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2>, <musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[1].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[11].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[11].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3>, <musk_cyc[12].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].L1.CASE2.MUX2>, <musk_cyc[3].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].L1.CASE2.MUX2>, <musk_cyc[4].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[11].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[2].L1.CASE2.MUX2>, <musk_cyc[4].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[2].L1.CASE2.MUX2>, <musk_cyc[5].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[6].mux_cyc[12].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3>, <musk_cyc[10].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[4].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[5].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[6].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[6].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[9].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[5].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[6].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[5].mux_cyc[13].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[6].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3>, <musk_cyc[8].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[5].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[6].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[5].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[6].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[7].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[4].mux_cyc[14].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[5].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3>, <musk_cyc[6].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[6].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[14].L1.CASE3.MUX3>, <musk_cyc[4].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[3].mux_cyc[14].L1.CASE3.MUX3>, <musk_cyc[5].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[6].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[14].L1.CASE3.MUX3>, <musk_cyc[3].mux_cyc[15].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[14].L1.CASE3.MUX3>, <musk_cyc[4].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2>, <musk_cyc[11].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[15].L1.CASE3.MUX3>, <musk_cyc[3].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[7].mux_cyc[5].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[11].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[12].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[1].mux_cyc[15].L1.CASE3.MUX3>, <musk_cyc[2].mux_cyc[16].L1.CASE3.MUX3> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[5].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[11].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[12].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2>, <musk_cyc[13].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[8].mux_cyc[6].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[5].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[11].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[12].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[13].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[14].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[9].mux_cyc[6].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[10].mux_cyc[5].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[11].mux_cyc[4].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[12].mux_cyc[3].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[13].mux_cyc[2].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[14].mux_cyc[1].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2>, <musk_cyc[15].mux_cyc[0].L1.CASE2.MUX2> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[9].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[9].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[9].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[10].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[10].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[10].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[10].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[10].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[5].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[11].mux_cyc[11].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[4].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[5].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[11].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[12].mux_cyc[12].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[4].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[5].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[11].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[12].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[13].mux_cyc[13].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[4].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[5].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[11].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[12].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[13].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[14].mux_cyc[14].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[1].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[4].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[5].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[6].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[7].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[8].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[9].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[10].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[11].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[12].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[13].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[14].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[8].mux_cyc[8].CASE4.MUX4>, <musk_cyc[15].mux_cyc[15].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 
 Optimizing unit <ALU> ...
 
 Optimizing unit <Barrel_Shifter> ...
+
+Optimizing unit <Comparator> ...
 
 Optimizing unit <CarryGenerator> ...
 
@@ -475,7 +649,7 @@ Optimizing unit <CarrySelect> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -504,16 +678,19 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 287
-#      LUT2                        : 1
-#      LUT3                        : 46
-#      LUT4                        : 40
-#      LUT5                        : 32
-#      LUT6                        : 163
-#      MUXF7                       : 5
-# IO Buffers                       : 111
-#      IBUF                        : 74
-#      OBUF                        : 37
+# BELS                             : 2542
+#      GND                         : 1
+#      LUT2                        : 109
+#      LUT3                        : 182
+#      LUT4                        : 294
+#      LUT5                        : 485
+#      LUT6                        : 1428
+#      MUXCY                       : 21
+#      MUXF7                       : 21
+#      VCC                         : 1
+# IO Buffers                       : 402
+#      IBUF                        : 269
+#      OBUF                        : 133
 
 Device utilization summary:
 ---------------------------
@@ -522,21 +699,23 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  282  out of  63400     0%  
-    Number used as Logic:               282  out of  63400     0%  
+ Number of Slice LUTs:                 2498  out of  63400     3%  
+    Number used as Logic:              2498  out of  63400     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    282
-   Number with an unused Flip Flop:     282  out of    282   100%  
-   Number with an unused LUT:             0  out of    282     0%  
-   Number of fully used LUT-FF pairs:     0  out of    282     0%  
+ Number of LUT Flip Flop pairs used:   2498
+   Number with an unused Flip Flop:    2498  out of   2498   100%  
+   Number with an unused LUT:             0  out of   2498     0%  
+   Number of fully used LUT-FF pairs:     0  out of   2498     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         112
- Number of bonded IOBs:                 111  out of    210    52%  
+ Number of IOs:                         402
+ Number of bonded IOBs:                 402  out of    210   191% (*) 
 
 Specific Feature Utilization:
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -569,7 +748,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 11.957ns
+   Maximum combinational path delay: 84.281ns
 
 Timing Details:
 ---------------
@@ -577,43 +756,148 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 270750 / 37
+  Total number of paths / destination ports: 3075594211410464000000000000000000 / 133
 -------------------------------------------------------------------------
-Delay:               11.957ns (Levels of Logic = 24)
+Delay:               84.281ns (Levels of Logic = 129)
   Source:            ALU_Opcode<2> (PAD)
-  Destination:       ALU_flags<2> (PAD)
+  Destination:       ALU_flags<0> (PAD)
 
-  Data Path: ALU_Opcode<2> to ALU_flags<2>
+  Data Path: ALU_Opcode<2> to ALU_flags<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   0.001   0.562  ALU_Opcode_2_IBUF (ALU_Opcode_2_IBUF)
-     LUT3:I0->O           43   0.097   0.792  s_BS_opcode<0>1 (s_BS_opcode<0>)
-     LUT5:I0->O            5   0.097   0.575  BS/MUX3x1/sel_INV_7_o282 (BS/MUX3x1/sel_INV_7_o_mmx_out34)
-     LUT6:I2->O            1   0.097   0.000  BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY133_F (N80)
-     MUXF7:I0->O           4   0.277   0.697  BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY133 (s_from_BS_to_units_opA<1>)
-     LUT5:I0->O            1   0.097   0.295  P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
-     LUT6:I5->O            5   0.097   0.398  P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (P4/carry_tmp<1>)
-     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
-     LUT5:I4->O            5   0.097   0.398  P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (P4/carry_tmp<2>)
-     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij1 (P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij)
-     LUT5:I4->O            5   0.097   0.712  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij2 (P4/carry_tmp<3>)
-     LUT6:I0->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij3_SW0 (N76)
-     LUT5:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij3 (P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij2)
-     LUT5:I4->O            5   0.097   0.314  P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij4 (P4/carry_tmp<4>)
-     LUT6:I5->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[2].L7.PM13/G_ij_SW0 (N74)
-     LUT5:I4->O            5   0.097   0.314  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[2].L7.PM13/G_ij (P4/carry_tmp<5>)
-     LUT6:I5->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij1 (P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij)
-     LUT5:I4->O            5   0.097   0.398  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij2 (P4/carry_tmp<6>)
-     LUT6:I4->O            1   0.097   0.295  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij1 (P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij)
-     LUT5:I4->O            5   0.097   0.712  P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij2 (P4/carry_tmp<7>)
-     LUT6:I0->O            1   0.097   0.556  P4/CS/S<31>11 (P4/CS/S<31>_bdd0)
-     LUT6:I2->O            4   0.097   0.570  depth1[1].width1[0].mod_if1.MUX1/Mmux_portY25 (ALU_output_31_OBUF)
-     LUT4:I0->O            1   0.097   0.279  FG/FG_SF1 (ALU_flags_2_OBUF)
-     OBUF:I->O                 0.000          ALU_flags_2_OBUF (ALU_flags<2>)
+     IBUF:I->O           111   0.001   0.630  ALU_Opcode_2_IBUF (ALU_Opcode_2_IBUF)
+     LUT3:I0->O          482   0.097   0.869  s_BS_opcode<0>1 (s_BS_opcode<0>)
+     LUT6:I0->O            2   0.097   0.299  BS/s_mX2<1><10><108>1 (BS/s_mX2<1><10><108>)
+     LUT6:I5->O            2   0.097   0.516  BS/s_mX2<2><12><124>1 (BS/s_mX2<2><12><124>)
+     LUT3:I0->O            1   0.097   0.379  BS/depth1[3].width1[0].mod_if1.MUX1/portY<124>1 (BS/depth1[3].width1[0].mod_if1.MUX1/portY<124>)
+     LUT6:I4->O            3   0.097   0.566  BS/depth1[3].width1[0].mod_if1.MUX1/portY<124>8 (BS/s_mX2<4><0><124>)
+     LUT6:I2->O            4   0.097   0.525  BS/depth2[0].width2[0].mod_if2.MUX2/sel_INV_8_o101 (BS/depth2[0].width2[0].mod_if2.MUX2/sel_INV_8_o_mmx_out107)
+     LUT6:I3->O            8   0.097   0.411  BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY281 (s_from_BS_to_units_opA<124>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/s_en_opa<115>131 (CMPL/CMP/s_en_opa<115>13)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<123>1 (CMPL/CMP/s_en_opa<123>)
+     LUT2:I0->O            1   0.097   0.556  CMPL/CMP/Mxor_s_neq_eq<123>_xo<0>1 (CMPL/CMP/s_neq_eq<123>)
+     LUT6:I2->O            6   0.097   0.716  CMPL/CMP/s_en_opa<115>211 (CMPL/CMP/s_en_opa<115>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<120>1 (CMPL/CMP/s_en_opa<120>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<115>22 (CMPL/CMP/s_en_opa<115>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<119>_xo<0>1 (CMPL/CMP/s_neq_eq<119>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<116>1 (CMPL/CMP/s_en_opa<116>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<116>_xo<0>1 (CMPL/CMP/s_neq_eq<116>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<115>1 (CMPL/CMP/s_en_opa<115>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<115>_xo<0>1 (CMPL/CMP/s_neq_eq<115>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<115>1 (CMPL/CMP/s_enable_next_step<115>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<111>1 (CMPL/CMP/s_en_opa<111>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<111>_xo<0>1 (CMPL/CMP/s_neq_eq<111>)
+     LUT6:I3->O            8   0.097   0.726  CMPL/CMP/s_en_opa<103>211 (CMPL/CMP/s_en_opa<103>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<108>1 (CMPL/CMP/s_en_opa<108>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<103>21 (CMPL/CMP/s_en_opa<103>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<107>_xo<0>1 (CMPL/CMP/s_neq_eq<107>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<104>1 (CMPL/CMP/s_en_opa<104>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<104>_xo<0>1 (CMPL/CMP/s_neq_eq<104>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<103>1 (CMPL/CMP/s_en_opa<103>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<103>_xo<0>1 (CMPL/CMP/s_neq_eq<103>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<103>1 (CMPL/CMP/s_enable_next_step<103>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<99>1 (CMPL/CMP/s_en_opa<99>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<99>_xo<0>1 (CMPL/CMP/s_neq_eq<99>)
+     LUT6:I3->O            8   0.097   0.725  CMPL/CMP/s_en_opa<91>211 (CMPL/CMP/s_en_opa<91>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<96>1 (CMPL/CMP/s_en_opa<96>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<91>21 (CMPL/CMP/s_en_opa<91>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<95>_xo<0>1 (CMPL/CMP/s_neq_eq<95>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<92>1 (CMPL/CMP/s_en_opa<92>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<92>_xo<0>1 (CMPL/CMP/s_neq_eq<92>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<91>1 (CMPL/CMP/s_en_opa<91>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<91>_xo<0>1 (CMPL/CMP/s_neq_eq<91>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<91>1 (CMPL/CMP/s_enable_next_step<91>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<87>1 (CMPL/CMP/s_en_opa<87>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<87>_xo<0>1 (CMPL/CMP/s_neq_eq<87>)
+     LUT6:I3->O            8   0.097   0.725  CMPL/CMP/s_en_opa<79>211 (CMPL/CMP/s_en_opa<79>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<84>1 (CMPL/CMP/s_en_opa<84>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<79>21 (CMPL/CMP/s_en_opa<79>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<83>_xo<0>1 (CMPL/CMP/s_neq_eq<83>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<80>1 (CMPL/CMP/s_en_opa<80>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<80>_xo<0>1 (CMPL/CMP/s_neq_eq<80>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<79>1 (CMPL/CMP/s_en_opa<79>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<79>_xo<0>1 (CMPL/CMP/s_neq_eq<79>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<79>1 (CMPL/CMP/s_enable_next_step<79>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<75>1 (CMPL/CMP/s_en_opa<75>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<75>_xo<0>1 (CMPL/CMP/s_neq_eq<75>)
+     LUT6:I3->O            8   0.097   0.725  CMPL/CMP/s_en_opa<67>211 (CMPL/CMP/s_en_opa<67>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<72>1 (CMPL/CMP/s_en_opa<72>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<67>21 (CMPL/CMP/s_en_opa<67>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<71>_xo<0>1 (CMPL/CMP/s_neq_eq<71>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<68>1 (CMPL/CMP/s_en_opa<68>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<68>_xo<0>1 (CMPL/CMP/s_neq_eq<68>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<67>1 (CMPL/CMP/s_en_opa<67>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<67>_xo<0>1 (CMPL/CMP/s_neq_eq<67>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<67>1 (CMPL/CMP/s_enable_next_step<67>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<63>1 (CMPL/CMP/s_en_opa<63>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<63>_xo<0>1 (CMPL/CMP/s_neq_eq<63>)
+     LUT6:I3->O            8   0.097   0.725  CMPL/CMP/s_en_opa<55>211 (CMPL/CMP/s_en_opa<55>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<60>1 (CMPL/CMP/s_en_opa<60>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<55>21 (CMPL/CMP/s_en_opa<55>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<59>_xo<0>1 (CMPL/CMP/s_neq_eq<59>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<56>1 (CMPL/CMP/s_en_opa<56>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<56>_xo<0>1 (CMPL/CMP/s_neq_eq<56>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<55>1 (CMPL/CMP/s_en_opa<55>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<55>_xo<0>1 (CMPL/CMP/s_neq_eq<55>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<55>1 (CMPL/CMP/s_enable_next_step<55>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<51>1 (CMPL/CMP/s_en_opa<51>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<51>_xo<0>1 (CMPL/CMP/s_neq_eq<51>)
+     LUT6:I3->O            8   0.097   0.725  CMPL/CMP/s_en_opa<43>211 (CMPL/CMP/s_en_opa<43>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<48>1 (CMPL/CMP/s_en_opa<48>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<43>21 (CMPL/CMP/s_en_opa<43>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<47>_xo<0>1 (CMPL/CMP/s_neq_eq<47>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<44>1 (CMPL/CMP/s_en_opa<44>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<44>_xo<0>1 (CMPL/CMP/s_neq_eq<44>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<43>1 (CMPL/CMP/s_en_opa<43>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<43>_xo<0>1 (CMPL/CMP/s_neq_eq<43>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<43>1 (CMPL/CMP/s_enable_next_step<43>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<39>1 (CMPL/CMP/s_en_opa<39>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<39>_xo<0>1 (CMPL/CMP/s_neq_eq<39>)
+     LUT6:I3->O            8   0.097   0.726  CMPL/CMP/s_en_opa<31>211 (CMPL/CMP/s_en_opa<31>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<36>1 (CMPL/CMP/s_en_opa<36>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<31>21 (CMPL/CMP/s_en_opa<31>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<35>_xo<0>1 (CMPL/CMP/s_neq_eq<35>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<32>1 (CMPL/CMP/s_en_opa<32>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<32>_xo<0>1 (CMPL/CMP/s_neq_eq<32>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<31>1 (CMPL/CMP/s_en_opa<31>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<31>_xo<0>1 (CMPL/CMP/s_neq_eq<31>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<31>1 (CMPL/CMP/s_enable_next_step<31>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<27>1 (CMPL/CMP/s_en_opa<27>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<27>_xo<0>1 (CMPL/CMP/s_neq_eq<27>)
+     LUT6:I3->O            8   0.097   0.726  CMPL/CMP/s_en_opa<19>211 (CMPL/CMP/s_en_opa<19>21)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<24>1 (CMPL/CMP/s_en_opa<24>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<19>21 (CMPL/CMP/s_en_opa<19>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<23>_xo<0>1 (CMPL/CMP/s_neq_eq<23>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<20>1 (CMPL/CMP/s_en_opa<20>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<20>_xo<0>1 (CMPL/CMP/s_neq_eq<20>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<19>1 (CMPL/CMP/s_en_opa<19>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<19>_xo<0>1 (CMPL/CMP/s_neq_eq<19>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_enable_next_step<19>1 (CMPL/CMP/s_enable_next_step<19>)
+     LUT6:I3->O            3   0.097   0.389  CMPL/CMP/s_en_opa<15>1 (CMPL/CMP/s_en_opa<15>)
+     LUT2:I0->O            1   0.097   0.511  CMPL/CMP/Mxor_s_neq_eq<15>_xo<0>1 (CMPL/CMP/s_neq_eq<15>)
+     LUT6:I3->O            8   0.097   0.726  CMPL/CMP/s_en_opa<7>211 (CMPL/CMP/s_en_opa<12>1)
+     LUT6:I0->O            3   0.097   0.703  CMPL/CMP/s_en_opa<12>1 (CMPL/CMP/s_en_opa<12>)
+     LUT6:I0->O           14   0.097   0.571  CMPL/CMP/s_en_opa<7>21 (CMPL/CMP/s_en_opa<7>2)
+     LUT3:I0->O            5   0.097   0.702  CMPL/CMP/Mxor_s_neq_eq<11>_xo<0>1 (CMPL/CMP/s_neq_eq<11>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<8>1 (CMPL/CMP/s_en_opa<8>)
+     LUT2:I0->O            3   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<8>_xo<0>1 (CMPL/CMP/s_neq_eq<8>)
+     LUT6:I1->O            3   0.097   0.389  CMPL/CMP/s_en_opa<7>1 (CMPL/CMP/s_en_opa<7>)
+     LUT2:I0->O            1   0.097   0.693  CMPL/CMP/Mxor_s_neq_eq<7>_xo<0>1 (CMPL/CMP/s_neq_eq<7>)
+     LUT6:I0->O            7   0.097   0.721  CMPL/CMP/s_enable_next_step<7>1 (CMPL/CMP/s_enable_next_step<7>)
+     LUT6:I0->O            6   0.097   0.534  CMPL/CMP/s_en_opa<0>31 (CMPL/CMP/s_en_opa<0>3)
+     LUT4:I1->O            2   0.097   0.383  CMPL/CMP/s_en_opa<1>1 (CMPL/CMP/s_en_opa<1>)
+     LUT6:I4->O            1   0.097   0.511  CMPL/CMP/OR_gt/matrix<0><7><0>66_SW0 (N182)
+     LUT6:I3->O            3   0.097   0.703  CMPL/CMP/OR_gt/matrix<0><7><0>66 (CMPL/CMP/s_tmp_gt)
+     LUT6:I0->O            2   0.097   0.300  CMPL/CMP/MUX_gt/Mmux_portY11 (CMPL/s_A_gt_B)
+     LUT6:I5->O            1   0.097   0.000  MUX3/Mmux_portY28_G (N233)
+     MUXF7:I1->O           1   0.279   0.556  MUX3/Mmux_portY28 (MUX3/Mmux_portY29)
+     LUT6:I2->O            3   0.097   0.389  MUX3/Mmux_portY211 (ALU_output_0_OBUF)
+     LUT3:I1->O            1   0.097   0.279  FG/NOR32X1/Y41 (ALU_flags_0_OBUF)
+     OBUF:I->O                 0.000          ALU_flags_0_OBUF (ALU_flags<0>)
     ----------------------------------------
-    Total                     11.957ns (2.315ns logic, 9.642ns route)
-                                       (19.4% logic, 80.6% route)
+    Total                     84.281ns (12.502ns logic, 71.779ns route)
+                                       (14.8% logic, 85.2% route)
 
 =========================================================================
 
@@ -623,14 +907,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.10 secs
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 44.73 secs
  
 --> 
 
-Total memory usage is 372968 kilobytes
+Total memory usage is 463780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :  178 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

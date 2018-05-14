@@ -7,18 +7,22 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ALU - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|ALU.vhd/BS - Barrel_Shifter - Structural</ClosedNode>
+         <ClosedNode>/ALU - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|ALU.vhd/CMPL - Comparison_Logic - Structural</ClosedNode>
+         <ClosedNode>/ALU - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|ALU.vhd/FG - Flag_Generator - Structural</ClosedNode>
+         <ClosedNode>/ALU - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|ALU.vhd/P4 - P4Adder - Behavioral</ClosedNode>
          <ClosedNode>/Execute_Stage - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|Execute_Stage.vhd</ClosedNode>
          <ClosedNode>/Execute_Stage - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|Execute_Stage.vhd/MUL - BOOTHMUL - Structural</ClosedNode>
          <ClosedNode>/P4Adder - Behavioral C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|P4Adder.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CMPL - Comparison_Logic - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Comparison_Logic.vhd)</SelectedItem>
+         <SelectedItem>ALU - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/ALU.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >34</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001db000000020000000000000000000000000200000064ffffffff000000810000000300000002000001db0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CMPL - Comparison_Logic - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Comparison_Logic.vhd)</CurrentItem>
+      <CurrentItem>ALU - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/ALU.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -29,13 +33,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -74,7 +78,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -82,17 +86,18 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Execute_Stage - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|Execute_Stage.vhd</ClosedNode>
+         <ClosedNode>/TB_ALU - behavior C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|TB_ALU.vhd</ClosedNode>
          <ClosedNode>/TB_Barrel_Shifter - behavior C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|TB_Barrel_Shifter.vhd</ClosedNode>
          <ClosedNode>/TB_Enable_Interface - behavior C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|Execute_Stage|TB_Enable_Interface.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ALU - Behavioral (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/ALU.vhd)</SelectedItem>
+         <SelectedItem>TB_ALU - behavior (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000418000000020000000000000000000000000200000064ffffffff000000810000000300000002000004180000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000171000000020000000000000000000000000200000064ffffffff000000810000000300000002000001710000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ALU - Behavioral (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/ALU.vhd)</CurrentItem>
+      <CurrentItem>TB_ALU - behavior (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -113,13 +118,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem>ISim Simulator</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>

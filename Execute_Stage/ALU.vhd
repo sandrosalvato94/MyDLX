@@ -9,12 +9,50 @@
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
+--		The functional units are associeted to an encoded value
+--		
+--		Shifter & Adder	00
+--		Logic Unit	01
+--		Comparator Logic	10
+--		Not Used		11
+--
+--
+--		The ALU opcode is 6 bits long, it ows two kind of structures
+--		depending on the functional unit to be run.
+--		However the 2 most opcode's significant bits are equals to
+--		the two bits used to identify the functional unit running
+--		the current task.
+--
+--
+---------------------------------------------------------------------------------------------------------		
+--	|	SCENARIO 1: OPCODE(5) OPCODE(4)  	 OPCODE[3...0]			|
+--	|		     0         1	         logic unit opcode			|
+--	|		     1         0           comparison logic opcode		|
+---------------------------------------------------------------------------------------------------------
+--
+---------------------------------------------------------------------------------------------------------
+--	|	SCENARIO 2: OPCODE(5) OPCODE(4)   OPCODE[2...1]       OPCODE(1)      OPCODE(0)	|
+--	|		     0         0        shifter opcode    SGN/usgn bit     Carry in	|
+---------------------------------------------------------------------------------------------------------
+--
+--		ALU flags is a 5 bit signal long, with the following structure:
+---------------------------------------------------------------------------------------------------------
+--	|	ALU_Flag(4) ALU_Flag(3) ALU_Flag(2) ALU_Flag(1) ALU_Flag(0)			|
+--	|	 Overflow     Carry        Sign       Parity       Zero 			|
+---------------------------------------------------------------------------------------------------------
 --
 -- Dependencies: 
 --
--- Revision: 0.1
+-- Revision: 0.2
 -- Revision:	
 --	0.1 - Declared all components
+--	0.2 - Simplified the description of the output mux. T1, T2, T3, T4, T5
+--	      partially passed. Alu_output is always correct, but ALU_flags.
+--	0.3 - Not synt for NBIT_ALU = 4. Accepted values are 8, 16, 32, 64, 128.
+--	      Changed the definition of FG_sgn_usgn, now it takes into account
+--	      signed and unsigned adds. T1, T2, T3, T4, T5 completely passed.
+--	      Ready for synthesis on Synopsys' Design Vision
+--	0.4 - Added comments
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -114,7 +152,7 @@ architecture Structural of ALU is
 	end component;
 	
 	type collection_data is array (0 to 3) of std_logic_vector (NBIT_ALU-1 downto 0);
-	type matrix_data is array(0 to 3) of collection_data;
+	type matrix_data is array(0 to 2) of collection_data;
 	
 	--constant L: integer := log2(NBIT_ALU);
 	
@@ -133,6 +171,8 @@ architecture Structural of ALU is
 	signal s_CMP_opcode		: std_logic_vector(3 downto 0);
 	signal s_from_CMP_to_out_mux	: std_logic_vector(NBIT_ALU-1 downto 0);
 	signal s_mux_signals	: matrix_data :=(others => (others => (others => '0')));
+	signal s_tmp3, s_tmp4, s_tmp5 : std_logic;
+	signal s_SGN_usgn		: std_logic;
 begin
 
 ---------------------------------------------------------------------------------------------
@@ -214,27 +254,40 @@ begin
 	s_mux_signals(0)(0) <= s_from_P4_to_out_sum;
 	s_mux_signals(0)(1) <= s_from_LU_to_out_mux;
 	s_mux_signals(0)(2) <= s_from_CMP_to_out_mux;
+	s_mux_signals(0)(3) <= (others => '0');
 	
-	depth1: for i in 0 to 1 generate 				--0,  1, 2,  3
-		width1: for j in 0 to 1 generate 	         --15,  7, 3,  1
-			mod_if1: if(j mod(2**(i+1)) = 0) generate 	--2,  4, 8, 16
-				MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) 
-				           PORT MAP (port0 => s_mux_signals(i)(j),
-						 port1 => s_mux_signals(i)(j+2**i),
-						 Sel => ALU_Opcode(5-i),
-						 portY => s_mux_signals(i+1)(j));
-			end generate mod_if1;
-			
-		end generate width1;
-	end generate depth1;
+	
+	MUX1: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) 
+			PORT MAP (port0 => s_mux_signals(0)(0),
+				port1 => s_mux_signals(0)(1),
+				Sel => ALU_Opcode(4),
+				portY => s_mux_signals(1)(0));
+				
+	MUX2: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) 
+			PORT MAP (port0 => s_mux_signals(0)(2),
+				port1 => s_mux_signals(0)(3),
+				Sel => ALU_Opcode(4),
+				portY => s_mux_signals(1)(1));
+				
+	MUX3: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) 
+			PORT MAP (port0 => s_mux_signals(1)(0),
+				port1 => s_mux_signals(1)(1),
+				Sel => ALU_Opcode(5),
+				portY => s_mux_signals(2)(0));
+	
 	
 	ALU_output <= s_mux_signals(2)(0);
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
+	s_tmp3 <= s_tmp1 AND s_tmp2;
+	s_tmp4 <= s_tmp3 AND ALU_Opcode(1);
+	s_tmp5 <= s_CMP_enable AND s_CMP_opcode(3);
+	s_SGN_usgn <= s_tmp4 OR s_tmp5;
+	
 	FG : Flag_Generator GENERIC MAP (NBIT_ALU => NBIT_ALU) PORT MAP (
 							FG_ALU_out => s_mux_signals(2)(0),
-							FG_sgn_usgn => s_CMP_opcode(3), --it's a SIGNED/unsigned bit
+							FG_sgn_usgn => s_SGN_usgn, --it's a SIGNED/unsigned bit
 							FG_carry => s_from_P4_c_out,
 							FG_ZF => ALU_flags(0),
 							FG_PF => ALU_flags(1),

@@ -8,43 +8,541 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\Barrel_Shifter.vhd" Line 246: Assignment to <arg fmt="%s" index="1">s_sel_third</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd" Line 135: Net &lt;<arg fmt="%s" index="1">s_mux_signals[1][2][31]</arg>&gt; does not have a driver.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">P&lt;0&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\ALU.vhd</arg>&quot; line <arg fmt="%d" index="2">204</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">CMPL</arg>&gt; of block &lt;<arg fmt="%s" index="4">Comparison_Logic</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ALU</arg>&gt;. Underlying logic will be removed.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">s_mux_signals&lt;1&gt;&lt;2&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">ALU</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">50</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">P&lt;0&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[10].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[11].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">50</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[3].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[4].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[3].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[4].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[1].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[10].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[2].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[11].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
 </msg>
 
-<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[3].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[9].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[11].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[11].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[10].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[2].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[2].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[12].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[11].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[3].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[13].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[12].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[4].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[14].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[13].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[4].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[14].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[3].mux_cyc[14].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[5].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[6].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[5].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[14].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[15].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[14].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[4].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[5].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[15].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[7].mux_cyc[5].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[6].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[15].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[16].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[5].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[6].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[8].mux_cyc[6].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[5].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[7].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[6].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[5].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[4].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[3].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[2].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[1].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[7].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[9].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[10].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[5].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[11].mux_cyc[11].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[4].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[5].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[11].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[12].mux_cyc[12].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[3].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[4].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[5].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[11].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[12].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[13].mux_cyc[13].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[2].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[3].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[4].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[5].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[11].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[12].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[13].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[14].mux_cyc[14].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[1].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[2].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[3].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[4].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[5].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[6].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[7].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[8].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[9].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[10].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[11].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[12].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[13].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[14].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="old" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[8].mux_cyc[8].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[15].mux_cyc[15].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="old" > (*) More than 100% of Device resources are used
 </msg>
 
 </messages>
