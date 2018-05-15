@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU_beh.prj work.TB_ALU 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Execute_Stage_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Execute_Stage_beh.prj work.TB_Execute_Stage 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
@@ -26,49 +26,58 @@ Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistra
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Flag_Generator.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Comparison_Logic.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Barrel_Shifter.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Multiplier.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Enable_Interface.vhd" into library work
 Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/ALU.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Execute_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Execute_Stage.vhd" into library work
 Starting static elaboration
+WARNING:HDLCompiler:746 - "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/Barrel_Shifter.vhd" Line 200: Range is empty (null range)
 Completed static elaboration
-Fuse Memory Usage: 195172 KB
-Fuse CPU Usage: 640 ms
+Fuse Memory Usage: 198984 KB
+Fuse CPU Usage: 593 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
 Compiling package constants
+Compiling package numeric_std
+Compiling architecture behavioral of entity Enable_Interface [\Enable_Interface(8)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(8)\]
-Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(24)\]
-Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(16)\]
-Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(4)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
+Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(3)\]
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling package math_real
 Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
 Compiling architecture behavioral of entity PG_cell [pg_cell_default]
-Compiling architecture behavioral of entity PG_network [\PG_network(16)\]
+Compiling architecture behavioral of entity PG_network [\PG_network(8)\]
 Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
-Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(16,4)\]
+Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(8,2)\]
 Compiling architecture behavioral of entity FA [fa_default]
 Compiling architecture structural of entity RCA [\RCA(4)\]
 Compiling architecture behavioral of entity MUX21 [mux21_default]
 Compiling architecture structural of entity MUX21_GENERIC [\MUX21_GENERIC(4)\]
 Compiling architecture structural of entity CarrySelectBlock [\CarrySelectBlock(4)\]
-Compiling architecture structural of entity CarrySelect [\CarrySelect(16,4)\]
-Compiling architecture behavioral of entity P4Adder [\P4Adder(16)\]
-Compiling architecture structural of entity Logic_Unit [\Logic_Unit(16)\]
-Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(16)\]
+Compiling architecture structural of entity CarrySelect [\CarrySelect(8,4)\]
+Compiling architecture behavioral of entity P4Adder [\P4Adder(8)\]
+Compiling architecture structural of entity Logic_Unit [\Logic_Unit(8)\]
+Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(8)\]
 Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
-Compiling architecture structural of entity Comparator [\Comparator(16)\]
-Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(16)\]
-Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(16)\]
-Compiling architecture behavioral of entity XNORGate_NX1 [\XNORGate_NX1(16)\]
-Compiling architecture structural of entity Flag_Generator [\Flag_Generator(16)\]
-Compiling architecture structural of entity ALU [\ALU(16,4)\]
-Compiling architecture behavior of entity tb_alu
+Compiling architecture structural of entity Comparator [\Comparator(8)\]
+Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(8)\]
+Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(8)\]
+Compiling architecture behavioral of entity XNORGate_NX1 [\XNORGate_NX1(8)\]
+Compiling architecture structural of entity Flag_Generator [\Flag_Generator(8)\]
+Compiling architecture structural of entity ALU [\ALU(8,3)\]
+Compiling architecture behavioral of entity Multiplier [\Multiplier(8)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(8)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(5)\]
+Compiling architecture structural of entity Execute_Stage [\Execute_Stage(8,3)\]
+Compiling architecture behavior of entity tb_execute_stage
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
-Compiled 60 VHDL Units
-Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU_isim_beh.exe
-Fuse Memory Usage: 224396 KB
-Fuse CPU Usage: 1671 ms
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 68 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Execute_Stage_isim_beh.exe
+Fuse Memory Usage: 227440 KB
+Fuse CPU Usage: 1437 ms

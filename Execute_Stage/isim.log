@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\TB_ALU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_ALU_isim_beh.wdb 
+Running: C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Execute_Stage\TB_Execute_Stage_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Execute_Stage/TB_Execute_Stage_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 ----------------------------------------------------------------------
 INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -26,11 +26,7 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 90 ns, Instance /tb_alu/ : Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
-at 160 ns, Instance /tb_alu/ : Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
 # restart
-# run 400 ns
+# run 200 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 90 ns, Instance /tb_alu/ : Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
-at 160 ns, Instance /tb_alu/ : Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
