@@ -106,53 +106,14 @@
     <transform xil_pn:end_ts="1526983430" xil_pn:in_ck="-1937491144471401388" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3066894419334270449" xil_pn:start_ts="1526983429">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_Memory_plus_DRAM_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>
     <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1526981905">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7244655220999608736" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3791833913453947608" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4162469885572924094" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8373210031085012174" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1526982011" xil_pn:in_ck="-1404391532238826974" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2540655475864914129" xil_pn:start_ts="1526981905">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Memory_Stage.ngr"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.lso"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.ngc"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.ngr"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.prj"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.stx"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.syr"/>
-      <outfile xil_pn:name="Memory_plus_DRAM.xst"/>
-      <outfile xil_pn:name="Memory_plus_DRAM_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 
