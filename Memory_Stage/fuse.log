@@ -1,0 +1,23 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_MemoryStage_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_MemoryStage_beh.prj work.TB_MemoryStage 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/Memory_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_MemoryStage.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 196616 KB
+Fuse CPU Usage: 515 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity NRegister [\NRegister(32)\]
+Compiling architecture structural of entity Memory_Stage [\Memory_Stage(32,32)\]
+Compiling architecture behavior of entity tb_memorystage
+Time Resolution for simulation is 1ps.
+Compiled 8 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_MemoryStage_isim_beh.exe
+Fuse Memory Usage: 213160 KB
+Fuse CPU Usage: 780 ms

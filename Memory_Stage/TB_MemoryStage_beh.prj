@@ -1,0 +1,3 @@
+vhdl work "NRegister.vhd"
+vhdl work "Memory_Stage.vhd"
+vhdl work "TB_MemoryStage.vhd"

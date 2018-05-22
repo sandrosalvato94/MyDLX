@@ -12,8 +12,9 @@
 --
 -- Dependencies: 
 --
--- Revision: 0.1
+-- Revision: 0.2
 -- Revision 	0.1 - Components tied up. Not yet tested
+--		0.2 - T1, T2, T3 passed. ME_RD_wr_out fixed.
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -76,6 +77,7 @@ begin
 	ME_enable_to_mem <= ME_enable;
 	ME_rst_to_mem <= NOT(ME_rst);
 	ME_RD_wr_to_mem <= ME_RD_wr;
+	ME_RD_wr_out <= ME_RD_wr;
 ------------------------------------------------------------------------------------	
 	
 ------------------------------------------------------------------------------------
