@@ -132,6 +132,6 @@ LAB13:    t5 = (t0 + 868U);
 extern void work_a_4109842091_3212880686_init()
 {
 	static char *pe[] = {(void *)work_a_4109842091_3212880686_p_0};
-	xsi_register_didat("work_a_4109842091_3212880686", "isim/TB_MemoryStage_isim_beh.exe.sim/work/a_4109842091_3212880686.didat");
+	xsi_register_didat("work_a_4109842091_3212880686", "isim/TB_Memory_plus_DRAM_isim_beh.exe.sim/work/a_4109842091_3212880686.didat");
 	xsi_register_executes(pe);
 }

@@ -1,0 +1,5 @@
+vhdl work "NRegister.vhd"
+vhdl work "Memory_Stage.vhd"
+vhdl work "DRAM.vhd"
+vhdl work "Memory_plus_DRAM.vhd"
+vhdl work "TB_Memory_plus_DRAM.vhd"

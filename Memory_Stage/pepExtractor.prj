@@ -1,2 +1,4 @@
+work	"DRAM.vhd"
 work	"Memory_Stage.vhd"
+work	"Memory_plus_DRAM.vhd"
 work	"NRegister.vhd"
