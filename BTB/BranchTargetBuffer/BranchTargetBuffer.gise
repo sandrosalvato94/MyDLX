@@ -375,7 +375,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1507114661" xil_pn:in_ck="7353165961705623612" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="371766913664012451" xil_pn:start_ts="1507114660">
+    <transform xil_pn:end_ts="1527886763" xil_pn:in_ck="7353165961705623612" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="371766913664012451" xil_pn:start_ts="1527886761">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -412,12 +412,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507027285" xil_pn:in_ck="-8220074629803233922" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-960891529853335260" xil_pn:start_ts="1507027152">
+    <transform xil_pn:end_ts="1527886675" xil_pn:in_ck="-8220074629803233922" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-960891529853335260" xil_pn:start_ts="1527886558">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ANDGate_NX1.ngr"/>
       <outfile xil_pn:name="BTB.lso"/>
       <outfile xil_pn:name="BTB.ngc"/>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: RippleCarryAdder.prj
 
@@ -105,10 +105,10 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Adders\RippleCarryAdder\Full_adder.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Adders\RippleCarryAdder\Full_adder.vhd" into library work
 Parsing entity <Full_adder>.
 Parsing architecture <Structural> of entity <full_adder>.
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Adders\RippleCarryAdder\RippleCarryAdder.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Adders\RippleCarryAdder\RippleCarryAdder.vhd" into library work
 Parsing entity <RippleCarryAdder>.
 Parsing architecture <Behavioral> of entity <ripplecarryadder>.
 
@@ -125,14 +125,14 @@ Elaborating entity <Full_adder> (architecture <Structural>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <RippleCarryAdder>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Adders\RippleCarryAdder\RippleCarryAdder.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Adders\RippleCarryAdder\RippleCarryAdder.vhd".
         N = 32
     Summary:
 	no macro.
 Unit <RippleCarryAdder> synthesized.
 
 Synthesizing Unit <Full_adder>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Adders\RippleCarryAdder\Full_adder.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Adders\RippleCarryAdder\Full_adder.vhd".
     Summary:
 Unit <Full_adder> synthesized.
 
@@ -305,12 +305,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.41 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.90 secs
  
 --> 
 
-Total memory usage is 311304 kilobytes
+Total memory usage is 318124 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

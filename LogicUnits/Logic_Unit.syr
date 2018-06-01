@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Logic_Unit.prj
 
@@ -105,7 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v1.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\LogicUnits\Logic_Unit_v1.vhd" into library work
 Parsing entity <Logic_Unit>.
 Parsing architecture <Behavioral> of entity <logic_unit>.
 
@@ -120,7 +120,7 @@ Elaborating entity <Logic_Unit> (architecture <Behavioral>) with generics from l
 =========================================================================
 
 Synthesizing Unit <Logic_Unit>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\LogicUnits\Logic_Unit_v1.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\LogicUnits\Logic_Unit_v1.vhd".
         NBIT_DATA = 32
     Summary:
 Unit <Logic_Unit> synthesized.
@@ -278,12 +278,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.15 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.00 secs
  
 --> 
 
-Total memory usage is 413824 kilobytes
+Total memory usage is 307040 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

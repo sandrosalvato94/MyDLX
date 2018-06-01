@@ -1,1 +1,3 @@
 xst -intstyle ise -ifn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Datapath/Datapath.xst" -ofn "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Datapath/Datapath.syr" 
+vhdtdtfi -lib work Datapath.vhd -prj Datapath -o Datapath.spl -module Datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Datapath.spl C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Datapath.sym 

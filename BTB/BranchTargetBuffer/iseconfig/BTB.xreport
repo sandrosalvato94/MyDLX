@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-04T12:57:23</DateModified>
+  <DateModified>2018-06-01T22:55:54</DateModified>
   <ModuleName>BTB</ModuleName>
   <SummaryTimeStamp>2017-09-28T18:12:37</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/iseconfig/BTB.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/iseconfig/BTB.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer\</ImplementationReportsDirectory>
   <DateInitialized>2017-09-28T19:21:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -2,14 +2,14 @@ Command line:
    TB_RippleCarryAdder_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  64685
+     -socket  63523
 
-Thu Oct 05 16:51:22 2017
+Fri Jun 01 22:48:07 2018
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 851.28 Meg
+ Current Memory Usage: 846.316 Meg
 
  Total Signals          : 267
  Total Nets             : 226
@@ -21,9 +21,9 @@ Thu Oct 05 16:51:22 2017
  Total Scalar Nets and Variables : 743
 Total Line Count : 194
 
- Total Simulation Time: 0.078125 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 851.28 Meg
+ Current Memory Usage: 846.316 Meg
 
-Thu Oct 05 16:51:47 2017
+Fri Jun 01 22:48:12 2018
 

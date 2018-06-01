@@ -147,6 +147,49 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="9017720368308805383" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3930492671877510038" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2389404738263727447" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886932" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6019618116315375072" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527886945" xil_pn:in_ck="-7905801775464028480" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="8536207748021384950" xil_pn:start_ts="1527886932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Logic_Unit.lso"/>
+      <outfile xil_pn:name="Logic_Unit.ngc"/>
+      <outfile xil_pn:name="Logic_Unit.ngr"/>
+      <outfile xil_pn:name="Logic_Unit.prj"/>
+      <outfile xil_pn:name="Logic_Unit.stx"/>
+      <outfile xil_pn:name="Logic_Unit.syr"/>
+      <outfile xil_pn:name="Logic_Unit.xst"/>
+      <outfile xil_pn:name="Logic_Unit2.prj"/>
+      <outfile xil_pn:name="Logic_Unit_v1.ngr"/>
+      <outfile xil_pn:name="Logic_Unit_v1.prj"/>
+      <outfile xil_pn:name="Logic_Unit_v2.prj"/>
+      <outfile xil_pn:name="Logic_Unit_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
   </transforms>
 
 </generated_project>

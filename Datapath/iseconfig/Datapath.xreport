@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-05-25T09:45:20</DateModified>
+  <DateModified>2018-06-01T23:01:45</DateModified>
   <ModuleName>Datapath</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Datapath/iseconfig/Datapath.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Datapath\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/iseconfig/Datapath.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath\</ImplementationReportsDirectory>
   <DateInitialized>2018-05-22T16:20:43</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
