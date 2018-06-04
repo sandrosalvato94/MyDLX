@@ -50,7 +50,7 @@
 --				0.2	- All components tied up.
 --				0.3	- Changed the declaration of FCU_MUX_TOP_ALU and FCU_MUX_BOT_ALU. Now
 --						  it takes care of the case where the same register is under processing
---						  ID/EX, EX/MEM and MEM/WB, providing the priority for EX/MEM --> ID/EX
+--						  ID/EX, EX/MEM and MEM/WB, setting the priority for EX/MEM --> ID/EX
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Forwarding_ControlUnit is
 	port(
 		FCU_REG_imm				: in  std_logic;
-		FCU_is_load				: in  std_logic;
+		FCU_enable				: in  std_logic;
 		FCU_EX_MEM_IR_16_20	: in  std_logic_vector(4 downto 0);
 		FCU_EX_MEM_IR_11_15	: in  std_logic_vector(4 downto 0);
 		FCU_ID_EX_IR_11_15	: in  std_logic_vector(4 downto 0);
@@ -77,8 +77,7 @@ entity Forwarding_ControlUnit is
 		FCU_MEM_WB_IR_16_20	: in  std_logic_vector(4 downto 0);
 		FCU_MEM_WB_IR_11_15	: in  std_logic_vector(4 downto 0);
 		FCU_MUX_TOP_ALU		: out std_logic_vector(1 downto 0);
-		FCU_MUX_BOT_ALU		: out std_logic_vector(1 downto 0);
-		FCU_pipeline_interlock : out std_logic
+		FCU_MUX_BOT_ALU		: out std_logic_vector(1 downto 0)
 	);
 end Forwarding_ControlUnit;
 
@@ -185,11 +184,11 @@ begin
 	s_not_out_mux(0) <= NOT(s_out_mux(1));
 	s_not_out_mux(1) <= NOT(s_out_mux(3));
 	
-	FCU_MUX_TOP_ALU(1) <= s_out_mux(1);
-	FCU_MUX_TOP_ALU(0) <= s_not_out_mux(0) AND s_out_mux(0);
+	FCU_MUX_TOP_ALU(1) <= s_out_mux(1) AND FCU_enable;
+	FCU_MUX_TOP_ALU(0) <= s_not_out_mux(0) AND s_out_mux(0) AND FCU_enable;
 	
-	FCU_MUX_BOT_ALU(1) <= s_out_mux(3);
-	FCU_MUX_BOT_ALU(0) <= s_not_out_mux(1) AND s_out_mux(2);
+	FCU_MUX_BOT_ALU(1) <= s_out_mux(3) AND FCU_enable;
+	FCU_MUX_BOT_ALU(0) <= s_not_out_mux(1) AND s_out_mux(2) AND FCU_enable;
 -----------------------------------------------------------------------------------------
 end Structural;
 

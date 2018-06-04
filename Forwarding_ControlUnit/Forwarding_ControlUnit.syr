@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: Forwarding_ControlUnit.prj
 
@@ -131,6 +131,7 @@ Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work
 
 Synthesizing Unit <Forwarding_ControlUnit>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Forwarding_ControlUnit\Forwarding_ControlUnit.vhd".
+WARNING:Xst:647 - Input <FCU_is_load> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <Forwarding_ControlUnit> synthesized.
@@ -210,12 +211,14 @@ Top Level Output File Name         : Forwarding_ControlUnit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 20
+# BELS                             : 24
+#      LUT2                        : 2
+#      LUT3                        : 2
 #      LUT4                        : 4
-#      LUT5                        : 6
-#      LUT6                        : 10
-# IO Buffers                       : 35
-#      IBUF                        : 31
+#      LUT5                        : 8
+#      LUT6                        : 8
+# IO Buffers                       : 36
+#      IBUF                        : 32
 #      OBUF                        : 4
 
 Device utilization summary:
@@ -225,19 +228,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   20  out of  63400     0%  
-    Number used as Logic:                20  out of  63400     0%  
+ Number of Slice LUTs:                   24  out of  63400     0%  
+    Number used as Logic:                24  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     20
-   Number with an unused Flip Flop:      20  out of     20   100%  
-   Number with an unused LUT:             0  out of     20     0%  
-   Number of fully used LUT-FF pairs:     0  out of     20     0%  
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:      24  out of     24   100%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:     0  out of     24     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          35
- Number of bonded IOBs:                  35  out of    210    16%  
+ Number of IOs:                          37
+ Number of bonded IOBs:                  36  out of    210    17%  
 
 Specific Feature Utilization:
 
@@ -272,7 +275,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 2.640ns
+   Maximum combinational path delay: 2.458ns
 
 Timing Details:
 ---------------
@@ -280,9 +283,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 132 / 4
+  Total number of paths / destination ports: 136 / 4
 -------------------------------------------------------------------------
-Delay:               2.640ns (Levels of Logic = 5)
+Delay:               2.458ns (Levels of Logic = 5)
   Source:            FCU_EX_MEM_IR_16_20<4> (PAD)
   Destination:       FCU_MUX_TOP_ALU<0> (PAD)
 
@@ -290,14 +293,14 @@ Delay:               2.640ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.687  FCU_EX_MEM_IR_16_20_4_IBUF (FCU_EX_MEM_IR_16_20_4_IBUF)
+     IBUF:I->O             2   0.001   0.688  FCU_EX_MEM_IR_16_20_4_IBUF (FCU_EX_MEM_IR_16_20_4_IBUF)
      LUT5:I0->O            1   0.097   0.683  MUX_BOT1/Mmux_portY12 (MUX_BOT1/Mmux_portY11)
-     LUT6:I1->O            2   0.097   0.697  MUX_BOT1/Mmux_portY15 (FCU_MUX_BOT_ALU_1_OBUF)
-     LUT6:I0->O            1   0.097   0.279  FCU_MUX_BOT_ALU<0>5 (FCU_MUX_BOT_ALU_0_OBUF)
+     LUT6:I1->O            2   0.097   0.515  MUX_BOT1/Mmux_portY15 (s_out_mux<3>)
+     LUT3:I0->O            1   0.097   0.279  FCU_MUX_BOT_ALU<0>6 (FCU_MUX_BOT_ALU_0_OBUF)
      OBUF:I->O                 0.000          FCU_MUX_BOT_ALU_0_OBUF (FCU_MUX_BOT_ALU<0>)
     ----------------------------------------
-    Total                      2.640ns (0.292ns logic, 2.348ns route)
-                                       (11.1% logic, 88.9% route)
+    Total                      2.458ns (0.292ns logic, 2.166ns route)
+                                       (11.9% logic, 88.1% route)
 
 =========================================================================
 
@@ -308,13 +311,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.35 secs
+Total CPU time to Xst completion: 6.35 secs
  
 --> 
 
-Total memory usage is 370236 kilobytes
+Total memory usage is 316220 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

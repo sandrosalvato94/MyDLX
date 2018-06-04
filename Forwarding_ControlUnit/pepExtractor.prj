@@ -1,1 +1,3 @@
 work	"Comparator5Bit.vhd"
+work	"Forwarding_ControlUnit.vhd"
+work	"Mux_1Bit_2X1.vhd"
