@@ -12,10 +12,10 @@
 --
 -- Dependencies: 
 --
--- Revision: 0.1
--- Revision	 0.1 - File Created
--- Additional Comments: 
+-- Revision: 1.0
 --
+-- Revision	 0.1 - File Created
+--				 1.0 - T1 and T2 passed
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
