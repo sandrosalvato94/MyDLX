@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/TB_Comparator5Bit_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/TB_Comparator5Bit_beh.prj" "work.TB_Comparator5Bit" 

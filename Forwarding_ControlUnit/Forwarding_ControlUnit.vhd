@@ -45,15 +45,6 @@ end Forwarding_ControlUnit;
 
 architecture Structural of Forwarding_ControlUnit is
 	
-	component NComparatorWithEnable is
-	generic(
-		NBIT: integer := 32);
-	port(
-		A:             in	std_logic_vector(NBIT-1 downto 0);
-		B:             in	std_logic_vector(NBIT-1 downto 0);
-		Enable: 	     in	std_logic;
-		ComparatorBit: out	std_logic);	-- 1 if equal, 0 else
-	end component;
 	
 begin
 
