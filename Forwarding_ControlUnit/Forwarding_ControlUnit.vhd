@@ -44,13 +44,20 @@
 --																		EX/MEM --> ID/EX
 -- Dependencies: 
 --
--- Revision: 0.3
+-- Revision: 0.5
 -- Revision 
 --				0.01 	- File Created
 --				0.2	- All components tied up.
 --				0.3	- Changed the declaration of FCU_MUX_TOP_ALU and FCU_MUX_BOT_ALU. Now
 --						  it takes care of the case where the same register is under processing
 --						  ID/EX, EX/MEM and MEM/WB, setting the priority for EX/MEM --> ID/EX
+--				0.5   - T1 passed. T2 passed as well but I'd like to highlight a point: T2.CC2
+--						  After a reset, a boot or something like that, EX/MEM.IR and MEM/WB.IR registers
+--					     are set to all 0s. FCU compares their content, being equal produces an 
+--						  unwanted output. A possible solution is delaying FCU_enable by 2 clock cycles
+--						  or simpler accepting this behavior; as matter of fact at CC2 the execute
+--					     stage doesn't work yet, so who cares about the input operands. However,
+--						  at this revision, I don't fix yet this possible trouble.
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------

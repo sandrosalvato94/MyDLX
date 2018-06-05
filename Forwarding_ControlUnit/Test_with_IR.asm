@@ -1,0 +1,7 @@
+SUB R4, R1, R5		FDEMW
+AND R6, R1, R7		 FDEMW
+OR R8, R1, R9		  FDEMW
+XOR R10, R1, R11       FDEMW
+ADD R1, R2, R3          FDEMW
+LW R4, 0(R1)             FDEMW ;
+SW 12(R1), R4
