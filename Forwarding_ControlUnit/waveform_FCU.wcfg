@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/TB_Forwording_ControlUnit_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_forwording_controlunit" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_reg_imm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_reg_imm</obj_property>
+      <obj_property name="ObjectShortName">fcu_reg_imm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_enable</obj_property>
+      <obj_property name="ObjectShortName">fcu_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_ex_mem_ir_16_20" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_ex_mem_ir_16_20[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_ex_mem_ir_16_20[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_ex_mem_ir_11_15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_ex_mem_ir_11_15[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_ex_mem_ir_11_15[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_id_ex_ir_11_15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_id_ex_ir_11_15[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_id_ex_ir_11_15[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_id_ex_ir_6_10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_id_ex_ir_6_10[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_id_ex_ir_6_10[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_mem_wb_ir_16_20" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_mem_wb_ir_16_20[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_mem_wb_ir_16_20[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_mem_wb_ir_11_15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_mem_wb_ir_11_15[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_mem_wb_ir_11_15[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_mux_top_alu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_mux_top_alu[1:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_mux_top_alu[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_forwording_controlunit/fcu_mux_bot_alu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_mux_bot_alu[1:0]</obj_property>
+      <obj_property name="ObjectShortName">fcu_mux_bot_alu[1:0]</obj_property>
+   </wvobject>
+</wave_config>

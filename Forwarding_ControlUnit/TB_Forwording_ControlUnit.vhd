@@ -121,7 +121,9 @@ BEGIN
 		FCU_EX_MEM_IR_11_15 <= std_logic_vector(to_unsigned(0, 5));
 		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(0, 5));
 		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(0, 5));
-		wait for 5 ns;
+		wait for 1 ns;
+		assert ((FCU_MUX_TOP_ALU = "00") AND (FCU_MUX_BOT_ALU = "00")) report "Some issues occur";
+		wait for 4 ns;
 		
 		--CC 2
 		FCU_enable <= '1';
@@ -132,7 +134,9 @@ BEGIN
 		FCU_EX_MEM_IR_11_15 <= std_logic_vector(to_unsigned(0, 5));
 		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(0, 5));
 		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(0, 5));
-		wait for 5 ns;
+		wait for 1 ns;
+		assert ((FCU_MUX_TOP_ALU = "00") AND (FCU_MUX_BOT_ALU = "00")) report "Some issues occur";
+		wait for 4 ns;
 		
 		--CC 3
 		FCU_enable <= '1';
@@ -143,7 +147,9 @@ BEGIN
 		FCU_EX_MEM_IR_11_15 <= std_logic_vector(to_unsigned(3, 5));
 		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(0, 5));
 		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(0, 5));
-		wait for 5 ns;
+		wait for 1 ns;
+		assert ((FCU_MUX_TOP_ALU = "10") AND (FCU_MUX_BOT_ALU = "00")) report "Some issues occur";
+		wait for 4 ns;
 		
 		--CC 4
 		FCU_enable <= '1';
@@ -154,7 +160,9 @@ BEGIN
 		FCU_EX_MEM_IR_11_15 <= std_logic_vector(to_unsigned(5, 5));
 		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(1, 5));
 		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(3, 5));
-		wait for 5 ns;
+		wait for 1 ns;
+		assert ((FCU_MUX_TOP_ALU = "01") AND (FCU_MUX_BOT_ALU = "00")) report "Some issues occur";
+		wait for 4 ns;
 		
 		--CC 5
 		FCU_enable <= '1';
@@ -163,9 +171,11 @@ BEGIN
 		FCU_ID_EX_IR_6_10 <= std_logic_vector(to_unsigned(1, 5));
 		FCU_EX_MEM_IR_16_20 <= std_logic_vector(to_unsigned(6, 5));
 		FCU_EX_MEM_IR_11_15 <= std_logic_vector(to_unsigned(7, 5));
-		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(1, 5));
-		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(3, 5));
-		wait for 5 ns;
+		FCU_MEM_WB_IR_16_20 <= std_logic_vector(to_unsigned(4, 5));
+		FCU_MEM_WB_IR_11_15 <= std_logic_vector(to_unsigned(5, 5));
+		wait for 1 ns;
+		assert ((FCU_MUX_TOP_ALU = "00") AND (FCU_MUX_BOT_ALU = "00")) report "Some issues occur";
+		wait for 4 ns;
 		------------------------------------------------------------
 			
 
