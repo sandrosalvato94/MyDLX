@@ -8,13 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/Comparator5Bit.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/Forwarding_ControlUnit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/Mux_1Bit_2X1.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

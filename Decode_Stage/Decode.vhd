@@ -15,10 +15,14 @@
 -- Revision: 
 -- Revision 0.1
 -- Additional Comments: 
---	Version 0.1 - Each component has been instantiated in. No test has been 
+--	Version 
+--				0.1 - Each component has been instantiated in. No test has been 
 --		    performed yet. Jmp_Branch_Manager is not completed because
 --		    I need to know very well how to optimize the instruction
 --		    set enconding.
+--				0.2 - Other inputs have to be added, like those for forwarding back data
+--					   from EX/MEM and MEM/WB.
+--			
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

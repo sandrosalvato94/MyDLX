@@ -57,7 +57,7 @@
 --						  unwanted output. A possible solution is delaying FCU_enable by 2 clock cycles
 --						  or simpler accepting this behavior; as matter of fact at CC2 the execute
 --					     stage doesn't work yet, so who cares about the input operands. However,
---						  at this revision, I don't fix yet this possible trouble.
+--						  at this revision, I have not fixed yet this possible trouble.
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
