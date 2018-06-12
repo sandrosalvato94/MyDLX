@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: FCU.prj
 
@@ -114,6 +114,33 @@ Parsing architecture <Behavioral> of entity <fcu>.
 =========================================================================
 
 Elaborating entity <FCU> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 126: s_id_ex_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 127: s_if_id_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 133: s_if_id_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 141: s_ex_mem_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 142: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 149: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 150: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 156: s_id_ex_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 172: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 173: s_ex_mem_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 178: s_mem_wb_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 198: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 199: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 204: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 211: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 212: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 217: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 225: s_ex_mem_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 226: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 231: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 238: s_ex_mem_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 239: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 244: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 261: s_ex_mem_is_store should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 263: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 269: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 280: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -121,27 +148,64 @@ Elaborating entity <FCU> (architecture <Behavioral>) from library <work>.
 
 Synthesizing Unit <FCU>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd".
-WARNING:Xst:647 - Input <FCU_IF_ID_Op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_ID_EX_Op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_EX_MEM_Op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_MEM_WB_Op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_IF_ID_6_10> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_IF_ID_11_15> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_ID_EX_6_10> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_ID_EX_11_15> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_EX_MEM_11_15> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_EX_MEM_16_20> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_MEM_WB_11_15> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_MEM_WB_16_20> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FCU_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 128
+    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 128
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_4_o> created at line 143
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 151
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 174
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_10_o> created at line 179
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_15_o> created at line 200
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 205
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_23_o> created at line 213
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 218
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_31_o> created at line 227
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 232
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_39_o> created at line 240
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 245
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_49_o> created at line 264
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_50_o> created at line 270
+    Found 6-bit comparator lessequal for signal <n0087> created at line 308
+    Found 6-bit comparator lessequal for signal <n0089> created at line 308
+    Found 6-bit comparator lessequal for signal <n0092> created at line 309
+    Found 6-bit comparator lessequal for signal <n0094> created at line 309
+    Found 6-bit comparator lessequal for signal <n0098> created at line 310
+    Found 6-bit comparator lessequal for signal <n0100> created at line 310
+    Found 6-bit comparator lessequal for signal <n0104> created at line 316
+    Found 6-bit comparator lessequal for signal <n0106> created at line 316
+    Found 6-bit comparator lessequal for signal <n0109> created at line 317
+    Found 6-bit comparator lessequal for signal <n0111> created at line 317
+    Found 6-bit comparator lessequal for signal <n0115> created at line 318
+    Found 6-bit comparator lessequal for signal <n0117> created at line 318
+    Found 6-bit comparator lessequal for signal <n0121> created at line 324
+    Found 6-bit comparator lessequal for signal <n0123> created at line 324
+    Found 6-bit comparator lessequal for signal <n0126> created at line 325
+    Found 6-bit comparator lessequal for signal <n0128> created at line 325
+    Found 6-bit comparator lessequal for signal <n0132> created at line 326
+    Found 6-bit comparator lessequal for signal <n0134> created at line 326
+    Found 6-bit comparator lessequal for signal <n0138> created at line 332
+    Found 6-bit comparator lessequal for signal <n0140> created at line 332
+    Found 6-bit comparator lessequal for signal <n0143> created at line 333
+    Found 6-bit comparator lessequal for signal <n0145> created at line 333
+    Found 6-bit comparator lessequal for signal <n0149> created at line 334
+    Found 6-bit comparator lessequal for signal <n0151> created at line 334
+    Found 6-bit comparator lessequal for signal <n0176> created at line 391
+    Found 6-bit comparator lessequal for signal <n0178> created at line 391
     Summary:
-	no macro.
+	inferred  42 Comparator(s).
+	inferred  47 Multiplexer(s).
 Unit <FCU> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Comparators                                          : 42
+ 5-bit comparator equal                                : 16
+ 6-bit comparator lessequal                            : 26
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 18
+ 2-bit 2-to-1 multiplexer                              : 29
+
 =========================================================================
 
 =========================================================================
@@ -152,7 +216,14 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Comparators                                          : 42
+ 5-bit comparator equal                                : 16
+ 6-bit comparator lessequal                            : 26
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 18
+ 2-bit 2-to-1 multiplexer                              : 29
+
 =========================================================================
 
 =========================================================================
@@ -192,6 +263,15 @@ Top Level Output File Name         : FCU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 61
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 6
+#      LUT5                        : 15
+#      LUT6                        : 38
+# IO Buffers                       : 78
+#      IBUF                        : 70
+#      OBUF                        : 8
 
 Device utilization summary:
 ---------------------------
@@ -200,17 +280,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                   61  out of  63400     0%  
+    Number used as Logic:                61  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
+ Number of LUT Flip Flop pairs used:     61
+   Number with an unused Flip Flop:      61  out of     61   100%  
+   Number with an unused LUT:             0  out of     61     0%  
+   Number of fully used LUT-FF pairs:     0  out of     61     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          73
- Number of bonded IOBs:                   0  out of    210     0%  
+ Number of IOs:                          78
+ Number of bonded IOBs:                  78  out of    210    37%  
 
 Specific Feature Utilization:
 
@@ -245,11 +327,33 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 3.475ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 422 / 8
+-------------------------------------------------------------------------
+Delay:               3.475ns (Levels of Logic = 6)
+  Source:            FCU_MEM_WB_Op<2> (PAD)
+  Destination:       FCU_ID_EX_TOP_MUX<1> (PAD)
+
+  Data Path: FCU_MEM_WB_Op<2> to FCU_ID_EX_TOP_MUX<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.707  FCU_MEM_WB_Op_2_IBUF (FCU_MEM_WB_Op_2_IBUF)
+     LUT6:I0->O            3   0.097   0.703  s_mem_wb_is_load1 (s_mem_wb_is_load)
+     LUT6:I0->O            3   0.097   0.703  s_mem_wb_is_imm_s_mem_wb_is_load_OR_13_o2 (s_mem_wb_is_imm_s_mem_wb_is_load_OR_13_o)
+     LUT6:I0->O            1   0.097   0.693  Mmux_FCU_ID_EX_BOT_MUX25 (Mmux_FCU_ID_EX_BOT_MUX24)
+     LUT6:I0->O            1   0.097   0.279  Mmux_FCU_ID_EX_BOT_MUX27 (FCU_ID_EX_BOT_MUX_1_OBUF)
+     OBUF:I->O                 0.000          FCU_ID_EX_BOT_MUX_1_OBUF (FCU_ID_EX_BOT_MUX<1>)
+    ----------------------------------------
+    Total                      3.475ns (0.389ns logic, 3.086ns route)
+                                       (11.2% logic, 88.8% route)
 
 =========================================================================
 
@@ -260,13 +364,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.96 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> 
 
-Total memory usage is 365180 kilobytes
+Total memory usage is 366440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

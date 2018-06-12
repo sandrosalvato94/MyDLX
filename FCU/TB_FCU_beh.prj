@@ -1,0 +1,2 @@
+vhdl work "FCU.vhd"
+vhdl work "TB_FCU.vhd"

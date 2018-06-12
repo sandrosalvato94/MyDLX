@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/FCU/TB_FCU_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/FCU/TB_FCU_beh.prj" "work.TB_FCU" 
