@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: FCU.prj
 
@@ -124,23 +124,25 @@ WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 156: s_id_ex_is_imm should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 172: s_if_id_is_jmp should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 173: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 178: s_mem_wb_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 198: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 199: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 204: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 211: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 212: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 217: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 225: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 226: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 231: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 238: s_ex_mem_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 239: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 244: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 261: s_ex_mem_is_store should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 263: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 269: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 280: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 178: s_ex_mem_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 179: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 190: s_mem_wb_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 210: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 211: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 216: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 223: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 224: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 229: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 237: s_ex_mem_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 238: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 243: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 250: s_ex_mem_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 251: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 256: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 273: s_ex_mem_is_store should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 275: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 281: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 292: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -150,49 +152,49 @@ Synthesizing Unit <FCU>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd".
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 128
     Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 128
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_4_o> created at line 143
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 151
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 174
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_10_o> created at line 179
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_15_o> created at line 200
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 205
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_23_o> created at line 213
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 218
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_31_o> created at line 227
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 232
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_39_o> created at line 240
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 245
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_49_o> created at line 264
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_50_o> created at line 270
-    Found 6-bit comparator lessequal for signal <n0087> created at line 308
-    Found 6-bit comparator lessequal for signal <n0089> created at line 308
-    Found 6-bit comparator lessequal for signal <n0092> created at line 309
-    Found 6-bit comparator lessequal for signal <n0094> created at line 309
-    Found 6-bit comparator lessequal for signal <n0098> created at line 310
-    Found 6-bit comparator lessequal for signal <n0100> created at line 310
-    Found 6-bit comparator lessequal for signal <n0104> created at line 316
-    Found 6-bit comparator lessequal for signal <n0106> created at line 316
-    Found 6-bit comparator lessequal for signal <n0109> created at line 317
-    Found 6-bit comparator lessequal for signal <n0111> created at line 317
-    Found 6-bit comparator lessequal for signal <n0115> created at line 318
-    Found 6-bit comparator lessequal for signal <n0117> created at line 318
-    Found 6-bit comparator lessequal for signal <n0121> created at line 324
-    Found 6-bit comparator lessequal for signal <n0123> created at line 324
-    Found 6-bit comparator lessequal for signal <n0126> created at line 325
-    Found 6-bit comparator lessequal for signal <n0128> created at line 325
-    Found 6-bit comparator lessequal for signal <n0132> created at line 326
-    Found 6-bit comparator lessequal for signal <n0134> created at line 326
-    Found 6-bit comparator lessequal for signal <n0138> created at line 332
-    Found 6-bit comparator lessequal for signal <n0140> created at line 332
-    Found 6-bit comparator lessequal for signal <n0143> created at line 333
-    Found 6-bit comparator lessequal for signal <n0145> created at line 333
-    Found 6-bit comparator lessequal for signal <n0149> created at line 334
-    Found 6-bit comparator lessequal for signal <n0151> created at line 334
-    Found 6-bit comparator lessequal for signal <n0176> created at line 391
-    Found 6-bit comparator lessequal for signal <n0178> created at line 391
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 179
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 191
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 212
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 217
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 225
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 230
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 239
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 244
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 252
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 257
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 276
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 282
+    Found 6-bit comparator lessequal for signal <n0089> created at line 320
+    Found 6-bit comparator lessequal for signal <n0091> created at line 320
+    Found 6-bit comparator lessequal for signal <n0094> created at line 321
+    Found 6-bit comparator lessequal for signal <n0096> created at line 321
+    Found 6-bit comparator lessequal for signal <n0100> created at line 322
+    Found 6-bit comparator lessequal for signal <n0102> created at line 322
+    Found 6-bit comparator lessequal for signal <n0106> created at line 328
+    Found 6-bit comparator lessequal for signal <n0108> created at line 328
+    Found 6-bit comparator lessequal for signal <n0111> created at line 329
+    Found 6-bit comparator lessequal for signal <n0113> created at line 329
+    Found 6-bit comparator lessequal for signal <n0117> created at line 330
+    Found 6-bit comparator lessequal for signal <n0119> created at line 330
+    Found 6-bit comparator lessequal for signal <n0123> created at line 336
+    Found 6-bit comparator lessequal for signal <n0125> created at line 336
+    Found 6-bit comparator lessequal for signal <n0128> created at line 337
+    Found 6-bit comparator lessequal for signal <n0130> created at line 337
+    Found 6-bit comparator lessequal for signal <n0134> created at line 338
+    Found 6-bit comparator lessequal for signal <n0136> created at line 338
+    Found 6-bit comparator lessequal for signal <n0140> created at line 344
+    Found 6-bit comparator lessequal for signal <n0142> created at line 344
+    Found 6-bit comparator lessequal for signal <n0145> created at line 345
+    Found 6-bit comparator lessequal for signal <n0147> created at line 345
+    Found 6-bit comparator lessequal for signal <n0151> created at line 346
+    Found 6-bit comparator lessequal for signal <n0153> created at line 346
+    Found 6-bit comparator lessequal for signal <n0178> created at line 403
+    Found 6-bit comparator lessequal for signal <n0180> created at line 403
     Summary:
 	inferred  42 Comparator(s).
-	inferred  47 Multiplexer(s).
+	inferred  49 Multiplexer(s).
 Unit <FCU> synthesized.
 
 =========================================================================
@@ -202,9 +204,9 @@ Macro Statistics
 # Comparators                                          : 42
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 26
-# Multiplexers                                         : 47
+# Multiplexers                                         : 49
  1-bit 2-to-1 multiplexer                              : 18
- 2-bit 2-to-1 multiplexer                              : 29
+ 2-bit 2-to-1 multiplexer                              : 31
 
 =========================================================================
 
@@ -220,9 +222,9 @@ Macro Statistics
 # Comparators                                          : 42
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 26
-# Multiplexers                                         : 47
+# Multiplexers                                         : 49
  1-bit 2-to-1 multiplexer                              : 18
- 2-bit 2-to-1 multiplexer                              : 29
+ 2-bit 2-to-1 multiplexer                              : 31
 
 =========================================================================
 
@@ -263,12 +265,12 @@ Top Level Output File Name         : FCU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 61
+# BELS                             : 62
 #      LUT2                        : 1
 #      LUT3                        : 1
 #      LUT4                        : 6
-#      LUT5                        : 15
-#      LUT6                        : 38
+#      LUT5                        : 14
+#      LUT6                        : 40
 # IO Buffers                       : 78
 #      IBUF                        : 70
 #      OBUF                        : 8
@@ -280,14 +282,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   61  out of  63400     0%  
-    Number used as Logic:                61  out of  63400     0%  
+ Number of Slice LUTs:                   62  out of  63400     0%  
+    Number used as Logic:                62  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     61
-   Number with an unused Flip Flop:      61  out of     61   100%  
-   Number with an unused LUT:             0  out of     61     0%  
-   Number of fully used LUT-FF pairs:     0  out of     61     0%  
+ Number of LUT Flip Flop pairs used:     62
+   Number with an unused Flip Flop:      62  out of     62   100%  
+   Number with an unused LUT:             0  out of     62     0%  
+   Number of fully used LUT-FF pairs:     0  out of     62     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -335,7 +337,7 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 422 / 8
+  Total number of paths / destination ports: 438 / 8
 -------------------------------------------------------------------------
 Delay:               3.475ns (Levels of Logic = 6)
   Source:            FCU_MEM_WB_Op<2> (PAD)
@@ -363,14 +365,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.33 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.18 secs
  
 --> 
 
-Total memory usage is 366440 kilobytes
+Total memory usage is 366504 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   27 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

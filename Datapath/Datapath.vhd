@@ -30,6 +30,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Datapath is
+	generic(NBIT_PC := 32);
+	port(
+		DP_clk							: in  std_logic;
+		DP_reset							: in  std_logic;
+		DP_enable						: in  std_logic;
+		DP_IR								: in  std_logic_vector(31 downto 0);
+		
+		--------------------
+		DP_BTB_prediction				: in  std_logic;
+		DP_BTB_target_prediction	: in  std_logic_vector(NBIT_PC-1 downto 0);
+		--------------------
+		
+		DP_PC_IRAM						: out std_logic_vector(NBIT_PC-1 downto 0);
+	);
 end Datapath;
 
 architecture Structural of Datapath is
@@ -72,6 +86,8 @@ architecture Structural of Datapath is
 		DE_rd1		: in  std_logic;
 		DE_rd2		: in  std_logic;
 		DE_wr		: in  std_logic;
+		DE_data_fex	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		DE_sel_data_forward : in std_logic_vector(1 downto 0);
 --		DE_addr_rd1 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_rd2 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_wr 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
@@ -152,9 +168,52 @@ architecture Structural of Datapath is
 		WB_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
 	end component ;
-
+	
+	component FCU is
+	port(
+		FCU_enable			: in  std_logic;
+		
+		FCU_IF_ID_Op		: in  std_logic_vector(5 downto 0);
+		FCU_ID_EX_Op		: in  std_logic_vector(5 downto 0);
+		FCU_EX_MEM_Op		: in  std_logic_vector(5 downto 0);
+		FCU_MEM_WB_Op  	: in  std_logic_vector(5 downto 0);
+		
+		FCU_IF_ID_6_10		: in  std_logic_vector(4 downto 0);
+		FCU_IF_ID_11_15	: in  std_logic_vector(4 downto 0);
+		
+		FCU_ID_EX_6_10		: in  std_logic_vector(4 downto 0);
+		FCU_ID_EX_11_15	: in  std_logic_vector(4 downto 0);
+		FCU_ID_EX_16_20	: in  std_logic_vector(4 downto 0);
+		
+		FCU_EX_MEM_11_15	: in  std_logic_vector(4 downto 0);
+		FCU_EX_MEM_16_20	: in  std_logic_vector(4 downto 0);
+		
+		FCU_MEM_WB_11_15	: in  std_logic_vector(4 downto 0);
+		FCU_MEM_WB_16_20	: in  std_logic_vector(4 downto 0);
+		
+		FCU_IF_ID_MUX		: out std_logic_vector(1 downto 0);
+		
+		FCU_ID_EX_TOP_MUX	: out std_logic_vector(1 downto 0);
+		FCU_ID_EX_BOT_MUX : out std_logic_vector(1 downto 0);
+		
+		FCU_EX_MEM_MUX		: out std_logic;
+		
+		FCU_insert_stall	: out std_logic
+	);
+	end component;
+	
+	component Mux_NBit_2x1 is
+	generic(NBIT_IN: integer := 32);
+	port(
+		port0	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		port1	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		sel	: in  std_logic;
+		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
+	);
+	end component;
 begin
 
+	Fetch_Stage : Fetch GENERIC MAP (NBIT_PC =>
 
 end Structural;
 

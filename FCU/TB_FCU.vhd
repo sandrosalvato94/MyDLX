@@ -121,10 +121,310 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
       wait for 10 ns;	
-
+		FCU_enable <= '1';
+		FCU_IF_ID_Op <= "000000";
+		FCU_IF_ID_6_10 <= "00010";
+		FCU_IF_ID_11_15<= "00011";
 		
+		FCU_ID_EX_Op <= (others => '0');
+		FCU_ID_EX_6_10 <= (others => '0');
+		FCU_ID_EX_11_15 <= (others => '0');
+		FCU_ID_EX_16_20 <= (others => '0');
+		
+		FCU_EX_MEM_Op <= (others => '0');
+		FCU_EX_MEM_11_15 <= (others => '0');
+		FCU_EX_MEM_16_20 <= (others => '0');
+		
+		FCU_MEM_WB_Op <= (others => '0');
+		FCU_MEM_WB_11_15 <= (others => '0');
+		FCU_MEM_WB_16_20 <= (others => '0');
       -- insert stimulus here 
-
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "000000";
+		FCU_IF_ID_6_10 <= "00010";
+		FCU_IF_ID_11_15<= "00010";
+		
+		FCU_ID_EX_Op <= "000000";
+		FCU_ID_EX_6_10 <= "00010";
+		FCU_ID_EX_11_15 <= "00011";
+		FCU_ID_EX_16_20 <= "00001";
+		
+		FCU_EX_MEM_Op <= (others => '0');
+		FCU_EX_MEM_11_15 <= (others => '0');
+		FCU_EX_MEM_16_20 <= (others => '0');
+		
+		FCU_MEM_WB_Op <= (others => '0');
+		FCU_MEM_WB_11_15 <= (others => '0');
+		FCU_MEM_WB_16_20 <= (others => '0');
+      -- insert stimulus here 
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "100011"; --lw
+		FCU_IF_ID_6_10 <= "00001";
+		FCU_IF_ID_11_15<= "00010";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "000000"; --add
+		FCU_ID_EX_6_10 <= "00010";
+		FCU_ID_EX_11_15 <= "00010";
+		FCU_ID_EX_16_20 <= "00011";
+		
+		FCU_EX_MEM_Op <= "000000"; --add
+		FCU_EX_MEM_11_15 <= "00011";
+		FCU_EX_MEM_16_20 <= "00001";
+		
+		FCU_MEM_WB_Op <= (others => '0');
+		FCU_MEM_WB_11_15 <= (others => '0');
+		FCU_MEM_WB_16_20 <= (others => '0');
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "101011"; --sw
+		FCU_IF_ID_6_10 <= "00001";
+		FCU_IF_ID_11_15<= "00010";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "100011"; --lw
+		FCU_ID_EX_6_10 <= "00001";
+		FCU_ID_EX_11_15 <= "00010";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "000000"; --add
+		FCU_EX_MEM_11_15 <= "00010";
+		FCU_EX_MEM_16_20 <= "00011";
+		
+		FCU_MEM_WB_Op <= "000000"; --add
+		FCU_MEM_WB_11_15 <= "00011";
+		FCU_MEM_WB_16_20 <= "00001";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "100001"; --lh
+		FCU_IF_ID_6_10 <= "00001";
+		FCU_IF_ID_11_15<= "00011";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "101011"; --sw
+		FCU_ID_EX_6_10 <= "00001";
+		FCU_ID_EX_11_15 <= "00010";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "100011"; --lw
+		FCU_EX_MEM_11_15 <= "00010";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "000000"; --add
+		FCU_MEM_WB_11_15 <= "00010";
+		FCU_MEM_WB_16_20 <= "00011";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "001000"; --addi
+		FCU_IF_ID_6_10 <= "01101";
+		FCU_IF_ID_11_15<= "00100";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "100001"; --lh
+		FCU_ID_EX_6_10 <= "00001";
+		FCU_ID_EX_11_15 <= "00011";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "101011"; --sw
+		FCU_EX_MEM_11_15 <= "00010";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "100011"; --lw
+		FCU_MEM_WB_11_15 <= "00010";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010011"; --jalr
+		FCU_IF_ID_6_10 <= "00100";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "001000"; --addi
+		FCU_ID_EX_6_10 <= "01101";
+		FCU_ID_EX_11_15 <= "00100";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "100001"; --lh
+		FCU_EX_MEM_11_15 <= "00011";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "101011"; --sw
+		FCU_MEM_WB_11_15 <= "00010";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010011"; --jalr
+		FCU_IF_ID_6_10 <= "00100";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "010101"; --stall
+		FCU_ID_EX_6_10 <= "00000";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "001000"; --addi
+		FCU_EX_MEM_11_15 <= "00100";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "100001"; --lh
+		FCU_MEM_WB_11_15 <= "00011";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010101"; --nop
+		FCU_IF_ID_6_10 <= "00000";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "010011"; --jalr
+		FCU_ID_EX_6_10 <= "00100";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "010101"; --stall
+		FCU_EX_MEM_11_15 <= "00000";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "001000"; --addi
+		FCU_MEM_WB_11_15 <= "00100";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "000000"; --add
+		FCU_IF_ID_6_10 <= "00111";
+		FCU_IF_ID_11_15<= "01001";
+							 --"00011"
+		
+		FCU_ID_EX_Op <= "010101"; --nop
+		FCU_ID_EX_6_10 <= "00000";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "010011"; --jalr
+		FCU_EX_MEM_11_15 <= "00000";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "010101"; --stall
+		FCU_MEM_WB_11_15 <= "00000";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "101011"; --sw
+		FCU_IF_ID_6_10 <= "00001";
+		FCU_IF_ID_11_15<= "00011";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "000000"; --add
+		FCU_ID_EX_6_10 <= "00111";
+		FCU_ID_EX_11_15 <= "01001";
+		FCU_ID_EX_16_20 <= "00011";
+		
+		FCU_EX_MEM_Op <= "010101"; --nop
+		FCU_EX_MEM_11_15 <= "00000";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "010011"; --jalr
+		FCU_MEM_WB_11_15 <= "00000";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "100011"; --lw
+		FCU_IF_ID_6_10 <= "00001";
+		FCU_IF_ID_11_15<= "00010";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "101011"; --sw
+		FCU_ID_EX_6_10 <= "00001";
+		FCU_ID_EX_11_15 <= "00011";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "000000"; --add
+		FCU_EX_MEM_11_15 <= "01001";
+		FCU_EX_MEM_16_20 <= "00011";
+		
+		FCU_MEM_WB_Op <= "010101"; --nop
+		FCU_MEM_WB_11_15 <= "00000";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010011"; --jalr
+		FCU_IF_ID_6_10 <= "00010";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "100011"; --lw
+		FCU_ID_EX_6_10 <= "00001";
+		FCU_ID_EX_11_15 <= "00010";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "101011"; --sw
+		FCU_EX_MEM_11_15 <= "00011";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "000000"; --add
+		FCU_MEM_WB_11_15 <= "01001";
+		FCU_MEM_WB_16_20 <= "00011";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010011"; --jalr
+		FCU_IF_ID_6_10 <= "00010";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "010101"; --stall
+		FCU_ID_EX_6_10 <= "00000";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "100011"; --lw
+		FCU_EX_MEM_11_15 <= "00010";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "101011"; --sw
+		FCU_MEM_WB_11_15 <= "00011";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010011"; --jalr
+		FCU_IF_ID_6_10 <= "00010";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "010101"; --stall
+		FCU_ID_EX_6_10 <= "00000";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "010101"; --stall
+		FCU_EX_MEM_11_15 <= "00000";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "100011"; --lw
+		FCU_MEM_WB_11_15 <= "00010";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
+		
+		FCU_IF_ID_Op <= "010101"; --nop
+		FCU_IF_ID_6_10 <= "00000";
+		FCU_IF_ID_11_15<= "00000";
+							 --"00000"
+		
+		FCU_ID_EX_Op <= "010011"; --jalr
+		FCU_ID_EX_6_10 <= "00010";
+		FCU_ID_EX_11_15 <= "00000";
+		FCU_ID_EX_16_20 <= "00000";
+		
+		FCU_EX_MEM_Op <= "010101"; --stall
+		FCU_EX_MEM_11_15 <= "00000";
+		FCU_EX_MEM_16_20 <= "00000";
+		
+		FCU_MEM_WB_Op <= "010101"; --stall
+		FCU_MEM_WB_11_15 <= "00000";
+		FCU_MEM_WB_16_20 <= "00000";
+		wait for 10 ns;
       wait;
    end process;
 

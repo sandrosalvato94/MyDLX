@@ -47,6 +47,8 @@ entity Decode is
 		DE_rd1		: in  std_logic;
 		DE_rd2		: in  std_logic;
 		DE_wr		: in  std_logic;
+		DE_data_fex	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		DE_sel_data_forward : in std_logic_vector(1 downto 0);
 --		DE_addr_rd1 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_rd2 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_wr 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
@@ -127,6 +129,16 @@ architecture Structural of Decode is
 	);
 	end component;
 	
+	component Mux_NBit_2x1 is
+	generic(NBIT_IN: integer := 32);
+	port(
+		port0	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		port1	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		sel	: in  std_logic;
+		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
+	);
+	end component;
+	
 	signal s_ex, s_mem, s_wb	: std_logic_vector(NBIT_ADDR-1 downto 0) := (others => '0');
 	signal s_data_Frf_TregA	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_data_Frf_TregB	: std_logic_vector(NBIT_DATA-1 downto 0);
@@ -134,6 +146,8 @@ architecture Structural of Decode is
 	signal s_data_Fir_Tse	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_data_Frega_Tcmp	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_iszero_Fcmp_Tcond	: std_logic;
+	signal s_fwd_tmp 				: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_fwd_fmux_tcmp 		: std_logic_vector(NBIT_DATA-1 downto 0);
 
 begin
 -------------------------------------------------------------------------------------	
@@ -196,6 +210,22 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
+	FWD_MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+																port0 => s_data_Frf_TregA, 
+																port1 => DE_data_fex,
+																sel => DE_sel_data_forward(0),
+																portY => s_fwd_tmp
+																);
+	FWD_MUX2 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+																port0 => s_fwd_tmp, 
+																port1 => DE_data_Fwb,
+																sel => DE_sel_data_forward(1),
+																portY => s_fwd_fmux_tcmp
+																);
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
 	RegA : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
@@ -225,7 +255,7 @@ begin
 
 -------------------------------------------------------------------------------------
 	Cmp : NComparatorWithEnable GENERIC MAP (NBIT => NBIT_DATA) PORT MAP (
-							A => s_data_Frega_Tcmp,
+							A => s_fwd_fmux_tcmp,
 							B => (others => '0'),
 							Enable => DE_enable,
 							ComparatorBit => s_iszero_Fcmp_Tcond
