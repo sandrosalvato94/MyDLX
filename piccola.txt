@@ -1,3 +1,4 @@
 ACER: invio handshaking
 
 ACER: invio handshaking
+HP: invio hacknowledgement
