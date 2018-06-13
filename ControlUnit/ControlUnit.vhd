@@ -30,6 +30,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ControlUnit is
+	generic(NBIT_IR	: integer := 32);
+	port(
+	);
 end ControlUnit;
 
 architecture Behavioral of ControlUnit is
