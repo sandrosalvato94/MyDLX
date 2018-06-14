@@ -40,7 +40,8 @@ entity Jmp_Branch_Manager is
 		JBM_Reg	: in  std_logic_vector(N-1 downto 0);
 		JBM_Imm	: in  std_logic_vector(N-1 downto 0);
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
-		JBM_Opcode: in  std_logic_vector(5 downto 0); 
+		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
+		JBM_JMP_branch	: in std_logic;
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
 	);
@@ -74,27 +75,40 @@ architecture Behavioral of Jmp_Branch_Manager is
 	
 	signal s_Fmuxtrg_Tadd	: std_logic_vector(N-1 downto 0);
 	signal s_Fmuxtba_Tadd	: std_logic_vector(N-1 downto 0);
-
+	signal s_not_tmp			: std_logic_vector(N-1 downto 0);
+	signal s_Tadd				: std_logic_vector(N-1 downto 0);
+	
 begin
 	
-	JBM_taken <= JBM_Opcode(2) AND JBM_iszero;
+	JBM_taken <= NOT(JBM_JMP_branch) AND JBM_iszero;
 	
 	MUX_TRG : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
-						port0 => JBM_Imm,
-						port1 => JBM_Reg,
-						sel => JBM_Opcode(4),
+						port0 => JBM_Reg,
+						port1 => JBM_Imm,
+						sel => JBM_JMP_branch, --segnale scelto a caso
 						portY => s_Fmuxtrg_Tadd
 						);
 	MUX_TBA : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => s_allzeros,
 						port1 => JBM_NPC,
-						sel => JBM_Opcode(4),
+						sel => JBM_JMP_branch, --segnale scelto a caso
 						portY => s_Fmuxtba_Tadd
 						);
+						
+	cyc : for i in 0 to N-1 generate
+		s_not_tmp(i) <= NOT(s_Fmuxtrg_Tadd(i));
+	end generate cyc;
+						
+	MUX_ADD : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
+						port0 => s_Fmuxtrg_Tadd,
+						port1 => s_not_tmp,
+						sel => JBM_JMP_branch,
+						portY => s_Tadd
+						);
 	ADD : PropagateCarryLookahead GENERIC MAP (N => N) PORT MAP (
-						A => s_Fmuxtrg_Tadd,
+						A => s_Tadd,
 						B => s_Fmuxtba_Tadd,
-						Cin => '0',
+						Cin => JBM_JMP_branch,
 					--	Cout => , not useful in this prototype
 						Sum => JBM_Upd_PC
 						);
