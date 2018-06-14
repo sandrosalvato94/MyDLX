@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-13T11:23:58</DateModified>
+  <DateModified>2018-06-14T10:23:16</DateModified>
   <ModuleName>ControlUnit</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/ControlUnit/iseconfig/ControlUnit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/ControlUnit</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/ControlUnit\</ImplementationReportsDirectory>
   <DateInitialized>2018-06-13T11:23:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
