@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-14T15:12:09</DateModified>
+  <DateModified>2018-06-15T10:56:24</DateModified>
   <ModuleName>Decode</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-06-15T10:21:43</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage/iseconfig/Decode.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-17T12:18:56</DateInitialized>

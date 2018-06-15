@@ -13,7 +13,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.2 - Added Sign Extender Byte component
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -35,6 +35,7 @@ entity WriteBack_Stage is
 		WB_OpA	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		WB_OpB	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		WB_sel	: in  std_logic;
+		WB_is_byte : in std_logic;
 		WB_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
 end WriteBack_Stage;
@@ -51,14 +52,31 @@ architecture Structural of WriteBack_Stage is
 	);
 	end component;
 	
+	component Sign_Extender_Byte is
+	generic(NBIT_data	: integer := 32);
+	port(
+		SEB_data_in		: in  std_logic_vector(NBIT_DATA - 1 downto 0);
+		SEB_is_byte		: in  std_logic;
+		SEB_data_out	: out std_logic_vector(NBIT_DATA - 1 downto 0)
+	);
+	end component;
+	
+	signal s_tmp : std_logic_vector(NBIT_DATA-1 downto 0);
+	
 begin
 
 	WB_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
 							port0 => WB_OpA,
 							port1 => WB_OpB,
 							sel => WB_sel,
-							portY => WB_out
+							portY => s_tmp
 						);
+						
+	WB_SGB : Sign_Extender_Byte GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
+																						SEB_data_in => s_tmp,
+																						SEB_is_byte => WB_is_byte,
+																						SEB_data_out => WB_out
+																					);
 	
 end Structural;
 

@@ -201,13 +201,17 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528982679" xil_pn:in_ck="-2101972455792543900" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6801246452581505520" xil_pn:start_ts="1528982672">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1529050903" xil_pn:in_ck="-2101972455792543900" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6801246452581505520" xil_pn:start_ts="1529050864">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Decode.lso"/>
       <outfile xil_pn:name="Decode.ngc"/>
       <outfile xil_pn:name="Decode.ngr"/>
       <outfile xil_pn:name="Decode.prj"/>
+      <outfile xil_pn:name="Decode.stx"/>
       <outfile xil_pn:name="Decode.syr"/>
       <outfile xil_pn:name="Decode.xst"/>
       <outfile xil_pn:name="Decode_xst.xrpt"/>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: WriteBack_Stage.prj
 
@@ -105,10 +105,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Sign_Extender_Byte.vhd" into library work
+Parsing entity <Sign_Extender_Byte>.
+Parsing architecture <Structural> of entity <sign_extender_byte>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd" into library work
 Parsing entity <Mux_NBit_2x1>.
 Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd" into library work
 Parsing entity <WriteBack_Stage>.
 Parsing architecture <Structural> of entity <writeback_stage>.
 
@@ -120,29 +126,47 @@ Elaborating entity <WriteBack_Stage> (architecture <Structural>) with generics f
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
+Elaborating entity <Sign_Extender_Byte> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <WriteBack_Stage>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd".
         NBIT_DATA = 32
     Summary:
 	no macro.
 Unit <WriteBack_Stage> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd".
         NBIT_IN = 32
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1> synthesized.
 
+Synthesizing Unit <Sign_Extender_Byte>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Sign_Extender_Byte.vhd".
+        NBIT_data = 32
+    Summary:
+	no macro.
+Unit <Sign_Extender_Byte> synthesized.
+
+Synthesizing Unit <Mux_1Bit_2X1>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_1Bit_2X1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1Bit_2X1> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 1
+# Multiplexers                                         : 25
+ 1-bit 2-to-1 multiplexer                              : 24
  32-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
@@ -156,7 +180,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 1
+# Multiplexers                                         : 25
+ 1-bit 2-to-1 multiplexer                              : 24
  32-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
@@ -199,9 +224,10 @@ Top Level Output File Name         : WriteBack_Stage.ngc
 Primitive and Black Box Usage:
 ------------------------------
 # BELS                             : 32
-#      LUT3                        : 32
-# IO Buffers                       : 97
-#      IBUF                        : 65
+#      LUT3                        : 8
+#      LUT6                        : 24
+# IO Buffers                       : 98
+#      IBUF                        : 66
 #      OBUF                        : 32
 
 Device utilization summary:
@@ -222,8 +248,8 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          97
- Number of bonded IOBs:                  97  out of    210    46%  
+ Number of IOs:                          98
+ Number of bonded IOBs:                  98  out of    210    46%  
 
 Specific Feature Utilization:
 
@@ -258,7 +284,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 0.995ns
+   Maximum combinational path delay: 1.177ns
 
 Timing Details:
 ---------------
@@ -266,9 +292,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 96 / 32
+  Total number of paths / destination ports: 168 / 32
 -------------------------------------------------------------------------
-Delay:               0.995ns (Levels of Logic = 3)
+Delay:               1.177ns (Levels of Logic = 3)
   Source:            WB_sel (PAD)
   Destination:       WB_out<31> (PAD)
 
@@ -276,12 +302,12 @@ Delay:               0.995ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            32   0.001   0.618  WB_sel_IBUF (WB_sel_IBUF)
-     LUT3:I0->O            1   0.097   0.279  WB_MUX/Mmux_portY321 (WB_out_9_OBUF)
-     OBUF:I->O                 0.000          WB_out_9_OBUF (WB_out<9>)
+     IBUF:I->O            32   0.001   0.800  WB_sel_IBUF (WB_sel_IBUF)
+     LUT6:I0->O            1   0.097   0.279  WB_SGB/cyc[10].MUX/Mmux_portY11 (WB_out_10_OBUF)
+     OBUF:I->O                 0.000          WB_out_10_OBUF (WB_out<10>)
     ----------------------------------------
-    Total                      0.995ns (0.098ns logic, 0.897ns route)
-                                       (9.8% logic, 90.2% route)
+    Total                      1.177ns (0.098ns logic, 1.079ns route)
+                                       (8.3% logic, 91.7% route)
 
 =========================================================================
 
@@ -291,12 +317,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.90 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.84 secs
  
 --> 
 
-Total memory usage is 371976 kilobytes
+Total memory usage is 318312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

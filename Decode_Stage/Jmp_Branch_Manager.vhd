@@ -80,7 +80,7 @@ architecture Behavioral of Jmp_Branch_Manager is
 	
 begin
 	
-	JBM_taken <= NOT(JBM_JMP_branch) AND JBM_iszero;
+	JBM_taken <= NOT(JBM_JMP_branch) AND JBM_iszero; -- provvisorio, da evidenziare anche la differenza fra beqz e bnez
 	
 	MUX_TRG : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => JBM_Reg,

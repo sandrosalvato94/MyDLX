@@ -38,7 +38,7 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 178: <arg fmt="%s" index="1">s_ex_mem_is_imm</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 179: <arg fmt="%s" index="1">fcu_ex_mem_11_15</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 179: <arg fmt="%s" index="1">fcu_ex_mem_11_15</arg> should be on the sensitivity list of the process
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\FCU\FCU.vhd" Line 190: <arg fmt="%s" index="1">s_mem_wb_is_load</arg> should be on the sensitivity list of the process

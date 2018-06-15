@@ -61,6 +61,7 @@ package CONSTANTS is
 	--LOAD
 	constant OPCODE_LB	: std_logic_vector(5 downto 0) := "100000"; --0x20
 	constant OPCODE_LW	: std_logic_vector(5 downto 0) := "100011"; --0x23
+	constant OPCODE_LBU	: std_logic_vector(5 downto 0) := "100100"; --0x24
 	
 	--STORE
 	constant OPCODE_SB	: std_logic_vector(5 downto 0) := "101000"; --0x28

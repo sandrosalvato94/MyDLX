@@ -57,6 +57,7 @@ entity Decode is
 		DE_data_Fwb	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 --		DE_instr_type	: in  std_logic_vector(7 downto 0); --one hot encoding, one bit per instr type
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
+		DE_JMP_branch	: in  std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 		DE_RegA		: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -238,12 +239,14 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
+	
+	
 	JBM : Jmp_Branch_Manager GENERIC MAP (N => NBIT_DATA) PORT MAP (
 							JBM_iszero => s_iszero_Fcmp_Tcond,
 							JBM_Reg => s_data_Frf_TregA,
 							JBM_Imm => s_data_Fse_Timm,
 							JBM_NPC => DE_NPC,
-							JBM_Opcode => DE_IR(31 downto 26),
+							JBM_JMP_branch => DE_JMP_branch,
 							JBM_Upd_PC => DE_new_PC,
 							JBM_taken => DE_branch_taken
 							);

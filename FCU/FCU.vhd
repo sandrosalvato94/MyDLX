@@ -83,7 +83,7 @@ architecture Behavioral of FCU is
 	constant OP_JALR: std_logic_vector(5 downto 0) := "010011"; --0x13
 	-------------------------------------------------------------------
 	constant OP_LB  : std_logic_vector(5 downto 0) := "100000"; --0x20
-	constant OP_LW	 : std_logic_vector(5 downto 0) := "100011"; --0x23
+	constant OP_LBU : std_logic_vector(5 downto 0) := "100100"; --0x24
 	-------------------------------------------------------------------
 	constant OP_SB  : std_logic_vector(5 downto 0) := "101000"; --0x28
 	constant OP_SW	 : std_logic_vector(5 downto 0) := "101011"; --0x2b
@@ -350,25 +350,25 @@ begin
 		end if;
 		-----------------------------------------------------------------------
 		-----------------------------------------------------------------------
-		if((FCU_IF_ID_Op = OP_LW) OR (FCU_IF_ID_Op = OP_LB)) then
+		if((FCU_IF_ID_Op = OP_LBU) OR (FCU_IF_ID_Op = OP_LB)) then
 			s_if_id_is_load <= '1';
 		else
 			s_if_id_is_load <= '0';
 		end if;
 		
-		if((FCU_ID_EX_Op = OP_LW) OR (FCU_ID_EX_Op = OP_LB)) then
+		if((FCU_ID_EX_Op = OP_LBU) OR (FCU_ID_EX_Op = OP_LB)) then
 			s_id_ex_is_load <= '1';
 		else
 			s_id_ex_is_load <= '0';
 		end if;
 		
-		if((FCU_EX_MEM_Op = OP_LW) OR (FCU_EX_MEM_Op = OP_LB)) then
+		if((FCU_EX_MEM_Op = OP_LBU) OR (FCU_EX_MEM_Op = OP_LB)) then
 			s_ex_mem_is_load <= '1';
 		else
 			s_ex_mem_is_load <= '0';
 		end if;
 		
-		if((FCU_MEM_WB_Op = OP_LW) OR (FCU_MEM_WB_Op = OP_LB)) then
+		if((FCU_MEM_WB_Op = OP_LBU) OR (FCU_MEM_WB_Op = OP_LB)) then
 			s_mem_wb_is_load <= '1';
 		else
 			s_mem_wb_is_load <= '0';
