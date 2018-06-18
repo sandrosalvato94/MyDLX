@@ -1,5 +1,5 @@
 package CONSTANTS is
-	--56 instructions
+	--60 instructions
 	--REG
 	constant OPCODE_REG 	: std_logic_vector(5 downto 0) := "000000";
 		constant FUNC_SLL		: std_logic_vector(10 downto 0) := "00000000100"; --0X04
@@ -60,11 +60,14 @@ package CONSTANTS is
 	
 	--LOAD
 	constant OPCODE_LB	: std_logic_vector(5 downto 0) := "100000"; --0x20
+	constant OPCODE_LH	: std_logic_vector(5 downto 0) := "100001"; --0x21
 	constant OPCODE_LW	: std_logic_vector(5 downto 0) := "100011"; --0x23
 	constant OPCODE_LBU	: std_logic_vector(5 downto 0) := "100100"; --0x24
+	constant OPCODE_LHU	: std_logic_vector(5 downto 0) := "100101"; --0x25
 	
 	--STORE
 	constant OPCODE_SB	: std_logic_vector(5 downto 0) := "101000"; --0x28
+	constant OPCODE_SH	: std_logic_vector(5 downto 0) := "101001"; --0x29
 	constant OPCODE_SW	: std_logic_vector(5 downto 0) := "101011"; --0x2B
 	
 	--NOP

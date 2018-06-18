@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Extender_Byte_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Extender_Byte_beh.prj" "work.TB_Sign_Extender_Byte" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_beh.prj" "work.TB_Sign_Reducer" 

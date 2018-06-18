@@ -12,8 +12,10 @@
 --
 -- Dependencies: 
 --
--- Revision: 
+-- Revision 0.2
 -- Revision 0.2 - Added Sign Extender Byte component
+--				0.3 - Changed pinout in according to Sign Extender Byte modifications.
+--					   WB_SGN_usg signal added
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -32,11 +34,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity WriteBack_Stage is
 	generic(NBIT_DATA : integer := 32);
 	port(
-		WB_OpA	: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		WB_OpB	: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		WB_sel	: in  std_logic;
-		WB_is_byte : in std_logic;
-		WB_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
+		WB_OpA		: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		WB_OpB		: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		WB_sel		: in  std_logic;
+		WB_is_byte 	: in 	std_logic;
+		WB_SGN_usg	: in  std_logic;
+		WB_out		: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
 end WriteBack_Stage;
 
@@ -52,12 +55,13 @@ architecture Structural of WriteBack_Stage is
 	);
 	end component;
 	
-	component Sign_Extender_Byte is
+	component Sign_Reducer is
 	generic(NBIT_data	: integer := 32);
 	port(
-		SEB_data_in		: in  std_logic_vector(NBIT_DATA - 1 downto 0);
-		SEB_is_byte		: in  std_logic;
-		SEB_data_out	: out std_logic_vector(NBIT_DATA - 1 downto 0)
+		SB_data_in		: in  std_logic_vector(NBIT_DATA - 1 downto 0);
+		SB_is_byte		: in  std_logic;
+		SB_SGN_usg		: in  std_logic; --[1 for signed or transparent / 0 for unsigned]
+		SB_data_out	: out std_logic_vector(NBIT_DATA - 1 downto 0)
 	);
 	end component;
 	
@@ -72,10 +76,11 @@ begin
 							portY => s_tmp
 						);
 						
-	WB_SGB : Sign_Extender_Byte GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
-																						SEB_data_in => s_tmp,
-																						SEB_is_byte => WB_is_byte,
-																						SEB_data_out => WB_out
+	WB_SGB : Sign_Reducer GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
+																						SB_data_in => s_tmp,
+																						SB_is_byte => WB_is_byte,
+																						SB_SGN_usg => WB_SGN_usg,
+																						SB_data_out => WB_out
 																					);
 	
 end Structural;

@@ -81,6 +81,6 @@ LAB2:    xsi_set_current_line(46, ng0);
 extern void work_a_3734057397_3212880686_init()
 {
 	static char *pe[] = {(void *)work_a_3734057397_3212880686_p_0};
-	xsi_register_didat("work_a_3734057397_3212880686", "isim/TB_Sign_Extender_Byte_isim_beh.exe.sim/work/a_3734057397_3212880686.didat");
+	xsi_register_didat("work_a_3734057397_3212880686", "isim/TB_Sign_Reducer_isim_beh.exe.sim/work/a_3734057397_3212880686.didat");
 	xsi_register_executes(pe);
 }

@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\TB_Sign_Extender_Byte_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Extender_Byte_isim_beh.wdb 
+Running: C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\TB_Sign_Reducer_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 ----------------------------------------------------------------------
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -26,9 +26,5 @@ Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 10 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

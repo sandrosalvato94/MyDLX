@@ -1,2 +1,3 @@
 work	"Mux_1Bit_2X1.vhd"
-work	"Sign_Extender_Byte.vhd"
+work	"Mux_NBit_2x1.vhd"
+work	"Sign_Reducer.vhd"
