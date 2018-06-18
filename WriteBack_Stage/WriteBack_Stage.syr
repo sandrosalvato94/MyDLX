@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: WriteBack_Stage.prj
 
@@ -105,13 +105,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd" into library work
 Parsing entity <Mux_NBit_2x1>.
 Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
-Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Sign_Extender_Byte.vhd" into library work
-Parsing entity <Sign_Extender_Byte>.
-Parsing architecture <Structural> of entity <sign_extender_byte>.
-Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd" into library work
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Sign_Reducer.vhd" into library work
+Parsing entity <Sign_Reducer>.
+Parsing architecture <Structural> of entity <sign_reducer>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd" into library work
 Parsing entity <WriteBack_Stage>.
 Parsing architecture <Structural> of entity <writeback_stage>.
 
@@ -123,39 +126,48 @@ Elaborating entity <WriteBack_Stage> (architecture <Structural>) with generics f
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
-Elaborating entity <Sign_Extender_Byte> (architecture <Structural>) with generics from library <work>.
+Elaborating entity <Sign_Reducer> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Mux_1Bit_2X1> (architecture <Behavioral>) from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <WriteBack_Stage>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd".
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\WriteBack_Stage.vhd".
         NBIT_DATA = 32
     Summary:
 	no macro.
 Unit <WriteBack_Stage> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd".
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_NBit_2x1.vhd".
         NBIT_IN = 32
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1> synthesized.
 
-Synthesizing Unit <Sign_Extender_Byte>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\WriteBack_Stage\Sign_Extender_Byte.vhd".
+Synthesizing Unit <Sign_Reducer>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Sign_Reducer.vhd".
         NBIT_data = 32
     Summary:
 	no macro.
-Unit <Sign_Extender_Byte> synthesized.
+Unit <Sign_Reducer> synthesized.
+
+Synthesizing Unit <Mux_1Bit_2X1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\WriteBack_Stage\Mux_1Bit_2X1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1Bit_2X1> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 2
- 32-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
 
@@ -168,8 +180,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 2
- 32-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 3
+ 32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
 
@@ -210,11 +222,13 @@ Top Level Output File Name         : WriteBack_Stage.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 32
+# BELS                             : 35
+#      LUT2                        : 1
 #      LUT3                        : 8
-#      LUT6                        : 24
-# IO Buffers                       : 99
-#      IBUF                        : 67
+#      LUT5                        : 16
+#      LUT6                        : 10
+# IO Buffers                       : 100
+#      IBUF                        : 68
 #      OBUF                        : 32
 
 Device utilization summary:
@@ -224,19 +238,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   32  out of  63400     0%  
-    Number used as Logic:                32  out of  63400     0%  
+ Number of Slice LUTs:                   35  out of  63400     0%  
+    Number used as Logic:                35  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     32
-   Number with an unused Flip Flop:      32  out of     32   100%  
-   Number with an unused LUT:             0  out of     32     0%  
-   Number of fully used LUT-FF pairs:     0  out of     32     0%  
+ Number of LUT Flip Flop pairs used:     35
+   Number with an unused Flip Flop:      35  out of     35   100%  
+   Number with an unused LUT:             0  out of     35     0%  
+   Number of fully used LUT-FF pairs:     0  out of     35     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          99
- Number of bonded IOBs:                  99  out of    210    47%  
+ Number of IOs:                         100
+ Number of bonded IOBs:                 100  out of    210    47%  
 
 Specific Feature Utilization:
 
@@ -271,7 +285,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 1.577ns
+   Maximum combinational path delay: 2.114ns
 
 Timing Details:
 ---------------
@@ -279,23 +293,24 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 216 / 32
+  Total number of paths / destination ports: 320 / 32
 -------------------------------------------------------------------------
-Delay:               1.577ns (Levels of Logic = 4)
-  Source:            WB_sel (PAD)
+Delay:               2.114ns (Levels of Logic = 5)
+  Source:            WB_reduce (PAD)
   Destination:       WB_out<31> (PAD)
 
-  Data Path: WB_sel to WB_out<31>
+  Data Path: WB_reduce to WB_out<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            32   0.001   0.618  WB_sel_IBUF (WB_sel_IBUF)
-     LUT3:I0->O           25   0.097   0.485  WB_out<7>1 (WB_out_7_OBUF)
-     LUT6:I4->O            1   0.097   0.279  WB_SGB/MUX/Mmux_portY110 (WB_out_10_OBUF)
-     OBUF:I->O                 0.000          WB_out_10_OBUF (WB_out<10>)
+     IBUF:I->O            26   0.001   0.485  WB_reduce_IBUF (WB_reduce_IBUF)
+     LUT2:I0->O            1   0.097   0.693  WB_SGB/MUX_OUT/Mmux_portY102_SW0 (N2)
+     LUT6:I0->O           16   0.097   0.364  WB_SGB/MUX_OUT/Mmux_portY102 (WB_SGB/MUX_OUT/Mmux_portY102)
+     LUT5:I4->O            1   0.097   0.279  WB_SGB/MUX_OUT/Mmux_portY101 (WB_out_19_OBUF)
+     OBUF:I->O                 0.000          WB_out_19_OBUF (WB_out<19>)
     ----------------------------------------
-    Total                      1.577ns (0.195ns logic, 1.382ns route)
-                                       (12.4% logic, 87.6% route)
+    Total                      2.114ns (0.292ns logic, 1.822ns route)
+                                       (13.8% logic, 86.2% route)
 
 =========================================================================
 
@@ -305,12 +320,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.21 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.97 secs
  
 --> 
 
-Total memory usage is 369832 kilobytes
+Total memory usage is 407024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

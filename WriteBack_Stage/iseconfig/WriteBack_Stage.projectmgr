@@ -7,23 +7,15 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/WriteBack_Stage - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|WriteBack_Stage|WriteBack_Stage.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>WriteBack_Stage</SelectedItem>
-         <SelectedItem>xc7a100t-3csg324</SelectedItem>
-         <SelectedItem>WriteBack_Stage - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/WriteBack_Stage.vhd)</SelectedItem>
-         <SelectedItem>WB_MUX - Mux_NBit_2x1 - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_NBit_2x1.vhd)</SelectedItem>
-         <SelectedItem>WB_SGB - Sign_Reducer - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Sign_Reducer.vhd)</SelectedItem>
-         <SelectedItem>MUX_msb - Mux_1Bit_2X1 - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_1Bit_2X1.vhd)</SelectedItem>
-         <SelectedItem>MUX_B_H - Mux_NBit_2x1 - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_NBit_2x1.vhd)</SelectedItem>
-         <SelectedItem>MUX_OUT - Mux_NBit_2x1 - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_NBit_2x1.vhd)</SelectedItem>
+         <SelectedItem>WriteBack_Stage - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/WriteBack_Stage.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <CurrentItem>WriteBack_Stage - Structural (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/WriteBack_Stage.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -38,7 +30,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -49,7 +41,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001c20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Mux_NBit_2x1.vhd</CurrentItem>
    </ItemView>
@@ -78,27 +70,29 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/TB_Sign_Extender_Byte - behavior C:|Users|Alessandro|Documents|GitHub|MyDLX|WriteBack_Stage|TB_Sign_Extender_Byte.vhd</ClosedNode>
+         <ClosedNode>/TB_Sign_Reducer - behavior C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|WriteBack_Stage|TB_Sign_Reducer.vhd</ClosedNode>
          <ClosedNode>/WriteBack_Stage - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|WriteBack_Stage|WriteBack_Stage.vhd</ClosedNode>
          <ClosedNode>/WriteBack_Stage - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|WriteBack_Stage|WriteBack_Stage.vhd/WB_SGB - Sign_Extender_Byte - Structural</ClosedNode>
+         <ClosedNode>/WriteBack_Stage - Structural C:|Users|UTENTE|Desktop|Politecnico di Torino|Laurea Magistrale|I Anno|Microelectronic Systems|DLX|MyDLX|WriteBack_Stage|WriteBack_Stage.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>TB_Sign_Reducer - behavior (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd)</SelectedItem>
+         <SelectedItem>TB_Sign_Reducer - behavior (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a40000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000153000000020000000000000000000000000200000064ffffffff000000810000000300000002000001530000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>TB_Sign_Reducer - behavior (C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd)</CurrentItem>
+      <CurrentItem>TB_Sign_Reducer - behavior (C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -110,7 +104,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -119,12 +113,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>ISim Simulator</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
 </Project>

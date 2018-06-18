@@ -9,13 +9,6 @@
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
---				SR_is_byte	SR_SGN_usg				SR_data_out		TBChanged
---						0				0		   			data_in
---						0				1						data_in
---						1				0		 	 0[31..24] & data_in[7..0]
---						1				1			data_in[7] & data_in[7..0]
---
---					Combination of (0, 0) signals behaviors as transparent mode
 -- Dependencies: 
 --
 -- Revision: 1.0 - T1a, T1b, T2, T3 passed.
@@ -24,6 +17,7 @@
 --						 T1a, T1b, T2, T3 passed.
 --				 3.0 - 2.0 version doesn't take care LH and LHU instruction, which
 --				       have been added in the instruction set after the previous release.
+--				       T1a, T1b, T1c, T1d, T2, T3, T4, T5 passed
 --						 
 --
 -- Additional Comments: 

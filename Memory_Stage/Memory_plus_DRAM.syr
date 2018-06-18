@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Memory_plus_DRAM.prj
 
@@ -105,9 +105,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd" into library work
 Parsing entity <NRegister>.
 Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" into library work
+Parsing entity <Data_Reducer>.
+Parsing architecture <Behavioral> of entity <data_reducer>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Memory_Stage.vhd" into library work
 Parsing entity <Memory_Stage>.
 Parsing architecture <Structural> of entity <memory_stage>.
@@ -125,6 +131,12 @@ Parsing architecture <Behavioral> of entity <memory_plus_dram>.
 Elaborating entity <Memory_plus_DRAM> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Memory_Stage> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Data_Reducer> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 54: Using initial value "000000000000000000000000" for s_zeros_byte since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 55: Using initial value "0000000000000000" for s_zeros_half since it is never assigned
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
@@ -150,6 +162,20 @@ Synthesizing Unit <Memory_Stage>.
     Summary:
 	no macro.
 Unit <Memory_Stage> synthesized.
+
+Synthesizing Unit <Data_Reducer>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd".
+        NBIT_DATA = 32
+    Summary:
+	no macro.
+Unit <Data_Reducer> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1> synthesized.
 
 Synthesizing Unit <NRegister>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd".
@@ -8370,8 +8396,8 @@ Macro Statistics
  32-bit register                                       : 2
 # Latches                                              : 8192
  1-bit latch                                           : 8192
-# Multiplexers                                         : 2
- 32-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 3
  32-bit 256-to-1 multiplexer                           : 1
 
 =========================================================================
@@ -8387,8 +8413,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Registers                                            : 64
  Flip-Flops                                            : 64
-# Multiplexers                                         : 2
- 32-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 3
  32-bit 256-to-1 multiplexer                           : 1
 
 =========================================================================
@@ -8437,9 +8463,9 @@ Top Level Output File Name         : Memory_plus_DRAM.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4106
-#      LUT2                        : 1
-#      LUT3                        : 9
+# BELS                             : 4130
+#      LUT2                        : 17
+#      LUT3                        : 17
 #      LUT4                        : 32
 #      LUT6                        : 2432
 #      MUXF7                       : 1088
@@ -8450,8 +8476,8 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 108
-#      IBUF                        : 43
+# IO Buffers                       : 110
+#      IBUF                        : 45
 #      OBUF                        : 65
 
 Device utilization summary:
@@ -8462,19 +8488,19 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            8192  out of  126800     6%  
- Number of Slice LUTs:                 2474  out of  63400     3%  
-    Number used as Logic:              2474  out of  63400     3%  
+ Number of Slice LUTs:                 2498  out of  63400     3%  
+    Number used as Logic:              2498  out of  63400     3%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   8618
    Number with an unused Flip Flop:     426  out of   8618     4%  
-   Number with an unused LUT:          6144  out of   8618    71%  
-   Number of fully used LUT-FF pairs:  2048  out of   8618    23%  
+   Number with an unused LUT:          6120  out of   8618    71%  
+   Number of fully used LUT-FF pairs:  2072  out of   8618    24%  
    Number of unique control sets:       257
 
 IO Utilization: 
- Number of IOs:                         111
- Number of bonded IOBs:                 109  out of    210    51%  
+ Number of IOs:                         113
+ Number of bonded IOBs:                 111  out of    210    52%  
     IOB Flip Flops/Latches:              64
 
 Specific Feature Utilization:
@@ -8553,7 +8579,7 @@ Offset:              3.073ns (Levels of Logic = 8)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DataRAM/Rst_RD_wr_AND_6_o'
-  Total number of paths / destination ports: 73728 / 16384
+  Total number of paths / destination ports: 81920 / 16384
 -------------------------------------------------------------------------
 Offset:              2.167ns (Levels of Logic = 3)
   Source:            MD_address<5> (PAD)
@@ -8625,14 +8651,14 @@ DataRAM/Rst_RD_wr_AND_6_o|         |    3.173|         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 102.00 secs
-Total CPU time to Xst completion: 102.64 secs
+Total REAL time to Xst completion: 92.00 secs
+Total CPU time to Xst completion: 91.47 secs
  
 --> 
 
-Total memory usage is 438984 kilobytes
+Total memory usage is 435696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 8194 (   0 filtered)
+Number of warnings : 8196 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

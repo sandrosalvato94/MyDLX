@@ -39,6 +39,8 @@ entity Memory_plus_DRAM is
 		MD_RD_wr		: in  std_logic;
 		MD_rst		: in  std_logic;
 		MD_clk		: in  std_logic;
+		MD_reduce		: in  std_logic;
+		MD_BYTE_half	: in  std_logic;
 		
 		MD_data_rd	: out std_logic_vector(NBIT_DATA-1 downto 0);
 		MD_data_wr	: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -59,6 +61,8 @@ architecture Behavioral of Memory_plus_DRAM is
 		ME_rst		: in  std_logic; -- 1 active, 0 else
 		ME_enable		: in  std_logic; -- 1 active, 0 else
 		ME_RD_wr		: in  std_logic;
+		ME_reduce		: in  std_logic;
+		ME_BYTE_half	: in  std_logic;
 		
 		ME_data_to_mem	: out  std_logic_vector(NBIT_DATA-1 downto 0);
 		ME_address_to_mem	: out  std_logic_vector(NBIT_ADDRESS-1 downto 0);
@@ -104,6 +108,8 @@ begin
 				ME_rst	=> MD_rst,	
 				ME_enable	=> MD_enable,	
 				ME_RD_wr	=> MD_RD_wr,
+				ME_Reduce	=> MD_Reduce,
+				ME_BYTE_half => MD_BYTE_half,
 		
 				ME_data_to_mem => s_data_from_ME_to_DRAM,	
 				ME_address_to_mem	=> s_address_from_ME_to_DRAM,

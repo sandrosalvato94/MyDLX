@@ -1,16 +1,16 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.exe -prj C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_beh.prj work.TB_Sign_Reducer 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer_beh.prj work.TB_Sign_Reducer 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_NBit_2x1.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_1Bit_2X1.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Sign_Reducer.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/Mux_1Bit_2X1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/Sign_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 163584 KB
-Fuse CPU Usage: 328 ms
+Fuse Memory Usage: 193520 KB
+Fuse CPU Usage: 421 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -21,6 +21,6 @@ Compiling architecture behavior of entity tb_sign_reducer
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 10 VHDL Units
-Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.exe
-Fuse Memory Usage: 180000 KB
-Fuse CPU Usage: 499 ms
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/TB_Sign_Reducer_isim_beh.exe
+Fuse Memory Usage: 210000 KB
+Fuse CPU Usage: 718 ms

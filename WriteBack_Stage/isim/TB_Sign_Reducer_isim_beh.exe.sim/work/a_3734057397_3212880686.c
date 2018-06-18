@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Alessandro/Documents/GitHub/MyDLX/WriteBack_Stage/Mux_1Bit_2X1.vhd";
+static const char *ng0 = "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/WriteBack_Stage/Mux_1Bit_2X1.vhd";
 
 
 

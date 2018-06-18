@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: Memory_Stage.prj
 
@@ -105,9 +105,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd" into library work
 Parsing entity <NRegister>.
 Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" into library work
+Parsing entity <Data_Reducer>.
+Parsing architecture <Behavioral> of entity <data_reducer>.
 Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Memory_Stage.vhd" into library work
 Parsing entity <Memory_Stage>.
 Parsing architecture <Structural> of entity <memory_stage>.
@@ -117,6 +123,12 @@ Parsing architecture <Structural> of entity <memory_stage>.
 =========================================================================
 
 Elaborating entity <Memory_Stage> (architecture <Structural>) with generics from library <work>.
+
+Elaborating entity <Data_Reducer> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 54: Using initial value "000000000000000000000000" for s_zeros_byte since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 55: Using initial value "0000000000000000" for s_zeros_half since it is never assigned
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
@@ -132,6 +144,20 @@ Synthesizing Unit <Memory_Stage>.
 	no macro.
 Unit <Memory_Stage> synthesized.
 
+Synthesizing Unit <Data_Reducer>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd".
+        NBIT_DATA = 32
+    Summary:
+	no macro.
+Unit <Data_Reducer> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1>.
+    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1> synthesized.
+
 Synthesizing Unit <NRegister>.
     Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd".
         N = 32
@@ -146,6 +172,8 @@ HDL Synthesis Report
 Macro Statistics
 # Registers                                            : 2
  32-bit register                                       : 2
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
@@ -160,6 +188,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Registers                                            : 64
  Flip-Flops                                            : 64
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
@@ -205,15 +235,17 @@ Top Level Output File Name         : Memory_Stage.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 25
 #      INV                         : 1
+#      LUT2                        : 16
+#      LUT3                        : 8
 # FlipFlops/Latches                : 64
 #      FDCE                        : 64
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 230
-#      IBUF                        : 99
-#      OBUF                        : 131
+# IO Buffers                       : 233
+#      IBUF                        : 101
+#      OBUF                        : 132
 
 Device utilization summary:
 ---------------------------
@@ -222,19 +254,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    1  out of  63400     0%  
-    Number used as Logic:                 1  out of  63400     0%  
+ Number of Slice LUTs:                   25  out of  63400     0%  
+    Number used as Logic:                25  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      1
-   Number with an unused Flip Flop:       1  out of      1   100%  
-   Number with an unused LUT:             0  out of      1     0%  
-   Number of fully used LUT-FF pairs:     0  out of      1     0%  
+ Number of LUT Flip Flop pairs used:     25
+   Number with an unused Flip Flop:      25  out of     25   100%  
+   Number with an unused LUT:             0  out of     25     0%  
+   Number of fully used LUT-FF pairs:     0  out of     25     0%  
    Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                         232
- Number of bonded IOBs:                 231  out of    210   110% (*) 
+ Number of IOs:                         234
+ Number of bonded IOBs:                 234  out of    210   111% (*) 
     IOB Flip Flops/Latches:              64
 
 Specific Feature Utilization:
@@ -277,7 +309,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: 0.741ns
    Maximum output required time after clock: 0.640ns
-   Maximum combinational path delay: 0.784ns
+   Maximum combinational path delay: 0.893ns
 
 Timing Details:
 ---------------
@@ -323,22 +355,22 @@ Offset:              0.640ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 67 / 67
+  Total number of paths / destination ports: 100 / 68
 -------------------------------------------------------------------------
-Delay:               0.784ns (Levels of Logic = 3)
-  Source:            ME_rst (PAD)
-  Destination:       ME_rst_to_mem (PAD)
+Delay:               0.893ns (Levels of Logic = 3)
+  Source:            ME_data_in<15> (PAD)
+  Destination:       ME_data_to_mem<15> (PAD)
 
-  Data Path: ME_rst to ME_rst_to_mem
+  Data Path: ME_data_in<15> to ME_data_to_mem<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            65   0.001   0.391  ME_rst_IBUF (ME_rst_IBUF)
-     INV:I->O              1   0.113   0.279  ME_rst_to_mem1_INV_0 (ME_rst_to_mem_OBUF)
-     OBUF:I->O                 0.000          ME_rst_to_mem_OBUF (ME_rst_to_mem)
+     IBUF:I->O             2   0.001   0.515  ME_data_in_15_IBUF (ME_data_in_15_IBUF)
+     LUT3:I0->O            1   0.097   0.279  DR/MUX_OUT/Mmux_portY71 (ME_data_to_mem_15_OBUF)
+     OBUF:I->O                 0.000          ME_data_to_mem_15_OBUF (ME_data_to_mem<15>)
     ----------------------------------------
-    Total                      0.784ns (0.114ns logic, 0.670ns route)
-                                       (14.5% logic, 85.5% route)
+    Total                      0.893ns (0.098ns logic, 0.795ns route)
+                                       (11.0% logic, 89.0% route)
 
 =========================================================================
 
@@ -348,14 +380,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.12 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.77 secs
  
 --> 
 
-Total memory usage is 367624 kilobytes
+Total memory usage is 411888 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

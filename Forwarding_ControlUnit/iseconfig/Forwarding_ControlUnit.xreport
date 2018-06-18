@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-12T10:52:53</DateModified>
+  <DateModified>2018-06-18T14:09:00</DateModified>
   <ModuleName>Forwarding_ControlUnit</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/iseconfig/Forwarding_ControlUnit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Forwarding_ControlUnit/iseconfig/Forwarding_ControlUnit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Forwarding_ControlUnit\</ImplementationReportsDirectory>
   <DateInitialized>2018-05-25T10:54:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

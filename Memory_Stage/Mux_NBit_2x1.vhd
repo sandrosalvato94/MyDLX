@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    10:25:43 06/18/2018 
+-- Create Date:    19:15:15 09/18/2017 
 -- Design Name: 
--- Module Name:    Byte_Reducer - Behavioral 
+-- Module Name:    Mux_NBit_2x1 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,19 +29,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Byte_Reducer is
-	generic(NBIT_DATA : integer := 32);
+entity Mux_NBit_2x1 is
+	generic(NBIT_IN: integer := 32);
 	port(
-		BR_data_in	: in  std_logic_vector(NBIT_DATA-1 downto 0);
-		BR_reduce	: in  std_logic;
-		BR_data_out	: out std_logic_vector(NBIT_DATA-1 downto 0);
+		port0	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		port1	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		sel	: in  std_logic;
+		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
 	);
-end Byte_Reducer;
+end Mux_NBit_2x1;
 
-architecture Behavioral of Byte_Reducer is
+architecture Behavioral of Mux_NBit_2x1 is
 
 begin
-
+	process(port0, port1, sel)
+	begin
+		if(sel = '0') then
+			portY <= port0;
+		elsif(sel = '1') then
+			portY <= port1;
+		end if;
+	end process;
 
 end Behavioral;
 

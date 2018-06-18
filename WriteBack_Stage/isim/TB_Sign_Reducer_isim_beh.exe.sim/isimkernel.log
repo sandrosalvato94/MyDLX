@@ -2,14 +2,14 @@ Command line:
    TB_Sign_Reducer_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  56743
+     -socket  64076
 
-Mon Jun 18 11:19:54 2018
+Mon Jun 18 14:17:30 2018
 
 
  Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 850.522 Meg
+ Current Memory Usage: 1038.23 Meg
 
  Total Signals          : 27
  Total Nets             : 188
@@ -19,11 +19,12 @@ Mon Jun 18 11:19:54 2018
  Total Processes        : 30
  Total Traceable Variables  : 41
  Total Scalar Nets and Variables : 699
-Total Line Count : 44
+Total Line Count : 134
+Total Line Count : 134
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.15625 sec
 
- Current Memory Usage: 850.522 Meg
+ Current Memory Usage: 1039.28 Meg
 
-Mon Jun 18 11:19:58 2018
+Mon Jun 18 14:17:52 2018
 

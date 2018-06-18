@@ -1,4 +1,2 @@
-work	"DRAM.vhd"
-work	"Memory_Stage.vhd"
-work	"Memory_plus_DRAM.vhd"
-work	"NRegister.vhd"
+work	"Data_Reducer.vhd"
+work	"Mux_NBit_2x1.vhd"

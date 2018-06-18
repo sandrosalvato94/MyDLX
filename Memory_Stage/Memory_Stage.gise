@@ -22,6 +22,15 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Memory_Stage.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Data_Reducer.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Data_Reducer.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Data_Reducer.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Data_Reducer.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Data_Reducer.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Data_Reducer.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Data_Reducer.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Data_Reducer.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Data_Reducer_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Memory_Stage.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Memory_Stage.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Memory_Stage.ngc"/>
@@ -44,6 +53,9 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Memory_plus_DRAM_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Memory_plus_DRAM_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Memory_plus_DRAM_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_Data_Reducer_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_Data_Reducer_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TB_Data_Reducer_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_MemoryStage_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_Memory_plus_DRAM_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_Memory_plus_DRAM_isim_beh.exe"/>
@@ -52,6 +64,7 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -62,63 +75,80 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1526983425" xil_pn:in_ck="-4719971647758717448" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529326448" xil_pn:in_ck="4632809812634352131" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1529326448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DRAM.vhd"/>
+      <outfile xil_pn:name="Data_Reducer.vhd"/>
       <outfile xil_pn:name="Memory_Stage.vhd"/>
       <outfile xil_pn:name="Memory_plus_DRAM.vhd"/>
+      <outfile xil_pn:name="Mux_NBit_2x1.vhd"/>
       <outfile xil_pn:name="NRegister.vhd"/>
+      <outfile xil_pn:name="TB_Data_Reducer.vhd"/>
       <outfile xil_pn:name="TB_MemoryStage.vhd"/>
       <outfile xil_pn:name="TB_Memory_plus_DRAM.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1526983425" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1308236855405611626" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529326415" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4701559766016537038" xil_pn:start_ts="1529326415">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1526983425" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9220313101867251896" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529326415" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-509209187196246868" xil_pn:start_ts="1529326415">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1526983425" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3791833913453947608" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529325945" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7003042120215242740" xil_pn:start_ts="1529325945">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1526983425" xil_pn:in_ck="-4719971647758717448" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529326448" xil_pn:in_ck="4632809812634352131" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1529326448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DRAM.vhd"/>
+      <outfile xil_pn:name="Data_Reducer.vhd"/>
       <outfile xil_pn:name="Memory_Stage.vhd"/>
       <outfile xil_pn:name="Memory_plus_DRAM.vhd"/>
+      <outfile xil_pn:name="Mux_NBit_2x1.vhd"/>
       <outfile xil_pn:name="NRegister.vhd"/>
+      <outfile xil_pn:name="TB_Data_Reducer.vhd"/>
       <outfile xil_pn:name="TB_MemoryStage.vhd"/>
       <outfile xil_pn:name="TB_Memory_plus_DRAM.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1526983429" xil_pn:in_ck="-4719971647758717448" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-983577975424590268" xil_pn:start_ts="1526983425">
+    <transform xil_pn:end_ts="1529326453" xil_pn:in_ck="4632809812634352131" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8603732730998955916" xil_pn:start_ts="1529326448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="TB_Memory_plus_DRAM_beh.prj"/>
-      <outfile xil_pn:name="TB_Memory_plus_DRAM_isim_beh.exe"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TB_Data_Reducer_beh.prj"/>
+      <outfile xil_pn:name="TB_Data_Reducer_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1526983430" xil_pn:in_ck="-1937491144471401388" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3066894419334270449" xil_pn:start_ts="1526983429">
+    <transform xil_pn:end_ts="1529326454" xil_pn:in_ck="-673555637545723816" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6304637897138390727" xil_pn:start_ts="1529326453">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TB_Memory_plus_DRAM_isim_beh.wdb"/>
+      <outfile xil_pn:name="TB_Data_Reducer_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1526981905" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1526981905">
+    <transform xil_pn:end_ts="1529326911" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1529326911">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

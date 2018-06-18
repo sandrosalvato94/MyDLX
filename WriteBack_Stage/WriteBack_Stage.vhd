@@ -12,10 +12,11 @@
 --
 -- Dependencies: 
 --
--- Revision 0.2
+-- Revision 0.4
 -- Revision 0.2 - Added Sign Extender Byte component
 --				0.3 - Changed pinout in according to Sign Extender Byte modifications.
 --					   WB_SGN_usg signal added
+--	  0.4 - Changed the pinout (WB_reduce) due to Sign Reducer modifications
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -37,7 +38,8 @@ entity WriteBack_Stage is
 		WB_OpA		: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		WB_OpB		: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		WB_sel		: in  std_logic;
-		WB_is_byte 	: in 	std_logic;
+		WB_reduce		: in  std_logic;
+		WB_BYTE_half 	: in  std_logic;
 		WB_SGN_usg	: in  std_logic;
 		WB_out		: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
@@ -58,10 +60,11 @@ architecture Structural of WriteBack_Stage is
 	component Sign_Reducer is
 	generic(NBIT_data	: integer := 32);
 	port(
-		SB_data_in		: in  std_logic_vector(NBIT_DATA - 1 downto 0);
-		SB_is_byte		: in  std_logic;
-		SB_SGN_usg		: in  std_logic; --[1 for signed or transparent / 0 for unsigned]
-		SB_data_out	: out std_logic_vector(NBIT_DATA - 1 downto 0)
+		SR_data_in		: in  std_logic_vector(NBIT_DATA - 1 downto 0);
+		SR_reduce		: in  std_logic;
+		SR_BYTE_half	: in  std_logic;
+		SR_SGN_usg		: in  std_logic; --[1 for signed or transparent / 0 for unsigned]
+		SR_data_out	: out std_logic_vector(NBIT_DATA - 1 downto 0)
 	);
 	end component;
 	
@@ -77,11 +80,12 @@ begin
 						);
 						
 	WB_SGB : Sign_Reducer GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
-																						SB_data_in => s_tmp,
-																						SB_is_byte => WB_is_byte,
-																						SB_SGN_usg => WB_SGN_usg,
-																						SB_data_out => WB_out
-																					);
+									SR_data_in => s_tmp,
+									SR_reduce => WB_reduce,
+									SR_BYTE_half => WB_BYTE_half,
+									SR_SGN_usg => WB_SGN_usg,
+									SR_data_out => WB_out
+								);
 	
 end Structural;
 

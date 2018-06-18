@@ -1,28 +1,23 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Memory_plus_DRAM_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Memory_plus_DRAM_beh.prj work.TB_Memory_plus_DRAM 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Data_Reducer_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Data_Reducer_beh.prj work.TB_Data_Reducer 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/NRegister.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/Memory_Stage.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/DRAM.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/Memory_plus_DRAM.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Memory_plus_DRAM.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/Data_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Data_Reducer.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 196744 KB
-Fuse CPU Usage: 515 ms
+Fuse Memory Usage: 193072 KB
+Fuse CPU Usage: 390 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling architecture behavioral of entity NRegister [\NRegister(32)\]
-Compiling architecture structural of entity Memory_Stage [\Memory_Stage(32,10)\]
-Compiling architecture behavioral of entity DRAM [\DRAM(10,32)\]
-Compiling architecture behavioral of entity Memory_plus_DRAM [\Memory_plus_DRAM(32,10)\]
-Compiling architecture behavior of entity tb_memory_plus_dram
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(32)\]
+Compiling architecture behavioral of entity Data_Reducer [\Data_Reducer(32)\]
+Compiling architecture behavior of entity tb_data_reducer
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 12 VHDL Units
-Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Memory_plus_DRAM_isim_beh.exe
-Fuse Memory Usage: 214312 KB
-Fuse CPU Usage: 796 ms
+Compiled 7 VHDL Units
+Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Memory_Stage/TB_Data_Reducer_isim_beh.exe
+Fuse Memory Usage: 205008 KB
+Fuse CPU Usage: 468 ms

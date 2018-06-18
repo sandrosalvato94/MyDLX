@@ -12,9 +12,13 @@
 --
 -- Dependencies: 
 --
--- Revision: 0.2
+-- Revision: 0.3
 -- Revision 	0.1 - Components tied up. Not yet tested
 --		0.2 - T1, T2, T3 passed. ME_RD_wr_out fixed.
+--		0.3 - Changed pinout (+ ME_reduce, + ME_BYTE_half) due to 
+--		      introduction of a new component: Data_Reducer. 
+--		      Memory Stage not tested anymore.
+-- 		      
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -40,6 +44,8 @@ entity Memory_Stage is
 		ME_rst		: in  std_logic; -- 1 active, 0 else
 		ME_enable		: in  std_logic; -- 1 active, 0 else
 		ME_RD_wr		: in  std_logic;
+		ME_reduce		: in  std_logic;
+		ME_BYTE_half	: in  std_logic;
 		
 		ME_data_to_mem	: out  std_logic_vector(NBIT_DATA-1 downto 0);
 		ME_address_to_mem	: out  std_logic_vector(NBIT_ADDRESS-1 downto 0);
@@ -68,11 +74,32 @@ architecture Structural of Memory_Stage is
 		data_out: out std_logic_vector(N-1 downto 0));
 	end component;
 	
+	component Data_Reducer is
+	generic(NBIT_DATA : integer := 32);
+	port(
+		DR_data_in	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		DR_reduce		: in  std_logic;
+		DR_BYTE_half	: in  std_logic;
+		DR_data_out	: out std_logic_vector(NBIT_DATA-1 downto 0)
+	);
+	end component;
+
 	
+	signal s_data_Fdr_TDRAM	: std_logic_vector(NBIT_DATA-1 downto 0);
 
 begin
+
 ------------------------------------------------------------------------------------
-	ME_data_to_mem <= ME_data_in;
+	DR : Data_Reducer GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
+							DR_data_in => ME_data_in,
+							DR_reduce => ME_reduce,
+							DR_BYTE_half => ME_BYTE_half,
+							DR_data_out => s_data_Fdr_TDRAM
+							);
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+	ME_data_to_mem <= s_data_Fdr_TDRAM;
 	ME_address_to_mem <= ME_address;
 	ME_enable_to_mem <= ME_enable;
 	ME_rst_to_mem <= NOT(ME_rst);
