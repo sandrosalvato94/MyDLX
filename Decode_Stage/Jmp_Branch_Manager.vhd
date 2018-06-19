@@ -39,6 +39,13 @@
 --				register file. So, from the control unit I have just to force JBM_JMP_branch
 --				to "00", it's trivial, and check it the value of a signal used for another
 --				main purpose.
+-- 			JBM_JMP_branch(1)	JBM_JMP_branch(0)	JBM_iszero	JBM_RD1	|	JBM_taken
+--						 0						 0					 0			   0		|		 0
+--						 0						 0					 0			   1		|		 1
+--						 0						 1					 0				-		|      0
+--						 0						 0					 1				-		|      0
+--						 0						 1					 1				-		|	    1
+--						 1						 -					 -				-		|		 1
 -- Dependencies: 
 --
 -- Revision: 
@@ -118,6 +125,7 @@ architecture Behavioral of Jmp_Branch_Manager is
 	
 begin
 ---------------------------------------------------------------------------------------------------------------------------	
+	--<-- ancora una volta da cambiare per implementare la transparent mode, nota del 19 giugno pomeriggio
 	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero)) OR (JBM_JMP_branch(0) AND JBM_iszero) OR JBM_JMP_branch(1));
 ---------------------------------------------------------------------------------------------------------------------------
 

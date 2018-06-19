@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-17T17:57:41</DateModified>
-  <ModuleName>Decode</ModuleName>
+  <DateModified>2018-06-19T16:21:21</DateModified>
+  <ModuleName>Jmp_Branch_Manager</ModuleName>
   <SummaryTimeStamp>2017-10-17T17:53:36</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Decode_Stage/iseconfig/Jmp_Branch_Manager.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Decode_Stage</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage/iseconfig/Jmp_Branch_Manager.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-17T17:57:41</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
