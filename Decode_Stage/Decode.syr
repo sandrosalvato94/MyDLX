@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Decode.prj
 
@@ -172,6 +172,8 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
+
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <NComparatorWithEnable> (architecture <Behavioral>) with generics from library <work>.
@@ -179,8 +181,6 @@ Elaborating entity <NComparatorWithEnable> (architecture <Behavioral>) with gene
 Elaborating entity <ComparatorWithEnable> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Jmp_Branch_Manager> (architecture <Behavioral>) with generics from library <work>.
-
-Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <PropagateCarryLookahead> (architecture <Behavioral>) with generics from library <work>.
 
@@ -193,7 +193,6 @@ Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Carry_Network> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Sum_Network> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Decode.vhd" Line 141: Net <s_data_Frega_Tcmp[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -207,7 +206,6 @@ Synthesizing Unit <Decode>.
         NBIT_DATA = 32
 WARNING:Xst:647 - Input <DE_IR<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DE_PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <s_data_Frega_Tcmp> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <Decode> synthesized.
@@ -1285,6 +1283,13 @@ Synthesizing Unit <Mux_NBit_2x1_2>.
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1_2> synthesized.
 
+Synthesizing Unit <Mux_NBit_2x1_3>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Mux_NBit_2x1.vhd".
+        NBIT_IN = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1_3> synthesized.
+
 Synthesizing Unit <NRegister_2>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\NRegister.vhd".
         N = 32
@@ -1309,17 +1314,10 @@ Unit <ComparatorWithEnable> synthesized.
 Synthesizing Unit <Jmp_Branch_Manager>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd".
         N = 32
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 108: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 138: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Jmp_Branch_Manager> synthesized.
-
-Synthesizing Unit <Mux_NBit_2x1_3>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Mux_NBit_2x1.vhd".
-        NBIT_IN = 32
-    Summary:
-	inferred   1 Multiplexer(s).
-Unit <Mux_NBit_2x1_3> synthesized.
 
 Synthesizing Unit <PropagateCarryLookahead>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\PropagateCarryLookahead.vhd".
@@ -1366,10 +1364,10 @@ Macro Statistics
  1-bit latch                                           : 1024
 # Comparators                                          : 2
  5-bit comparator equal                                : 2
-# Multiplexers                                         : 7305
+# Multiplexers                                         : 7307
  1-bit 2-to-1 multiplexer                              : 7264
  10-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 35
+ 32-bit 2-to-1 multiplexer                             : 37
  32-bit 32-to-1 multiplexer                            : 2
  6-bit 2-to-1 multiplexer                              : 2
 # Xors                                                 : 64
@@ -1390,10 +1388,10 @@ Macro Statistics
  Flip-Flops                                            : 176
 # Comparators                                          : 2
  5-bit comparator equal                                : 2
-# Multiplexers                                         : 7305
+# Multiplexers                                         : 7307
  1-bit 2-to-1 multiplexer                              : 7264
  10-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 35
+ 32-bit 2-to-1 multiplexer                             : 37
  32-bit 32-to-1 multiplexer                            : 2
  6-bit 2-to-1 multiplexer                              : 2
 # Xors                                                 : 64
@@ -1453,11 +1451,12 @@ Top Level Output File Name         : Decode.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1876
+# BELS                             : 1930
 #      LUT2                        : 5
-#      LUT4                        : 46
-#      LUT5                        : 90
-#      LUT6                        : 1671
+#      LUT3                        : 4
+#      LUT4                        : 45
+#      LUT5                        : 65
+#      LUT6                        : 1747
 #      MUXF7                       : 64
 # FlipFlops/Latches                : 1202
 #      FDCE                        : 113
@@ -1465,8 +1464,8 @@ Primitive and Black Box Usage:
 #      LDE                         : 1024
 # Clock Buffers                    : 2
 #      BUFG                        : 2
-# IO Buffers                       : 228
-#      IBUF                        : 99
+# IO Buffers                       : 263
+#      IBUF                        : 134
 #      OBUF                        : 129
 
 Device utilization summary:
@@ -1477,19 +1476,19 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1170  out of  126800     0%  
- Number of Slice LUTs:                 1812  out of  63400     2%  
-    Number used as Logic:              1812  out of  63400     2%  
+ Number of Slice LUTs:                 1866  out of  63400     2%  
+    Number used as Logic:              1866  out of  63400     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1871
-   Number with an unused Flip Flop:     701  out of   1871    37%  
-   Number with an unused LUT:            59  out of   1871     3%  
-   Number of fully used LUT-FF pairs:  1111  out of   1871    59%  
+ Number of LUT Flip Flop pairs used:   1925
+   Number with an unused Flip Flop:     755  out of   1925    39%  
+   Number with an unused LUT:            59  out of   1925     3%  
+   Number of fully used LUT-FF pairs:  1111  out of   1925    57%  
    Number of unique control sets:        36
 
 IO Utilization: 
- Number of IOs:                         266
- Number of bonded IOBs:                 228  out of    210   108% (*) 
+ Number of IOs:                         301
+ Number of bonded IOBs:                 263  out of    210   125% (*) 
     IOB Flip Flops/Latches:              32
 
 Specific Feature Utilization:
@@ -1532,8 +1531,8 @@ Speed Grade: -3
 
    Minimum period: 1.610ns (Maximum Frequency: 621.165MHz)
    Minimum input arrival time before clock: 3.253ns
-   Maximum output required time after clock: 18.364ns
-   Maximum combinational path delay: 19.107ns
+   Maximum output required time after clock: 22.974ns
+   Maximum combinational path delay: 23.895ns
 
 Timing Details:
 ---------------
@@ -1597,7 +1596,7 @@ Offset:              1.873ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           260   0.001   0.835  DE_IR_7_IBUF (DE_IR_7_IBUF)
+     IBUF:I->O           261   0.001   0.835  DE_IR_7_IBUF (DE_IR_7_IBUF)
      LUT6:I0->O            1   0.097   0.556  RF/Mmux_ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT_81 (RF/Mmux_ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT_81)
      LUT6:I2->O            1   0.097   0.000  RF/Mmux_ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT_3 (RF/Mmux_ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT_3)
      MUXF7:I1->O           1   0.279   0.000  RF/Mmux_ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT_2_f7 (RF/ADD_RD1[4]_REGISTERS[31][31]_wide_mux_294_OUT<0>)
@@ -1619,7 +1618,7 @@ Offset:              3.253ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           260   0.001   0.825  DE_IR_11_IBUF (DE_IR_11_IBUF)
+     IBUF:I->O           261   0.001   0.825  DE_IR_11_IBUF (DE_IR_11_IBUF)
      LUT6:I1->O            2   0.097   0.383  RF/cntr21 (RF/cntr21)
      LUT2:I0->O            1   0.097   0.556  RF/cntr23 (RF/cntr2)
      LUT6:I2->O           32   0.097   0.618  RF/Mmux_CLK_CLK_MUX_10256_o111 (RF/Mmux_CLK_CLK_MUX_10256_o11)
@@ -1631,9 +1630,9 @@ Offset:              3.253ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DE_clk'
-  Total number of paths / destination ports: 563 / 128
+  Total number of paths / destination ports: 596 / 129
 -------------------------------------------------------------------------
-Offset:              18.364ns (Levels of Logic = 30)
+Offset:              22.974ns (Levels of Logic = 30)
   Source:            RF/OUT1_2 (FF)
   Destination:       DE_new_PC<31> (PAD)
   Source Clock:      DE_clk rising
@@ -1642,88 +1641,88 @@ Offset:              18.364ns (Levels of Logic = 30)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.361   0.305  RF/OUT1_2 (RF/OUT1_2)
-     LUT5:I4->O            2   0.097   0.515  JBM/ADD/CN/s_carry<2>1 (JBM/ADD/s_G2<3>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<3>1 (JBM/ADD/s_G2<4>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<4>1 (JBM/ADD/s_G2<5>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<5>1 (JBM/ADD/s_G2<6>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<6>1 (JBM/ADD/s_G2<7>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<7>1 (JBM/ADD/s_G2<8>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<8>1 (JBM/ADD/s_G2<9>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<9>1 (JBM/ADD/s_G2<10>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<10>1 (JBM/ADD/s_G2<11>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<11>1 (JBM/ADD/s_G2<12>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<12>1 (JBM/ADD/s_G2<13>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<13>1 (JBM/ADD/s_G2<14>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<14>1 (JBM/ADD/s_G2<15>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<15>1 (JBM/ADD/s_G2<16>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<16>1 (JBM/ADD/s_G2<17>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<17>1 (JBM/ADD/s_G2<18>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<18>1 (JBM/ADD/s_G2<19>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<19>1 (JBM/ADD/s_G2<20>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<20>1 (JBM/ADD/s_G2<21>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<21>1 (JBM/ADD/s_G2<22>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<22>1 (JBM/ADD/s_G2<23>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<23>1 (JBM/ADD/s_G2<24>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<24>1 (JBM/ADD/s_G2<25>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<25>1 (JBM/ADD/s_G2<26>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<26>1 (JBM/ADD/s_G2<27>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<27>1 (JBM/ADD/s_G2<28>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<28>1 (JBM/ADD/s_G2<29>)
-     LUT5:I2->O            2   0.097   0.688  JBM/ADD/CN/s_carry<29>1 (JBM/ADD/s_G2<30>)
-     LUT6:I1->O            1   0.097   0.279  JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DE_new_PC_31_OBUF)
+     FDRE:C->Q             4   0.361   0.309  RF/OUT1_2 (RF/OUT1_2)
+     LUT6:I5->O            2   0.097   0.698  JBM/ADD/CN/s_carry<2>1 (JBM/ADD/s_G2<3>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<3>1 (JBM/ADD/s_G2<4>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<4>1 (JBM/ADD/s_G2<5>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<5>1 (JBM/ADD/s_G2<6>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<6>1 (JBM/ADD/s_G2<7>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<7>1 (JBM/ADD/s_G2<8>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<8>1 (JBM/ADD/s_G2<9>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<9>1 (JBM/ADD/s_G2<10>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<10>1 (JBM/ADD/s_G2<11>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<11>1 (JBM/ADD/s_G2<12>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<12>1 (JBM/ADD/s_G2<13>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<13>1 (JBM/ADD/s_G2<14>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<14>1 (JBM/ADD/s_G2<15>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<15>1 (JBM/ADD/s_G2<16>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<16>1 (JBM/ADD/s_G2<17>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<17>1 (JBM/ADD/s_G2<18>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<18>1 (JBM/ADD/s_G2<19>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<19>1 (JBM/ADD/s_G2<20>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<20>1 (JBM/ADD/s_G2<21>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<21>1 (JBM/ADD/s_G2<22>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<22>1 (JBM/ADD/s_G2<23>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<23>1 (JBM/ADD/s_G2<24>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<24>1 (JBM/ADD/s_G2<25>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<25>1 (JBM/ADD/s_G2<26>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<26>1 (JBM/ADD/s_G2<27>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<27>1 (JBM/ADD/s_G2<28>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<28>1 (JBM/ADD/s_G2<29>)
+     LUT6:I0->O            1   0.097   0.379  JBM/ADD/CN/s_carry<29>1 (JBM/ADD/s_G2<30>)
+     LUT6:I4->O            1   0.097   0.279  JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DE_new_PC_31_OBUF)
      OBUF:I->O                 0.000          DE_new_PC_31_OBUF (DE_new_PC<31>)
     ----------------------------------------
-    Total                     18.364ns (3.174ns logic, 15.190ns route)
-                                       (17.3% logic, 82.7% route)
+    Total                     22.974ns (3.174ns logic, 19.800ns route)
+                                       (13.8% logic, 86.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1963 / 33
+  Total number of paths / destination ports: 2698 / 33
 -------------------------------------------------------------------------
-Delay:               19.107ns (Levels of Logic = 32)
-  Source:            DE_JMP_branch (PAD)
+Delay:               23.895ns (Levels of Logic = 32)
+  Source:            DE_JMP_branch<0> (PAD)
   Destination:       DE_new_PC<31> (PAD)
 
-  Data Path: DE_JMP_branch to DE_new_PC<31>
+  Data Path: DE_JMP_branch<0> to DE_new_PC<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            63   0.001   0.795  DE_JMP_branch_IBUF (DE_JMP_branch_IBUF)
-     LUT5:I0->O            2   0.097   0.515  JBM/ADD/CN/s_carry<1>1 (JBM/ADD/s_G2<2>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<2>1 (JBM/ADD/s_G2<3>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<3>1 (JBM/ADD/s_G2<4>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<4>1 (JBM/ADD/s_G2<5>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<5>1 (JBM/ADD/s_G2<6>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<6>1 (JBM/ADD/s_G2<7>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<7>1 (JBM/ADD/s_G2<8>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<8>1 (JBM/ADD/s_G2<9>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<9>1 (JBM/ADD/s_G2<10>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<10>1 (JBM/ADD/s_G2<11>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<11>1 (JBM/ADD/s_G2<12>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<12>1 (JBM/ADD/s_G2<13>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<13>1 (JBM/ADD/s_G2<14>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<14>1 (JBM/ADD/s_G2<15>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<15>1 (JBM/ADD/s_G2<16>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<16>1 (JBM/ADD/s_G2<17>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<17>1 (JBM/ADD/s_G2<18>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<18>1 (JBM/ADD/s_G2<19>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<19>1 (JBM/ADD/s_G2<20>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<20>1 (JBM/ADD/s_G2<21>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<21>1 (JBM/ADD/s_G2<22>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<22>1 (JBM/ADD/s_G2<23>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<23>1 (JBM/ADD/s_G2<24>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<24>1 (JBM/ADD/s_G2<25>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<25>1 (JBM/ADD/s_G2<26>)
-     LUT5:I2->O            2   0.097   0.516  JBM/ADD/CN/s_carry<26>1 (JBM/ADD/s_G2<27>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<27>1 (JBM/ADD/s_G2<28>)
-     LUT5:I2->O            2   0.097   0.515  JBM/ADD/CN/s_carry<28>1 (JBM/ADD/s_G2<29>)
-     LUT5:I2->O            2   0.097   0.688  JBM/ADD/CN/s_carry<29>1 (JBM/ADD/s_G2<30>)
-     LUT6:I1->O            1   0.097   0.279  JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DE_new_PC_31_OBUF)
+     IBUF:I->O            65   0.001   0.795  DE_JMP_branch_0_IBUF (DE_JMP_branch_0_IBUF)
+     LUT6:I1->O            2   0.097   0.698  JBM/ADD/CN/s_carry<1>1 (JBM/ADD/s_G2<2>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<2>1 (JBM/ADD/s_G2<3>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<3>1 (JBM/ADD/s_G2<4>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<4>1 (JBM/ADD/s_G2<5>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<5>1 (JBM/ADD/s_G2<6>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<6>1 (JBM/ADD/s_G2<7>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<7>1 (JBM/ADD/s_G2<8>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<8>1 (JBM/ADD/s_G2<9>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<9>1 (JBM/ADD/s_G2<10>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<10>1 (JBM/ADD/s_G2<11>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<11>1 (JBM/ADD/s_G2<12>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<12>1 (JBM/ADD/s_G2<13>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<13>1 (JBM/ADD/s_G2<14>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<14>1 (JBM/ADD/s_G2<15>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<15>1 (JBM/ADD/s_G2<16>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<16>1 (JBM/ADD/s_G2<17>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<17>1 (JBM/ADD/s_G2<18>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<18>1 (JBM/ADD/s_G2<19>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<19>1 (JBM/ADD/s_G2<20>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<20>1 (JBM/ADD/s_G2<21>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<21>1 (JBM/ADD/s_G2<22>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<22>1 (JBM/ADD/s_G2<23>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<23>1 (JBM/ADD/s_G2<24>)
+     LUT6:I0->O            2   0.097   0.698  JBM/ADD/CN/s_carry<24>1 (JBM/ADD/s_G2<25>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<25>1 (JBM/ADD/s_G2<26>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<26>1 (JBM/ADD/s_G2<27>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<27>1 (JBM/ADD/s_G2<28>)
+     LUT6:I0->O            2   0.097   0.697  JBM/ADD/CN/s_carry<28>1 (JBM/ADD/s_G2<29>)
+     LUT6:I0->O            1   0.097   0.379  JBM/ADD/CN/s_carry<29>1 (JBM/ADD/s_G2<30>)
+     LUT6:I4->O            1   0.097   0.279  JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DE_new_PC_31_OBUF)
      OBUF:I->O                 0.000          DE_new_PC_31_OBUF (DE_new_PC<31>)
     ----------------------------------------
-    Total                     19.107ns (2.911ns logic, 16.196ns route)
-                                       (15.2% logic, 84.8% route)
+    Total                     23.895ns (2.911ns logic, 20.984ns route)
+                                       (12.2% logic, 87.8% route)
 
 =========================================================================
 
@@ -1751,14 +1750,14 @@ DE_enable      |         |         |    1.262|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 37.00 secs
-Total CPU time to Xst completion: 37.38 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.77 secs
  
 --> 
 
-Total memory usage is 401620 kilobytes
+Total memory usage is 367060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1040 (   0 filtered)
+Number of warnings : 1038 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

@@ -1,3 +1,4 @@
+
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
@@ -13,16 +14,13 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.1
+-- Revision 0.5
 -- Additional Comments: 
---	Version 
---				0.1 - Each component has been instantiated in. No test has been 
+--	Version 0.1 - Each component has been instantiated in. No test has been 
 --		    performed yet. Jmp_Branch_Manager is not completed because
 --		    I need to know very well how to optimize the instruction
 --		    set enconding.
---				0.2 - Other inputs have to be added, like those for forwarding back data
---					   from EX/MEM and MEM/WB.
---			
+--			 0.5 - Changed pinout and data forwording
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -51,13 +49,15 @@ entity Decode is
 		DE_rd1		: in  std_logic;
 		DE_rd2		: in  std_logic;
 		DE_wr		: in  std_logic;
+		DE_data_fex	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+		DE_sel_data_forward : in std_logic_vector(1 downto 0);
 --		DE_addr_rd1 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_rd2 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 --		DE_addr_wr 	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
 		DE_data_Fwb	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 --		DE_instr_type	: in  std_logic_vector(7 downto 0); --one hot encoding, one bit per instr type
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
-		DE_JMP_branch	: in  std_logic;
+		DE_JMP_branch	: in  std_logic_vector(1 downto 0);
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 		DE_RegA		: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -127,9 +127,19 @@ architecture Structural of Decode is
 		JBM_Imm	: in  std_logic_vector(N-1 downto 0);
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
 		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
-		JBM_JMP_branch	: in std_logic;
+		JBM_JMP_branch	: in std_logic_vector(1 downto 0);
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
+	);
+	end component;
+	
+	component Mux_NBit_2x1 is
+	generic(NBIT_IN: integer := 32);
+	port(
+		port0	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		port1	: in  std_logic_vector(NBIT_IN-1 downto 0);
+		sel	: in  std_logic;
+		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
 	);
 	end component;
 	
@@ -140,6 +150,8 @@ architecture Structural of Decode is
 	signal s_data_Fir_Tse	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_data_Frega_Tcmp	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_iszero_Fcmp_Tcond	: std_logic;
+	signal s_fwd_tmp 				: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_fwd_fmux_tcmp 		: std_logic_vector(NBIT_DATA-1 downto 0);
 
 begin
 -------------------------------------------------------------------------------------	
@@ -202,6 +214,22 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
+	FWD_MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+																port0 => s_data_Frf_TregA, 
+																port1 => DE_data_fex,
+																sel => DE_sel_data_forward(0),
+																portY => s_fwd_tmp
+																);
+	FWD_MUX2 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+																port0 => s_fwd_tmp, 
+																port1 => DE_data_Fwb,
+																sel => DE_sel_data_forward(1),
+																portY => s_fwd_fmux_tcmp
+																);
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
 	RegA : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
@@ -231,7 +259,7 @@ begin
 
 -------------------------------------------------------------------------------------
 	Cmp : NComparatorWithEnable GENERIC MAP (NBIT => NBIT_DATA) PORT MAP (
-							A => s_data_Frega_Tcmp,
+							A => s_fwd_fmux_tcmp,
 							B => (others => '0'),
 							Enable => DE_enable,
 							ComparatorBit => s_iszero_Fcmp_Tcond
@@ -239,8 +267,6 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
-	
-	
 	JBM : Jmp_Branch_Manager GENERIC MAP (N => NBIT_DATA) PORT MAP (
 							JBM_iszero => s_iszero_Fcmp_Tcond,
 							JBM_Reg => s_data_Frf_TregA,

@@ -9,16 +9,48 @@
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
+--				Instracions should trigger this components are jumps and branches, such as:
+--				j, jal, jr, jalr, beqz, bnez. 
+--				Jumps are totally unconditioned, so the value of JBM_iszero signal doesn't matter
+--				On the contrary, it's something we take care for branches.
 --
+--				JBM_JMP_branch(1)	JBM_JMP_branch(0)						Description
+--						 0						 0										BNEZ
+--						 0						 1										BEQZ
+--						 1						 0									  J, JAL
+--						 1						 1						          JALR, JR
+--
+--				
+--				JBM_JMP_branch(1)	JBM_JMP_branch(0)	JBM_iszero	|	JBM_taken
+--						 0						 0					 0			|		 1
+--						 0						 1					 0			|      0
+--						 0						 0					 1			|      0
+--						 0						 1					 1			|	    1
+--						 1						 -					 -			|		 1
+--				Beqz and Bnez use imm16, PC<- NPC + imm 
+--				J and Jal use imm26		 PC<- NPC + imm
+--				Jalr and Jr use Reg, replace PC
+--
+--				The transparent mode is not yet took into account. 
+--				Here the idea is to avoid the introduction of another control signal
+--				coming from the main control unit. Looking at the control_word excel
+--				I see that never occours the following scenario: BNEZ instruction
+--				and RD1 = 0, since BNEZ requires reading the first operand from the
+--				register file. So, from the control unit I have just to force JBM_JMP_branch
+--				to "00", it's trivial, and check it the value of a signal used for another
+--				main purpose.
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.1
+-- Revision 0.2
 -- Additional Comments: 
 --	Version 0.1 - This design is not finished yet because I need to have
 --		    a clearer look of the instruction set encoding, the 
 --		    OPCODE first of all. Each reference to OPCODE is purely
 --		    for running synthesis tool of Xilinx.	
+--				0.2 - Changed pinout (JBM_JMP_branch	: in std_logic_vector(1 downto 0);)
+--						in order to distinguish among jumps, beqz and bnez.
+--						New combinational logic inside, to drive multiplexers.
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -41,7 +73,8 @@ entity Jmp_Branch_Manager is
 		JBM_Imm	: in  std_logic_vector(N-1 downto 0);
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
 		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
-		JBM_JMP_branch	: in std_logic;
+		JBM_JMP_branch	: in std_logic_vector(1 downto 0);
+		JBM_RD1			: in std_logic;
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
 	);
@@ -77,24 +110,35 @@ architecture Behavioral of Jmp_Branch_Manager is
 	signal s_Fmuxtba_Tadd	: std_logic_vector(N-1 downto 0);
 	signal s_not_tmp			: std_logic_vector(N-1 downto 0);
 	signal s_Tadd				: std_logic_vector(N-1 downto 0);
+--	signal s_sel_mux_trg		: std_logic;
+--	signal s_sel_mux_tba		: std_logic;
+--	signal s_mux_add			: std_logic;
+	signal s_sel_muxes		: std_logic;
+--	signal s_cin				: std_logic;
 	
 begin
-	
-	JBM_taken <= NOT(JBM_JMP_branch) AND JBM_iszero; -- provvisorio, da evidenziare anche la differenza fra beqz e bnez
+---------------------------------------------------------------------------------------------------------------------------	
+	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero)) OR (JBM_JMP_branch(0) AND JBM_iszero) OR JBM_JMP_branch(1));
+---------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------	
+	s_sel_muxes <= JBM_JMP_branch(1) NAND JBM_JMP_branch(0);
 	
 	MUX_TRG : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => JBM_Reg,
 						port1 => JBM_Imm,
-						sel => JBM_JMP_branch, --segnale scelto a caso
+						sel => s_sel_muxes, --segnale scelto a caso
 						portY => s_Fmuxtrg_Tadd
 						);
 	MUX_TBA : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => s_allzeros,
 						port1 => JBM_NPC,
-						sel => JBM_JMP_branch, --segnale scelto a caso
+						sel => s_sel_muxes, --segnale scelto a caso
 						portY => s_Fmuxtba_Tadd
 						);
+---------------------------------------------------------------------------------------------------------------------------
 						
+---------------------------------------------------------------------------------------------------------------------------
 	cyc : for i in 0 to N-1 generate
 		s_not_tmp(i) <= NOT(s_Fmuxtrg_Tadd(i));
 	end generate cyc;
@@ -102,16 +146,16 @@ begin
 	MUX_ADD : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => s_Fmuxtrg_Tadd,
 						port1 => s_not_tmp,
-						sel => JBM_JMP_branch,
+						sel => s_sel_muxes,
 						portY => s_Tadd
 						);
 	ADD : PropagateCarryLookahead GENERIC MAP (N => N) PORT MAP (
 						A => s_Tadd,
 						B => s_Fmuxtba_Tadd,
-						Cin => JBM_JMP_branch,
+						Cin => s_sel_muxes,
 					--	Cout => , not useful in this prototype
 						Sum => JBM_Upd_PC
 						);
-
+---------------------------------------------------------------------------------------------------------------------------
 end Behavioral;
 

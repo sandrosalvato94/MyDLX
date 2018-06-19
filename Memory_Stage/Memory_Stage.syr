@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Memory_Stage.prj
 
@@ -105,16 +105,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd" into library work
 Parsing entity <Mux_NBit_2x1>.
 Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\NRegister.vhd" into library work
 Parsing entity <NRegister>.
 Parsing architecture <Behavioral> of entity <nregister>.
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Data_Reducer.vhd" into library work
 Parsing entity <Data_Reducer>.
 Parsing architecture <Behavioral> of entity <data_reducer>.
-Parsing VHDL file "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Memory_Stage.vhd" into library work
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Memory_Stage.vhd" into library work
 Parsing entity <Memory_Stage>.
 Parsing architecture <Structural> of entity <memory_stage>.
 
@@ -125,8 +125,8 @@ Parsing architecture <Structural> of entity <memory_stage>.
 Elaborating entity <Memory_Stage> (architecture <Structural>) with generics from library <work>.
 
 Elaborating entity <Data_Reducer> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 54: Using initial value "000000000000000000000000" for s_zeros_byte since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 55: Using initial value "0000000000000000" for s_zeros_half since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 54: Using initial value "000000000000000000000000" for s_zeros_byte since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Data_Reducer.vhd" Line 55: Using initial value "0000000000000000" for s_zeros_half since it is never assigned
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
@@ -137,7 +137,7 @@ Elaborating entity <NRegister> (architecture <Behavioral>) with generics from li
 =========================================================================
 
 Synthesizing Unit <Memory_Stage>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Memory_Stage.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Memory_Stage.vhd".
         NBIT_DATA = 32
         NBIT_ADDRESS = 32
     Summary:
@@ -145,21 +145,21 @@ Synthesizing Unit <Memory_Stage>.
 Unit <Memory_Stage> synthesized.
 
 Synthesizing Unit <Data_Reducer>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Data_Reducer.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Data_Reducer.vhd".
         NBIT_DATA = 32
     Summary:
 	no macro.
 Unit <Data_Reducer> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\Mux_NBit_2x1.vhd".
         NBIT_IN = 32
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_NBit_2x1> synthesized.
 
 Synthesizing Unit <NRegister>.
-    Related source file is "C:\Users\UTENTE\Desktop\Politecnico di Torino\Laurea Magistrale\I Anno\Microelectronic Systems\DLX\MyDLX\Memory_Stage\NRegister.vhd".
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Memory_Stage\NRegister.vhd".
         N = 32
     Found 32-bit register for signal <data_out>.
     Summary:
@@ -380,12 +380,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.77 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.21 secs
  
 --> 
 
-Total memory usage is 411888 kilobytes
+Total memory usage is 322216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
