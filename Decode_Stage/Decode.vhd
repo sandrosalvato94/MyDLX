@@ -14,13 +14,14 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.5
+-- Revision 0.6
 -- Additional Comments: 
 --	Version 0.1 - Each component has been instantiated in. No test has been 
 --		    performed yet. Jmp_Branch_Manager is not completed because
 --		    I need to know very well how to optimize the instruction
 --		    set enconding.
 --			 0.5 - Changed pinout and data forwording
+--			 0.6 - New version of JBManager
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

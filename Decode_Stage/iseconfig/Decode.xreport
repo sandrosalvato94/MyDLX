@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-19T12:35:19</DateModified>
-  <ModuleName>Jmp_Branch_Manager</ModuleName>
+  <DateModified>2018-06-20T11:05:14</DateModified>
+  <ModuleName>Decode</ModuleName>
   <SummaryTimeStamp>2018-06-19T12:21:55</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage/iseconfig/Decode.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Decode_Stage\</ImplementationReportsDirectory>

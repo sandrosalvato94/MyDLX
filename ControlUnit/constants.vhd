@@ -80,6 +80,10 @@ package CONSTANTS is
 	constant OPCODE_MFHI	: std_logic_vector(5 downto 0) := "111110"; --0xFE
 	constant OPCODE_MFLO	: std_logic_vector(5 downto 0) := "111111"; --0xFF
 	
+	--SPECIAL 2 REG
+	constant OPCODE_LAHI	: std_logic_vector(5 downto 0) := "111100"; --0xFC
+	constant OPCODE_LAHIU: std_logic_vector(5 downto 0) := "111101"; --0xFD
+	
 	
 
 
