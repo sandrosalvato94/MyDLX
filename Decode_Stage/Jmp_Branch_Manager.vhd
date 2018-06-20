@@ -40,7 +40,7 @@
 --				to "00", it's trivial, and check it the value of a signal used for another
 --				main purpose.
 -- 			JBM_JMP_branch(1)	JBM_JMP_branch(0)	JBM_iszero	JBM_RD1	|	JBM_taken
---						 0						 0					 0			   0		|		 0
+--						 0						 0					 0			   0		|		 0	 //transparent mode!!
 --						 0						 0					 0			   1		|		 1
 --						 0						 1					 0				-		|      0
 --						 0						 0					 1				-		|      0
@@ -49,7 +49,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.2
+-- Revision 0.3
 -- Additional Comments: 
 --	Version 0.1 - This design is not finished yet because I need to have
 --		    a clearer look of the instruction set encoding, the 
@@ -58,6 +58,8 @@
 --				0.2 - Changed pinout (JBM_JMP_branch	: in std_logic_vector(1 downto 0);)
 --						in order to distinguish among jumps, beqz and bnez.
 --						New combinational logic inside, to drive multiplexers.
+--				0.3 - Changed pinout (+ JBM_RD1). Modified the definition of JBM_taken,
+--					   now it takes into account JBM_RD1.
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -126,7 +128,7 @@ architecture Behavioral of Jmp_Branch_Manager is
 begin
 ---------------------------------------------------------------------------------------------------------------------------	
 	--<-- ancora una volta da cambiare per implementare la transparent mode, nota del 19 giugno pomeriggio
-	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero)) OR (JBM_JMP_branch(0) AND JBM_iszero) OR JBM_JMP_branch(1));
+	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero) AND JBM_RD1) OR (JBM_JMP_branch(0) AND JBM_iszero) OR JBM_JMP_branch(1));
 ---------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------	

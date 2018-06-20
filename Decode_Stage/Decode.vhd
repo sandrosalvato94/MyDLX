@@ -128,6 +128,7 @@ architecture Structural of Decode is
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
 		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
 		JBM_JMP_branch	: in std_logic_vector(1 downto 0);
+		JBM_RD1			: in std_logic;
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
 	);
@@ -273,6 +274,7 @@ begin
 							JBM_Imm => s_data_Fse_Timm,
 							JBM_NPC => DE_NPC,
 							JBM_JMP_branch => DE_JMP_branch,
+							JBM_RD1 => DE_rd1,
 							JBM_Upd_PC => DE_new_PC,
 							JBM_taken => DE_branch_taken
 							);

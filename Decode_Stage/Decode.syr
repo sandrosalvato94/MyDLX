@@ -1314,7 +1314,7 @@ Unit <ComparatorWithEnable> synthesized.
 Synthesizing Unit <Jmp_Branch_Manager>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd".
         N = 32
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 138: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 162: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Jmp_Branch_Manager> synthesized.
@@ -1453,8 +1453,8 @@ Primitive and Black Box Usage:
 ------------------------------
 # BELS                             : 1930
 #      LUT2                        : 5
-#      LUT3                        : 4
-#      LUT4                        : 45
+#      LUT3                        : 3
+#      LUT4                        : 46
 #      LUT5                        : 65
 #      LUT6                        : 1747
 #      MUXF7                       : 64
@@ -1678,7 +1678,7 @@ Offset:              22.974ns (Levels of Logic = 30)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2698 / 33
+  Total number of paths / destination ports: 2699 / 33
 -------------------------------------------------------------------------
 Delay:               23.895ns (Levels of Logic = 32)
   Source:            DE_JMP_branch<0> (PAD)
@@ -1750,12 +1750,12 @@ DE_enable      |         |         |    1.262|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 27.77 secs
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 36.84 secs
  
 --> 
 
-Total memory usage is 367060 kilobytes
+Total memory usage is 397844 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 1038 (   0 filtered)

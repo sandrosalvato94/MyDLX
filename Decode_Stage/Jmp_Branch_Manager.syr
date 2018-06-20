@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: Jmp_Branch_Manager.prj
 
@@ -154,7 +154,7 @@ Elaborating entity <Sum_Network> (architecture <Behavioral>) with generics from 
 Synthesizing Unit <Jmp_Branch_Manager>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd".
         N = 32
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 145: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Decode_Stage\Jmp_Branch_Manager.vhd" line 160: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Jmp_Branch_Manager> synthesized.
@@ -390,12 +390,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.16 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.73 secs
  
 --> 
 
-Total memory usage is 370536 kilobytes
+Total memory usage is 317224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
