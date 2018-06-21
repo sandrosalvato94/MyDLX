@@ -4,7 +4,7 @@
 -- 
 -- Create Date:    11:23:58 06/13/2018 
 -- Design Name: 
--- Module Name:    ControlUnit - Behavioral 
+-- Module Name:    ControlUnit - Structural 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -13,8 +13,10 @@
 --
 -- Dependencies: 
 --
--- Revision: 
+-- Revision: 0.1
+--
 -- Revision 0.01 - File Created
+--				0.1  - All components decleared.
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -38,6 +40,8 @@ entity ControlUnit is
 		CU_enable			: in  std_logic;
 		CU_reset				: in  std_logic;
 		CU_clk				: in  std_logic;
+		CU_flush				: in  std_logic;
+		CU_bubble			: in  std_logic;
 		--CU_CW_FE				: out	std_logic_vector(13 downto 0);
 		CU_CW_DE				: out	std_logic_vector(1 to 9);
 		CU_CW_EX				: out	std_logic_vector(8 to 18);
@@ -47,7 +51,7 @@ entity ControlUnit is
 	);
 end ControlUnit;
 
-architecture Behavioral of ControlUnit is
+architecture Structural of ControlUnit is
 	
 	component NRegister is
 	generic(N: integer:= 32);
@@ -64,13 +68,14 @@ architecture Behavioral of ControlUnit is
 	signal s_cw_Fde_Tex		: std_logic_vector(1 to 26);
 	signal s_cw_Fex_Tmem		: std_logic_vector(8 to 26);
 	signal s_cw_Fmem_Twb		: std_logic_vector(19 to 26);
-	signal s_cw_Fwb			: std_logic_vector(1 to 26);
+	signal s_cw_Fwb			: std_logic_vector(23 to 26);
 
 begin
-
+---------------------------------------------------------------------------------------------------
 	instr_decoding_proc : process(CU_instr_opcode, CU_instr_func, CU_enable)
 	begin
 		if(CU_enable = '1' AND CU_reset = '0') then
+			CU_error <= '0';
 			case CU_instr_opcode is
 			--REG-------------------------------
 				when OPCODE_REG =>
@@ -226,8 +231,9 @@ begin
 			end case; --end case opcode
 		end if; --end main if
 	end process;
-	
-	
+---------------------------------------------------------------------------------------------------	
+
+---------------------------------------------------------------------------------------------------
 	DE_CW	: NRegister GENERIC MAP (N => 26) PORT MAP (
 															clk => CU_clk,
 															reset => CU_reset,
@@ -237,7 +243,9 @@ begin
 															data_out => s_cw_Fde_Tex
 															);
 	CU_CW_DE <= s_cw_Fde_Tex(1 to 9);
-	
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------
 	EX_CW	: NRegister GENERIC MAP (N => 19) PORT MAP (
 															clk => CU_clk,
 															reset => CU_reset,
@@ -247,7 +255,9 @@ begin
 															data_out => s_cw_Fex_Tmem
 															);
 	CU_CW_EX <= s_cw_Fex_Tmem(8 to 18);
-	
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------	
 	MEM_CW: NRegister GENERIC MAP (N => 8) PORT MAP (
 															clk => CU_clk,
 															reset => CU_reset,
@@ -257,7 +267,9 @@ begin
 															data_out => s_cw_Fmem_Twb
 															);
 	CU_CW_MEM <= s_cw_Fmem_Twb(19 to 22);
-	
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------	
 	WB_CW	: NRegister GENERIC MAP (N => 4) PORT MAP (
 															clk => CU_clk,
 															reset => CU_reset,
@@ -266,6 +278,7 @@ begin
 															load => '1',
 															data_out => CU_CW_WB
 															);
+---------------------------------------------------------------------------------------------------
 	
-end Behavioral;
+end Structural;
 
