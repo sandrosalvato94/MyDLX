@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-20T10:34:26</DateModified>
+  <DateModified>2018-06-21T11:04:18</DateModified>
   <ModuleName>Datapath</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/iseconfig/Datapath.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath</ImplementationReportsDirectory>
-  <DateInitialized>2018-06-20T10:34:26</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath\</ImplementationReportsDirectory>
+  <DateInitialized>2018-06-21T11:04:18</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

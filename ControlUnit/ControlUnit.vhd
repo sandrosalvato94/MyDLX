@@ -13,10 +13,11 @@
 --
 -- Dependencies: 
 --
--- Revision: 0.1
+-- Revision: 0.2
 --
 -- Revision 0.01 - File Created
 --				0.1  - All components decleared.
+--				0.2  - New input signals (CU_flush & CU_bubble), but used yet
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
