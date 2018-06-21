@@ -1,2 +1,3 @@
+vhdl work "NRegister.vhd"
 vhdl work "constants.vhd"
 vhdl work "ControlUnit.vhd"

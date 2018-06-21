@@ -48,8 +48,23 @@ entity ControlUnit is
 end ControlUnit;
 
 architecture Behavioral of ControlUnit is
-
+	
+	component NRegister is
+	generic(N: integer:= 32);
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic_vector(N-1 downto 0);
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic_vector(N-1 downto 0));
+	end component;
+	
 	signal s_control_word	: std_logic_vector(1 to 26);
+	signal s_cw_Fde_Tex		: std_logic_vector(1 to 26);
+	signal s_cw_Fex_Tmem		: std_logic_vector(8 to 26);
+	signal s_cw_Fmem_Twb		: std_logic_vector(19 to 26);
+	signal s_cw_Fwb			: std_logic_vector(1 to 26);
 
 begin
 
@@ -211,6 +226,46 @@ begin
 			end case; --end case opcode
 		end if; --end main if
 	end process;
-
+	
+	
+	DE_CW	: NRegister GENERIC MAP (N => 26) PORT MAP (
+															clk => CU_clk,
+															reset => CU_reset,
+															data_in => s_control_word,
+															enable => CU_enable,
+															load => '1',
+															data_out => s_cw_Fde_Tex
+															);
+	CU_CW_DE <= s_cw_Fde_Tex(1 to 9);
+	
+	EX_CW	: NRegister GENERIC MAP (N => 19) PORT MAP (
+															clk => CU_clk,
+															reset => CU_reset,
+															data_in => s_cw_Fde_Tex(8 to 26),
+															enable => CU_enable,
+															load => '1',
+															data_out => s_cw_Fex_Tmem
+															);
+	CU_CW_EX <= s_cw_Fex_Tmem(8 to 18);
+	
+	MEM_CW: NRegister GENERIC MAP (N => 8) PORT MAP (
+															clk => CU_clk,
+															reset => CU_reset,
+															data_in => s_cw_Fex_Tmem(19 to 26),
+															enable => CU_enable,
+															load => '1',
+															data_out => s_cw_Fmem_Twb
+															);
+	CU_CW_MEM <= s_cw_Fmem_Twb(19 to 22);
+	
+	WB_CW	: NRegister GENERIC MAP (N => 4) PORT MAP (
+															clk => CU_clk,
+															reset => CU_reset,
+															data_in => s_cw_Fmem_Twb(23 to 26),
+															enable => CU_enable,
+															load => '1',
+															data_out => CU_CW_WB
+															);
+	
 end Behavioral;
 

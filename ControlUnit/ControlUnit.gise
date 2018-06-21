@@ -39,40 +39,38 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5445092414314995788" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5445092414314995788" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5953957097323519604" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5953957097323519604" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6609124446579461266" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6609124446579461266" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964653" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7686272797491742210" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529570893" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7686272797491742210" xil_pn:start_ts="1529570893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1528964661" xil_pn:in_ck="2536947645590818238" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-3062847529678982031" xil_pn:start_ts="1528964653">
+    <transform xil_pn:end_ts="1529571135" xil_pn:in_ck="-5577596589130270815" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-3062847529678982031" xil_pn:start_ts="1529571127">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ControlUnit.lso"/>
       <outfile xil_pn:name="ControlUnit.ngc"/>
       <outfile xil_pn:name="ControlUnit.ngr"/>

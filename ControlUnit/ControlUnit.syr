@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -105,6 +105,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd" into library work
+Parsing entity <NRegister>.
+Parsing architecture <Behavioral> of entity <nregister>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\constants.vhd" into library work
 Parsing package <CONSTANTS>.
 Parsing package body <CONSTANTS>.
@@ -116,7 +119,16 @@ Parsing architecture <Behavioral> of entity <controlunit>.
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating entity <ControlUnit> (architecture <Behavioral>) with generics from library <work>.
+Elaborating entity <ControlUnit> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd" Line 73: cu_reset should be on the sensitivity list of the process
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -124,44 +136,143 @@ Elaborating entity <ControlUnit> (architecture <Behavioral>) with generics from 
 
 Synthesizing Unit <ControlUnit>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd".
-        NBIT_IR = 32
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <CU_error>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	no macro.
+	inferred  27 Latch(s).
+	inferred  77 Multiplexer(s).
 Unit <ControlUnit> synthesized.
+
+Synthesizing Unit <NRegister_1>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd".
+        N = 26
+    Found 26-bit register for signal <data_out>.
+    Summary:
+	inferred  26 D-type flip-flop(s).
+Unit <NRegister_1> synthesized.
+
+Synthesizing Unit <NRegister_2>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd".
+        N = 19
+    Found 19-bit register for signal <data_out>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <NRegister_2> synthesized.
+
+Synthesizing Unit <NRegister_3>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd".
+        N = 8
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <NRegister_3> synthesized.
+
+Synthesizing Unit <NRegister_4>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd".
+        N = 4
+    Found 4-bit register for signal <data_out>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <NRegister_4> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 4
+ 19-bit register                                       : 1
+ 26-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 27
+ 1-bit latch                                           : 27
+# Multiplexers                                         : 77
+ 1-bit 2-to-1 multiplexer                              : 77
+
 =========================================================================
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <CU_error> (without init value) has a constant value of 1 in block <ControlUnit>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+# Multiplexers                                         : 77
+ 1-bit 2-to-1 multiplexer                              : 77
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <CU_error> (without init value) has a constant value of 1 in block <ControlUnit>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <s_control_word_20> in Unit <ControlUnit> is equivalent to the following FF/Latch, which will be removed : <s_control_word_23> 
+
+Optimizing unit <NRegister_1> ...
+
+Optimizing unit <NRegister_2> ...
+
+Optimizing unit <NRegister_3> ...
 
 Optimizing unit <ControlUnit> ...
+INFO:Xst:2261 - The FF/Latch <EX_CW/data_out_6> in Unit <ControlUnit> is equivalent to the following FF/Latch, which will be removed : <EX_CW/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <DE_CW/data_out_6> in Unit <ControlUnit> is equivalent to the following FF/Latch, which will be removed : <DE_CW/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <MEM_CW/data_out_3> in Unit <ControlUnit> is equivalent to the following FF/Latch, which will be removed : <MEM_CW/data_out_6> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ControlUnit, actual ratio is 0.
+FlipFlop DE_CW/data_out_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop DE_CW/data_out_17 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
+
+Processing Unit <ControlUnit> :
+	Found 4-bit shift register for signal <WB_CW/data_out_2>.
+	Found 4-bit shift register for signal <WB_CW/data_out_1>.
+	Found 4-bit shift register for signal <WB_CW/data_out_0>.
+Unit <ControlUnit> processed.
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Shift Registers                                      : 3
+ 4-bit shift register                                  : 3
+
 =========================================================================
 
 =========================================================================
@@ -183,6 +294,27 @@ Top Level Output File Name         : ControlUnit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 62
+#      GND                         : 1
+#      LUT2                        : 7
+#      LUT3                        : 1
+#      LUT4                        : 5
+#      LUT5                        : 10
+#      LUT6                        : 36
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 78
+#      FDCE                        : 50
+#      FDE                         : 3
+#      LDE_1                       : 25
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 48
+#      IBUF                        : 19
+#      OBUF                        : 29
 
 Device utilization summary:
 ---------------------------
@@ -191,19 +323,26 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              69  out of  126800     0%  
+ Number of Slice LUTs:                   62  out of  63400     0%  
+    Number used as Logic:                59  out of  63400     0%  
+    Number used as Memory:                3  out of  19000     0%  
+       Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:     92
+   Number with an unused Flip Flop:      23  out of     92    25%  
+   Number with an unused LUT:            30  out of     92    32%  
+   Number of fully used LUT-FF pairs:    39  out of     92    42%  
+   Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                           0
- Number of bonded IOBs:                   0  out of    210     0%  
+ Number of IOs:                          49
+ Number of bonded IOBs:                  49  out of    210    23%  
+    IOB Flip Flops/Latches:               9
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -223,7 +362,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CU_reset                           | IBUF+BUFG              | 25    |
+CU_clk                             | BUFGP                  | 56    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -233,9 +377,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 1.314ns (Maximum Frequency: 761.035MHz)
+   Minimum input arrival time before clock: 2.204ns
+   Maximum output required time after clock: 0.645ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -243,21 +387,111 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'CU_clk'
+  Clock period: 1.314ns (frequency: 761.035MHz)
+  Total number of paths / destination ports: 31 / 28
+-------------------------------------------------------------------------
+Delay:               1.314ns (Levels of Logic = 0)
+  Source:            WB_CW/Mshreg_data_out_0 (FF)
+  Destination:       WB_CW/data_out_01 (FF)
+  Source Clock:      CU_clk rising
+  Destination Clock: CU_clk rising
+
+  Data Path: WB_CW/Mshreg_data_out_0 to WB_CW/data_out_01
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.306   0.000  WB_CW/Mshreg_data_out_0 (WB_CW/Mshreg_data_out_0)
+     FDE:D                     0.008          WB_CW/data_out_01
+    ----------------------------------------
+    Total                      1.314ns (1.314ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_reset'
+  Total number of paths / destination ports: 389 / 50
+-------------------------------------------------------------------------
+Offset:              2.204ns (Levels of Logic = 4)
+  Source:            CU_instr_opcode<2> (PAD)
+  Destination:       s_control_word_14 (LATCH)
+  Destination Clock: CU_reset rising
+
+  Data Path: CU_instr_opcode<2> to s_control_word_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            27   0.001   0.662  CU_instr_opcode_2_IBUF (CU_instr_opcode_2_IBUF)
+     LUT4:I0->O            1   0.097   0.693  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>15 (Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>14)
+     LUT6:I0->O            1   0.097   0.556  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>16 (Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>15)
+     LUT5:I1->O            1   0.097   0.000  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>17 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>)
+     LDE_1:D                  -0.028          s_control_word_14
+    ----------------------------------------
+    Total                      2.204ns (0.292ns logic, 1.912ns route)
+                                       (13.2% logic, 86.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_clk'
+  Total number of paths / destination ports: 106 / 106
+-------------------------------------------------------------------------
+Offset:              0.739ns (Levels of Logic = 1)
+  Source:            CU_reset (PAD)
+  Destination:       WB_CW/data_out_3 (FF)
+  Destination Clock: CU_clk rising
+
+  Data Path: CU_reset to WB_CW/data_out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            50   0.001   0.389  CU_reset_IBUF (CU_reset_IBUF)
+     FDCE:CLR                  0.349          WB_CW/data_out_3
+    ----------------------------------------
+    Total                      0.739ns (0.350ns logic, 0.389ns route)
+                                       (47.4% logic, 52.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CU_clk'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            MEM_CW/data_out_3 (FF)
+  Destination:       CU_CW_MEM<20> (PAD)
+  Source Clock:      CU_clk rising
+
+  Data Path: MEM_CW/data_out_3 to CU_CW_MEM<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.361   0.283  MEM_CW/data_out_3 (MEM_CW/data_out_3)
+     OBUF:I->O                 0.000          CU_CW_MEM_20_OBUF (CU_CW_MEM<20>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock CU_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CU_clk         |    1.314|         |         |         |
+CU_reset       |    0.766|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.67 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.52 secs
  
 --> 
 
-Total memory usage is 306812 kilobytes
+Total memory usage is 369000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

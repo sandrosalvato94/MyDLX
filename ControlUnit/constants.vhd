@@ -1,3 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 package CONSTANTS is
 	--60 instructions
 	--REG
@@ -77,12 +80,12 @@ package CONSTANTS is
 	constant OPCODE_LHI	: std_logic_vector(5 downto 0) := "001111"; --0x0F
 	
 	--SPECIAL 1 REG
-	constant OPCODE_MFHI	: std_logic_vector(5 downto 0) := "111110"; --0xFE
-	constant OPCODE_MFLO	: std_logic_vector(5 downto 0) := "111111"; --0xFF
+	constant OPCODE_MFHI	: std_logic_vector(5 downto 0) := "111110"; --0x3E
+	constant OPCODE_MFLO	: std_logic_vector(5 downto 0) := "111111"; --0x3F
 	
 	--SPECIAL 2 REG
-	constant OPCODE_LAHI	: std_logic_vector(5 downto 0) := "111100"; --0xFC
-	constant OPCODE_LAHIU: std_logic_vector(5 downto 0) := "111101"; --0xFD
+	constant OPCODE_LAHI	: std_logic_vector(5 downto 0) := "110000"; --0xFC
+	constant OPCODE_LAHIU: std_logic_vector(5 downto 0) := "110001"; --0xFD
 	
 	
 
