@@ -14,7 +14,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.6
+-- Revision 0.8
 -- Additional Comments: 
 --	Version 0.1 - Each component has been instantiated in. No test has been 
 --		    performed yet. Jmp_Branch_Manager is not completed because
@@ -22,6 +22,8 @@
 --		    set enconding.
 --			 0.5 - Changed pinout and data forwording
 --			 0.6 - New version of JBManager
+--			 0.7 - Minor modifications
+--			 0.8 - Add Write_Mux and DE_save_PC signal on pinout
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -59,6 +61,7 @@ entity Decode is
 --		DE_instr_type	: in  std_logic_vector(7 downto 0); --one hot encoding, one bit per instr type
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
 		DE_JMP_branch	: in  std_logic_vector(1 downto 0);
+		DE_save_PC	: in std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 		DE_RegA		: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -154,15 +157,23 @@ architecture Structural of Decode is
 	signal s_iszero_Fcmp_Tcond	: std_logic;
 	signal s_fwd_tmp 				: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_fwd_fmux_tcmp 		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_fmux_tr1				: std_logic_vector(NBIT_ADDR-1 downto 0);
 
 begin
 -------------------------------------------------------------------------------------	
+	Write_MUX : Mux_NBit_2x1 GENERIC MAP(NBIT_ADDR) PORT MAP (
+						port0 => DE_IR(25 downto 21),
+						port1 => (others => '1'), --31
+						sel => DE_save_PC,
+						portY => s_fmux_tr1
+						);
+	
 	R1 : NRegister GENERIC MAP (N => NBIT_ADDR) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
 						enable => DE_enable,
 						load => '1',
-						data_in => DE_IR(20 downto 16),
+						data_in => s_fmux_tr1,
 						data_out => s_ex
 						);
 	R2 : NRegister GENERIC MAP (N => NBIT_ADDR) PORT MAP (
@@ -194,7 +205,7 @@ begin
 				RD2 => DE_rd2,
 				WR => DE_wr,
 				ADD_WR => s_wb,
-				ADD_RD1 => DE_IR(10 downto 6),
+				ADD_RD1 => DE_IR(20 downto 16),
 				ADD_RD2 => DE_IR(15 downto 11),
 				DATAIN => DE_data_Fwb,
 				OUT1 => s_data_Frf_TregA,

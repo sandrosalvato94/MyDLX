@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\Datapath\Barrel_Shifter.vhd" Line 246: Assignment to <arg fmt="%s" index="1">s_sel_third</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\Datapath\PG_network.vhd" Line 61: Assignment to <arg fmt="%s" index="1">tmp1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\Datapath\PG_network.vhd" Line 62: Assignment to <arg fmt="%s" index="1">tmp2</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">c_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\Datapath\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\Datapath\CarrySelectBlock.vhd</arg>&quot; line <arg fmt="%s" index="2">50</arg>: Output port &lt;<arg fmt="%s" index="3">Co</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rca2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[3].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[4].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[3].L1.CASE3.MUX3</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[4].L1.CASE3.MUX3</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[1].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[2].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[1].L1.CASE2.MUX2</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[0].L1.CASE2.MUX2</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[1].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[2].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">Barrel_Shifter</arg>&gt;: instances &lt;<arg fmt="%s" index="2">musk_cyc[2].mux_cyc[2].CASE4.MUX4</arg>&gt;, &lt;<arg fmt="%s" index="3">musk_cyc[3].mux_cyc[3].CASE4.MUX4</arg>&gt; of unit &lt;<arg fmt="%s" index="4">Mux_NBit_2x1_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+</messages>
+

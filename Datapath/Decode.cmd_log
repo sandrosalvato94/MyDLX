@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.syr" 

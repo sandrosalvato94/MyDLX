@@ -46,9 +46,13 @@ entity Datapath is
 		DP_Wr								: in  std_logic;
 		DP_JMP_branch					: in  std_logic_vector(1 downto 0);
 		DP_sign_extender				: in  std_logic_vector(1 downto 0);
+		DP_save_PC						: in  std_logic; -- bitwise AND DP_Shift_Amount_selIF/ID
 		
-		DP_Shift_Amount_sel			: in  std_logic_vector(1 downto 0);
+		DP_Shift_Amount_sel			: in  std_logic_vector(1 downto 0); --ID/EX
 		DP_use_immediate				: in  std_logic;
+		DP_reverse_operands			: in  std_logic;
+		DP_ALU_Opcode					: in  std_logic_vector(5 downto 0);
+		DP_UUW_sel						: in  std_logic_vector(1 downto 0);
 		
 		DP_PC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		
@@ -102,6 +106,7 @@ architecture Behavioral of Datapath is
 		DE_data_Fwb	: in  std_logic_vector(NBIT_DATA-1 downto 0);
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
 		DE_JMP_branch	: in  std_logic_vector(1 downto 0);
+		DE_save_PC	: in std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 		DE_RegA		: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -222,7 +227,9 @@ architecture Behavioral of Datapath is
 		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
 	);
 	end component;
-
+	
+	constant L : integer := log2(NBIT_DATA);
+	
 	signal s_PC_Fif					: std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 	signal s_NPC_Fif					: std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 	signal s_IR_Fif					: std_logic_vector(31 downto 0);
@@ -238,6 +245,20 @@ architecture Behavioral of Datapath is
 	signal s_sel_regA_PC_mux 		: std_logic;
 	signal s_opA_Fmux_Tfrw_mux		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_opB_Fmux_Tfrw_mux		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_top_alu1		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_top_alu2		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_top_aluY		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_bot_alu1		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_bot_alu2		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_data_fwd_bot_aluY		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_opA_Fmux_Tex			: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_opB_Fmux_Tex			: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_NBIT_DATA_div_2		: std_logic_vector(L-1 downto 0) := (L-1 => '0', others => '1');
+	signal s_SA_Fmux_Tmux1			: std_logic_vector(L-1 downto 0);
+	signal s_SA_Fmux_Tmux2			: std_logic_vector(L-1 downto 0);
+	signal s_SA_Fmux_Tex				: std_logic_vector(L-1 downto 0);
+	signal s_result_Fex_Tmem		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_PSW						: std_logic_vector(4 downto 0);
 	
 begin
 
@@ -303,6 +324,7 @@ begin
 		DE_data_Fwb				=> ,	--from write back
 		DE_signext				=> DP_sign_extender,
 		DE_JMP_branch			=> DP_JMP_branch,
+		DE_save_PC				=> DP_save_PC
 		DE_branch_taken		=> s_branch_taken_Fde_Tif,	--to fetch & BTB
 		DE_new_PC				=> s_newPC_Fde_Tif,	--to fetch & BTB
 		DE_RegA					=> s_regA_Fde_Tex,	--to muxes id/ex
@@ -345,20 +367,95 @@ begin
 		);
 	
 	
+	REG_EX_MEM_TOP_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_opA_Fmux_Tfrw_mux,
+		port1 => , --from ex/mem
+		sel   => , --from FCU
+		portY => s_data_fwd_top_alu1
+		);
+		
+	MEM_WB_NULL_TOP_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => , --from mem/wb
+		port1 => (others => '0'),
+		sel   => , --from FCU
+		portY => s_data_fwd_top_alu2
+		);
+		
+	FWD_TOP_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_data_fwd_top_alu1,
+		port1 => s_data_fwd_top_alu2,
+		sel   => , --from FCU
+		portY => s_data_fwd_top_aluY
+		);
+	
+	REG_EX_MEM_BOT_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_opB_Fmux_Tfrw_mux,
+		port1 => , --from ex/mem
+		sel   => , --from FCU
+		portY => s_data_fwd_bot_alu1
+		);
+		
+	MEM_WB_NULL_BOT_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => , --from mem/wb
+		port1 => (others => '0'),
+		sel   => , --from FCU
+		portY => s_data_fwd_bot_alu2
+		);
+		
+	FWD_BOT_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_data_fwd_bot_alu1,
+		port1 => s_data_fwd_bot_alu2,
+		sel   => , --from FCU
+		portY => s_data_fwd_bot_aluY
+		);
+	
+	REVERSE_TOP_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_data_fwd_top_aluY, --from FWD_TOP_MUX
+		port1 => s_data_fwd_bot_aluY, --from FWD_BOT_MUX
+		sel   => DP_reverse_operands, 
+		portY => s_opA_Fmux_Tex	--to execute
+		);
+	
+	REVERSE_BOT_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
+		port0 => s_data_fwd_bot_aluY, --from FWD_BOT_MUX
+		port1 => s_data_fwd_top_aluY, --from FWD_TOP_MUX
+		sel   => DP_reverse_operands, 
+		portY => s_opB_Fmux_Tex --to execute
+		);
+	
+	SHIFT_AMOUNT_MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => L) PORT MAP (
+		port0 => (others => '0'),
+		port1 => s_NBIT_DATA_div_2,
+		sel   => DP_Shift_Amount_sel(0), 
+		portY => s_SA_Fmux_Tmux1
+		);
+	
+	SHIFT_AMOUNT_MUX2 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => L) PORT MAP (
+		port0 => s_data_fwd_bot_aluY,
+		port1 => (others => '0'),
+		sel   => DP_Shift_Amount_sel(0), 
+		portY => s_SA_Fmux_Tmux2
+		);
+	
+	SHIFT_AMOUNT_MUX3 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => L) PORT MAP (
+		port0 => s_SA_Fmux_Tmux1,
+		port1 => s_SA_Fmux_Tmux2,
+		sel   => DP_Shift_Amount_sel(1), 
+		portY => s_SA_Fmux_Tex -- to execute
+		);
 	
 	
 	EX_Stage : Execute_Stage GENERIC MAP (NBIT_DATA => , NBIT_BS_AMOUNT =>) PORT MAP (
-		EX_clk 		=> ,
-		EX_reset 		=> ,
-		EX_enable		=> ,
-		EX_OpA		=> ,
-		EX_OpB		=> ,
-		EX_Opcode		=> ,
-		EX_ShiftAmount	=> ,
-		EX_sel_mux_out	=> ,
-		EX_data_out	=> ,
-		EX_PSW		=> ,
-		EX_AluOutBack	=> 
+		EX_clk 			=> DP_clk,
+		EX_reset 		=> DP_reset,
+		EX_enable		=> DP_enable,
+		EX_OpA			=> s_opA_Fmux_Tex, --from reverse mux
+		EX_OpB			=> s_opA_Fmux_Tex, --from reverse mux
+		EX_Opcode		=> DP_ALU_Opcode,
+		EX_ShiftAmount	=> s_SA_Fmux_Tex, --from shift amount mux
+		EX_sel_mux_out	=> DP_UUW_sel,
+		EX_data_out		=> s_result_Fex_Tmem, --to fwd mux & MEM
+		EX_PSW			=> s_PSW
 		);
 		
 	MEM_Stage : Memory_Stage GENERIC MAP (NBIT_DATA => , NBIT_ADDRESS => ) PORT MAP (

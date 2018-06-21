@@ -59,8 +59,8 @@ entity Execute_Stage is
 		EX_data_out	: out std_logic_vector(NBIT_DATA-1 downto 0);
 --		EX_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 --		EX_IR		: out std_logic_vector(NBIT_IR-1 downto 0);
-		EX_PSW		: out std_logic_vector(4 downto 0);
-		EX_AluOutBack	: out std_logic_vector(NBIT_DATA-1 downto 0)
+		EX_PSW		: out std_logic_vector(4 downto 0)
+--		EX_AluOutBack	: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
 end Execute_Stage;
 
@@ -211,7 +211,7 @@ begin
 						data_in => s_outalu_Falu_Treg,
 						data_out => s_outalu_Falu_Tmux
 						);
-	EX_AluOutBack <= s_outalu_Falu_Tmux;
+	--EX_AluOutBack <= s_outalu_Falu_Tmux;
 --------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------
