@@ -34,6 +34,8 @@ entity DLX_Core is
 		DLX_clk		: in  std_logic;
 		DLX_reset	: in  std_logic;
 		DLX_enable	: in  std_logic;
+		
+		DLX_error	: out std_logic;
 	);
 end DLX_Core;
 
@@ -95,7 +97,6 @@ architecture Structural of DLX_Core is
 		CU_clk				: in  std_logic;
 		CU_flush				: in  std_logic;
 		CU_bubble			: in  std_logic;
-		--CU_CW_FE				: out	std_logic_vector(13 downto 0);
 		CU_CW_DE				: out	std_logic_vector(1 to 9);
 		CU_CW_EX				: out	std_logic_vector(8 to 18);
 		CU_CW_MEM			: out	std_logic_vector(19 to 22);
@@ -116,7 +117,6 @@ architecture Structural of DLX_Core is
 		BTB_enable:		in std_logic;
 		BTB_PC_From_IF:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		BTB_PC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
-		--BTB_NPC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		BTB_target_From_DE:		in std_logic_vector(NBIT_TARGET-1 downto 0);
 		BTB_is_branch:		in std_logic; -- 1 true, 0 false
 		BTB_branch_taken:		in std_logic; -- 1 true, 0 false. Coming from DE
@@ -128,6 +128,66 @@ architecture Structural of DLX_Core is
 
 begin
 
+	DP : Datapath	GENERIC MAP (NBIT_DATA => ,NBIT_IRAM_ADDR => ) PORT MAP (
+		DP_enable						=> DLX_enable,
+		DP_clk							=> DLX_clk,
+		DP_reset							=> DLX_reset,
+		DP_btb_target_prediction	=> ,
+		DP_btb_prediction				=> ,
+		DP_IR								=> ,
+		DP_Rd1							=> ,
+		DP_Rd2							=> ,
+		DP_Wr								=> ,
+		DP_JMP_branch					=> ,
+		DP_sign_extender				=> ,
+		DP_save_PC						=> ,
+		DP_Shift_Amount_sel			=> ,
+		DP_use_immediate				=> ,
+		DP_reverse_operands			=> ,
+		DP_ALU_Opcode					=> ,
+		DP_UUW_sel						=> ,
+		DP_Store_reduce				=> ,
+		DP_Store_BYTE_half			=> ,
+		DP_Load_data_from_DRAM		=> ,
+		DP_WB_sel						=> ,
+		DP_Load_reduce					=> ,
+		DP_Load_BYTE_half				=> ,
+		DP_Load_SGN_usg_reduce		=> ,
+		DP_insert_bubble				=> ,
+		DP_PC								=> ,	
+		DP_branch_taken				=> ,
+		DP_new_PC						=> ,
+		DP_data_to_DRAM				=> ,
+		DP_address_to_DRAM			=> 
+		);
+		
+	CU : ControlUnit PORT MAP (
+		CU_instr_opcode	=> ,
+		CU_instr_func		=> ,
+		CU_enable			=> DLX_enable,
+		CU_reset				=> DLX_reset,
+		CU_clk				=> DLX_clk,
+		CU_flush				=> ,
+		CU_bubble			=> ,
+		CU_CW_DE				=> ,
+		CU_CW_EX				=> ,
+		CU_CW_MEM			=> ,
+		CU_CW_WB				=> ,
+		CU_error				=> DLX_error
+		);
+		
+	BTB_cache : BTB GENERIC MAP (N_ENTRY => , NBIT_ENTRY => , NBIT_TARGET => , NBIT_PREDICTION => ) PORT MAP (
+		BTB_clk						=> DLX_clk,
+		BTB_rst						=> DLX_reset,
+		BTB_enable					=> DLX_enable, --should be checked
+		BTB_PC_From_IF				=> ,
+		BTB_PC_From_DE				=> ,
+		BTB_target_From_DE		=> ,
+		BTB_is_branch				=> ,
+		BTB_branch_taken			=> ,
+		BTB_target_prediction	=> ,
+		BTB_prediction				=> 
+		);
 
 end Structural;
 

@@ -13,12 +13,13 @@
 --
 -- Dependencies: 
 --
--- Revision: 0.3
+-- Revision: 0.4
 --
 -- Revision 0.01 - File Created
 --				0.1  - All components decleared.
 --				0.2  - New input signals (CU_flush & CU_bubble), but used yet
 --				0.3  - Implemented logic for bubble management
+--				0.4  - Implemented logic for flush management
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -84,6 +85,7 @@ architecture Structural of ControlUnit is
 	signal s_cw_Fwb			: std_logic_vector(23 to 26);
 	
 	signal s_cw_bubble 		: std_logic_vector(1 to 26) := "0000010" & "00" & "000000" & "000" & "1000" & "0000";
+	signal s_reset_regs		: std_logic;
 
 begin
 ---------------------------------------------------------------------------------------------------
@@ -248,6 +250,8 @@ begin
 	end process;
 ---------------------------------------------------------------------------------------------------	
 
+	s_reset_regs <= CU_reset OR CU_flush;
+
 ---------------------------------------------------------------------------------------------------
 	BUBBLE_MUX	: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 26) PORT MAP (
 															port0 => s_control_word,
@@ -270,7 +274,7 @@ begin
 ---------------------------------------------------------------------------------------------------
 	EX_CW	: NRegister GENERIC MAP (N => 19) PORT MAP (
 															clk => CU_clk,
-															reset => CU_reset,
+															reset => s_reset_regs,
 															data_in => s_cw_Fde_Tex(8 to 26),
 															enable => CU_enable,
 															load => '1',
@@ -282,7 +286,7 @@ begin
 ---------------------------------------------------------------------------------------------------	
 	MEM_CW: NRegister GENERIC MAP (N => 8) PORT MAP (
 															clk => CU_clk,
-															reset => CU_reset,
+															reset => s_reset_regs,
 															data_in => s_cw_Fex_Tmem(19 to 26),
 															enable => CU_enable,
 															load => '1',
@@ -294,7 +298,7 @@ begin
 ---------------------------------------------------------------------------------------------------	
 	WB_CW	: NRegister GENERIC MAP (N => 4) PORT MAP (
 															clk => CU_clk,
-															reset => CU_reset,
+															reset => s_reset_regs,
 															data_in => s_cw_Fmem_Twb(23 to 26),
 															enable => CU_enable,
 															load => '1',

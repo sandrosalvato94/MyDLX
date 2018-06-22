@@ -12,8 +12,10 @@
 --
 -- Dependencies: 
 --
--- Revision: 
+-- Revision: 0.5 
 -- Revision 0.01 - File Created
+--				
+--				0.5 - Changed reset implementation of middle registers
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -66,10 +68,11 @@ entity Datapath is
 		DP_Load_SGN_usg_reduce		: in  std_logic;
 		
 		DP_insert_bubble				: out std_logic;
+--		DP_insert_flush				: out std_logic;
 		
 		DP_PC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		
-		DP_branch_taken				: out std_logic;
+		DP_branch_taken				: out std_logic; --to BTB and CU for flushing
 		DP_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		
 		DP_data_to_DRAM				: out std_logic_vector(NBIT_DATA -1 downto 0);
@@ -301,6 +304,7 @@ architecture Behavioral of Datapath is
 	signal s_id_ex_sel_fwd_bot_mux: std_logic_vector(1 downto 0);
 	signal s_ex_mem_fwd_mux			: std_logic;
 	signal s_stall						: std_logic;
+	signal s_reset_middle_regs		: std_logic;
 	
 begin
 
@@ -384,10 +388,11 @@ begin
 		);
 	DP_branch_taken <= s_branch_taken_Fde_Tif;
 	DP_new_PC 		 <= s_newPC_Fde_Tif;
+	s_reset_middle_regs <= s_branch_taken_Fde_Tif OR DP_reset;
 	
 	stall_ID_EX_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_stall_Fif,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -396,7 +401,7 @@ begin
 	
 	PC_ID_EX_REG : NRegister GENERIC MAP (N => 2**NBIT_IRAM_ADDR) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_PC_Tde,
 		enable=> s_stall_Fif,	--from FCU stall (or s_stall_Fde)
 		load=> '1',
@@ -405,7 +410,7 @@ begin
 		
 	IR_ID_EX_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_IR_Fif,
 		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
 		load=> '1',
@@ -521,7 +526,7 @@ begin
 		
 	stall_EX_MEM_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_stall_Fde,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -530,7 +535,7 @@ begin
 	
 	IR_EX_MEM_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_IR_Fde,
 		enable=> s_stall_Fde, --from FCU stall (or s_stall_Fex)
 		load=> '1',
@@ -539,7 +544,7 @@ begin
 	
 	OPB_TO_DRAM_REG : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_data_fwd_bot_aluY, --from fwd bot mux
 		enable=> s_stall_Fde, --from FCU stall (or s_stall_Fex)
 		load=> '1',
@@ -578,7 +583,7 @@ begin
 	
 	stall_MEM_WB_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_stall_Fex,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -587,7 +592,7 @@ begin
 	
 	DATA_BYPASS_REG : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_result_Fex_Tmem, --from execute
 		enable=> s_stall_Fex, --from FCU (or s_stall_Fmem)
 		load=> '1',
@@ -596,7 +601,7 @@ begin
 	
 	IR_MEM_WB_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs,
 		data_in=> s_IR_Fex,
 		enable=> s_stall_Fex, --from FCU (or s_stall_Fmem)
 		load=> '1',

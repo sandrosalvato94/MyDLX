@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Core/Datapath.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/Core/Datapath.syr" 
