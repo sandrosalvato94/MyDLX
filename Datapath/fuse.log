@@ -1,0 +1,120 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath_isim_beh.exe -prj C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath_beh.prj work.TB_Datapath 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/mux21.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/fa.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/rca.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/PG_cell.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/mux_generic.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/constants.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/PG_network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/ORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Mux_1Bit_2X1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/GeneralPropagate.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/GeneralGenerate.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/CarrySelectBlock.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/XNORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Sum_Network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/NORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Comparator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Carry_Network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/CarrySelect.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/CarryGenerator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/PropagateCarryLookahead.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/P4Adder.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Logic_Unit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Flag_Generator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Comparison_Logic.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/ComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Barrel_Shifter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Sign_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Sign_Extender.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/registerfile.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/NComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Multiplier.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Jmp_Branch_Manager.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Enable_Interface.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Data_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/WriteBack_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Reg1Bit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Memory_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Fetch.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/FCU.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Execute_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Decode.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/Datapath.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 167744 KB
+Fuse CPU Usage: 749 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package constants
+Compiling package numeric_std
+Compiling architecture behavioral of entity NRegister [\NRegister(32)\]
+Compiling architecture behavioral of entity PG_cell [pg_cell_default]
+Compiling architecture behavioral of entity PG_network [\PG_network(32)\]
+Compiling architecture behavioral of entity Carry_Network [\Carry_Network(32)\]
+Compiling architecture behavioral of entity Sum_Network [\Sum_Network(32)\]
+Compiling architecture behavioral of entity PropagateCarryLookahead [\PropagateCarryLookahead(32)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(32)\]
+Compiling architecture structural of entity Fetch [\Fetch(32,32)\]
+Compiling architecture behavioral of entity Reg1Bit [reg1bit_default]
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(5)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(5)\]
+Compiling architecture behavioral of entity register_file [\register_file(32,32,5)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(10)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(6)\]
+Compiling architecture behavioral of entity Sign_Extender [\Sign_Extender(32)\]
+Compiling architecture behavioral of entity ComparatorWithEnable [comparatorwithenable_default]
+Compiling architecture behavioral of entity NComparatorWithEnable [\NComparatorWithEnable(32)\]
+Compiling architecture behavioral of entity Jmp_Branch_Manager [\Jmp_Branch_Manager(32)\]
+Compiling architecture structural of entity Decode [\Decode(32,32,5,32)\]
+Compiling architecture behavioral of entity Enable_Interface [\Enable_Interface(32)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(8)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(40)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
+Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(5)\]
+Compiling package math_real
+Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
+Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
+Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(32,8)\]
+Compiling architecture behavioral of entity FA [fa_default]
+Compiling architecture structural of entity RCA [\RCA(4)\]
+Compiling architecture behavioral of entity MUX21 [mux21_default]
+Compiling architecture structural of entity MUX21_GENERIC [\MUX21_GENERIC(4)\]
+Compiling architecture structural of entity CarrySelectBlock [\CarrySelectBlock(4)\]
+Compiling architecture structural of entity CarrySelect [\CarrySelect(32,4)\]
+Compiling architecture behavioral of entity P4Adder [\P4Adder(32)\]
+Compiling architecture structural of entity Logic_Unit [\Logic_Unit(32)\]
+Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(32)\]
+Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
+Compiling architecture structural of entity Comparator [\Comparator(32)\]
+Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(32)\]
+Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(32)\]
+Compiling architecture behavioral of entity XNORGate_NX1 [\XNORGate_NX1(32)\]
+Compiling architecture structural of entity Flag_Generator [\Flag_Generator(32)\]
+Compiling architecture structural of entity ALU [\ALU(32,5)\]
+Compiling architecture behavioral of entity Multiplier [\Multiplier(32)\]
+Compiling architecture structural of entity Execute_Stage [\Execute_Stage(32,5)\]
+Compiling architecture behavioral of entity Data_Reducer [\Data_Reducer(32)\]
+Compiling architecture structural of entity Memory_Stage [\Memory_Stage(32,32)\]
+Compiling architecture structural of entity Sign_Reducer [\Sign_Reducer(32)\]
+Compiling architecture structural of entity WriteBack_Stage [\WriteBack_Stage(32)\]
+Compiling architecture behavioral of entity FCU [fcu_default]
+Compiling architecture behavioral of entity Datapath [\Datapath(32,5)\]
+Compiling architecture behavior of entity tb_datapath
+Time Resolution for simulation is 1ps.
+Waiting for 43 sub-compilation(s) to finish...
+Compiled 110 VHDL Units
+Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath_isim_beh.exe
+Fuse Memory Usage: 235724 KB
+Fuse CPU Usage: 2358 ms

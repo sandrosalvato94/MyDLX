@@ -1,0 +1,4 @@
+vhdl work "Mux_NBit_2x1.vhd"
+vhdl work "NRegister.vhd"
+vhdl work "Data_Reducer.vhd"
+vhdl work "Memory_Stage.vhd"

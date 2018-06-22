@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -108,6 +108,9 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd" into library work
 Parsing entity <NRegister>.
 Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\constants.vhd" into library work
 Parsing package <CONSTANTS>.
 Parsing package body <CONSTANTS>.
@@ -120,7 +123,10 @@ Parsing architecture <Structural> of entity <controlunit>.
 =========================================================================
 
 Elaborating entity <ControlUnit> (architecture <Structural>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd" Line 77: cu_reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd" Line 86: Using initial value "00000100000000000010000000" for s_cw_bubble since it is never assigned
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd" Line 92: cu_reset should be on the sensitivity list of the process
+
+Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
@@ -137,7 +143,6 @@ Elaborating entity <NRegister> (architecture <Behavioral>) with generics from li
 Synthesizing Unit <ControlUnit>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\ControlUnit.vhd".
 WARNING:Xst:647 - Input <CU_flush> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <CU_bubble> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -169,6 +174,13 @@ WARNING:Xst:737 - Found 1-bit latch for signal <CU_error>. Latches may be genera
 	inferred  27 Latch(s).
 	inferred  77 Multiplexer(s).
 Unit <ControlUnit> synthesized.
+
+Synthesizing Unit <Mux_NBit_2x1>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\Mux_NBit_2x1.vhd".
+        NBIT_IN = 26
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_NBit_2x1> synthesized.
 
 Synthesizing Unit <NRegister_1>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\ControlUnit\NRegister.vhd".
@@ -213,8 +225,9 @@ Macro Statistics
  8-bit register                                        : 1
 # Latches                                              : 27
  1-bit latch                                           : 27
-# Multiplexers                                         : 77
+# Multiplexers                                         : 78
  1-bit 2-to-1 multiplexer                              : 77
+ 26-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -229,8 +242,9 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Registers                                            : 57
  Flip-Flops                                            : 57
-# Multiplexers                                         : 77
+# Multiplexers                                         : 78
  1-bit 2-to-1 multiplexer                              : 77
+ 26-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -258,20 +272,12 @@ FlipFlop DE_CW/data_out_17 has been replicated 1 time(s) to handle iob=true attr
 
 Final Macro Processing ...
 
-Processing Unit <ControlUnit> :
-	Found 4-bit shift register for signal <WB_CW/data_out_2>.
-	Found 4-bit shift register for signal <WB_CW/data_out_1>.
-	Found 4-bit shift register for signal <WB_CW/data_out_0>.
-Unit <ControlUnit> processed.
-
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 44
- Flip-Flops                                            : 44
-# Shift Registers                                      : 3
- 4-bit shift register                                  : 3
+# Registers                                            : 56
+ Flip-Flops                                            : 56
 
 =========================================================================
 
@@ -294,25 +300,20 @@ Top Level Output File Name         : ControlUnit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 75
-#      GND                         : 1
-#      LUT2                        : 5
+# BELS                             : 95
+#      LUT2                        : 27
 #      LUT3                        : 8
 #      LUT4                        : 7
 #      LUT5                        : 16
 #      LUT6                        : 37
-#      VCC                         : 1
-# FlipFlops/Latches                : 79
-#      FDCE                        : 50
-#      FDE                         : 3
+# FlipFlops/Latches                : 82
+#      FDCE                        : 56
 #      LDE_1                       : 26
-# Shift Registers                  : 3
-#      SRLC16E                     : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 48
-#      IBUF                        : 19
+# IO Buffers                       : 49
+#      IBUF                        : 20
 #      OBUF                        : 29
 
 Device utilization summary:
@@ -322,22 +323,20 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              69  out of  126800     0%  
- Number of Slice LUTs:                   76  out of  63400     0%  
-    Number used as Logic:                73  out of  63400     0%  
-    Number used as Memory:                3  out of  19000     0%  
-       Number used as SRL:                3
+ Number of Slice Registers:              72  out of  126800     0%  
+ Number of Slice LUTs:                   95  out of  63400     0%  
+    Number used as Logic:                95  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     98
-   Number with an unused Flip Flop:      29  out of     98    29%  
-   Number with an unused LUT:            22  out of     98    22%  
-   Number of fully used LUT-FF pairs:    47  out of     98    47%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:    112
+   Number with an unused Flip Flop:      40  out of    112    35%  
+   Number with an unused LUT:            17  out of    112    15%  
+   Number of fully used LUT-FF pairs:    55  out of    112    49%  
+   Number of unique control sets:         2
 
 IO Utilization: 
  Number of IOs:                          51
- Number of bonded IOBs:                  49  out of    210    23%  
+ Number of bonded IOBs:                  50  out of    210    23%  
     IOB Flip Flops/Latches:              10
 
 Specific Feature Utilization:
@@ -376,7 +375,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.314ns (Maximum Frequency: 761.035MHz)
+   Minimum period: 0.653ns (Maximum Frequency: 1532.567MHz)
    Minimum input arrival time before clock: 2.544ns
    Maximum output required time after clock: 0.754ns
    Maximum combinational path delay: No path found
@@ -387,24 +386,24 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CU_clk'
-  Clock period: 1.314ns (frequency: 761.035MHz)
-  Total number of paths / destination ports: 31 / 28
+  Clock period: 0.653ns (frequency: 1532.567MHz)
+  Total number of paths / destination ports: 29 / 29
 -------------------------------------------------------------------------
-Delay:               1.314ns (Levels of Logic = 0)
-  Source:            WB_CW/Mshreg_data_out_0 (FF)
-  Destination:       WB_CW/data_out_01 (FF)
+Delay:               0.653ns (Levels of Logic = 0)
+  Source:            MEM_CW/data_out_3 (FF)
+  Destination:       WB_CW/data_out_3 (FF)
   Source Clock:      CU_clk rising
   Destination Clock: CU_clk rising
 
-  Data Path: WB_CW/Mshreg_data_out_0 to WB_CW/data_out_01
+  Data Path: MEM_CW/data_out_3 to WB_CW/data_out_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRLC16E:CLK->Q        1   1.306   0.000  WB_CW/Mshreg_data_out_0 (WB_CW/Mshreg_data_out_0)
-     FDE:D                     0.008          WB_CW/data_out_01
+     FDCE:C->Q             2   0.361   0.283  MEM_CW/data_out_3 (MEM_CW/data_out_3)
+     FDCE:D                    0.008          WB_CW/data_out_3
     ----------------------------------------
-    Total                      1.314ns (1.314ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
+    Total                      0.653ns (0.369ns logic, 0.283ns route)
+                                       (56.6% logic, 43.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_reset'
@@ -431,9 +430,9 @@ Offset:              2.544ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_clk'
-  Total number of paths / destination ports: 106 / 106
+  Total number of paths / destination ports: 139 / 139
 -------------------------------------------------------------------------
-Offset:              0.739ns (Levels of Logic = 1)
+Offset:              0.740ns (Levels of Logic = 1)
   Source:            CU_reset (PAD)
   Destination:       WB_CW/data_out_3 (FF)
   Destination Clock: CU_clk rising
@@ -442,11 +441,11 @@ Offset:              0.739ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            50   0.001   0.389  CU_reset_IBUF (CU_reset_IBUF)
-     FDCE:CLR                  0.349          WB_CW/data_out_3
+     IBUF:I->O            56   0.001   0.390  CU_reset_IBUF (CU_reset_IBUF)
+     FDCE:CLR                  0.349          WB_CW/data_out_0
     ----------------------------------------
-    Total                      0.739ns (0.350ns logic, 0.389ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      0.740ns (0.350ns logic, 0.390ns route)
+                                       (47.3% logic, 52.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CU_clk'
@@ -496,19 +495,19 @@ Clock to Setup on destination clock CU_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CU_clk         |    1.314|         |         |         |
-CU_reset       |    0.766|         |         |         |
+CU_clk         |    0.653|         |         |         |
+CU_reset       |    0.875|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.63 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.72 secs
  
 --> 
 
-Total memory usage is 369128 kilobytes
+Total memory usage is 370388 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   30 (   0 filtered)

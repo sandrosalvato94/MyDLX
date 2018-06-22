@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Datapath/TB_Datapath_beh.prj" "work.TB_Datapath" 
