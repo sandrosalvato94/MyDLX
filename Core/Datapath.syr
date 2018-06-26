@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Datapath.prj
 
@@ -251,7 +251,7 @@ Parsing architecture <Behavioral> of entity <datapath>.
 =========================================================================
 
 Elaborating entity <Datapath> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" Line 288: Using initial value "01111" for s_nbit_data_div_2 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" Line 302: Using initial value "01111" for s_nbit_data_div_2 since it is never assigned
 
 Elaborating entity <Fetch> (architecture <Structural>) with generics from library <work>.
 
@@ -364,38 +364,38 @@ Elaborating entity <WriteBack_Stage> (architecture <Structural>) with generics f
 Elaborating entity <Sign_Reducer> (architecture <Structural>) with generics from library <work>.
 
 Elaborating entity <FCU> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 129: s_id_ex_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 130: s_if_id_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 136: s_if_id_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 144: s_ex_mem_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 145: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 152: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 153: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 159: s_id_ex_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 175: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 176: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 181: s_ex_mem_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 182: fcu_ex_mem_11_15 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 193: s_mem_wb_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 213: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 214: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 219: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 226: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 227: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 232: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 240: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 241: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 246: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 253: s_ex_mem_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 254: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 259: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 276: s_ex_mem_is_store should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 278: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 284: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 295: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" Line 298: Net <s_load_data_Fmem_Twb[31]> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 484. All outputs of instance <REVERSE_BOT_MUX> of block <Mux_NBit_2x1> are unconnected in block <Datapath>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 583. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 132: s_id_ex_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 133: s_if_id_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 139: s_if_id_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 147: s_ex_mem_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 148: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 155: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 156: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 162: s_id_ex_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 178: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 179: s_ex_mem_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 184: s_ex_mem_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 185: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 196: s_mem_wb_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 216: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 217: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 222: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 229: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 230: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 235: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 243: s_ex_mem_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 244: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 249: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 256: s_ex_mem_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 257: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 262: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 279: s_ex_mem_is_store should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 281: s_mem_wb_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 287: s_mem_wb_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" Line 298: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" Line 312: Net <s_load_data_Fmem_Twb[31]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 502. All outputs of instance <REVERSE_BOT_MUX> of block <Mux_NBit_2x1> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 602. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -405,10 +405,10 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 484: Output port <portY> of the instance <REVERSE_BOT_MUX> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 513: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 560: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 583: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 502: Output port <portY> of the instance <REVERSE_BOT_MUX> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 532: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 579: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" line 602: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <s_load_data_Fmem_Twb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -1807,48 +1807,48 @@ Unit <Sign_Reducer> synthesized.
 
 Synthesizing Unit <FCU>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd".
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 131
-    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 131
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 154
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 177
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 182
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 194
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 215
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 220
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 228
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 233
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 242
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 247
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 255
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 260
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 279
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 285
-    Found 6-bit comparator lessequal for signal <n0089> created at line 323
-    Found 6-bit comparator lessequal for signal <n0091> created at line 323
-    Found 6-bit comparator lessequal for signal <n0094> created at line 324
-    Found 6-bit comparator lessequal for signal <n0096> created at line 324
-    Found 6-bit comparator lessequal for signal <n0100> created at line 325
-    Found 6-bit comparator lessequal for signal <n0102> created at line 325
-    Found 6-bit comparator lessequal for signal <n0110> created at line 332
-    Found 6-bit comparator lessequal for signal <n0112> created at line 332
-    Found 6-bit comparator lessequal for signal <n0115> created at line 333
-    Found 6-bit comparator lessequal for signal <n0117> created at line 333
-    Found 6-bit comparator lessequal for signal <n0121> created at line 334
-    Found 6-bit comparator lessequal for signal <n0123> created at line 334
-    Found 6-bit comparator lessequal for signal <n0131> created at line 341
-    Found 6-bit comparator lessequal for signal <n0133> created at line 341
-    Found 6-bit comparator lessequal for signal <n0136> created at line 342
-    Found 6-bit comparator lessequal for signal <n0138> created at line 342
-    Found 6-bit comparator lessequal for signal <n0142> created at line 343
-    Found 6-bit comparator lessequal for signal <n0144> created at line 343
-    Found 6-bit comparator lessequal for signal <n0152> created at line 350
-    Found 6-bit comparator lessequal for signal <n0154> created at line 350
-    Found 6-bit comparator lessequal for signal <n0157> created at line 351
-    Found 6-bit comparator lessequal for signal <n0159> created at line 351
-    Found 6-bit comparator lessequal for signal <n0163> created at line 352
-    Found 6-bit comparator lessequal for signal <n0165> created at line 352
-    Found 6-bit comparator lessequal for signal <n0194> created at line 410
-    Found 6-bit comparator lessequal for signal <n0196> created at line 410
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 134
+    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 134
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 157
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 180
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 185
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 197
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 218
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 223
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 231
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 236
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 245
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 250
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 258
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 263
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 282
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 288
+    Found 6-bit comparator lessequal for signal <n0089> created at line 326
+    Found 6-bit comparator lessequal for signal <n0091> created at line 326
+    Found 6-bit comparator lessequal for signal <n0094> created at line 327
+    Found 6-bit comparator lessequal for signal <n0096> created at line 327
+    Found 6-bit comparator lessequal for signal <n0100> created at line 328
+    Found 6-bit comparator lessequal for signal <n0102> created at line 328
+    Found 6-bit comparator lessequal for signal <n0110> created at line 335
+    Found 6-bit comparator lessequal for signal <n0112> created at line 335
+    Found 6-bit comparator lessequal for signal <n0115> created at line 336
+    Found 6-bit comparator lessequal for signal <n0117> created at line 336
+    Found 6-bit comparator lessequal for signal <n0121> created at line 337
+    Found 6-bit comparator lessequal for signal <n0123> created at line 337
+    Found 6-bit comparator lessequal for signal <n0131> created at line 344
+    Found 6-bit comparator lessequal for signal <n0133> created at line 344
+    Found 6-bit comparator lessequal for signal <n0136> created at line 345
+    Found 6-bit comparator lessequal for signal <n0138> created at line 345
+    Found 6-bit comparator lessequal for signal <n0142> created at line 346
+    Found 6-bit comparator lessequal for signal <n0144> created at line 346
+    Found 6-bit comparator lessequal for signal <n0152> created at line 353
+    Found 6-bit comparator lessequal for signal <n0154> created at line 353
+    Found 6-bit comparator lessequal for signal <n0157> created at line 354
+    Found 6-bit comparator lessequal for signal <n0159> created at line 354
+    Found 6-bit comparator lessequal for signal <n0163> created at line 355
+    Found 6-bit comparator lessequal for signal <n0165> created at line 355
+    Found 6-bit comparator lessequal for signal <n0194> created at line 413
+    Found 6-bit comparator lessequal for signal <n0196> created at line 413
     Summary:
 	inferred  42 Comparator(s).
 	inferred  49 Multiplexer(s).
@@ -3594,22 +3594,22 @@ Top Level Output File Name         : Datapath.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 693
+# BELS                             : 694
 #      GND                         : 1
 #      LUT2                        : 6
-#      LUT3                        : 89
-#      LUT4                        : 74
-#      LUT5                        : 93
-#      LUT6                        : 403
+#      LUT3                        : 85
+#      LUT4                        : 61
+#      LUT5                        : 109
+#      LUT6                        : 405
 #      MUXF7                       : 26
 #      VCC                         : 1
 # FlipFlops/Latches                : 96
 #      FDCE                        : 96
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 145
-#      IBUF                        : 15
-#      OBUF                        : 130
+# IO Buffers                       : 196
+#      IBUF                        : 16
+#      OBUF                        : 180
 # DSPs                             : 8
 #      DSP48E1                     : 8
 
@@ -3621,19 +3621,19 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              96  out of  126800     0%  
- Number of Slice LUTs:                  665  out of  63400     1%  
-    Number used as Logic:               665  out of  63400     1%  
+ Number of Slice LUTs:                  666  out of  63400     1%  
+    Number used as Logic:               666  out of  63400     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    681
-   Number with an unused Flip Flop:     585  out of    681    85%  
-   Number with an unused LUT:            16  out of    681     2%  
-   Number of fully used LUT-FF pairs:    80  out of    681    11%  
+ Number of LUT Flip Flop pairs used:    682
+   Number with an unused Flip Flop:     586  out of    682    85%  
+   Number with an unused LUT:            16  out of    682     2%  
+   Number of fully used LUT-FF pairs:    80  out of    682    11%  
    Number of unique control sets:         2
 
 IO Utilization: 
- Number of IOs:                         256
- Number of bonded IOBs:                 146  out of    210    69%  
+ Number of IOs:                         307
+ Number of bonded IOBs:                 197  out of    210    93%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -3672,7 +3672,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 8.362ns (Maximum Frequency: 119.590MHz)
-   Minimum input arrival time before clock: 8.828ns
+   Minimum input arrival time before clock: 8.873ns
    Maximum output required time after clock: 1.305ns
    Maximum combinational path delay: 1.213ns
 
@@ -3709,9 +3709,9 @@ Delay:               8.362ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP_clk'
-  Total number of paths / destination ports: 1167791810 / 288
+  Total number of paths / destination ports: 1401006780 / 288
 -------------------------------------------------------------------------
-Offset:              8.828ns (Levels of Logic = 8)
+Offset:              8.873ns (Levels of Logic = 8)
   Source:            DP_ALU_Opcode<4> (PAD)
   Destination:       EX_Stage/HI/data_out_2 (FF)
   Destination Clock: DP_clk rising
@@ -3720,8 +3720,8 @@ Offset:              8.828ns (Levels of Logic = 8)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           103   0.001   0.629  DP_ALU_Opcode_4_IBUF (DP_ALU_Opcode_4_IBUF)
-     LUT3:I0->O           17   0.097   0.631  EX_Stage/s_OpA_Fei_Tmul<4>1_SW0 (N204)
+     IBUF:I->O           102   0.001   0.674  DP_ALU_Opcode_4_IBUF (DP_ALU_Opcode_4_IBUF)
+     LUT4:I0->O           17   0.097   0.631  EX_Stage/s_OpA_Fei_Tmul<4>1_SW0 (N204)
      LUT6:I2->O            6   0.097   0.302  EX_Stage/s_OpA_Fei_Tmul<4>1 (EX_Stage/s_OpA_Fei_Tmul<4>)
      DSP48E1:A4->PCOUT47    1   2.970   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0] (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1 (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]2_PCIN_47)
@@ -3730,8 +3730,8 @@ Offset:              8.828ns (Levels of Logic = 8)
      LUT3:I1->O            1   0.097   0.000  EX_Stage/MUL/Mmux_MUL_product601 (EX_Stage/s_product_Fmul_Thiloregs<63>)
      FDCE:D                    0.008          EX_Stage/HI/data_out_31
     ----------------------------------------
-    Total                      8.828ns (6.887ns logic, 1.941ns route)
-                                       (78.0% logic, 22.0% route)
+    Total                      8.873ns (6.887ns logic, 1.986ns route)
+                                       (77.6% logic, 22.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DP_clk'
@@ -3759,15 +3759,15 @@ Timing constraint: Default path analysis
 -------------------------------------------------------------------------
 Delay:               1.213ns (Levels of Logic = 3)
   Source:            DP_UUW_sel<1> (PAD)
-  Destination:       DP_address_to_DRAM<30> (PAD)
+  Destination:       DP_address_to_DRAM<4> (PAD)
 
-  Data Path: DP_UUW_sel<1> to DP_address_to_DRAM<30>
+  Data Path: DP_UUW_sel<1> to DP_address_to_DRAM<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            90   0.001   0.799  DP_UUW_sel_1_IBUF (DP_UUW_sel_1_IBUF)
-     LUT5:I0->O            9   0.097   0.316  EX_Stage/MUX3/Mmux_portY241 (s_result_Fex_Tmem<30>)
-     OBUF:I->O                 0.000          DP_address_to_DRAM_30_OBUF (DP_address_to_DRAM<30>)
+     LUT5:I0->O            9   0.097   0.316  EX_Stage/MUX3/Mmux_portY271 (s_result_Fex_Tmem<4>)
+     OBUF:I->O                 0.000          DP_address_to_DRAM_4_OBUF (DP_address_to_DRAM<4>)
     ----------------------------------------
     Total                      1.213ns (0.098ns logic, 1.115ns route)
                                        (8.1% logic, 91.9% route)
@@ -3788,12 +3788,12 @@ DP_clk         |    8.362|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 48.00 secs
-Total CPU time to Xst completion: 47.22 secs
+Total REAL time to Xst completion: 63.00 secs
+Total CPU time to Xst completion: 63.39 secs
  
 --> 
 
-Total memory usage is 401192 kilobytes
+Total memory usage is 368988 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 2666 (   0 filtered)

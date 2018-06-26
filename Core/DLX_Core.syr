@@ -1,0 +1,305 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: DLX_Core.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DLX_Core.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DLX_Core"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : DLX_Core
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\mux21.vhd" into library work
+Parsing entity <MUX21>.
+Parsing architecture <BEHAVIORAL> of entity <mux21>.
+Parsing configuration <CFG_MUX21_BEHAVIORAL>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\fa.vhd" into library work
+Parsing entity <FA>.
+Parsing architecture <BEHAVIORAL> of entity <fa>.
+Parsing configuration <CFG_FA_BEHAVIORAL>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\rca.vhd" into library work
+Parsing entity <RCA>.
+Parsing architecture <STRUCTURAL> of entity <rca>.
+Parsing configuration <CFG_RCA_STRUCTURAL>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\PG_cell.vhd" into library work
+Parsing entity <PG_cell>.
+Parsing architecture <Behavioral> of entity <pg_cell>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\mux_generic.vhd" into library work
+Parsing entity <MUX21_GENERIC>.
+Parsing architecture <STRUCTURAL> of entity <mux21_generic>.
+Parsing configuration <CFG_MUX21_GEN_STRUCTURAL>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\constants.vhd" into library work
+Parsing package <CONSTANTS>.
+Parsing package body <CONSTANTS>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\PG_network.vhd" into library work
+Parsing entity <PG_network>.
+Parsing architecture <Behavioral> of entity <pg_network>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ORGate_NX1.vhd" into library work
+Parsing entity <ORGate_NX1>.
+Parsing architecture <Behavioral> of entity <orgate_nx1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Mux_1Bit_2X1.vhd" into library work
+Parsing entity <Mux_1Bit_2X1>.
+Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\GeneralPropagate.vhd" into library work
+Parsing entity <GeneralPropagate>.
+Parsing architecture <Behavioral> of entity <generalpropagate>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\GeneralGenerate.vhd" into library work
+Parsing entity <GeneralGenerate>.
+Parsing architecture <Behavioral> of entity <generalgenerate>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\CarrySelectBlock.vhd" into library work
+Parsing entity <CarrySelectBlock>.
+Parsing architecture <Structural> of entity <carryselectblock>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\XNORGate_NX1.vhd" into library work
+Parsing entity <XNORGate_NX1>.
+Parsing architecture <Behavioral> of entity <xnorgate_nx1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Sum_Network.vhd" into library work
+Parsing entity <Sum_Network>.
+Parsing architecture <Behavioral> of entity <sum_network>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\NORGate_NX1.vhd" into library work
+Parsing entity <NORGate_NX1>.
+Parsing architecture <Behavioral> of entity <norgate_nx1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Mux_NBit_2x1.vhd" into library work
+Parsing entity <Mux_NBit_2x1>.
+Parsing architecture <Behavioral> of entity <mux_nbit_2x1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Comparator.vhd" into library work
+Parsing entity <Comparator>.
+Parsing architecture <Structural> of entity <comparator>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Carry_Network.vhd" into library work
+Parsing entity <Carry_Network>.
+Parsing architecture <Behavioral> of entity <carry_network>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\CarrySelect.vhd" into library work
+Parsing entity <CarrySelect>.
+Parsing architecture <Structural> of entity <carryselect>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\CarryGenerator.vhd" into library work
+Parsing entity <CarryGenerator>.
+Parsing architecture <Behavioral> of entity <carrygenerator>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\t_ff_rst1.vhd" into library work
+Parsing entity <t_ff_rst1>.
+Parsing architecture <Behavioral> of entity <t_ff_rst1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\t_ff.vhd" into library work
+Parsing entity <t_ff_rst0>.
+Parsing architecture <behavioral> of entity <t_ff_rst0>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\PropagateCarryLookahead.vhd" into library work
+Parsing entity <PropagateCarryLookahead>.
+Parsing architecture <Behavioral> of entity <propagatecarrylookahead>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\P4Adder.vhd" into library work
+Parsing entity <P4Adder>.
+Parsing architecture <Behavioral> of entity <p4adder>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Logic_Unit.vhd" into library work
+Parsing entity <Logic_Unit>.
+Parsing architecture <Structural> of entity <logic_unit>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Flag_Generator.vhd" into library work
+Parsing entity <Flag_Generator>.
+Parsing architecture <Structural> of entity <flag_generator>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Comparison_Logic.vhd" into library work
+Parsing entity <Comparison_Logic>.
+Parsing architecture <Structural> of entity <comparison_logic>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ComparatorWithEnable.vhd" into library work
+Parsing entity <ComparatorWithEnable>.
+Parsing architecture <Behavioral> of entity <comparatorwithenable>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Barrel_Shifter.vhd" into library work
+Parsing entity <Barrel_Shifter>.
+Parsing architecture <Structural> of entity <barrel_shifter>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ud_counter.vhd" into library work
+Parsing entity <UD_COUNTER>.
+Parsing architecture <STR> of entity <ud_counter>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Sign_Reducer.vhd" into library work
+Parsing entity <Sign_Reducer>.
+Parsing architecture <Structural> of entity <sign_reducer>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Sign_Extender.vhd" into library work
+Parsing entity <Sign_Extender>.
+Parsing architecture <Behavioral> of entity <sign_extender>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\registerfile.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <Behavioral> of entity <register_file>.
+Parsing configuration <CFG_RF_BEH>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\NRegister.vhd" into library work
+Parsing entity <NRegister>.
+Parsing architecture <Behavioral> of entity <nregister>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\NComparatorWithEnable.vhd" into library work
+Parsing entity <NComparatorWithEnable>.
+Parsing architecture <Behavioral> of entity <ncomparatorwithenable>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Mux_Bit.vhd" into library work
+Parsing entity <Mux_Bit>.
+Parsing architecture <Behavioral> of entity <mux_bit>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Multiplier.vhd" into library work
+Parsing entity <Multiplier>.
+Parsing architecture <Behavioral> of entity <multiplier>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Jmp_Branch_Manager.vhd" into library work
+Parsing entity <Jmp_Branch_Manager>.
+Parsing architecture <Behavioral> of entity <jmp_branch_manager>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Enable_Interface.vhd" into library work
+Parsing entity <Enable_Interface>.
+Parsing architecture <Behavioral> of entity <enable_interface>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\D_FF.vhd" into library work
+Parsing entity <D_FF>.
+Parsing architecture <Behavioral> of entity <d_ff>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Data_Reducer.vhd" into library work
+Parsing entity <Data_Reducer>.
+Parsing architecture <Behavioral> of entity <data_reducer>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\CU_SatCounter.vhd" into library work
+Parsing entity <CU_SatCounter>.
+Parsing architecture <Behavioral> of entity <cu_satcounter>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ANDGate_NX1.vhd" into library work
+Parsing entity <ANDGate_NX1>.
+Parsing architecture <Behavioral> of entity <andgate_nx1>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Structural> of entity <alu>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\WriteBack_Stage.vhd" into library work
+Parsing entity <WriteBack_Stage>.
+Parsing architecture <Structural> of entity <writeback_stage>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\SAT_Counter.vhd" into library work
+Parsing entity <SAT_Counter_BTB>.
+Parsing architecture <Structural> of entity <sat_counter_btb>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Reg1Bit.vhd" into library work
+Parsing entity <Reg1Bit>.
+Parsing architecture <Behavioral> of entity <reg1bit>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\NRotateRegister.vhd" into library work
+Parsing entity <NRotateRegister>.
+Parsing architecture <Behavioral> of entity <nrotateregister>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\NPriorityEncoder.vhd" into library work
+Parsing entity <NPriorityEncoder>.
+Parsing architecture <Behavioral> of entity <npriorityencoder>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Memory_Stage.vhd" into library work
+Parsing entity <Memory_Stage>.
+Parsing architecture <Structural> of entity <memory_stage>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Fetch.vhd" into library work
+Parsing entity <Fetch>.
+Parsing architecture <Structural> of entity <fetch>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\FCU.vhd" into library work
+Parsing entity <FCU>.
+Parsing architecture <Behavioral> of entity <fcu>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Execute_Stage.vhd" into library work
+Parsing entity <Execute_Stage>.
+Parsing architecture <Structural> of entity <execute_stage>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Decode.vhd" into library work
+Parsing entity <Decode>.
+Parsing architecture <Structural> of entity <decode>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\Datapath.vhd" into library work
+Parsing entity <Datapath>.
+Parsing architecture <Behavioral> of entity <datapath>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\ControlUnit.vhd" into library work
+Parsing entity <ControlUnit>.
+Parsing architecture <Structural> of entity <controlunit>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\BTB.vhd" into library work
+Parsing entity <BTB>.
+Parsing architecture <Structural> of entity <btb>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" into library work
+Parsing entity <DLX_Core>.
+ERROR:HDLCompiler:806 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 52: Syntax error near ")".
+ERROR:HDLCompiler:806 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 60: Syntax error near "port".
+ERROR:HDLCompiler:69 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 147: <nbit_pc> is not declared.
+ERROR:HDLCompiler:1001 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 168: signal assignments not allowed in entity statement part
+ERROR:HDLCompiler:1001 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 169: signal assignments not allowed in entity statement part
+ERROR:HDLCompiler:69 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 171: <datapath> is not declared.
+ERROR:HDLCompiler:1001 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 209: signal assignments not allowed in entity statement part
+ERROR:HDLCompiler:69 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 211: <controlunit> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 226: <btb> is not declared.
+ERROR:HDLCompiler:580 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 243: Mismatch on label ; expected dlx_core
+ERROR:HDLCompiler:854 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd" Line 32: Unit <dlx_core> ignored due to previous errors.
+VHDL file C:\Users\Alessandro\Documents\GitHub\MyDLX\Core\DLX_Core.vhd ignored due to errors
+--> 
+
+Total memory usage is 231864 kilobytes
+
+Number of errors   :   11 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

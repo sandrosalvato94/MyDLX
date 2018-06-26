@@ -14,7 +14,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.8
+-- Revision 0.9
 -- Additional Comments: 
 --	Version 0.1 - Each component has been instantiated in. No test has been 
 --		    performed yet. Jmp_Branch_Manager is not completed because
@@ -23,7 +23,8 @@
 --			 0.5 - Changed pinout and data forwording
 --			 0.6 - New version of JBManager
 --			 0.7 - Minor modifications
---			 0.8 - Add Write_Mux and DE_save_PC signal on pinout
+--			 0.8 - Added Write_Mux and DE_save_PC signal on pinout
+--			 0.9 - Added DE_imm_address on pinout
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -64,6 +65,7 @@ entity Decode is
 		DE_save_PC	: in std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
+		DE_imm_address		: out std_logic_vector(NBIT_DATA-1 downto 0);
 		DE_RegA		: out std_logic_vector(NBIT_DATA-1 downto 0);
 		DE_RegB		: out std_logic_vector(NBIT_DATA-1 downto 0);
 		DE_RegI		: out std_logic_vector(NBIT_DATA-1 downto 0)
@@ -224,6 +226,8 @@ begin
 							SE_in => s_data_Fir_Tse,
 							SE_out => s_data_Fse_Timm
 							);
+							
+	DE_imm_address <= s_data_Fse_Timm;
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
