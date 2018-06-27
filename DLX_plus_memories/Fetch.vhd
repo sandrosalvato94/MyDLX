@@ -102,6 +102,8 @@ architecture Structural of Fetch is
 	signal s_target_Fbtbmux_Tnpcmux	: std_logic_vector(NBIT_PC-1 downto 0);		
 	signal s_npcvalue_Fnpcmux_Tnpc	: std_logic_vector(NBIT_PC-1 downto 0);
 	signal s_Faddbtb_Tmuxbtb		: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_inc_sel					: std_logic;
+	signal s_tmp						: std_logic_vector(NBIT_PC-1 downto 0);
 
 begin
 -----------------------------------------------------------------------------------------
@@ -134,9 +136,18 @@ begin
 -----------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------
+	s_inc_sel <= FE_enable AND NOT(FE_rst);
+	
+	MUXN_INC : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
+							port0 => (others => '0'),
+							port1 => INC,
+							sel => s_inc_sel,
+							portY => s_tmp
+							);
+	
 	ADDPC : PropagateCarryLookahead GENERIC MAP (N=>NBIT_PC) PORT MAP (
 							A => s_outputPC,
-							B => INC,
+							B => s_tmp,
 							Cin => '0',
 							--Cout => , -- not useful in this prototype
 							Sum => s_sum_Fcla_Tnpcreg

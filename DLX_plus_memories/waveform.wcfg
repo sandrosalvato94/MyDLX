@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="constants" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_dlx_pm" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
+      <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/dlx_pm_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dlx_pm_clk</obj_property>
+      <obj_property name="ObjectShortName">dlx_pm_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/dlx_pm_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dlx_pm_reset</obj_property>
+      <obj_property name="ObjectShortName">dlx_pm_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/dlx_pm_error" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dlx_pm_error</obj_property>
+      <obj_property name="ObjectShortName">dlx_pm_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[0]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[1]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[3]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[4]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[5]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[5]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[5]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[6]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[6]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[6]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[7]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[7]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[8]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[8]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Instr_Memory/iram_mem[9]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[9]</obj_property>
+      <obj_property name="ObjectShortName">iram_mem[9]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/fe_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fe_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fe_pc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/fe_ir_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fe_ir_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fe_ir_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd1</obj_property>
+      <obj_property name="ObjectShortName">rd1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd2</obj_property>
+      <obj_property name="ObjectShortName">rd2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_rd1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_rd1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">add_rd1[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_rd2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_rd2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">add_rd2[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_wr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_wr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">add_wr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[0]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">registers[0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[1]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">registers[1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">registers[2]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">registers[4]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">registers[3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[5]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[5]</obj_property>
+      <obj_property name="ObjectShortName">registers[5]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegA/data_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      <obj_property name="label">RegA</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegB/data_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      <obj_property name="label">RegB</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_opcode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_opcode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/s_outalu_falu_tmux" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_outalu_falu_tmux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_outalu_falu_tmux[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DATA_BYPASS_REG/data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -25,6 +25,7 @@
 --			 0.7 - Minor modifications
 --			 0.8 - Added Write_Mux and DE_save_PC signal on pinout
 --			 0.9 - Added DE_imm_address on pinout
+--			 0.10 - Changed addresses DE_IR toward register file addresses
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -164,7 +165,7 @@ architecture Structural of Decode is
 begin
 -------------------------------------------------------------------------------------	
 	Write_MUX : Mux_NBit_2x1 GENERIC MAP(NBIT_ADDR) PORT MAP (
-						port0 => DE_IR(25 downto 21),
+						port0 => DE_IR(15 downto 11),
 						port1 => (others => '1'), --31
 						sel => DE_save_PC,
 						portY => s_fmux_tr1
@@ -207,8 +208,8 @@ begin
 				RD2 => DE_rd2,
 				WR => DE_wr,
 				ADD_WR => s_wb,
-				ADD_RD1 => DE_IR(20 downto 16),
-				ADD_RD2 => DE_IR(15 downto 11),
+				ADD_RD1 => DE_IR(25 downto 21),
+				ADD_RD2 => DE_IR(20 downto 16),
 				DATAIN => DE_data_Fwb,
 				OUT1 => s_data_Frf_TregA,
 				OUT2 => s_data_Frf_TregB

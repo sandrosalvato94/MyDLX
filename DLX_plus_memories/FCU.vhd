@@ -61,7 +61,7 @@ entity FCU is
 		FCU_EX_MEM_MUX		: out std_logic;
 		
 		FCU_IF_ID_is_branch	: out std_logic;
-		FCU_insert_stall	: out std_logic
+		FCU_insert_stall	: out std_logic --true when '0'
 	);
 end FCU;
 
@@ -126,19 +126,19 @@ begin
 								FCU_IF_ID_11_15, FCU_ID_EX_11_15, FCU_EX_MEM_11_15, FCU_ID_EX_16_20)
 					 begin
 					
-					FCU_insert_stall <= '0';
+					FCU_insert_stall <= '1';
 					if(FCU_enable = '1') then
 						
 						if(s_id_ex_is_load = '1') then
 							if(s_if_id_is_reg = '1') then
 								if((FCU_ID_EX_11_15 = FCU_IF_ID_6_10) OR (FCU_ID_EX_11_15 = FCU_IF_ID_11_15)) then
-									FCU_insert_stall <= '1';
+									FCU_insert_stall <= '0';
 								end if;
 							end if;
 							
 							if((s_if_id_is_imm = '1') OR (s_if_id_is_load = '1') OR (s_if_id_is_store = '1') OR (s_if_id_is_jmp = '1')) then
 								if(FCU_ID_EX_11_15 = FCU_IF_ID_6_10) then
-									FCU_insert_stall <= '1';
+									FCU_insert_stall <= '0';
 								end if;
 							end if;
 							
@@ -147,7 +147,7 @@ begin
 						if(s_ex_mem_is_load = '1') then
 							if(s_if_id_is_jmp = '1') then
 								if(FCU_EX_MEM_11_15 = FCU_IF_ID_6_10) then
-									FCU_insert_stall <= '1';
+									FCU_insert_stall <= '0';
 								end if;
 							end if;
 						end if; 
@@ -155,13 +155,13 @@ begin
 						if(s_if_id_is_jmp = '1') then
 							if(s_id_ex_is_reg = '1') then
 								if(FCU_ID_EX_16_20 = FCU_IF_ID_6_10) then
-									FCU_insert_stall <= '1';
+									FCU_insert_stall <= '0';
 								end if;
 							end if;
 							
 							if((s_id_ex_is_imm = '1') OR (s_id_ex_is_store = '1')) then
 								if(FCU_EX_MEM_11_15 = FCU_IF_ID_6_10) then
-									FCU_insert_stall <= '1';
+									FCU_insert_stall <= '0';
 								end if;
 							end if;
 						end if;

@@ -205,7 +205,7 @@ begin
 		);
 	
 	DLX_PC <= s_PC_Fdp_Tbtb;
-	
+
 	CU : ControlUnit PORT MAP (
 		CU_instr_opcode	=> s_IR_opcode_Fdp_Tcu,
 		CU_instr_func		=> s_IR_func_Fdp_Tcu,
@@ -213,7 +213,7 @@ begin
 		CU_reset				=> DLX_reset,
 		CU_clk				=> DLX_clk,
 		CU_flush				=> s_branch_taken_Fdp_Tdp_cu,
-		CU_bubble			=> s_insert_bubble_Fdp_Tcu,
+		CU_bubble			=> s_insert_bubble_Fdp_Tcu, --attivo basso
 		CU_CW_DE				=> s_DE_cw_Fcu_Tdp,
 		CU_CW_EX				=> s_EX_cw_Fcu_Tdp,
 		CU_CW_MEM			=> s_MEM_cw_Fcu_Tdp,

@@ -2,14 +2,14 @@ Command line:
    TB_Fetch_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50973
+     -socket  58339
 
-Mon Oct 09 21:41:14 2017
+Wed Jun 27 15:55:58 2018
 
 
- Elaboration Time: 0.109375 sec
+ Elaboration Time: 0.140625 sec
 
- Current Memory Usage: 862.343 Meg
+ Current Memory Usage: 861.585 Meg
 
  Total Signals          : 249
  Total Nets             : 33495
@@ -20,10 +20,11 @@ Mon Oct 09 21:41:14 2017
  Total Traceable Variables  : 131
  Total Scalar Nets and Variables : 34645
 Total Line Count : 303
+Total Line Count : 303
 
- Total Simulation Time: 0.15625 sec
+ Total Simulation Time: 0.703125 sec
 
- Current Memory Usage: 863.392 Meg
+ Current Memory Usage: 705.085 Meg
 
-Mon Oct 09 21:41:24 2017
+Wed Jun 27 15:58:42 2018
 

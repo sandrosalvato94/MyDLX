@@ -42,9 +42,9 @@ begin  -- IRam_Bhe
     variable index : integer := 0;
     variable tmp_data_u : std_logic_vector(I_SIZE-1 downto 0);
   begin  -- process FILL_MEM_P
-    if (Rst = '1') then
+    if (Rst = '0') then
     IRAM_mem(0 to IRAM_DEPTH - 1) <= (others => (others => '0'));
-      file_open(mem_fp, "Test/test.bin.mem", READ_MODE);
+      file_open(mem_fp, "xor_swap.bin.mem", READ_MODE);
       --file_open(out_fp, "output.bin", write_mode);
       while (not endfile(mem_fp) and index < IRAM_DEPTH) loop
         readline(mem_fp,file_line);

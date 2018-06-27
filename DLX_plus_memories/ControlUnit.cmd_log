@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.syr" 

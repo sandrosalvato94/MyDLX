@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-12T17:04:11</DateModified>
+  <DateModified>2018-06-27T15:54:54</DateModified>
   <ModuleName>FE_pl_IRAM</ModuleName>
   <SummaryTimeStamp>2017-10-09T17:58:23</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Fetch_Stage/Fetch_plus_IRAM/iseconfig/FE_pl_IRAM.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/Fetch_Stage/Fetch_plus_IRAM\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/Fetch_Stage/Fetch_plus_IRAM/iseconfig/FE_pl_IRAM.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/Fetch_Stage/Fetch_plus_IRAM\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-09T17:29:38</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,5 +1,4 @@
 vhdl work "mux21.vhd"
-vhdl work "rca.vhd"
 vhdl work "PG_cell.vhd"
 vhdl work "mux_generic.vhd"
 vhdl work "constants.vhd"

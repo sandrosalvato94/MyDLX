@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-26T11:55:13</DateModified>
+  <DateModified>2018-06-27T09:38:35</DateModified>
   <ModuleName>DLX_plus_memories</ModuleName>
   <SummaryTimeStamp>2018-06-26T11:54:15</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/iseconfig/DLX_plus_memories.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories\</ImplementationReportsDirectory>
   <DateInitialized>2018-06-26T11:53:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

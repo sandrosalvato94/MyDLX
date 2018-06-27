@@ -1,0 +1,157 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe -prj C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_beh.prj work.TB_DLX_PM 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/mux21.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/PG_cell.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/mux_generic.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/constants.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/PG_network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Mux_1Bit_2X1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/GeneralPropagate.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/GeneralGenerate.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/XNORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sum_Network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Comparator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Carry_Network.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelect.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarryGenerator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/t_ff_rst1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/t_ff.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/PropagateCarryLookahead.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/P4Adder.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Logic_Unit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Flag_Generator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Comparison_Logic.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Barrel_Shifter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ud_counter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Extender.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/registerfile.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Mux_Bit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Multiplier.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Jmp_Branch_Manager.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Enable_Interface.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/D_FF.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Data_Reducer.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CU_SatCounter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ANDGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/WriteBack_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Reg1Bit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRotateRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NPriorityEncoder.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Memory_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Fetch.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/FCU.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Execute_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Decode.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Datapath.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/BTB.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DRAM.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/a.c-IRAM.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 41: <rca> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 50: <rca> remains a black-box since it has no binding entity.
+Completed static elaboration
+Fuse Memory Usage: 169796 KB
+Fuse CPU Usage: 812 ms
+WARNING:Simulator:648 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 41. Instance rca is unbound
+WARNING:Simulator:648 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 50. Instance rca is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package constants
+Compiling architecture behavioral of entity NRegister [\NRegister(32)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(32)\]
+Compiling architecture behavioral of entity PG_cell [pg_cell_default]
+Compiling architecture behavioral of entity PG_network [\PG_network(32)\]
+Compiling architecture behavioral of entity Carry_Network [\Carry_Network(32)\]
+Compiling architecture behavioral of entity Sum_Network [\Sum_Network(32)\]
+Compiling architecture behavioral of entity PropagateCarryLookahead [\PropagateCarryLookahead(32)\]
+Compiling architecture structural of entity Fetch [\Fetch(32,32)\]
+Compiling architecture behavioral of entity Reg1Bit [reg1bit_default]
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(5)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(5)\]
+Compiling architecture behavioral of entity register_file [\register_file(32,32,5)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(10)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(6)\]
+Compiling architecture behavioral of entity Sign_Extender [\Sign_Extender(32)\]
+Compiling architecture behavioral of entity ComparatorWithEnable [comparatorwithenable_default]
+Compiling architecture behavioral of entity NComparatorWithEnable [\NComparatorWithEnable(32)\]
+Compiling architecture behavioral of entity Jmp_Branch_Manager [\Jmp_Branch_Manager(32)\]
+Compiling architecture structural of entity Decode [\Decode(32,32,5,32)\]
+Compiling architecture behavioral of entity Enable_Interface [\Enable_Interface(32)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(8)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(40)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
+Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(5)\]
+Compiling package math_real
+Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
+Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
+Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(32,8)\]
+Compiling architecture behavioral of entity MUX21 [mux21_default]
+Compiling architecture structural of entity MUX21_GENERIC [\MUX21_GENERIC(4)\]
+Compiling architecture structural of entity CarrySelectBlock [\CarrySelectBlock(4)\]
+Compiling architecture structural of entity CarrySelect [\CarrySelect(32,4)\]
+Compiling architecture behavioral of entity P4Adder [\P4Adder(32)\]
+Compiling architecture structural of entity Logic_Unit [\Logic_Unit(32)\]
+Compiling architecture behavioral of entity ORGate_NX1 [\ORGate_NX1(32)\]
+Compiling architecture behavioral of entity Mux_1Bit_2X1 [mux_1bit_2x1_default]
+Compiling architecture structural of entity Comparator [\Comparator(32)\]
+Compiling architecture structural of entity Comparison_Logic [\Comparison_Logic(32)\]
+Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(32)\]
+Compiling architecture behavioral of entity XNORGate_NX1 [\XNORGate_NX1(32)\]
+Compiling architecture structural of entity Flag_Generator [\Flag_Generator(32)\]
+Compiling architecture structural of entity ALU [\ALU(32,5)\]
+Compiling architecture behavioral of entity Multiplier [\Multiplier(32)\]
+Compiling architecture structural of entity Execute_Stage [\Execute_Stage(32,5)\]
+Compiling architecture behavioral of entity Data_Reducer [\Data_Reducer(32)\]
+Compiling architecture structural of entity Memory_Stage [\Memory_Stage(32,32)\]
+Compiling architecture structural of entity Sign_Reducer [\Sign_Reducer(32)\]
+Compiling architecture structural of entity WriteBack_Stage [\WriteBack_Stage(32)\]
+Compiling architecture behavioral of entity FCU [fcu_default]
+Compiling architecture structural of entity Datapath [\Datapath(32,5)\]
+Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(26)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(26)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(19)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(8)\]
+Compiling architecture behavioral of entity NRegister [\NRegister(4)\]
+Compiling architecture structural of entity ControlUnit [controlunit_default]
+Compiling architecture behavioral of entity NPriorityEncoder [\NPriorityEncoder(5)\]
+Compiling architecture behavioral of entity D_FF [d_ff_default]
+Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(2)\]
+Compiling architecture behavioral of entity NRotateRegister [\NRotateRegister(32)\]
+Compiling architecture behavioral of entity t_ff_rst0 [t_ff_rst0_default]
+Compiling architecture behavioral of entity t_ff_rst1 [t_ff_rst1_default]
+Compiling architecture str of entity UD_COUNTER [\UD_COUNTER(2)\]
+Compiling architecture behavioral of entity CU_SatCounter [cu_satcounter_default]
+Compiling architecture behavioral of entity ANDGate_NX1 [\ANDGate_NX1(2)\]
+Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(2)\]
+Compiling architecture structural of entity SAT_Counter_BTB [\SAT_Counter_BTB(2)\]
+Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(5)\]
+Compiling architecture structural of entity BTB [\BTB(32,32,32,2)\]
+Compiling architecture structural of entity DLX_Core [\DLX_Core(32,5,32,2)\]
+Compiling architecture behavioral of entity DRAM [\DRAM(10,32)\]
+Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
+Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories_default]
+Compiling architecture behavior of entity tb_dlx_pm
+Time Resolution for simulation is 1ps.
+Waiting for 66 sub-compilation(s) to finish...

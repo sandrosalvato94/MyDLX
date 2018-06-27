@@ -254,9 +254,9 @@ begin
 
 ---------------------------------------------------------------------------------------------------
 	BUBBLE_MUX	: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 26) PORT MAP (
-															port0 => s_control_word,
-															port1 => s_cw_bubble,
-															sel => CU_bubble,
+															port0 => s_cw_bubble, 
+															port1 => s_control_word,
+															sel => CU_bubble, --attivo basso
 															portY => s_cw_tmp
 															);
 	
