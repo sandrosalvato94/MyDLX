@@ -57,6 +57,6 @@ srl r19,r16,r2
 srli r20,r16,#1
 sra r21,r12,r2
 srai r22,r12,#1
-mult r23,r1,r5
 xor r24,r1,r1
 xori r25,r1,#2
+mult r1, r5

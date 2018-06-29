@@ -2,31 +2,29 @@ Command line:
    TB_DLX_PM_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  63329
+     -socket  62885
 
-Fri Jun 29 13:12:33 2018
+Fri Jun 29 18:04:13 2018
 
 
- Elaboration Time: 0.890625 sec
+ Elaboration Time: 0.703125 sec
 
- Current Memory Usage: 928.895 Meg
+ Current Memory Usage: 928.174 Meg
 
- Total Signals          : 13300
- Total Nets             : 186655
+ Total Signals          : 13299
+ Total Nets             : 186654
  Total Signal Drivers   : 8944
  Total Blocks           : 13260
  Total Primitive Blocks : 9300
  Total Processes        : 8825
  Total Traceable Variables  : 10364
- Total Scalar Nets and Variables : 198628
-Total Line Count : 9468
-Total Line Count : 9468
+ Total Scalar Nets and Variables : 198627
 Total Line Count : 9468
 Total Line Count : 9468
 
- Total Simulation Time: 1.98438 sec
+ Total Simulation Time: 1.65625 sec
 
- Current Memory Usage: 1088.54 Meg
+ Current Memory Usage: 1092.01 Meg
 
-Fri Jun 29 13:22:44 2018
+Fri Jun 29 18:15:59 2018
 

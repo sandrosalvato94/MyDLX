@@ -100,7 +100,7 @@ architecture Structural of Barrel_Shifter is
 	signal s_selected_mask_right	: std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
 	signal s_selected_mask_left	: std_logic_vector(2**NBIT_AMOUNT+8-1 downto 0);
 	signal s_out_mask		: matrix_third_stage;
-	signal s_is_shift		: std_logic;
+--	signal s_is_shift		: std_logic;
 	signal s_amount, s_not_amount	: std_logic_vector(2 downto 0);
 	signal s_direction		: std_logic;
 	signal s_or_opcode		: std_logic;

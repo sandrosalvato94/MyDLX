@@ -301,7 +301,7 @@ architecture Structural of Datapath is
 	signal s_data_fwd_bot_aluY		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_opA_Fmux_Tex			: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_opB_Fmux_Tex			: std_logic_vector(NBIT_DATA-1 downto 0);
-	signal s_NBIT_DATA_div_2		: std_logic_vector(L-1 downto 0) := (L-1 => '0', others => '1');
+	signal s_NBIT_DATA_div_2		: std_logic_vector(L-1 downto 0) := (L-1 => '1', others => '0');
 	signal s_SA_Fmux_Tmux1			: std_logic_vector(L-1 downto 0);
 	signal s_SA_Fmux_Tmux2			: std_logic_vector(L-1 downto 0);
 	signal s_SA_Fmux_Tex				: std_logic_vector(L-1 downto 0);
@@ -544,7 +544,7 @@ begin
 		EX_reset 		=> DP_reset,
 		EX_enable		=> s_ex_enable,
 		EX_OpA			=> s_opA_Fmux_Tex, --from reverse mux
-		EX_OpB			=> s_opA_Fmux_Tex, --from reverse mux
+		EX_OpB			=> s_opB_Fmux_Tex, --from reverse mux
 		EX_Opcode		=> DP_ALU_Opcode,
 		EX_ShiftAmount	=> s_SA_Fmux_Tex, --from shift amount mux
 		EX_sel_mux_out	=> DP_UUW_sel,
