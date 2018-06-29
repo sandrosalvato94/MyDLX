@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.12 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -123,8 +123,8 @@ Parsing architecture <Structural> of entity <controlunit>.
 =========================================================================
 
 Elaborating entity <ControlUnit> (architecture <Structural>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\ControlUnit.vhd" Line 88: Using initial value "00000100000000000010000000" for s_cw_bubble since it is never assigned
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\ControlUnit.vhd" Line 95: cu_reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\ControlUnit.vhd" Line 87: Using initial value "00000100000000000010000000" for s_cw_bubble since it is never assigned
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\ControlUnit.vhd" Line 94: cu_reset should be on the sensitivity list of the process
 
 Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from library <work>.
 
@@ -142,36 +142,8 @@ Elaborating entity <NRegister> (architecture <Behavioral>) with generics from li
 
 Synthesizing Unit <ControlUnit>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\ControlUnit.vhd".
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_control_word<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <CU_error>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred  27 Latch(s).
-	inferred  77 Multiplexer(s).
+	inferred   5 Multiplexer(s).
 Unit <ControlUnit> synthesized.
 
 Synthesizing Unit <Mux_NBit_2x1>.
@@ -222,11 +194,9 @@ Macro Statistics
  26-bit register                                       : 1
  4-bit register                                        : 1
  8-bit register                                        : 1
-# Latches                                              : 27
- 1-bit latch                                           : 27
-# Multiplexers                                         : 78
- 1-bit 2-to-1 multiplexer                              : 77
- 26-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 4
+ 26-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
@@ -241,16 +211,15 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Registers                                            : 57
  Flip-Flops                                            : 57
-# Multiplexers                                         : 78
- 1-bit 2-to-1 multiplexer                              : 77
- 26-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 4
+ 26-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <s_control_word_20> in Unit <ControlUnit> is equivalent to the following FF/Latch, which will be removed : <s_control_word_23> 
 
 Optimizing unit <NRegister_1> ...
 
@@ -299,17 +268,15 @@ Top Level Output File Name         : ControlUnit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 96
-#      LUT2                        : 28
-#      LUT3                        : 8
-#      LUT4                        : 7
-#      LUT5                        : 16
-#      LUT6                        : 37
-# FlipFlops/Latches                : 82
+# BELS                             : 77
+#      LUT2                        : 6
+#      LUT3                        : 9
+#      LUT4                        : 5
+#      LUT5                        : 15
+#      LUT6                        : 42
+# FlipFlops/Latches                : 56
 #      FDCE                        : 56
-#      LDE_1                       : 26
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 50
 #      IBUF                        : 21
@@ -322,24 +289,24 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              72  out of  126800     0%  
- Number of Slice LUTs:                   96  out of  63400     0%  
-    Number used as Logic:                96  out of  63400     0%  
+ Number of Slice Registers:              47  out of  126800     0%  
+ Number of Slice LUTs:                   77  out of  63400     0%  
+    Number used as Logic:                77  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    112
-   Number with an unused Flip Flop:      40  out of    112    35%  
-   Number with an unused LUT:            16  out of    112    14%  
-   Number of fully used LUT-FF pairs:    56  out of    112    50%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:     95
+   Number with an unused Flip Flop:      48  out of     95    50%  
+   Number with an unused LUT:            18  out of     95    18%  
+   Number of fully used LUT-FF pairs:    29  out of     95    30%  
+   Number of unique control sets:         2
 
 IO Utilization: 
  Number of IOs:                          51
  Number of bonded IOBs:                  51  out of    210    24%  
-    IOB Flip Flops/Latches:              10
+    IOB Flip Flops/Latches:               9
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -362,7 +329,6 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CU_reset                           | IBUF+BUFG              | 26    |
 CU_clk                             | BUFGP                  | 56    |
 -----------------------------------+------------------------+-------+
 
@@ -375,9 +341,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 0.653ns (Maximum Frequency: 1532.567MHz)
-   Minimum input arrival time before clock: 2.544ns
-   Maximum output required time after clock: 0.754ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 3.399ns
+   Maximum output required time after clock: 0.645ns
+   Maximum combinational path delay: 2.654ns
 
 Timing Details:
 ---------------
@@ -405,47 +371,28 @@ Delay:               0.653ns (Levels of Logic = 0)
                                        (56.6% logic, 43.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_reset'
-  Total number of paths / destination ports: 467 / 52
--------------------------------------------------------------------------
-Offset:              2.544ns (Levels of Logic = 5)
-  Source:            CU_instr_func<2> (PAD)
-  Destination:       s_control_word_16 (LATCH)
-  Destination Clock: CU_reset rising
-
-  Data Path: CU_instr_func<2> to s_control_word_16
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            12   0.001   0.562  CU_instr_func_2_IBUF (CU_instr_func_2_IBUF)
-     LUT3:I0->O            1   0.097   0.693  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>12_SW0 (N2)
-     LUT6:I0->O            3   0.097   0.521  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>12 (Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>12)
-     LUT5:I2->O            1   0.097   0.379  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>133 (Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>13)
-     LUT6:I4->O            1   0.097   0.000  Mmux_CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<10>1 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<10>)
-     LDE_1:D                  -0.028          s_control_word_16
-    ----------------------------------------
-    Total                      2.544ns (0.389ns logic, 2.155ns route)
-                                       (15.3% logic, 84.7% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_clk'
-  Total number of paths / destination ports: 168 / 139
+  Total number of paths / destination ports: 727 / 139
 -------------------------------------------------------------------------
-Offset:              1.318ns (Levels of Logic = 2)
-  Source:            CU_reset (PAD)
-  Destination:       WB_CW/data_out_3 (FF)
+Offset:              3.399ns (Levels of Logic = 6)
+  Source:            CU_instr_func<10> (PAD)
+  Destination:       DE_CW/data_out_10 (FF)
   Destination Clock: CU_clk rising
 
-  Data Path: CU_reset to WB_CW/data_out_3
+  Data Path: CU_instr_func<10> to DE_CW/data_out_10
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            28   0.001   0.485  CU_reset_IBUF (CU_reset_IBUF)
-     LUT2:I0->O           29   0.097   0.386  s_reset_regs1 (s_reset_regs)
-     FDCE:CLR                  0.349          WB_CW/data_out_0
+     IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
+     LUT5:I0->O            4   0.097   0.707  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>211 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
+     LUT6:I0->O            2   0.097   0.383  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
+     LUT5:I3->O            4   0.097   0.570  _n0452<10>1 (_n0452<10>)
+     LUT6:I2->O            2   0.097   0.561  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1)
+     LUT6:I2->O            1   0.097   0.000  BUBBLE_MUX/Mmux_portY72 (s_cw_tmp<16>)
+     FDCE:D                    0.008          DE_CW/data_out_10
     ----------------------------------------
-    Total                      1.318ns (0.447ns logic, 0.871ns route)
-                                       (33.9% logic, 66.1% route)
+    Total                      3.399ns (0.494ns logic, 2.905ns route)
+                                       (14.5% logic, 85.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CU_clk'
@@ -467,23 +414,26 @@ Offset:              0.645ns (Levels of Logic = 1)
                                        (56.0% logic, 44.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CU_reset'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 36 / 1
 -------------------------------------------------------------------------
-Offset:              0.754ns (Levels of Logic = 1)
-  Source:            CU_error (LATCH)
+Delay:               2.654ns (Levels of Logic = 6)
+  Source:            CU_instr_func<10> (PAD)
   Destination:       CU_error (PAD)
-  Source Clock:      CU_reset rising
 
-  Data Path: CU_error to CU_error
+  Data Path: CU_instr_func<10> to CU_error
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE_1:G->Q            1   0.475   0.279  CU_error (CU_error_OBUF)
+     IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
+     LUT5:I0->O            4   0.097   0.707  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>211 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
+     LUT6:I0->O            2   0.097   0.299  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
+     LUT6:I5->O            1   0.097   0.295  Mmux_CU_error12 (Mmux_CU_error11)
+     LUT4:I3->O            1   0.097   0.279  Mmux_CU_error14 (CU_error_OBUF)
      OBUF:I->O                 0.000          CU_error_OBUF (CU_error)
     ----------------------------------------
-    Total                      0.754ns (0.475ns logic, 0.279ns route)
-                                       (63.0% logic, 37.0% route)
+    Total                      2.654ns (0.389ns logic, 2.265ns route)
+                                       (14.7% logic, 85.3% route)
 
 =========================================================================
 
@@ -496,20 +446,19 @@ Clock to Setup on destination clock CU_clk
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 CU_clk         |    0.653|         |         |         |
-CU_reset       |    0.959|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.89 secs
+Total CPU time to Xst completion: 7.47 secs
  
 --> 
 
-Total memory usage is 370796 kilobytes
+Total memory usage is 324140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   29 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

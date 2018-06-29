@@ -4,6 +4,8 @@ Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/mux21.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/fa.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/rca.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/PG_cell.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/mux_generic.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/constants.vhd" into library work
@@ -34,6 +36,7 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Reducer.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Extender.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/registerfile.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Reg1Bit.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRegister.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NComparatorWithEnable.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Mux_Bit.vhd" into library work
@@ -47,7 +50,6 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ALU.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/WriteBack_Stage.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Reg1Bit.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRotateRegister.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NPriorityEncoder.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Memory_Stage.vhd" into library work
@@ -64,13 +66,9 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:89 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 41: <rca> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 50: <rca> remains a black-box since it has no binding entity.
 Completed static elaboration
-Fuse Memory Usage: 169796 KB
-Fuse CPU Usage: 812 ms
-WARNING:Simulator:648 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 41. Instance rca is unbound
-WARNING:Simulator:648 - "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CarrySelectBlock.vhd" Line 50. Instance rca is unbound
+Fuse Memory Usage: 166296 KB
+Fuse CPU Usage: 749 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -107,6 +105,8 @@ Compiling package math_real
 Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
 Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
 Compiling architecture behavioral of entity CarryGenerator [\CarryGenerator(32,8)\]
+Compiling architecture behavioral of entity FA [fa_default]
+Compiling architecture structural of entity RCA [\RCA(4)\]
 Compiling architecture behavioral of entity MUX21 [mux21_default]
 Compiling architecture structural of entity MUX21_GENERIC [\MUX21_GENERIC(4)\]
 Compiling architecture structural of entity CarrySelectBlock [\CarrySelectBlock(4)\]
@@ -154,4 +154,8 @@ Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
 Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories_default]
 Compiling architecture behavior of entity tb_dlx_pm
 Time Resolution for simulation is 1ps.
-Waiting for 66 sub-compilation(s) to finish...
+Waiting for 68 sub-compilation(s) to finish...
+Compiled 158 VHDL Units
+Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
+Fuse Memory Usage: 239852 KB
+Fuse CPU Usage: 2249 ms

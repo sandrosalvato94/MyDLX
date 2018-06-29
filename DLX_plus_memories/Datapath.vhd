@@ -318,6 +318,12 @@ architecture Structural of Datapath is
 	signal s_stall						: std_logic;
 	signal s_reset_middle_regs		: std_logic;
 	signal s_ex_enable				: std_logic;
+	signal s_enable_if				: std_logic;
+	signal s_enable_de				: std_logic;
+	signal s_enable_ex				: std_logic;
+	signal s_enable_mem				: std_logic;
+	signal s_enable_wb				: std_logic;
+	signal s_fcu_enable				: std_logic;
 	
 begin
 
@@ -376,8 +382,8 @@ begin
 		data_out=> s_stall_Fif
 		);
 	
-	DP_IR_opcode <= s_IR_Fif(31 downto 26);
-	DP_IR_func <= s_IR_Fif(10 downto 0);
+	DP_IR_opcode <= DP_IR(31 downto 26);
+	DP_IR_func <= DP_IR(10 downto 0);
 	
 	DE_Stage : Decode GENERIC MAP (NBIT_PC	=> 2**NBIT_IRAM_ADDR, 
 											 NBIT_IR => 32, NBIT_ADDR => 5, NBIT_DATA => NBIT_DATA)  PORT MAP (
@@ -635,9 +641,56 @@ begin
 		WB_SGN_usg		=> DP_Load_SGN_usg_reduce,
 		WB_out			=> s_data_Fwb_Tde
 		);
+---------------------------Registri aggiunti 27/06	
+--	REG_EN_IF : Reg1Bit  PORT MAP (
+--		clk => DP_clk,
+--		reset=> s_reset_middle_regs,
+--		data_in=> s_fcu_enable,
+--		enable=> s_ex_enable, 
+--		load=> '1',
+--		data_out=> s_enable_if
+--		);
+--	
+--	REG_EN_ID : Reg1Bit  PORT MAP (
+--		clk => DP_clk,
+--		reset=> s_reset_middle_regs,
+--		data_in=> s_enable_if,
+--		enable=> s_ex_enable, 
+--		load=> '1',
+--		data_out=> s_enable_de
+--		);
+--	
+--	 REG_EN_EX : Reg1Bit  PORT MAP (
+--		clk => DP_clk,
+--		reset=> s_reset_middle_regs,
+--		data_in=> s_enable_de,
+--		enable=> s_ex_enable, 
+--		load=> '1',
+--		data_out=> s_enable_ex
+--		);
+--	
+--	 REG_EN_MEM : Reg1Bit  PORT MAP (
+--		clk => DP_clk,
+--		reset=> s_reset_middle_regs,
+--		data_in=> s_enable_ex,
+--		enable=> s_ex_enable, 
+--		load=> '1',
+--		data_out=> s_enable_mem
+--		);
+--		
+--	REG_EN_WB : Reg1Bit  PORT MAP (
+--		clk => DP_clk,
+--		reset=> s_reset_middle_regs,
+--		data_in=> s_enable_mem,
+--		enable=> s_ex_enable, 
+--		load=> '1',
+--		data_out=> s_enable_wb
+--		);
+	
+	s_fcu_enable <= DP_enable AND NOT (DP_reset);
 	
 	FRW_CU	: FCU PORT MAP (
-		FCU_enable			=> DP_enable,
+		FCU_enable			=> s_fcu_enable,
 		
 		FCU_IF_ID_Op		=> s_IR_Fif(31 downto 26),
 		FCU_ID_EX_Op		=> s_IR_Fde(31 downto 26),

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Datapath.prj
 
@@ -192,6 +192,9 @@ Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\
 Parsing entity <register_file>.
 Parsing architecture <Behavioral> of entity <register_file>.
 Parsing configuration <CFG_RF_BEH>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Reg1Bit.vhd" into library work
+Parsing entity <Reg1Bit>.
+Parsing architecture <Behavioral> of entity <reg1bit>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\NRegister.vhd" into library work
 Parsing entity <NRegister>.
 Parsing architecture <Behavioral> of entity <nregister>.
@@ -216,9 +219,6 @@ Parsing architecture <Structural> of entity <alu>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\WriteBack_Stage.vhd" into library work
 Parsing entity <WriteBack_Stage>.
 Parsing architecture <Structural> of entity <writeback_stage>.
-Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Reg1Bit.vhd" into library work
-Parsing entity <Reg1Bit>.
-Parsing architecture <Behavioral> of entity <reg1bit>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Memory_Stage.vhd" into library work
 Parsing entity <Memory_Stage>.
 Parsing architecture <Structural> of entity <memory_stage>.
@@ -361,30 +361,11 @@ WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_me
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 155: s_if_id_is_jmp should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 156: s_id_ex_is_reg should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 162: s_id_ex_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 178: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 179: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 184: s_ex_mem_is_imm should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 185: fcu_ex_mem_11_15 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 196: s_mem_wb_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 216: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 217: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 222: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 229: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 230: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 235: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 243: s_ex_mem_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 244: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 249: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 256: s_ex_mem_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 257: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 262: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 279: s_ex_mem_is_store should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 281: s_mem_wb_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 287: s_mem_wb_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 298: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 300: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 312: Net <s_load_data_Fmem_Twb[31]> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 502. All outputs of instance <REVERSE_BOT_MUX> of block <Mux_NBit_2x1> are unconnected in block <Datapath>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 602. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 508. All outputs of instance <REVERSE_BOT_MUX> of block <Mux_NBit_2x1> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 608. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -394,10 +375,10 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 502: Output port <portY> of the instance <REVERSE_BOT_MUX> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 532: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 579: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 602: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 508: Output port <portY> of the instance <REVERSE_BOT_MUX> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 538: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 585: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 608: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <s_load_data_Fmem_Twb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -1784,49 +1765,67 @@ Unit <Sign_Reducer> synthesized.
 
 Synthesizing Unit <FCU>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_mem_wb_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_imm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_imm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_imm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_mem_wb_is_imm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_mem_wb_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_jmp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <FCU_IF_ID_is_branch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 134
     Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 134
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 157
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 180
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 185
     Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 197
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 218
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 223
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 231
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 236
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 245
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 250
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 258
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 263
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 282
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 288
-    Found 6-bit comparator lessequal for signal <n0090> created at line 326
-    Found 6-bit comparator lessequal for signal <n0092> created at line 326
-    Found 6-bit comparator lessequal for signal <n0095> created at line 327
-    Found 6-bit comparator lessequal for signal <n0097> created at line 327
-    Found 6-bit comparator lessequal for signal <n0101> created at line 328
-    Found 6-bit comparator lessequal for signal <n0103> created at line 328
-    Found 6-bit comparator lessequal for signal <n0111> created at line 335
-    Found 6-bit comparator lessequal for signal <n0113> created at line 335
-    Found 6-bit comparator lessequal for signal <n0116> created at line 336
-    Found 6-bit comparator lessequal for signal <n0118> created at line 336
-    Found 6-bit comparator lessequal for signal <n0122> created at line 337
-    Found 6-bit comparator lessequal for signal <n0124> created at line 337
-    Found 6-bit comparator lessequal for signal <n0132> created at line 344
-    Found 6-bit comparator lessequal for signal <n0134> created at line 344
-    Found 6-bit comparator lessequal for signal <n0137> created at line 345
-    Found 6-bit comparator lessequal for signal <n0139> created at line 345
-    Found 6-bit comparator lessequal for signal <n0143> created at line 346
-    Found 6-bit comparator lessequal for signal <n0145> created at line 346
-    Found 6-bit comparator lessequal for signal <n0153> created at line 353
-    Found 6-bit comparator lessequal for signal <n0155> created at line 353
-    Found 6-bit comparator lessequal for signal <n0158> created at line 354
-    Found 6-bit comparator lessequal for signal <n0160> created at line 354
-    Found 6-bit comparator lessequal for signal <n0164> created at line 355
-    Found 6-bit comparator lessequal for signal <n0166> created at line 355
-    Found 6-bit comparator lessequal for signal <n0195> created at line 413
-    Found 6-bit comparator lessequal for signal <n0197> created at line 413
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 219
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 224
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 232
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 237
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 246
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 251
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 259
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 264
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 284
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 290
+    Found 6-bit comparator lessequal for signal <n0090> created at line 329
+    Found 6-bit comparator lessequal for signal <n0092> created at line 329
+    Found 6-bit comparator lessequal for signal <n0095> created at line 330
+    Found 6-bit comparator lessequal for signal <n0097> created at line 330
+    Found 6-bit comparator lessequal for signal <n0101> created at line 331
+    Found 6-bit comparator lessequal for signal <n0103> created at line 331
+    Found 6-bit comparator lessequal for signal <n0113> created at line 338
+    Found 6-bit comparator lessequal for signal <n0115> created at line 338
+    Found 6-bit comparator lessequal for signal <n0118> created at line 339
+    Found 6-bit comparator lessequal for signal <n0120> created at line 339
+    Found 6-bit comparator lessequal for signal <n0124> created at line 340
+    Found 6-bit comparator lessequal for signal <n0126> created at line 340
+    Found 6-bit comparator lessequal for signal <n0136> created at line 347
+    Found 6-bit comparator lessequal for signal <n0138> created at line 347
+    Found 6-bit comparator lessequal for signal <n0141> created at line 348
+    Found 6-bit comparator lessequal for signal <n0143> created at line 348
+    Found 6-bit comparator lessequal for signal <n0147> created at line 349
+    Found 6-bit comparator lessequal for signal <n0149> created at line 349
+    Found 6-bit comparator lessequal for signal <n0159> created at line 356
+    Found 6-bit comparator lessequal for signal <n0161> created at line 356
+    Found 6-bit comparator lessequal for signal <n0164> created at line 357
+    Found 6-bit comparator lessequal for signal <n0166> created at line 357
+    Found 6-bit comparator lessequal for signal <n0170> created at line 358
+    Found 6-bit comparator lessequal for signal <n0172> created at line 358
+    Found 6-bit comparator lessequal for signal <n0203> created at line 416
+    Found 6-bit comparator lessequal for signal <n0205> created at line 416
     Summary:
+	inferred  17 Latch(s).
 	inferred  42 Comparator(s).
 	inferred  49 Multiplexer(s).
 Unit <FCU> synthesized.
@@ -1837,16 +1836,16 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 27
- 1-bit register                                        : 4
+# Registers                                            : 30
+ 1-bit register                                        : 7
  32-bit register                                       : 19
  5-bit register                                        : 4
-# Latches                                              : 1024
- 1-bit latch                                           : 1024
+# Latches                                              : 1041
+ 1-bit latch                                           : 1041
 # Comparators                                          : 44
  5-bit comparator equal                                : 18
  6-bit comparator lessequal                            : 26
-# Multiplexers                                         : 7455
+# Multiplexers                                         : 7456
  1-bit 2-to-1 multiplexer                              : 7317
  1-bit 7-to-1 multiplexer                              : 1
  10-bit 2-to-1 multiplexer                             : 2
@@ -1855,7 +1854,7 @@ Macro Statistics
  32-bit 2-to-1 multiplexer                             : 69
  32-bit 32-to-1 multiplexer                            : 2
  40-bit 2-to-1 multiplexer                             : 4
- 5-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 2
  64-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 21
@@ -1945,12 +1944,12 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 632
- Flip-Flops                                            : 632
+# Registers                                            : 635
+ Flip-Flops                                            : 635
 # Comparators                                          : 44
  5-bit comparator equal                                : 18
  6-bit comparator lessequal                            : 26
-# Multiplexers                                         : 7454
+# Multiplexers                                         : 7455
  1-bit 2-to-1 multiplexer                              : 7316
  1-bit 7-to-1 multiplexer                              : 1
  10-bit 2-to-1 multiplexer                             : 2
@@ -1959,7 +1958,7 @@ Macro Statistics
  32-bit 2-to-1 multiplexer                             : 69
  32-bit 32-to-1 multiplexer                            : 2
  40-bit 2-to-1 multiplexer                             : 4
- 5-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 2
  64-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 21
@@ -2068,8 +2067,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 547
- Flip-Flops                                            : 547
+# Registers                                            : 550
+ Flip-Flops                                            : 550
 
 =========================================================================
 
@@ -2092,18 +2091,19 @@ Top Level Output File Name         : Datapath.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3100
+# BELS                             : 3061
 #      GND                         : 1
-#      LUT2                        : 33
-#      LUT3                        : 134
-#      LUT4                        : 207
-#      LUT5                        : 281
-#      LUT6                        : 2345
-#      MUXF7                       : 98
+#      LUT2                        : 24
+#      LUT3                        : 129
+#      LUT4                        : 191
+#      LUT5                        : 267
+#      LUT6                        : 2368
+#      MUXF7                       : 80
 #      VCC                         : 1
-# FlipFlops/Latches                : 1571
-#      FDCE                        : 482
+# FlipFlops/Latches                : 1591
+#      FDCE                        : 485
 #      FDRE                        : 65
+#      LD                          : 17
 #      LDE                         : 1024
 # Clock Buffers                    : 2
 #      BUFG                        : 2
@@ -2122,20 +2122,21 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1571  out of  126800     1%  
- Number of Slice LUTs:                 3000  out of  63400     4%  
-    Number used as Logic:              3000  out of  63400     4%  
+ Number of Slice Registers:            1590  out of  126800     1%  
+ Number of Slice LUTs:                 2979  out of  63400     4%  
+    Number used as Logic:              2979  out of  63400     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3324
-   Number with an unused Flip Flop:    1753  out of   3324    52%  
-   Number with an unused LUT:           324  out of   3324     9%  
-   Number of fully used LUT-FF pairs:  1247  out of   3324    37%  
-   Number of unique control sets:        44
+ Number of LUT Flip Flop pairs used:   3298
+   Number with an unused Flip Flop:    1708  out of   3298    51%  
+   Number with an unused LUT:           319  out of   3298     9%  
+   Number of fully used LUT-FF pairs:  1271  out of   3298    38%  
+   Number of unique control sets:        45
 
 IO Utilization: 
  Number of IOs:                         307
  Number of bonded IOBs:                 275  out of    210   130% (*) 
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
@@ -2161,12 +2162,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-DP_clk                             | IBUF+BUFG              | 547   |
-DP_enable                          | IBUF+BUFG              | 1024  |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+DP_clk                             | IBUF+BUFG                     | 550   |
+DP_enable                          | IBUF+BUFG                     | 1024  |
+s_fcu_enable(s_fcu_enable1:O)      | NONE(*)(FRW_CU/s_if_id_is_reg)| 17    |
+-----------------------------------+-------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -2176,10 +2182,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 10.647ns (Maximum Frequency: 93.926MHz)
-   Minimum input arrival time before clock: 10.227ns
-   Maximum output required time after clock: 7.582ns
-   Maximum combinational path delay: 7.320ns
+   Minimum period: 10.615ns (Maximum Frequency: 94.209MHz)
+   Minimum input arrival time before clock: 10.380ns
+   Maximum output required time after clock: 7.234ns
+   Maximum combinational path delay: 6.888ns
 
 Timing Details:
 ---------------
@@ -2187,24 +2193,24 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP_clk'
-  Clock period: 10.647ns (frequency: 93.926MHz)
-  Total number of paths / destination ports: 60879260690 / 943
+  Clock period: 10.615ns (frequency: 94.209MHz)
+  Total number of paths / destination ports: 36116034656 / 945
 -------------------------------------------------------------------------
-Delay:               10.647ns (Levels of Logic = 10)
-  Source:            IR_ID_EX_REG/data_out_17 (FF)
+Delay:               10.615ns (Levels of Logic = 10)
+  Source:            IR_EX_MEM_REG/data_out_11 (FF)
   Destination:       EX_Stage/HI/data_out_2 (FF)
   Source Clock:      DP_clk rising
   Destination Clock: DP_clk rising
 
-  Data Path: IR_ID_EX_REG/data_out_17 to EX_Stage/HI/data_out_2
+  Data Path: IR_EX_MEM_REG/data_out_11 to EX_Stage/HI/data_out_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             8   0.361   0.589  IR_ID_EX_REG/data_out_17 (IR_ID_EX_REG/data_out_17)
-     LUT4:I0->O            1   0.097   0.683  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX22 (FRW_CU/Mmux_FCU_ID_EX_BOT_MUX21)
-     LUT6:I1->O            1   0.097   0.295  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX25 (FRW_CU/Mmux_FCU_ID_EX_BOT_MUX25)
-     LUT6:I5->O           33   0.097   0.402  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX26 (s_id_ex_sel_fwd_bot_mux<1>)
-     LUT6:I5->O           18   0.097   0.458  FWD_BOT_MUX/Mmux_portY26 (s_data_fwd_bot_aluY<3>)
+     FDCE:C->Q             4   0.361   0.707  IR_EX_MEM_REG/data_out_11 (IR_EX_MEM_REG/data_out_11)
+     LUT6:I0->O            1   0.097   0.295  FRW_CU/SF71_SW0 (N290)
+     LUT6:I5->O           43   0.097   0.488  FRW_CU/SF71 (FRW_CU/SF71)
+     LUT6:I4->O            4   0.097   0.525  REVERSE_TOP_MUX/Mmux_portY52_SW0 (N78)
+     LUT5:I2->O            1   0.097   0.379  REVERSE_TOP_MUX/Mmux_portY52_SW3 (N624)
      LUT6:I4->O            6   0.097   0.302  EX_Stage/s_OpA_Fei_Tmul<3>1 (EX_Stage/s_OpA_Fei_Tmul<3>)
      DSP48E1:A3->PCOUT47    1   2.970   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0] (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1 (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]2_PCIN_47)
@@ -2213,8 +2219,8 @@ Delay:               10.647ns (Levels of Logic = 10)
      LUT3:I1->O            1   0.097   0.000  EX_Stage/MUL/Mmux_MUL_product601 (EX_Stage/s_product_Fmul_Thiloregs<63>)
      FDCE:D                    0.008          EX_Stage/HI/data_out_31
     ----------------------------------------
-    Total                     10.647ns (7.538ns logic, 3.109ns route)
-                                       (70.8% logic, 29.2% route)
+    Total                     10.615ns (7.538ns logic, 3.077ns route)
+                                       (71.0% logic, 29.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP_enable'
@@ -2240,9 +2246,9 @@ Delay:               1.262ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP_clk'
-  Total number of paths / destination ports: 5973914201 / 1219
+  Total number of paths / destination ports: 6867741131 / 1226
 -------------------------------------------------------------------------
-Offset:              10.227ns (Levels of Logic = 12)
+Offset:              10.380ns (Levels of Logic = 11)
   Source:            DP_UUW_sel<1> (PAD)
   Destination:       EX_Stage/HI/data_out_2 (FF)
   Destination Clock: DP_clk rising
@@ -2253,11 +2259,10 @@ Offset:              10.227ns (Levels of Logic = 12)
     ----------------------------------------  ------------
      IBUF:I->O            32   0.001   0.790  DP_UUW_sel_1_IBUF (DP_UUW_sel_1_IBUF)
      LUT5:I0->O            5   0.097   0.314  EX_Stage/MUX3/Mmux_portY261 (s_result_Fex_Tmem<3>)
-     LUT6:I5->O            1   0.097   0.000  FRW_CU/Mmux_FCU_ID_EX_TOP_MUX12_SW9_G (N749)
-     MUXF7:I1->O           1   0.279   0.295  FRW_CU/Mmux_FCU_ID_EX_TOP_MUX12_SW9 (N563)
-     LUT6:I5->O            4   0.097   0.393  REVERSE_TOP_MUX/Mmux_portY52_SW0 (N78)
-     LUT5:I3->O            1   0.097   0.295  REVERSE_TOP_MUX/Mmux_portY52_SW3 (N618)
-     LUT6:I5->O            6   0.097   0.302  EX_Stage/s_OpA_Fei_Tmul<3>1 (EX_Stage/s_OpA_Fei_Tmul<3>)
+     LUT6:I5->O            1   0.097   0.511  FRW_CU/Mmux_FCU_ID_EX_TOP_MUX12_SW9 (N567)
+     LUT6:I3->O            4   0.097   0.525  REVERSE_TOP_MUX/Mmux_portY52_SW0 (N78)
+     LUT5:I2->O            1   0.097   0.379  REVERSE_TOP_MUX/Mmux_portY52_SW3 (N624)
+     LUT6:I4->O            6   0.097   0.302  EX_Stage/s_OpA_Fei_Tmul<3>1 (EX_Stage/s_OpA_Fei_Tmul<3>)
      DSP48E1:A3->PCOUT47    1   2.970   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0] (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1 (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]1_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]2_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]2 (EX_Stage/MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]2_PCOUT_to_MUL/Mmult_MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]3_PCIN_47)
@@ -2265,12 +2270,12 @@ Offset:              10.227ns (Levels of Logic = 12)
      LUT3:I1->O            1   0.097   0.000  EX_Stage/MUL/Mmux_MUL_product601 (EX_Stage/s_product_Fmul_Thiloregs<63>)
      FDCE:D                    0.008          EX_Stage/HI/data_out_31
     ----------------------------------------
-    Total                     10.227ns (7.457ns logic, 2.770ns route)
-                                       (72.9% logic, 27.1% route)
+    Total                     10.380ns (7.178ns logic, 3.202ns route)
+                                       (69.2% logic, 30.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP_enable'
-  Total number of paths / destination ports: 14080 / 2048
+  Total number of paths / destination ports: 11008 / 2048
 -------------------------------------------------------------------------
 Offset:              2.433ns (Levels of Logic = 4)
   Source:            DP_Rd1 (PAD)
@@ -2292,19 +2297,19 @@ Offset:              2.433ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DP_clk'
-  Total number of paths / destination ports: 974321 / 308
+  Total number of paths / destination ports: 583301 / 290
 -------------------------------------------------------------------------
-Offset:              7.582ns (Levels of Logic = 16)
+Offset:              7.234ns (Levels of Logic = 16)
   Source:            NPC_IF_ID_REG/data_out_1 (FF)
-  Destination:       DP_new_PC<31> (PAD)
+  Destination:       DP_new_PC<30> (PAD)
   Source Clock:      DP_clk rising
 
-  Data Path: NPC_IF_ID_REG/data_out_1 to DP_new_PC<31>
+  Data Path: NPC_IF_ID_REG/data_out_1 to DP_new_PC<30>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             3   0.361   0.566  NPC_IF_ID_REG/data_out_1 (NPC_IF_ID_REG/data_out_1)
-     LUT4:I0->O            4   0.097   0.525  DE_Stage/JBM/ADD/CN/s_carry<2>1_SW0 (N595)
+     LUT4:I0->O            4   0.097   0.525  DE_Stage/JBM/ADD/CN/s_carry<2>1_SW0 (N601)
      LUT5:I2->O            2   0.097   0.299  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<6>1 (DE_Stage/JBM/ADD/s_G2<7>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<8>1 (DE_Stage/JBM/ADD/s_G2<9>)
@@ -2316,29 +2321,57 @@ Offset:              7.582ns (Levels of Logic = 16)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<20>1 (DE_Stage/JBM/ADD/s_G2<21>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<22>1 (DE_Stage/JBM/ADD/s_G2<23>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<24>1 (DE_Stage/JBM/ADD/s_G2<25>)
-     LUT6:I5->O            4   0.097   0.525  DE_Stage/JBM/ADD/CN/s_carry<26>1 (DE_Stage/JBM/ADD/s_G2<27>)
-     LUT6:I3->O            2   0.097   0.515  DE_Stage/JBM/ADD/CN/s_carry<28>1 (DE_Stage/JBM/ADD/s_G2<29>)
-     LUT6:I3->O            2   0.097   0.283  DE_Stage/JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DP_new_PC_31_OBUF)
-     OBUF:I->O                 0.000          DP_new_PC_31_OBUF (DP_new_PC<31>)
+     LUT6:I5->O            4   0.097   0.309  DE_Stage/JBM/ADD/CN/s_carry<26>1 (DE_Stage/JBM/ADD/s_G2<27>)
+     LUT6:I5->O            2   0.097   0.383  DE_Stage/JBM/ADD/CN/s_carry<28>1 (DE_Stage/JBM/ADD/s_G2<29>)
+     LUT6:I4->O            2   0.097   0.283  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1 (DP_new_PC_30_OBUF)
+     OBUF:I->O                 0.000          DP_new_PC_30_OBUF (DP_new_PC<30>)
     ----------------------------------------
-    Total                      7.582ns (1.816ns logic, 5.766ns route)
-                                       (24.0% logic, 76.0% route)
+    Total                      7.234ns (1.816ns logic, 5.418ns route)
+                                       (25.1% logic, 74.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 's_fcu_enable'
+  Total number of paths / destination ports: 102713 / 163
+-------------------------------------------------------------------------
+Offset:              5.886ns (Levels of Logic = 9)
+  Source:            FRW_CU/s_mem_wb_is_imm (LATCH)
+  Destination:       EX_Stage/ALU_NBIT/P4/CS/cyc[24].check.CSB_i/rca1:A<3> (PAD)
+  Source Clock:      s_fcu_enable falling
+
+  Data Path: FRW_CU/s_mem_wb_is_imm to EX_Stage/ALU_NBIT/P4/CS/cyc[24].check.CSB_i/rca1:A<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.379  FRW_CU/s_mem_wb_is_imm (FRW_CU/s_mem_wb_is_imm)
+     LUT2:I0->O            3   0.097   0.703  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX211 (FRW_CU/Mmux_FCU_ID_EX_BOT_MUX21)
+     LUT6:I0->O            1   0.097   0.511  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX23 (FRW_CU/Mmux_FCU_ID_EX_BOT_MUX23)
+     LUT6:I3->O           33   0.097   0.402  FRW_CU/Mmux_FCU_ID_EX_BOT_MUX27 (s_id_ex_sel_fwd_bot_mux<1>)
+     LUT6:I5->O           18   0.097   0.374  FWD_BOT_MUX/Mmux_portY26 (s_data_fwd_bot_aluY<3>)
+     LUT6:I5->O           11   0.097   0.730  EX_Stage/s_OpA_Fei_Talu<3>1 (EX_Stage/s_OpA_Fei_Talu<3>)
+     LUT6:I1->O            1   0.097   0.295  EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_57_o19_SW0 (N244)
+     LUT6:I5->O            4   0.097   0.525  EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_57_o19 (EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_57_o_mmx_out26)
+     LUT6:I3->O            6   0.097   0.318  EX_Stage/ALU_NBIT/BS/depth2[1].width2[0].mod_if2.MUX2/sel_INV_2_o171 (EX_Stage/ALU_NBIT/BS/depth2[1].width2[0].mod_if2.MUX2/sel_INV_2_o_mmx_out24)
+     LUT5:I4->O            6   0.097   0.302  EX_Stage/ALU_NBIT/BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY211 (EX_Stage/ALU_NBIT/s_from_BS_to_units_opA<27>)
+    RCA:A<3>                   0.000          EX_Stage/ALU_NBIT/P4/CS/cyc[24].check.CSB_i/rca2
+    ----------------------------------------
+    Total                      5.886ns (1.345ns logic, 4.541ns route)
+                                       (22.9% logic, 77.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 106375 / 242
+  Total number of paths / destination ports: 122051 / 259
 -------------------------------------------------------------------------
-Delay:               7.320ns (Levels of Logic = 17)
+Delay:               6.888ns (Levels of Logic = 17)
   Source:            DP_JMP_branch<0> (PAD)
-  Destination:       DP_new_PC<31> (PAD)
+  Destination:       DP_new_PC<30> (PAD)
 
-  Data Path: DP_JMP_branch<0> to DP_new_PC<31>
+  Data Path: DP_JMP_branch<0> to DP_new_PC<30>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            70   0.001   0.806  DP_JMP_branch_0_IBUF (DP_JMP_branch_0_IBUF)
-     LUT6:I0->O            2   0.097   0.384  DE_Stage/JBM/ADD/CN/s_carry<4>1_SW1 (N726)
-     LUT5:I3->O            2   0.097   0.299  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
+     LUT6:I0->O            2   0.097   0.299  DE_Stage/JBM/ADD/CN/s_carry<4>1_SW1 (N737)
+     LUT5:I4->O            2   0.097   0.299  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<6>1 (DE_Stage/JBM/ADD/s_G2<7>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<8>1 (DE_Stage/JBM/ADD/s_G2<9>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<10>1 (DE_Stage/JBM/ADD/s_G2<11>)
@@ -2349,13 +2382,13 @@ Delay:               7.320ns (Levels of Logic = 17)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<20>1 (DE_Stage/JBM/ADD/s_G2<21>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<22>1 (DE_Stage/JBM/ADD/s_G2<23>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<24>1 (DE_Stage/JBM/ADD/s_G2<25>)
-     LUT6:I5->O            4   0.097   0.525  DE_Stage/JBM/ADD/CN/s_carry<26>1 (DE_Stage/JBM/ADD/s_G2<27>)
-     LUT6:I3->O            2   0.097   0.515  DE_Stage/JBM/ADD/CN/s_carry<28>1 (DE_Stage/JBM/ADD/s_G2<29>)
-     LUT6:I3->O            2   0.097   0.283  DE_Stage/JBM/ADD/SN/Mxor_S<31>_xo<0>1 (DP_new_PC_31_OBUF)
-     OBUF:I->O                 0.000          DP_new_PC_31_OBUF (DP_new_PC<31>)
+     LUT6:I5->O            4   0.097   0.309  DE_Stage/JBM/ADD/CN/s_carry<26>1 (DE_Stage/JBM/ADD/s_G2<27>)
+     LUT6:I5->O            2   0.097   0.383  DE_Stage/JBM/ADD/CN/s_carry<28>1 (DE_Stage/JBM/ADD/s_G2<29>)
+     LUT6:I4->O            2   0.097   0.283  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1 (DP_new_PC_30_OBUF)
+     OBUF:I->O                 0.000          DP_new_PC_30_OBUF (DP_new_PC<30>)
     ----------------------------------------
-    Total                      7.320ns (1.456ns logic, 5.864ns route)
-                                       (19.9% logic, 80.1% route)
+    Total                      6.888ns (1.456ns logic, 5.432ns route)
+                                       (21.1% logic, 78.9% route)
 
 =========================================================================
 
@@ -2367,8 +2400,9 @@ Clock to Setup on destination clock DP_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DP_clk         |   10.647|         |         |         |
+DP_clk         |   10.615|         |         |         |
 DP_enable      |         |    2.075|         |         |
+s_fcu_enable   |         |   10.738|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DP_enable
@@ -2380,17 +2414,25 @@ DP_clk         |         |         |    3.726|         |
 DP_enable      |         |         |    1.262|         |
 ---------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock s_fcu_enable
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DP_clk         |         |         |    1.179|         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 48.00 secs
-Total CPU time to Xst completion: 48.69 secs
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 51.30 secs
  
 --> 
 
-Total memory usage is 410712 kilobytes
+Total memory usage is 410584 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1188 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
+Number of warnings : 1186 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

@@ -40,7 +40,7 @@ architecture Behavioral of register_file is
 begin 
 -- write your RF code 
 
-	wrt_proc: process(clk)
+	wrt_proc: process(clk, cntr0)
 	begin
 		if(enable = '1') then
 			if(clk = '1') then
@@ -57,7 +57,7 @@ begin
 --					REGISTERS(conv_integer(ADD_WR)) <= DATAIN;
 --				end if;
 
-				if(cntr0 = '1') then
+				if(cntr0 = '1' AND WR = '1') then
 					REGISTERS(conv_integer(ADD_WR)) <= DATAIN;
 				end if;
 				
@@ -79,7 +79,7 @@ begin
 							OUT2 <= REGISTERS(conv_integer(ADD_RD2));
 						end if;
 						
-						cntr0 <= '1';
+					--	cntr0 <= '1';
 					else
 						if(RD1 = '1') then
 							OUT1 <= REGISTERS(conv_integer(ADD_RD1));
@@ -89,16 +89,18 @@ begin
 							OUT2 <= REGISTERS(conv_integer(ADD_RD2));
 						end if;
 						
-						cntr0 <= '0';
+					--	cntr0 <= '0';
 					end if;
 				else 
 					OUT1 <= (others => '0');
 					OUT2 <= (others => '0');
-					cntr0 <= '0';
+					--cntr0 <= '0';
 				end if;
 			end if;
 		end if;
 	end process;
+
+	--cntr0 <= cntr1 OR cntr2;
 	
 --	process(cntr1, clk)
 --	begin
@@ -120,7 +122,7 @@ begin
 --	end process;
 	
 	
-	conflict: process(RD1, RD2, WR, ADD_RD1, ADD_RD2, ADD_WR)
+	conflict: process(RD1, RD2, WR, ADD_RD1, ADD_RD2, ADD_WR, CLK)
 	begin
 		if((RD1 = '1' AND WR = '1') AND (ADD_RD1 = ADD_WR)) then
 			cntr1 <= '1';
@@ -134,7 +136,7 @@ begin
 			cntr2 <= '0';
 		end if;
 		
-		--cntr0 <= cntr1 or cntr2;
+		cntr0 <= cntr1 or cntr2;
 	end process;
 
 end behavioral;

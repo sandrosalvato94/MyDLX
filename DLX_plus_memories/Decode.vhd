@@ -151,6 +151,16 @@ architecture Structural of Decode is
 	);
 	end component;
 	
+	component Reg1Bit is
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic;
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic);
+	end component;
+	
 	signal s_ex, s_mem, s_wb	: std_logic_vector(NBIT_ADDR-1 downto 0) := (others => '0');
 	signal s_data_Frf_TregA	: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_data_Frf_TregB	: std_logic_vector(NBIT_DATA-1 downto 0);
@@ -161,11 +171,54 @@ architecture Structural of Decode is
 	signal s_fwd_tmp 				: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_fwd_fmux_tcmp 		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_fmux_tr1				: std_logic_vector(NBIT_ADDR-1 downto 0);
+	signal s_wr_addr_type			: std_logic_vector(NBIT_ADDR-1 downto 0);
+	signal s_wr_de					: std_logic;
+	signal s_wr_ex					: std_logic;
+	signal s_wr_mem					: std_logic;
+	signal s_notRd2				: std_logic;
 
 begin
+
+------------------------------------------------------------------------------------
+	R1_wr	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> DE_wr,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_wr_de
+		);
+		
+	R2_wr	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> s_wr_de,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_wr_ex
+		);
+		
+	R3_wr	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> s_wr_ex,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_wr_mem
+		);
+------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------	
+	s_notRd2 <= NOT(DE_RD2);
+	
+	TypeWr_MUX : Mux_NBit_2x1 GENERIC MAP(NBIT_ADDR) PORT MAP ( --agiunto il 28/06
+						port0 => DE_IR(15 downto 11), 
+						port1 => DE_IR(20 downto 16), 
+						sel => s_notRd2,
+						portY => s_wr_addr_type
+						);
+	
 	Write_MUX : Mux_NBit_2x1 GENERIC MAP(NBIT_ADDR) PORT MAP (
-						port0 => DE_IR(15 downto 11),
+						port0 => s_wr_addr_type, 
 						port1 => (others => '1'), --31
 						sel => DE_save_PC,
 						portY => s_fmux_tr1
@@ -206,7 +259,7 @@ begin
 				ENABLE => DE_enable,
 				RD1 => DE_rd1,
 				RD2 => DE_rd2,
-				WR => DE_wr,
+				WR => s_wr_mem,
 				ADD_WR => s_wb,
 				ADD_RD1 => DE_IR(25 downto 21),
 				ADD_RD2 => DE_IR(20 downto 16),

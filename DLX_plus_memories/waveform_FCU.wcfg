@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="29" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_clk</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_clk</obj_property>
@@ -83,6 +83,10 @@
       <obj_property name="label">mem_wb_ir</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/fcu_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fcu_enable</obj_property>
+      <obj_property name="ObjectShortName">fcu_enable</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/fcu_if_id_6_10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">fcu_if_id_6_10[4:0]</obj_property>
       <obj_property name="ObjectShortName">fcu_if_id_6_10[4:0]</obj_property>
@@ -144,12 +148,20 @@
       <obj_property name="ElementShortName">fcu_ex_mem_mux</obj_property>
       <obj_property name="ObjectShortName">fcu_ex_mem_mux</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/fcu_if_id_is_branch" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">fcu_if_id_is_branch</obj_property>
-      <obj_property name="ObjectShortName">fcu_if_id_is_branch</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/s_if_id_is_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_if_id_is_reg</obj_property>
+      <obj_property name="ObjectShortName">s_if_id_is_reg</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/fcu_insert_stall" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">fcu_insert_stall</obj_property>
-      <obj_property name="ObjectShortName">fcu_insert_stall</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/s_id_ex_is_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_id_ex_is_reg</obj_property>
+      <obj_property name="ObjectShortName">s_id_ex_is_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/s_ex_mem_is_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_ex_mem_is_reg</obj_property>
+      <obj_property name="ObjectShortName">s_ex_mem_is_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/s_mem_wb_is_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_mem_wb_is_reg</obj_property>
+      <obj_property name="ObjectShortName">s_mem_wb_is_reg</obj_property>
    </wvobject>
 </wave_config>

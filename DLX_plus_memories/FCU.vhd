@@ -170,7 +170,7 @@ begin
 	end process;
 
 	IF_ID_proc : process(FCU_enable, FCU_IF_ID_Op, FCU_EX_MEM_Op, FCU_MEM_WB_Op, FCU_IF_ID_6_10,
-								FCU_EX_MEM_16_20, FCU_MEM_WB_11_15)
+								FCU_EX_MEM_16_20, FCU_MEM_WB_11_15, s_if_id_is_jmp, s_ex_mem_is_reg, s_ex_mem_is_imm, s_mem_wb_is_load)
 					 begin
 					 
 						FCU_IF_ID_MUX <= "00";
@@ -204,7 +204,8 @@ begin
 	
 	ID_EX_proc : process(FCU_enable, FCU_EX_MEM_Op, FCU_ID_EX_Op, FCU_EX_MEM_16_20, FCU_ID_EX_6_10,
 								FCU_ID_EX_11_15, FCU_EX_MEM_11_15, FCU_MEM_WB_Op, FCU_MEM_WB_16_20,
-								FCU_MEM_WB_11_15)
+								FCU_MEM_WB_11_15, s_mem_wb_is_reg, s_id_ex_is_reg, s_id_ex_is_imm, s_id_ex_is_load, s_id_ex_is_store,
+								s_mem_wb_is_imm, s_mem_wb_is_load, s_ex_mem_is_reg, s_ex_mem_is_imm)
 					 begin
 					 
 					 FCU_ID_EX_TOP_MUX <= "00";
@@ -271,7 +272,8 @@ begin
 	end process;
 	
 	EX_MEM_proc : process (FCU_enable, FCU_EX_MEM_Op, FCU_MEM_WB_Op, FCU_MEM_WB_11_15, 
-								  FCU_MEM_WB_16_20, FCU_EX_MEM_11_15)
+								  FCU_MEM_WB_16_20, FCU_EX_MEM_11_15, s_ex_mem_is_store, s_mem_wb_is_reg,
+								  s_mem_wb_is_imm, s_mem_wb_is_load)
 	begin
 		FCU_EX_MEM_MUX <= '0';
 		
@@ -295,150 +297,152 @@ begin
 		end if;
 	end process;
 
-	process(FCU_IF_ID_Op, FCU_ID_EX_Op, FCU_EX_MEM_Op, FCU_MEM_WB_Op)
+	process(FCU_IF_ID_Op, FCU_ID_EX_Op, FCU_EX_MEM_Op, FCU_MEM_WB_Op, FCU_enable)
 	begin 
 	-----------------------------------------------------------------------
-		if((FCU_IF_ID_Op = OPCODE_REG) OR (FCU_IF_ID_Op = OPCODE_MUL)) then
-			s_if_id_is_reg <= '1';
-		else
-			s_if_id_is_reg <= '0';
-		end if;
-		
-		if((FCU_ID_EX_Op = OPCODE_REG) OR (FCU_ID_EX_Op = OPCODE_MUL)) then
-			s_id_ex_is_reg <= '1';
-		else
-			s_id_ex_is_reg <= '0';
-		end if;
-		
-		if((FCU_EX_MEM_Op = OPCODE_REG) OR (FCU_EX_MEM_Op = OPCODE_MUL)) then
-			s_ex_mem_is_reg <= '1';
-		else
-			s_ex_mem_is_reg <= '0';
-		end if;
-		
-		if((FCU_MEM_WB_Op = OPCODE_REG) OR (FCU_MEM_WB_Op = OPCODE_MUL)) then
-			s_mem_wb_is_reg <= '1';
-		else
-			s_mem_wb_is_reg <= '0';
-		end if;
-	-----------------------------------------------------------------------
-	-----------------------------------------------------------------------
-		if(((FCU_IF_ID_Op >= OPCODE_ADDI) AND (FCU_IF_ID_Op <= OPCODE_XORI)) OR
-			((FCU_IF_ID_Op >= OPCODE_SLLI) AND (FCU_IF_ID_Op <= OPCODE_SGEI)) OR
-			((FCU_IF_ID_Op >= OPCODE_SLTUI) AND (FCU_IF_ID_Op <= OPCODE_SGEUI)) OR
-			(FCU_IF_ID_Op = OPCODE_LAHI) OR (FCU_IF_ID_Op = OPCODE_LAHIU) ) then
-			s_if_id_is_imm <= '1';
-		else 
-			s_if_id_is_imm <= '0';
-		end if;
-		
-		if(((FCU_ID_EX_Op >= OPCODE_ADDI) AND (FCU_ID_EX_Op <= OPCODE_XORI)) OR
-			((FCU_ID_EX_Op >= OPCODE_SLLI) AND (FCU_ID_EX_Op <= OPCODE_SGEI)) OR
-			((FCU_ID_EX_Op >= OPCODE_SLTUI) AND (FCU_ID_EX_Op <= OPCODE_SGEUI)) OR
-			(FCU_ID_EX_Op = OPCODE_LAHI) OR (FCU_ID_EX_Op = OPCODE_LAHIU)) then
-			s_id_ex_is_imm <= '1';
-		else 
-			s_id_ex_is_imm <= '0';
-		end if;
-		
-		if(((FCU_EX_MEM_Op >= OPCODE_ADDI) AND (FCU_EX_MEM_Op <= OPCODE_XORI)) OR
-			((FCU_EX_MEM_Op >= OPCODE_SLLI) AND (FCU_EX_MEM_Op <= OPCODE_SGEI)) OR
-			((FCU_EX_MEM_Op >= OPCODE_SLTUI) AND (FCU_EX_MEM_Op <= OPCODE_SGEUI)) OR
-			(FCU_EX_MEM_Op = OPCODE_LAHI) OR (FCU_EX_MEM_Op = OPCODE_LAHIU)) then
-			s_ex_mem_is_imm <= '1';
-		else 
-			s_ex_mem_is_imm<= '0';
-		end if;
-		
-		if(((FCU_MEM_WB_Op >= OPCODE_ADDI) AND (FCU_MEM_WB_Op <= OPCODE_XORI)) OR
-			((FCU_MEM_WB_Op >= OPCODE_SLLI) AND (FCU_MEM_WB_Op <= OPCODE_SGEI)) OR
-			((FCU_MEM_WB_Op >= OPCODE_SLTUI) AND (FCU_MEM_WB_Op <= OPCODE_SGEUI)) OR
-			(FCU_MEM_WB_Op = OPCODE_LAHI) OR (FCU_MEM_WB_Op = OPCODE_LAHIU)) then
-			s_mem_wb_is_imm <= '1';
-		else 
-			s_mem_wb_is_imm<= '0';
-		end if;
+		if(FCU_enable = '1') then
+			if((FCU_IF_ID_Op = OPCODE_REG) OR (FCU_IF_ID_Op = OPCODE_MUL)) then
+				s_if_id_is_reg <= '1';
+			else
+				s_if_id_is_reg <= '0';
+			end if;
+			
+			if((FCU_ID_EX_Op = OPCODE_REG) OR (FCU_ID_EX_Op = OPCODE_MUL)) then
+				s_id_ex_is_reg <= '1';
+			else
+				s_id_ex_is_reg <= '0';
+			end if;
+			
+			if((FCU_EX_MEM_Op = OPCODE_REG) OR (FCU_EX_MEM_Op = OPCODE_MUL)) then
+				s_ex_mem_is_reg <= '1';
+			else
+				s_ex_mem_is_reg <= '0';
+			end if;
+			
+			if((FCU_MEM_WB_Op = OPCODE_REG) OR (FCU_MEM_WB_Op = OPCODE_MUL)) then
+				s_mem_wb_is_reg <= '1';
+			else
+				s_mem_wb_is_reg <= '0';
+			end if;
 		-----------------------------------------------------------------------
 		-----------------------------------------------------------------------
-		if((FCU_IF_ID_Op = OPCODE_LHU) OR (FCU_IF_ID_Op = OPCODE_LB)) then
-			s_if_id_is_load <= '1';
-		else
-			s_if_id_is_load <= '0';
-		end if;
-		
-		if((FCU_ID_EX_Op = OPCODE_LHU) OR (FCU_ID_EX_Op = OPCODE_LB)) then
-			s_id_ex_is_load <= '1';
-		else
-			s_id_ex_is_load <= '0';
-		end if;
-		
-		if((FCU_EX_MEM_Op = OPCODE_LHU) OR (FCU_EX_MEM_Op = OPCODE_LB)) then
-			s_ex_mem_is_load <= '1';
-		else
-			s_ex_mem_is_load <= '0';
-		end if;
-		
-		if((FCU_MEM_WB_Op = OPCODE_LHU) OR (FCU_MEM_WB_Op = OPCODE_LB)) then
-			s_mem_wb_is_load <= '1';
-		else
-			s_mem_wb_is_load <= '0';
-		end if;
-		-----------------------------------------------------------------------
-		-----------------------------------------------------------------------
-		if((FCU_IF_ID_Op = OPCODE_SW) OR (FCU_IF_ID_Op = OPCODE_SB)) then
-			s_if_id_is_store <= '1';
-		else
-			s_if_id_is_store <= '0';
-		end if;
-		
-		if((FCU_ID_EX_Op = OPCODE_SW) OR (FCU_ID_EX_Op = OPCODE_SB)) then
-			s_id_ex_is_store <= '1';
-		else
-			s_id_ex_is_store <= '0';
-		end if;
-		
-		if((FCU_EX_MEM_Op = OPCODE_SW) OR (FCU_EX_MEM_Op = OPCODE_SB)) then
-			s_ex_mem_is_store <= '1';
-		else
-			s_ex_mem_is_store <= '0';
-		end if;
-		
-		if((FCU_MEM_WB_Op = OPCODE_SW) OR (FCU_MEM_WB_Op = OPCODE_SB)) then
-			s_mem_wb_is_store <= '1';
-		else
-			s_mem_wb_is_store <= '0';
-		end if;
-		-----------------------------------------------------------------------
-		-----------------------------------------------------------------------
-		if(((FCU_IF_ID_Op >= OPCODE_J) AND (FCU_IF_ID_Op <= OPCODE_BNEZ)) OR (FCU_IF_ID_Op = OPCODE_JR) OR (FCU_IF_ID_Op = OPCODE_JALR)) then
-			s_if_id_is_jmp <= '1';
-		else 
-			s_if_id_is_jmp <= '0';
-		end if;
-		
-		if(((FCU_ID_EX_Op >= OPCODE_J) AND (FCU_ID_EX_Op <= OPCODE_BNEZ)) OR (FCU_ID_EX_Op = OPCODE_JR) OR (FCU_ID_EX_Op = OPCODE_JALR)) then
-			s_id_ex_is_jmp <= '1';
-		else 
-			s_id_ex_is_jmp <= '0';
-		end if;
-		
-		if(((FCU_EX_MEM_Op >= OPCODE_J) AND (FCU_EX_MEM_Op <= OPCODE_BNEZ)) OR (FCU_EX_MEM_Op = OPCODE_JR) OR (FCU_EX_MEM_Op = OPCODE_JALR)) then
-			s_ex_mem_is_jmp <= '1';
-		else 
-			s_ex_mem_is_jmp <= '0';
-		end if;
-		
-		if(((FCU_MEM_WB_Op >= OPCODE_J) AND (FCU_MEM_WB_Op <= OPCODE_BNEZ)) OR (FCU_MEM_WB_Op = OPCODE_JR) OR (FCU_MEM_WB_Op = OPCODE_JALR)) then
-			s_mem_wb_is_jmp <= '1';
-		else 
-			s_mem_wb_is_jmp <= '0';
-		end if;
-		-----------------------------------------------------------------------
-		
-		if((FCU_IF_ID_Op = OPCODE_BNEZ) OR (FCU_IF_ID_Op = OPCODE_BEQZ)) then
-			FCU_IF_ID_is_branch <= '1';
-		else
-			FCU_IF_ID_is_branch <= '0';
+			if(((FCU_IF_ID_Op >= OPCODE_ADDI) AND (FCU_IF_ID_Op <= OPCODE_XORI)) OR
+				((FCU_IF_ID_Op >= OPCODE_SRLI) AND (FCU_IF_ID_Op <= OPCODE_SGEI)) OR
+				((FCU_IF_ID_Op >= OPCODE_SLTUI) AND (FCU_IF_ID_Op <= OPCODE_SGEUI)) OR
+				(FCU_IF_ID_Op = OPCODE_LAHI) OR (FCU_IF_ID_Op = OPCODE_LAHIU) OR (FCU_IF_ID_Op = OPCODE_SLLI)) then
+				s_if_id_is_imm <= '1';
+			else 
+				s_if_id_is_imm <= '0';
+			end if;
+			
+			if(((FCU_ID_EX_Op >= OPCODE_ADDI) AND (FCU_ID_EX_Op <= OPCODE_XORI)) OR
+				((FCU_ID_EX_Op >= OPCODE_SRLI) AND (FCU_ID_EX_Op <= OPCODE_SGEI)) OR
+				((FCU_ID_EX_Op >= OPCODE_SLTUI) AND (FCU_ID_EX_Op <= OPCODE_SGEUI)) OR
+				(FCU_ID_EX_Op = OPCODE_LAHI) OR (FCU_ID_EX_Op = OPCODE_LAHIU) OR (FCU_ID_EX_Op = OPCODE_SLLI) ) then
+				s_id_ex_is_imm <= '1';
+			else 
+				s_id_ex_is_imm <= '0';
+			end if;
+			
+			if(((FCU_EX_MEM_Op >= OPCODE_ADDI) AND (FCU_EX_MEM_Op <= OPCODE_XORI)) OR
+				((FCU_EX_MEM_Op >= OPCODE_SRLI) AND (FCU_EX_MEM_Op <= OPCODE_SGEI)) OR
+				((FCU_EX_MEM_Op >= OPCODE_SLTUI) AND (FCU_EX_MEM_Op <= OPCODE_SGEUI)) OR
+				(FCU_EX_MEM_Op = OPCODE_LAHI) OR (FCU_EX_MEM_Op = OPCODE_LAHIU) OR (FCU_EX_MEM_Op = OPCODE_SLLI)) then
+				s_ex_mem_is_imm <= '1';
+			else 
+				s_ex_mem_is_imm<= '0';
+			end if;
+			
+			if(((FCU_MEM_WB_Op >= OPCODE_ADDI) AND (FCU_MEM_WB_Op <= OPCODE_XORI)) OR
+				((FCU_MEM_WB_Op >= OPCODE_SRLI) AND (FCU_MEM_WB_Op <= OPCODE_SGEI)) OR
+				((FCU_MEM_WB_Op >= OPCODE_SLTUI) AND (FCU_MEM_WB_Op <= OPCODE_SGEUI)) OR
+				(FCU_MEM_WB_Op = OPCODE_LAHI) OR (FCU_MEM_WB_Op = OPCODE_LAHIU) OR (FCU_MEM_WB_Op = OPCODE_SLLI)) then
+				s_mem_wb_is_imm <= '1';
+			else 
+				s_mem_wb_is_imm<= '0';
+			end if;
+			-----------------------------------------------------------------------
+			-----------------------------------------------------------------------
+			if((FCU_IF_ID_Op = OPCODE_LHU) OR (FCU_IF_ID_Op = OPCODE_LB)) then
+				s_if_id_is_load <= '1';
+			else
+				s_if_id_is_load <= '0';
+			end if;
+			
+			if((FCU_ID_EX_Op = OPCODE_LHU) OR (FCU_ID_EX_Op = OPCODE_LB)) then
+				s_id_ex_is_load <= '1';
+			else
+				s_id_ex_is_load <= '0';
+			end if;
+			
+			if((FCU_EX_MEM_Op = OPCODE_LHU) OR (FCU_EX_MEM_Op = OPCODE_LB)) then
+				s_ex_mem_is_load <= '1';
+			else
+				s_ex_mem_is_load <= '0';
+			end if;
+			
+			if((FCU_MEM_WB_Op = OPCODE_LHU) OR (FCU_MEM_WB_Op = OPCODE_LB)) then
+				s_mem_wb_is_load <= '1';
+			else
+				s_mem_wb_is_load <= '0';
+			end if;
+			-----------------------------------------------------------------------
+			-----------------------------------------------------------------------
+			if((FCU_IF_ID_Op = OPCODE_SW) OR (FCU_IF_ID_Op = OPCODE_SB)) then
+				s_if_id_is_store <= '1';
+			else
+				s_if_id_is_store <= '0';
+			end if;
+			
+			if((FCU_ID_EX_Op = OPCODE_SW) OR (FCU_ID_EX_Op = OPCODE_SB)) then
+				s_id_ex_is_store <= '1';
+			else
+				s_id_ex_is_store <= '0';
+			end if;
+			
+			if((FCU_EX_MEM_Op = OPCODE_SW) OR (FCU_EX_MEM_Op = OPCODE_SB)) then
+				s_ex_mem_is_store <= '1';
+			else
+				s_ex_mem_is_store <= '0';
+			end if;
+			
+			if((FCU_MEM_WB_Op = OPCODE_SW) OR (FCU_MEM_WB_Op = OPCODE_SB)) then
+				s_mem_wb_is_store <= '1';
+			else
+				s_mem_wb_is_store <= '0';
+			end if;
+			-----------------------------------------------------------------------
+			-----------------------------------------------------------------------
+			if(((FCU_IF_ID_Op >= OPCODE_J) AND (FCU_IF_ID_Op <= OPCODE_BNEZ)) OR (FCU_IF_ID_Op = OPCODE_JR) OR (FCU_IF_ID_Op = OPCODE_JALR)) then
+				s_if_id_is_jmp <= '1';
+			else 
+				s_if_id_is_jmp <= '0';
+			end if;
+			
+			if(((FCU_ID_EX_Op >= OPCODE_J) AND (FCU_ID_EX_Op <= OPCODE_BNEZ)) OR (FCU_ID_EX_Op = OPCODE_JR) OR (FCU_ID_EX_Op = OPCODE_JALR)) then
+				s_id_ex_is_jmp <= '1';
+			else 
+				s_id_ex_is_jmp <= '0';
+			end if;
+			
+			if(((FCU_EX_MEM_Op >= OPCODE_J) AND (FCU_EX_MEM_Op <= OPCODE_BNEZ)) OR (FCU_EX_MEM_Op = OPCODE_JR) OR (FCU_EX_MEM_Op = OPCODE_JALR)) then
+				s_ex_mem_is_jmp <= '1';
+			else 
+				s_ex_mem_is_jmp <= '0';
+			end if;
+			
+			if(((FCU_MEM_WB_Op >= OPCODE_J) AND (FCU_MEM_WB_Op <= OPCODE_BNEZ)) OR (FCU_MEM_WB_Op = OPCODE_JR) OR (FCU_MEM_WB_Op = OPCODE_JALR)) then
+				s_mem_wb_is_jmp <= '1';
+			else 
+				s_mem_wb_is_jmp <= '0';
+			end if;
+			-----------------------------------------------------------------------
+			
+			if((FCU_IF_ID_Op = OPCODE_BNEZ) OR (FCU_IF_ID_Op = OPCODE_BEQZ)) then
+				FCU_IF_ID_is_branch <= '1';
+			else
+				FCU_IF_ID_is_branch <= '0';
+			end if;
 		end if;
 	end process;
 

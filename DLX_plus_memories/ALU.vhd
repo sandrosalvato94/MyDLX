@@ -162,7 +162,7 @@ architecture Structural of ALU is
 	signal s_P4_cin		: std_logic;
 	signal s_not_opB, s_sel_opB	: std_logic_vector(NBIT_ALU-1 downto 0);
 	signal s_from_P4_c_out	: std_logic;
-	signal s_from_P4_to_out_sum	: std_logic_vector(NBIT_ALU-1 downto 0);
+	signal s_from_P4_to_out_sum	: std_logic_vector(NBIT_ALU-1 downto 0) := (others => '0');
 	signal s_LU_enable		: std_logic;
 	signal s_tmp1, s_tmp2	: std_logic;
 	signal s_LU_opcode		: std_logic_vector(3 downto 0);

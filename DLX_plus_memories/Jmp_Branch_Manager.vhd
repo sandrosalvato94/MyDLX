@@ -137,13 +137,13 @@ begin
 	MUX_TRG : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => JBM_Reg,
 						port1 => JBM_Imm,
-						sel => s_sel_muxes, --segnale scelto a caso
+						sel => s_sel_muxes, 
 						portY => s_Fmuxtrg_Tadd
 						);
 	MUX_TBA : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
 						port0 => s_allzeros,
 						port1 => JBM_NPC,
-						sel => s_sel_muxes, --segnale scelto a caso
+						sel => s_sel_muxes, 
 						portY => s_Fmuxtba_Tadd
 						);
 ---------------------------------------------------------------------------------------------------------------------------

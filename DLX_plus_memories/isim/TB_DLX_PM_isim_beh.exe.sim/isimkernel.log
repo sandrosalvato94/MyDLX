@@ -1,0 +1,39 @@
+Command line:
+   TB_DLX_PM_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54334
+
+Thu Jun 28 17:40:07 2018
+
+
+ Elaboration Time: 0.546875 sec
+
+ Current Memory Usage: 908.071 Meg
+
+ Total Signals          : 12838
+ Total Nets             : 122001
+ Total Signal Drivers   : 8836
+ Total Blocks           : 12697
+ Total Primitive Blocks : 8938
+ Total Processes        : 8714
+ Total Traceable Variables  : 9895
+ Total Scalar Nets and Variables : 133505
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
+Total Line Count : 9170
+In process a.c-IRAM.vhd:READ_MEM_P 
+ 
