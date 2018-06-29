@@ -17,6 +17,7 @@
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/CU - ControlUnit - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/DE_Stage - Decode - Structural/Cmp - NComparatorWithEnable - Behavioral</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/DE_Stage - Decode - Structural/JBM - Jmp_Branch_Manager - Behavioral</ClosedNode>
+         <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/DE_Stage - Decode - Structural/RF - Register_File - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/DE_Stage - Decode - Structural/SE - Sign_Extender - Behavioral</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/EX_Stage - Execute_Stage - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/EX_Stage - Execute_Stage - Structural/ALU_NBIT - ALU - Structural/BS - Barrel_Shifter - Structural</ClosedNode>
@@ -29,16 +30,17 @@
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/WB_Stage - WriteBack_Stage - Structural</ClosedNode>
          <ClosedNode>/Datapath - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|Datapath.vhd</ClosedNode>
          <ClosedNode>/NShiftRegisterSISO - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|NShiftRegisterSISO.vhd</ClosedNode>
+         <ClosedNode>/Register_File - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|Register_File.vhd</ClosedNode>
          <ClosedNode>/UpDownCounter - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|UpDownCounter.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>RF - register_file - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/registerfile.vhd)</SelectedItem>
+         <SelectedItem>CU - ControlUnit - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >44</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000227000000020000000000000000000000000200000064ffffffff000000810000000300000002000002270000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>RF - register_file - Behavioral (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/registerfile.vhd)</CurrentItem>
+      <CurrentItem>CU - ControlUnit - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -63,7 +65,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002d2000000040101000100000000000000000000000064ffffffff0000008100000000000000040000003d00000001000000000000002100000001000000000000005d0000000100000000000002170000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000011f000000040101000100000000000000000000000064ffffffff0000008100000000000000040000003d00000001000000000000002100000001000000000000005d0000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>constants.vhd</CurrentItem>
    </ItemView>
@@ -142,12 +144,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ISim Simulator</SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ISim Simulator</CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
 </Project>

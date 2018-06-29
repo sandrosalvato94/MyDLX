@@ -27,22 +27,23 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/t_ff.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/PropagateCarryLookahead.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/P4Adder.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NDecoder.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Logic_Unit.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Flag_Generator.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Enable_Interface.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Comparison_Logic.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ComparatorWithEnable.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Barrel_Shifter.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ud_counter.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Reducer.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Sign_Extender.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/registerfile.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Register_File.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Reg1Bit.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRegister.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NComparatorWithEnable.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Mux_Bit.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Multiplier.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Jmp_Branch_Manager.vhd" into library work
-Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Enable_Interface.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/D_FF.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Data_Reducer.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/CU_SatCounter.vhd" into library work
@@ -67,8 +68,8 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 166296 KB
-Fuse CPU Usage: 749 ms
+Fuse Memory Usage: 167112 KB
+Fuse CPU Usage: 858 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -84,11 +85,11 @@ Compiling architecture behavioral of entity Sum_Network [\Sum_Network(32)\]
 Compiling architecture behavioral of entity PropagateCarryLookahead [\PropagateCarryLookahead(32)\]
 Compiling architecture structural of entity Fetch [\Fetch(32,32)\]
 Compiling architecture behavioral of entity Reg1Bit [reg1bit_default]
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(5)\]
 Compiling architecture behavioral of entity NRegister [\NRegister(5)\]
-Compiling architecture behavioral of entity register_file [\register_file(32,32,5)\]
+Compiling architecture behavioral of entity Decoder [\Decoder(5)\]
+Compiling architecture behavioral of entity Enable_Interface [\Enable_Interface(5)\]
+Compiling architecture structural of entity Register_File [\Register_File(5,32)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(10)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(6)\]
 Compiling architecture behavioral of entity Sign_Extender [\Sign_Extender(32)\]
@@ -101,6 +102,8 @@ Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(8)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(40)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(3)\]
 Compiling architecture structural of entity Barrel_Shifter [\Barrel_Shifter(5)\]
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
 Compiling package math_real
 Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
 Compiling architecture behavioral of entity GeneralPropagate [generalpropagate_default]
@@ -154,8 +157,8 @@ Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
 Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories_default]
 Compiling architecture behavior of entity tb_dlx_pm
 Time Resolution for simulation is 1ps.
-Waiting for 68 sub-compilation(s) to finish...
-Compiled 158 VHDL Units
+Waiting for 70 sub-compilation(s) to finish...
+Compiled 162 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 239852 KB
-Fuse CPU Usage: 2249 ms
+Fuse Memory Usage: 238620 KB
+Fuse CPU Usage: 3171 ms

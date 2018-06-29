@@ -136,6 +136,7 @@ architecture Structural of Datapath is
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
 		DE_JMP_branch	: in  std_logic_vector(1 downto 0);
 		DE_save_PC	: in std_logic;
+		DE_jmp_or_branch	: in std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
 		DE_imm_address		: out std_logic_vector(NBIT_DATA-1 downto 0);
@@ -233,6 +234,7 @@ architecture Structural of Datapath is
 		FCU_EX_MEM_MUX		: out std_logic;
 		
 		FCU_IF_ID_is_branch	: out std_logic;
+		FCU_ID_EX_is_branch_or_jmp : out std_logic;
 		FCU_insert_stall	: out std_logic
 	);
 	end component;
@@ -324,6 +326,7 @@ architecture Structural of Datapath is
 	signal s_enable_mem				: std_logic;
 	signal s_enable_wb				: std_logic;
 	signal s_fcu_enable				: std_logic;
+	signal s_jmp_or_brnch_Ffcu_Tde: std_logic;
 	
 begin
 
@@ -401,6 +404,7 @@ begin
 		DE_data_Fwb				=> s_data_Fwb_Tde,	--from write back
 		DE_signext				=> DP_sign_extender,
 		DE_JMP_branch			=> DP_JMP_branch,
+		DE_jmp_or_branch		=> s_jmp_or_brnch_Ffcu_Tde,
 		DE_save_PC				=> DP_save_PC,
 		DE_branch_taken		=> s_branch_taken_Fde_Tif,	--to fetch & BTB
 		DE_new_PC				=> s_newPC_Fde_Tif,	--to fetch & BTB
@@ -717,6 +721,7 @@ begin
 		
 		FCU_EX_MEM_MUX		=> s_ex_mem_fwd_mux,
 		FCU_IF_ID_is_branch	=> DP_IF_ID_instr_is_branch,
+		FCU_ID_EX_is_branch_or_jmp => s_jmp_or_brnch_Ffcu_Tde,
 		FCU_insert_stall	=> s_stall
 		);
 		

@@ -63,6 +63,7 @@ entity Decode is
 --		DE_instr_type	: in  std_logic_vector(7 downto 0); --one hot encoding, one bit per instr type
 		DE_signext	: in  std_logic_vector(1 downto 0); --[IMM/jump, SIGNED/unsigned]
 		DE_JMP_branch	: in  std_logic_vector(1 downto 0);
+		DE_jmp_or_branch	: in std_logic;
 		DE_save_PC	: in std_logic;
 		DE_branch_taken	: out std_logic;
 		DE_new_PC		: out std_logic_vector(NBIT_PC-1 downto 0);
@@ -76,24 +77,43 @@ end Decode;
 
 architecture Structural of Decode is
 
-	component register_file is
-	generic(N: integer := 32; --# of registers
-	        M: integer := 64; --depth of each resgister
-                  K: integer := 5   --# bits for addressing
+--	component register_file is
+--	generic(N: integer := 32; --# of registers
+--	        M: integer := 64; --depth of each resgister
+--                  K: integer := 5   --# bits for addressing
+--	);
+--	port ( 	CLK: 	IN std_logic;
+--		RESET: 	IN std_logic;
+--		ENABLE: 	IN std_logic;
+--		RD1: 	IN std_logic;
+--		RD2: 	IN std_logic;
+--		WR: 	IN std_logic;
+--		ADD_WR: 	IN std_logic_vector(K-1 downto 0); -- 32 registers
+--		ADD_RD1: 	IN std_logic_vector(K-1 downto 0);
+--		ADD_RD2: 	IN std_logic_vector(K-1 downto 0);
+--		DATAIN: 	IN std_logic_vector(M-1 downto 0);
+--		OUT1: 	OUT std_logic_vector(M-1 downto 0);
+--		OUT2: 	OUT std_logic_vector(M-1 downto 0));
+--	end component ;
+
+	component Register_File is
+	generic(NBIT_ADDR	: integer := 5;
+			  NBIT_DATA : integer := 32);
+	port(
+			RF_clk		: in  std_logic;
+			RF_reset 	: in  std_logic;
+			RF_enable	: in  std_logic;
+			RF_RD1		: in  std_logic;
+			RF_RD2		: in  std_logic;
+			RF_WR			: in  std_logic;
+			RF_AddrRd1	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
+			RF_AddrRd2	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
+			RF_AddrWr	: in  std_logic_vector(NBIT_ADDR-1 downto 0);
+			RF_data_in	: in  std_logic_vector(NBIT_DATA-1 downto 0);
+			RF_out1		: out std_logic_vector(NBIT_DATA-1 downto 0);
+			RF_out2		: out std_logic_vector(NBIT_DATA-1 downto 0)
 	);
-	port ( 	CLK: 	IN std_logic;
-		RESET: 	IN std_logic;
-		ENABLE: 	IN std_logic;
-		RD1: 	IN std_logic;
-		RD2: 	IN std_logic;
-		WR: 	IN std_logic;
-		ADD_WR: 	IN std_logic_vector(K-1 downto 0); -- 32 registers
-		ADD_RD1: 	IN std_logic_vector(K-1 downto 0);
-		ADD_RD2: 	IN std_logic_vector(K-1 downto 0);
-		DATAIN: 	IN std_logic_vector(M-1 downto 0);
-		OUT1: 	OUT std_logic_vector(M-1 downto 0);
-		OUT2: 	OUT std_logic_vector(M-1 downto 0));
-	end component ;
+	end component;
 	
 	component NRegister is
 	generic(N: integer:= 32);
@@ -135,7 +155,7 @@ architecture Structural of Decode is
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
 		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
 		JBM_JMP_branch	: in std_logic_vector(1 downto 0);
-		JBM_RD1			: in std_logic;
+		JBM_transparent_mode			: in std_logic;
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
 	);
@@ -176,6 +196,7 @@ architecture Structural of Decode is
 	signal s_wr_ex					: std_logic;
 	signal s_wr_mem					: std_logic;
 	signal s_notRd2				: std_logic;
+	signal s_isnt_jmp_or_branch: std_logic;
 
 begin
 
@@ -250,23 +271,38 @@ begin
 						);
 -------------------------------------------------------------------------------------
 	
-	RF : register_file GENERIC MAP (N => 2**NBIT_ADDR,
-				  M => NBIT_DATA,
-				  K => NBIT_ADDR)
-		         PORT MAP (
-				CLK => DE_clk,
-				RESET => DE_reset,
-				ENABLE => DE_enable,
-				RD1 => DE_rd1,
-				RD2 => DE_rd2,
-				WR => s_wr_mem,
-				ADD_WR => s_wb,
-				ADD_RD1 => DE_IR(25 downto 21),
-				ADD_RD2 => DE_IR(20 downto 16),
-				DATAIN => DE_data_Fwb,
-				OUT1 => s_data_Frf_TregA,
-				OUT2 => s_data_Frf_TregB
-		         );
+--	RF : register_file GENERIC MAP (N => 2**NBIT_ADDR,
+--				  M => NBIT_DATA,
+--				  K => NBIT_ADDR)
+--		         PORT MAP (
+--				CLK => DE_clk,
+--				RESET => DE_reset,
+--				ENABLE => DE_enable,
+--				RD1 => DE_rd1,
+--				RD2 => DE_rd2,
+--				WR => s_wr_mem,
+--				ADD_WR => s_wb,
+--				ADD_RD1 => DE_IR(25 downto 21),
+--				ADD_RD2 => DE_IR(20 downto 16),
+--				DATAIN => DE_data_Fwb,
+--				OUT1 => s_data_Frf_TregA,
+--				OUT2 => s_data_Frf_TregB
+--		         );
+
+	RF : Register_File GENERIC MAP (NBIT_ADDR => NBIT_ADDR, NBIT_DATA => NBIT_DATA) PORT MAP (
+			RF_clk 			=> DE_clk,
+			RF_reset			=> DE_reset,
+			RF_enable		=> DE_enable,
+			RF_RD1			=> DE_rd1,
+			RF_RD2			=> DE_rd2,
+			RF_WR				=> s_wr_mem,
+			RF_ADDRRD1		=> DE_IR(25 downto 21),
+			RF_ADDRRD2		=> DE_IR(20 downto 16),
+			RF_ADDRWR		=> s_wb,
+			RF_DATA_IN		=> DE_data_Fwb,
+			RF_out1			=> s_data_Frf_TregA,
+			RF_out2			=> s_data_Frf_TregB
+		);
 
 -------------------------------------------------------------------------------------
 
@@ -338,13 +374,15 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
+	s_isnt_jmp_or_branch <= NOT(DE_jmp_or_branch);
+	
 	JBM : Jmp_Branch_Manager GENERIC MAP (N => NBIT_DATA) PORT MAP (
 							JBM_iszero => s_iszero_Fcmp_Tcond,
 							JBM_Reg => s_data_Frf_TregA,
 							JBM_Imm => s_data_Fse_Timm,
 							JBM_NPC => DE_NPC,
 							JBM_JMP_branch => DE_JMP_branch,
-							JBM_RD1 => DE_rd1,
+							JBM_transparent_mode => s_isnt_jmp_or_branch,
 							JBM_Upd_PC => DE_new_PC,
 							JBM_taken => DE_branch_taken
 							);

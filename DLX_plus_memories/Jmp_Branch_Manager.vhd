@@ -39,9 +39,9 @@
 --				register file. So, from the control unit I have just to force JBM_JMP_branch
 --				to "00", it's trivial, and check it the value of a signal used for another
 --				main purpose.
--- 			JBM_JMP_branch(1)	JBM_JMP_branch(0)	JBM_iszero	JBM_RD1	|	JBM_taken
---						 0						 0					 0			   0		|		 0	 //transparent mode!!
---						 0						 0					 0			   1		|		 1
+-- 			JBM_JMP_branch(1)	JBM_JMP_branch(0)	JBM_iszero	JBM_transparent_mode	|	JBM_taken
+--						 0						 0					 0			   0		|		 1	 //transparent mode!!
+--						 0						 0					 0			   1		|		 0
 --						 0						 1					 0				-		|      0
 --						 0						 0					 1				-		|      0
 --						 0						 1					 1				-		|	    1
@@ -58,8 +58,8 @@
 --				0.2 - Changed pinout (JBM_JMP_branch	: in std_logic_vector(1 downto 0);)
 --						in order to distinguish among jumps, beqz and bnez.
 --						New combinational logic inside, to drive multiplexers.
---				0.3 - Changed pinout (+ JBM_RD1). Modified the definition of JBM_taken,
---					   now it takes into account JBM_RD1.
+--				0.3 - Changed pinout (+ JBM_transparent_mode). Modified the definition of JBM_taken,
+--					   now it takes into account JBM_transparent_mode.
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -83,7 +83,7 @@ entity Jmp_Branch_Manager is
 		JBM_NPC	: in  std_logic_vector(N-1 downto 0);
 		---JBM_Opcode: in  std_logic_vector(5 downto 0); 
 		JBM_JMP_branch	: in std_logic_vector(1 downto 0);
-		JBM_RD1			: in std_logic;
+		JBM_transparent_mode			: in std_logic; --attivo basso
 		JBM_Upd_PC: out std_logic_vector(N-1 downto 0);
 		JBM_taken : out std_logic
 	);
@@ -125,10 +125,12 @@ architecture Behavioral of Jmp_Branch_Manager is
 	signal s_sel_muxes		: std_logic;
 --	signal s_cin				: std_logic;
 	
+	
 begin
 ---------------------------------------------------------------------------------------------------------------------------	
-	--<-- ancora una volta da cambiare per implementare la transparent mode, nota del 19 giugno pomeriggio
-	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero) AND JBM_RD1) OR (JBM_JMP_branch(0) AND JBM_iszero) OR JBM_JMP_branch(1));
+	--<-- 29 Giugno
+	JBM_taken <= ((NOT(JBM_JMP_branch(0))AND NOT(JBM_iszero) AND NOT(JBM_transparent_mode)) 
+						OR (JBM_JMP_branch(0) AND JBM_iszero AND NOT(JBM_transparent_mode)) OR JBM_JMP_branch(1));
 ---------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------	

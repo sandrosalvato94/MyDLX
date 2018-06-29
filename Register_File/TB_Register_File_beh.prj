@@ -1,0 +1,7 @@
+vhdl work "NRegister.vhd"
+vhdl work "NDecoder.vhd"
+vhdl work "Mux_NBit_2x1.vhd"
+vhdl work "Enable_Interface.vhd"
+vhdl work "constants.vhd"
+vhdl work "Register_File.vhd"
+vhdl work "TB_Register_File.vhd"

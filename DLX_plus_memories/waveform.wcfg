@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="21" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -49,88 +49,49 @@
       <obj_property name="ObjectShortName">de_ir[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd1</obj_property>
-      <obj_property name="ObjectShortName">rd1</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_rd1</obj_property>
+      <obj_property name="ObjectShortName">rf_rd1</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd2" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd2</obj_property>
-      <obj_property name="ObjectShortName">rd2</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_rd2</obj_property>
+      <obj_property name="ObjectShortName">rf_rd2</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/wr" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">wr</obj_property>
-      <obj_property name="ObjectShortName">wr</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_wr</obj_property>
+      <obj_property name="ObjectShortName">rf_wr</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/cntr0" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">cntr0</obj_property>
-      <obj_property name="ObjectShortName">cntr0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/cntr1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">cntr1</obj_property>
-      <obj_property name="ObjectShortName">cntr1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/cntr2" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">cntr2</obj_property>
-      <obj_property name="ObjectShortName">cntr2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_rd1" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">add_rd1[4:0]</obj_property>
-      <obj_property name="ObjectShortName">add_rd1[4:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_data_in[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_rd2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">add_rd2[4:0]</obj_property>
-      <obj_property name="ObjectShortName">add_rd2[4:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(1)\/ifi/Ri/data_out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="label">Register1</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/add_wr" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">add_wr[4:0]</obj_property>
-      <obj_property name="ObjectShortName">add_wr[4:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(2)\/ifi/Ri/data_out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="label">Register2</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/datain" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">datain[31:0]</obj_property>
-      <obj_property name="ObjectShortName">datain[31:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(3)\/ifi/Ri/data_out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="label">Register3</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/out1" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">out1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out1[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/out2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">out2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out2[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[0]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[0]</obj_property>
-      <obj_property name="ObjectShortName">registers[0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[1]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[1]</obj_property>
-      <obj_property name="ObjectShortName">registers[1]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[2]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[2]</obj_property>
-      <obj_property name="ObjectShortName">registers[2]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[3]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[3]</obj_property>
-      <obj_property name="ObjectShortName">registers[3]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[4]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[4]</obj_property>
-      <obj_property name="ObjectShortName">registers[4]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/registers[5]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[5]</obj_property>
-      <obj_property name="ObjectShortName">registers[5]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(4)\/ifi/Ri/data_out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="label">Register4</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegA/data_in" type="array" db_ref_id="1">
@@ -146,6 +107,27 @@
       <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
       <obj_property name="label">RegB</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_opa" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">ex_opa[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_opa[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">OpA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_opb" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">ex_opb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_opb[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">OpB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DATA_BYPASS_REG/data_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">BypassData</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/WB_Stage/wb_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">wb_out[31:0]</obj_property>

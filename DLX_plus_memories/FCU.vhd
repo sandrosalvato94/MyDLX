@@ -61,6 +61,7 @@ entity FCU is
 		FCU_EX_MEM_MUX		: out std_logic;
 		
 		FCU_IF_ID_is_branch	: out std_logic;
+		FCU_ID_EX_is_branch_or_jmp : out std_logic;
 		FCU_insert_stall	: out std_logic --true when '0'
 	);
 end FCU;
@@ -445,6 +446,8 @@ begin
 			end if;
 		end if;
 	end process;
+
+	FCU_ID_EX_is_branch_or_jmp<=s_id_ex_is_jmp;
 
 end Behavioral;
 
