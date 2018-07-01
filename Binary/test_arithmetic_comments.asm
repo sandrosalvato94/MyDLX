@@ -1,10 +1,10 @@
-addi r1,r0,#2	# r1 = 2
-subi r2,r1,#1	# r2 = 1
-addi r3,r1,#-4	# r3 = -2
-subi r4,r3,#-1	# r4 = -1
-addui r5,r1,#4	# r5 = 6
-subui r6,r5,#3	# r6 = 3
-add r7,r1,r2	# r7 = 3
+addi r1,r0,#2	# r1 = 2 	(00, 00)
+subi r2,r1,#1	# r2 = 1	(01, 00)
+addi r3,r1,#-4	# r3 = -2	(10, 00)
+subi r4,r3,#-1	# r4 = -1	(01, 00)
+addui r5,r1,#4	# r5 = 6	(00, 00)
+subui r6,r5,#3	# r6 = 3	(01, 00)
+add r7,r1,r2	# r7 = 3	
 sub r8,r5,r6	# r8 = 3
 addu r9,r6,r1	# r9 = 5
 sge r10,r1,r2	# r10= 1

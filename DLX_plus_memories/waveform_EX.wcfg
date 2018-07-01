@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="27" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -49,18 +49,6 @@
       <obj_property name="ObjectShortName">de_ir[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd1</obj_property>
-      <obj_property name="ObjectShortName">rd1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rd2" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd2</obj_property>
-      <obj_property name="ObjectShortName">rd2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/wr" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">wr</obj_property>
-      <obj_property name="ObjectShortName">wr</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegA/data_in" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_in[31:0]</obj_property>
@@ -78,10 +66,12 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/alu_opa" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">alu_opa[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_opa[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/alu_opb" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">alu_opb[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_opb[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/s_from_p4_to_out_sum" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_from_p4_to_out_sum[31:0]</obj_property>
@@ -114,10 +104,39 @@
       <obj_property name="ElementShortName">ex_shiftamount[4:0]</obj_property>
       <obj_property name="ObjectShortName">ex_shiftamount[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/s_outalu_falu_tmux" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_outalu_falu_tmux[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_outalu_falu_tmux[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/BS/bs_data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bs_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bs_data_in[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/BS/bs_opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bs_opcode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bs_opcode[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/BS/bs_amount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bs_amount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">bs_amount[4:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/BS/bs_data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bs_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bs_data_out[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/P4/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/P4/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/P4/sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_data_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ex_data_out[31:0]</obj_property>

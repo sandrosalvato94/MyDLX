@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Datapath.prj
 
@@ -374,7 +374,7 @@ WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_me
 WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 186: fcu_ex_mem_11_15 should be on the sensitivity list of the process
 WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 301: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 314: Net <s_load_data_Fmem_Twb[31]> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 612. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 622. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -384,9 +384,9 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 542: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 589: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 612: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 552: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 599: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 622: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <s_load_data_Fmem_Twb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -838,8 +838,8 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 59
- 1-bit register                                        : 6
+# Registers                                            : 60
+ 1-bit register                                        : 7
  32-bit register                                       : 49
  5-bit register                                        : 4
 # Latches                                              : 18
@@ -977,8 +977,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 1594
- Flip-Flops                                            : 1594
+# Registers                                            : 1595
+ Flip-Flops                                            : 1595
 # Comparators                                          : 44
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 28
@@ -1131,8 +1131,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1477
- Flip-Flops                                            : 1477
+# Registers                                            : 1478
+ Flip-Flops                                            : 1478
 
 =========================================================================
 
@@ -1165,8 +1165,8 @@ Primitive and Black Box Usage:
 #      LUT6                        : 1432
 #      MUXF7                       : 129
 #      VCC                         : 1
-# FlipFlops/Latches                : 1495
-#      FDCE                        : 1477
+# FlipFlops/Latches                : 1496
+#      FDCE                        : 1478
 #      LD                          : 18
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -1183,15 +1183,15 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1494  out of  126800     1%  
+ Number of Slice Registers:            1495  out of  126800     1%  
  Number of Slice LUTs:                 2085  out of  63400     3%  
     Number used as Logic:              2085  out of  63400     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3382
-   Number with an unused Flip Flop:    1888  out of   3382    55%  
-   Number with an unused LUT:          1297  out of   3382    38%  
-   Number of fully used LUT-FF pairs:   197  out of   3382     5%  
+ Number of LUT Flip Flop pairs used:   3383
+   Number with an unused Flip Flop:    1888  out of   3383    55%  
+   Number with an unused LUT:          1298  out of   3383    38%  
+   Number of fully used LUT-FF pairs:   197  out of   3383     5%  
    Number of unique control sets:        41
 
 IO Utilization: 
@@ -1226,7 +1226,7 @@ Clock Information:
 -----------------------------------+-------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)         | Load  |
 -----------------------------------+-------------------------------+-------+
-DP_clk                             | BUFGP                         | 1477  |
+DP_clk                             | BUFGP                         | 1478  |
 s_fcu_enable(s_fcu_enable1:O)      | NONE(*)(FRW_CU/s_if_id_is_reg)| 18    |
 -----------------------------------+-------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1254,7 +1254,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP_clk'
   Clock period: 15.532ns (frequency: 64.385MHz)
-  Total number of paths / destination ports: 31072616286 / 2864
+  Total number of paths / destination ports: 31305927730 / 2866
 -------------------------------------------------------------------------
 Delay:               7.766ns (Levels of Logic = 15)
   Source:            DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_18 (FF)
@@ -1289,7 +1289,7 @@ Delay:               7.766ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP_clk'
-  Total number of paths / destination ports: 5913009738 / 4135
+  Total number of paths / destination ports: 5679702374 / 4137
 -------------------------------------------------------------------------
 Offset:              10.981ns (Levels of Logic = 19)
   Source:            DP_reset (PAD)
@@ -1452,12 +1452,12 @@ DP_clk         |         |         |    1.179|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 24.94 secs
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.50 secs
  
 --> 
 
-Total memory usage is 350044 kilobytes
+Total memory usage is 352924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  218 (   0 filtered)

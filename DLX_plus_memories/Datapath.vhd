@@ -327,6 +327,7 @@ architecture Structural of Datapath is
 	signal s_enable_wb				: std_logic;
 	signal s_fcu_enable				: std_logic;
 	signal s_jmp_or_brnch_Ffcu_Tde: std_logic;
+	signal s_use_immediate			: std_logic;
 	
 begin
 
@@ -452,10 +453,19 @@ begin
 		portY => s_opA_Fmux_Tfrw_mux
 		);
 	
+	REGB_IMM_SEL_REG : Reg1Bit PORT MAP (
+		clk => DP_clk,
+		reset=> s_reset_middle_regs,
+		data_in=> DP_use_immediate,
+		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
+		load=> '1',
+		data_out=> s_use_immediate
+		);
+	
 	RegB_Imm_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
 		port0 => s_regB_Fde_Tex,
 		port1 => s_regI_Fde_Tex,
-		sel   => DP_use_immediate,
+		sel   => s_use_immediate,
 		portY => s_opB_Fmux_Tfrw_mux
 		);
 	

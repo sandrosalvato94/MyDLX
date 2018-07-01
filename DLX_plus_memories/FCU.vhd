@@ -72,7 +72,7 @@ architecture Behavioral of FCU is
 --	constant OPCODE_MUL : std_logic_vector(5 downto 0) := "000001"; --0x01
 --	-------------------------------------------------------------------
 --	constant OPCODE_ADDI: std_logic_vector(5 downto 0) := "001000"; --0x08
---	constant OPCODE_XORI : std_logic_vector(5 downto 0):= "001110"; --0x0e
+--	constant OPCODE_LHI : std_logic_vector(5 downto 0):= "001110"; --0x0e
 --	
 --	constant OPCODE_SLLI: std_logic_vector(5 downto 0) := "010100"; --0x14
 --	constant OPCODE_SGEI: std_logic_vector(5 downto 0) := "011101"; --0x1d
@@ -327,7 +327,7 @@ begin
 			end if;
 		-----------------------------------------------------------------------
 		-----------------------------------------------------------------------
-			if(((FCU_IF_ID_Op >= OPCODE_ADDI) AND (FCU_IF_ID_Op <= OPCODE_XORI)) OR
+			if(((FCU_IF_ID_Op >= OPCODE_ADDI) AND (FCU_IF_ID_Op <= OPCODE_LHI)) OR
 				((FCU_IF_ID_Op >= OPCODE_SRLI) AND (FCU_IF_ID_Op <= OPCODE_SGEI)) OR
 				((FCU_IF_ID_Op >= OPCODE_SLTUI) AND (FCU_IF_ID_Op <= OPCODE_SGEUI)) OR
 				(FCU_IF_ID_Op = OPCODE_LAHI) OR (FCU_IF_ID_Op = OPCODE_LAHIU) OR (FCU_IF_ID_Op = OPCODE_SLLI)) then
@@ -336,7 +336,7 @@ begin
 				s_if_id_is_imm <= '0';
 			end if;
 			
-			if(((FCU_ID_EX_Op >= OPCODE_ADDI) AND (FCU_ID_EX_Op <= OPCODE_XORI)) OR
+			if(((FCU_ID_EX_Op >= OPCODE_ADDI) AND (FCU_ID_EX_Op <= OPCODE_LHI)) OR
 				((FCU_ID_EX_Op >= OPCODE_SRLI) AND (FCU_ID_EX_Op <= OPCODE_SGEI)) OR
 				((FCU_ID_EX_Op >= OPCODE_SLTUI) AND (FCU_ID_EX_Op <= OPCODE_SGEUI)) OR
 				(FCU_ID_EX_Op = OPCODE_LAHI) OR (FCU_ID_EX_Op = OPCODE_LAHIU) OR (FCU_ID_EX_Op = OPCODE_SLLI) ) then
@@ -345,7 +345,7 @@ begin
 				s_id_ex_is_imm <= '0';
 			end if;
 			
-			if(((FCU_EX_MEM_Op >= OPCODE_ADDI) AND (FCU_EX_MEM_Op <= OPCODE_XORI)) OR
+			if(((FCU_EX_MEM_Op >= OPCODE_ADDI) AND (FCU_EX_MEM_Op <= OPCODE_LHI)) OR
 				((FCU_EX_MEM_Op >= OPCODE_SRLI) AND (FCU_EX_MEM_Op <= OPCODE_SGEI)) OR
 				((FCU_EX_MEM_Op >= OPCODE_SLTUI) AND (FCU_EX_MEM_Op <= OPCODE_SGEUI)) OR
 				(FCU_EX_MEM_Op = OPCODE_LAHI) OR (FCU_EX_MEM_Op = OPCODE_LAHIU) OR (FCU_EX_MEM_Op = OPCODE_SLLI)) then
@@ -354,7 +354,7 @@ begin
 				s_ex_mem_is_imm<= '0';
 			end if;
 			
-			if(((FCU_MEM_WB_Op >= OPCODE_ADDI) AND (FCU_MEM_WB_Op <= OPCODE_XORI)) OR
+			if(((FCU_MEM_WB_Op >= OPCODE_ADDI) AND (FCU_MEM_WB_Op <= OPCODE_LHI)) OR
 				((FCU_MEM_WB_Op >= OPCODE_SRLI) AND (FCU_MEM_WB_Op <= OPCODE_SGEI)) OR
 				((FCU_MEM_WB_Op >= OPCODE_SLTUI) AND (FCU_MEM_WB_Op <= OPCODE_SGEUI)) OR
 				(FCU_MEM_WB_Op = OPCODE_LAHI) OR (FCU_MEM_WB_Op = OPCODE_LAHIU) OR (FCU_MEM_WB_Op = OPCODE_SLLI)) then
