@@ -173,6 +173,8 @@ architecture Structural of ALU is
 	signal s_mux_signals	: matrix_data :=(others => (others => (others => '0')));
 	signal s_tmp3, s_tmp4, s_tmp5 : std_logic;
 	signal s_SGN_usgn		: std_logic;
+	signal s_enable_OpB	: std_logic;
+	signal s_OpB			: std_logic_vector(NBIT_ALU-1 downto 0);
 begin
 
 ---------------------------------------------------------------------------------------------
@@ -194,14 +196,20 @@ begin
 
 ---------------------------------------------------------------------------------------------
 	
+	s_enable_OpB <= s_BS_opcode(1) NOR s_BS_opcode(0);
+	
+	cyc_enable_OpB	: for i in 0 to NBIT_ALU-1 generate
+			s_OpB(i) <= ALU_Opb(i) AND s_enable_OpB;
+	end generate cyc_enable_OpB;
+	
 	cyc_not_opb : for i in 0 to NBIT_ALU-1 generate
-		s_not_opb(i) <= NOT(ALU_Opb(i));
+		s_not_opb(i) <= NOT(s_OpB(i));
 	end generate cyc_not_opb;
 	
 	s_P4_cin  <= ALU_Opcode(0) AND s_BS_enable;
 	
 	MuxP4 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_ALU) PORT MAP (
-						port0 => ALU_Opb,
+						port0 => s_OpB,
 						port1 => s_not_opb,
 						sel => s_P4_cin,
 						portY => s_sel_opB

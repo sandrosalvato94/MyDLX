@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_beh.prj" "work.TB_DLX_PM" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_translate.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_translate.prj" "work.TB_DLX_PM" 

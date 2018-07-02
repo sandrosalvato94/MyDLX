@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -384,7 +384,7 @@ Offset:              3.399ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
-     LUT5:I0->O            4   0.097   0.707  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>211 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
+     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
      LUT6:I0->O            2   0.097   0.383  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
      LUT5:I3->O            4   0.097   0.570  _n0452<10>1 (_n0452<10>)
      LUT6:I2->O            2   0.097   0.561  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1)
@@ -426,7 +426,7 @@ Delay:               2.654ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
-     LUT5:I0->O            4   0.097   0.707  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>211 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
+     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
      LUT6:I0->O            2   0.097   0.299  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
      LUT6:I5->O            1   0.097   0.295  Mmux_CU_error12 (Mmux_CU_error11)
      LUT4:I3->O            1   0.097   0.279  Mmux_CU_error14 (CU_error_OBUF)
@@ -451,12 +451,12 @@ CU_clk         |    0.653|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.47 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.68 secs
  
 --> 
 
-Total memory usage is 324140 kilobytes
+Total memory usage is 319924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

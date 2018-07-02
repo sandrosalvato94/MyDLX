@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: FCU.prj
 
@@ -174,28 +174,28 @@ WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_reg>. Latches may be 
     Found 6-bit comparator lessequal for signal <n0097> created at line 331
     Found 6-bit comparator lessequal for signal <n0101> created at line 332
     Found 6-bit comparator lessequal for signal <n0103> created at line 332
-    Found 6-bit comparator lessequal for signal <n0113> created at line 339
-    Found 6-bit comparator lessequal for signal <n0115> created at line 339
-    Found 6-bit comparator lessequal for signal <n0118> created at line 340
-    Found 6-bit comparator lessequal for signal <n0120> created at line 340
+    Found 6-bit comparator lessequal for signal <n0117> created at line 340
+    Found 6-bit comparator lessequal for signal <n0119> created at line 340
+    Found 6-bit comparator lessequal for signal <n0122> created at line 341
     Found 6-bit comparator lessequal for signal <n0124> created at line 341
-    Found 6-bit comparator lessequal for signal <n0126> created at line 341
-    Found 6-bit comparator lessequal for signal <n0136> created at line 348
-    Found 6-bit comparator lessequal for signal <n0138> created at line 348
-    Found 6-bit comparator lessequal for signal <n0141> created at line 349
-    Found 6-bit comparator lessequal for signal <n0143> created at line 349
+    Found 6-bit comparator lessequal for signal <n0128> created at line 342
+    Found 6-bit comparator lessequal for signal <n0130> created at line 342
+    Found 6-bit comparator lessequal for signal <n0145> created at line 350
     Found 6-bit comparator lessequal for signal <n0147> created at line 350
-    Found 6-bit comparator lessequal for signal <n0149> created at line 350
-    Found 6-bit comparator lessequal for signal <n0159> created at line 357
-    Found 6-bit comparator lessequal for signal <n0161> created at line 357
-    Found 6-bit comparator lessequal for signal <n0164> created at line 358
-    Found 6-bit comparator lessequal for signal <n0166> created at line 358
-    Found 6-bit comparator lessequal for signal <n0170> created at line 359
-    Found 6-bit comparator lessequal for signal <n0172> created at line 359
-    Found 6-bit comparator lessequal for signal <n0203> created at line 417
-    Found 6-bit comparator lessequal for signal <n0205> created at line 417
-    Found 6-bit comparator lessequal for signal <n0212> created at line 423
-    Found 6-bit comparator lessequal for signal <n0214> created at line 423
+    Found 6-bit comparator lessequal for signal <n0150> created at line 351
+    Found 6-bit comparator lessequal for signal <n0152> created at line 351
+    Found 6-bit comparator lessequal for signal <n0156> created at line 352
+    Found 6-bit comparator lessequal for signal <n0158> created at line 352
+    Found 6-bit comparator lessequal for signal <n0173> created at line 360
+    Found 6-bit comparator lessequal for signal <n0175> created at line 360
+    Found 6-bit comparator lessequal for signal <n0178> created at line 361
+    Found 6-bit comparator lessequal for signal <n0180> created at line 361
+    Found 6-bit comparator lessequal for signal <n0184> created at line 362
+    Found 6-bit comparator lessequal for signal <n0186> created at line 362
+    Found 6-bit comparator lessequal for signal <n0222> created at line 421
+    Found 6-bit comparator lessequal for signal <n0224> created at line 421
+    Found 6-bit comparator lessequal for signal <n0231> created at line 427
+    Found 6-bit comparator lessequal for signal <n0233> created at line 427
     Summary:
 	inferred  18 Latch(s).
 	inferred  44 Comparator(s).
@@ -367,7 +367,7 @@ Offset:              0.814ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             6   0.001   0.716  FCU_IF_ID_Op_4_IBUF (FCU_IF_ID_Op_4_IBUF)
-     LUT6:I0->O            1   0.097   0.000  GND_4_o_GND_4_o_OR_37_o1 (GND_4_o_GND_4_o_OR_37_o)
+     LUT6:I0->O            1   0.097   0.000  GND_4_o_PWR_4_o_OR_39_o1 (GND_4_o_PWR_4_o_OR_39_o)
      LD:D                     -0.028          s_if_id_is_imm
     ----------------------------------------
     Total                      0.814ns (0.098ns logic, 0.716ns route)
@@ -425,12 +425,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.98 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.17 secs
  
 --> 
 
-Total memory usage is 312156 kilobytes
+Total memory usage is 308696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   28 (   0 filtered)

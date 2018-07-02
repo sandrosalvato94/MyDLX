@@ -145,9 +145,9 @@ begin
 				when OPCODE_MUL      => 
 					case CU_instr_func is
 						when FUNC_MULT => 
-								s_control_word <= "1100010" & "00" & "110000" & "100" & "1000" & "0000";
-						when FUNC_MULTU => 
 								s_control_word <= "1100010" & "00" & "110010" & "100" & "1000" & "0000";
+						when FUNC_MULTU => 
+								s_control_word <= "1100010" & "00" & "110000" & "100" & "1000" & "0000";
 						when others => 
 								s_control_word <= "0000010" & "00" & "000000" & "000" & "1000" & "0000";
 								CU_error <= '1';

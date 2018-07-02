@@ -393,7 +393,7 @@ begin
 											 NBIT_IR => 32, NBIT_ADDR => 5, NBIT_DATA => NBIT_DATA)  PORT MAP (
 		DE_clk 					=> DP_clk,
 		DE_reset 				=> DP_reset,
-		DE_enable 				=> DP_enable,
+		DE_enable 				=> s_stall, --DP_enable
 		DE_IR						=> s_IR_Fif, --from fetch
 		DE_PC						=> s_PC_Tde, --from reg IF/ID
 		DE_NPC					=> s_NPC_Tde,--from reg IF/ID

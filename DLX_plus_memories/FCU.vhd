@@ -330,7 +330,8 @@ begin
 			if(((FCU_IF_ID_Op >= OPCODE_ADDI) AND (FCU_IF_ID_Op <= OPCODE_LHI)) OR
 				((FCU_IF_ID_Op >= OPCODE_SRLI) AND (FCU_IF_ID_Op <= OPCODE_SGEI)) OR
 				((FCU_IF_ID_Op >= OPCODE_SLTUI) AND (FCU_IF_ID_Op <= OPCODE_SGEUI)) OR
-				(FCU_IF_ID_Op = OPCODE_LAHI) OR (FCU_IF_ID_Op = OPCODE_LAHIU) OR (FCU_IF_ID_Op = OPCODE_SLLI)) then
+				(FCU_IF_ID_Op = OPCODE_LAHI) OR (FCU_IF_ID_Op = OPCODE_LAHIU) OR (FCU_IF_ID_Op = OPCODE_SLLI) OR
+				(FCU_IF_ID_Op = OPCODE_MFLO) OR ( FCU_IF_ID_Op = OPCODE_MFHI)) then
 				s_if_id_is_imm <= '1';
 			else 
 				s_if_id_is_imm <= '0';
@@ -339,7 +340,8 @@ begin
 			if(((FCU_ID_EX_Op >= OPCODE_ADDI) AND (FCU_ID_EX_Op <= OPCODE_LHI)) OR
 				((FCU_ID_EX_Op >= OPCODE_SRLI) AND (FCU_ID_EX_Op <= OPCODE_SGEI)) OR
 				((FCU_ID_EX_Op >= OPCODE_SLTUI) AND (FCU_ID_EX_Op <= OPCODE_SGEUI)) OR
-				(FCU_ID_EX_Op = OPCODE_LAHI) OR (FCU_ID_EX_Op = OPCODE_LAHIU) OR (FCU_ID_EX_Op = OPCODE_SLLI) ) then
+				(FCU_ID_EX_Op = OPCODE_LAHI) OR (FCU_ID_EX_Op = OPCODE_LAHIU) OR (FCU_ID_EX_Op = OPCODE_SLLI) OR (FCU_ID_EX_Op = OPCODE_SLLI) OR
+				(FCU_ID_EX_Op = OPCODE_MFLO) OR ( FCU_ID_EX_Op = OPCODE_MFHI)) then
 				s_id_ex_is_imm <= '1';
 			else 
 				s_id_ex_is_imm <= '0';
@@ -348,7 +350,8 @@ begin
 			if(((FCU_EX_MEM_Op >= OPCODE_ADDI) AND (FCU_EX_MEM_Op <= OPCODE_LHI)) OR
 				((FCU_EX_MEM_Op >= OPCODE_SRLI) AND (FCU_EX_MEM_Op <= OPCODE_SGEI)) OR
 				((FCU_EX_MEM_Op >= OPCODE_SLTUI) AND (FCU_EX_MEM_Op <= OPCODE_SGEUI)) OR
-				(FCU_EX_MEM_Op = OPCODE_LAHI) OR (FCU_EX_MEM_Op = OPCODE_LAHIU) OR (FCU_EX_MEM_Op = OPCODE_SLLI)) then
+				(FCU_EX_MEM_Op = OPCODE_LAHI) OR (FCU_EX_MEM_Op = OPCODE_LAHIU) OR (FCU_EX_MEM_Op = OPCODE_SLLI) OR (FCU_EX_MEM_Op = OPCODE_SLLI) OR
+				(FCU_EX_MEM_Op = OPCODE_MFLO) OR ( FCU_EX_MEM_Op = OPCODE_MFHI)) then
 				s_ex_mem_is_imm <= '1';
 			else 
 				s_ex_mem_is_imm<= '0';
@@ -357,7 +360,8 @@ begin
 			if(((FCU_MEM_WB_Op >= OPCODE_ADDI) AND (FCU_MEM_WB_Op <= OPCODE_LHI)) OR
 				((FCU_MEM_WB_Op >= OPCODE_SRLI) AND (FCU_MEM_WB_Op <= OPCODE_SGEI)) OR
 				((FCU_MEM_WB_Op >= OPCODE_SLTUI) AND (FCU_MEM_WB_Op <= OPCODE_SGEUI)) OR
-				(FCU_MEM_WB_Op = OPCODE_LAHI) OR (FCU_MEM_WB_Op = OPCODE_LAHIU) OR (FCU_MEM_WB_Op = OPCODE_SLLI)) then
+				(FCU_MEM_WB_Op = OPCODE_LAHI) OR (FCU_MEM_WB_Op = OPCODE_LAHIU) OR (FCU_MEM_WB_Op = OPCODE_SLLI) OR (FCU_MEM_WB_Op = OPCODE_SLLI) OR
+				(FCU_MEM_WB_Op = OPCODE_MFLO) OR ( FCU_MEM_WB_Op = OPCODE_MFHI)) then
 				s_mem_wb_is_imm <= '1';
 			else 
 				s_mem_wb_is_imm<= '0';

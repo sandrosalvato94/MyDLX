@@ -16,7 +16,9 @@ nop
 nop
 nop
 nop
-mult r7, r5, r6
+mult r5, r6
+mflo r6
+mfhi r7
 addi r8, r0, #15
 addi r9, r0, #15
 nop
