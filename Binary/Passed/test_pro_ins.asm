@@ -60,3 +60,4 @@ nop
 subu r24, r1, r2
 subui r25, r1, #20
 
+;64 cc + 1/2

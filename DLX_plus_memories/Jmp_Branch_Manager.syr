@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Jmp_Branch_Manager.prj
 
@@ -108,6 +108,9 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_cell.vhd" into library work
 Parsing entity <PG_cell>.
 Parsing architecture <Behavioral> of entity <pg_cell>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd" into library work
+Parsing entity <GeneralGenerate>.
+Parsing architecture <Behavioral> of entity <generalgenerate>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Sum_Network.vhd" into library work
 Parsing entity <Sum_Network>.
 Parsing architecture <Behavioral> of entity <sum_network>.
@@ -138,8 +141,8 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 Elaborating entity <PropagateCarryLookahead> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <PG_network> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 61: Assignment to tmp1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 62: Assignment to tmp2 ignored, since the identifier is never used
+
+Elaborating entity <GeneralGenerate> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
 
@@ -154,7 +157,7 @@ Elaborating entity <Sum_Network> (architecture <Behavioral>) with generics from 
 Synthesizing Unit <Jmp_Branch_Manager>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Jmp_Branch_Manager.vhd".
         N = 32
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Jmp_Branch_Manager.vhd" line 163: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Jmp_Branch_Manager.vhd" line 164: Output port <Cout> of the instance <ADD> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Jmp_Branch_Manager> synthesized.
@@ -176,10 +179,14 @@ Unit <PropagateCarryLookahead> synthesized.
 Synthesizing Unit <PG_network>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd".
         N = 32
-WARNING:Xst:647 - Input <c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <PG_network> synthesized.
+
+Synthesizing Unit <GeneralGenerate>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd".
     Summary:
 	no macro.
-Unit <PG_network> synthesized.
+Unit <GeneralGenerate> synthesized.
 
 Synthesizing Unit <PG_cell>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_cell.vhd".
@@ -203,8 +210,8 @@ Unit <Sum_Network> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 3
- 32-bit 2-to-1 multiplexer                             : 3
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 2
 # Xors                                                 : 64
  1-bit xor2                                            : 64
 
@@ -219,8 +226,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 3
- 32-bit 2-to-1 multiplexer                             : 3
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 2
 # Xors                                                 : 64
  1-bit xor2                                            : 64
 
@@ -265,13 +272,13 @@ Top Level Output File Name         : Jmp_Branch_Manager.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 95
+# BELS                             : 93
 #      LUT2                        : 1
-#      LUT4                        : 2
+#      LUT4                        : 1
 #      LUT5                        : 32
-#      LUT6                        : 60
-# IO Buffers                       : 133
-#      IBUF                        : 100
+#      LUT6                        : 59
+# IO Buffers                       : 132
+#      IBUF                        : 99
 #      OBUF                        : 33
 
 Device utilization summary:
@@ -281,19 +288,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   95  out of  63400     0%  
-    Number used as Logic:                95  out of  63400     0%  
+ Number of Slice LUTs:                   93  out of  63400     0%  
+    Number used as Logic:                93  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     95
-   Number with an unused Flip Flop:      95  out of     95   100%  
-   Number with an unused LUT:             0  out of     95     0%  
-   Number of fully used LUT-FF pairs:     0  out of     95     0%  
+ Number of LUT Flip Flop pairs used:     93
+   Number with an unused Flip Flop:      93  out of     93   100%  
+   Number with an unused LUT:             0  out of     93     0%  
+   Number of fully used LUT-FF pairs:     0  out of     93     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         133
- Number of bonded IOBs:                 133  out of    210    63%  
+ Number of bonded IOBs:                 132  out of    210    62%  
 
 Specific Feature Utilization:
 
@@ -328,7 +335,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 23.895ns
+   Maximum combinational path delay: 24.685ns
 
 Timing Details:
 ---------------
@@ -336,9 +343,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2646 / 33
+  Total number of paths / destination ports: 2786 / 33
 -------------------------------------------------------------------------
-Delay:               23.895ns (Levels of Logic = 32)
+Delay:               24.685ns (Levels of Logic = 33)
   Source:            JBM_JMP_branch<0> (PAD)
   Destination:       JBM_Upd_PC<31> (PAD)
 
@@ -346,8 +353,9 @@ Delay:               23.895ns (Levels of Logic = 32)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            65   0.001   0.795  JBM_JMP_branch_0_IBUF (JBM_JMP_branch_0_IBUF)
-     LUT6:I1->O            2   0.097   0.698  ADD/CN/s_carry<1>1 (ADD/s_G2<2>)
+     IBUF:I->O            63   0.001   0.795  JBM_JMP_branch_0_IBUF (JBM_JMP_branch_0_IBUF)
+     LUT5:I0->O            2   0.097   0.688  ADD/PG/cyc[1].IFN.PG_cell_i/Mxor_p_xo<0>1 (ADD/s_P1<1>)
+     LUT6:I1->O            3   0.097   0.703  ADD/CN/s_carry<1>1 (ADD/s_G2<2>)
      LUT6:I0->O            2   0.097   0.698  ADD/CN/s_carry<2>1 (ADD/s_G2<3>)
      LUT6:I0->O            2   0.097   0.698  ADD/CN/s_carry<3>1 (ADD/s_G2<4>)
      LUT6:I0->O            2   0.097   0.698  ADD/CN/s_carry<4>1 (ADD/s_G2<5>)
@@ -379,7 +387,7 @@ Delay:               23.895ns (Levels of Logic = 32)
      LUT6:I4->O            1   0.097   0.279  ADD/SN/Mxor_S<31>_xo<0>1 (JBM_Upd_PC_31_OBUF)
      OBUF:I->O                 0.000          JBM_Upd_PC_31_OBUF (JBM_Upd_PC<31>)
     ----------------------------------------
-    Total                     23.895ns (2.911ns logic, 20.984ns route)
+    Total                     24.685ns (3.008ns logic, 21.677ns route)
                                        (12.2% logic, 87.8% route)
 
 =========================================================================
@@ -390,14 +398,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.97 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.76 secs
  
 --> 
 
-Total memory usage is 367388 kilobytes
+Total memory usage is 369788 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

@@ -60,6 +60,8 @@ begin
    
    tmp1 <= A(0) AND B(0);
    tmp2 <= A(0) XOR B(0);
+	
+	P(0) <= '0';
    
 	cyc: for i in 0 to N-1 generate
 		IF0: if(i = 0) generate

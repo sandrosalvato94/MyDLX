@@ -151,20 +151,21 @@ begin
 ---------------------------------------------------------------------------------------------------------------------------
 						
 ---------------------------------------------------------------------------------------------------------------------------
-	cyc : for i in 0 to N-1 generate
-		s_not_tmp(i) <= NOT(s_Fmuxtrg_Tadd(i));
-	end generate cyc;
-						
-	MUX_ADD : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
-						port0 => s_Fmuxtrg_Tadd,
-						port1 => s_not_tmp,
-						sel => s_sel_muxes,
-						portY => s_Tadd
-						);
+--	cyc : for i in 0 to N-1 generate --modificato il 4 luglio
+--		s_not_tmp(i) <= NOT(s_Fmuxtrg_Tadd(i));
+--	end generate cyc;
+--						
+--	MUX_ADD : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => N) PORT MAP (
+--						port0 => s_Fmuxtrg_Tadd,
+--						port1 => s_not_tmp,
+--						sel => s_sel_muxes,
+--						portY => s_Tadd
+--						);
 	ADD : PropagateCarryLookahead GENERIC MAP (N => N) PORT MAP (
-						A => s_Tadd,
+						A => s_Fmuxtrg_Tadd,
 						B => s_Fmuxtba_Tadd,
-						Cin => s_sel_muxes,
+						Cin => '0',
+					--	Cin => s_sel_muxes,
 					--	Cout => , not useful in this prototype
 						Sum => JBM_Upd_PC
 						);

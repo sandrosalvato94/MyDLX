@@ -8,3 +8,5 @@ add r2, r1, r2 ; R2 = 4 + 5 = 9
 xor r1, r1, r2
 xor r2, r2, r1
 xor r1, r1, r2 ; now R1 contains 9, R2 contains 5
+
+;14 cc

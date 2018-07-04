@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -81,6 +81,48 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/jbm_upd_pc" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">jbm_upd_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">jbm_upd_pc[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/MUX_TRG/port0" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">port0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port0[31:0]</obj_property>
+      <obj_property name="label">JBM_Reg</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/MUX_TRG/port1" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">port1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port1[31:0]</obj_property>
+      <obj_property name="label">JBM_Imm</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/MUX_TBA/port1" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">port1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port1[31:0]</obj_property>
+      <obj_property name="label">JBM_NPC</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/MUX_TBA/sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sel</obj_property>
+      <obj_property name="ObjectShortName">sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/ADD/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/ADD/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/ADD/sum" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
+      <obj_property name="label">sum[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

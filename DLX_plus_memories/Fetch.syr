@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Fetch.prj
 
@@ -108,6 +108,9 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_cell.vhd" into library work
 Parsing entity <PG_cell>.
 Parsing architecture <Behavioral> of entity <pg_cell>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd" into library work
+Parsing entity <GeneralGenerate>.
+Parsing architecture <Behavioral> of entity <generalgenerate>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Sum_Network.vhd" into library work
 Parsing entity <Sum_Network>.
 Parsing architecture <Behavioral> of entity <sum_network>.
@@ -143,8 +146,8 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 Elaborating entity <PropagateCarryLookahead> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <PG_network> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 61: Assignment to tmp1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 62: Assignment to tmp2 ignored, since the identifier is never used
+
+Elaborating entity <GeneralGenerate> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
 
@@ -191,10 +194,14 @@ Unit <PropagateCarryLookahead> synthesized.
 Synthesizing Unit <PG_network>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd".
         N = 32
-WARNING:Xst:647 - Input <c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <PG_network> synthesized.
+
+Synthesizing Unit <GeneralGenerate>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd".
     Summary:
 	no macro.
-Unit <PG_network> synthesized.
+Unit <GeneralGenerate> synthesized.
 
 Synthesizing Unit <PG_cell>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_cell.vhd".
@@ -258,7 +265,6 @@ Optimizing unit <NRegister> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Fetch, actual ratio is 0.
-FlipFlop PC/data_out_22 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -266,8 +272,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 65
- Flip-Flops                                            : 65
+# Registers                                            : 64
+ Flip-Flops                                            : 64
 
 =========================================================================
 
@@ -290,20 +296,20 @@ Top Level Output File Name         : Fetch.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 298
-#      INV                         : 2
+# BELS                             : 235
 #      LUT2                        : 19
-#      LUT3                        : 18
-#      LUT4                        : 36
-#      LUT5                        : 39
-#      LUT6                        : 162
-#      MUXF7                       : 22
-# FlipFlops/Latches                : 65
-#      FDCE                        : 65
+#      LUT3                        : 15
+#      LUT4                        : 20
+#      LUT5                        : 45
+#      LUT6                        : 123
+#      MUXF7                       : 12
+#      VCC                         : 1
+# FlipFlops/Latches                : 64
+#      FDCE                        : 64
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 200
-#      IBUF                        : 104
+# IO Buffers                       : 199
+#      IBUF                        : 103
 #      OBUF                        : 96
 
 Device utilization summary:
@@ -313,21 +319,21 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              33  out of  126800     0%  
- Number of Slice LUTs:                  276  out of  63400     0%  
-    Number used as Logic:               276  out of  63400     0%  
+ Number of Slice Registers:              31  out of  126800     0%  
+ Number of Slice LUTs:                  222  out of  63400     0%  
+    Number used as Logic:               222  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    277
-   Number with an unused Flip Flop:     244  out of    277    88%  
-   Number with an unused LUT:             1  out of    277     0%  
-   Number of fully used LUT-FF pairs:    32  out of    277    11%  
+ Number of LUT Flip Flop pairs used:    222
+   Number with an unused Flip Flop:     191  out of    222    86%  
+   Number with an unused LUT:             0  out of    222     0%  
+   Number of fully used LUT-FF pairs:    31  out of    222    13%  
    Number of unique control sets:         2
 
 IO Utilization: 
  Number of IOs:                         201
- Number of bonded IOBs:                 201  out of    210    95%  
-    IOB Flip Flops/Latches:              32
+ Number of bonded IOBs:                 200  out of    210    95%  
+    IOB Flip Flops/Latches:              33
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -353,7 +359,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-FE_clk                             | BUFGP                  | 65    |
+FE_clk                             | BUFGP                  | 64    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -364,10 +370,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.603ns (Maximum Frequency: 217.231MHz)
-   Minimum input arrival time before clock: 4.241ns
-   Maximum output required time after clock: 4.879ns
-   Maximum combinational path delay: 4.517ns
+   Minimum period: 4.973ns (Maximum Frequency: 201.098MHz)
+   Minimum input arrival time before clock: 4.778ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: 5.053ns
 
 Timing Details:
 ---------------
@@ -375,110 +381,116 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FE_clk'
-  Clock period: 4.603ns (frequency: 217.231MHz)
-  Total number of paths / destination ports: 18559 / 33
+  Clock period: 4.973ns (frequency: 201.098MHz)
+  Total number of paths / destination ports: 16426 / 31
 -------------------------------------------------------------------------
-Delay:               4.603ns (Levels of Logic = 8)
-  Source:            PC/data_out_22_1 (FF)
-  Destination:       PC/data_out_26 (FF)
+Delay:               4.973ns (Levels of Logic = 9)
+  Source:            PC/data_out_5 (FF)
+  Destination:       PC/data_out_31 (FF)
   Source Clock:      FE_clk rising
   Destination Clock: FE_clk rising
 
-  Data Path: PC/data_out_22_1 to PC/data_out_26
+  Data Path: PC/data_out_5 to PC/data_out_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.361   0.511  PC/data_out_22_1 (PC/data_out_22_1)
-     LUT3:I0->O            1   0.097   0.683  ADDPC/CN/s_carry<21>1_SW0 (N270)
-     LUT6:I1->O            6   0.097   0.318  ADDPC/CN/s_carry<23>1 (ADDPC/s_G2<24>)
-     LUT6:I5->O            1   0.097   0.295  ADDBTB/CN/s_carry<25>1_SW0_G (N351)
-     LUT3:I2->O            2   0.097   0.383  ADDBTB/CN/s_carry<25>1_SW01 (N148)
-     LUT5:I3->O            4   0.097   0.707  ADDBTB/CN/s_carry<24>1_SW4 (N218)
-     LUT6:I0->O            1   0.097   0.000  ADDBTB/CN/s_carry<22>1_SW10_F (N368)
-     MUXF7:I0->O           1   0.277   0.379  ADDBTB/CN/s_carry<22>1_SW10 (N303)
-     LUT6:I4->O            2   0.097   0.000  MUXNPC/Mmux_portY19 (FE_NPC_26_OBUF)
-     FDCE:D                    0.008          PC/data_out_26
+     FDCE:C->Q             7   0.361   0.584  PC/data_out_5 (PC/data_out_5)
+     LUT6:I2->O           17   0.097   0.369  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
+     LUT5:I4->O            5   0.097   0.314  ADDPC/CN/s_carry<9>1 (ADDPC/s_G2<10>)
+     LUT6:I5->O            2   0.097   0.516  ADDBTB/CN/s_carry<11>1_SW1 (N86)
+     LUT6:I3->O            1   0.097   0.511  ADDBTB/CN/s_carry<14>1_SW0_SW1 (N150)
+     LUT6:I3->O            8   0.097   0.543  ADDBTB/CN/s_carry<14>1 (ADDBTB/s_G2<15>)
+     LUT6:I3->O            7   0.097   0.323  ADDBTB/CN/s_carry<22>1 (ADDBTB/s_G2<23>)
+     LUT6:I5->O            1   0.097   0.000  ADDBTB/CN/s_carry<24>1_SW2_F (N244)
+     MUXF7:I0->O           3   0.277   0.389  ADDBTB/CN/s_carry<24>1_SW2 (N158)
+     LUT6:I4->O            2   0.097   0.000  MUXNPC/Mmux_portY22 (FE_NPC_29_OBUF)
+     FDCE:D                    0.008          PC/data_out_29
     ----------------------------------------
-    Total                      4.603ns (1.325ns logic, 3.278ns route)
-                                       (28.8% logic, 71.2% route)
+    Total                      4.973ns (1.422ns logic, 3.551ns route)
+                                       (28.6% logic, 71.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FE_clk'
-  Total number of paths / destination ports: 5020 / 195
+  Total number of paths / destination ports: 4421 / 192
 -------------------------------------------------------------------------
-Offset:              4.241ns (Levels of Logic = 8)
+Offset:              4.778ns (Levels of Logic = 10)
   Source:            FE_rst (PAD)
-  Destination:       PC/data_out_26 (FF)
+  Destination:       PC/data_out_31 (FF)
   Destination Clock: FE_clk rising
 
-  Data Path: FE_rst to PC/data_out_26
+  Data Path: FE_rst to PC/data_out_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   0.001   0.758  FE_rst_IBUF (FE_rst_IBUF)
-     LUT6:I0->O           19   0.097   0.379  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
-     LUT6:I5->O           24   0.097   0.398  ADDPC/CN/s_carry<13>1 (ADDPC/s_G2<14>)
-     LUT6:I5->O            2   0.097   0.561  ADDBTB/CN/s_carry<17>1_SW1 (N79)
-     LUT6:I2->O            6   0.097   0.534  ADDBTB/CN/s_carry<16>1_SW0 (N119)
-     LUT6:I3->O            7   0.097   0.307  ADDBTB/CN/s_carry<18>1_SW0 (N151)
-     MUXF7:S->O            1   0.335   0.379  ADDBTB/CN/s_carry<22>1_SW2 (N286)
-     LUT6:I4->O            2   0.097   0.000  MUXNPC/Mmux_portY16 (FE_NPC_23_OBUF)
-     FDCE:D                    0.008          PC/data_out_23
+     IBUF:I->O            13   0.001   0.749  FE_rst_IBUF (FE_rst_IBUF)
+     LUT6:I0->O           17   0.097   0.369  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
+     LUT5:I4->O            5   0.097   0.314  ADDPC/CN/s_carry<9>1 (ADDPC/s_G2<10>)
+     LUT6:I5->O            2   0.097   0.516  ADDBTB/CN/s_carry<11>1_SW1 (N86)
+     LUT6:I3->O            1   0.097   0.511  ADDBTB/CN/s_carry<14>1_SW0_SW1 (N150)
+     LUT6:I3->O            8   0.097   0.543  ADDBTB/CN/s_carry<14>1 (ADDBTB/s_G2<15>)
+     LUT6:I3->O            7   0.097   0.323  ADDBTB/CN/s_carry<22>1 (ADDBTB/s_G2<23>)
+     LUT6:I5->O            1   0.097   0.000  ADDBTB/CN/s_carry<24>1_SW2_F (N244)
+     MUXF7:I0->O           3   0.277   0.389  ADDBTB/CN/s_carry<24>1_SW2 (N158)
+     LUT6:I4->O            2   0.097   0.000  MUXNPC/Mmux_portY22 (FE_NPC_29_OBUF)
+     FDCE:D                    0.008          PC/data_out_29
     ----------------------------------------
-    Total                      4.241ns (0.926ns logic, 3.315ns route)
-                                       (21.8% logic, 78.2% route)
+    Total                      4.778ns (1.062ns logic, 3.716ns route)
+                                       (22.2% logic, 77.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FE_clk'
-  Total number of paths / destination ports: 17950 / 96
+  Total number of paths / destination ports: 16490 / 95
 -------------------------------------------------------------------------
-Offset:              4.879ns (Levels of Logic = 9)
-  Source:            PC/data_out_22_1 (FF)
-  Destination:       FE_NPC<26> (PAD)
+Offset:              5.248ns (Levels of Logic = 10)
+  Source:            PC/data_out_5 (FF)
+  Destination:       FE_NPC<31> (PAD)
   Source Clock:      FE_clk rising
 
-  Data Path: PC/data_out_22_1 to FE_NPC<26>
+  Data Path: PC/data_out_5 to FE_NPC<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.361   0.511  PC/data_out_22_1 (PC/data_out_22_1)
-     LUT3:I0->O            1   0.097   0.683  ADDPC/CN/s_carry<21>1_SW0 (N270)
-     LUT6:I1->O            6   0.097   0.318  ADDPC/CN/s_carry<23>1 (ADDPC/s_G2<24>)
-     LUT6:I5->O            1   0.097   0.295  ADDBTB/CN/s_carry<25>1_SW0_G (N351)
-     LUT3:I2->O            2   0.097   0.383  ADDBTB/CN/s_carry<25>1_SW01 (N148)
-     LUT5:I3->O            4   0.097   0.707  ADDBTB/CN/s_carry<24>1_SW4 (N218)
-     LUT6:I0->O            1   0.097   0.000  ADDBTB/CN/s_carry<22>1_SW10_F (N368)
-     MUXF7:I0->O           1   0.277   0.379  ADDBTB/CN/s_carry<22>1_SW10 (N303)
-     LUT6:I4->O            2   0.097   0.283  MUXNPC/Mmux_portY19 (FE_NPC_26_OBUF)
-     OBUF:I->O                 0.000          FE_NPC_26_OBUF (FE_NPC<26>)
+     FDCE:C->Q             7   0.361   0.584  PC/data_out_5 (PC/data_out_5)
+     LUT6:I2->O           17   0.097   0.370  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
+     LUT5:I4->O            5   0.097   0.314  ADDPC/CN/s_carry<9>1 (ADDPC/s_G2<10>)
+     LUT6:I5->O            2   0.097   0.516  ADDBTB/CN/s_carry<11>1_SW1 (N86)
+     LUT6:I3->O            1   0.097   0.511  ADDBTB/CN/s_carry<14>1_SW0_SW1 (N150)
+     LUT6:I3->O            8   0.097   0.543  ADDBTB/CN/s_carry<14>1 (ADDBTB/s_G2<15>)
+     LUT6:I3->O            7   0.097   0.323  ADDBTB/CN/s_carry<22>1 (ADDBTB/s_G2<23>)
+     LUT6:I5->O            1   0.097   0.000  ADDBTB/CN/s_carry<24>1_SW2_F (N244)
+     MUXF7:I0->O           3   0.277   0.389  ADDBTB/CN/s_carry<24>1_SW2 (N158)
+     LUT6:I4->O            2   0.097   0.283  MUXNPC/Mmux_portY22 (FE_NPC_29_OBUF)
+     OBUF:I->O                 0.000          FE_NPC_29_OBUF (FE_NPC<29>)
     ----------------------------------------
-    Total                      4.879ns (1.317ns logic, 3.562ns route)
-                                       (27.0% logic, 73.0% route)
+    Total                      5.248ns (1.414ns logic, 3.834ns route)
+                                       (26.9% logic, 73.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4537 / 32
+  Total number of paths / destination ports: 4133 / 32
 -------------------------------------------------------------------------
-Delay:               4.517ns (Levels of Logic = 9)
+Delay:               5.053ns (Levels of Logic = 11)
   Source:            FE_rst (PAD)
-  Destination:       FE_NPC<26> (PAD)
+  Destination:       FE_NPC<31> (PAD)
 
-  Data Path: FE_rst to FE_NPC<26>
+  Data Path: FE_rst to FE_NPC<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   0.001   0.758  FE_rst_IBUF (FE_rst_IBUF)
-     LUT6:I0->O           19   0.097   0.379  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
-     LUT6:I5->O           24   0.097   0.398  ADDPC/CN/s_carry<13>1 (ADDPC/s_G2<14>)
-     LUT6:I5->O            2   0.097   0.561  ADDBTB/CN/s_carry<17>1_SW1 (N79)
-     LUT6:I2->O            6   0.097   0.534  ADDBTB/CN/s_carry<16>1_SW0 (N119)
-     LUT6:I3->O            7   0.097   0.307  ADDBTB/CN/s_carry<18>1_SW0 (N151)
-     MUXF7:S->O            1   0.335   0.379  ADDBTB/CN/s_carry<22>1_SW2 (N286)
-     LUT6:I4->O            2   0.097   0.283  MUXNPC/Mmux_portY16 (FE_NPC_23_OBUF)
-     OBUF:I->O                 0.000          FE_NPC_23_OBUF (FE_NPC<23>)
+     IBUF:I->O            13   0.001   0.749  FE_rst_IBUF (FE_rst_IBUF)
+     LUT6:I0->O           17   0.097   0.370  ADDPC/CN/s_carry<5>1 (ADDPC/s_G2<6>)
+     LUT5:I4->O            5   0.097   0.314  ADDPC/CN/s_carry<9>1 (ADDPC/s_G2<10>)
+     LUT6:I5->O            2   0.097   0.516  ADDBTB/CN/s_carry<11>1_SW1 (N86)
+     LUT6:I3->O            1   0.097   0.511  ADDBTB/CN/s_carry<14>1_SW0_SW1 (N150)
+     LUT6:I3->O            8   0.097   0.543  ADDBTB/CN/s_carry<14>1 (ADDBTB/s_G2<15>)
+     LUT6:I3->O            7   0.097   0.323  ADDBTB/CN/s_carry<22>1 (ADDBTB/s_G2<23>)
+     LUT6:I5->O            1   0.097   0.000  ADDBTB/CN/s_carry<24>1_SW2_F (N244)
+     MUXF7:I0->O           3   0.277   0.389  ADDBTB/CN/s_carry<24>1_SW2 (N158)
+     LUT6:I4->O            2   0.097   0.283  MUXNPC/Mmux_portY22 (FE_NPC_29_OBUF)
+     OBUF:I->O                 0.000          FE_NPC_29_OBUF (FE_NPC<29>)
     ----------------------------------------
-    Total                      4.517ns (0.918ns logic, 3.599ns route)
-                                       (20.3% logic, 79.7% route)
+    Total                      5.053ns (1.054ns logic, 3.999ns route)
+                                       (20.9% logic, 79.1% route)
 
 =========================================================================
 
@@ -490,20 +502,20 @@ Clock to Setup on destination clock FE_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FE_clk         |    4.603|         |         |         |
+FE_clk         |    4.973|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.58 secs
+Total CPU time to Xst completion: 8.53 secs
  
 --> 
 
-Total memory usage is 323436 kilobytes
+Total memory usage is 315580 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

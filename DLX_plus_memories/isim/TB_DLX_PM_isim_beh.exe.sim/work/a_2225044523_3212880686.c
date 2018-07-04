@@ -71,7 +71,7 @@ LAB3:    t1 = (t0 + 9552U);
     t8 = (t9 + t13);
     t14 = *((unsigned char *)t8);
     t15 = ieee_p_2592010699_sub_1605435078_503743352(IEEE_P_2592010699, t7, t14);
-    t16 = (t0 + 13400);
+    t16 = (t0 + 13544);
     t17 = (t16 + 32U);
     t18 = *((char **)t17);
     t19 = (t18 + 40U);
@@ -79,7 +79,7 @@ LAB3:    t1 = (t0 + 9552U);
     *((unsigned char *)t20) = t15;
     xsi_driver_first_trans_fast(t16);
 
-LAB2:    t21 = (t0 + 13348);
+LAB2:    t21 = (t0 + 13492);
     *((int *)t21) = 1;
 
 LAB1:    return;
@@ -130,7 +130,7 @@ LAB3:    t1 = (t0 + 9552U);
     t8 = (t9 + t13);
     t14 = *((unsigned char *)t8);
     t15 = ieee_p_2592010699_sub_2507238156_503743352(IEEE_P_2592010699, t7, t14);
-    t16 = (t0 + 13436);
+    t16 = (t0 + 13580);
     t17 = (t16 + 32U);
     t18 = *((char **)t17);
     t19 = (t18 + 40U);
@@ -138,9 +138,33 @@ LAB3:    t1 = (t0 + 9552U);
     *((unsigned char *)t20) = t15;
     xsi_driver_first_trans_fast(t16);
 
-LAB2:    t21 = (t0 + 13356);
+LAB2:    t21 = (t0 + 13500);
     *((int *)t21) = 1;
 
+LAB1:    return;
+LAB4:    goto LAB2;
+
+}
+
+static void work_a_2225044523_3212880686_p_2(char *t0)
+{
+    char *t1;
+    char *t2;
+    char *t3;
+    char *t4;
+    char *t5;
+
+LAB0:    xsi_set_current_line(64, ng0);
+
+LAB3:    t1 = (t0 + 13616);
+    t2 = (t1 + 32U);
+    t3 = *((char **)t2);
+    t4 = (t3 + 40U);
+    t5 = *((char **)t4);
+    *((unsigned char *)t5) = (unsigned char)2;
+    xsi_driver_first_trans_delta(t1, 31U, 1, 0LL);
+
+LAB2:
 LAB1:    return;
 LAB4:    goto LAB2;
 
@@ -149,7 +173,7 @@ LAB4:    goto LAB2;
 
 extern void work_a_2225044523_3212880686_init()
 {
-	static char *pe[] = {(void *)work_a_2225044523_3212880686_p_0,(void *)work_a_2225044523_3212880686_p_1};
+	static char *pe[] = {(void *)work_a_2225044523_3212880686_p_0,(void *)work_a_2225044523_3212880686_p_1,(void *)work_a_2225044523_3212880686_p_2};
 	xsi_register_didat("work_a_2225044523_3212880686", "isim/TB_DLX_PM_isim_beh.exe.sim/work/a_2225044523_3212880686.didat");
 	xsi_register_executes(pe);
 }
