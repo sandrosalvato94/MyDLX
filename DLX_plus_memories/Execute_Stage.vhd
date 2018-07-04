@@ -119,6 +119,17 @@ architecture Structural of Execute_Stage is
 	);
 	end component;
 	
+	component Reg1Bit is
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic;
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic);
+	end component;
+
+	
 	type collection_data is array (0 to 3) of std_logic_vector (NBIT_DATA-1 downto 0);
 	type matrix_data is array(0 to 2) of collection_data;
 	
@@ -127,8 +138,11 @@ architecture Structural of Execute_Stage is
 	signal s_product_Fmul_Thiloregs	: std_logic_vector(NBIT_DATA*2-1 downto 0);
 	signal s_ALU_enable			: std_logic;
 	signal s_mul_enable			: std_logic;
+	signal s_mul_enable2			: std_logic;
 	signal s_product_Flo_Tmux		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_product_Fhi_Tmux		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_product_Flo_Tmux2		: std_logic_vector(NBIT_DATA-1 downto 0);
+	signal s_product_Fhi_Tmux2		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_outalu_Falu_Tmux		: std_logic_vector(NBIT_DATA-1 downto 0);
 	signal s_flags_Falu_statusreg		: std_logic_vector(4 downto 0);
 	signal s_mux_signals	: matrix_data :=(others => (others => (others => '0')));
@@ -186,6 +200,15 @@ begin
 --------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------
+--	RegMulEnable	: Reg1Bit PORT MAP (
+--		clk 		=> EX_clk,
+--		reset		=> EX_reset,
+--		enable 	=> EX_enable,
+--		load 		=> '1',
+--		data_in	=> s_mul_enable,
+--		data_out	=> s_mul_enable2
+--		);
+	
 	LO : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 						clk => EX_clk,
 						reset => EX_reset,
@@ -195,6 +218,15 @@ begin
 						data_out => s_product_Flo_Tmux
 						);
 	
+--	LO2 : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
+--						clk => EX_clk,
+--						reset => EX_reset,
+--						enable => s_mul_enable2,
+--						load => '1',
+--						data_in => s_product_Flo_Tmux,
+--						data_out => s_product_Flo_Tmux2
+--						);
+	
 	HI : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 						clk => EX_clk,
 						reset => EX_reset,
@@ -203,6 +235,14 @@ begin
 						data_in => s_product_Fmul_Thiloregs(NBIT_DATA*2-1 downto NBIT_DATA),
 						data_out => s_product_Fhi_Tmux
 						);
+--	HI2 : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
+--						clk => EX_clk,
+--						reset => EX_reset,
+--						enable => s_mul_enable2,
+--						load => '1',
+--						data_in => s_product_Fhi_Tmux,
+--						data_out => s_product_Fhi_Tmux2
+--						);
 	ALU_reg : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 						clk => EX_clk,
 						reset => EX_reset,
@@ -216,8 +256,8 @@ begin
 
 --------------------------------------------------------------------------------------------------------------
 	s_mux_signals(0)(0) <= s_outalu_Falu_Tmux;
-	s_mux_signals(0)(1) <= s_product_Flo_Tmux;
-	s_mux_signals(0)(2) <= s_product_Fhi_Tmux;
+	s_mux_signals(0)(1) <=  s_product_Fhi_Tmux;
+	s_mux_signals(0)(2) <=  s_product_Flo_Tmux;
 	s_mux_signals(0)(3) <= (others => '0');
 	
 	

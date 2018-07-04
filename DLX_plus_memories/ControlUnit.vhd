@@ -47,8 +47,8 @@ entity ControlUnit is
 		CU_bubble			: in  std_logic;
 		--CU_CW_FE				: out	std_logic_vector(13 downto 0);
 		CU_CW_DE				: out	std_logic_vector(1 to 9);
-		CU_CW_EX				: out	std_logic_vector(8 to 18);
-		CU_CW_MEM			: out	std_logic_vector(19 to 22);
+		CU_CW_EX				: out	std_logic_vector(8 to 16);
+		CU_CW_MEM			: out	std_logic_vector(17 to 22);
 		CU_CW_WB				: out	std_logic_vector(23 to 26);
 		CU_error				: out std_logic
 	);
@@ -81,7 +81,7 @@ architecture Structural of ControlUnit is
 	signal s_cw_tmp			: std_logic_vector(1 to 26);
 	signal s_cw_Fde_Tex		: std_logic_vector(1 to 26);
 	signal s_cw_Fex_Tmem		: std_logic_vector(8 to 26);
-	signal s_cw_Fmem_Twb		: std_logic_vector(19 to 26);
+	signal s_cw_Fmem_Twb		: std_logic_vector(17 to 26);
 	signal s_cw_Fwb			: std_logic_vector(23 to 26);
 	
 	signal s_cw_bubble 		: std_logic_vector(1 to 26) := "0000010" & "00" & "000000" & "000" & "1000" & "0000";
@@ -145,9 +145,9 @@ begin
 				when OPCODE_MUL      => 
 					case CU_instr_func is
 						when FUNC_MULT => 
-								s_control_word <= "1100010" & "00" & "110010" & "100" & "1000" & "0000";
+								s_control_word <= "1100010" & "00" & "110010" & "111" & "1000" & "0000";
 						when FUNC_MULTU => 
-								s_control_word <= "1100010" & "00" & "110000" & "100" & "1000" & "0000";
+								s_control_word <= "1100010" & "00" & "110000" & "111" & "1000" & "0000";
 						when others => 
 								s_control_word <= "0000010" & "00" & "000000" & "000" & "1000" & "0000";
 								CU_error <= '1';
@@ -192,13 +192,13 @@ begin
 				when OPCODE_SNEI => 
 						s_control_word <= "1010010" & "00" & "100101" & "100" & "1000" & "0000";
 				when OPCODE_SLTI => 
-						s_control_word <= "1010010" & "00" & "101000" & "100" & "1000" & "0000";
+						s_control_word <= "1010011" & "00" & "101000" & "100" & "1000" & "0000";
 				when OPCODE_SGTI => 
-						s_control_word <= "1010010" & "00" & "101001" & "100" & "1000" & "0000";
+						s_control_word <= "1010011" & "00" & "101001" & "100" & "1000" & "0000";
 				when OPCODE_SLEI => 
-						s_control_word <= "1010010" & "00" & "101010" & "100" & "1000" & "0000";
+						s_control_word <= "1010011" & "00" & "101010" & "100" & "1000" & "0000";
 				when OPCODE_SGEI => 
-						s_control_word <= "1010010" & "00" & "101011" & "100" & "1000" & "0000";
+						s_control_word <= "1010011" & "00" & "101011" & "100" & "1000" & "0000";
 				when OPCODE_SLTUI => 
 						s_control_word <= "1010010" & "00" & "100000" & "100" & "1000" & "0000";
 				when OPCODE_SGTUI => 
@@ -283,19 +283,19 @@ begin
 															load => '1',
 															data_out => s_cw_Fex_Tmem
 															);
-	CU_CW_EX <= s_cw_Fex_Tmem(8 to 18);
+	CU_CW_EX <= s_cw_Fex_Tmem(8 to 16);
 ---------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------	
-	MEM_CW: NRegister GENERIC MAP (N => 8) PORT MAP (
+	MEM_CW: NRegister GENERIC MAP (N => 10) PORT MAP (
 															clk => CU_clk,
 															reset => s_reset_regs,
-															data_in => s_cw_Fex_Tmem(19 to 26),
+															data_in => s_cw_Fex_Tmem(17 to 26),
 															enable => CU_enable,
 															load => '1',
 															data_out => s_cw_Fmem_Twb
 															);
-	CU_CW_MEM <= s_cw_Fmem_Twb(19 to 22);
+	CU_CW_MEM <= s_cw_Fmem_Twb(17 to 22);
 ---------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------	

@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="25" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -49,17 +49,17 @@
       <obj_property name="ObjectShortName">de_ir[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/de_rd1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">de_rd1</obj_property>
-      <obj_property name="ObjectShortName">de_rd1</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_rd1</obj_property>
+      <obj_property name="ObjectShortName">rf_rd1</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/de_rd2" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">de_rd2</obj_property>
-      <obj_property name="ObjectShortName">de_rd2</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_rd2</obj_property>
+      <obj_property name="ObjectShortName">rf_rd2</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/de_wr" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">de_wr</obj_property>
-      <obj_property name="ObjectShortName">de_wr</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_wr</obj_property>
+      <obj_property name="ObjectShortName">rf_wr</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_addrwr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rf_addrwr[4:0]</obj_property>
@@ -135,22 +135,22 @@
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][11]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[11]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][11]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][12]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[12]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][12]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][13]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[13]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][13]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][14]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[14]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][14]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][15]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[15]</obj_property>
@@ -165,7 +165,7 @@
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][17]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[17]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][17]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][18]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[18]</obj_property>
@@ -190,12 +190,12 @@
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][22]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[22]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][22]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][23]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[23]</obj_property>
          <obj_property name="ObjectShortName">s_mux1_signals[0][23]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/s_mux1_signals[0][24]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[24]</obj_property>
@@ -243,14 +243,18 @@
       <obj_property name="ElementShortName">data_in[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
       <obj_property name="label">RegA</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegB/data_in" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_in[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
       <obj_property name="label">RegB</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RegI/data_in" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
@@ -258,27 +262,33 @@
       <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
       <obj_property name="label">RegImm</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegB_Imm_MUX/porty" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">porty[31:0]</obj_property>
+      <obj_property name="ObjectShortName">porty[31:0]</obj_property>
+      <obj_property name="label">B/Imm</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_opa" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">ex_opa[31:0]</obj_property>
       <obj_property name="ObjectShortName">ex_opa[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="label">OpA</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#000080</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_opb" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">ex_opb[31:0]</obj_property>
       <obj_property name="ObjectShortName">ex_opb[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="label">OpB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/LO/data_out" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-      <obj_property name="label">MFLO</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="label">OpB</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#000080</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/HI/data_out" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
@@ -287,13 +297,20 @@
       <obj_property name="label">MFHI</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/MUL/mul_sgn_usgn" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">mul_sgn_usgn</obj_property>
-      <obj_property name="ObjectShortName">mul_sgn_usgn</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/LO/data_out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      <obj_property name="label">MFLO</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/MUL/mul_product" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">mul_product[63:0]</obj_property>
-      <obj_property name="ObjectShortName">mul_product[63:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ex_sel_mux_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_sel_mux_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_sel_mux_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/EX_Stage/ALU_NBIT/alu_output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DATA_BYPASS_REG/data_in" type="array" db_ref_id="1">

@@ -114,8 +114,8 @@ architecture Structural of DLX_Core is
 		CU_flush				: in  std_logic;
 		CU_bubble			: in  std_logic;
 		CU_CW_DE				: out	std_logic_vector(1 to 9);
-		CU_CW_EX				: out	std_logic_vector(8 to 18);
-		CU_CW_MEM			: out	std_logic_vector(19 to 22);
+		CU_CW_EX				: out	std_logic_vector(8 to 16);
+		CU_CW_MEM			: out	std_logic_vector(17 to 22);
 		CU_CW_WB				: out	std_logic_vector(23 to 26);
 		CU_error				: out std_logic
 	);
@@ -145,8 +145,8 @@ architecture Structural of DLX_Core is
 	signal s_target_prediction_Fbtb_Tdp	: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_prediction_Fbtb_Tdp			: std_logic;
 	signal s_DE_cw_Fcu_Tdp					: std_logic_vector(1 to 9);
-	signal s_EX_cw_Fcu_Tdp					: std_logic_vector(8 to 18);
-	signal s_MEM_cw_Fcu_Tdp					: std_logic_vector(19 to 22);
+	signal s_EX_cw_Fcu_Tdp					: std_logic_vector(8 to 16);
+	signal s_MEM_cw_Fcu_Tdp					: std_logic_vector(17 to 22);
 	signal s_WB_cw_Fcu_Tdp					: std_logic_vector(23 to 26);
 	signal s_save_PC_Fcu_Tdp				: std_logic;
 	signal s_use_immediate_Fcu_Tdp		: std_logic;
@@ -184,7 +184,7 @@ begin
 		DP_reverse_operands			=> s_EX_cw_Fcu_Tdp(9),
 		DP_ALU_Opcode					=> s_EX_cw_Fcu_Tdp(10 to 15),
 		DP_EX_enable					=> s_EX_cw_Fcu_Tdp(16),
-		DP_UUW_sel						=> s_EX_cw_Fcu_Tdp(17 to 18),
+		DP_UUW_sel						=> s_MEM_cw_Fcu_Tdp(17 to 18), --modifica del 3 luglio
 		DP_Store_reduce				=> s_MEM_cw_Fcu_Tdp(21),
 		DP_Store_BYTE_half			=> s_MEM_cw_Fcu_Tdp(22),
 		DP_Load_data_from_DRAM		=> DLX_read_data,
@@ -221,8 +221,8 @@ begin
 		CU_error				=> DLX_error
 		);
 	
-	DLX_enable_DRAM <= s_MEM_cw_Fcu_Tdp(19) ;
-	DLX_RD_wr_DRAM  <= s_MEM_cw_Fcu_Tdp(20) ;
+	DLX_enable_DRAM <= s_MEM_cw_Fcu_Tdp(20) ;
+	DLX_RD_wr_DRAM  <= s_MEM_cw_Fcu_Tdp(19) ;
 	
 	BTB_cache : BTB GENERIC MAP (N_ENTRY => N_BTB_ENTRY, 
 										  NBIT_ENTRY => 2**NBIT_IRAM_ADDRESS, 

@@ -197,8 +197,41 @@ architecture Structural of Decode is
 	signal s_wr_mem					: std_logic;
 	signal s_notRd2				: std_logic;
 	signal s_isnt_jmp_or_branch: std_logic;
+	signal s_enable1				: std_logic;
+	signal s_enable2				: std_logic;
+	signal s_enable3				: std_logic;
 
 begin
+
+------------------------------------------------------------------------------------
+	R1_enable	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> DE_enable,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_enable1
+		);
+		
+	R2_enable	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> s_enable1,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_enable2
+		);
+		
+	R3_enable	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> s_enable2,
+		enable		=> DE_enable,
+		load			=> '1',
+		data_out		=> s_enable3
+		);
+------------------------------------------------------------------------------------
+
 
 ------------------------------------------------------------------------------------
 	R1_wr	: Reg1Bit PORT MAP (
@@ -214,7 +247,7 @@ begin
 		clk 			=> DE_clk,
 		reset			=> DE_reset ,
 		data_in		=> s_wr_de,
-		enable		=> DE_enable,
+		enable		=> s_enable1,
 		load			=> '1',
 		data_out		=> s_wr_ex
 		);
@@ -223,7 +256,7 @@ begin
 		clk 			=> DE_clk,
 		reset			=> DE_reset ,
 		data_in		=> s_wr_ex,
-		enable		=> DE_enable,
+		enable		=> s_enable2,
 		load			=> '1',
 		data_out		=> s_wr_mem
 		);
@@ -256,7 +289,7 @@ begin
 	R2 : NRegister GENERIC MAP (N => NBIT_ADDR) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
-						enable => DE_enable,
+						enable => s_enable1,
 						load => '1',
 						data_in => s_ex,
 						data_out => s_mem
@@ -264,7 +297,7 @@ begin
 	R3 : NRegister GENERIC MAP (N => NBIT_ADDR) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
-						enable => DE_enable,
+						enable => s_enable2,
 						load => '1',
 						data_in => s_mem,
 						data_out => s_wb

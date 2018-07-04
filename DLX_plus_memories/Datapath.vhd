@@ -234,6 +234,7 @@ architecture Structural of Datapath is
 		FCU_EX_MEM_MUX		: out std_logic;
 		
 		FCU_IF_ID_is_branch	: out std_logic;
+		FCU_ID_EX_is_store	: out std_logic;
 		FCU_ID_EX_is_branch_or_jmp : out std_logic;
 		FCU_insert_stall	: out std_logic
 	);
@@ -318,7 +319,9 @@ architecture Structural of Datapath is
 	signal s_id_ex_sel_fwd_bot_mux: std_logic_vector(1 downto 0);
 	signal s_ex_mem_fwd_mux			: std_logic;
 	signal s_stall						: std_logic;
-	signal s_reset_middle_regs		: std_logic;
+	signal s_reset_middle_regs_ID_EX	: std_logic;
+	signal s_reset_middle_regs_EX_MEM	: std_logic;
+	signal s_reset_middle_regs_MEM_WB	: std_logic;
 	signal s_ex_enable				: std_logic;
 	signal s_enable_if				: std_logic;
 	signal s_enable_de				: std_logic;
@@ -328,6 +331,8 @@ architecture Structural of Datapath is
 	signal s_fcu_enable				: std_logic;
 	signal s_jmp_or_brnch_Ffcu_Tde: std_logic;
 	signal s_use_immediate			: std_logic;
+	signal s_use_immediate_sel		: std_logic;
+	signal s_id_ex_is_store			: std_logic;
 	
 begin
 
@@ -416,11 +421,11 @@ begin
 		);
 	DP_branch_taken <= s_branch_taken_Fde_Tif;
 	DP_new_PC 		 <= s_newPC_Fde_Tif;
-	s_reset_middle_regs <= s_branch_taken_Fde_Tif OR DP_reset;
+	s_reset_middle_regs_ID_EX <= s_branch_taken_Fde_Tif OR DP_reset;
 	
 	stall_ID_EX_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> DP_reset,
 		data_in=> s_stall_Fif,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -429,7 +434,7 @@ begin
 	
 	PC_ID_EX_REG : NRegister GENERIC MAP (N => 2**NBIT_IRAM_ADDR) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> DP_reset,
 		data_in=> s_PC_Tde,
 		enable=> s_stall_Fif,	--from FCU stall (or s_stall_Fde)
 		load=> '1',
@@ -438,11 +443,20 @@ begin
 		
 	IR_ID_EX_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> DP_reset,
 		data_in=> s_IR_Fif,
 		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
 		load=> '1',
 		data_out=> s_IR_Fde
+		);
+	
+	RST_ID_EX_REG : Reg1Bit PORT MAP (
+		clk => DP_clk,
+		reset=> DP_reset,
+		data_in=> s_reset_middle_regs_ID_EX,
+		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
+		load=> '1',
+		data_out=> s_reset_middle_regs_EX_MEM
 		);
 	
 	s_sel_regA_PC_mux <=  DP_Shift_Amount_sel(1) AND DP_Shift_Amount_sel(0);
@@ -453,19 +467,23 @@ begin
 		portY => s_opA_Fmux_Tfrw_mux
 		);
 	
+	
+	
 	REGB_IMM_SEL_REG : Reg1Bit PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> DP_reset,
 		data_in=> DP_use_immediate,
 		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
 		load=> '1',
 		data_out=> s_use_immediate
 		);
 	
+	s_use_immediate_sel <= s_use_immediate OR s_id_ex_is_store;
+	
 	RegB_Imm_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
 		port0 => s_regB_Fde_Tex,
 		port1 => s_regI_Fde_Tex,
-		sel   => s_use_immediate,
+		sel   => s_use_immediate_sel,
 		portY => s_opB_Fmux_Tfrw_mux
 		);
 	
@@ -561,10 +579,19 @@ begin
 		EX_data_out		=> s_result_Fex_Tmem, --to fwd mux & MEM
 		EX_PSW			=> s_PSW
 		);
-		
+	
+	RST_EX_MEM_REG : Reg1Bit PORT MAP (
+		clk => DP_clk,
+		reset=> DP_reset,
+		data_in=> s_reset_middle_regs_EX_MEM,
+		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
+		load=> '1',
+		data_out=> s_reset_middle_regs_MEM_WB
+		);
+	
 	stall_EX_MEM_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_EX_MEM,
 		data_in=> s_stall_Fde,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -573,7 +600,7 @@ begin
 	
 	IR_EX_MEM_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_EX_MEM,
 		data_in=> s_IR_Fde,
 		enable=> s_stall_Fde, --from FCU stall (or s_stall_Fex)
 		load=> '1',
@@ -582,7 +609,7 @@ begin
 	
 	OPB_TO_DRAM_REG : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_EX_MEM,
 		data_in=> s_data_fwd_bot_aluY, --from fwd bot mux
 		enable=> s_stall_Fde, --from FCU stall (or s_stall_Fex)
 		load=> '1',
@@ -621,7 +648,7 @@ begin
 	
 	stall_MEM_WB_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_MEM_WB,
 		data_in=> s_stall_Fex,
 		enable=> DP_enable, --from FCU stall
 		load=> '1',
@@ -630,7 +657,7 @@ begin
 	
 	DATA_BYPASS_REG : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_MEM_WB,
 		data_in=> s_result_Fex_Tmem, --from execute
 		enable=> s_stall_Fex, --from FCU (or s_stall_Fmem)
 		load=> '1',
@@ -639,7 +666,7 @@ begin
 	
 	IR_MEM_WB_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> s_reset_middle_regs,
+		reset=> s_reset_middle_regs_MEM_WB,
 		data_in=> s_IR_Fex,
 		enable=> s_stall_Fex, --from FCU (or s_stall_Fmem)
 		load=> '1',
@@ -648,7 +675,7 @@ begin
 		
 	WB_Stage : WriteBack_Stage GENERIC MAP (NBIT_DATA => NBIT_DATA) PORT MAP (
 		WB_OpA			=> s_bypass_data_Freg_Twb, --from bypassing register
-		WB_OpB			=> s_load_data_Fmem_Twb,	--from memory
+		WB_OpB			=> s_data_Fmem_Twb,	--from memory
 		WB_sel			=> DP_WB_sel,
 		WB_reduce		=> DP_Load_reduce,
 		WB_BYTE_half	=> DP_Load_BYTE_half,
@@ -658,7 +685,7 @@ begin
 ---------------------------Registri aggiunti 27/06	
 --	REG_EN_IF : Reg1Bit  PORT MAP (
 --		clk => DP_clk,
---		reset=> s_reset_middle_regs,
+--		reset=> s_reset_middle_regs_ID_EX,
 --		data_in=> s_fcu_enable,
 --		enable=> s_ex_enable, 
 --		load=> '1',
@@ -667,7 +694,7 @@ begin
 --	
 --	REG_EN_ID : Reg1Bit  PORT MAP (
 --		clk => DP_clk,
---		reset=> s_reset_middle_regs,
+--		reset=> s_reset_middle_regs_ID_EX,
 --		data_in=> s_enable_if,
 --		enable=> s_ex_enable, 
 --		load=> '1',
@@ -676,7 +703,7 @@ begin
 --	
 --	 REG_EN_EX : Reg1Bit  PORT MAP (
 --		clk => DP_clk,
---		reset=> s_reset_middle_regs,
+--		reset=> s_reset_middle_regs_ID_EX,
 --		data_in=> s_enable_de,
 --		enable=> s_ex_enable, 
 --		load=> '1',
@@ -685,7 +712,7 @@ begin
 --	
 --	 REG_EN_MEM : Reg1Bit  PORT MAP (
 --		clk => DP_clk,
---		reset=> s_reset_middle_regs,
+--		reset=> s_reset_middle_regs_ID_EX,
 --		data_in=> s_enable_ex,
 --		enable=> s_ex_enable, 
 --		load=> '1',
@@ -694,7 +721,7 @@ begin
 --		
 --	REG_EN_WB : Reg1Bit  PORT MAP (
 --		clk => DP_clk,
---		reset=> s_reset_middle_regs,
+--		reset=> s_reset_middle_regs_ID_EX,
 --		data_in=> s_enable_mem,
 --		enable=> s_ex_enable, 
 --		load=> '1',
@@ -731,6 +758,7 @@ begin
 		
 		FCU_EX_MEM_MUX		=> s_ex_mem_fwd_mux,
 		FCU_IF_ID_is_branch	=> DP_IF_ID_instr_is_branch,
+		FCU_ID_EX_is_store	=> s_id_ex_is_store,
 		FCU_ID_EX_is_branch_or_jmp => s_jmp_or_brnch_Ffcu_Tde,
 		FCU_insert_stall	=> s_stall
 		);

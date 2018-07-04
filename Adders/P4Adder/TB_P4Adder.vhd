@@ -39,7 +39,7 @@ END TB_P4Adder;
 ARCHITECTURE behavior OF TB_P4Adder IS 
  
     -- *******CHANGE HERE TO PARAMETRIZE********
-	constant N: integer:= 4;		
+	constant N: integer:= 32;		
     --******************************************
     
     COMPONENT P4Adder
@@ -130,7 +130,7 @@ BEGIN
      wait for 50 ns;
      
      A <= std_logic_vector(to_unsigned(0, N)); 
-     B <= std_logic_vector(to_unsigned(0, N)) ;
+     B <= std_logic_vector(to_signed(-1, N)); 
      c_in <= '1';
 
      wait for 50 ns;

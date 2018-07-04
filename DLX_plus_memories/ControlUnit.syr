@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -171,10 +171,10 @@ Unit <NRegister_2> synthesized.
 
 Synthesizing Unit <NRegister_3>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\NRegister.vhd".
-        N = 8
-    Found 8-bit register for signal <data_out>.
+        N = 10
+    Found 10-bit register for signal <data_out>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred  10 D-type flip-flop(s).
 Unit <NRegister_3> synthesized.
 
 Synthesizing Unit <NRegister_4>.
@@ -190,10 +190,10 @@ HDL Synthesis Report
 
 Macro Statistics
 # Registers                                            : 4
+ 10-bit register                                       : 1
  19-bit register                                       : 1
  26-bit register                                       : 1
  4-bit register                                        : 1
- 8-bit register                                        : 1
 # Multiplexers                                         : 6
  1-bit 2-to-1 multiplexer                              : 4
  26-bit 2-to-1 multiplexer                             : 2
@@ -209,8 +209,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 57
- Flip-Flops                                            : 57
+# Registers                                            : 59
+ Flip-Flops                                            : 59
 # Multiplexers                                         : 6
  1-bit 2-to-1 multiplexer                              : 4
  26-bit 2-to-1 multiplexer                             : 2
@@ -244,8 +244,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 56
- Flip-Flops                                            : 56
+# Registers                                            : 58
+ Flip-Flops                                            : 58
 
 =========================================================================
 
@@ -268,14 +268,14 @@ Top Level Output File Name         : ControlUnit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 77
-#      LUT2                        : 6
-#      LUT3                        : 9
-#      LUT4                        : 5
-#      LUT5                        : 15
-#      LUT6                        : 42
-# FlipFlops/Latches                : 56
-#      FDCE                        : 56
+# BELS                             : 75
+#      LUT2                        : 7
+#      LUT3                        : 4
+#      LUT4                        : 9
+#      LUT5                        : 14
+#      LUT6                        : 41
+# FlipFlops/Latches                : 58
+#      FDCE                        : 58
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 50
@@ -289,14 +289,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              47  out of  126800     0%  
- Number of Slice LUTs:                   77  out of  63400     0%  
-    Number used as Logic:                77  out of  63400     0%  
+ Number of Slice Registers:              49  out of  126800     0%  
+ Number of Slice LUTs:                   75  out of  63400     0%  
+    Number used as Logic:                75  out of  63400     0%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:     95
-   Number with an unused Flip Flop:      48  out of     95    50%  
-   Number with an unused LUT:            18  out of     95    18%  
+   Number with an unused Flip Flop:      46  out of     95    48%  
+   Number with an unused LUT:            20  out of     95    21%  
    Number of fully used LUT-FF pairs:    29  out of     95    30%  
    Number of unique control sets:         2
 
@@ -329,7 +329,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CU_clk                             | BUFGP                  | 56    |
+CU_clk                             | BUFGP                  | 58    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -341,7 +341,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 0.653ns (Maximum Frequency: 1532.567MHz)
-   Minimum input arrival time before clock: 3.399ns
+   Minimum input arrival time before clock: 3.539ns
    Maximum output required time after clock: 0.645ns
    Maximum combinational path delay: 2.654ns
 
@@ -352,7 +352,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CU_clk'
   Clock period: 0.653ns (frequency: 1532.567MHz)
-  Total number of paths / destination ports: 29 / 29
+  Total number of paths / destination ports: 31 / 31
 -------------------------------------------------------------------------
 Delay:               0.653ns (Levels of Logic = 0)
   Source:            MEM_CW/data_out_3 (FF)
@@ -372,27 +372,28 @@ Delay:               0.653ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CU_clk'
-  Total number of paths / destination ports: 727 / 139
+  Total number of paths / destination ports: 726 / 143
 -------------------------------------------------------------------------
-Offset:              3.399ns (Levels of Logic = 6)
+Offset:              3.539ns (Levels of Logic = 7)
   Source:            CU_instr_func<10> (PAD)
-  Destination:       DE_CW/data_out_10 (FF)
+  Destination:       DE_CW/data_out_25 (FF)
   Destination Clock: CU_clk rising
 
-  Data Path: CU_instr_func<10> to DE_CW/data_out_10
+  Data Path: CU_instr_func<10> to DE_CW/data_out_25
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
-     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
-     LUT6:I0->O            2   0.097   0.383  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
-     LUT5:I3->O            4   0.097   0.570  _n0452<10>1 (_n0452<10>)
-     LUT6:I2->O            2   0.097   0.561  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1)
-     LUT6:I2->O            1   0.097   0.000  BUBBLE_MUX/Mmux_portY72 (s_cw_tmp<16>)
+     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>22)
+     LUT6:I0->O            2   0.097   0.299  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
+     LUT2:I1->O            2   0.097   0.299  _n0452<10>_SW0 (N10)
+     LUT6:I5->O            5   0.097   0.575  _n0452<10> (_n0452<10>)
+     LUT4:I0->O            2   0.097   0.383  CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<25>1)
+     LUT6:I4->O            1   0.097   0.000  BUBBLE_MUX/Mmux_portY72 (s_cw_tmp<16>)
      FDCE:D                    0.008          DE_CW/data_out_10
     ----------------------------------------
-    Total                      3.399ns (0.494ns logic, 2.905ns route)
-                                       (14.5% logic, 85.5% route)
+    Total                      3.539ns (0.591ns logic, 2.948ns route)
+                                       (16.7% logic, 83.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CU_clk'
@@ -426,7 +427,7 @@ Delay:               2.654ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.683  CU_instr_func_10_IBUF (CU_instr_func_10_IBUF)
-     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>21)
+     LUT5:I0->O            4   0.097   0.707  out11 (CU_instr_opcode[5]_GND_4_o_wide_mux_27_OUT<12>22)
      LUT6:I0->O            2   0.097   0.299  GND_4_o_PWR_4_o_select_26_OUT<16> (GND_4_o_PWR_4_o_select_26_OUT<16>)
      LUT6:I5->O            1   0.097   0.295  Mmux_CU_error12 (Mmux_CU_error11)
      LUT4:I3->O            1   0.097   0.279  Mmux_CU_error14 (CU_error_OBUF)
@@ -452,11 +453,11 @@ CU_clk         |    0.653|         |         |         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.68 secs
+Total CPU time to Xst completion: 8.25 secs
  
 --> 
 
-Total memory usage is 319924 kilobytes
+Total memory usage is 369768 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

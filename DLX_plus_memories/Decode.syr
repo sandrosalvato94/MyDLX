@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Decode.prj
 
@@ -202,6 +202,7 @@ Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Carry_Network> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Sum_Network> (architecture <Behavioral>) with generics from library <work>.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 225. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -215,6 +216,7 @@ Synthesizing Unit <Decode>.
         NBIT_DATA = 32
 WARNING:Xst:647 - Input <DE_IR<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DE_PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 225: Output port <data_out> of the instance <R3_enable> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Decode> synthesized.
@@ -358,8 +360,8 @@ Unit <Sum_Network> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 41
- 1-bit register                                        : 3
+# Registers                                            : 43
+ 1-bit register                                        : 5
  32-bit register                                       : 35
  5-bit register                                        : 3
 # Multiplexers                                         : 74
@@ -413,8 +415,8 @@ WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant val
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 1138
- Flip-Flops                                            : 1138
+# Registers                                            : 1140
+ Flip-Flops                                            : 1140
 # Multiplexers                                         : 74
  10-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 68
@@ -428,6 +430,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1989 - Unit <Decode>: instances <R1_enable>, <R1_wr> of unit <Reg1Bit> are equivalent, second instance is removed
 
 Optimizing unit <Decode> ...
 
@@ -484,8 +487,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1106
- Flip-Flops                                            : 1106
+# Registers                                            : 1107
+ Flip-Flops                                            : 1107
 
 =========================================================================
 
@@ -517,8 +520,8 @@ Primitive and Black Box Usage:
 #      LUT5                        : 35
 #      LUT6                        : 747
 #      MUXF7                       : 64
-# FlipFlops/Latches                : 1106
-#      FDCE                        : 1106
+# FlipFlops/Latches                : 1107
+#      FDCE                        : 1107
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 296
@@ -532,16 +535,16 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1074  out of  126800     0%  
+ Number of Slice Registers:            1075  out of  126800     0%  
  Number of Slice LUTs:                  881  out of  63400     1%  
     Number used as Logic:               881  out of  63400     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1753
-   Number with an unused Flip Flop:     679  out of   1753    38%  
-   Number with an unused LUT:           872  out of   1753    49%  
-   Number of fully used LUT-FF pairs:   202  out of   1753    11%  
-   Number of unique control sets:        32
+ Number of LUT Flip Flop pairs used:   1754
+   Number with an unused Flip Flop:     679  out of   1754    38%  
+   Number with an unused LUT:           873  out of   1754    49%  
+   Number of fully used LUT-FF pairs:   202  out of   1754    11%  
+   Number of unique control sets:        34
 
 IO Utilization: 
  Number of IOs:                         335
@@ -574,7 +577,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-DE_clk                             | BUFGP                  | 1106  |
+DE_clk                             | BUFGP                  | 1107  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -597,7 +600,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DE_clk'
   Clock period: 3.914ns (frequency: 255.519MHz)
-  Total number of paths / destination ports: 8012 / 1132
+  Total number of paths / destination ports: 8025 / 1145
 -------------------------------------------------------------------------
 Delay:               1.957ns (Levels of Logic = 3)
   Source:            RF/cyc_regs[21].ifi.Ri/data_out_31 (FF)
@@ -620,7 +623,7 @@ Delay:               1.957ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DE_clk'
-  Total number of paths / destination ports: 8329 / 3306
+  Total number of paths / destination ports: 8319 / 3296
 -------------------------------------------------------------------------
 Offset:              2.489ns (Levels of Logic = 5)
   Source:            DE_IR<17> (PAD)
@@ -753,20 +756,20 @@ Clock to Setup on destination clock DE_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DE_clk         |    0.648|    1.957|    1.824|         |
+DE_clk         |    0.768|    1.957|    1.824|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.97 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.19 secs
  
 --> 
 
-Total memory usage is 329436 kilobytes
+Total memory usage is 334560 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   71 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   73 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

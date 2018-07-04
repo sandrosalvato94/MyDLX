@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="43" />
+   <WVObjectSize size="48" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -86,28 +86,28 @@
       <obj_property name="ElementShortName">data_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
       <obj_property name="label">Register1</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(2)\/ifi/Ri/data_out" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
       <obj_property name="label">Register2</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(3)\/ifi/Ri/data_out" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
       <obj_property name="label">Register3</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/\cyc_regs(31)\/ifi/Ri/data_out" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
       <obj_property name="label">Register31</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/SE/se_in" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">se_in[31:0]</obj_property>
@@ -139,20 +139,6 @@
       <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="label">RegImm</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegB_Imm_MUX/port0" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">port0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">port0[31:0]</obj_property>
-      <obj_property name="label">RegB</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegB_Imm_MUX/port1" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">port1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">port1[31:0]</obj_property>
-      <obj_property name="label">RegImm</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegB_Imm_MUX/sel" type="logic" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
@@ -267,8 +253,39 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">data_in[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="label">BypassData</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/rd_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_wr</obj_property>
+      <obj_property name="ObjectShortName">rd_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dram_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dram_mem[0:1023]</obj_property>
+      <obj_property name="ObjectShortName">dram_mem[0:1023]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/MEM_Stage/me_data_from_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">me_data_from_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">me_data_from_mem[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/WB_Stage/wb_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_sel</obj_property>
+      <obj_property name="ObjectShortName">wb_sel</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/WB_Stage/wb_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">wb_out[31:0]</obj_property>

@@ -50,7 +50,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525281151" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1525281151">
+    <transform xil_pn:end_ts="1530629890" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1530629890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CarryGenerator.vhd"/>
@@ -80,7 +80,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1525281151" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1525281151">
+    <transform xil_pn:end_ts="1530629890" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1530629890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CarryGenerator.vhd"/>
@@ -98,16 +98,19 @@
       <outfile xil_pn:name="mux_generic.vhd"/>
       <outfile xil_pn:name="rca.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1525281156" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7044820016073942322" xil_pn:start_ts="1525281151">
+    <transform xil_pn:end_ts="1530629911" xil_pn:in_ck="2698087537535556511" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7044820016073942322" xil_pn:start_ts="1530629890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_P4Adder_beh.prj"/>
       <outfile xil_pn:name="TB_P4Adder_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1525283698" xil_pn:in_ck="4191843100693978056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5611032509801559163" xil_pn:start_ts="1525283696">
+    <transform xil_pn:end_ts="1530629911" xil_pn:in_ck="4191843100693978056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5611032509801559163" xil_pn:start_ts="1530629911">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

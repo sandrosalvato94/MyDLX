@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" Line 68: &lt;<arg fmt="%s" index="1">dlx_plus_memories</arg>&gt; remains a black-box since it has no binding entity.
-</msg>
-
-<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. Instance <arg fmt="%s" index="3">dlx_plus_memories</arg> is unbound
-</msg>
-
 </messages>
 

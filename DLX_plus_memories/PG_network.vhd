@@ -62,18 +62,16 @@ begin
    tmp2 <= A(0) XOR B(0);
    
 	cyc: for i in 0 to N-1 generate
-		PG_cell_i : PG_cell PORT MAP (A => A(i), B => B(i), p => P(i), g => G(i));
-	
---		IF0: if(i = 0) generate
---			G_cell_0 : GeneralGenerate PORT MAP (G_ik => tmp1, 
---						       P_ik => tmp2,
---						       G_km1_j => c_in,
---						       G_ij => G(0));
---		end generate IF0;
---		
---		IFN: if(i > 0) generate
---			PG_cell_i : PG_cell PORT MAP (A => A(i), B => B(i), p => P(i), g => G(i));
---		end generate IFN;
+		IF0: if(i = 0) generate
+			G_cell_0 : GeneralGenerate PORT MAP (G_ik => tmp1, 
+						       P_ik => tmp2,
+						       G_km1_j => c_in,
+						       G_ij => G(0));
+		end generate IF0;
+		
+		IFN: if(i > 0) generate
+			PG_cell_i : PG_cell PORT MAP (A => A(i), B => B(i), p => P(i), g => G(i));
+		end generate IFN;
 	end generate cyc;
 
 end Behavioral;

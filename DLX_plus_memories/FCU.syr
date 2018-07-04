@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: FCU.prj
 
@@ -117,16 +117,17 @@ Parsing architecture <Behavioral> of entity <fcu>.
 =========================================================================
 
 Elaborating entity <FCU> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 133: s_id_ex_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 134: s_if_id_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 140: s_if_id_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 148: s_ex_mem_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 149: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 156: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 157: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 163: s_id_ex_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 186: fcu_ex_mem_11_15 should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 301: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 136: s_id_ex_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 137: s_if_id_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 143: s_if_id_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 151: s_ex_mem_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 152: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 159: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 160: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 166: s_id_ex_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 183: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 191: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 316: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -146,60 +147,60 @@ WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_load>. Latches may be
 WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_mem_wb_is_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <FCU_ID_EX_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_ex_mem_is_store>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_jmp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <FCU_ID_EX_is_branch_or_jmp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <FCU_IF_ID_is_branch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 135
-    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 135
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 158
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 181
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 186
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 198
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 220
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 225
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 233
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 238
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 247
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 252
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 260
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 265
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 285
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 291
-    Found 6-bit comparator lessequal for signal <n0090> created at line 330
-    Found 6-bit comparator lessequal for signal <n0092> created at line 330
-    Found 6-bit comparator lessequal for signal <n0095> created at line 331
-    Found 6-bit comparator lessequal for signal <n0097> created at line 331
-    Found 6-bit comparator lessequal for signal <n0101> created at line 332
-    Found 6-bit comparator lessequal for signal <n0103> created at line 332
-    Found 6-bit comparator lessequal for signal <n0117> created at line 340
-    Found 6-bit comparator lessequal for signal <n0119> created at line 340
-    Found 6-bit comparator lessequal for signal <n0122> created at line 341
-    Found 6-bit comparator lessequal for signal <n0124> created at line 341
-    Found 6-bit comparator lessequal for signal <n0128> created at line 342
-    Found 6-bit comparator lessequal for signal <n0130> created at line 342
-    Found 6-bit comparator lessequal for signal <n0145> created at line 350
-    Found 6-bit comparator lessequal for signal <n0147> created at line 350
-    Found 6-bit comparator lessequal for signal <n0150> created at line 351
-    Found 6-bit comparator lessequal for signal <n0152> created at line 351
-    Found 6-bit comparator lessequal for signal <n0156> created at line 352
-    Found 6-bit comparator lessequal for signal <n0158> created at line 352
-    Found 6-bit comparator lessequal for signal <n0173> created at line 360
-    Found 6-bit comparator lessequal for signal <n0175> created at line 360
-    Found 6-bit comparator lessequal for signal <n0178> created at line 361
-    Found 6-bit comparator lessequal for signal <n0180> created at line 361
-    Found 6-bit comparator lessequal for signal <n0184> created at line 362
-    Found 6-bit comparator lessequal for signal <n0186> created at line 362
-    Found 6-bit comparator lessequal for signal <n0222> created at line 421
-    Found 6-bit comparator lessequal for signal <n0224> created at line 421
-    Found 6-bit comparator lessequal for signal <n0231> created at line 427
-    Found 6-bit comparator lessequal for signal <n0233> created at line 427
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 138
+    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 138
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 161
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_11_o> created at line 186
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o> created at line 191
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_17_o> created at line 203
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_26_o> created at line 227
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_29_o> created at line 232
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_39_o> created at line 242
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_42_o> created at line 247
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_52_o> created at line 258
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_55_o> created at line 263
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_65_o> created at line 273
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_68_o> created at line 278
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_80_o> created at line 300
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_81_o> created at line 306
+    Found 6-bit comparator lessequal for signal <n0127> created at line 345
+    Found 6-bit comparator lessequal for signal <n0129> created at line 345
+    Found 6-bit comparator lessequal for signal <n0132> created at line 346
+    Found 6-bit comparator lessequal for signal <n0134> created at line 346
+    Found 6-bit comparator lessequal for signal <n0138> created at line 347
+    Found 6-bit comparator lessequal for signal <n0140> created at line 347
+    Found 6-bit comparator lessequal for signal <n0154> created at line 355
+    Found 6-bit comparator lessequal for signal <n0156> created at line 355
+    Found 6-bit comparator lessequal for signal <n0159> created at line 356
+    Found 6-bit comparator lessequal for signal <n0161> created at line 356
+    Found 6-bit comparator lessequal for signal <n0165> created at line 357
+    Found 6-bit comparator lessequal for signal <n0167> created at line 357
+    Found 6-bit comparator lessequal for signal <n0182> created at line 365
+    Found 6-bit comparator lessequal for signal <n0184> created at line 365
+    Found 6-bit comparator lessequal for signal <n0187> created at line 366
+    Found 6-bit comparator lessequal for signal <n0189> created at line 366
+    Found 6-bit comparator lessequal for signal <n0193> created at line 367
+    Found 6-bit comparator lessequal for signal <n0195> created at line 367
+    Found 6-bit comparator lessequal for signal <n0210> created at line 375
+    Found 6-bit comparator lessequal for signal <n0212> created at line 375
+    Found 6-bit comparator lessequal for signal <n0215> created at line 376
+    Found 6-bit comparator lessequal for signal <n0217> created at line 376
+    Found 6-bit comparator lessequal for signal <n0221> created at line 377
+    Found 6-bit comparator lessequal for signal <n0223> created at line 377
+    Found 6-bit comparator lessequal for signal <n0259> created at line 436
+    Found 6-bit comparator lessequal for signal <n0261> created at line 436
+    Found 6-bit comparator lessequal for signal <n0268> created at line 442
+    Found 6-bit comparator lessequal for signal <n0270> created at line 442
     Summary:
 	inferred  18 Latch(s).
 	inferred  44 Comparator(s).
-	inferred  49 Multiplexer(s).
+	inferred  59 Multiplexer(s).
 Unit <FCU> synthesized.
 
 =========================================================================
@@ -211,9 +212,9 @@ Macro Statistics
 # Comparators                                          : 44
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 28
-# Multiplexers                                         : 49
- 1-bit 2-to-1 multiplexer                              : 18
- 2-bit 2-to-1 multiplexer                              : 31
+# Multiplexers                                         : 59
+ 1-bit 2-to-1 multiplexer                              : 19
+ 2-bit 2-to-1 multiplexer                              : 40
 
 =========================================================================
 
@@ -229,9 +230,9 @@ Macro Statistics
 # Comparators                                          : 44
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 28
-# Multiplexers                                         : 49
- 1-bit 2-to-1 multiplexer                              : 18
- 2-bit 2-to-1 multiplexer                              : 31
+# Multiplexers                                         : 59
+ 1-bit 2-to-1 multiplexer                              : 19
+ 2-bit 2-to-1 multiplexer                              : 40
 
 =========================================================================
 
@@ -244,6 +245,7 @@ Optimizing unit <FCU> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block FCU, actual ratio is 0.
+Latch FCU_ID_EX_is_store has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -272,19 +274,19 @@ Top Level Output File Name         : FCU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 65
-#      LUT2                        : 3
-#      LUT3                        : 1
-#      LUT4                        : 4
-#      LUT5                        : 13
-#      LUT6                        : 44
-# FlipFlops/Latches                : 18
-#      LD                          : 18
+# BELS                             : 83
+#      LUT2                        : 1
+#      LUT3                        : 3
+#      LUT4                        : 10
+#      LUT5                        : 20
+#      LUT6                        : 49
+# FlipFlops/Latches                : 19
+#      LD                          : 19
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 80
+# IO Buffers                       : 81
 #      IBUF                        : 70
-#      OBUF                        : 10
+#      OBUF                        : 11
 
 Device utilization summary:
 ---------------------------
@@ -294,20 +296,20 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              16  out of  126800     0%  
- Number of Slice LUTs:                   65  out of  63400     0%  
-    Number used as Logic:                65  out of  63400     0%  
+ Number of Slice LUTs:                   83  out of  63400     0%  
+    Number used as Logic:                83  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     65
-   Number with an unused Flip Flop:      49  out of     65    75%  
-   Number with an unused LUT:             0  out of     65     0%  
-   Number of fully used LUT-FF pairs:    16  out of     65    24%  
+ Number of LUT Flip Flop pairs used:     83
+   Number with an unused Flip Flop:      67  out of     83    80%  
+   Number with an unused LUT:             0  out of     83     0%  
+   Number of fully used LUT-FF pairs:    16  out of     83    19%  
    Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                          80
- Number of bonded IOBs:                  80  out of    210    38%  
-    IOB Flip Flops/Latches:               2
+ Number of IOs:                          81
+ Number of bonded IOBs:                  81  out of    210    38%  
+    IOB Flip Flops/Latches:               3
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -333,7 +335,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-FCU_enable                         | IBUF+BUFG              | 18    |
+FCU_enable                         | IBUF+BUFG              | 19    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -346,8 +348,8 @@ Speed Grade: -3
 
    Minimum period: No path found
    Minimum input arrival time before clock: 0.814ns
-   Maximum output required time after clock: 2.822ns
-   Maximum combinational path delay: 3.131ns
+   Maximum output required time after clock: 3.126ns
+   Maximum combinational path delay: 3.444ns
 
 Timing Details:
 ---------------
@@ -355,7 +357,7 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FCU_enable'
-  Total number of paths / destination ports: 101 / 18
+  Total number of paths / destination ports: 107 / 19
 -------------------------------------------------------------------------
 Offset:              0.814ns (Levels of Logic = 2)
   Source:            FCU_IF_ID_Op<4> (PAD)
@@ -367,7 +369,7 @@ Offset:              0.814ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             6   0.001   0.716  FCU_IF_ID_Op_4_IBUF (FCU_IF_ID_Op_4_IBUF)
-     LUT6:I0->O            1   0.097   0.000  GND_4_o_PWR_4_o_OR_39_o1 (GND_4_o_PWR_4_o_OR_39_o)
+     LUT6:I0->O            1   0.097   0.000  GND_4_o_PWR_4_o_OR_43_o1 (GND_4_o_PWR_4_o_OR_43_o)
      LD:D                     -0.028          s_if_id_is_imm
     ----------------------------------------
     Total                      0.814ns (0.098ns logic, 0.716ns route)
@@ -375,9 +377,9 @@ Offset:              0.814ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FCU_enable'
-  Total number of paths / destination ports: 48 / 10
+  Total number of paths / destination ports: 52 / 11
 -------------------------------------------------------------------------
-Offset:              2.822ns (Levels of Logic = 4)
+Offset:              3.126ns (Levels of Logic = 4)
   Source:            s_id_ex_is_reg (LATCH)
   Destination:       FCU_insert_stall (PAD)
   Source Clock:      FCU_enable falling
@@ -387,19 +389,19 @@ Offset:              2.822ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               4   0.472   0.707  s_id_ex_is_reg (s_id_ex_is_reg)
-     LUT6:I0->O            1   0.097   0.693  Mmux_FCU_insert_stall212 (Mmux_FCU_insert_stall211)
-     LUT6:I0->O            1   0.097   0.379  Mmux_FCU_insert_stall213 (Mmux_FCU_insert_stall212)
-     LUT3:I1->O            1   0.097   0.279  Mmux_FCU_insert_stall214 (FCU_insert_stall_OBUF)
+     LUT6:I0->O            1   0.097   0.693  Mmux_FCU_insert_stall24 (Mmux_FCU_insert_stall23)
+     LUT6:I0->O            1   0.097   0.683  Mmux_FCU_insert_stall25 (Mmux_FCU_insert_stall24)
+     LUT5:I0->O            1   0.097   0.279  Mmux_FCU_insert_stall213 (FCU_insert_stall_OBUF)
      OBUF:I->O                 0.000          FCU_insert_stall_OBUF (FCU_insert_stall)
     ----------------------------------------
-    Total                      2.822ns (0.763ns logic, 2.059ns route)
-                                       (27.0% logic, 73.0% route)
+    Total                      3.126ns (0.763ns logic, 2.363ns route)
+                                       (24.4% logic, 75.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 230 / 8
+  Total number of paths / destination ports: 475 / 8
 -------------------------------------------------------------------------
-Delay:               3.131ns (Levels of Logic = 6)
+Delay:               3.444ns (Levels of Logic = 6)
   Source:            FCU_EX_MEM_11_15<0> (PAD)
   Destination:       FCU_insert_stall (PAD)
 
@@ -407,15 +409,15 @@ Delay:               3.131ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   0.001   0.712  FCU_EX_MEM_11_15_0_IBUF (FCU_EX_MEM_11_15_0_IBUF)
-     LUT6:I0->O            1   0.097   0.683  FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o5_SW0 (N4)
-     LUT5:I0->O            2   0.097   0.688  FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o5 (FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o)
-     LUT6:I1->O            1   0.097   0.379  Mmux_FCU_insert_stall213 (Mmux_FCU_insert_stall212)
-     LUT3:I1->O            1   0.097   0.279  Mmux_FCU_insert_stall214 (FCU_insert_stall_OBUF)
+     IBUF:I->O             7   0.001   0.721  FCU_EX_MEM_11_15_0_IBUF (FCU_EX_MEM_11_15_0_IBUF)
+     LUT6:I0->O            1   0.097   0.683  FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o5_SW0 (N8)
+     LUT5:I0->O            2   0.097   0.688  FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o5 (FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o)
+     LUT6:I1->O            1   0.097   0.683  Mmux_FCU_insert_stall25 (Mmux_FCU_insert_stall24)
+     LUT5:I0->O            1   0.097   0.279  Mmux_FCU_insert_stall213 (FCU_insert_stall_OBUF)
      OBUF:I->O                 0.000          FCU_insert_stall_OBUF (FCU_insert_stall)
     ----------------------------------------
-    Total                      3.131ns (0.389ns logic, 2.742ns route)
-                                       (12.4% logic, 87.6% route)
+    Total                      3.444ns (0.389ns logic, 3.055ns route)
+                                       (11.3% logic, 88.7% route)
 
 =========================================================================
 
@@ -425,14 +427,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.17 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.03 secs
  
 --> 
 
-Total memory usage is 308696 kilobytes
+Total memory usage is 312744 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   28 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

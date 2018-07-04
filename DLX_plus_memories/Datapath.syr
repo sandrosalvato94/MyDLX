@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Datapath.prj
 
@@ -124,6 +124,9 @@ Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\
 Parsing entity <MUX21_GENERIC>.
 Parsing architecture <STRUCTURAL> of entity <mux21_generic>.
 Parsing configuration <CFG_MUX21_GEN_STRUCTURAL>.
+Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd" into library work
+Parsing entity <GeneralGenerate>.
+Parsing architecture <Behavioral> of entity <generalgenerate>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\constants.vhd" into library work
 Parsing package <CONSTANTS>.
 Parsing package body <CONSTANTS>.
@@ -139,9 +142,6 @@ Parsing architecture <Behavioral> of entity <mux_1bit_2x1>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralPropagate.vhd" into library work
 Parsing entity <GeneralPropagate>.
 Parsing architecture <Behavioral> of entity <generalpropagate>.
-Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd" into library work
-Parsing entity <GeneralGenerate>.
-Parsing architecture <Behavioral> of entity <generalgenerate>.
 Parsing VHDL file "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\CarrySelectBlock.vhd" into library work
 Parsing entity <CarrySelectBlock>.
 Parsing architecture <Structural> of entity <carryselectblock>.
@@ -253,7 +253,7 @@ Parsing architecture <Structural> of entity <datapath>.
 =========================================================================
 
 Elaborating entity <Datapath> (architecture <Structural>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 304: Using initial value "10000" for s_nbit_data_div_2 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 305: Using initial value "10000" for s_nbit_data_div_2 since it is never assigned
 
 Elaborating entity <Fetch> (architecture <Structural>) with generics from library <work>.
 
@@ -264,8 +264,8 @@ Elaborating entity <Mux_NBit_2x1> (architecture <Behavioral>) with generics from
 Elaborating entity <PropagateCarryLookahead> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <PG_network> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 61: Assignment to tmp1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd" Line 62: Assignment to tmp2 ignored, since the identifier is never used
+
+Elaborating entity <GeneralGenerate> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <PG_cell> (architecture <Behavioral>) from library <work>.
 
@@ -318,8 +318,6 @@ Elaborating entity <P4Adder> (architecture <Behavioral>) with generics from libr
 
 Elaborating entity <CarryGenerator> (architecture <Behavioral>) with generics from library <work>.
 
-Elaborating entity <GeneralGenerate> (architecture <Behavioral>) from library <work>.
-
 Elaborating entity <GeneralPropagate> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <CarrySelect> (architecture <Structural>) with generics from library <work>.
@@ -363,18 +361,19 @@ Elaborating entity <WriteBack_Stage> (architecture <Structural>) with generics f
 Elaborating entity <Sign_Reducer> (architecture <Structural>) with generics from library <work>.
 
 Elaborating entity <FCU> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 133: s_id_ex_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 134: s_if_id_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 140: s_if_id_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 148: s_ex_mem_is_load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 149: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 156: s_if_id_is_jmp should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 157: s_id_ex_is_reg should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 163: s_id_ex_is_imm should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 186: fcu_ex_mem_11_15 should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 301: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 314: Net <s_load_data_Fmem_Twb[31]> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 622. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 136: s_id_ex_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 137: s_if_id_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 143: s_if_id_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 151: s_ex_mem_is_load should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 152: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 159: s_if_id_is_jmp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 160: s_id_ex_is_reg should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 166: s_id_ex_is_imm should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 183: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 191: fcu_ex_mem_11_15 should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\FCU.vhd" Line 316: Assignment to s_mem_wb_is_store ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 225. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 649. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -384,10 +383,8 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 552: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 599: Output port <ME_data_rd_out> of the instance <MEM_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 622: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <s_load_data_Fmem_Twb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 570: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 649: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Datapath> synthesized.
@@ -427,10 +424,15 @@ Unit <PropagateCarryLookahead> synthesized.
 Synthesizing Unit <PG_network>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_network.vhd".
         N = 32
-WARNING:Xst:647 - Input <c_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <P<0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+Unit <PG_network> synthesized.
+
+Synthesizing Unit <GeneralGenerate>.
+    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd".
     Summary:
 	no macro.
-Unit <PG_network> synthesized.
+Unit <GeneralGenerate> synthesized.
 
 Synthesizing Unit <PG_cell>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\PG_cell.vhd".
@@ -465,6 +467,7 @@ Synthesizing Unit <Decode>.
         NBIT_DATA = 32
 WARNING:Xst:647 - Input <DE_IR<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DE_PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 225: Output port <data_out> of the instance <R3_enable> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Decode> synthesized.
@@ -614,12 +617,6 @@ Synthesizing Unit <CarryGenerator>.
     Summary:
 	no macro.
 Unit <CarryGenerator> synthesized.
-
-Synthesizing Unit <GeneralGenerate>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralGenerate.vhd".
-    Summary:
-	no macro.
-Unit <GeneralGenerate> synthesized.
 
 Synthesizing Unit <GeneralPropagate>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\GeneralPropagate.vhd".
@@ -782,54 +779,54 @@ WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_jmp>. Latches may be 
 WARNING:Xst:737 - Found 1-bit latch for signal <s_id_ex_is_jmp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <FCU_IF_ID_is_branch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <s_if_id_is_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 135
-    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 135
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 158
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_7_o> created at line 181
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_10_o> created at line 186
-    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_13_o> created at line 198
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_18_o> created at line 220
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_21_o> created at line 225
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_26_o> created at line 233
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_29_o> created at line 238
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_34_o> created at line 247
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_37_o> created at line 252
-    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_42_o> created at line 260
-    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_45_o> created at line 265
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_52_o> created at line 285
-    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_53_o> created at line 291
-    Found 6-bit comparator lessequal for signal <n0090> created at line 330
-    Found 6-bit comparator lessequal for signal <n0092> created at line 330
-    Found 6-bit comparator lessequal for signal <n0095> created at line 331
-    Found 6-bit comparator lessequal for signal <n0097> created at line 331
-    Found 6-bit comparator lessequal for signal <n0101> created at line 332
-    Found 6-bit comparator lessequal for signal <n0103> created at line 332
-    Found 6-bit comparator lessequal for signal <n0113> created at line 339
-    Found 6-bit comparator lessequal for signal <n0115> created at line 339
-    Found 6-bit comparator lessequal for signal <n0118> created at line 340
-    Found 6-bit comparator lessequal for signal <n0120> created at line 340
-    Found 6-bit comparator lessequal for signal <n0124> created at line 341
-    Found 6-bit comparator lessequal for signal <n0126> created at line 341
-    Found 6-bit comparator lessequal for signal <n0136> created at line 348
-    Found 6-bit comparator lessequal for signal <n0138> created at line 348
-    Found 6-bit comparator lessequal for signal <n0141> created at line 349
-    Found 6-bit comparator lessequal for signal <n0143> created at line 349
-    Found 6-bit comparator lessequal for signal <n0147> created at line 350
-    Found 6-bit comparator lessequal for signal <n0149> created at line 350
-    Found 6-bit comparator lessequal for signal <n0159> created at line 357
-    Found 6-bit comparator lessequal for signal <n0161> created at line 357
-    Found 6-bit comparator lessequal for signal <n0164> created at line 358
-    Found 6-bit comparator lessequal for signal <n0166> created at line 358
-    Found 6-bit comparator lessequal for signal <n0170> created at line 359
-    Found 6-bit comparator lessequal for signal <n0172> created at line 359
-    Found 6-bit comparator lessequal for signal <n0203> created at line 417
-    Found 6-bit comparator lessequal for signal <n0205> created at line 417
-    Found 6-bit comparator lessequal for signal <n0212> created at line 423
-    Found 6-bit comparator lessequal for signal <n0214> created at line 423
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_11_15[4]_equal_1_o> created at line 138
+    Found 5-bit comparator equal for signal <FCU_IF_ID_11_15[4]_FCU_ID_EX_11_15[4]_equal_2_o> created at line 138
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_ID_EX_16_20[4]_equal_5_o> created at line 161
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_16_20[4]_equal_11_o> created at line 186
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o> created at line 191
+    Found 5-bit comparator equal for signal <FCU_IF_ID_6_10[4]_FCU_MEM_WB_11_15[4]_equal_17_o> created at line 203
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_16_20[4]_equal_26_o> created at line 227
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_16_20[4]_equal_29_o> created at line 232
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_MEM_WB_11_15[4]_equal_39_o> created at line 242
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_MEM_WB_11_15[4]_equal_42_o> created at line 247
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_16_20[4]_equal_52_o> created at line 258
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_16_20[4]_equal_55_o> created at line 263
+    Found 5-bit comparator equal for signal <FCU_ID_EX_6_10[4]_FCU_EX_MEM_11_15[4]_equal_65_o> created at line 273
+    Found 5-bit comparator equal for signal <FCU_ID_EX_11_15[4]_FCU_EX_MEM_11_15[4]_equal_68_o> created at line 278
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_16_20[4]_equal_80_o> created at line 300
+    Found 5-bit comparator equal for signal <FCU_EX_MEM_11_15[4]_FCU_MEM_WB_11_15[4]_equal_81_o> created at line 306
+    Found 6-bit comparator lessequal for signal <n0127> created at line 345
+    Found 6-bit comparator lessequal for signal <n0129> created at line 345
+    Found 6-bit comparator lessequal for signal <n0132> created at line 346
+    Found 6-bit comparator lessequal for signal <n0134> created at line 346
+    Found 6-bit comparator lessequal for signal <n0138> created at line 347
+    Found 6-bit comparator lessequal for signal <n0140> created at line 347
+    Found 6-bit comparator lessequal for signal <n0154> created at line 355
+    Found 6-bit comparator lessequal for signal <n0156> created at line 355
+    Found 6-bit comparator lessequal for signal <n0159> created at line 356
+    Found 6-bit comparator lessequal for signal <n0161> created at line 356
+    Found 6-bit comparator lessequal for signal <n0165> created at line 357
+    Found 6-bit comparator lessequal for signal <n0167> created at line 357
+    Found 6-bit comparator lessequal for signal <n0182> created at line 365
+    Found 6-bit comparator lessequal for signal <n0184> created at line 365
+    Found 6-bit comparator lessequal for signal <n0187> created at line 366
+    Found 6-bit comparator lessequal for signal <n0189> created at line 366
+    Found 6-bit comparator lessequal for signal <n0193> created at line 367
+    Found 6-bit comparator lessequal for signal <n0195> created at line 367
+    Found 6-bit comparator lessequal for signal <n0210> created at line 375
+    Found 6-bit comparator lessequal for signal <n0212> created at line 375
+    Found 6-bit comparator lessequal for signal <n0215> created at line 376
+    Found 6-bit comparator lessequal for signal <n0217> created at line 376
+    Found 6-bit comparator lessequal for signal <n0221> created at line 377
+    Found 6-bit comparator lessequal for signal <n0223> created at line 377
+    Found 6-bit comparator lessequal for signal <n0259> created at line 436
+    Found 6-bit comparator lessequal for signal <n0261> created at line 436
+    Found 6-bit comparator lessequal for signal <n0268> created at line 442
+    Found 6-bit comparator lessequal for signal <n0270> created at line 442
     Summary:
 	inferred  18 Latch(s).
 	inferred  44 Comparator(s).
-	inferred  49 Multiplexer(s).
+	inferred  59 Multiplexer(s).
 Unit <FCU> synthesized.
 
 =========================================================================
@@ -838,8 +835,8 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 60
- 1-bit register                                        : 7
+# Registers                                            : 64
+ 1-bit register                                        : 11
  32-bit register                                       : 49
  5-bit register                                        : 4
 # Latches                                              : 18
@@ -847,11 +844,11 @@ Macro Statistics
 # Comparators                                          : 44
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 28
-# Multiplexers                                         : 222
- 1-bit 2-to-1 multiplexer                              : 53
+# Multiplexers                                         : 232
+ 1-bit 2-to-1 multiplexer                              : 54
  1-bit 7-to-1 multiplexer                              : 1
  10-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 31
+ 2-bit 2-to-1 multiplexer                              : 40
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 101
  40-bit 2-to-1 multiplexer                             : 4
@@ -869,13 +866,13 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <cyc[28].PG_cell_i> is unconnected in block <PG_net>.
+WARNING:Xst:1290 - Hierarchical block <cyc[28].IFN.PG_cell_i> is unconnected in block <PG_net>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <cyc[29].PG_cell_i> is unconnected in block <PG_net>.
+WARNING:Xst:1290 - Hierarchical block <cyc[29].IFN.PG_cell_i> is unconnected in block <PG_net>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <cyc[30].PG_cell_i> is unconnected in block <PG_net>.
+WARNING:Xst:1290 - Hierarchical block <cyc[30].IFN.PG_cell_i> is unconnected in block <PG_net>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <cyc[31].PG_cell_i> is unconnected in block <PG_net>.
+WARNING:Xst:1290 - Hierarchical block <cyc[31].IFN.PG_cell_i> is unconnected in block <PG_net>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <MAIN_FOR[1].REGIF.REGFOR[15].REGIF_PG.PM2> is unconnected in block <CG>.
    It will be removed from the design.
@@ -892,8 +889,6 @@ WARNING:Xst:1290 - Hierarchical block <MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_
 WARNING:Xst:1290 - Hierarchical block <FG> is unconnected in block <ALU_NBIT>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <PSW> is unconnected in block <EX_Stage>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <REG_RD> is unconnected in block <MEM_Stage>.
    It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <data_out_31> (without init value) has a constant value of 0 in block <cyc_regs[0].if0.R0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_out_30> (without init value) has a constant value of 0 in block <cyc_regs[0].if0.R0>. This FF/Latch will be trimmed during the optimization process.
@@ -977,16 +972,16 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 1595
- Flip-Flops                                            : 1595
+# Registers                                            : 1599
+ Flip-Flops                                            : 1599
 # Comparators                                          : 44
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 28
-# Multiplexers                                         : 221
- 1-bit 2-to-1 multiplexer                              : 52
+# Multiplexers                                         : 231
+ 1-bit 2-to-1 multiplexer                              : 53
  1-bit 7-to-1 multiplexer                              : 1
  10-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 31
+ 2-bit 2-to-1 multiplexer                              : 40
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 101
  40-bit 2-to-1 multiplexer                             : 4
@@ -1010,7 +1005,6 @@ WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[1].L1.C
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[1].CASE4.MUX4> of unit <Mux_NBit_2x1_5> are equivalent, second instance is removed
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_5> are equivalent, second instance is removed
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_5> are equivalent, second instance is removed
-WARNING:Xst:2973 - All outputs of instance <MEM_Stage/REG_RD> of block <NRegister_1> are unconnected in block <Datapath>. Underlying logic will be removed.
 
 Optimizing unit <Datapath> ...
 
@@ -1131,8 +1125,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1478
- Flip-Flops                                            : 1478
+# Registers                                            : 1514
+ Flip-Flops                                            : 1514
 
 =========================================================================
 
@@ -1155,23 +1149,24 @@ Top Level Output File Name         : Datapath.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2216
+# BELS                             : 2232
 #      GND                         : 1
 #      INV                         : 1
-#      LUT2                        : 22
-#      LUT3                        : 184
-#      LUT4                        : 147
-#      LUT5                        : 299
-#      LUT6                        : 1432
-#      MUXF7                       : 129
+#      LUT2                        : 16
+#      LUT3                        : 176
+#      LUT4                        : 158
+#      LUT5                        : 357
+#      LUT6                        : 1394
+#      MUXF7                       : 128
 #      VCC                         : 1
-# FlipFlops/Latches                : 1496
-#      FDCE                        : 1478
+# FlipFlops/Latches                : 1532
+#      FDC                         : 2
+#      FDCE                        : 1512
 #      LD                          : 18
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 274
-#      IBUF                        : 94
+# IO Buffers                       : 305
+#      IBUF                        : 125
 #      OBUF                        : 180
 # DSPs                             : 8
 #      DSP48E1                     : 8
@@ -1183,20 +1178,20 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1495  out of  126800     1%  
- Number of Slice LUTs:                 2085  out of  63400     3%  
-    Number used as Logic:              2085  out of  63400     3%  
+ Number of Slice Registers:            1531  out of  126800     1%  
+ Number of Slice LUTs:                 2102  out of  63400     3%  
+    Number used as Logic:              2102  out of  63400     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3383
-   Number with an unused Flip Flop:    1888  out of   3383    55%  
-   Number with an unused LUT:          1298  out of   3383    38%  
-   Number of fully used LUT-FF pairs:   197  out of   3383     5%  
-   Number of unique control sets:        41
+ Number of LUT Flip Flop pairs used:   3417
+   Number with an unused Flip Flop:    1886  out of   3417    55%  
+   Number with an unused LUT:          1315  out of   3417    38%  
+   Number of fully used LUT-FF pairs:   216  out of   3417     6%  
+   Number of unique control sets:        44
 
 IO Utilization: 
  Number of IOs:                         307
- Number of bonded IOBs:                 275  out of    210   130% (*) 
+ Number of bonded IOBs:                 306  out of    210   145% (*) 
     IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
@@ -1226,7 +1221,7 @@ Clock Information:
 -----------------------------------+-------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)         | Load  |
 -----------------------------------+-------------------------------+-------+
-DP_clk                             | BUFGP                         | 1478  |
+DP_clk                             | BUFGP                         | 1514  |
 s_fcu_enable(s_fcu_enable1:O)      | NONE(*)(FRW_CU/s_if_id_is_reg)| 18    |
 -----------------------------------+-------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1243,9 +1238,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 15.532ns (Maximum Frequency: 64.385MHz)
-   Minimum input arrival time before clock: 10.981ns
-   Maximum output required time after clock: 10.900ns
-   Maximum combinational path delay: 10.495ns
+   Minimum input arrival time before clock: 11.541ns
+   Maximum output required time after clock: 13.968ns
+   Maximum combinational path delay: 11.019ns
 
 Timing Details:
 ---------------
@@ -1254,7 +1249,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP_clk'
   Clock period: 15.532ns (frequency: 64.385MHz)
-  Total number of paths / destination ports: 31305927730 / 2866
+  Total number of paths / destination ports: 74059712277 / 2984
 -------------------------------------------------------------------------
 Delay:               7.766ns (Levels of Logic = 15)
   Source:            DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_18 (FF)
@@ -1271,16 +1266,16 @@ Delay:               7.766ns (Levels of Logic = 15)
      LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_49 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_49)
      MUXF7:I0->O           3   0.277   0.703  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_8 (DE_Stage/s_data_Frf_TregA<18>)
      LUT6:I0->O            1   0.097   0.279  DE_Stage/Cmp/matrix<0><5><0>11 (DE_Stage/Cmp/matrix<0><5><0>10)
-     MUXF7:S->O            2   0.335   0.299  DE_Stage/Cmp/matrix<0><5><0>14_SW1 (N464)
-     LUT6:I5->O            1   0.097   0.295  DE_Stage/Cmp/matrix<0><5><0>21_SW1 (N545)
-     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1_SW0 (N307)
+     MUXF7:S->O            2   0.335   0.299  DE_Stage/Cmp/matrix<0><5><0>14_SW1 (N454)
+     LUT6:I5->O            1   0.097   0.295  DE_Stage/Cmp/matrix<0><5><0>21_SW1 (N551)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1_SW0 (N306)
      LUT6:I5->O            1   0.097   0.000  DE_Stage/JBM/ADD/CN/s_carry<28>1_SW2_G (N556)
-     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<28>1_SW2 (N318)
-     MUXF7:S->O            4   0.335   0.309  DE_Stage/JBM/ADD/CN/s_carry<26>1_SW5 (N342)
+     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<28>1_SW2 (N317)
+     MUXF7:S->O            4   0.335   0.309  DE_Stage/JBM/ADD/CN/s_carry<26>1_SW5 (N345)
      LUT6:I5->O            1   0.097   0.000  DE_Stage/JBM/ADD/CN/s_carry<24>1_SW8_G (N584)
-     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<24>1_SW8 (N410)
-     MUXF7:S->O            2   0.335   0.283  DE_Stage/JBM/ADD/CN/s_carry<22>1_SW12 (N445)
-     MUXF7:S->O            1   0.335   0.295  DE_Stage/JBM/ADD/CN/s_carry<20>1_SW16 (N496)
+     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<24>1_SW8 (N398)
+     MUXF7:S->O            2   0.335   0.283  DE_Stage/JBM/ADD/CN/s_carry<22>1_SW12 (N433)
+     MUXF7:S->O            1   0.335   0.295  DE_Stage/JBM/ADD/CN/s_carry<20>1_SW16 (N486)
      LUT6:I5->O            2   0.097   0.000  IF_Stage/MUXNPC/Mmux_portY24 (s_NPC_Fif<30>)
      FDCE:D                    0.008          IF_Stage/PC/data_out_30
     ----------------------------------------
@@ -1289,61 +1284,72 @@ Delay:               7.766ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP_clk'
-  Total number of paths / destination ports: 5679702374 / 4137
+  Total number of paths / destination ports: 6395764207 / 4131
 -------------------------------------------------------------------------
-Offset:              10.981ns (Levels of Logic = 19)
-  Source:            DP_reset (PAD)
-  Destination:       IF_Stage/PC/data_out_30 (FF)
+Offset:              11.541ns (Levels of Logic = 26)
+  Source:            DP_Load_reduce (PAD)
+  Destination:       EX_Stage/ALU_reg/data_out_31 (FF)
   Destination Clock: DP_clk rising
 
-  Data Path: DP_reset to IF_Stage/PC/data_out_30
+  Data Path: DP_Load_reduce to EX_Stage/ALU_reg/data_out_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1343   0.001   0.888  DP_reset_IBUF (DP_reset_IBUF)
-     LUT5:I0->O            9   0.097   0.332  IF_Stage/ADDPC/CN/s_carry<4>1 (IF_Stage/ADDPC/s_G2<5>)
-     LUT3:I2->O            5   0.097   0.314  IF_Stage/ADDPC/CN/s_carry<6>1 (IF_Stage/ADDPC/s_G2<7>)
-     LUT5:I4->O           11   0.097   0.729  IF_Stage/ADDPC/CN/s_carry<10>1 (IF_Stage/ADDPC/s_G2<11>)
-     LUT5:I0->O           11   0.097   0.729  IF_Stage/ADDPC/CN/s_carry<14>1 (IF_Stage/ADDPC/s_G2<15>)
-     LUT5:I0->O           11   0.097   0.729  IF_Stage/ADDPC/CN/s_carry<18>1 (IF_Stage/ADDPC/s_G2<19>)
-     LUT5:I0->O           11   0.097   0.729  IF_Stage/ADDPC/CN/s_carry<22>1 (IF_Stage/ADDPC/s_G2<23>)
-     LUT5:I0->O            9   0.097   0.548  IF_Stage/ADDPC/CN/s_carry<26>1 (IF_Stage/ADDPC/s_G2<27>)
-     LUT5:I2->O            5   0.097   0.702  IF_Stage/MUXNPC/Mmux_portY24_SW0 (N146)
-     LUT6:I1->O            1   0.097   0.693  DE_Stage/Cmp/matrix<0><5><0>21_SW0 (N544)
-     LUT6:I0->O            3   0.097   0.305  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1_SW0 (N307)
-     LUT6:I5->O            1   0.097   0.000  DE_Stage/JBM/ADD/CN/s_carry<28>1_SW2_G (N556)
-     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<28>1_SW2 (N318)
-     MUXF7:S->O            4   0.335   0.309  DE_Stage/JBM/ADD/CN/s_carry<26>1_SW5 (N342)
-     LUT6:I5->O            1   0.097   0.000  DE_Stage/JBM/ADD/CN/s_carry<24>1_SW8_G (N584)
-     MUXF7:I1->O           1   0.279   0.279  DE_Stage/JBM/ADD/CN/s_carry<24>1_SW8 (N410)
-     MUXF7:S->O            2   0.335   0.283  DE_Stage/JBM/ADD/CN/s_carry<22>1_SW12 (N445)
-     MUXF7:S->O            1   0.335   0.295  DE_Stage/JBM/ADD/CN/s_carry<20>1_SW16 (N496)
-     LUT6:I5->O            2   0.097   0.000  IF_Stage/MUXNPC/Mmux_portY24 (s_NPC_Fif<30>)
-     FDCE:D                    0.008          IF_Stage/PC/data_out_30
+     IBUF:I->O            26   0.001   0.485  DP_Load_reduce_IBUF (DP_Load_reduce_IBUF)
+     LUT2:I0->O            1   0.097   0.693  WB_Stage/WB_SGB/MUX_OUT/Mmux_portY102_SW0 (N130)
+     LUT6:I0->O           16   0.097   0.364  WB_Stage/WB_SGB/MUX_OUT/Mmux_portY102 (WB_Stage/WB_SGB/MUX_OUT/Mmux_portY102)
+     LUT5:I4->O           35   0.097   0.619  WB_Stage/WB_SGB/MUX_OUT/Mmux_portY141 (s_data_Fwb_Tde<23>)
+     LUT5:I2->O            6   0.097   0.402  FWD_TOP_MUX/sel_INV_2_o16 (FWD_TOP_MUX/sel_INV_2_o_mmx_out23)
+     LUT6:I4->O            4   0.097   0.697  EX_Stage/EI_OpA_Alu/EI_dataout<23>1 (EX_Stage/s_OpA_Fei_Talu<23>)
+     LUT6:I1->O            1   0.097   0.295  EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_56_o281 (EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_56_o28)
+     LUT5:I4->O            7   0.097   0.407  EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_56_o282 (EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_56_o_mmx_out34)
+     LUT6:I4->O            3   0.097   0.305  EX_Stage/ALU_NBIT/BS/depth2[1].width2[0].mod_if2.MUX2/sel_INV_2_o181 (EX_Stage/ALU_NBIT/BS/depth2[1].width2[0].mod_if2.MUX2/sel_INV_2_o_mmx_out25)
+     LUT6:I5->O            8   0.097   0.411  EX_Stage/ALU_NBIT/BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY210 (EX_Stage/ALU_NBIT/s_from_BS_to_units_opA<0>)
+     LUT5:I3->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
+     LUT5:I4->O            5   0.097   0.314  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[2].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (EX_Stage/ALU_NBIT/P4/carry_tmp<1>)
+     LUT5:I4->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij1 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij)
+     LUT5:I4->O            5   0.097   0.314  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[3].REGIF.REGFOR[1].REGIF_G.PM0/G_ij2 (EX_Stage/ALU_NBIT/P4/carry_tmp<2>)
+     LUT5:I4->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij1 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij)
+     LUT5:I4->O            5   0.097   0.314  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF2[1].L1.PM4/G_ij2 (EX_Stage/ALU_NBIT/P4/carry_tmp<3>)
+     LUT5:I4->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij1 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij)
+     LUT5:I4->O            5   0.097   0.314  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[4].IRREGIF.IRREGIF1.IRREGFOR1[1].IRREGIF1_G.IRREGFOR_G_HALF1[1].PM3/G_ij2 (EX_Stage/ALU_NBIT/P4/carry_tmp<4>)
+     LUT5:I4->O            2   0.097   0.299  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij321 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij32)
+     LUT6:I5->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij4 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij3)
+     LUT6:I5->O            5   0.097   0.314  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF2[1].L8.L9[1].PM14/G_ij5 (EX_Stage/ALU_NBIT/P4/carry_tmp<6>)
+     LUT5:I4->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij1 (EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij)
+     LUT5:I4->O            4   0.097   0.309  EX_Stage/ALU_NBIT/P4/CG/MAIN_FOR[5].IRREGIF.LASTIF.LAST_IRREGFOR_HALF1[2].PM9/G_ij2 (EX_Stage/ALU_NBIT/P4/carry_tmp<7>)
+     LUT6:I5->O            1   0.097   0.295  EX_Stage/ALU_NBIT/P4/CS/S<31>11 (EX_Stage/ALU_NBIT/P4/CS/S<31>_bdd0)
+     LUT6:I5->O            1   0.097   0.000  EX_Stage/ALU_NBIT/MUX3/Mmux_portY263_F (N669)
+     MUXF7:I0->O           1   0.277   0.000  EX_Stage/ALU_NBIT/MUX3/Mmux_portY263 (EX_Stage/s_outalu_Falu_Treg<31>)
+     FDCE:D                    0.008          EX_Stage/ALU_reg/data_out_31
     ----------------------------------------
-    Total                     10.981ns (2.833ns logic, 8.148ns route)
-                                       (25.8% logic, 74.2% route)
+    Total                     11.541ns (2.614ns logic, 8.927ns route)
+                                       (22.7% logic, 77.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DP_clk'
-  Total number of paths / destination ports: 31960 / 162
+  Total number of paths / destination ports: 479210 / 161
 -------------------------------------------------------------------------
-Offset:              10.900ns (Levels of Logic = 21)
-  Source:            IF_Stage/IR/data_out_22 (FF)
+Offset:              13.968ns (Levels of Logic = 25)
+  Source:            IF_Stage/IR/data_out_21 (FF)
   Destination:       DP_new_PC<30> (PAD)
   Source Clock:      DP_clk rising
 
-  Data Path: IF_Stage/IR/data_out_22 to DP_new_PC<30>
+  Data Path: IF_Stage/IR/data_out_21 to DP_new_PC<30>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            11   0.361   0.557  IF_Stage/IR/data_out_22 (IF_Stage/IR/data_out_22)
-     LUT3:I0->O          256   0.097   0.834  DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o1 (DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o)
-     LUT6:I0->O            1   0.097   0.556  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_968 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_968)
-     LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_422 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_422)
-     MUXF7:I0->O           3   0.277   0.305  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_21 (DE_Stage/s_data_Frf_TregA<2>)
-     LUT5:I4->O            2   0.097   0.384  DE_Stage/JBM/ADD/PG/cyc[2].PG_cell_i/Mxor_p_xo<0>1 (DE_Stage/JBM/ADD/s_P1<2>)
-     LUT6:I4->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<2>1 (DE_Stage/JBM/ADD/s_G2<3>)
+     FDCE:C->Q             9   0.361   0.730  IF_Stage/IR/data_out_21 (IF_Stage/IR/data_out_21)
+     LUT6:I0->O            1   0.097   0.683  FRW_CU/FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o5_SW0 (N250)
+     LUT5:I0->O            2   0.097   0.688  FRW_CU/FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o5 (FRW_CU/FCU_IF_ID_6_10[4]_FCU_EX_MEM_11_15[4]_equal_14_o)
+     LUT6:I1->O            2   0.097   0.698  FRW_CU/Mmux_FCU_insert_stall26 (FRW_CU/Mmux_FCU_insert_stall25)
+     LUT6:I0->O          212   0.097   0.514  FRW_CU/Mmux_FCU_insert_stall215 (DP_insert_bubble_OBUF)
+     LUT3:I1->O          256   0.097   0.834  DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o1 (DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o)
+     LUT6:I0->O            1   0.097   0.556  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935)
+     LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411)
+     MUXF7:I0->O           4   0.277   0.309  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_10 (DE_Stage/s_data_Frf_TregA<1>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<1>1 (DE_Stage/JBM/ADD/s_G2<2>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<2>1 (DE_Stage/JBM/ADD/s_G2<3>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<6>1 (DE_Stage/JBM/ADD/s_G2<7>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<8>1 (DE_Stage/JBM/ADD/s_G2<9>)
@@ -1360,54 +1366,32 @@ Offset:              10.900ns (Levels of Logic = 21)
      LUT6:I4->O            1   0.097   0.279  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1 (DP_new_PC_30_OBUF)
      OBUF:I->O                 0.000          DP_new_PC_30_OBUF (DP_new_PC<30>)
     ----------------------------------------
-    Total                     10.900ns (2.481ns logic, 8.419ns route)
-                                       (22.8% logic, 77.2% route)
+    Total                     13.968ns (2.869ns logic, 11.099ns route)
+                                       (20.5% logic, 79.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 's_fcu_enable'
-  Total number of paths / destination ports: 166 / 35
+  Total number of paths / destination ports: 134110 / 66
 -------------------------------------------------------------------------
-Offset:              5.369ns (Levels of Logic = 8)
-  Source:            FRW_CU/s_ex_mem_is_reg (LATCH)
-  Destination:       DP_branch_taken (PAD)
+Offset:              13.287ns (Levels of Logic = 24)
+  Source:            FRW_CU/s_id_ex_is_reg (LATCH)
+  Destination:       DP_new_PC<30> (PAD)
   Source Clock:      s_fcu_enable falling
 
-  Data Path: FRW_CU/s_ex_mem_is_reg to DP_branch_taken
+  Data Path: FRW_CU/s_id_ex_is_reg to DP_new_PC<30>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               3   0.472   0.521  FRW_CU/s_ex_mem_is_reg (FRW_CU/s_ex_mem_is_reg)
-     LUT5:I2->O            1   0.097   0.683  FRW_CU/Mmux_FCU_IF_ID_MUX12 (FRW_CU/Mmux_FCU_IF_ID_MUX11)
-     LUT6:I1->O            1   0.097   0.511  FRW_CU/Mmux_FCU_IF_ID_MUX13 (FRW_CU/Mmux_FCU_IF_ID_MUX12)
-     LUT6:I3->O            2   0.097   0.697  FRW_CU/Mmux_FCU_IF_ID_MUX14 (s_if_id_sel_fwx_mux<0>)
-     LUT6:I0->O            2   0.097   0.383  DE_Stage/Cmp/matrix<0><5><0>7 (DE_Stage/Cmp/matrix<0><5><0>6)
-     LUT6:I4->O            2   0.097   0.697  DE_Stage/Cmp/matrix<0><5><0>14_SW0 (N463)
-     LUT6:I0->O           10   0.097   0.337  DE_Stage/Cmp/matrix<0><5><0>21 (DE_Stage/s_iszero_Fcmp_Tcond)
-     LUT4:I3->O           37   0.097   0.387  DE_Stage/JBM/JBM_taken<1>1 (DP_branch_taken_OBUF)
-     OBUF:I->O                 0.000          DP_branch_taken_OBUF (DP_branch_taken)
-    ----------------------------------------
-    Total                      5.369ns (1.151ns logic, 4.218ns route)
-                                       (21.4% logic, 78.6% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 25934 / 131
--------------------------------------------------------------------------
-Delay:               10.495ns (Levels of Logic = 22)
-  Source:            DP_enable (PAD)
-  Destination:       DP_new_PC<30> (PAD)
-
-  Data Path: DP_enable to DP_new_PC<30>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           205   0.001   0.513  DP_enable_IBUF (DP_enable_IBUF)
+     LD:G->Q               5   0.472   0.712  FRW_CU/s_id_ex_is_reg (FRW_CU/s_id_ex_is_reg)
+     LUT6:I0->O            1   0.097   0.693  FRW_CU/Mmux_FCU_insert_stall25 (FRW_CU/Mmux_FCU_insert_stall24)
+     LUT6:I0->O            2   0.097   0.698  FRW_CU/Mmux_FCU_insert_stall26 (FRW_CU/Mmux_FCU_insert_stall25)
+     LUT6:I0->O          212   0.097   0.514  FRW_CU/Mmux_FCU_insert_stall215 (DP_insert_bubble_OBUF)
      LUT3:I1->O          256   0.097   0.834  DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o1 (DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o)
-     LUT6:I0->O            1   0.097   0.556  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_968 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_968)
-     LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_422 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_422)
-     MUXF7:I0->O           3   0.277   0.305  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_21 (DE_Stage/s_data_Frf_TregA<2>)
-     LUT5:I4->O            2   0.097   0.384  DE_Stage/JBM/ADD/PG/cyc[2].PG_cell_i/Mxor_p_xo<0>1 (DE_Stage/JBM/ADD/s_P1<2>)
-     LUT6:I4->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<2>1 (DE_Stage/JBM/ADD/s_G2<3>)
+     LUT6:I0->O            1   0.097   0.556  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935)
+     LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411)
+     MUXF7:I0->O           4   0.277   0.309  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_10 (DE_Stage/s_data_Frf_TregA<1>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<1>1 (DE_Stage/JBM/ADD/s_G2<2>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<2>1 (DE_Stage/JBM/ADD/s_G2<3>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<6>1 (DE_Stage/JBM/ADD/s_G2<7>)
      LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<8>1 (DE_Stage/JBM/ADD/s_G2<9>)
@@ -1424,8 +1408,47 @@ Delay:               10.495ns (Levels of Logic = 22)
      LUT6:I4->O            1   0.097   0.279  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1 (DP_new_PC_30_OBUF)
      OBUF:I->O                 0.000          DP_new_PC_30_OBUF (DP_new_PC<30>)
     ----------------------------------------
-    Total                     10.495ns (2.121ns logic, 8.374ns route)
-                                       (20.2% logic, 79.8% route)
+    Total                     13.287ns (2.883ns logic, 10.404ns route)
+                                       (21.7% logic, 78.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 37212 / 131
+-------------------------------------------------------------------------
+Delay:               11.019ns (Levels of Logic = 23)
+  Source:            DP_reset (PAD)
+  Destination:       DP_new_PC<30> (PAD)
+
+  Data Path: DP_reset to DP_new_PC<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1373   0.001   0.501  DP_reset_IBUF (DP_reset_IBUF)
+     LUT6:I5->O          212   0.097   0.514  FRW_CU/Mmux_FCU_insert_stall215 (DP_insert_bubble_OBUF)
+     LUT3:I1->O          256   0.097   0.834  DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o1 (DE_Stage/RF/depth1[1].width1[0].mod_if1.MUX1/sel_INV_2_o)
+     LUT6:I0->O            1   0.097   0.556  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_935)
+     LUT6:I2->O            1   0.097   0.000  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411 (DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_411)
+     MUXF7:I0->O           4   0.277   0.309  DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_10 (DE_Stage/s_data_Frf_TregA<1>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<1>1 (DE_Stage/JBM/ADD/s_G2<2>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<2>1 (DE_Stage/JBM/ADD/s_G2<3>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<4>1 (DE_Stage/JBM/ADD/s_G2<5>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<6>1 (DE_Stage/JBM/ADD/s_G2<7>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<8>1 (DE_Stage/JBM/ADD/s_G2<9>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<10>1 (DE_Stage/JBM/ADD/s_G2<11>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<12>1 (DE_Stage/JBM/ADD/s_G2<13>)
+     LUT6:I5->O            3   0.097   0.305  DE_Stage/JBM/ADD/CN/s_carry<14>1 (DE_Stage/JBM/ADD/s_G2<15>)
+     LUT6:I5->O           12   0.097   0.346  DE_Stage/JBM/ADD/CN/s_carry<16>1 (DE_Stage/JBM/ADD/s_G2<17>)
+     LUT6:I5->O            9   0.097   0.548  DE_Stage/JBM/ADD/CN/s_carry<18>1 (DE_Stage/JBM/ADD/s_G2<19>)
+     LUT6:I3->O            3   0.097   0.521  DE_Stage/JBM/ADD/CN/s_carry<20>1 (DE_Stage/JBM/ADD/s_G2<21>)
+     LUT6:I3->O            3   0.097   0.521  DE_Stage/JBM/ADD/CN/s_carry<22>1 (DE_Stage/JBM/ADD/s_G2<23>)
+     LUT6:I3->O            3   0.097   0.521  DE_Stage/JBM/ADD/CN/s_carry<24>1 (DE_Stage/JBM/ADD/s_G2<25>)
+     LUT6:I3->O            5   0.097   0.530  DE_Stage/JBM/ADD/CN/s_carry<26>1 (DE_Stage/JBM/ADD/s_G2<27>)
+     LUT6:I3->O            1   0.097   0.379  DE_Stage/JBM/ADD/CN/s_carry<28>1 (DE_Stage/JBM/ADD/s_G2<29>)
+     LUT6:I4->O            1   0.097   0.279  DE_Stage/JBM/ADD/SN/Mxor_S<30>_xo<0>1 (DP_new_PC_30_OBUF)
+     OBUF:I->O                 0.000          DP_new_PC_30_OBUF (DP_new_PC<30>)
+    ----------------------------------------
+    Total                     11.019ns (2.218ns logic, 8.801ns route)
+                                       (20.1% logic, 79.9% route)
 
 =========================================================================
 
@@ -1437,8 +1460,8 @@ Clock to Setup on destination clock DP_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DP_clk         |   11.655|    7.766|    2.181|         |
-s_fcu_enable   |         |   11.805|         |         |
+DP_clk         |   11.954|    7.766|    5.630|         |
+s_fcu_enable   |         |   12.155|    4.949|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock s_fcu_enable
@@ -1452,14 +1475,14 @@ DP_clk         |         |         |    1.179|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 26.50 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.07 secs
  
 --> 
 
-Total memory usage is 352924 kilobytes
+Total memory usage is 355432 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  218 (   0 filtered)
+Number of warnings :  214 (   0 filtered)
 Number of infos    :   10 (   0 filtered)
 

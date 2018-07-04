@@ -62,8 +62,8 @@ begin
   
   WRITE_MEM_P: process(Rst, Enable, Addr, RD_wr, Din)
   begin
-	if(Rst = '0' and Enable = '1') then
-		DRAM_mem <= (others => (others => '0'));
+	if(Rst = '0') then
+		DRAM_mem(0 to 2**NBIT_ADDRESS - 1) <= (others => (others => '0'));
 	elsif(Rst = '1' and Enable = '1' and RD_wr = '0') then
 		DRAM_mem(to_integer(unsigned(Addr(NBIT_ADDRESS-1 downto 2)))) <= Din;
 	end if;	

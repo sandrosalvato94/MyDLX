@@ -61,6 +61,7 @@ entity FCU is
 		FCU_EX_MEM_MUX		: out std_logic;
 		
 		FCU_IF_ID_is_branch	: out std_logic;
+		FCU_ID_EX_is_store	: out std_logic;
 		FCU_ID_EX_is_branch_or_jmp : out std_logic;
 		FCU_insert_stall	: out std_logic --true when '0'
 	);
@@ -94,6 +95,8 @@ architecture Behavioral of FCU is
 --	-------------------------------------------------------------------
 --	constant OPCODE_SB  : std_logic_vector(5 downto 0) := "101000"; --0x28
 --	constant OPCODE_SW	 : std_logic_vector(5 downto 0) := "101011"; --0x2b
+	
+	constant ZERO_SIGNAL	: std_logic_vector(4 downto 0) := "00000";
 	
 	signal s_if_id_is_reg : std_logic;
 	signal s_id_ex_is_reg : std_logic;
@@ -176,27 +179,30 @@ begin
 					 
 						FCU_IF_ID_MUX <= "00";
 						if(FCU_enable = '1') then
-							if(s_if_id_is_jmp = '1') then
-								if(s_ex_mem_is_reg = '1') then
-									if(FCU_EX_MEM_16_20 = FCU_IF_ID_6_10) then
-										FCU_IF_ID_MUX <= "01";
+							if((FCU_EX_MEM_16_20 /= ZERO_SIGNAL) AND (FCU_IF_ID_6_10 /= ZERO_SIGNAL) AND 
+								(FCU_EX_MEM_11_15 /= ZERO_SIGNAL) AND (FCU_MEM_WB_11_15 /= ZERO_SIGNAL)) then
+								if(s_if_id_is_jmp = '1') then
+									if(s_ex_mem_is_reg = '1') then
+										if(FCU_EX_MEM_16_20 = FCU_IF_ID_6_10) then
+											FCU_IF_ID_MUX <= "01";
+										end if;
 									end if;
-								end if;
-								if(s_ex_mem_is_imm = '1') then
-									if(FCU_EX_MEM_11_15 = FCU_IF_ID_6_10) then
-										FCU_IF_ID_MUX <= "01";
+									if(s_ex_mem_is_imm = '1') then
+										if(FCU_EX_MEM_11_15 = FCU_IF_ID_6_10) then
+											FCU_IF_ID_MUX <= "01";
+										end if;
 									end if;
-								end if;
 
---								if(s_id_ex_is_imm = '1') then
---									if(FCU_ID_EX_11_15 = FCU_IF_ID_6_10) then
---										FCU_IF_ID_MUX <= "01";
---									end if;
---								end if;
-								
-								if(s_mem_wb_is_load = '1') then
-									if(FCU_MEM_WB_11_15 = FCU_IF_ID_6_10) then
-										FCU_IF_ID_MUX <= "10";
+	--								if(s_id_ex_is_imm = '1') then
+	--									if(FCU_ID_EX_11_15 = FCU_IF_ID_6_10) then
+	--										FCU_IF_ID_MUX <= "01";
+	--									end if;
+	--								end if;
+									
+									if(s_mem_wb_is_load = '1') then
+										if(FCU_MEM_WB_11_15 = FCU_IF_ID_6_10) then
+											FCU_IF_ID_MUX <= "10";
+										end if;
 									end if;
 								end if;
 							end if;
@@ -215,55 +221,63 @@ begin
 					 if(FCU_enable = '1') then
 						-----------------------------------
 						-----------------------------------
-						if(s_mem_wb_is_reg = '1') then
-							if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
-								if(FCU_MEM_WB_16_20 = FCU_ID_EX_6_10) then
-									FCU_ID_EX_TOP_MUX <= "10";
+						if((FCU_MEM_WB_16_20 /= ZERO_SIGNAL) AND (FCU_ID_EX_6_10 /= ZERO_SIGNAL) AND (FCU_ID_EX_11_15 /= ZERO_SIGNAL)) then
+							if(s_mem_wb_is_reg = '1') then
+								if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
+									if(FCU_MEM_WB_16_20 = FCU_ID_EX_6_10) then
+										FCU_ID_EX_TOP_MUX <= "10";
+									end if;
 								end if;
-							end if;
-							if(s_id_ex_is_reg = '1') then
-								if(FCU_MEM_WB_16_20 = FCU_ID_EX_11_15) then
-									FCU_ID_EX_BOT_MUX <= "10";
-								end if;
-							end if;
-						end if;
-						-----------------------------------
-						if((s_mem_wb_is_imm = '1') OR (s_mem_wb_is_load = '1')) then
-							if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
-								if(FCU_MEM_WB_11_15 = FCU_ID_EX_6_10) then
-									FCU_ID_EX_TOP_MUX <= "10";
-								end if;
-							end if;
-							if(s_id_ex_is_reg = '1') then
-								if(FCU_MEM_WB_11_15 = FCU_ID_EX_11_15) then
-									FCU_ID_EX_BOT_MUX <= "10";
-								end if;
-							end if; 
-						end if;
-						-----------------------------------
-						-----------------------------------
-						if(s_ex_mem_is_reg = '1') then
-							if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
-								if(FCU_EX_MEM_16_20 = FCU_ID_EX_6_10) then
-									FCU_ID_EX_TOP_MUX <= "01";
-								end if;
-							end if;
-							if(s_id_ex_is_reg = '1') then
-								if(FCU_EX_MEM_16_20 = FCU_ID_EX_11_15) then
-									FCU_ID_EX_BOT_MUX <= "01";
+								if(s_id_ex_is_reg = '1') then
+									if(FCU_MEM_WB_16_20 = FCU_ID_EX_11_15) then
+										FCU_ID_EX_BOT_MUX <= "10";
+									end if;
 								end if;
 							end if;
 						end if;
 						-----------------------------------
-						if(s_ex_mem_is_imm = '1') then
-							if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
-								if(FCU_EX_MEM_11_15 = FCU_ID_EX_6_10) then
-									FCU_ID_EX_TOP_MUX <= "01";
+						if((FCU_MEM_WB_11_15 /= ZERO_SIGNAL) AND (FCU_ID_EX_6_10 /= ZERO_SIGNAL) AND (FCU_ID_EX_11_15 /= ZERO_SIGNAL)) then
+							if((s_mem_wb_is_imm = '1') OR (s_mem_wb_is_load = '1')) then
+								if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
+									if(FCU_MEM_WB_11_15 = FCU_ID_EX_6_10) then
+										FCU_ID_EX_TOP_MUX <= "10";
+									end if;
+								end if;
+								if(s_id_ex_is_reg = '1') then
+									if(FCU_MEM_WB_11_15 = FCU_ID_EX_11_15) then
+										FCU_ID_EX_BOT_MUX <= "10";
+									end if;
+								end if; 
+							end if;
+						end if;
+						-----------------------------------
+						-----------------------------------
+						if((FCU_EX_MEM_16_20 /= ZERO_SIGNAL) AND (FCU_ID_EX_6_10 /= ZERO_SIGNAL) AND (FCU_ID_EX_11_15 /= ZERO_SIGNAL)) then
+							if(s_ex_mem_is_reg = '1') then
+								if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
+									if(FCU_EX_MEM_16_20 = FCU_ID_EX_6_10) then
+										FCU_ID_EX_TOP_MUX <= "01";
+									end if;
+								end if;
+								if(s_id_ex_is_reg = '1') then
+									if(FCU_EX_MEM_16_20 = FCU_ID_EX_11_15) then
+										FCU_ID_EX_BOT_MUX <= "01";
+									end if;
 								end if;
 							end if;
-							if(s_id_ex_is_reg = '1') then
-								if(FCU_EX_MEM_11_15 = FCU_ID_EX_11_15) then
-									FCU_ID_EX_BOT_MUX <= "01";
+						end if;
+						-----------------------------------
+						if((FCU_EX_MEM_11_15 /= ZERO_SIGNAL) AND (FCU_ID_EX_6_10 /= ZERO_SIGNAL) AND (FCU_ID_EX_11_15 /= ZERO_SIGNAL)) then
+							if(s_ex_mem_is_imm = '1') then
+								if((s_id_ex_is_reg = '1') OR (s_id_ex_is_imm = '1') OR (s_id_ex_is_load = '1') OR (s_id_ex_is_store = '1')) then
+									if(FCU_EX_MEM_11_15 = FCU_ID_EX_6_10) then
+										FCU_ID_EX_TOP_MUX <= "01";
+									end if;
+								end if;
+								if(s_id_ex_is_reg = '1') then
+									if(FCU_EX_MEM_11_15 = FCU_ID_EX_11_15) then
+										FCU_ID_EX_BOT_MUX <= "01";
+									end if;
 								end if;
 							end if;
 						end if;
@@ -279,22 +293,23 @@ begin
 		FCU_EX_MEM_MUX <= '0';
 		
 		if(FCU_enable = '1') then
-			if(s_ex_mem_is_store = '1') then
-				
-				if(s_mem_wb_is_reg = '1') then
-					if(FCU_MEM_WB_16_20 = FCU_EX_MEM_11_15) then
-						FCU_EX_MEM_MUX <= '1';
+			if((FCU_MEM_WB_16_20 /= ZERO_SIGNAL) AND (FCU_EX_MEM_11_15 /= ZERO_SIGNAL) AND (FCU_MEM_WB_11_15 /= ZERO_SIGNAL)) then
+				if(s_ex_mem_is_store = '1') then
+					
+					if(s_mem_wb_is_reg = '1') then
+						if(FCU_MEM_WB_16_20 = FCU_EX_MEM_11_15) then
+							FCU_EX_MEM_MUX <= '1';
+						end if;
 					end if;
-				end if;
-				
-				if((s_mem_wb_is_imm = '1') OR (s_mem_wb_is_load = '1')) then
-					if(FCU_MEM_WB_11_15 = FCU_EX_MEM_11_15) then
-						FCU_EX_MEM_MUX <= '1';
+					
+					if((s_mem_wb_is_imm = '1') OR (s_mem_wb_is_load = '1')) then
+						if(FCU_MEM_WB_11_15 = FCU_EX_MEM_11_15) then
+							FCU_EX_MEM_MUX <= '1';
+						end if;
 					end if;
+				
 				end if;
-			
 			end if;
-			
 		end if;
 	end process;
 
@@ -452,6 +467,7 @@ begin
 	end process;
 
 	FCU_ID_EX_is_branch_or_jmp<=s_id_ex_is_jmp;
+	FCU_ID_EX_is_store <= s_id_ex_is_store;
 
 end Behavioral;
 

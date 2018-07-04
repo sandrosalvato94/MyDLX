@@ -262,6 +262,13 @@ Elaborating entity <Multiplier> (architecture <Behavioral>) with generics from l
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <NRegister> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" Line 144: Net <s_product_Flo_Tmux2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" Line 145: Net <s_product_Fhi_Tmux2[31]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 168. All outputs of instance <EI_OpA_Mul> of block <Enable_Interface> are unconnected in block <Execute_Stage>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 173. All outputs of instance <EI_OpB_Mul> of block <Enable_Interface> are unconnected in block <Execute_Stage>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 194. All outputs of instance <MUL> of block <Multiplier> are unconnected in block <Execute_Stage>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 212. All outputs of instance <LO> of block <NRegister> are unconnected in block <Execute_Stage>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 230. All outputs of instance <HI> of block <NRegister> are unconnected in block <Execute_Stage>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -271,6 +278,10 @@ Synthesizing Unit <Execute_Stage>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd".
         NBIT_DATA = 32
         NBIT_BS_AMOUNT = 5
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 212: Output port <data_out> of the instance <LO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Execute_Stage.vhd" line 230: Output port <data_out> of the instance <HI> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <s_product_Flo_Tmux2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <s_product_Fhi_Tmux2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <Execute_Stage> synthesized.
@@ -461,16 +472,6 @@ Synthesizing Unit <XNORGate_NX1>.
     Summary:
 Unit <XNORGate_NX1> synthesized.
 
-Synthesizing Unit <Multiplier>.
-    Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Multiplier.vhd".
-        NBIT_DATA = 32
-    Found 32x32-bit multiplier for signal <MUL_OpA[31]_MUL_OpB[31]_MuLt_0_OUT[63:0]> created at line 61.
-    Found 32x32-bit multiplier for signal <MUL_OpA[31]_MUL_OpB[31]_MuLt_2_OUT[63:0]> created at line 65.
-    Summary:
-	inferred   2 Multiplier(s).
-	inferred   1 Multiplexer(s).
-Unit <Multiplier> synthesized.
-
 Synthesizing Unit <NRegister_1>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\NRegister.vhd".
         N = 32
@@ -491,18 +492,15 @@ Unit <NRegister_2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 32x32-bit multiplier                                  : 2
-# Registers                                            : 4
- 32-bit register                                       : 3
+# Registers                                            : 2
+ 32-bit register                                       : 1
  5-bit register                                        : 1
-# Multiplexers                                         : 76
+# Multiplexers                                         : 75
  1-bit 2-to-1 multiplexer                              : 34
  1-bit 7-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 14
  40-bit 2-to-1 multiplexer                             : 4
- 64-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 21
 # Xors                                                 : 193
  1-bit xor2                                            : 192
@@ -519,17 +517,14 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 32x32-bit multiplier                                  : 2
-# Registers                                            : 101
- Flip-Flops                                            : 101
-# Multiplexers                                         : 76
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Multiplexers                                         : 75
  1-bit 2-to-1 multiplexer                              : 34
  1-bit 7-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 14
  40-bit 2-to-1 multiplexer                             : 4
- 64-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 21
 # Xors                                                 : 193
  1-bit xor2                                            : 192
@@ -548,6 +543,8 @@ WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[2].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 WARNING:Xst:1989 - Unit <Barrel_Shifter>: instances <musk_cyc[2].mux_cyc[2].CASE4.MUX4>, <musk_cyc[3].mux_cyc[3].CASE4.MUX4> of unit <Mux_NBit_2x1_1> are equivalent, second instance is removed
 
+Optimizing unit <NRegister_1> ...
+
 Optimizing unit <Execute_Stage> ...
 
 Optimizing unit <ALU> ...
@@ -560,8 +557,6 @@ Optimizing unit <CarryGenerator> ...
 
 Optimizing unit <CarrySelect> ...
 
-Optimizing unit <NRegister_1> ...
-
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Execute_Stage, actual ratio is 1.
@@ -572,8 +567,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 101
- Flip-Flops                                            : 101
+# Registers                                            : 37
+ Flip-Flops                                            : 37
 
 =========================================================================
 
@@ -596,24 +591,20 @@ Top Level Output File Name         : Execute_Stage.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 649
-#      GND                         : 1
+# BELS                             : 518
 #      LUT2                        : 1
-#      LUT3                        : 98
-#      LUT4                        : 159
-#      LUT5                        : 153
+#      LUT3                        : 65
+#      LUT4                        : 95
+#      LUT5                        : 121
 #      LUT6                        : 232
 #      MUXF7                       : 4
-#      VCC                         : 1
-# FlipFlops/Latches                : 101
-#      FDCE                        : 101
+# FlipFlops/Latches                : 37
+#      FDCE                        : 37
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 116
 #      IBUF                        : 79
 #      OBUF                        : 37
-# DSPs                             : 8
-#      DSP48E1                     : 8
 
 Device utilization summary:
 ---------------------------
@@ -622,16 +613,16 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              96  out of  126800     0%  
- Number of Slice LUTs:                  643  out of  63400     1%  
-    Number used as Logic:               643  out of  63400     1%  
+ Number of Slice Registers:              32  out of  126800     0%  
+ Number of Slice LUTs:                  514  out of  63400     0%  
+    Number used as Logic:               514  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    643
-   Number with an unused Flip Flop:     547  out of    643    85%  
-   Number with an unused LUT:             0  out of    643     0%  
-   Number of fully used LUT-FF pairs:    96  out of    643    14%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:    514
+   Number with an unused Flip Flop:     482  out of    514    93%  
+   Number with an unused LUT:             0  out of    514     0%  
+   Number of fully used LUT-FF pairs:    32  out of    514     6%  
+   Number of unique control sets:         1
 
 IO Utilization: 
  Number of IOs:                         117
@@ -640,7 +631,6 @@ IO Utilization:
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
- Number of DSP48E1s:                      8  out of    240     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -663,7 +653,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-EX_clk                             | BUFGP                  | 101   |
+EX_clk                             | BUFGP                  | 37    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -675,9 +665,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 17.860ns
-   Maximum output required time after clock: 1.249ns
-   Maximum combinational path delay: 1.167ns
+   Minimum input arrival time before clock: 17.850ns
+   Maximum output required time after clock: 1.033ns
+   Maximum combinational path delay: 0.995ns
 
 Timing Details:
 ---------------
@@ -685,9 +675,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'EX_clk'
-  Total number of paths / destination ports: 936246972 / 303
+  Total number of paths / destination ports: 3974732 / 111
 -------------------------------------------------------------------------
-Offset:              17.860ns (Levels of Logic = 26)
+Offset:              17.850ns (Levels of Logic = 26)
   Source:            EX_enable (PAD)
   Destination:       PSW/data_out_1 (FF)
   Destination Clock: EX_clk rising
@@ -696,7 +686,7 @@ Offset:              17.860ns (Levels of Logic = 26)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           150   0.001   0.636  EX_enable_IBUF (EX_enable_IBUF)
+     IBUF:I->O            85   0.001   0.626  EX_enable_IBUF (EX_enable_IBUF)
      LUT4:I1->O            3   0.097   0.693  EI_OpA_Alu/EI_dataout<17>1 (s_OpA_Fei_Talu<17>)
      LUT6:I1->O            1   0.097   0.693  ALU_NBIT/BS/MUX3x1/sel_INV_7_o17_SW0 (N24)
      LUT6:I0->O            5   0.097   0.575  ALU_NBIT/BS/MUX3x1/sel_INV_7_o17 (ALU_NBIT/BS/MUX3x1/sel_INV_7_o_mmx_out24)
@@ -724,34 +714,34 @@ Offset:              17.860ns (Levels of Logic = 26)
      LUT2:I1->O            1   0.097   0.000  ALU_NBIT/FG/NOR32X1/Y7 (s_flags_Falu_statusreg<0>)
      FDCE:D                    0.008          PSW/data_out_0
     ----------------------------------------
-    Total                     17.860ns (2.616ns logic, 15.244ns route)
-                                       (14.6% logic, 85.4% route)
+    Total                     17.850ns (2.616ns logic, 15.234ns route)
+                                       (14.7% logic, 85.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'EX_clk'
-  Total number of paths / destination ports: 101 / 37
+  Total number of paths / destination ports: 37 / 37
 -------------------------------------------------------------------------
-Offset:              1.249ns (Levels of Logic = 2)
-  Source:            LO/data_out_31 (FF)
+Offset:              1.033ns (Levels of Logic = 2)
+  Source:            ALU_reg/data_out_31 (FF)
   Destination:       EX_data_out<31> (PAD)
   Source Clock:      EX_clk rising
 
-  Data Path: LO/data_out_31 to EX_data_out<31>
+  Data Path: ALU_reg/data_out_31 to EX_data_out<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.361   0.511  LO/data_out_31 (LO/data_out_31)
-     LUT5:I2->O            1   0.097   0.279  MUX3/Mmux_portY251 (EX_data_out_31_OBUF)
+     FDCE:C->Q             1   0.361   0.295  ALU_reg/data_out_31 (ALU_reg/data_out_31)
+     LUT3:I2->O            1   0.097   0.279  MUX3/Mmux_portY251 (EX_data_out_31_OBUF)
      OBUF:I->O                 0.000          EX_data_out_31_OBUF (EX_data_out<31>)
     ----------------------------------------
-    Total                      1.249ns (0.458ns logic, 0.791ns route)
-                                       (36.7% logic, 63.3% route)
+    Total                      1.033ns (0.458ns logic, 0.575ns route)
+                                       (44.4% logic, 55.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 64 / 32
 -------------------------------------------------------------------------
-Delay:               1.167ns (Levels of Logic = 3)
+Delay:               0.995ns (Levels of Logic = 3)
   Source:            EX_sel_mux_out<1> (PAD)
   Destination:       EX_data_out<31> (PAD)
 
@@ -759,12 +749,12 @@ Delay:               1.167ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            32   0.001   0.790  EX_sel_mux_out_1_IBUF (EX_sel_mux_out_1_IBUF)
-     LUT5:I0->O            1   0.097   0.279  MUX3/Mmux_portY321 (EX_data_out_9_OBUF)
+     IBUF:I->O            32   0.001   0.618  EX_sel_mux_out_1_IBUF (EX_sel_mux_out_1_IBUF)
+     LUT3:I0->O            1   0.097   0.279  MUX3/Mmux_portY321 (EX_data_out_9_OBUF)
      OBUF:I->O                 0.000          EX_data_out_9_OBUF (EX_data_out<9>)
     ----------------------------------------
-    Total                      1.167ns (0.098ns logic, 1.069ns route)
-                                       (8.4% logic, 91.6% route)
+    Total                      0.995ns (0.098ns logic, 0.897ns route)
+                                       (9.8% logic, 90.2% route)
 
 =========================================================================
 
@@ -775,13 +765,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.69 secs
+Total CPU time to Xst completion: 9.56 secs
  
 --> 
 
-Total memory usage is 328736 kilobytes
+Total memory usage is 327648 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 
