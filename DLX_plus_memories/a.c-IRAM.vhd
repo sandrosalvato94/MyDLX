@@ -44,7 +44,7 @@ begin  -- IRam_Bhe
   begin  -- process FILL_MEM_P
     if (Rst = '0') then
     IRAM_mem(0 to IRAM_DEPTH - 1) <= (others => (others => '0'));
-      file_open(mem_fp, "Branch.asm.mem", READ_MODE);
+      file_open(mem_fp, "forwording.asm.mem", READ_MODE);
       --file_open(out_fp, "output.bin", write_mode);
       while (not endfile(mem_fp) and index < IRAM_DEPTH) loop
         readline(mem_fp,file_line);
@@ -63,7 +63,7 @@ begin  -- IRam_Bhe
   BEGIN
     Dout <= (others => '0');
     if (Rst = '1' and Enable = '1') then
-      Dout <= IRAM_mem(to_integer(unsigned(Addr(I_SIZE-1 downto 2))));
+      Dout <= IRAM_mem(to_integer(unsigned(Addr(9 downto 2))));
     end if;
   end process;
 

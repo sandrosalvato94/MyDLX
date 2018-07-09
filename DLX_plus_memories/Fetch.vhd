@@ -48,6 +48,8 @@ entity Fetch is
 		FE_btb_target_prediction 	: in  std_logic_vector(NBIT_PC-1 downto 0);
 		FE_btb_prediction		: in  std_logic;
 		FE_branch_taken		: in  std_logic;
+		FE_next_instr_is_branch : in std_logic;
+		FE_next_instr_is_jump : in std_logic;
 		FE_new_PC_from_DE		: in  std_logic_vector(NBIT_PC-1 downto 0);
 		FE_IR_in			: in  std_logic_vector(NBIT_IR-1 downto 0);
 		FE_IR_out			: out std_logic_vector(NBIT_IR-1 downto 0);
@@ -91,6 +93,16 @@ architecture Structural of Fetch is
 	);
 	end component;
 	
+	component Reg1Bit is
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic;
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic);
+	end component;
+	
 	constant INC 			: std_logic_vector(NBIT_PC-1 downto 0) := std_logic_vector(to_unsigned(4, NBIT_PC));
 	
 	signal s_pc_rst, s_pc_enable 		: std_logic;
@@ -102,8 +114,13 @@ architecture Structural of Fetch is
 	signal s_target_Fbtbmux_Tnpcmux	: std_logic_vector(NBIT_PC-1 downto 0);		
 	signal s_npcvalue_Fnpcmux_Tnpc	: std_logic_vector(NBIT_PC-1 downto 0);
 	signal s_Faddbtb_Tmuxbtb		: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_tmp_pc					: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_restored_pc				: std_logic_vector(NBIT_PC-1 downto 0);
 	signal s_inc_sel					: std_logic;
 	signal s_tmp						: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_btb_prediction			: std_logic;
+	signal s_jmp						: std_logic; --active high
+	signal s_restore					: std_logic; --active high
 
 begin
 -----------------------------------------------------------------------------------------
@@ -152,27 +169,72 @@ begin
 							--Cout => , -- not useful in this prototype
 							Sum => s_sum_Fcla_Tnpcreg
 							);
-	ADDBTB : PropagateCarryLookahead GENERIC MAP (N=>NBIT_PC) PORT MAP (
-							A => FE_btb_target_prediction,
-							B => s_sum_Fcla_Tnpcreg,
-							Cin => '0',
-							--Cout => , -- not useful in this prototype
-							Sum =>s_Faddbtb_Tmuxbtb							);
+	Restore_PC : NRegister GENERIC MAP (N => NBIT_PC) PORT MAP (
+						clk => FE_clk,
+						reset => s_pc_rst,
+						data_in => s_sum_Fcla_Tnpcreg,
+						enable => s_pc_enable,
+						load => '1',
+						data_out => s_restored_pc
+						);
+--	ADDBTB : PropagateCarryLookahead GENERIC MAP (N=>NBIT_PC) PORT MAP (
+--							A => FE_btb_target_prediction,
+--							B => s_sum_Fcla_Tnpcreg,
+--							Cin => '0',
+--							--Cout => , -- not useful in this prototype
+--							Sum =>s_Faddbtb_Tmuxbtb							);
 -----------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------
+	
+-----------------------------------------------------------------------------------------
 	MUXBTB : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
-							port0 => FE_new_PC_from_DE,
-							port1 => s_Faddbtb_Tmuxbtb,
+							port0 => s_sum_Fcla_Tnpcreg,
+							port1 => FE_btb_target_prediction,
 							sel => FE_btb_prediction,
 							portY => s_target_Fbtbmux_Tnpcmux
 							);
+	
+	BTB_prediction_reg : Reg1Bit port map(
+		clk		=> FE_clk,
+		reset		=> s_pc_rst,
+		data_in	=> FE_btb_prediction,
+		enable	=> s_pc_enable,
+		load		=> '1',
+		data_out => s_btb_prediction
+	);
+	
+	s_jmp <= (FE_next_instr_is_jump AND NOT(FE_next_instr_is_branch)) OR (FE_next_instr_is_jump AND NOT(s_btb_prediction) AND FE_branch_taken); 
+	s_restore <= FE_next_instr_is_jump AND FE_next_instr_is_branch AND s_btb_prediction AND NOT(FE_branch_taken);
+	
 	MUXNPC : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
-							port0 => s_sum_Fcla_Tnpcreg,
-							port1 => s_target_Fbtbmux_Tnpcmux,
-							sel => FE_branch_taken,
+							port0 => s_target_Fbtbmux_Tnpcmux,
+							port1 => FE_new_PC_from_DE,
+							sel => s_jmp,
+							portY => s_tmp_pc
+							);
+	
+	MUX_restore : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
+							port0 => s_tmp_pc,
+							port1 => s_restored_pc,
+							sel => s_restore,
 							portY => s_npcvalue_Fnpcmux_Tnpc
 							);
+-----------------------------------------------------------------------------------------
+--	MUXBTB : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
+--							port0 => FE_new_PC_from_DE,
+--							port1 => FE_btb_target_prediction,
+--							sel => FE_btb_prediction,
+--							portY => s_target_Fbtbmux_Tnpcmux
+--							);
+--	
+--	
+--	MUXNPC : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
+--							port0 => s_sum_Fcla_Tnpcreg,
+--							port1 => s_target_Fbtbmux_Tnpcmux,
+--							sel => FE_branch_taken,
+--							portY => s_npcvalue_Fnpcmux_Tnpc
+--							);
 	FE_NPC <= s_npcvalue_Fnpcmux_Tnpc;
 -----------------------------------------------------------------------------------------
 

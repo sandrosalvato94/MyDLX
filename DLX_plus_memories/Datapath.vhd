@@ -77,12 +77,13 @@ entity Datapath is
 --		DP_insert_flush				: out std_logic;
 		
 		DP_PC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
+		DP_NPC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		DP_IF_ID_instr_is_branch	: out std_logic;
 		DP_IR_opcode					: out std_logic_vector(5 downto 0);
 		DP_IR_func						: out std_logic_vector(10 downto 0);
 		
 		DP_branch_taken				: out std_logic; --to BTB and CU for flushing
-		DP_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
+		DP_computed_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		DP_target						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		
 		DP_data_to_DRAM				: out std_logic_vector(NBIT_DATA -1 downto 0);
@@ -106,6 +107,8 @@ architecture Structural of Datapath is
 		FE_btb_target_prediction 	: in  std_logic_vector(NBIT_PC-1 downto 0);
 		FE_btb_prediction		: in  std_logic;
 		FE_branch_taken		: in  std_logic;
+		FE_next_instr_is_branch : in std_logic;
+		FE_next_instr_is_jump : in std_logic;
 		FE_new_PC_from_DE		: in  std_logic_vector(NBIT_PC-1 downto 0);
 		FE_IR_in			: in  std_logic_vector(NBIT_IR-1 downto 0);
 		FE_IR_out			: out std_logic_vector(NBIT_IR-1 downto 0);
@@ -124,6 +127,7 @@ architecture Structural of Datapath is
 		DE_clk 		: in  std_logic;
 		DE_reset 		: in  std_logic;
 		DE_enable 	: in  std_logic;
+		DE_stall		: in  std_logic;
 		DE_IR		: in  std_logic_vector(NBIT_IR-1 downto 0);
 		DE_PC		: in  std_logic_vector(NBIT_PC-1 downto 0);
 		DE_NPC		: in  std_logic_vector(NBIT_PC-1 downto 0);
@@ -235,7 +239,7 @@ architecture Structural of Datapath is
 		
 		FCU_IF_ID_is_branch	: out std_logic;
 		FCU_ID_EX_is_store	: out std_logic;
-		FCU_ID_EX_is_branch_or_jmp : out std_logic;
+		FCU_IF_ID_is_branch_or_jmp : out std_logic;
 		FCU_insert_stall	: out std_logic
 	);
 	end component;
@@ -269,6 +273,13 @@ architecture Structural of Datapath is
 		sel	: in  std_logic;
 		portY	: out std_logic_vector(NBIT_IN-1 downto 0)
 	);
+	end component;
+	
+	component Mux_1Bit_2X1 is
+    Port ( port0 : in  STD_LOGIC;
+           port1 : in  STD_LOGIC;
+           sel : in  STD_LOGIC;
+           portY : out  STD_LOGIC);
 	end component;
 	
 	constant L : integer := log2(NBIT_DATA);
@@ -330,9 +341,14 @@ architecture Structural of Datapath is
 	signal s_enable_wb				: std_logic;
 	signal s_fcu_enable				: std_logic;
 	signal s_jmp_or_brnch_Ffcu_Tde: std_logic;
+	signal s_brnch_Ffcu_Tde: std_logic;
 	signal s_use_immediate			: std_logic;
 	signal s_use_immediate_sel		: std_logic;
 	signal s_id_ex_is_store			: std_logic;
+	signal s_branch_taken_stall	: std_logic;
+	signal s_branch_taken_Fde		: std_logic;
+	signal s_flush						: std_logic;
+	signal s_btb_prediction			: std_logic;
 	
 begin
 
@@ -346,14 +362,17 @@ begin
 		FE_IR_clear						=> DP_reset,
 		FE_btb_target_prediction 	=> DP_btb_target_prediction,	--from BTB
 		FE_btb_prediction				=> DP_btb_prediction,			--from BTB
-		FE_branch_taken				=> s_branch_taken_Fde_Tif,	--from decode
+		FE_branch_taken				=> s_branch_taken_Fde,	--from decode
+		FE_next_instr_is_branch		=> s_brnch_Ffcu_Tde,
+		FE_next_instr_is_jump		=> s_jmp_or_brnch_Ffcu_Tde,
 		FE_new_PC_from_DE				=> s_newPC_Fde_Tif,	--from decode
 		FE_IR_in							=> DP_IR,	--from IRAM
 		FE_IR_out						=> s_IR_Fif,		--to FCU and reg
 		FE_PC								=> s_PC_Fif, -- to IRAM, BTB and inside DP
 		FE_NPC							=> s_NPC_Fif --to inside DP
 		);	
-	DP_PC <= s_PC_Fif;
+	DP_PC <=  s_PC_Fif;
+	DP_NPC <= s_NPC_Fif;
 	
 	PC_IF_ID_REG : NRegister GENERIC MAP (N => 2**NBIT_IRAM_ADDR) PORT MAP (
 		clk => DP_clk,
@@ -391,6 +410,15 @@ begin
 		data_out=> s_stall_Fif
 		);
 	
+	BTB_prediction_IF_ID : Reg1Bit  PORT MAP (
+		clk => DP_clk,
+		reset=> DP_reset,
+		data_in=> DP_btb_prediction,
+		enable=> DP_enable, --from FCU stall
+		load=> '1',
+		data_out=> s_btb_prediction
+		);
+	
 	DP_IR_opcode <= DP_IR(31 downto 26);
 	DP_IR_func <= DP_IR(10 downto 0);
 	
@@ -398,7 +426,8 @@ begin
 											 NBIT_IR => 32, NBIT_ADDR => 5, NBIT_DATA => NBIT_DATA)  PORT MAP (
 		DE_clk 					=> DP_clk,
 		DE_reset 				=> DP_reset,
-		DE_enable 				=> s_stall, --DP_enable
+		DE_enable 				=> DP_enable,
+		DE_stall					=> s_stall,
 		DE_IR						=> s_IR_Fif, --from fetch
 		DE_PC						=> s_PC_Tde, --from reg IF/ID
 		DE_NPC					=> s_NPC_Tde,--from reg IF/ID
@@ -412,16 +441,26 @@ begin
 		DE_JMP_branch			=> DP_JMP_branch,
 		DE_jmp_or_branch		=> s_jmp_or_brnch_Ffcu_Tde,
 		DE_save_PC				=> DP_save_PC,
-		DE_branch_taken		=> s_branch_taken_Fde_Tif,	--to fetch & BTB
+		DE_branch_taken		=> s_branch_taken_Fde,	--to fetch & BTB
 		DE_new_PC				=> s_newPC_Fde_Tif,	--to fetch & BTB
 		DE_imm_address			=> DP_target,
 		DE_RegA					=> s_regA_Fde_Tex,	--to muxes id/ex
 		DE_RegB					=> s_regB_Fde_Tex,	--to muxes id/ex
 		DE_RegI					=> s_regI_Fde_Tex	--to muxes id/ex
 		);
-	DP_branch_taken <= s_branch_taken_Fde_Tif;
-	DP_new_PC 		 <= s_newPC_Fde_Tif;
-	s_reset_middle_regs_ID_EX <= s_branch_taken_Fde_Tif OR DP_reset;
+	--DP_branch_taken <= s_branch_taken_Fde; -- da modificare, xk la flush non deve essere fatta in caso di branch predetto corettamente, 8 luglio ore 13.00
+	DP_branch_taken <= (s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde;
+	DP_computed_new_PC 		 <= s_newPC_Fde_Tif;
+	s_flush <= ((s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde) OR DP_reset;
+	
+	flush_ID_EX_REG : Reg1Bit  PORT MAP (
+		clk => DP_clk,
+		reset=> DP_reset,
+		data_in=> s_flush,
+		enable=> s_stall_Fif, --from FCU stall
+		load=> '1',
+		data_out=> s_reset_middle_regs_ID_EX
+		);
 	
 	stall_ID_EX_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
@@ -443,7 +482,7 @@ begin
 		
 	IR_ID_EX_REG : NRegister GENERIC MAP (N => 32) PORT MAP (
 		clk => DP_clk,
-		reset=> DP_reset,
+		reset=> s_reset_middle_regs_ID_EX,
 		data_in=> s_IR_Fif,
 		enable=> s_stall_Fif, --from FCU stall (or s_stall_Fde)
 		load=> '1',
@@ -458,6 +497,22 @@ begin
 		load=> '1',
 		data_out=> s_reset_middle_regs_EX_MEM
 		);
+		
+--	BRANCH_TAKEN_REG : Reg1Bit PORT MAP (
+--		clk => DP_clk,
+--		reset=> DP_reset,
+--		data_in=> s_branch_taken_Fde,
+--		enable=> DP_enable, 
+--		load=> '1',
+--		data_out=> s_branch_taken_stall
+--		);
+--		
+--	BRANCH_TAKEN_MUX : Mux_1Bit_2X1 PORT MAP (
+--		port0 => s_branch_taken_Fde_Tif,
+--		port1 => s_branch_taken_stall,
+--		sel => s_stall,
+--		portY => s_branch_taken_Fde_Tif
+--		);
 	
 	s_sel_regA_PC_mux <=  DP_Shift_Amount_sel(1) AND DP_Shift_Amount_sel(0);
 	RegA_PC_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
@@ -569,7 +624,7 @@ begin
 	
 	EX_Stage : Execute_Stage GENERIC MAP (NBIT_DATA => NBIT_DATA, NBIT_BS_AMOUNT => L) PORT MAP (
 		EX_clk 			=> DP_clk,
-		EX_reset 		=> DP_reset,
+		EX_reset 		=> s_reset_middle_regs_EX_MEM,
 		EX_enable		=> s_ex_enable,
 		EX_OpA			=> s_opA_Fmux_Tex, --from reverse mux
 		EX_OpB			=> s_opB_Fmux_Tex, --from reverse mux
@@ -617,7 +672,8 @@ begin
 		);
 	
 	DATA_TB_STORED_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
-		port0 => s_dataTBStr_Freg_Tmux, --from OPB_TO_DRAM_REG
+		port0 => s_regB_Fde_Tex, --modificato il 5 luglio
+		--port0 => s_dataTBStr_Freg_Tmux, --from OPB_TO_DRAM_REG
 		port1 => s_data_Fwb_Tde, --from writeback forworded
 		sel   => s_ex_mem_fwd_mux, --from FCU
 		portY => s_data_TBStr_Fmux_Tex  -- to memory
@@ -627,7 +683,7 @@ begin
 		ME_data_in			=> s_data_TBStr_Fmux_Tex, --from register
 		ME_address			=> s_result_Fex_Tmem,	  --from execute
 		ME_clk				=> DP_clk,
-		ME_rst				=> DP_reset,
+		ME_rst				=> s_reset_middle_regs_MEM_WB,
 		ME_enable			=> DP_enable,
 --		ME_RD_wr				=> DP_DRAM_RD_wr,
 		ME_reduce			=> DP_Store_reduce,
@@ -757,13 +813,13 @@ begin
 		FCU_ID_EX_BOT_MUX => s_id_ex_sel_fwd_bot_mux, --to id/ex
 		
 		FCU_EX_MEM_MUX		=> s_ex_mem_fwd_mux,
-		FCU_IF_ID_is_branch	=> DP_IF_ID_instr_is_branch,
+		FCU_IF_ID_is_branch	=> s_brnch_Ffcu_Tde,
 		FCU_ID_EX_is_store	=> s_id_ex_is_store,
-		FCU_ID_EX_is_branch_or_jmp => s_jmp_or_brnch_Ffcu_Tde,
+		FCU_IF_ID_is_branch_or_jmp => s_jmp_or_brnch_Ffcu_Tde,
 		FCU_insert_stall	=> s_stall
 		);
 		
 	DP_insert_bubble <= s_stall;
-
+	DP_IF_ID_instr_is_branch <= s_brnch_Ffcu_Tde;
 end Structural;
 

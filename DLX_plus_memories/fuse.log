@@ -68,14 +68,14 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 168052 KB
-Fuse CPU Usage: 968 ms
+Fuse Memory Usage: 168372 KB
+Fuse CPU Usage: 1014 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package constants
 Compiling package numeric_std
 Compiling package textio
 Compiling package std_logic_textio
-Compiling package constants
 Compiling architecture behavioral of entity NRegister [\NRegister(32)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(32)\]
 Compiling architecture behavioral of entity GeneralGenerate [generalgenerate_default]
@@ -84,8 +84,8 @@ Compiling architecture behavioral of entity PG_network [\PG_network(32)\]
 Compiling architecture behavioral of entity Carry_Network [\Carry_Network(32)\]
 Compiling architecture behavioral of entity Sum_Network [\Sum_Network(32)\]
 Compiling architecture behavioral of entity PropagateCarryLookahead [\PropagateCarryLookahead(32)\]
-Compiling architecture structural of entity Fetch [\Fetch(32,32)\]
 Compiling architecture behavioral of entity Reg1Bit [reg1bit_default]
+Compiling architecture structural of entity Fetch [\Fetch(32,32)\]
 Compiling architecture behavioral of entity Mux_NBit_2x1 [\Mux_NBit_2x1(5)\]
 Compiling architecture behavioral of entity NRegister [\NRegister(5)\]
 Compiling architecture behavioral of entity Decoder [\Decoder(5)\]
@@ -160,5 +160,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 70 sub-compilation(s) to finish...
 Compiled 162 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 239364 KB
-Fuse CPU Usage: 2828 ms
+Fuse Memory Usage: 239684 KB
+Fuse CPU Usage: 3093 ms

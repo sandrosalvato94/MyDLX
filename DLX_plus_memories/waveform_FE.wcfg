@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -69,9 +69,59 @@
       <obj_property name="ObjectShortName">s_npcvalue_fnpcmux_tnpc[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/s_faddbtb_tmuxbtb" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_faddbtb_tmuxbtb[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_faddbtb_tmuxbtb[31:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/MUXBTB/port0" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">port0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port0[31:0]</obj_property>
+      <obj_property name="label">PC</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/MUXBTB/port1" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">port1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port1[31:0]</obj_property>
+      <obj_property name="label">BTB_target</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/fe_btb_prediction" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fe_btb_prediction</obj_property>
+      <obj_property name="ObjectShortName">fe_btb_prediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/BTB_prediction_reg/data_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out</obj_property>
+      <obj_property name="ObjectShortName">data_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/MUXNPC/sel" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">sel</obj_property>
+      <obj_property name="ObjectShortName">sel</obj_property>
+      <obj_property name="label">BranchTaken</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/s_jmp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_jmp</obj_property>
+      <obj_property name="ObjectShortName">s_jmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/s_restore" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_restore</obj_property>
+      <obj_property name="ObjectShortName">s_restore</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/MUXNPC/port1" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">port1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">port1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/s_restored_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_restored_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_restored_pc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/ADDPC/sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/MUXBTB/porty" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">porty[31:0]</obj_property>
+      <obj_property name="ObjectShortName">porty[31:0]</obj_property>
    </wvobject>
 </wave_config>

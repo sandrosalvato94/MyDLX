@@ -56,7 +56,7 @@ begin
    BEGIN
     Dout <= (others => '0');
     if (Rst = '1' and Enable = '1' and RD_wr = '1') then
-      Dout <= DRAM_mem(to_integer(unsigned(Addr(NBIT_ADDRESS-1 downto 2))));
+      Dout <= DRAM_mem(to_integer(unsigned(Addr(NBIT_ADDRESS-1 downto 0))));
     end if;
   end process;
   
@@ -65,7 +65,7 @@ begin
 	if(Rst = '0') then
 		DRAM_mem(0 to 2**NBIT_ADDRESS - 1) <= (others => (others => '0'));
 	elsif(Rst = '1' and Enable = '1' and RD_wr = '0') then
-		DRAM_mem(to_integer(unsigned(Addr(NBIT_ADDRESS-1 downto 2)))) <= Din;
+		DRAM_mem(to_integer(unsigned(Addr(NBIT_ADDRESS-1 downto 0)))) <= Din;
 	end if;	
   end process;
 

@@ -261,66 +261,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1506963249" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1506963249">
+    <transform xil_pn:end_ts="1530955409" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1530955409">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507114655" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1507114654">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ANDGate_NX1.vhd"/>
-      <outfile xil_pn:name="BTB.vhd"/>
-      <outfile xil_pn:name="CU_SatCounter.vhd"/>
-      <outfile xil_pn:name="ComparatorWithEnable.vhd"/>
-      <outfile xil_pn:name="D_FF.vhd"/>
-      <outfile xil_pn:name="D_FF_rst.vhd"/>
-      <outfile xil_pn:name="JK_FF.vhd"/>
-      <outfile xil_pn:name="Mux_1Bit_2X1.vhd"/>
-      <outfile xil_pn:name="Mux_Bit.vhd"/>
-      <outfile xil_pn:name="Mux_NBit_2x1.vhd"/>
-      <outfile xil_pn:name="NANDGate_NX1.vhd"/>
-      <outfile xil_pn:name="NComparatorWithEnable.vhd"/>
-      <outfile xil_pn:name="NORGate_NX1.vhd"/>
-      <outfile xil_pn:name="NPriorityEncoder.vhd"/>
-      <outfile xil_pn:name="NRegister.vhd"/>
-      <outfile xil_pn:name="NRotateRegister.vhd"/>
-      <outfile xil_pn:name="NShiftRegisterSISO.vhd"/>
-      <outfile xil_pn:name="ORGate_NX1.vhd"/>
-      <outfile xil_pn:name="Reg1Bit.vhd"/>
-      <outfile xil_pn:name="SAT_Counter.vhd"/>
-      <outfile xil_pn:name="TB_BTB.vhd"/>
-      <outfile xil_pn:name="TB_CU_SatCounter.vhd"/>
-      <outfile xil_pn:name="TB_D_FF.vhd"/>
-      <outfile xil_pn:name="TB_D_FF_rst.vhd"/>
-      <outfile xil_pn:name="TB_JK_FF.vhd"/>
-      <outfile xil_pn:name="TB_MuxBit.vhd"/>
-      <outfile xil_pn:name="TB_Mux_NBIT_2x1.vhd"/>
-      <outfile xil_pn:name="TB_NPriorityEncoder.vhd"/>
-      <outfile xil_pn:name="TB_NRegister.vhd"/>
-      <outfile xil_pn:name="TB_NRotateRegister.vhd"/>
-      <outfile xil_pn:name="TB_NShiftRegisterSISO.vhd"/>
-      <outfile xil_pn:name="TB_SAT_Counter.vhd"/>
-      <outfile xil_pn:name="TB_UpDownCounter.vhd"/>
-      <outfile xil_pn:name="TB_ud_counter.vhd"/>
-      <outfile xil_pn:name="UpDownCounter.vhd"/>
-      <outfile xil_pn:name="constants.vhd"/>
-      <outfile xil_pn:name="t_ff.vhd"/>
-      <outfile xil_pn:name="t_ff_rst1.vhd"/>
-      <outfile xil_pn:name="ud_counter.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1506963249" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-953215810969111933" xil_pn:start_ts="1506963249">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1506963249" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5142764296443682017" xil_pn:start_ts="1506963249">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1506963249" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4545523564145506531" xil_pn:start_ts="1506963249">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1507114655" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1507114655">
+    <transform xil_pn:end_ts="1530955409" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1530955409">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ANDGate_NX1.vhd"/>
@@ -363,7 +308,62 @@
       <outfile xil_pn:name="t_ff_rst1.vhd"/>
       <outfile xil_pn:name="ud_counter.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1507114660" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9064366561550028042" xil_pn:start_ts="1507114655">
+    <transform xil_pn:end_ts="1530955409" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-953215810969111933" xil_pn:start_ts="1530955409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1530955409" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5142764296443682017" xil_pn:start_ts="1530955409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1530955409" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4545523564145506531" xil_pn:start_ts="1530955409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1530955410" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1530955409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ANDGate_NX1.vhd"/>
+      <outfile xil_pn:name="BTB.vhd"/>
+      <outfile xil_pn:name="CU_SatCounter.vhd"/>
+      <outfile xil_pn:name="ComparatorWithEnable.vhd"/>
+      <outfile xil_pn:name="D_FF.vhd"/>
+      <outfile xil_pn:name="D_FF_rst.vhd"/>
+      <outfile xil_pn:name="JK_FF.vhd"/>
+      <outfile xil_pn:name="Mux_1Bit_2X1.vhd"/>
+      <outfile xil_pn:name="Mux_Bit.vhd"/>
+      <outfile xil_pn:name="Mux_NBit_2x1.vhd"/>
+      <outfile xil_pn:name="NANDGate_NX1.vhd"/>
+      <outfile xil_pn:name="NComparatorWithEnable.vhd"/>
+      <outfile xil_pn:name="NORGate_NX1.vhd"/>
+      <outfile xil_pn:name="NPriorityEncoder.vhd"/>
+      <outfile xil_pn:name="NRegister.vhd"/>
+      <outfile xil_pn:name="NRotateRegister.vhd"/>
+      <outfile xil_pn:name="NShiftRegisterSISO.vhd"/>
+      <outfile xil_pn:name="ORGate_NX1.vhd"/>
+      <outfile xil_pn:name="Reg1Bit.vhd"/>
+      <outfile xil_pn:name="SAT_Counter.vhd"/>
+      <outfile xil_pn:name="TB_BTB.vhd"/>
+      <outfile xil_pn:name="TB_CU_SatCounter.vhd"/>
+      <outfile xil_pn:name="TB_D_FF.vhd"/>
+      <outfile xil_pn:name="TB_D_FF_rst.vhd"/>
+      <outfile xil_pn:name="TB_JK_FF.vhd"/>
+      <outfile xil_pn:name="TB_MuxBit.vhd"/>
+      <outfile xil_pn:name="TB_Mux_NBIT_2x1.vhd"/>
+      <outfile xil_pn:name="TB_NPriorityEncoder.vhd"/>
+      <outfile xil_pn:name="TB_NRegister.vhd"/>
+      <outfile xil_pn:name="TB_NRotateRegister.vhd"/>
+      <outfile xil_pn:name="TB_NShiftRegisterSISO.vhd"/>
+      <outfile xil_pn:name="TB_SAT_Counter.vhd"/>
+      <outfile xil_pn:name="TB_UpDownCounter.vhd"/>
+      <outfile xil_pn:name="TB_ud_counter.vhd"/>
+      <outfile xil_pn:name="UpDownCounter.vhd"/>
+      <outfile xil_pn:name="constants.vhd"/>
+      <outfile xil_pn:name="t_ff.vhd"/>
+      <outfile xil_pn:name="t_ff_rst1.vhd"/>
+      <outfile xil_pn:name="ud_counter.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1530955430" xil_pn:in_ck="1348307578582525946" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9064366561550028042" xil_pn:start_ts="1530955410">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -375,7 +375,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1527886763" xil_pn:in_ck="7353165961705623612" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="371766913664012451" xil_pn:start_ts="1527886761">
+    <transform xil_pn:end_ts="1530955431" xil_pn:in_ck="7353165961705623612" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="371766913664012451" xil_pn:start_ts="1530955430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

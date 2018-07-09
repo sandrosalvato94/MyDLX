@@ -1,33 +1,33 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/TB_BTB_isim_beh.exe -prj C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/TB_BTB_beh.prj work.TB_BTB 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB_isim_beh.exe -prj C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB_beh.prj work.TB_BTB 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/t_ff_rst1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/t_ff.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/constants.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/ud_counter.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/NORGate_NX1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_Bit.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/D_FF.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/CU_SatCounter.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/ComparatorWithEnable.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/ANDGate_NX1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/SAT_Counter.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Reg1Bit.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/ORGate_NX1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/NRotateRegister.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/NRegister.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/NPriorityEncoder.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/NComparatorWithEnable.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_NBit_2x1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_1Bit_2X1.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/BTB.vhd" into library work
-Parsing VHDL file "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/TB_BTB.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/t_ff_rst1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/t_ff.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/constants.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/ud_counter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/NORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/Mux_Bit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/D_FF.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/CU_SatCounter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/ComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/ANDGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/SAT_Counter.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/Reg1Bit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/ORGate_NX1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/NRotateRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/NRegister.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/NPriorityEncoder.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/NComparatorWithEnable.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/Mux_NBit_2x1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/Mux_1Bit_2X1.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/BTB.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 164424 KB
-Fuse CPU Usage: 484 ms
+Fuse Memory Usage: 162292 KB
+Fuse CPU Usage: 437 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -57,6 +57,6 @@ Compiling architecture behavior of entity tb_btb
 Time Resolution for simulation is 1ps.
 Waiting for 10 sub-compilation(s) to finish...
 Compiled 47 VHDL Units
-Built simulation executable C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/TB_BTB_isim_beh.exe
-Fuse Memory Usage: 185128 KB
-Fuse CPU Usage: 999 ms
+Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB_isim_beh.exe
+Fuse Memory Usage: 182936 KB
+Fuse CPU Usage: 906 ms

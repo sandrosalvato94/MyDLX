@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-07-02T09:42:12</DateModified>
-  <ModuleName>Execute_Stage</ModuleName>
+  <DateModified>2018-07-07T10:56:56</DateModified>
+  <ModuleName>DLX_Core</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/iseconfig/FCU.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories\</ImplementationReportsDirectory>
-  <DateInitialized>2018-07-02T09:42:12</DateInitialized>
+  <DateInitialized>2018-07-07T10:56:56</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

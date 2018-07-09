@@ -74,10 +74,6 @@
       <obj_property name="ObjectShortName">jbm_jmp_branch[1:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/jbm_transparent_mode" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">jbm_transparent_mode</obj_property>
-      <obj_property name="ObjectShortName">jbm_transparent_mode</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/JBM/jbm_upd_pc" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">jbm_upd_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">jbm_upd_pc[31:0]</obj_property>
@@ -124,5 +120,10 @@
       <obj_property name="ObjectShortName">sum[31:0]</obj_property>
       <obj_property name="label">sum[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/de_ir" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">de_ir[31:0]</obj_property>
+      <obj_property name="ObjectShortName">de_ir[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/TB_BTB.vhd";
+static const char *ng0 = "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB.vhd";
 extern char *IEEE_P_1242562249;
 
 char *ieee_p_1242562249_sub_180853171_1035706684(char *, char *, int , int );

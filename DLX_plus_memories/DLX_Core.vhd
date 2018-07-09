@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.constants.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -91,12 +92,13 @@ architecture Structural of DLX_Core is
 		DP_insert_bubble				: out std_logic;
 		
 		DP_PC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
+		DP_NPC								: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		DP_IF_ID_instr_is_branch	: out std_logic;
 		DP_IR_opcode					: out std_logic_vector(5 downto 0);
 		DP_IR_func						: out std_logic_vector(10 downto 0);
 		
 		DP_branch_taken				: out std_logic;
-		DP_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
+		DP_computed_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		DP_target						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
 		
 		DP_data_to_DRAM				: out std_logic_vector(NBIT_DATA -1 downto 0);
@@ -141,6 +143,17 @@ architecture Structural of DLX_Core is
 		
 	);
 	end component;
+	
+	component NRegister is
+	generic(N: integer:= 32);
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic_vector(N-1 downto 0);
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic_vector(N-1 downto 0));
+	end component;
 
 	signal s_target_prediction_Fbtb_Tdp	: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_prediction_Fbtb_Tdp			: std_logic;
@@ -153,11 +166,13 @@ architecture Structural of DLX_Core is
 	signal s_insert_bubble_Fdp_Tcu		: std_logic;
 	signal s_PC_Fdp_Tbtb						: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_computed_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_branch_taken_Fdp_Tdp_cu		: std_logic;
 	signal s_IFID_istr_is_brnch_Fdp_Tbtb: std_logic;
 	signal s_IR_opcode_Fdp_Tcu				: std_logic_vector(5 downto 0);
 	signal s_IR_func_Fdp_Tcu				: std_logic_vector(10 downto 0);
 	signal s_target_Fdp_Tbtb				: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_instr_is_branch				: std_logic;
 	
 	
 
@@ -171,7 +186,7 @@ begin
 		DP_clk							=> DLX_clk,
 		DP_reset							=> DLX_reset,
 		DP_btb_target_prediction	=> s_target_prediction_Fbtb_Tdp,
-		DP_btb_prediction				=> s_prediction_Fbtb_Tdp,
+		DP_btb_prediction				=> s_prediction_Fbtb_Tdp, --'0' --s_prediction_Fbtb_Tdp
 		DP_IR								=> DLX_IR,
 		DP_Rd1							=> s_DE_cw_Fcu_Tdp(1),
 		DP_Rd2							=> s_DE_cw_Fcu_Tdp(2),
@@ -194,11 +209,12 @@ begin
 		DP_Load_SGN_usg_reduce		=> s_WB_cw_Fcu_Tdp(26),
 		DP_insert_bubble				=> s_insert_bubble_Fdp_Tcu,
 		DP_PC								=> s_PC_Fdp_Tbtb,	
+		--DP_NPC							=> s_NPC_Fdp_Tbtb,
 		DP_IF_ID_instr_is_branch   => s_IFID_istr_is_brnch_Fdp_Tbtb,
 		DP_IR_opcode					=> s_IR_opcode_Fdp_Tcu,
 		DP_IR_func						=> s_IR_func_Fdp_Tcu,
 		DP_branch_taken				=> s_branch_taken_Fdp_Tdp_cu,
-		DP_new_PC						=> s_NPC_Fdp_Tbtb,
+		DP_computed_new_PC			=> s_computed_NPC_Fdp_Tbtb,
 		DP_target						=> s_target_Fdp_Tbtb,
 		DP_data_to_DRAM				=> DLX_written_data,
 		DP_address_to_DRAM			=> DLX_address_written_data
@@ -224,6 +240,24 @@ begin
 	DLX_enable_DRAM <= s_MEM_cw_Fcu_Tdp(20) ;
 	DLX_RD_wr_DRAM  <= s_MEM_cw_Fcu_Tdp(19) ;
 	
+--	process(DLX_IR) 
+--	begin
+--		if((DLX_IR(31 downto 26) = OPCODE_BNEZ) OR (DLX_IR(31 downto 26) = OPCODE_BEQZ)) then
+--				s_instr_is_branch <= '1';
+--		else
+--				s_instr_is_branch <= '0';
+--		end if;
+--	end process;
+	
+	PC_reg	: NRegister GENERIC MAP (N => 2**NBIT_IRAM_ADDRESS) PORT MAP (
+		clk => DLX_clk,
+		reset => DLX_reset,
+		enable => s_insert_bubble_Fdp_Tcu,
+		load => '1',
+		data_in => s_PC_Fdp_Tbtb,
+		data_out => s_NPC_Fdp_Tbtb
+		);
+	
 	BTB_cache : BTB GENERIC MAP (N_ENTRY => N_BTB_ENTRY, 
 										  NBIT_ENTRY => 2**NBIT_IRAM_ADDRESS, 
 										  NBIT_TARGET => 2**NBIT_IRAM_ADDRESS, 
@@ -231,11 +265,13 @@ begin
 						 PORT MAP (
 		BTB_clk						=> DLX_clk,
 		BTB_rst						=> DLX_reset,
-		BTB_enable					=> DLX_enable, --should be checked
+		BTB_enable					=> s_insert_bubble_Fdp_Tcu, --should be checked
 		BTB_PC_From_IF				=> s_PC_Fdp_Tbtb,
 		BTB_PC_From_DE				=> s_NPC_Fdp_Tbtb,
-		BTB_target_From_DE		=> s_target_Fdp_Tbtb,
+--      BTB_target_From_DE		=> s_target_Fdp_Tbtb,
+		BTB_target_From_DE		=> s_computed_NPC_Fdp_Tbtb, --modificato il 7 luglio
 		BTB_is_branch				=> s_IFID_istr_is_brnch_Fdp_Tbtb,
+--		BTB_is_branch				=> s_instr_is_branch, -- modificato il 7 luglio
 		BTB_branch_taken			=> s_branch_taken_Fdp_Tdp_cu,
 		BTB_target_prediction	=> s_target_prediction_Fbtb_Tdp,
 		BTB_prediction				=> s_prediction_Fbtb_Tdp

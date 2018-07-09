@@ -77,6 +77,16 @@ architecture Structural of ControlUnit is
 	);
 	end component;
 	
+	component Reg1Bit is
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic;
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic);
+	end component;
+	
 	signal s_control_word	: std_logic_vector(1 to 26);
 	signal s_cw_tmp			: std_logic_vector(1 to 26);
 	signal s_cw_Fde_Tex		: std_logic_vector(1 to 26);
@@ -85,7 +95,9 @@ architecture Structural of ControlUnit is
 	signal s_cw_Fwb			: std_logic_vector(23 to 26);
 	
 	signal s_cw_bubble 		: std_logic_vector(1 to 26) := "0000010" & "00" & "000000" & "000" & "1000" & "0000";
+	signal s_flush, s_flush_ex	: std_logic;
 	signal s_reset_regs		: std_logic;
+	signal s_insert_nop		: std_logic;
 
 begin
 ---------------------------------------------------------------------------------------------------
@@ -253,13 +265,37 @@ begin
 	end process;
 ---------------------------------------------------------------------------------------------------	
 
-	s_reset_regs <= CU_reset OR CU_flush;
+	s_flush <= CU_reset OR CU_flush;
+	
+--	Rst_REG	: Reg1Bit PORT MAP(
+--		clk		=> CU_clk,
+--		reset		=> CU_reset,
+--		data_in	=> s_flush,
+--		enable	=> CU_enable,
+--		load		=> '1',
+--		data_out	=> s_flush_ex
+--		);
+--	
+--	Rst_ex_REG	: Reg1Bit PORT MAP(
+--		clk		=> CU_clk,
+--		reset		=> CU_reset,
+--		data_in	=> s_flush_ex,
+--		enable	=> CU_enable,
+--		load		=> '1',
+--		data_out	=> s_reset_regs
+--		);
 
 ---------------------------------------------------------------------------------------------------
+	s_cw_bubble(4 to 7) <= s_control_word(4 to 7);
+	s_insert_nop <= s_flush OR NOT(CU_bubble); -- 0 0 - 1
+													  -- 0 1 - 0
+													  -- 1 0 - 1
+													  -- 1 1 - 1
+	
 	BUBBLE_MUX	: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 26) PORT MAP (
-															port0 => s_cw_bubble, 
-															port1 => s_control_word,
-															sel => CU_bubble, --attivo basso
+															port0 => s_control_word, 
+															port1 => s_cw_bubble,
+															sel => s_insert_nop, --attivo basso
 															portY => s_cw_tmp
 															);
 	
@@ -277,7 +313,7 @@ begin
 ---------------------------------------------------------------------------------------------------
 	EX_CW	: NRegister GENERIC MAP (N => 19) PORT MAP (
 															clk => CU_clk,
-															reset => s_reset_regs,
+															reset => CU_reset,
 															data_in => s_cw_Fde_Tex(8 to 26),
 															enable => CU_enable,
 															load => '1',
@@ -289,7 +325,7 @@ begin
 ---------------------------------------------------------------------------------------------------	
 	MEM_CW: NRegister GENERIC MAP (N => 10) PORT MAP (
 															clk => CU_clk,
-															reset => s_reset_regs,
+															reset => CU_reset,
 															data_in => s_cw_Fex_Tmem(17 to 26),
 															enable => CU_enable,
 															load => '1',
@@ -301,7 +337,7 @@ begin
 ---------------------------------------------------------------------------------------------------	
 	WB_CW	: NRegister GENERIC MAP (N => 4) PORT MAP (
 															clk => CU_clk,
-															reset => s_reset_regs,
+															reset => CU_reset,
 															data_in => s_cw_Fmem_Twb(23 to 26),
 															enable => CU_enable,
 															load => '1',

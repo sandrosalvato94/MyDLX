@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/UTENTE/Desktop/Politecnico di Torino/Laurea Magistrale/I Anno/Microelectronic Systems/DLX/MyDLX/BTB/BranchTargetBuffer/Mux_Bit.vhd";
+static const char *ng0 = "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/Mux_Bit.vhd";
 extern char *IEEE_P_1242562249;
 
 int ieee_p_1242562249_sub_1657552908_1035706684(char *, char *, char *);
@@ -52,7 +52,7 @@ LAB3:    t1 = (t0 + 592U);
     t2 = *((char **)t1);
     t1 = (t0 + 684U);
     t3 = *((char **)t1);
-    t1 = (t0 + 3576U);
+    t1 = (t0 + 3144U);
     t4 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t3, t1);
     t5 = (t4 - 3);
     t6 = (t5 * -1);

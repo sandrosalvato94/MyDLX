@@ -30,7 +30,12 @@ Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_btb/uut/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
 # restart
-# run 1.00us
+# run 200 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_btb/uut/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+# restart
+# run 200 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_btb/uut/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.

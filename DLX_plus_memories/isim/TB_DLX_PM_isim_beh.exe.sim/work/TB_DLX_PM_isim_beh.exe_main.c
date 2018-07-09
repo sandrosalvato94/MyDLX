@@ -32,10 +32,10 @@ int main(int argc, char **argv)
 
     xsi_register_min_prec_unit(-12);
     ieee_p_2592010699_init();
+    work_p_3647430093_init();
     ieee_p_1242562249_init();
     std_textio_init();
     ieee_p_3564397177_init();
-    work_p_3647430093_init();
     work_a_4109842091_3212880686_init();
     work_a_3604777672_3212880686_init();
     work_a_4204905405_3212880686_init();
@@ -44,8 +44,8 @@ int main(int argc, char **argv)
     work_a_2816852233_3212880686_init();
     work_a_0529144519_3212880686_init();
     work_a_3498768353_3212880686_init();
-    work_a_3843924458_1181938964_init();
     work_a_1947288536_3212880686_init();
+    work_a_3843924458_1181938964_init();
     work_a_3563538915_3212880686_init();
     work_a_0861415847_3212880686_init();
     work_a_3295581965_3212880686_init();

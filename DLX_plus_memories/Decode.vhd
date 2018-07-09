@@ -48,6 +48,7 @@ entity Decode is
 		DE_clk 		: in  std_logic;
 		DE_reset 		: in  std_logic;
 		DE_enable 	: in  std_logic;
+		DE_stall		: in std_logic;
 		DE_IR		: in  std_logic_vector(NBIT_IR-1 downto 0);
 		DE_PC		: in  std_logic_vector(NBIT_PC-1 downto 0);
 		DE_NPC		: in  std_logic_vector(NBIT_PC-1 downto 0);
@@ -207,7 +208,7 @@ begin
 	R1_enable	: Reg1Bit PORT MAP (
 		clk 			=> DE_clk,
 		reset			=> DE_reset ,
-		data_in		=> DE_enable,
+		data_in		=> DE_stall,
 		enable		=> DE_enable,
 		load			=> '1',
 		data_out		=> s_enable1
@@ -238,7 +239,7 @@ begin
 		clk 			=> DE_clk,
 		reset			=> DE_reset ,
 		data_in		=> DE_wr,
-		enable		=> DE_enable,
+		enable		=> DE_stall,
 		load			=> '1',
 		data_out		=> s_wr_de
 		);
@@ -281,7 +282,7 @@ begin
 	R1 : NRegister GENERIC MAP (N => NBIT_ADDR) PORT MAP (
 						clk => DE_clk,
 						reset => DE_reset,
-						enable => DE_enable,
+						enable => DE_stall,
 						load => '1',
 						data_in => s_fmux_tr1,
 						data_out => s_ex
