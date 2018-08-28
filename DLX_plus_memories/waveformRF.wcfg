@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="34" />
+   <WVObjectSize size="29" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -73,26 +73,6 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/s_ex_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">s_ex_enable</obj_property>
       <obj_property name="ObjectShortName">s_ex_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/cu_flush" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">cu_flush</obj_property>
-      <obj_property name="ObjectShortName">cu_flush</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/FRW_CU/fcu_insert_stall" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">fcu_insert_stall</obj_property>
-      <obj_property name="ObjectShortName">fcu_insert_stall</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rf_rd1</obj_property>
-      <obj_property name="ObjectShortName">rf_rd1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_rd2" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rf_rd2</obj_property>
-      <obj_property name="ObjectShortName">rf_rd2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_wr" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rf_wr</obj_property>
-      <obj_property name="ObjectShortName">rf_wr</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_addrwr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rf_addrwr[4:0]</obj_property>

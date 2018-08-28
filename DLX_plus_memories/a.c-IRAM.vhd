@@ -44,7 +44,7 @@ begin  -- IRam_Bhe
   begin  -- process FILL_MEM_P
     if (Rst = '0') then
     IRAM_mem(0 to IRAM_DEPTH - 1) <= (others => (others => '0'));
-      file_open(mem_fp, "forwording.asm.mem", READ_MODE);
+      file_open(mem_fp, "test_arithmetic_comments.asm.mem", READ_MODE);
       --file_open(out_fp, "output.bin", write_mode);
       while (not endfile(mem_fp) and index < IRAM_DEPTH) loop
         readline(mem_fp,file_line);
