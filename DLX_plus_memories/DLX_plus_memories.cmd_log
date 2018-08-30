@@ -14,3 +14,4 @@ xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memo
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.syr" 
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.syr" 
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_plus_memories.syr" 

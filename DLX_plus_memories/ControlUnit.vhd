@@ -88,6 +88,7 @@ architecture Structural of ControlUnit is
 	end component;
 	
 	signal s_control_word	: std_logic_vector(1 to 26);
+	signal s_cw_jmp_r			: std_logic_vector(1 to 26);
 	signal s_cw_tmp			: std_logic_vector(1 to 26);
 	signal s_cw_Fde_Tex		: std_logic_vector(1 to 26);
 	signal s_cw_Fex_Tmem		: std_logic_vector(8 to 26);
@@ -98,6 +99,8 @@ architecture Structural of ControlUnit is
 	signal s_flush, s_flush_ex	: std_logic;
 	signal s_reset_regs		: std_logic;
 	signal s_insert_nop		: std_logic;
+	signal s_jmp_r				: std_logic;
+	signal s_enable_regs		: std_logic;
 
 begin
 ---------------------------------------------------------------------------------------------------
@@ -105,6 +108,7 @@ begin
 	begin
 		if(CU_enable = '1' AND CU_reset = '0') then
 			CU_error <= '0';
+			s_jmp_r  <= '0';
 			case CU_instr_opcode is
 			--REG-------------------------------
 				when OPCODE_REG =>
@@ -168,11 +172,13 @@ begin
 				when OPCODE_J => 
 						s_control_word <= "0001001" & "00" & "000000" & "000" & "1000" & "0000";
 				when OPCODE_JAL => 
-						s_control_word <= "0011001" & "11" & "000000" & "000" & "1000" & "0000";
+						s_control_word <= "0011001" & "11" & "000000" & "100" & "1000" & "0000";
+						s_jmp_r <= '1';
 				when OPCODE_JR => 
 						s_control_word <= "1001110" & "00" & "000000" & "000" & "1000" & "0000";
+						s_jmp_r <= '1';
 				when OPCODE_JALR => 
-						s_control_word <= "1011110" & "11" & "000000" & "000" & "1000" & "0000";
+						s_control_word <= "1011110" & "11" & "000000" & "100" & "1000" & "0000";
 			--BRANCH--------------------------------
 				when OPCODE_BEQZ => 
 						s_control_word <= "1000111" & "00" & "000000" & "000" & "1000" & "0000";
@@ -291,6 +297,29 @@ begin
 													  -- 0 1 - 0
 													  -- 1 0 - 1
 													  -- 1 1 - 1
+	s_enable_regs <= NOT(CU_enable AND NOT(s_jmp_r)); -- 0 0  - 1
+																	  -- 0 1  - 1
+																	  -- 1 0  - 0
+--																	  -- 1 1  - 1
+--																	  
+--	
+--	JMP_R_REG	: NRegister GENERIC MAP (N => 26) PORT MAP (
+--															clk => CU_clk,
+--															reset => CU_reset,
+--															data_in => s_control_word,
+--															enable => s_enable_regs,
+--															
+--															load => '1',
+--															data_out => s_cw_jmp_r
+--															);
+--															
+--	JMP_R_MUX	: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 26) PORT MAP (
+--															port0 => s_cw_bubble,
+--															port1 => s_cw_jmp_r,
+--															sel => s_enable_regs,
+--															portY => s_cw_tmp
+--															);
+	
 	
 	BUBBLE_MUX	: Mux_NBit_2x1 GENERIC MAP (NBIT_IN => 26) PORT MAP (
 															port0 => s_control_word, 

@@ -29,6 +29,8 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_dlx_pm/uut/DLX/BTB_cache/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
+at 0 ps: Error: Textio read:: called on empty string or line
+at 0 ps: Error: HREAD Error: Read a '?', expected a Hex character (0-F).
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(0)\/if_m0/MUX_0/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(1)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(2)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -126,10 +128,12 @@ at 10 ns(6), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(29)\/if_mi/MU
 at 10 ns(6), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(30)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 10 ns(6), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(31)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 # restart
-# run 700 ns
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_dlx_pm/uut/DLX/BTB_cache/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
+at 0 ps: Error: Textio read:: called on empty string or line
+at 0 ps: Error: HREAD Error: Read a '?', expected a Hex character (0-F).
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(0)\/if_m0/MUX_0/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(1)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 10 ns(3), Instance /tb_dlx_pm/uut/DLX/BTB_cache/RotReg/\gen_mux(2)\/if_mi/MUX_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0

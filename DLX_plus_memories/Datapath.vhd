@@ -240,6 +240,7 @@ architecture Structural of Datapath is
 		FCU_IF_ID_is_branch	: out std_logic;
 		FCU_ID_EX_is_store	: out std_logic;
 		FCU_IF_ID_is_branch_or_jmp : out std_logic;
+		FCU_IF_ID_is_jmp_r : out std_logic;
 		FCU_insert_stall	: out std_logic
 	);
 	end component;
@@ -349,6 +350,7 @@ architecture Structural of Datapath is
 	signal s_branch_taken_Fde		: std_logic;
 	signal s_flush						: std_logic;
 	signal s_btb_prediction			: std_logic;
+	signal s_is_jalr_or_jal			: std_logic;
 	
 begin
 
@@ -451,7 +453,7 @@ begin
 	--DP_branch_taken <= s_branch_taken_Fde; -- da modificare, xk la flush non deve essere fatta in caso di branch predetto corettamente, 8 luglio ore 13.00
 	DP_branch_taken <= (s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde;
 	DP_computed_new_PC 		 <= s_newPC_Fde_Tif;
-	s_flush <= ((s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde) OR DP_reset;
+	s_flush <= ((s_btb_prediction XOR s_branch_taken_Fde) AND NOT(s_is_jalr_or_jal)) OR DP_reset;
 	
 	flush_ID_EX_REG : Reg1Bit  PORT MAP (
 		clk => DP_clk,
@@ -816,6 +818,7 @@ begin
 		FCU_IF_ID_is_branch	=> s_brnch_Ffcu_Tde,
 		FCU_ID_EX_is_store	=> s_id_ex_is_store,
 		FCU_IF_ID_is_branch_or_jmp => s_jmp_or_brnch_Ffcu_Tde,
+		FCU_IF_ID_is_jmp_r => s_is_jalr_or_jal,
 		FCU_insert_stall	=> s_stall
 		);
 		

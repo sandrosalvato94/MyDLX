@@ -186,7 +186,7 @@ begin
 		DP_clk							=> DLX_clk,
 		DP_reset							=> DLX_reset,
 		DP_btb_target_prediction	=> s_target_prediction_Fbtb_Tdp,
-		DP_btb_prediction				=> s_prediction_Fbtb_Tdp, --'0' --s_prediction_Fbtb_Tdp
+		DP_btb_prediction				=> s_prediction_Fbtb_Tdp, --'0'/'1' enable BTB
 		DP_IR								=> DLX_IR,
 		DP_Rd1							=> s_DE_cw_Fcu_Tdp(1),
 		DP_Rd2							=> s_DE_cw_Fcu_Tdp(2),

@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -33,6 +33,15 @@
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_error" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_error</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/cu_instr_opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_instr_opcode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cu_instr_opcode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/cu_instr_func" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_instr_func[10:0]</obj_property>
+      <obj_property name="ObjectShortName">cu_instr_func[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/IF_Stage/fe_ir_in" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">fe_ir_in[31:0]</obj_property>
@@ -63,6 +72,10 @@
       <obj_property name="ElementShortName">s_control_word[1:26]</obj_property>
       <obj_property name="ObjectShortName">s_control_word[1:26]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/s_cw_bubble" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cw_bubble[1:26]</obj_property>
+      <obj_property name="ObjectShortName">s_cw_bubble[1:26]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/cu_bubble" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">cu_bubble</obj_property>
       <obj_property name="ObjectShortName">cu_bubble</obj_property>
@@ -70,5 +83,9 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/cu_flush" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">cu_flush</obj_property>
       <obj_property name="ObjectShortName">cu_flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/s_insert_nop" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_insert_nop</obj_property>
+      <obj_property name="ObjectShortName">s_insert_nop</obj_property>
    </wvobject>
 </wave_config>

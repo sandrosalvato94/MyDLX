@@ -23,3 +23,6 @@ xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memo
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 
 xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 
+xst -intstyle ise -ifn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.xst" -ofn "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.syr" 

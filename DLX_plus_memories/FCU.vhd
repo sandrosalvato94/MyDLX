@@ -64,6 +64,7 @@ entity FCU is
 		FCU_IF_ID_is_branch	: out std_logic;
 		FCU_ID_EX_is_store	: out std_logic;
 		FCU_IF_ID_is_branch_or_jmp : out std_logic;
+		FCU_IF_ID_is_jmp_r : out std_logic;
 		FCU_insert_stall	: out std_logic --true when '0'
 	);
 end FCU;
@@ -123,6 +124,8 @@ architecture Behavioral of FCU is
 	signal s_id_ex_is_jmp : std_logic;
 	signal s_ex_mem_is_jmp : std_logic; 
 	signal s_mem_wb_is_jmp : std_logic;
+	
+	signal s_if_id_is_jmp_r : std_logic;
 	
 	signal s_stall_de			: std_logic;
 	signal s_stall_ex			: std_logic;
@@ -489,6 +492,11 @@ begin
 			-----------------------------------------------------------------------
 			if(((FCU_IF_ID_Op >= OPCODE_J) AND (FCU_IF_ID_Op <= OPCODE_BNEZ)) OR (FCU_IF_ID_Op = OPCODE_JR) OR (FCU_IF_ID_Op = OPCODE_JALR)) then
 				s_if_id_is_jmp <= '1';
+				if((FCU_IF_ID_Op = OPCODE_JALR) OR (FCU_IF_ID_Op = OPCODE_JAL)) then
+					s_if_id_is_jmp_r <= '1';
+				else
+					s_if_id_is_jmp_r <= '0';
+				end if;
 			else 
 				s_if_id_is_jmp <= '0';
 			end if;
@@ -522,6 +530,7 @@ begin
 
 	FCU_IF_ID_is_branch_or_jmp<=s_if_id_is_jmp;
 	FCU_ID_EX_is_store <= s_id_ex_is_store;
+	FCU_IF_ID_is_jmp_r <= s_if_id_is_jmp_r;
 
 end Behavioral;
 
