@@ -292,7 +292,7 @@ begin
 --		);
 
 ---------------------------------------------------------------------------------------------------
-	s_cw_bubble(4 to 7) <= s_control_word(4 to 7);
+--	s_cw_bubble(4 to 7) <= s_control_word(4 to 7);
 	s_insert_nop <= s_flush OR NOT(CU_bubble); -- 0 0 - 1
 													  -- 0 1 - 0
 													  -- 1 0 - 1
@@ -301,6 +301,15 @@ begin
 																	  -- 0 1  - 1
 																	  -- 1 0  - 0
 --																	  -- 1 1  - 1
+
+	process(s_flush, s_control_word) 
+	begin
+			if(s_flush = '0') then
+				s_cw_bubble(4 to 7) <= s_control_word(4 to 7);
+			else
+				s_cw_bubble <= "0000010" & "00" & "000000" & "000" & "1000" & "0000";
+			end if;
+	end process;
 --																	  
 --	
 --	JMP_R_REG	: NRegister GENERIC MAP (N => 26) PORT MAP (
