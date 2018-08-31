@@ -52,6 +52,7 @@ entity Fetch is
 		FE_next_instr_is_jump : in std_logic;
 		FE_new_PC_from_DE		: in  std_logic_vector(NBIT_PC-1 downto 0);
 		FE_IR_in			: in  std_logic_vector(NBIT_IR-1 downto 0);
+		FE_restore_BTB		: out std_logic;
 		FE_IR_out			: out std_logic_vector(NBIT_IR-1 downto 0);
 		FE_PC			: out std_logic_vector(NBIT_PC-1 downto 0);
 		FE_NPC			: out std_logic_vector(NBIT_PC-1 downto 0)
@@ -206,6 +207,7 @@ begin
 	
 	s_jmp <= ((FE_next_instr_is_jump AND NOT(FE_next_instr_is_branch)) OR (FE_next_instr_is_jump AND NOT(s_btb_prediction) AND FE_branch_taken)) AND FE_branch_taken; 
 	s_restore <= FE_next_instr_is_jump AND FE_next_instr_is_branch AND s_btb_prediction AND NOT(FE_branch_taken);
+	FE_restore_BTB <= s_restore;
 	
 	MUXNPC : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (
 							port0 => s_target_Fbtbmux_Tnpcmux,

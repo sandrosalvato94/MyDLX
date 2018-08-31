@@ -96,6 +96,7 @@ architecture Structural of DLX_Core is
 		DP_IF_ID_instr_is_branch	: out std_logic;
 		DP_IR_opcode					: out std_logic_vector(5 downto 0);
 		DP_IR_func						: out std_logic_vector(10 downto 0);
+		DP_restore_BTB					: out std_logic;
 		
 		DP_branch_taken				: out std_logic;
 		DP_computed_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
@@ -173,6 +174,7 @@ architecture Structural of DLX_Core is
 	signal s_IR_func_Fdp_Tcu				: std_logic_vector(10 downto 0);
 	signal s_target_Fdp_Tbtb				: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_instr_is_branch				: std_logic;
+	signal s_restore_btb						: std_logic;
 	
 	
 
@@ -208,6 +210,7 @@ begin
 		DP_Load_BYTE_half				=> s_WB_cw_Fcu_Tdp(25),
 		DP_Load_SGN_usg_reduce		=> s_WB_cw_Fcu_Tdp(26),
 		DP_insert_bubble				=> s_insert_bubble_Fdp_Tcu,
+		DP_restore_BTB					=> ,
 		DP_PC								=> s_PC_Fdp_Tbtb,	
 		--DP_NPC							=> s_NPC_Fdp_Tbtb,
 		DP_IF_ID_instr_is_branch   => s_IFID_istr_is_brnch_Fdp_Tbtb,

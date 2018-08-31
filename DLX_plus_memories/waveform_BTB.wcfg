@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/btb_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">btb_enable</obj_property>
       <obj_property name="ObjectShortName">btb_enable</obj_property>
@@ -76,5 +76,13 @@
       <obj_property name="ElementShortName">s_targets_freg_tmux[0:31]</obj_property>
       <obj_property name="ObjectShortName">s_targets_freg_tmux[0:31]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(31)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -81,6 +81,7 @@ entity Datapath is
 		DP_IF_ID_instr_is_branch	: out std_logic;
 		DP_IR_opcode					: out std_logic_vector(5 downto 0);
 		DP_IR_func						: out std_logic_vector(10 downto 0);
+		DP_restore_BTB					: out std_logic;
 		
 		DP_branch_taken				: out std_logic; --to BTB and CU for flushing
 		DP_computed_new_PC						: out std_logic_vector(2**NBIT_IRAM_ADDR-1 downto 0);
@@ -110,6 +111,7 @@ architecture Structural of Datapath is
 		FE_next_instr_is_branch : in std_logic;
 		FE_next_instr_is_jump : in std_logic;
 		FE_new_PC_from_DE		: in  std_logic_vector(NBIT_PC-1 downto 0);
+		FE_restore_BTB		: out std_logic;
 		FE_IR_in			: in  std_logic_vector(NBIT_IR-1 downto 0);
 		FE_IR_out			: out std_logic_vector(NBIT_IR-1 downto 0);
 		FE_PC			: out std_logic_vector(NBIT_PC-1 downto 0);
@@ -368,6 +370,7 @@ begin
 		FE_next_instr_is_branch		=> s_brnch_Ffcu_Tde,
 		FE_next_instr_is_jump		=> s_jmp_or_brnch_Ffcu_Tde,
 		FE_new_PC_from_DE				=> s_newPC_Fde_Tif,	--from decode
+		FE_restore_BTB					=> DP_restore_BTB,
 		FE_IR_in							=> DP_IR,	--from IRAM
 		FE_IR_out						=> s_IR_Fif,		--to FCU and reg
 		FE_PC								=> s_PC_Fif, -- to IRAM, BTB and inside DP

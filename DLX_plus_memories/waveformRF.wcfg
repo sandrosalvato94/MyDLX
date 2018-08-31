@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -73,6 +73,10 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/s_ex_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">s_ex_enable</obj_property>
       <obj_property name="ObjectShortName">s_ex_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/dp_branch_taken" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dp_branch_taken</obj_property>
+      <obj_property name="ObjectShortName">dp_branch_taken</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_addrwr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rf_addrwr[4:0]</obj_property>
