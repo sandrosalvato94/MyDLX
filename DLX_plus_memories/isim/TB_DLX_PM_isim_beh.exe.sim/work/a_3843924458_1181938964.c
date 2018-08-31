@@ -276,10 +276,13 @@ static void work_a_3843924458_1181938964_p_6(char *t0)
     unsigned char t16;
     unsigned char t17;
     char *t18;
-    char *t19;
-    char *t20;
+    unsigned char t19;
+    unsigned char t20;
     char *t21;
     char *t22;
+    char *t23;
+    char *t24;
+    char *t25;
 
 LAB0:    xsi_set_current_line(207, ng0);
 
@@ -304,16 +307,20 @@ LAB3:    t1 = (t0 + 1604U);
     t15 = *((unsigned char *)t14);
     t16 = ieee_p_2592010699_sub_1605435078_503743352(IEEE_P_2592010699, t13, t15);
     t17 = ieee_p_2592010699_sub_2545490612_503743352(IEEE_P_2592010699, t7, t16);
+    t1 = (t0 + 1420U);
+    t18 = *((char **)t1);
+    t19 = *((unsigned char *)t18);
+    t20 = ieee_p_2592010699_sub_1605435078_503743352(IEEE_P_2592010699, t17, t19);
     t1 = (t0 + 6992);
-    t18 = (t1 + 32U);
-    t19 = *((char **)t18);
-    t20 = (t19 + 40U);
-    t21 = *((char **)t20);
-    *((unsigned char *)t21) = t17;
+    t21 = (t1 + 32U);
+    t22 = *((char **)t21);
+    t23 = (t22 + 40U);
+    t24 = *((char **)t23);
+    *((unsigned char *)t24) = t20;
     xsi_driver_first_trans_fast(t1);
 
-LAB2:    t22 = (t0 + 6716);
-    *((int *)t22) = 1;
+LAB2:    t25 = (t0 + 6716);
+    *((int *)t25) = 1;
 
 LAB1:    return;
 LAB4:    goto LAB2;

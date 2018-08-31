@@ -2,9 +2,9 @@ Command line:
    TB_DLX_PM_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  64795
+     -socket  64001
 
-Thu Aug 30 13:04:20 2018
+Fri Aug 31 11:19:38 2018
 
 
- Elaboration Time: 0.609375 sec
+ Elaboration Time: 0.546875 sec

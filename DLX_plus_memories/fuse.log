@@ -68,8 +68,8 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 109812 KB
-Fuse CPU Usage: 890 ms
+Fuse Memory Usage: 110260 KB
+Fuse CPU Usage: 1171 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package constants
@@ -157,8 +157,8 @@ Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
 Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories_default]
 Compiling architecture behavior of entity tb_dlx_pm
 Time Resolution for simulation is 1ps.
-Waiting for 63 sub-compilation(s) to finish...
+Waiting for 61 sub-compilation(s) to finish...
 Compiled 162 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 181124 KB
-Fuse CPU Usage: 3312 ms
+Fuse Memory Usage: 181572 KB
+Fuse CPU Usage: 4061 ms

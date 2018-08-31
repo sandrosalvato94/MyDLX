@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: DLX_Core.prj
 
@@ -456,7 +456,7 @@ Elaborating entity <NORGate_NX1> (architecture <Behavioral>) with generics from 
 Elaborating entity <Mux_Bit> (architecture <Behavioral>) with generics from library <work>.
 WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 667. All outputs of instance <OPB_TO_DRAM_REG> of block <NRegister> are unconnected in block <Datapath>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 707. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 226. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 228. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -560,7 +560,7 @@ Synthesizing Unit <Decode>.
         NBIT_DATA = 32
 WARNING:Xst:647 - Input <DE_IR<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DE_PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 226: Output port <data_out> of the instance <R3_enable> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 228: Output port <data_out> of the instance <R3_enable> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Decode> synthesized.
@@ -1124,8 +1124,8 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 266
- 1-bit register                                        : 143
+# Registers                                            : 267
+ 1-bit register                                        : 144
  10-bit register                                       : 1
  19-bit register                                       : 1
  26-bit register                                       : 1
@@ -1268,8 +1268,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 3902
- Flip-Flops                                            : 3902
+# Registers                                            : 3903
+ Flip-Flops                                            : 3903
 # Comparators                                          : 56
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 40
@@ -1399,3 +1399,567 @@ Optimizing unit <FCU> ...
 Optimizing unit <ControlUnit> ...
 
 Optimizing unit <BTB> ...
+
+Optimizing unit <NRotateRegister> ...
+
+Optimizing unit <NPriorityEncoder> ...
+WARNING:Xst:1710 - FF/Latch <BTB_cache/GEN_TARG_REG[0].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[1].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[2].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[3].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[4].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[5].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[6].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[7].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[8].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[9].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[10].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[11].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[12].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[13].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[14].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[15].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[16].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[17].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[18].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[19].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[20].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[21].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[22].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[23].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[24].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[25].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[26].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[27].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[28].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[29].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[30].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_TARG_REG[31].TargReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/IF_Stage/Restore_PC/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_1> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_2> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_3> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_4> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_5> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_6> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_7> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_8> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_9> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_10> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_11> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_12> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_13> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_14> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_31> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_30> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_29> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_28> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_27> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_26> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_25> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_24> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_23> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_22> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_21> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_20> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_19> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_18> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_17> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_16> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/DE_Stage/RF/cyc_regs[0].if0.R0/data_out_15> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_25> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_24> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_23> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_22> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_21> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_10> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_9> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_8> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_7> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_6> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_5> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_4> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_3> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_2> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_1> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_MEM_WB_REG/data_out_0> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_25> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_24> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_23> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_22> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_21> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_10> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_9> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_8> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_7> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_6> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_5> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_4> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_3> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_2> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_1> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_EX_MEM_REG/data_out_0> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_10> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_9> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_8> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_7> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_6> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_5> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_4> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_3> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_2> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_1> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/IR_ID_EX_REG/data_out_0> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/EX_Stage/PSW/data_out_0> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/EX_Stage/PSW/data_out_1> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/EX_Stage/PSW/data_out_2> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/EX_Stage/PSW/data_out_3> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:2677 - Node <DP/EX_Stage/PSW/data_out_4> of sequential type is unconnected in block <DLX_Core>.
+WARNING:Xst:1710 - FF/Latch <DP/IF_Stage/PC/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/NPC_IF_ID_REG/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/PC_IF_ID_REG/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_reg/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[16].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[17].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[18].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[19].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[20].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[21].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[22].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[23].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[24].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[25].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[26].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[27].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[28].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[29].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[30].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[31].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DP/PC_ID_EX_REG/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[0].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[1].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[2].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[3].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[4].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[5].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[6].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[7].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[8].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[9].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[10].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[11].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[12].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[13].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[14].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BTB_cache/GEN_ENTR_REG[15].EntrReg_i/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DP/stall_IF_ID_REG/data_out> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <DP/DE_Stage/R1_enable/data_out> 
+INFO:Xst:2261 - The FF/Latch <CU/DE_CW/data_out_6> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <CU/DE_CW/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <DP/stall_ID_EX_REG/data_out> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <DP/DE_Stage/R2_enable/data_out> 
+INFO:Xst:2261 - The FF/Latch <DP/DE_Stage/RegI/data_out_31> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <DP/DE_Stage/RegI/data_out_26> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_10> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_10> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_11> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_11> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_12> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_12> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_13> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_13> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_14> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_14> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_20> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_20> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_15> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_15> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_21> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_21> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_16> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_16> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_22> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_22> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_17> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_17> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_23> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_23> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_18> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_18> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_24> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_24> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_19> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_19> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_30> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_30> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_25> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_25> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_31> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_31> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_26> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_26> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_27> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_27> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_28> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_28> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_29> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_29> 
+INFO:Xst:2261 - The FF/Latch <CU/EX_CW/data_out_6> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <CU/EX_CW/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_1> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_1> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_2> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_2> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_3> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_4> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_4> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_5> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_5> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_6> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_6> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_7> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_7> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_8> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_8> 
+INFO:Xst:2261 - The FF/Latch <DP/PC_IF_ID_REG/data_out_9> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <PC_reg/data_out_9> 
+INFO:Xst:2261 - The FF/Latch <CU/MEM_CW/data_out_6> in Unit <DLX_Core> is equivalent to the following FF/Latch, which will be removed : <CU/MEM_CW/data_out_3> 
+INFO:Xst:2261 - The FF/Latch <DP/DE_Stage/RegI/data_out_27> in Unit <DLX_Core> is equivalent to the following 4 FFs/Latches, which will be removed : <DP/DE_Stage/RegI/data_out_28> <DP/DE_Stage/RegI/data_out_29> <DP/DE_Stage/RegI/data_out_30> <DP/DE_Stage/RegI/data_out_31> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DLX_Core, actual ratio is 12.
+
+Final Macro Processing ...
+
+Processing Unit <DLX_Core> :
+	Found 2-bit shift register for signal <DP/FRW_CU/s_stall_mem>.
+Unit <DLX_Core> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3680
+ Flip-Flops                                            : 3680
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DLX_Core.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3816
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 119
+#      LUT3                        : 245
+#      LUT4                        : 301
+#      LUT5                        : 697
+#      LUT6                        : 2351
+#      MUXF7                       : 99
+#      VCC                         : 1
+# FlipFlops/Latches                : 3704
+#      FD                          : 32
+#      FDC                         : 32
+#      FDCE                        : 3584
+#      FDE                         : 1
+#      FDP                         : 32
+#      LD                          : 22
+#      LDE                         : 1
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 165
+#      IBUF                        : 66
+#      OBUF                        : 99
+# DSPs                             : 8
+#      DSP48E1                     : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3704  out of  126800     2%  
+ Number of Slice LUTs:                 3716  out of  63400     5%  
+    Number used as Logic:              3715  out of  63400     5%  
+    Number used as Memory:                1  out of  19000     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6997
+   Number with an unused Flip Flop:    3293  out of   6997    47%  
+   Number with an unused LUT:          3281  out of   6997    46%  
+   Number of fully used LUT-FF pairs:   423  out of   6997     6%  
+   Number of unique control sets:       112
+
+IO Utilization: 
+ Number of IOs:                         166
+ Number of bonded IOBs:                 166  out of    210    79%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+ Number of DSP48E1s:                      8  out of    240     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                         | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+DLX_clk                            | BUFGP                                         | 3680  |
+DP/s_fcu_enable(DP/s_fcu_enable1:O)| BUFG(*)(DP/FRW_CU/FCU_IF_ID_is_branch)        | 20    |
+N0                                 | NONE(BTB_cache/PriorityEncoder32X5/data_out_4)| 5     |
+-----------------------------------+-----------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.108ns (Maximum Frequency: 76.287MHz)
+   Minimum input arrival time before clock: 11.130ns
+   Maximum output required time after clock: 3.831ns
+   Maximum combinational path delay: 2.526ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DLX_clk'
+  Clock period: 13.108ns (frequency: 76.287MHz)
+  Total number of paths / destination ports: 76298660147 / 7295
+-------------------------------------------------------------------------
+Delay:               6.554ns (Levels of Logic = 12)
+  Source:            DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_5 (FF)
+  Destination:       DP/IF_Stage/PC/data_out_31 (FF)
+  Source Clock:      DLX_clk falling
+  Destination Clock: DLX_clk rising
+
+  Data Path: DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_5 to DP/IF_Stage/PC/data_out_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.361   0.561  DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_5 (DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_5)
+     LUT6:I2->O            1   0.097   0.556  DP/DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_983 (DP/DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_983)
+     LUT6:I2->O            1   0.097   0.000  DP/DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_427 (DP/DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_427)
+     MUXF7:I0->O           3   0.277   0.693  DP/DE_Stage/RF/depth1[4].width1[0].mod_if1.MUX1/Mmux_portY_2_f7_26 (DP/DE_Stage/s_data_Frf_TregA<5>)
+     LUT6:I1->O            1   0.097   0.683  DP/DE_Stage/Cmp/matrix<0><5><0>17 (DP/DE_Stage/Cmp/matrix<0><5><0>16)
+     LUT6:I1->O            1   0.097   0.295  DP/DE_Stage/Cmp/matrix<0><5><0>21 (DP/DE_Stage/Cmp/matrix<0><5><0>20)
+     LUT5:I4->O            3   0.097   0.289  DP/DE_Stage/Cmp/matrix<0><5><0>22 (DP/DE_Stage/s_iszero_Fcmp_Tcond)
+     MUXF7:S->O           15   0.335   0.360  DP/IF_Stage/MUX_restore/Mmux_portY2521 (DP/IF_Stage/MUX_restore/Mmux_portY1523)
+     LUT6:I5->O            2   0.097   0.383  DP/DE_Stage/JBM/ADD/SN/Mxor_S<31>_xo<0>1_SW1 (N414)
+     LUT6:I4->O            3   0.097   0.305  DP/DE_Stage/JBM/ADD/CN/s_carry<29>1_SW4 (N575)
+     LUT6:I5->O            1   0.097   0.000  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12_G (N719)
+     MUXF7:I1->O           1   0.279   0.295  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12 (N684)
+     LUT6:I5->O            2   0.097   0.000  DP/IF_Stage/MUX_restore/Mmux_portY2522 (DP/s_NPC_Fif<31>)
+     FDCE:D                    0.008          DP/IF_Stage/PC/data_out_31
+    ----------------------------------------
+    Total                      6.554ns (2.133ns logic, 4.421ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DP/s_fcu_enable'
+  Clock period: 5.255ns (frequency: 190.311MHz)
+  Total number of paths / destination ports: 14 / 2
+-------------------------------------------------------------------------
+Delay:               2.627ns (Levels of Logic = 3)
+  Source:            DP/FRW_CU/s_if_id_is_jmp (LATCH)
+  Destination:       DP/FRW_CU/Mshreg_s_stall_mem (FF)
+  Source Clock:      DP/s_fcu_enable falling
+  Destination Clock: DP/s_fcu_enable rising
+
+  Data Path: DP/FRW_CU/s_if_id_is_jmp to DP/FRW_CU/Mshreg_s_stall_mem
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              49   0.472   0.793  DP/FRW_CU/s_if_id_is_jmp (DP/FRW_CU/s_if_id_is_jmp)
+     LUT5:I0->O            1   0.097   0.683  DP/FRW_CU/Mmux_FCU_insert_stall37 (DP/FRW_CU/Mmux_FCU_insert_stall36)
+     LUT6:I1->O            1   0.097   0.379  DP/FRW_CU/Mmux_FCU_insert_stall38 (DP/FRW_CU/Mmux_FCU_insert_stall37)
+     LUT6:I4->O          247   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
+     SRLC16E:D                 0.009          DP/FRW_CU/Mshreg_s_stall_mem
+    ----------------------------------------
+    Total                      2.627ns (0.772ns logic, 1.855ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DLX_clk'
+  Total number of paths / destination ports: 2846969171 / 4983
+-------------------------------------------------------------------------
+Offset:              11.130ns (Levels of Logic = 24)
+  Source:            DLX_enable (PAD)
+  Destination:       DP/EX_Stage/ALU_reg/data_out_0 (FF)
+  Destination Clock: DLX_clk rising
+
+  Data Path: DLX_enable to DP/EX_Stage/ALU_reg/data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           362   0.001   0.851  DLX_enable_IBUF (DLX_enable_IBUF)
+     LUT6:I0->O            1   0.097   0.683  DP/FRW_CU/Mmux_FCU_ID_EX_TOP_MUX21 (DP/FRW_CU/Mmux_FCU_ID_EX_TOP_MUX2)
+     LUT6:I1->O            2   0.097   0.299  DP/FRW_CU/Mmux_FCU_ID_EX_TOP_MUX22 (DP/FRW_CU/Mmux_FCU_ID_EX_TOP_MUX24)
+     LUT6:I5->O           78   0.097   0.409  DP/FRW_CU/Mmux_FCU_ID_EX_TOP_MUX214 (DP/s_id_ex_sel_fwd_top_mux<1>)
+     LUT5:I4->O            1   0.097   0.295  DP/REVERSE_BOT_MUX/Mmux_portY6_SW1 (N518)
+     LUT6:I5->O            4   0.097   0.309  DP/REVERSE_BOT_MUX/Mmux_portY6 (DP/s_opA_Fmux_Tex<14>)
+     LUT5:I4->O            3   0.097   0.566  DP/EX_Stage/EI_OpA_Alu/EI_dataout<14>1 (DP/EX_Stage/s_OpA_Fei_Talu<14>)
+     LUT6:I2->O            1   0.097   0.295  DP/EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_30_o24_SW0 (N220)
+     LUT6:I5->O            2   0.097   0.516  DP/EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_30_o24 (DP/EX_Stage/ALU_NBIT/BS/MUX3x1/sel_INV_30_o_mmx_out30)
+     LUT6:I3->O            1   0.097   0.000  DP/EX_Stage/ALU_NBIT/BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY253_F (N645)
+     MUXF7:I0->O           6   0.277   0.318  DP/EX_Stage/ALU_NBIT/BS/depth2[2].width2[0].mod_if2.MUX2/Mmux_portY253 (DP/EX_Stage/ALU_NBIT/s_from_BS_to_units_opA<30>)
+     LUT6:I5->O            5   0.097   0.314  DP/EX_Stage/ALU_NBIT/CMPL/CMP/Mxor_s_neq_eq<30>_xo<0>21 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/Mxor_s_neq_eq<30>_xo<0>2)
+     LUT6:I5->O            5   0.097   0.314  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_enable_next_step<28>3 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_enable_next_step<28>)
+     LUT6:I5->O            6   0.097   0.318  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<24>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<24>1)
+     LUT6:I5->O            6   0.097   0.318  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<20>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<20>1)
+     LUT6:I5->O            6   0.097   0.318  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<16>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<16>1)
+     LUT6:I5->O            6   0.097   0.318  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<12>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<12>1)
+     LUT6:I5->O            6   0.097   0.318  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<8>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<8>1)
+     LUT6:I5->O            5   0.097   0.314  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<4>11 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opa<4>1)
+     LUT6:I5->O            5   0.097   0.314  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_enable_next_step<4>1 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_enable_next_step<4>)
+     LUT6:I5->O            1   0.097   0.556  DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opb<0>1 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_en_opb<0>)
+     LUT6:I2->O            2   0.097   0.383  DP/EX_Stage/ALU_NBIT/CMPL/CMP/OR_lt/matrix<0><5><0>23 (DP/EX_Stage/ALU_NBIT/CMPL/CMP/s_tmp_lt)
+     LUT6:I4->O            1   0.097   0.379  DP/EX_Stage/ALU_NBIT/MUX3/Mmux_portY212 (DP/EX_Stage/ALU_NBIT/MUX3/Mmux_portY22)
+     LUT6:I4->O            1   0.097   0.000  DP/EX_Stage/ALU_NBIT/MUX3/Mmux_portY215 (DP/EX_Stage/s_outalu_Falu_Treg<0>)
+     FDCE:D                    0.008          DP/EX_Stage/ALU_reg/data_out_0
+    ----------------------------------------
+    Total                     11.130ns (2.420ns logic, 8.710ns route)
+                                       (21.7% logic, 78.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DP/s_fcu_enable'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.521ns (Levels of Logic = 3)
+  Source:            DLX_enable (PAD)
+  Destination:       DP/FRW_CU/Mshreg_s_stall_mem (FF)
+  Destination Clock: DP/s_fcu_enable rising
+
+  Data Path: DLX_enable to DP/FRW_CU/Mshreg_s_stall_mem
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           362   0.001   0.537  DLX_enable_IBUF (DLX_enable_IBUF)
+     LUT2:I0->O           20   0.097   0.781  DP/s_fcu_enable1 (DP/s_fcu_enable)
+     LUT6:I0->O          247   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
+     SRLC16E:D                 0.009          DP/FRW_CU/Mshreg_s_stall_mem
+    ----------------------------------------
+    Total                      1.521ns (0.204ns logic, 1.317ns route)
+                                       (13.4% logic, 86.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DLX_clk'
+  Total number of paths / destination ports: 1921 / 97
+-------------------------------------------------------------------------
+Offset:              3.831ns (Levels of Logic = 6)
+  Source:            DP/IR_EX_MEM_REG/data_out_20 (FF)
+  Destination:       DLX_written_data<15> (PAD)
+  Source Clock:      DLX_clk rising
+
+  Data Path: DP/IR_EX_MEM_REG/data_out_20 to DLX_written_data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.361   0.602  DP/IR_EX_MEM_REG/data_out_20 (DP/IR_EX_MEM_REG/data_out_20)
+     LUT4:I0->O            1   0.097   0.556  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX17 (DP/FRW_CU/Mmux_FCU_EX_MEM_MUX18)
+     LUT6:I2->O            1   0.097   0.556  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX18 (DP/FRW_CU/Mmux_FCU_EX_MEM_MUX19)
+     LUT6:I2->O            9   0.097   0.332  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX19 (DP/FRW_CU/Mmux_FCU_EX_MEM_MUX110)
+     LUT5:I4->O           24   0.097   0.659  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX110 (DP/s_ex_mem_fwd_mux)
+     LUT5:I1->O            1   0.097   0.279  DP/MEM_Stage/DR/MUX_OUT/Mmux_portY101 (DLX_written_data_10_OBUF)
+     OBUF:I->O                 0.000          DLX_written_data_10_OBUF (DLX_written_data<10>)
+    ----------------------------------------
+    Total                      3.831ns (0.846ns logic, 2.985ns route)
+                                       (22.1% logic, 77.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DP/s_fcu_enable'
+  Total number of paths / destination ports: 288 / 32
+-------------------------------------------------------------------------
+Offset:              3.574ns (Levels of Logic = 6)
+  Source:            DP/FRW_CU/s_mem_wb_is_reg (LATCH)
+  Destination:       DLX_written_data<15> (PAD)
+  Source Clock:      DP/s_fcu_enable falling
+
+  Data Path: DP/FRW_CU/s_mem_wb_is_reg to DLX_written_data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.472   0.530  DP/FRW_CU/s_mem_wb_is_reg (DP/FRW_CU/s_mem_wb_is_reg)
+     LUT3:I0->O            2   0.097   0.283  DP/FRW_CU/Mmux_FCU_ID_EX_BOT_MUX21911 (DP/FRW_CU/Mmux_FCU_ID_EX_BOT_MUX2191)
+     MUXF7:S->O            1   0.335   0.295  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX16 (DP/FRW_CU/Mmux_FCU_EX_MEM_MUX17)
+     LUT6:I5->O            9   0.097   0.332  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX19 (DP/FRW_CU/Mmux_FCU_EX_MEM_MUX110)
+     LUT5:I4->O           24   0.097   0.659  DP/FRW_CU/Mmux_FCU_EX_MEM_MUX110 (DP/s_ex_mem_fwd_mux)
+     LUT5:I1->O            1   0.097   0.279  DP/MEM_Stage/DR/MUX_OUT/Mmux_portY101 (DLX_written_data_10_OBUF)
+     OBUF:I->O                 0.000          DLX_written_data_10_OBUF (DLX_written_data<10>)
+    ----------------------------------------
+    Total                      3.574ns (1.195ns logic, 2.379ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 100 / 33
+-------------------------------------------------------------------------
+Delay:               2.526ns (Levels of Logic = 6)
+  Source:            DLX_IR<10> (PAD)
+  Destination:       DLX_error (PAD)
+
+  Data Path: DLX_IR<10> to DLX_error
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.687  DLX_IR_10_IBUF (DLX_IR_10_IBUF)
+     LUT5:I0->O            5   0.097   0.575  CU/CU_instr_opcode[5]_GND_646_o_wide_mux_27_OUT<13>311 (CU/CU_instr_opcode[5]_GND_646_o_wide_mux_27_OUT<12>2)
+     LUT5:I1->O            2   0.097   0.299  CU/GND_646_o_PWR_295_o_select_26_OUT<16>1 (CU/GND_646_o_PWR_295_o_select_26_OUT<16>)
+     LUT6:I5->O            1   0.097   0.295  CU/Mmux_CU_error12 (CU/Mmux_CU_error11)
+     LUT4:I3->O            1   0.097   0.279  CU/Mmux_CU_error14 (DLX_error_OBUF)
+     OBUF:I->O                 0.000          DLX_error_OBUF (DLX_error)
+    ----------------------------------------
+    Total                      2.526ns (0.389ns logic, 2.137ns route)
+                                       (15.4% logic, 84.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock DLX_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DLX_clk        |   11.346|    6.554|    2.181|         |
+DP/s_fcu_enable|   11.258|   11.372|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DP/s_fcu_enable
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DLX_clk        |    2.644|         |    1.552|         |
+DP/s_fcu_enable|    1.314|    2.627|         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 104.00 secs
+Total CPU time to Xst completion: 104.11 secs
+ 
+--> 
+
+Total memory usage is 382248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  329 (   0 filtered)
+Number of infos    :   81 (   0 filtered)
+

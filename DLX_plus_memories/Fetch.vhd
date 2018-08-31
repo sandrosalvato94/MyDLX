@@ -204,7 +204,7 @@ begin
 		data_out => s_btb_prediction
 	);
 	
-	s_jmp <= (FE_next_instr_is_jump AND NOT(FE_next_instr_is_branch)) OR (FE_next_instr_is_jump AND NOT(s_btb_prediction) AND FE_branch_taken); 
+	s_jmp <= ((FE_next_instr_is_jump AND NOT(FE_next_instr_is_branch)) OR (FE_next_instr_is_jump AND NOT(s_btb_prediction) AND FE_branch_taken)) AND FE_branch_taken; 
 	s_restore <= FE_next_instr_is_jump AND FE_next_instr_is_branch AND s_btb_prediction AND NOT(FE_branch_taken);
 	
 	MUXNPC : Mux_NBit_2x1 GENERIC MAP(NBIT_IN => NBIT_PC) PORT MAP (

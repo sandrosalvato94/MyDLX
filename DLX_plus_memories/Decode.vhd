@@ -201,6 +201,8 @@ architecture Structural of Decode is
 	signal s_enable1				: std_logic;
 	signal s_enable2				: std_logic;
 	signal s_enable3				: std_logic;
+	signal s_branch_taken		: std_logic;
+	signal s_prev_instr_branch_taken	: std_logic;
 
 begin
 
@@ -408,7 +410,10 @@ begin
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
-	s_isnt_jmp_or_branch <= NOT(DE_jmp_or_branch);
+	s_isnt_jmp_or_branch <= NOT(DE_jmp_or_branch AND NOT(s_prev_instr_branch_taken)); -- 0 0 - 1
+																												 -- 0 1 - 1
+																												 -- 1 0 - 0
+																												 -- 1 1 - 1
 	
 	JBM : Jmp_Branch_Manager GENERIC MAP (N => NBIT_DATA) PORT MAP (
 							JBM_iszero => s_iszero_Fcmp_Tcond,
@@ -416,10 +421,20 @@ begin
 							JBM_Imm => s_data_Fse_Timm,
 							JBM_NPC => DE_NPC,
 							JBM_JMP_branch => DE_JMP_branch,
-							JBM_transparent_mode => s_isnt_jmp_or_branch,
+							JBM_transparent_mode => s_isnt_jmp_or_branch, --attivo basso
 							JBM_Upd_PC => DE_new_PC,
-							JBM_taken => DE_branch_taken
+							JBM_taken => s_branch_taken
 							);
+	DE_branch_taken <= s_branch_taken;
+	
+	Branch_taken_reg	: Reg1Bit PORT MAP (
+		clk 			=> DE_clk,
+		reset			=> DE_reset ,
+		data_in		=> s_branch_taken,
+		enable		=> DE_stall,
+		load			=> '1',
+		data_out		=> s_prev_instr_branch_taken
+		);
 -------------------------------------------------------------------------------------
 
 end Structural;
