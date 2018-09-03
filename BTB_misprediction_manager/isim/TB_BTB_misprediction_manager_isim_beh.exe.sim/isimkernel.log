@@ -1,0 +1,30 @@
+Command line:
+   TB_BTB_misprediction_manager_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55226
+
+Mon Sep 03 11:27:29 2018
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 848.523 Meg
+
+ Total Signals          : 122
+ Total Nets             : 151
+ Total Signal Drivers   : 44
+ Total Blocks           : 34
+ Total Primitive Blocks : 20
+ Total Processes        : 37
+ Total Traceable Variables  : 99
+ Total Scalar Nets and Variables : 1150
+Total Line Count : 153
+Total Line Count : 153
+
+ Total Simulation Time: 0.546875 sec
+
+ Current Memory Usage: 849.572 Meg
+
+Mon Sep 03 11:34:07 2018
+
