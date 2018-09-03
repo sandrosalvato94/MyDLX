@@ -50,6 +50,7 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ANDGate_NX1.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ALU.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/WriteBack_Stage.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter_BMM.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NRotateRegister.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/NPriorityEncoder.vhd" into library work
@@ -60,6 +61,7 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Decode.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/Datapath.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/BTB_misprediction_manager.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/BTB.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DRAM.vhd" into library work
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.vhd" into library work
@@ -68,8 +70,8 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 110260 KB
-Fuse CPU Usage: 1171 ms
+Fuse Memory Usage: 110132 KB
+Fuse CPU Usage: 1234 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package constants
@@ -138,16 +140,18 @@ Compiling architecture behavioral of entity NRegister [\NRegister(19)\]
 Compiling architecture behavioral of entity NRegister [\NRegister(10)\]
 Compiling architecture behavioral of entity NRegister [\NRegister(4)\]
 Compiling architecture structural of entity ControlUnit [controlunit_default]
-Compiling architecture behavioral of entity NPriorityEncoder [\NPriorityEncoder(5)\]
-Compiling architecture behavioral of entity D_FF [d_ff_default]
-Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(2)\]
-Compiling architecture behavioral of entity NRotateRegister [\NRotateRegister(32)\]
 Compiling architecture behavioral of entity t_ff_rst0 [t_ff_rst0_default]
 Compiling architecture behavioral of entity t_ff_rst1 [t_ff_rst1_default]
 Compiling architecture str of entity UD_COUNTER [\UD_COUNTER(2)\]
 Compiling architecture behavioral of entity CU_SatCounter [cu_satcounter_default]
 Compiling architecture behavioral of entity ANDGate_NX1 [\ANDGate_NX1(2)\]
 Compiling architecture behavioral of entity NORGate_NX1 [\NORGate_NX1(2)\]
+Compiling architecture structural of entity SAT_Counter [\SAT_Counter(2)\]
+Compiling architecture structural of entity BTB_misprediction_manager [\BTB_misprediction_manager(32)\]
+Compiling architecture behavioral of entity NPriorityEncoder [\NPriorityEncoder(5)\]
+Compiling architecture behavioral of entity D_FF [d_ff_default]
+Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(2)\]
+Compiling architecture behavioral of entity NRotateRegister [\NRotateRegister(32)\]
 Compiling architecture structural of entity SAT_Counter_BTB [\SAT_Counter_BTB(2)\]
 Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(5)\]
 Compiling architecture structural of entity BTB [\BTB(32,32,32,2)\]
@@ -157,8 +161,8 @@ Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
 Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories_default]
 Compiling architecture behavior of entity tb_dlx_pm
 Time Resolution for simulation is 1ps.
-Waiting for 61 sub-compilation(s) to finish...
-Compiled 162 VHDL Units
+Waiting for 72 sub-compilation(s) to finish...
+Compiled 166 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 181572 KB
-Fuse CPU Usage: 4061 ms
+Fuse Memory Usage: 181444 KB
+Fuse CPU Usage: 4452 ms

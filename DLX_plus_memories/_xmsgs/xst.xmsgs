@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 317: Using initial value <arg fmt="%s" index="1">&quot;10000&quot;</arg> for <arg fmt="%s" index="2">s_nbit_data_div_2</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 319: Using initial value <arg fmt="%s" index="1">&quot;10000&quot;</arg> for <arg fmt="%s" index="2">s_nbit_data_div_2</arg> since it is never assigned
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Barrel_Shifter.vhd" Line 246: Assignment to <arg fmt="%s" index="1">s_sel_third</arg> ignored, since the identifier is never used
@@ -59,31 +59,40 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\t_ff_rst1.vhd" Line 42: <arg fmt="%s" index="1">tff_t</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%d" index="2">667</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">OPB_TO_DRAM_REG</arg>&gt; of block &lt;<arg fmt="%s" index="4">NRegister</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Datapath</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" Line 185: Net &lt;<arg fmt="%s" index="1">s_PC_Fdp_Tbmm[31]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%d" index="2">707</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">stall_MEM_WB_REG</arg>&gt; of block &lt;<arg fmt="%s" index="4">Reg1Bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Datapath</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%d" index="2">670</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">OPB_TO_DRAM_REG</arg>&gt; of block &lt;<arg fmt="%s" index="4">NRegister</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Datapath</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%d" index="2">710</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">stall_MEM_WB_REG</arg>&gt; of block &lt;<arg fmt="%s" index="4">Reg1Bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Datapath</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd</arg>&quot; line <arg fmt="%d" index="2">228</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">R3_enable</arg>&gt; of block &lt;<arg fmt="%s" index="4">Reg1Bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Decode</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd</arg>&quot; line <arg fmt="%s" index="2">184</arg>: Output port &lt;<arg fmt="%s" index="3">DP_NPC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DP</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd</arg>&quot; line <arg fmt="%s" index="2">208</arg>: Output port &lt;<arg fmt="%s" index="3">DP_NPC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DP</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd</arg>&quot; line <arg fmt="%s" index="2">184</arg>: Output port &lt;<arg fmt="%s" index="3">DP_target</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DP</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd</arg>&quot; line <arg fmt="%s" index="2">208</arg>: Output port &lt;<arg fmt="%s" index="3">DP_target</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DP</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">627</arg>: Output port &lt;<arg fmt="%s" index="3">EX_PSW</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">EX_Stage</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd</arg>&quot; line <arg fmt="%s" index="2">208</arg>: Output port &lt;<arg fmt="%s" index="3">DP_restore_BTB</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DP</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">667</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">OPB_TO_DRAM_REG</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s_PC_Fdp_Tbmm</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">stall_MEM_WB_REG</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">630</arg>: Output port &lt;<arg fmt="%s" index="3">EX_PSW</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">EX_Stage</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Fetch.vhd</arg>&quot; line <arg fmt="%s" index="2">165</arg>: Output port &lt;<arg fmt="%s" index="3">Cout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ADDPC</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">670</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">OPB_TO_DRAM_REG</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd</arg>&quot; line <arg fmt="%s" index="2">710</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">stall_MEM_WB_REG</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Fetch.vhd</arg>&quot; line <arg fmt="%s" index="2">166</arg>: Output port &lt;<arg fmt="%s" index="3">Cout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ADDPC</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DE_IR&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

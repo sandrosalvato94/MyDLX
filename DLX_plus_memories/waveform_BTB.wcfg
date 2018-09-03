@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="26" />
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/btb_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">btb_enable</obj_property>
       <obj_property name="ObjectShortName">btb_enable</obj_property>
@@ -84,5 +84,52 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(31)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
       <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_reset</obj_property>
+      <obj_property name="ObjectShortName">bmm_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_enable</obj_property>
+      <obj_property name="ObjectShortName">bmm_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_restore" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_restore</obj_property>
+      <obj_property name="ObjectShortName">bmm_restore</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_pc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_is_branch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_is_branch</obj_property>
+      <obj_property name="ObjectShortName">bmm_is_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_branch_taken" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_branch_taken</obj_property>
+      <obj_property name="ObjectShortName">bmm_branch_taken</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_pc_btb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_pc_btb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_pc_btb[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_is_branch_btb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_is_branch_btb</obj_property>
+      <obj_property name="ObjectShortName">bmm_is_branch_btb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_branch_taken_btb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_branch_taken_btb</obj_property>
+      <obj_property name="ObjectShortName">bmm_branch_taken_btb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/s_cnt_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnt_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnt_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/s_pc_freg_tmux" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_pc_freg_tmux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_pc_freg_tmux[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

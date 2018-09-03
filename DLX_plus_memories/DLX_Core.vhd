@@ -145,6 +145,22 @@ architecture Structural of DLX_Core is
 	);
 	end component;
 	
+	component BTB_misprediction_manager is
+	generic(NBIT_PC	: integer := 32);
+	port(
+		BMM_clk					:	in	 std_logic; 
+		BMM_reset				:  in  std_logic;
+		BMM_enable				:  in  std_logic;
+		BMM_restore				:	in  std_logic;
+		BMM_PC					:  in  std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_is_branch			:  in  std_logic;
+		BMM_branch_taken		:  in  std_logic;
+		BMM_PC_BTB				:  out std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_is_branch_BTB 	:  out std_logic;
+		BMM_branch_taken_BTB	:  out std_logic
+	);
+	end component;
+	
 	component NRegister is
 	generic(N: integer:= 32);
 	port(
@@ -166,10 +182,16 @@ architecture Structural of DLX_Core is
 	signal s_use_immediate_Fcu_Tdp		: std_logic;
 	signal s_insert_bubble_Fdp_Tcu		: std_logic;
 	signal s_PC_Fdp_Tbtb						: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_PC_Fdp_Tbmm						: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_PC_Fbmm_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_NPC_Fdp_Tbmm					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_computed_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_branch_taken_Fdp_Tdp_cu		: std_logic;
+	signal s_branch_taken_Fd_bmm_Tbtb		: std_logic;
 	signal s_IFID_istr_is_brnch_Fdp_Tbtb: std_logic;
+	signal s_IFID_istr_is_brnch_Fdp_Tbmm: std_logic;
+	signal s_IFID_istr_is_brnch_Fbmm_Tbtb: std_logic;
 	signal s_IR_opcode_Fdp_Tcu				: std_logic_vector(5 downto 0);
 	signal s_IR_func_Fdp_Tcu				: std_logic_vector(10 downto 0);
 	signal s_target_Fdp_Tbtb				: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
@@ -210,7 +232,7 @@ begin
 		DP_Load_BYTE_half				=> s_WB_cw_Fcu_Tdp(25),
 		DP_Load_SGN_usg_reduce		=> s_WB_cw_Fcu_Tdp(26),
 		DP_insert_bubble				=> s_insert_bubble_Fdp_Tcu,
-		DP_restore_BTB					=> ,
+		DP_restore_BTB					=> s_restore_btb,
 		DP_PC								=> s_PC_Fdp_Tbtb,	
 		--DP_NPC							=> s_NPC_Fdp_Tbtb,
 		DP_IF_ID_instr_is_branch   => s_IFID_istr_is_brnch_Fdp_Tbtb,
@@ -223,7 +245,7 @@ begin
 		DP_address_to_DRAM			=> DLX_address_written_data
 		);
 	
-	DLX_PC <= s_PC_Fdp_Tbtb;
+	DLX_PC <= s_PC_Fdp_Tbmm;
 
 	CU : ControlUnit PORT MAP (
 		CU_instr_opcode	=> s_IR_opcode_Fdp_Tcu,
@@ -260,6 +282,19 @@ begin
 		data_in => s_PC_Fdp_Tbtb,
 		data_out => s_NPC_Fdp_Tbtb
 		);
+	
+--	BMM : BTB_misprediction_manager GENERIC MAP (NBIT_PC => 2**NBIT_IRAM_ADDRESS) PORT MAP (
+--																			BMM_clk					=> DLX_clk,
+--																			BMM_reset				=> DLX_reset,
+--																			BMM_enable				=> s_insert_bubble_Fdp_Tcu,
+--																			BMM_restore				=> s_restore_btb,
+--																			BMM_PC					=> s_PC_Fdp_Tbmm,
+--																			BMM_is_branch			=> s_IFID_istr_is_brnch_Fdp_Tbmm,
+--																			BMM_branch_taken		=> s_branch_taken_Fdp_Tdp_cu,
+--																			BMM_PC_BTB				=> s_PC_Fbmm_Tbtb,
+--																			BMM_is_branch_BTB 	=> s_IFID_istr_is_brnch_Fbmm_Tbtb,
+--																			BMM_branch_taken_BTB	=> s_branch_taken_Fd_bmm_Tbtb
+--																);
 	
 	BTB_cache : BTB GENERIC MAP (N_ENTRY => N_BTB_ENTRY, 
 										  NBIT_ENTRY => 2**NBIT_IRAM_ADDRESS, 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: DLX_Core.prj
 
@@ -294,7 +294,7 @@ Parsing architecture <Structural> of entity <dlx_core>.
 Elaborating entity <DLX_Core> (architecture <Structural>) with generics from library <work>.
 
 Elaborating entity <Datapath> (architecture <Structural>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 317: Using initial value "10000" for s_nbit_data_div_2 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" Line 319: Using initial value "10000" for s_nbit_data_div_2 since it is never assigned
 
 Elaborating entity <Fetch> (architecture <Structural>) with generics from library <work>.
 
@@ -454,8 +454,9 @@ Elaborating entity <ANDGate_NX1> (architecture <Behavioral>) with generics from 
 Elaborating entity <NORGate_NX1> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Mux_Bit> (architecture <Behavioral>) with generics from library <work>.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 667. All outputs of instance <OPB_TO_DRAM_REG> of block <NRegister> are unconnected in block <Datapath>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 707. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:HDLCompiler:634 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" Line 185: Net <s_PC_Fdp_Tbmm[31]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 670. All outputs of instance <OPB_TO_DRAM_REG> of block <NRegister> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 710. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 228. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
 
 =========================================================================
@@ -468,8 +469,10 @@ Synthesizing Unit <DLX_Core>.
         NBIT_IRAM_ADDRESS = 5
         N_BTB_ENTRY = 32
         NBIT_BTB_PREDICTION = 2
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 184: Output port <DP_NPC> of the instance <DP> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 184: Output port <DP_target> of the instance <DP> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 208: Output port <DP_NPC> of the instance <DP> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 208: Output port <DP_target> of the instance <DP> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 208: Output port <DP_restore_BTB> of the instance <DP> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <s_PC_Fdp_Tbmm> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <DLX_Core> synthesized.
@@ -478,9 +481,9 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 627: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 667: Output port <data_out> of the instance <OPB_TO_DRAM_REG> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 707: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 630: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 670: Output port <data_out> of the instance <OPB_TO_DRAM_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 710: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
     Summary:
 Unit <Datapath> synthesized.
 
@@ -488,7 +491,7 @@ Synthesizing Unit <Fetch>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Fetch.vhd".
         NBIT_PC = 32
         NBIT_IR = 32
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Fetch.vhd" line 165: Output port <Cout> of the instance <ADDPC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Fetch.vhd" line 166: Output port <Cout> of the instance <ADDPC> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Fetch> synthesized.
@@ -1632,15 +1635,15 @@ Top Level Output File Name         : DLX_Core.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3816
+# BELS                             : 3811
 #      GND                         : 1
 #      INV                         : 2
 #      LUT2                        : 119
-#      LUT3                        : 245
-#      LUT4                        : 301
-#      LUT5                        : 697
-#      LUT6                        : 2351
-#      MUXF7                       : 99
+#      LUT3                        : 244
+#      LUT4                        : 289
+#      LUT5                        : 783
+#      LUT6                        : 2271
+#      MUXF7                       : 101
 #      VCC                         : 1
 # FlipFlops/Latches                : 3704
 #      FD                          : 32
@@ -1669,16 +1672,16 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            3704  out of  126800     2%  
- Number of Slice LUTs:                 3716  out of  63400     5%  
-    Number used as Logic:              3715  out of  63400     5%  
+ Number of Slice LUTs:                 3709  out of  63400     5%  
+    Number used as Logic:              3708  out of  63400     5%  
     Number used as Memory:                1  out of  19000     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   6997
-   Number with an unused Flip Flop:    3293  out of   6997    47%  
-   Number with an unused LUT:          3281  out of   6997    46%  
-   Number of fully used LUT-FF pairs:   423  out of   6997     6%  
+ Number of LUT Flip Flop pairs used:   6989
+   Number with an unused Flip Flop:    3285  out of   6989    47%  
+   Number with an unused LUT:          3280  out of   6989    46%  
+   Number of fully used LUT-FF pairs:   424  out of   6989     6%  
    Number of unique control sets:       112
 
 IO Utilization: 
@@ -1727,7 +1730,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 13.108ns (Maximum Frequency: 76.287MHz)
+   Minimum period: 13.099ns (Maximum Frequency: 76.344MHz)
    Minimum input arrival time before clock: 11.130ns
    Maximum output required time after clock: 3.831ns
    Maximum combinational path delay: 2.526ns
@@ -1738,10 +1741,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DLX_clk'
-  Clock period: 13.108ns (frequency: 76.287MHz)
-  Total number of paths / destination ports: 76298660147 / 7295
+  Clock period: 13.099ns (frequency: 76.344MHz)
+  Total number of paths / destination ports: 76298407609 / 7295
 -------------------------------------------------------------------------
-Delay:               6.554ns (Levels of Logic = 12)
+Delay:               6.549ns (Levels of Logic = 12)
   Source:            DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_5 (FF)
   Destination:       DP/IF_Stage/PC/data_out_31 (FF)
   Source Clock:      DLX_clk falling
@@ -1758,20 +1761,20 @@ Delay:               6.554ns (Levels of Logic = 12)
      LUT6:I1->O            1   0.097   0.683  DP/DE_Stage/Cmp/matrix<0><5><0>17 (DP/DE_Stage/Cmp/matrix<0><5><0>16)
      LUT6:I1->O            1   0.097   0.295  DP/DE_Stage/Cmp/matrix<0><5><0>21 (DP/DE_Stage/Cmp/matrix<0><5><0>20)
      LUT5:I4->O            3   0.097   0.289  DP/DE_Stage/Cmp/matrix<0><5><0>22 (DP/DE_Stage/s_iszero_Fcmp_Tcond)
-     MUXF7:S->O           15   0.335   0.360  DP/IF_Stage/MUX_restore/Mmux_portY2521 (DP/IF_Stage/MUX_restore/Mmux_portY1523)
+     MUXF7:S->O           14   0.335   0.355  DP/IF_Stage/MUX_restore/Mmux_portY2521 (DP/IF_Stage/MUX_restore/Mmux_portY1423)
      LUT6:I5->O            2   0.097   0.383  DP/DE_Stage/JBM/ADD/SN/Mxor_S<31>_xo<0>1_SW1 (N414)
      LUT6:I4->O            3   0.097   0.305  DP/DE_Stage/JBM/ADD/CN/s_carry<29>1_SW4 (N575)
-     LUT6:I5->O            1   0.097   0.000  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12_G (N719)
-     MUXF7:I1->O           1   0.279   0.295  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12 (N684)
+     LUT6:I5->O            1   0.097   0.000  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12_G (N728)
+     MUXF7:I1->O           1   0.279   0.295  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1_SW12 (N693)
      LUT6:I5->O            2   0.097   0.000  DP/IF_Stage/MUX_restore/Mmux_portY2522 (DP/s_NPC_Fif<31>)
      FDCE:D                    0.008          DP/IF_Stage/PC/data_out_31
     ----------------------------------------
-    Total                      6.554ns (2.133ns logic, 4.421ns route)
-                                       (32.5% logic, 67.5% route)
+    Total                      6.549ns (2.133ns logic, 4.416ns route)
+                                       (32.6% logic, 67.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP/s_fcu_enable'
-  Clock period: 5.255ns (frequency: 190.311MHz)
+  Clock period: 5.255ns (frequency: 190.300MHz)
   Total number of paths / destination ports: 14 / 2
 -------------------------------------------------------------------------
 Delay:               2.627ns (Levels of Logic = 3)
@@ -1784,7 +1787,7 @@ Delay:               2.627ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              49   0.472   0.793  DP/FRW_CU/s_if_id_is_jmp (DP/FRW_CU/s_if_id_is_jmp)
+     LD:G->Q              50   0.472   0.793  DP/FRW_CU/s_if_id_is_jmp (DP/FRW_CU/s_if_id_is_jmp)
      LUT5:I0->O            1   0.097   0.683  DP/FRW_CU/Mmux_FCU_insert_stall37 (DP/FRW_CU/Mmux_FCU_insert_stall36)
      LUT6:I1->O            1   0.097   0.379  DP/FRW_CU/Mmux_FCU_insert_stall38 (DP/FRW_CU/Mmux_FCU_insert_stall37)
      LUT6:I4->O          247   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
@@ -1795,7 +1798,7 @@ Delay:               2.627ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DLX_clk'
-  Total number of paths / destination ports: 2846969171 / 4983
+  Total number of paths / destination ports: 2846971973 / 4983
 -------------------------------------------------------------------------
 Offset:              11.130ns (Levels of Logic = 24)
   Source:            DLX_enable (PAD)
@@ -1858,7 +1861,7 @@ Offset:              1.521ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DLX_clk'
-  Total number of paths / destination ports: 1921 / 97
+  Total number of paths / destination ports: 1890 / 66
 -------------------------------------------------------------------------
 Offset:              3.831ns (Levels of Logic = 6)
   Source:            DP/IR_EX_MEM_REG/data_out_20 (FF)
@@ -1936,7 +1939,7 @@ Clock to Setup on destination clock DLX_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DLX_clk        |   11.346|    6.554|    2.181|         |
+DLX_clk        |   11.346|    6.549|    2.181|         |
 DP/s_fcu_enable|   11.258|   11.372|         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -1952,14 +1955,14 @@ DP/s_fcu_enable|    1.314|    2.627|         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 104.00 secs
-Total CPU time to Xst completion: 104.11 secs
+Total REAL time to Xst completion: 132.00 secs
+Total CPU time to Xst completion: 132.42 secs
  
 --> 
 
-Total memory usage is 382248 kilobytes
+Total memory usage is 391592 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  329 (   0 filtered)
-Number of infos    :   81 (   0 filtered)
+Number of warnings :  331 (   0 filtered)
+Number of infos    :   82 (   0 filtered)
 

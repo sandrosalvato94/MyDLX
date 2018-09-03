@@ -1,0 +1,29 @@
+Command line:
+   DLX_plus_memories_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55585
+
+Mon Sep 03 12:06:56 2018
+
+
+ Elaboration Time: 0.546875 sec
+
+ Current Memory Usage: 460.747 Meg
+
+ Total Signals          : 13387
+ Total Nets             : 186900
+ Total Signal Drivers   : 8783
+ Total Blocks           : 13233
+ Total Primitive Blocks : 9233
+ Total Processes        : 8658
+ Total Traceable Variables  : 10287
+ Total Scalar Nets and Variables : 198800
+Total Line Count : 9449
+
+ Total Simulation Time: 0.6875 sec
+
+ Current Memory Usage: 461.795 Meg
+
+Mon Sep 03 12:07:12 2018
+
