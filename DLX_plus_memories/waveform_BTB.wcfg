@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="60" />
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/btb_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">btb_enable</obj_property>
       <obj_property name="ObjectShortName">btb_enable</obj_property>
@@ -53,6 +53,22 @@
       <obj_property name="ElementShortName">btb_is_branch</obj_property>
       <obj_property name="ObjectShortName">btb_is_branch</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/btb_restore" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btb_restore</obj_property>
+      <obj_property name="ObjectShortName">btb_restore</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_is_branch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_is_branch</obj_property>
+      <obj_property name="ObjectShortName">bmm_is_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_branch_taken" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_branch_taken</obj_property>
+      <obj_property name="ObjectShortName">bmm_branch_taken</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_restore" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_restore</obj_property>
+      <obj_property name="ObjectShortName">bmm_restore</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/btb_target_from_de" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">btb_target_from_de[31:0]</obj_property>
       <obj_property name="ObjectShortName">btb_target_from_de[31:0]</obj_property>
@@ -77,21 +93,27 @@
       <obj_property name="ObjectShortName">s_targets_freg_tmux[0:31]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/s_updatesat_fregcmpbits_tsats" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_updatesat_fregcmpbits_tsats[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_updatesat_fregcmpbits_tsats[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
       <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_so" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_so</obj_property>
+      <obj_property name="ObjectShortName">sat_so</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/s_selmuxes_fencoder_tmuxes" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_selmuxes_fencoder_tmuxes[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_selmuxes_fencoder_tmuxes[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(31)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
       <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_reset" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">bmm_reset</obj_property>
-      <obj_property name="ObjectShortName">bmm_reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">bmm_enable</obj_property>
-      <obj_property name="ObjectShortName">bmm_enable</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_restore" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">bmm_restore</obj_property>
@@ -100,7 +122,17 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_pc" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bmm_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">bmm_pc[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_npc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_npc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_npc[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_computed_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_computed_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_computed_pc[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_is_branch" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">bmm_is_branch</obj_property>
@@ -113,7 +145,17 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_pc_btb" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bmm_pc_btb[31:0]</obj_property>
       <obj_property name="ObjectShortName">bmm_pc_btb[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_npc_btb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_npc_btb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_npc_btb[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_computed_pc_btb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bmm_computed_pc_btb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bmm_computed_pc_btb[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/bmm_is_branch_btb" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">bmm_is_branch_btb</obj_property>
@@ -123,13 +165,112 @@
       <obj_property name="ElementShortName">bmm_branch_taken_btb</obj_property>
       <obj_property name="ObjectShortName">bmm_branch_taken_btb</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/s_cnt_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_cnt_out[1:0]</obj_property>
-      <obj_property name="ObjectShortName">s_cnt_out[1:0]</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_clk</obj_property>
+      <obj_property name="ObjectShortName">sat_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BMM/s_pc_freg_tmux" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_pc_freg_tmux[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_pc_freg_tmux[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_reset</obj_property>
+      <obj_property name="ObjectShortName">sat_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_enable</obj_property>
+      <obj_property name="ObjectShortName">sat_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_ud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_ud</obj_property>
+      <obj_property name="ObjectShortName">sat_ud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_update" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_update</obj_property>
+      <obj_property name="ObjectShortName">sat_update</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_settodef" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_settodef</obj_property>
+      <obj_property name="ObjectShortName">sat_settodef</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/sat_so" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sat_so</obj_property>
+      <obj_property name="ObjectShortName">sat_so</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_reset</obj_property>
+      <obj_property name="ObjectShortName">s_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_enable</obj_property>
+      <obj_property name="ObjectShortName">s_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_ud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_ud</obj_property>
+      <obj_property name="ObjectShortName">s_ud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_tcmax" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tcmax</obj_property>
+      <obj_property name="ObjectShortName">s_tcmax</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_tcmin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tcmin</obj_property>
+      <obj_property name="ObjectShortName">s_tcmin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnt[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnt[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/s_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_clk</obj_property>
+      <obj_property name="ObjectShortName">s_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/n" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">n</obj_property>
+      <obj_property name="ObjectShortName">n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_clk</obj_property>
+      <obj_property name="ObjectShortName">cu_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_reset</obj_property>
+      <obj_property name="ObjectShortName">cu_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_enable</obj_property>
+      <obj_property name="ObjectShortName">cu_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_ud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_ud</obj_property>
+      <obj_property name="ObjectShortName">cu_ud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_update" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_update</obj_property>
+      <obj_property name="ObjectShortName">cu_update</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_loaddefault" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_loaddefault</obj_property>
+      <obj_property name="ObjectShortName">cu_loaddefault</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_tcmax" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_tcmax</obj_property>
+      <obj_property name="ObjectShortName">cu_tcmax</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/cu_tcmin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cu_tcmin</obj_property>
+      <obj_property name="ObjectShortName">cu_tcmin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/udc_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udc_clk</obj_property>
+      <obj_property name="ObjectShortName">udc_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/udc_ud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udc_ud</obj_property>
+      <obj_property name="ObjectShortName">udc_ud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/udc_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udc_enable</obj_property>
+      <obj_property name="ObjectShortName">udc_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/BTB_cache/\gen_sat(0)\/SAT_Cnt_i/CU/udc_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udc_reset</obj_property>
+      <obj_property name="ObjectShortName">udc_reset</obj_property>
    </wvobject>
 </wave_config>

@@ -36,10 +36,15 @@ entity BTB_misprediction_manager is
 		BMM_reset				:  in  std_logic;
 		BMM_enable				:  in  std_logic;
 		BMM_restore				:	in  std_logic;
-		BMM_PC					:  in  std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_PC					:  in  std_logic_vector(NBIT_PC-1 downto 0); --program counter from DE
+		BMM_NPC					:  in  std_logic_vector(NBIT_PC-1 downto 0); --program counter from IF
+		BMM_computed_PC		:  in  std_logic_vector(NBIT_PC-1 downto 0); 
 		BMM_is_branch			:  in  std_logic;
 		BMM_branch_taken		:  in  std_logic;
 		BMM_PC_BTB				:  out std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_NPC_BTB				:  out std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_computed_PC_BTB	:  out std_logic_vector(NBIT_PC-1 downto 0); 
+		BMM_restore_BTB		:  out std_logic; 
 		BMM_is_branch_BTB 	:  out std_logic;
 		BMM_branch_taken_BTB	:  out std_logic
 	);
@@ -100,17 +105,32 @@ architecture Structural of BTB_misprediction_manager is
 
 	signal s_cnt_out						: std_logic_vector(1 downto 0);
 	signal s_pc_Freg_Tmux				: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_npc_Freg_Tmux				: std_logic_vector(NBIT_PC-1 downto 0);
+	signal s_computed_pc_Freg_Tmux	: std_logic_vector(NBIT_PC-1 downto 0);
 	signal s_is_branch_Freg_Tmux		: std_logic;
 	signal s_branch_taken_Freg_Tmux	: std_logic;
 	signal s_cnt_out_xored				: std_logic;
 	signal s_not_cnt_out_xored			: std_logic;
 	signal s_rst							: std_logic;
 	signal s_not_branch_taken			: std_logic;
+	signal s_restore						: std_logic;
+	signal s_restore_Freg_Tmux			: std_logic;
 
 begin
 
 -----------------------------------------------------------------------------
-	s_rst <= BMM_restore OR BMM_reset;
+	RESTORE_REG : Reg1Bit PORT MAP (
+											clk		=> BMM_clk,
+											reset		=> BMM_reset,
+											data_in	=> BMM_restore, 
+											enable   =>	BMM_enable,
+											load		=> '1',
+											data_out => s_restore
+											);
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+	s_rst <= s_restore OR BMM_reset;
 	
 	CNT : SAT_Counter	GENERIC MAP (N => 2) PORT MAP (
 																	SAT_enable  => BMM_enable,
@@ -135,6 +155,32 @@ begin
 																	load		=> '1',
 																	data_out => s_pc_Freg_Tmux
 																	);
+	REG_NPC : NRegister GENERIC MAP (N => NBIT_PC) PORT MAP (
+																	clk		=> BMM_clk,
+																	reset		=> BMM_reset,
+																	data_in	=> BMM_NPC, 
+																	enable   =>	s_not_cnt_out_xored,
+																	load		=> '1',
+																	data_out => s_npc_Freg_Tmux
+																	);
+	REG_computed_PC : NRegister GENERIC MAP (N => NBIT_PC) PORT MAP (
+																	clk		=> BMM_clk,
+																	reset		=> BMM_reset,
+																	data_in	=> BMM_computed_PC, 
+																	enable   =>	s_not_cnt_out_xored,
+																	load		=> '1',
+																	data_out => s_computed_pc_Freg_Tmux
+																	);
+	REG_RESTORE : Reg1Bit PORT MAP (
+											clk		=> BMM_clk,
+											reset		=> BMM_reset,
+											data_in	=> BMM_restore, 
+											enable   =>	s_not_cnt_out_xored,
+											load		=> '1',
+											data_out => s_restore_Freg_Tmux
+											);
+	BMM_restore_BTB <= s_restore_Freg_Tmux;
+	
 	IS_BRANCH_REG : Reg1Bit PORT MAP (
 											clk		=> BMM_clk,
 											reset		=> BMM_reset,
@@ -144,25 +190,47 @@ begin
 											data_out => s_is_branch_Freg_Tmux
 											);
 											
-	s_not_branch_taken <= NOT(BMM_branch_taken);
 											
 	BRANCH_TAKEN_REG : Reg1Bit PORT MAP (
 											clk		=> BMM_clk,
 											reset		=> BMM_reset,
-											data_in	=> s_not_branch_taken, 
+											data_in	=> BMM_branch_taken, 
 											enable   =>	s_not_cnt_out_xored,
 											load		=> '1',
 											data_out => s_branch_taken_Freg_Tmux
 											);
+	
+	s_not_branch_taken <= NOT(s_branch_taken_Freg_Tmux);
 -----------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------
 	MUX_PC : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_PC) PORT MAP (
 																				port0	=> BMM_PC,
-																				port1	=> s_pc_Freg_Tmux, 
+																				port1	=> s_npc_Freg_Tmux, 
 																				sel	=> s_cnt_out_xored,
 																				portY	=> BMM_PC_BTB
 																				);
+	MUX_NPC : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_PC) PORT MAP (
+																				port0	=> BMM_NPC,
+																				port1	=> s_pc_Freg_Tmux, 
+																				sel	=> s_cnt_out_xored,
+																				portY	=> BMM_NPC_BTB
+																				);
+	
+	MUX_computed_PC : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_PC) PORT MAP (
+																				port0	=> BMM_computed_PC,
+																				port1	=> s_computed_pc_Freg_Tmux, 
+																				sel	=> s_cnt_out_xored,
+																				portY	=> BMM_computed_PC_BTB
+																				);
+	
+--	MUX_RESTORE : Mux_1Bit_2x1 PORT MAP (
+--											port0	=> s_restore,
+--											port1	=> s_restore_Freg_Tmux, 
+--											sel	=> s_cnt_out_xored,
+--											portY	=> BMM_restore_BTB
+--											);
+	
 	MUX_IS_BRANCH : Mux_1Bit_2x1 PORT MAP (
 											port0	=> BMM_is_branch,
 											port1	=> s_is_branch_Freg_Tmux, 
@@ -172,7 +240,7 @@ begin
 											
 	MUX_BRANCH_TAKEN : Mux_1Bit_2x1 PORT MAP (
 											port0	=> BMM_branch_taken,
-											port1	=> s_branch_taken_Freg_Tmux, 
+											port1	=> s_not_branch_taken, 
 											sel	=> s_cnt_out_xored,
 											portY	=> BMM_branch_taken_BTB
 											);

@@ -55,6 +55,7 @@ entity BTB is
 		BTB_clk:			in std_logic;
 		BTB_rst:			in std_logic;
 		BTB_enable:		in std_logic;
+		BTB_restore:	in std_logic;
 		BTB_PC_From_IF:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		BTB_PC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		--BTB_NPC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
@@ -192,6 +193,7 @@ architecture Structural of BTB is
 	signal s_prediction_Fsat_Tmuxes	: std_logic_vector(0 to N_ENTRY-1):= (others => '0');
 	signal s_sat_prediction_Toutput	: std_logic := '0';
 	signal s_mux_signals		: matrixTarget :=(others => (others => (others => '0')));
+	signal s_enable_entry_target_regs	: std_logic;
 
 
 begin
@@ -228,14 +230,17 @@ begin
 				);
 ------------------------------------------------------------------------------------	
 
+
 ------------------------------------------------------------------------------------
+	s_enable_entry_target_regs <= BTB_enable AND NOT (BTB_restore);
+	
 	GEN_ENTR_REG: for i in 0 to N_ENTRY-1 generate
 		EntrReg_i: NRegister GENERIC MAP (N=>NBIT_ENTRY)
 				PORT MAP(
 					clk => BTB_clk,
 					reset => BTB_rst,
 					data_in => BTB_PC_From_DE,
-					enable => BTB_enable,
+					enable => s_enable_entry_target_regs,
 					load => s_regenabl_entry(N_ENTRY-i-1),
 					data_out => s_entries_Freg_Tcmp(i)
 				);
@@ -249,7 +254,7 @@ begin
 					clk => BTB_clk,
 					reset => BTB_rst,
 					data_in => BTB_target_From_DE,
-					enable => BTB_enable,
+					enable => s_enable_entry_target_regs,
 					load => s_regenabl_target(N_ENTRY-i-1),
 					data_out => s_targets_Freg_Tmux(i)
 				);

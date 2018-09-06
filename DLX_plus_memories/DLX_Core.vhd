@@ -134,8 +134,10 @@ architecture Structural of DLX_Core is
 		BTB_clk:			in std_logic;
 		BTB_rst:			in std_logic;
 		BTB_enable:		in std_logic;
+		BTB_restore:	in std_logic;
 		BTB_PC_From_IF:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		BTB_PC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
+		--BTB_NPC_From_DE:		in std_logic_vector(NBIT_ENTRY-1 downto 0);
 		BTB_target_From_DE:		in std_logic_vector(NBIT_TARGET-1 downto 0);
 		BTB_is_branch:		in std_logic; -- 1 true, 0 false
 		BTB_branch_taken:		in std_logic; -- 1 true, 0 false. Coming from DE
@@ -152,10 +154,15 @@ architecture Structural of DLX_Core is
 		BMM_reset				:  in  std_logic;
 		BMM_enable				:  in  std_logic;
 		BMM_restore				:	in  std_logic;
-		BMM_PC					:  in  std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_PC					:  in  std_logic_vector(NBIT_PC-1 downto 0); --program counter from DE
+		BMM_NPC					:  in  std_logic_vector(NBIT_PC-1 downto 0); --program counter from IF
+		BMM_computed_PC		:  in  std_logic_vector(NBIT_PC-1 downto 0); 
 		BMM_is_branch			:  in  std_logic;
 		BMM_branch_taken		:  in  std_logic;
 		BMM_PC_BTB				:  out std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_NPC_BTB				:  out std_logic_vector(NBIT_PC-1 downto 0);
+		BMM_computed_PC_BTB	:  out std_logic_vector(NBIT_PC-1 downto 0); 
+		BMM_restore_BTB		:  out std_logic; 
 		BMM_is_branch_BTB 	:  out std_logic;
 		BMM_branch_taken_BTB	:  out std_logic
 	);
@@ -186,7 +193,10 @@ architecture Structural of DLX_Core is
 	signal s_PC_Fbmm_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_NPC_Fdp_Tbmm					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_NPC_Fbmm_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_computed_NPC_Fdp_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_computed_NPC_Fdp_Tbmm					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
+	signal s_computed_NPC_Fbmm_Tbtb					: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_branch_taken_Fdp_Tdp_cu		: std_logic;
 	signal s_branch_taken_Fd_bmm_Tbtb		: std_logic;
 	signal s_IFID_istr_is_brnch_Fdp_Tbtb: std_logic;
@@ -196,7 +206,8 @@ architecture Structural of DLX_Core is
 	signal s_IR_func_Fdp_Tcu				: std_logic_vector(10 downto 0);
 	signal s_target_Fdp_Tbtb				: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_instr_is_branch				: std_logic;
-	signal s_restore_btb						: std_logic;
+	signal s_restore_Fdp_Tbmm					: std_logic;
+	signal s_restore_Fbmm_Tbtb					: std_logic;
 	
 	
 
@@ -232,14 +243,14 @@ begin
 		DP_Load_BYTE_half				=> s_WB_cw_Fcu_Tdp(25),
 		DP_Load_SGN_usg_reduce		=> s_WB_cw_Fcu_Tdp(26),
 		DP_insert_bubble				=> s_insert_bubble_Fdp_Tcu,
-		DP_restore_BTB					=> s_restore_btb,
-		DP_PC								=> s_PC_Fdp_Tbtb,	
+		DP_restore_BTB					=> s_restore_Fdp_Tbmm,
+		DP_PC								=> s_PC_Fdp_Tbmm,	
 		--DP_NPC							=> s_NPC_Fdp_Tbtb,
-		DP_IF_ID_instr_is_branch   => s_IFID_istr_is_brnch_Fdp_Tbtb,
+		DP_IF_ID_instr_is_branch   => s_IFID_istr_is_brnch_Fdp_Tbmm,
 		DP_IR_opcode					=> s_IR_opcode_Fdp_Tcu,
 		DP_IR_func						=> s_IR_func_Fdp_Tcu,
 		DP_branch_taken				=> s_branch_taken_Fdp_Tdp_cu,
-		DP_computed_new_PC			=> s_computed_NPC_Fdp_Tbtb,
+		DP_computed_new_PC			=> s_computed_NPC_Fdp_Tbmm,
 		DP_target						=> s_target_Fdp_Tbtb,
 		DP_data_to_DRAM				=> DLX_written_data,
 		DP_address_to_DRAM			=> DLX_address_written_data
@@ -279,22 +290,27 @@ begin
 		reset => DLX_reset,
 		enable => s_insert_bubble_Fdp_Tcu,
 		load => '1',
-		data_in => s_PC_Fdp_Tbtb,
-		data_out => s_NPC_Fdp_Tbtb
+		data_in => s_PC_Fdp_Tbmm,
+		data_out => s_NPC_Fdp_Tbmm
 		);
 	
---	BMM : BTB_misprediction_manager GENERIC MAP (NBIT_PC => 2**NBIT_IRAM_ADDRESS) PORT MAP (
---																			BMM_clk					=> DLX_clk,
---																			BMM_reset				=> DLX_reset,
---																			BMM_enable				=> s_insert_bubble_Fdp_Tcu,
---																			BMM_restore				=> s_restore_btb,
---																			BMM_PC					=> s_PC_Fdp_Tbmm,
---																			BMM_is_branch			=> s_IFID_istr_is_brnch_Fdp_Tbmm,
---																			BMM_branch_taken		=> s_branch_taken_Fdp_Tdp_cu,
---																			BMM_PC_BTB				=> s_PC_Fbmm_Tbtb,
---																			BMM_is_branch_BTB 	=> s_IFID_istr_is_brnch_Fbmm_Tbtb,
---																			BMM_branch_taken_BTB	=> s_branch_taken_Fd_bmm_Tbtb
---																);
+	BMM : BTB_misprediction_manager GENERIC MAP (NBIT_PC => 2**NBIT_IRAM_ADDRESS) PORT MAP (
+																			BMM_clk					=> DLX_clk,
+																			BMM_reset				=> DLX_reset,
+																			BMM_enable				=> s_insert_bubble_Fdp_Tcu,
+																			BMM_restore				=> s_restore_Fdp_Tbmm,
+																			BMM_PC					=> s_PC_Fdp_Tbmm,
+																			BMM_NPC					=> s_NPC_Fdp_Tbmm,
+																			BMM_computed_PC		=> s_computed_NPC_Fdp_Tbmm,
+																			BMM_is_branch			=> s_IFID_istr_is_brnch_Fdp_Tbmm,
+																			BMM_branch_taken		=> s_branch_taken_Fdp_Tdp_cu,
+																			BMM_PC_BTB				=> s_PC_Fbmm_Tbtb,
+																			BMM_NPC_BTB				=> s_NPC_Fbmm_Tbtb,
+																			BMM_computed_PC_BTB	=> s_computed_NPC_Fbmm_Tbtb,
+																			BMM_restore_BTB		=> s_restore_Fbmm_Tbtb,
+																			BMM_is_branch_BTB 	=> s_IFID_istr_is_brnch_Fbmm_Tbtb,
+																			BMM_branch_taken_BTB	=> s_branch_taken_Fd_bmm_Tbtb
+																);
 	
 	BTB_cache : BTB GENERIC MAP (N_ENTRY => N_BTB_ENTRY, 
 										  NBIT_ENTRY => 2**NBIT_IRAM_ADDRESS, 
@@ -304,13 +320,14 @@ begin
 		BTB_clk						=> DLX_clk,
 		BTB_rst						=> DLX_reset,
 		BTB_enable					=> s_insert_bubble_Fdp_Tcu, --should be checked
-		BTB_PC_From_IF				=> s_PC_Fdp_Tbtb,
-		BTB_PC_From_DE				=> s_NPC_Fdp_Tbtb,
+		BTB_restore					=> s_restore_Fbmm_Tbtb,
+		BTB_PC_From_IF				=> s_PC_Fbmm_Tbtb,
+		BTB_PC_From_DE				=> s_NPC_Fbmm_Tbtb,
 --      BTB_target_From_DE		=> s_target_Fdp_Tbtb,
-		BTB_target_From_DE		=> s_computed_NPC_Fdp_Tbtb, --modificato il 7 luglio
-		BTB_is_branch				=> s_IFID_istr_is_brnch_Fdp_Tbtb,
+		BTB_target_From_DE		=> s_computed_NPC_Fbmm_Tbtb, --modificato il 7 luglio
+		BTB_is_branch				=> s_IFID_istr_is_brnch_Fbmm_Tbtb,
 --		BTB_is_branch				=> s_instr_is_branch, -- modificato il 7 luglio
-		BTB_branch_taken			=> s_branch_taken_Fdp_Tdp_cu,
+		BTB_branch_taken			=> s_branch_taken_Fd_bmm_Tbtb,
 		BTB_target_prediction	=> s_target_prediction_Fbtb_Tdp,
 		BTB_prediction				=> s_prediction_Fbtb_Tdp
 		);

@@ -8,6 +8,7 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/BTB - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|BTB.vhd</ClosedNode>
+         <ClosedNode>/BTB_misprediction_manager - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|BTB_misprediction_manager.vhd</ClosedNode>
          <ClosedNode>/BTB_misprediction_manager - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|BTB_misprediction_manager.vhd/CNT - SAT_Counter - Structural</ClosedNode>
          <ClosedNode>/ControlUnit - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|ControlUnit.vhd</ClosedNode>
          <ClosedNode>/DLX_Core - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_Core.vhd</ClosedNode>
@@ -15,10 +16,10 @@
          <ClosedNode>/DLX_Core - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_Core.vhd/CU - ControlUnit - Structural</ClosedNode>
          <ClosedNode>/DLX_Core - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_Core.vhd/DP - Datapath - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BMM - BTB_misprediction_manager - Structural</ClosedNode>
-         <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BTB_cache - BTB - Structural</ClosedNode>
+         <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BMM - BTB_misprediction_manager - Structural/CNT - SAT_Counter - Structural/CNT - UD_COUNTER - STR</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BTB_cache - BTB - Structural/NCmp_i - NComparatorWithEnable - Behavioral</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BTB_cache - BTB - Structural/RotReg - NRotateRegister - Behavioral</ClosedNode>
-         <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BTB_cache - BTB - Structural/SAT_Cnt_i - SAT_Counter_BTB - Structural</ClosedNode>
+         <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/BTB_cache - BTB - Structural/SAT_Cnt_i - SAT_Counter_BTB - Structural/CNT - UD_COUNTER - STR</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/CU - ControlUnit - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural</ClosedNode>
          <ClosedNode>/DLX_plus_memories - Behavioral C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|DLX_plus_memories.vhd/DLX - DLX_Core - Structural/DP - Datapath - Structural/DE_Stage - Decode - Structural/Cmp - NComparatorWithEnable - Behavioral</ClosedNode>
@@ -44,13 +45,13 @@
          <ClosedNode>/UpDownCounter - Structural C:|Users|Alessandro|Documents|GitHub|MyDLX|DLX_plus_memories|UpDownCounter.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>DLX - DLX_Core - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.vhd)</SelectedItem>
+         <SelectedItem>SAT_Cnt_i - SAT_Counter_BTB - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d20000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000224000000020000000000000000000000000200000064ffffffff000000810000000300000002000002240000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>DLX - DLX_Core - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/DLX_Core.vhd)</CurrentItem>
+      <CurrentItem>SAT_Cnt_i - SAT_Counter_BTB - Structural (C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/SAT_Counter.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -58,13 +59,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -86,7 +87,7 @@
       <SelectedItems>
          <SelectedItem>constants.vhd</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
@@ -105,7 +106,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -163,13 +164,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem>ISim Simulator</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
    <ItemView engineview="PostTransSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
