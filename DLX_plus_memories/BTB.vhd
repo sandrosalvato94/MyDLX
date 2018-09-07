@@ -190,11 +190,13 @@ architecture Structural of BTB is
 	signal s_regenabl_target		: std_logic_vector(N_ENTRY-1 downto 0):= (others => '0');
 	signal s_regenabl_sat		: std_logic_vector(N_ENTRY-1 downto 0):= (others => '0');
 	signal s_updateSat_FregCmpBits_Tsats    : std_logic_vector(N_ENTRY-1 downto 0):= (others => '0');
-	signal s_prediction_Fsat_Tmuxes	: std_logic_vector(0 to N_ENTRY-1):= (others => '0');
+	--signal s_prediction_Fsat_Tmuxes	: std_logic_vector(0 to N_ENTRY-1):= (others => '0');
+	signal s_prediction_Fsat_Tmuxes	: std_logic_vector(N_ENTRY-1 downto 0):= (others => '0');
 	signal s_sat_prediction_Toutput	: std_logic := '0';
 	signal s_mux_signals		: matrixTarget :=(others => (others => (others => '0')));
 	signal s_enable_entry_target_regs	: std_logic;
 	signal s_enable_rot_reg					: std_logic;
+	signal s_btb_prediction					: std_logic;
 
 
 begin
@@ -269,7 +271,7 @@ begin
 			PORT MAP(
 				clk => BTB_clk,
 				reset => BTB_rst,
-				data_in => s_enable_entry_target_regs,
+				data_in => s_HIT_miss,
 				enable => BTB_enable,
 				load => '1',
 				data_out => s_HIT_miss_Freg_Txor
@@ -278,29 +280,29 @@ begin
 
 ------------------------------------------------------------------------------------
 	--s_update_rotate_reg <= (s_HIT_miss_Freg_Txor XOR BTB_is_branch); --AND BTB_clk
-	s_update_rotate_reg <= NOT(s_HIT_miss_Freg_Txor) AND BTB_is_branch AND s_enable_entry_target_regs;
+	s_update_rotate_reg <= NOT(s_HIT_miss_Freg_Txor) AND BTB_is_branch AND NOT(BTB_restore);
 ------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------
---	RESTORE_REG_BTB: Reg1Bit 
---			PORT MAP(
---				clk => BTB_clk,
---				reset => BTB_rst,
---				data_in => s_enable_entry_target_regs,
---				enable => BTB_enable,
---				load => '1',
---				data_out => s_enable_rot_reg
---			);
---	
+	RESTORE_REG_BTB: Reg1Bit 
+			PORT MAP(
+				clk => BTB_clk,
+				reset => BTB_rst,
+				data_in => s_enable_entry_target_regs,
+				enable => BTB_enable,
+				load => '1',
+				data_out => s_enable_rot_reg
+			);
+	
 	
 	RotReg : NRotateRegister GENERIC MAP (N => N_ENTRY)
 				PORT MAP (
 					clk => BTB_clk,
 					reset => BTB_rst,
-					enable => BTB_enable,
+					enable => BTB_enable, -- BTB_enable
 					load => '0', 
 					data_in => (others => '0'),
-					rotate => s_update_rotate_reg,
+					rotate => s_update_rotate_reg, --without s_enable_rot_reg
 					data_out => s_regenabl_FrotateR_Tregs
 				);
 ------------------------------------------------------------------------------------
@@ -370,6 +372,13 @@ begin
 				port0 => '0',
 				port1 => s_sat_prediction_Toutput,
 				sel => s_HIT_miss,
+				portY => s_btb_prediction
+			    );
+	
+	Mux_restore : Mux_1Bit_2X1 PORT MAP(
+				port0 => s_btb_prediction,
+				port1 => BTB_branch_taken,
+				sel => BTB_restore,
 				portY => BTB_prediction
 			    );
 --------------------------------------------------------------------------------------

@@ -72,7 +72,7 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 168564 KB
-Fuse CPU Usage: 1031 ms
+Fuse CPU Usage: 1015 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package constants
@@ -164,4 +164,7 @@ Compiling architecture behavioral of entity DLX_plus_memories [dlx_plus_memories
 Compiling architecture behavior of entity tb_dlx_pm
 Time Resolution for simulation is 1ps.
 Waiting for 73 sub-compilation(s) to finish...
-ERROR:Simulator:904 - Unable to remove previous simulation file C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe. Please check if you have another instance of this simulation running on your system, terminate it and then recompile your design. System Error Message: boost::filesystem::remove: Accesso negato: "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\TB_DLX_PM_isim_beh.exe"
+Compiled 168 VHDL Units
+Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
+Fuse Memory Usage: 241924 KB
+Fuse CPU Usage: 3140 ms

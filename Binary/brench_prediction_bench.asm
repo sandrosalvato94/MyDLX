@@ -6,8 +6,8 @@ bnez r0,l0
 sll r1,r10,r9
 sra r2,r20,r3
 addi r8, r0, #8
+nop
 bnez r0,l0
-addi r3 r1 #5
 jalr r8
 l2:
 j l4

@@ -179,7 +179,7 @@ begin
 											load		=> '1',
 											data_out => s_restore_Freg_Tmux
 											);
-	BMM_restore_BTB <= s_restore_Freg_Tmux;
+	--BMM_restore_BTB <= s_restore_Freg_Tmux;
 	
 	IS_BRANCH_REG : Reg1Bit PORT MAP (
 											clk		=> BMM_clk,
@@ -224,12 +224,12 @@ begin
 																				portY	=> BMM_computed_PC_BTB
 																				);
 	
---	MUX_RESTORE : Mux_1Bit_2x1 PORT MAP (
---											port0	=> s_restore,
---											port1	=> s_restore_Freg_Tmux, 
---											sel	=> s_cnt_out_xored,
---											portY	=> BMM_restore_BTB
---											);
+	MUX_RESTORE : Mux_1Bit_2x1 PORT MAP (
+											port0	=> s_restore,
+											port1	=> s_restore_Freg_Tmux, 
+											sel	=> s_cnt_out_xored,
+											portY	=> BMM_restore_BTB
+											);
 	
 	MUX_IS_BRANCH : Mux_1Bit_2x1 PORT MAP (
 											port0	=> BMM_is_branch,
