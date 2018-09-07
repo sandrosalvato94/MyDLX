@@ -62,7 +62,7 @@ architecture Structural of SAT_Counter_BTB is
 --	);
 --	end component;
 
-	component UD_COUNTER is
+	component UD_COUNTER_BTB is
 	generic (UDC_NBIT : integer := 4);           -- number of bits
 	port (
 		UDC_EN  : in  std_logic;            -- enable counter
@@ -112,7 +112,7 @@ architecture Structural of SAT_Counter_BTB is
 
 begin
 
-	CNT : UD_COUNTER GENERIC MAP (UDC_NBIT => N)
+	CNT : UD_COUNTER_BTB GENERIC MAP (UDC_NBIT => N)
 			PORT MAP(
 				UDC_CLK => s_clk,
 				UDC_RST => s_reset,

@@ -194,6 +194,7 @@ architecture Structural of BTB is
 	signal s_sat_prediction_Toutput	: std_logic := '0';
 	signal s_mux_signals		: matrixTarget :=(others => (others => (others => '0')));
 	signal s_enable_entry_target_regs	: std_logic;
+	signal s_enable_rot_reg					: std_logic;
 
 
 begin
@@ -232,7 +233,7 @@ begin
 
 
 ------------------------------------------------------------------------------------
-	s_enable_entry_target_regs <= BTB_enable AND NOT (BTB_restore);
+	s_enable_entry_target_regs <= BTB_enable AND NOT(BTB_restore);
 	
 	GEN_ENTR_REG: for i in 0 to N_ENTRY-1 generate
 		EntrReg_i: NRegister GENERIC MAP (N=>NBIT_ENTRY)
@@ -268,7 +269,7 @@ begin
 			PORT MAP(
 				clk => BTB_clk,
 				reset => BTB_rst,
-				data_in => s_HIT_miss,
+				data_in => s_enable_entry_target_regs,
 				enable => BTB_enable,
 				load => '1',
 				data_out => s_HIT_miss_Freg_Txor
@@ -277,10 +278,21 @@ begin
 
 ------------------------------------------------------------------------------------
 	--s_update_rotate_reg <= (s_HIT_miss_Freg_Txor XOR BTB_is_branch); --AND BTB_clk
-	s_update_rotate_reg <= NOT(s_HIT_miss_Freg_Txor) AND BTB_is_branch;
+	s_update_rotate_reg <= NOT(s_HIT_miss_Freg_Txor) AND BTB_is_branch AND s_enable_entry_target_regs;
 ------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------
+--	RESTORE_REG_BTB: Reg1Bit 
+--			PORT MAP(
+--				clk => BTB_clk,
+--				reset => BTB_rst,
+--				data_in => s_enable_entry_target_regs,
+--				enable => BTB_enable,
+--				load => '1',
+--				data_out => s_enable_rot_reg
+--			);
+--	
+	
 	RotReg : NRotateRegister GENERIC MAP (N => N_ENTRY)
 				PORT MAP (
 					clk => BTB_clk,

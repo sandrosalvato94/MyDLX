@@ -57,7 +57,7 @@ begin  -- architecture STR
 
     FIRST_FF : if i = 0 generate
 
-      FF_0 : t_ff_rst0 
+      FF_0 : t_ff_rst1 
         port map(
           TFF_t   => UDC_EN,
           TFF_clk => UDC_CLK,
@@ -71,7 +71,7 @@ begin  -- architecture STR
 
     SECOND_FF : if i > 0 AND i < UDC_NBIT - 1 generate
 
-      FF_i : t_ff_rst0       port map(
+      FF_i : t_ff_rst1       port map(
           TFF_t   => s_toggle(i),
           TFF_clk => UDC_CLK,
           TFF_rst => UDC_RST,
@@ -84,7 +84,7 @@ begin  -- architecture STR
     
     LAST_FF : if i = UDC_NBIT-1 generate
 
-      FF_N : t_ff_rst1       port map(
+      FF_N : t_ff_rst0       port map(
           TFF_t   => s_toggle(i),
           TFF_clk => UDC_CLK,
           TFF_rst => UDC_RST,

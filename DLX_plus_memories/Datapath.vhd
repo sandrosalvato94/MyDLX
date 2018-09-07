@@ -353,6 +353,7 @@ architecture Structural of Datapath is
 	signal s_flush						: std_logic;
 	signal s_btb_prediction			: std_logic;
 	signal s_is_jalr_or_jal			: std_logic;
+
 	
 begin
 

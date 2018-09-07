@@ -323,7 +323,7 @@ begin
 		BTB_restore					=> s_restore_Fbmm_Tbtb,
 		BTB_PC_From_IF				=> s_PC_Fbmm_Tbtb,
 		BTB_PC_From_DE				=> s_NPC_Fbmm_Tbtb,
---      BTB_target_From_DE		=> s_target_Fdp_Tbtb,
+--    BTB_target_From_DE		=> s_target_Fdp_Tbtb,
 		BTB_target_From_DE		=> s_computed_NPC_Fbmm_Tbtb, --modificato il 7 luglio
 		BTB_is_branch				=> s_IFID_istr_is_brnch_Fbmm_Tbtb,
 --		BTB_is_branch				=> s_instr_is_branch, -- modificato il 7 luglio
