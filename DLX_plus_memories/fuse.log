@@ -71,8 +71,8 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 168564 KB
-Fuse CPU Usage: 1015 ms
+Fuse Memory Usage: 110324 KB
+Fuse CPU Usage: 1124 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package constants
@@ -153,10 +153,10 @@ Compiling architecture behavioral of entity NPriorityEncoder [\NPriorityEncoder(
 Compiling architecture behavioral of entity D_FF [d_ff_default]
 Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(2)\]
 Compiling architecture behavioral of entity NRotateRegister [\NRotateRegister(32)\]
-Compiling architecture str of entity UD_COUNTER_BTB [\UD_COUNTER_BTB(2)\]
-Compiling architecture structural of entity SAT_Counter_BTB [\SAT_Counter_BTB(2)\]
+Compiling architecture str of entity UD_COUNTER_BTB [\UD_COUNTER_BTB(3)\]
+Compiling architecture structural of entity SAT_Counter_BTB [\SAT_Counter_BTB(3)\]
 Compiling architecture behavioral of entity Mux_Bit [\Mux_Bit(5)\]
-Compiling architecture structural of entity BTB [\BTB(32,32,32,2)\]
+Compiling architecture structural of entity BTB [\BTB(32,32,32,3)\]
 Compiling architecture structural of entity DLX_Core [\DLX_Core(32,5,32,2)\]
 Compiling architecture behavioral of entity DRAM [\DRAM(10,32)\]
 Compiling architecture iram_bhe of entity IRAM [\IRAM(1024,32)\]
@@ -166,5 +166,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 73 sub-compilation(s) to finish...
 Compiled 168 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 241924 KB
-Fuse CPU Usage: 3140 ms
+Fuse Memory Usage: 182660 KB
+Fuse CPU Usage: 3749 ms

@@ -109,6 +109,7 @@ architecture Structural of SAT_Counter_BTB is
 	signal s_TcMax, s_TcMin	 : std_logic;
 	signal s_cnt		 : std_logic_vector(N-1 downto 0);
 	signal s_clk		 : std_logic;
+	signal s_and, s_nor: std_logic_vector(N downto 0);
 
 begin
 
@@ -133,19 +134,24 @@ begin
 				UDC_enable => s_enable,
 				UDC_reset => s_reset
 		         );
-         AND1 : ANDGate_NX1 GENERIC MAP (N=>N)
-		        PORT MAP (
-				A => s_cnt,
-				B => (others => '1'),
-				Y => s_TcMax
-		        );
-         
-         NOR1 : NORGate_NX1 GENERIC MAP (N=>N)
-		        PORT MAP (
-				A => s_cnt,
-				B => (others => '0'),
-				Y => s_TcMin
-		        );
+				
+					
+			 s_TcMax <= s_cnt(0) AND s_cnt(1) AND s_cnt(2);
+			 s_TcMin <= NOT(s_cnt(0) OR s_cnt(1) OR s_cnt(2));
+					
+--         AND1 : ANDGate_NX1 GENERIC MAP (N=>N)
+--		        PORT MAP (
+--				A => s_cnt,
+--				B => (others => '1'),
+--				Y => s_TcMax
+--		        );
+--         
+--         NOR1 : NORGate_NX1 GENERIC MAP (N=>N)
+--		        PORT MAP (
+--				A => s_cnt,
+--				B => (others => '0'),
+--				Y => s_TcMin
+--		        );
 
          SAT_SO <= s_cnt(N-1);
 end Structural;

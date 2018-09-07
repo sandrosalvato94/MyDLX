@@ -34,7 +34,7 @@ entity DLX_Core is
 	generic(	NBIT_DATA			 : integer := 32;
 				NBIT_IRAM_ADDRESS	 : integer := 5;
 				N_BTB_ENTRY			 : integer := 32;
-				NBIT_BTB_PREDICTION: integer := 2);
+				NBIT_BTB_PREDICTION: integer := 3);
 	port(
 		DLX_clk							: in  std_logic;
 		DLX_reset						: in  std_logic;
@@ -315,7 +315,7 @@ begin
 	BTB_cache : BTB GENERIC MAP (N_ENTRY => N_BTB_ENTRY, 
 										  NBIT_ENTRY => 2**NBIT_IRAM_ADDRESS, 
 										  NBIT_TARGET => 2**NBIT_IRAM_ADDRESS, 
-										  NBIT_PREDICTION => NBIT_BTB_PREDICTION) 
+										  NBIT_PREDICTION => 3) 
 						 PORT MAP (
 		BTB_clk						=> DLX_clk,
 		BTB_rst						=> DLX_reset,

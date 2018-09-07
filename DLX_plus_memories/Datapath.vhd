@@ -455,7 +455,8 @@ begin
 		DE_RegI					=> s_regI_Fde_Tex	--to muxes id/ex
 		);
 	--DP_branch_taken <= s_branch_taken_Fde; -- da modificare, xk la flush non deve essere fatta in caso di branch predetto corettamente, 8 luglio ore 13.00
-	DP_branch_taken <= (s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde;
+	--DP_branch_taken <= (s_btb_prediction XOR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde;
+	DP_branch_taken <= (s_btb_prediction OR s_branch_taken_Fde) AND s_jmp_or_brnch_Ffcu_Tde;
 	DP_computed_new_PC 		 <= s_newPC_Fde_Tif;
 	s_flush <= ((s_btb_prediction XOR s_branch_taken_Fde) AND NOT(s_is_jalr_or_jal)) OR DP_reset;
 	

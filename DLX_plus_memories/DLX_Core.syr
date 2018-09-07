@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: DLX_Core.prj
 
@@ -469,9 +469,10 @@ Elaborating entity <SAT_Counter_BTB> (architecture <Structural>) with generics f
 Elaborating entity <UD_COUNTER_BTB> (architecture <STR>) with generics from library <work>.
 
 Elaborating entity <Mux_Bit> (architecture <Behavioral>) with generics from library <work>.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 671. All outputs of instance <OPB_TO_DRAM_REG> of block <NRegister> are unconnected in block <Datapath>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 711. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 672. All outputs of instance <OPB_TO_DRAM_REG> of block <NRegister> are unconnected in block <Datapath>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 712. All outputs of instance <stall_MEM_WB_REG> of block <Reg1Bit> are unconnected in block <Datapath>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Decode.vhd" line 228. All outputs of instance <R3_enable> of block <Reg1Bit> are unconnected in block <Decode>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\BTB.vhd" line 287. All outputs of instance <RESTORE_REG_BTB> of block <Reg1Bit> are unconnected in block <BTB>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -482,7 +483,7 @@ Synthesizing Unit <DLX_Core>.
         NBIT_DATA = 32
         NBIT_IRAM_ADDRESS = 5
         N_BTB_ENTRY = 32
-        NBIT_BTB_PREDICTION = 2
+        NBIT_BTB_PREDICTION = 3
 INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 219: Output port <DP_NPC> of the instance <DP> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\DLX_Core.vhd" line 219: Output port <DP_target> of the instance <DP> is unconnected or connected to loadless signal.
     Summary:
@@ -493,9 +494,9 @@ Synthesizing Unit <Datapath>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd".
         NBIT_DATA = 32
         NBIT_IRAM_ADDR = 5
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 631: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 671: Output port <data_out> of the instance <OPB_TO_DRAM_REG> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 711: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 632: Output port <EX_PSW> of the instance <EX_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 672: Output port <data_out> of the instance <OPB_TO_DRAM_REG> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\Datapath.vhd" line 712: Output port <data_out> of the instance <stall_MEM_WB_REG> is unconnected or connected to loadless signal.
     Summary:
 Unit <Datapath> synthesized.
 
@@ -1055,7 +1056,8 @@ Synthesizing Unit <BTB>.
         N_ENTRY = 32
         NBIT_ENTRY = 32
         NBIT_TARGET = 32
-        NBIT_PREDICTION = 2
+        NBIT_PREDICTION = 3
+INFO:Xst:3210 - "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\BTB.vhd" line 287: Output port <data_out> of the instance <RESTORE_REG_BTB> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <BTB> synthesized.
@@ -1133,14 +1135,14 @@ Unit <Mux_Bit_1> synthesized.
 
 Synthesizing Unit <SAT_Counter_BTB>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\SAT_Counter.vhd".
-        N = 2
+        N = 3
     Summary:
 	no macro.
 Unit <SAT_Counter_BTB> synthesized.
 
 Synthesizing Unit <UD_COUNTER_BTB>.
     Related source file is "C:\Users\Alessandro\Documents\GitHub\MyDLX\DLX_plus_memories\UD_counter_BTB.vhd".
-        UDC_NBIT = 2
+        UDC_NBIT = 3
     Summary:
 	no macro.
 Unit <UD_COUNTER_BTB> synthesized.
@@ -1159,8 +1161,8 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 276
- 1-bit register                                        : 150
+# Registers                                            : 308
+ 1-bit register                                        : 182
  10-bit register                                       : 1
  19-bit register                                       : 1
  26-bit register                                       : 1
@@ -1172,8 +1174,8 @@ Macro Statistics
 # Comparators                                          : 56
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 40
-# Multiplexers                                         : 1049
- 1-bit 2-to-1 multiplexer                              : 795
+# Multiplexers                                         : 1051
+ 1-bit 2-to-1 multiplexer                              : 797
  1-bit 32-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 7-to-1 multiplexer                              : 1
@@ -1303,13 +1305,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  32x32-bit multiplier                                  : 2
-# Registers                                            : 4005
- Flip-Flops                                            : 4005
+# Registers                                            : 4037
+ Flip-Flops                                            : 4037
 # Comparators                                          : 56
  5-bit comparator equal                                : 16
  6-bit comparator lessequal                            : 40
-# Multiplexers                                         : 1048
- 1-bit 2-to-1 multiplexer                              : 794
+# Multiplexers                                         : 1050
+ 1-bit 2-to-1 multiplexer                              : 796
  1-bit 32-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 7-to-1 multiplexer                              : 1
@@ -1438,6 +1440,8 @@ Optimizing unit <BTB_misprediction_manager> ...
 Optimizing unit <BTB> ...
 
 Optimizing unit <NRotateRegister> ...
+
+Optimizing unit <UD_COUNTER_BTB> ...
 
 Optimizing unit <NPriorityEncoder> ...
 WARNING:Xst:1710 - FF/Latch <BMM/REG_computed_PC/data_out_0> (without init value) has a constant value of 0 in block <DLX_Core>. This FF/Latch will be trimmed during the optimization process.
@@ -1647,8 +1651,8 @@ Unit <DLX_Core> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3778
- Flip-Flops                                            : 3778
+# Registers                                            : 3810
+ Flip-Flops                                            : 3810
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -1673,19 +1677,19 @@ Top Level Output File Name         : DLX_Core.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4041
+# BELS                             : 4158
 #      GND                         : 1
 #      INV                         : 3
-#      LUT2                        : 23
-#      LUT3                        : 300
-#      LUT4                        : 405
-#      LUT5                        : 849
-#      LUT6                        : 2350
-#      MUXF7                       : 109
+#      LUT2                        : 53
+#      LUT3                        : 315
+#      LUT4                        : 403
+#      LUT5                        : 822
+#      LUT6                        : 2452
+#      MUXF7                       : 108
 #      VCC                         : 1
-# FlipFlops/Latches                : 3802
+# FlipFlops/Latches                : 3834
 #      FD                          : 32
-#      FDC                         : 32
+#      FDC                         : 64
 #      FDCE                        : 3681
 #      FDE                         : 1
 #      FDP                         : 32
@@ -1710,17 +1714,17 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3802  out of  126800     2%  
- Number of Slice LUTs:                 3931  out of  63400     6%  
-    Number used as Logic:              3930  out of  63400     6%  
+ Number of Slice Registers:            3834  out of  126800     3%  
+ Number of Slice LUTs:                 4049  out of  63400     6%  
+    Number used as Logic:              4048  out of  63400     6%  
     Number used as Memory:                1  out of  19000     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7244
-   Number with an unused Flip Flop:    3442  out of   7244    47%  
-   Number with an unused LUT:          3313  out of   7244    45%  
-   Number of fully used LUT-FF pairs:   489  out of   7244     6%  
+ Number of LUT Flip Flop pairs used:   7361
+   Number with an unused Flip Flop:    3527  out of   7361    47%  
+   Number with an unused LUT:          3312  out of   7361    44%  
+   Number of fully used LUT-FF pairs:   522  out of   7361     7%  
    Number of unique control sets:       114
 
 IO Utilization: 
@@ -1752,7 +1756,7 @@ Clock Information:
 -----------------------------------+-----------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                         | Load  |
 -----------------------------------+-----------------------------------------------+-------+
-DLX_clk                            | BUFGP                                         | 3778  |
+DLX_clk                            | BUFGP                                         | 3810  |
 DP/s_fcu_enable(DP/s_fcu_enable1:O)| BUFG(*)(DP/FRW_CU/FCU_IF_ID_is_branch)        | 20    |
 N0                                 | NONE(BTB_cache/PriorityEncoder32X5/data_out_4)| 5     |
 -----------------------------------+-----------------------------------------------+-------+
@@ -1769,7 +1773,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 12.656ns (Maximum Frequency: 79.011MHz)
+   Minimum period: 12.658ns (Maximum Frequency: 79.003MHz)
    Minimum input arrival time before clock: 11.131ns
    Maximum output required time after clock: 3.831ns
    Maximum combinational path delay: 2.526ns
@@ -1780,10 +1784,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DLX_clk'
-  Clock period: 12.656ns (frequency: 79.011MHz)
-  Total number of paths / destination ports: 76299209580 / 7491
+  Clock period: 12.658ns (frequency: 79.003MHz)
+  Total number of paths / destination ports: 76300941622 / 7555
 -------------------------------------------------------------------------
-Delay:               6.328ns (Levels of Logic = 13)
+Delay:               6.329ns (Levels of Logic = 13)
   Source:            DP/DE_Stage/RF/cyc_regs[21].ifi.Ri/data_out_15 (FF)
   Destination:       BMM/REG_computed_PC/data_out_28 (FF)
   Source Clock:      DLX_clk falling
@@ -1802,22 +1806,22 @@ Delay:               6.328ns (Levels of Logic = 13)
      LUT6:I5->O            2   0.097   0.299  DP/DE_Stage/JBM/ADD/CN/s_carry<15>1_SW0 (N575)
      LUT6:I5->O            1   0.097   0.511  DP/DE_Stage/JBM/ADD/CN/s_carry<17>1_SW0 (N588)
      LUT6:I3->O            3   0.097   0.305  DP/DE_Stage/JBM/ADD/CN/s_carry<19>1 (DP/DE_Stage/JBM/ADD/s_G2<20>)
-     LUT6:I5->O            4   0.097   0.309  DP/DE_Stage/JBM/ADD/CN/s_carry<21>1 (DP/DE_Stage/JBM/ADD/s_G2<22>)
-     LUT6:I5->O            4   0.097   0.309  DP/DE_Stage/JBM/ADD/CN/s_carry<23>1 (DP/DE_Stage/JBM/ADD/s_G2<24>)
+     LUT6:I5->O            3   0.097   0.305  DP/DE_Stage/JBM/ADD/CN/s_carry<21>1 (DP/DE_Stage/JBM/ADD/s_G2<22>)
+     LUT6:I5->O            5   0.097   0.314  DP/DE_Stage/JBM/ADD/CN/s_carry<23>1 (DP/DE_Stage/JBM/ADD/s_G2<24>)
      LUT6:I5->O           17   0.097   0.369  DP/DE_Stage/JBM/ADD/CN/s_carry<25>1 (DP/DE_Stage/JBM/ADD/s_G2<26>)
      LUT6:I5->O            2   0.097   0.299  DP/DE_Stage/JBM/ADD/CN/s_carry<27>1 (DP/DE_Stage/JBM/ADD/s_G2<28>)
      LUT6:I5->O            1   0.097   0.000  DP/DE_Stage/JBM/ADD/SN/Mxor_S<29>_xo<0>1 (s_computed_NPC_Fdp_Tbmm<29>)
      FDCE:D                    0.008          BMM/REG_computed_PC/data_out_29
     ----------------------------------------
-    Total                      6.328ns (1.810ns logic, 4.518ns route)
+    Total                      6.329ns (1.810ns logic, 4.519ns route)
                                        (28.6% logic, 71.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DP/s_fcu_enable'
-  Clock period: 5.253ns (frequency: 190.367MHz)
+  Clock period: 5.516ns (frequency: 181.277MHz)
   Total number of paths / destination ports: 14 / 2
 -------------------------------------------------------------------------
-Delay:               2.627ns (Levels of Logic = 3)
+Delay:               2.758ns (Levels of Logic = 3)
   Source:            DP/FRW_CU/s_if_id_is_jmp (LATCH)
   Destination:       DP/FRW_CU/Mshreg_s_stall_mem (FF)
   Source Clock:      DP/s_fcu_enable falling
@@ -1827,18 +1831,18 @@ Delay:               2.627ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              44   0.472   0.792  DP/FRW_CU/s_if_id_is_jmp (DP/FRW_CU/s_if_id_is_jmp)
+     LD:G->Q              42   0.472   0.792  DP/FRW_CU/s_if_id_is_jmp (DP/FRW_CU/s_if_id_is_jmp)
      LUT5:I0->O            1   0.097   0.683  DP/FRW_CU/Mmux_FCU_insert_stall37 (DP/FRW_CU/Mmux_FCU_insert_stall36)
-     LUT6:I1->O            1   0.097   0.379  DP/FRW_CU/Mmux_FCU_insert_stall38 (DP/FRW_CU/Mmux_FCU_insert_stall37)
-     LUT6:I4->O          253   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
+     LUT6:I1->O            1   0.097   0.511  DP/FRW_CU/Mmux_FCU_insert_stall38 (DP/FRW_CU/Mmux_FCU_insert_stall37)
+     LUT6:I3->O          284   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
      SRLC16E:D                 0.009          DP/FRW_CU/Mshreg_s_stall_mem
     ----------------------------------------
-    Total                      2.627ns (0.772ns logic, 1.855ns route)
-                                       (29.4% logic, 70.6% route)
+    Total                      2.758ns (0.772ns logic, 1.986ns route)
+                                       (28.0% logic, 72.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DLX_clk'
-  Total number of paths / destination ports: 2846998154 / 5020
+  Total number of paths / destination ports: 2847087672 / 5084
 -------------------------------------------------------------------------
 Offset:              11.131ns (Levels of Logic = 24)
   Source:            DLX_enable (PAD)
@@ -1882,7 +1886,7 @@ Offset:              11.131ns (Levels of Logic = 24)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DP/s_fcu_enable'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              1.518ns (Levels of Logic = 3)
+Offset:              1.120ns (Levels of Logic = 3)
   Source:            DLX_enable (PAD)
   Destination:       DP/FRW_CU/Mshreg_s_stall_mem (FF)
   Destination Clock: DP/s_fcu_enable rising
@@ -1892,12 +1896,12 @@ Offset:              1.518ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           364   0.001   0.537  DLX_enable_IBUF (DLX_enable_IBUF)
-     LUT2:I0->O           19   0.097   0.777  DP/s_fcu_enable1 (DP/s_fcu_enable)
-     LUT6:I0->O          253   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
+     LUT2:I0->O           19   0.097   0.379  DP/s_fcu_enable1 (DP/s_fcu_enable)
+     LUT6:I5->O          284   0.097   0.000  DP/FRW_CU/Mmux_FCU_insert_stall315 (s_insert_bubble_Fdp_Tcu)
      SRLC16E:D                 0.009          DP/FRW_CU/Mshreg_s_stall_mem
     ----------------------------------------
-    Total                      1.518ns (0.204ns logic, 1.314ns route)
-                                       (13.4% logic, 86.6% route)
+    Total                      1.120ns (0.204ns logic, 0.916ns route)
+                                       (18.2% logic, 81.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DLX_clk'
@@ -1979,7 +1983,7 @@ Clock to Setup on destination clock DLX_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DLX_clk        |   11.346|    6.328|    2.181|         |
+DLX_clk        |   11.346|    6.329|    2.181|         |
 DP/s_fcu_enable|   11.258|   11.372|         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -1988,21 +1992,21 @@ Clock to Setup on destination clock DP/s_fcu_enable
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DLX_clk        |    2.644|         |    1.552|         |
-DP/s_fcu_enable|    1.314|    2.627|         |         |
+DLX_clk        |    3.430|         |    1.552|         |
+DP/s_fcu_enable|    1.314|    2.758|         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 196.00 secs
-Total CPU time to Xst completion: 196.03 secs
+Total REAL time to Xst completion: 107.00 secs
+Total CPU time to Xst completion: 107.25 secs
  
 --> 
 
-Total memory usage is 402216 kilobytes
+Total memory usage is 362856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  333 (   0 filtered)
-Number of infos    :   81 (   0 filtered)
+Number of warnings :  334 (   0 filtered)
+Number of infos    :   82 (   0 filtered)
 
