@@ -540,7 +540,7 @@ begin
 		data_out=> s_use_immediate
 		);
 	
-	s_use_immediate_sel <= s_use_immediate OR s_id_ex_is_store;
+	s_use_immediate_sel <= (s_use_immediate OR s_id_ex_is_store) AND NOT(s_sel_regA_PC_mux);
 	
 	RegB_Imm_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
 		port0 => s_regB_Fde_Tex,
@@ -672,22 +672,22 @@ begin
 	OPB_TO_DRAM_REG : NRegister GENERIC MAP (N => NBIT_DATA) PORT MAP (
 		clk => DP_clk,
 		reset=> s_reset_middle_regs_EX_MEM,
-		data_in=> s_data_fwd_bot_aluY, --from fwd bot mux
+		data_in=> s_regB_Fde_Tex, --from fwd bot mux
 		enable=> s_stall_Fde, --from FCU stall (or s_stall_Fex)
 		load=> '1',
 		data_out=> s_dataTBStr_Freg_Tmux --to mux DRAM data to be stored
 		);
 	
 	DATA_TB_STORED_MUX : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => NBIT_DATA) PORT MAP (
-		port0 => s_regB_Fde_Tex, --modificato il 5 luglio
-		--port0 => s_dataTBStr_Freg_Tmux, --from OPB_TO_DRAM_REG
+		--port0 => s_regB_Fde_Tex, --modificato il 5 luglio
+		port0 => s_dataTBStr_Freg_Tmux, --from OPB_TO_DRAM_REG
 		port1 => s_data_Fwb_Tde, --from writeback forworded
 		sel   => s_ex_mem_fwd_mux, --from FCU
 		portY => s_data_TBStr_Fmux_Tex  -- to memory
 		);
 		
 	MEM_Stage : Memory_Stage GENERIC MAP (NBIT_DATA => NBIT_DATA, NBIT_ADDRESS => NBIT_DATA) PORT MAP (
-		ME_data_in			=> s_data_TBStr_Fmux_Tex, --from register
+		ME_data_in			=> s_data_TBStr_Fmux_Tex, --from register file
 		ME_address			=> s_result_Fex_Tmem,	  --from execute
 		ME_clk				=> DP_clk,
 		ME_rst				=> s_reset_middle_regs_MEM_WB,

@@ -178,6 +178,16 @@ architecture Structural of DLX_Core is
 		load:	in  std_logic; --Load enable high
 		data_out: out std_logic_vector(N-1 downto 0));
 	end component;
+	
+	component Reg1Bit is
+	port(
+		clk:	in  std_logic;
+		reset:	in  std_logic; --Active high
+		data_in:	in  std_logic;
+		enable:	in  std_logic;
+		load:	in  std_logic; --Load enable high
+		data_out: out std_logic);
+	end component;
 
 	signal s_target_prediction_Fbtb_Tdp	: std_logic_vector(2**NBIT_IRAM_ADDRESS-1 downto 0);
 	signal s_prediction_Fbtb_Tdp			: std_logic;
@@ -208,6 +218,9 @@ architecture Structural of DLX_Core is
 	signal s_instr_is_branch				: std_logic;
 	signal s_restore_Fdp_Tbmm					: std_logic;
 	signal s_restore_Fbmm_Tbtb					: std_logic;
+	signal s_btb_prediction_Fbtb_Treg		: std_logic;
+	signal s_btb_prediction_Freg_Tcu			: std_logic;
+	signal s_flush									: std_logic;
 	
 	
 
@@ -257,14 +270,27 @@ begin
 		);
 	
 	DLX_PC <= s_PC_Fdp_Tbmm;
-
+	
+	
+	s_btb_prediction_Fbtb_Treg <= s_prediction_Fbtb_Tdp;
+	
+	REG_BTB_PRED : Reg1Bit PORT MAP (
+									clk => DLX_clk,
+									reset => DLX_reset,
+									enable => s_insert_bubble_Fdp_Tcu,
+									load => '1',
+									data_in => s_btb_prediction_Fbtb_Treg,
+									data_out => s_btb_prediction_Freg_Tcu
+									);
+	s_flush <= (NOT(s_branch_taken_Fdp_Tdp_cu) AND (s_restore_Fdp_Tbmm XOR s_btb_prediction_Freg_Tcu))
+					OR (s_branch_taken_Fdp_Tdp_cu AND (s_restore_Fdp_Tbmm XNOR s_btb_prediction_Freg_Tcu));
 	CU : ControlUnit PORT MAP (
 		CU_instr_opcode	=> s_IR_opcode_Fdp_Tcu,
 		CU_instr_func		=> s_IR_func_Fdp_Tcu,
 		CU_enable			=> DLX_enable,
 		CU_reset				=> DLX_reset,
 		CU_clk				=> DLX_clk,
-		CU_flush				=> s_branch_taken_Fdp_Tdp_cu,
+		CU_flush				=> s_flush,
 		CU_bubble			=> s_insert_bubble_Fdp_Tcu, --attivo basso
 		CU_CW_DE				=> s_DE_cw_Fcu_Tdp,
 		CU_CW_EX				=> s_EX_cw_Fcu_Tdp,

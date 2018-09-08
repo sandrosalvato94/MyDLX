@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="31" />
+   <WVObjectSize size="38" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -70,17 +70,42 @@
       <obj_property name="label">wb_ir</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/s_stall" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">s_stall</obj_property>
-      <obj_property name="ObjectShortName">s_stall</obj_property>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/s_flush" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_flush</obj_property>
+      <obj_property name="ObjectShortName">s_flush</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/s_ex_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">s_ex_enable</obj_property>
       <obj_property name="ObjectShortName">s_ex_enable</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/s_stall" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_stall</obj_property>
+      <obj_property name="ObjectShortName">s_stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/CU/s_flush" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_flush</obj_property>
+      <obj_property name="ObjectShortName">s_flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/s_branch_taken_fdp_tdp_cu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_branch_taken_fdp_tdp_cu</obj_property>
+      <obj_property name="ObjectShortName">s_branch_taken_fdp_tdp_cu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/s_btb_prediction_freg_tcu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_btb_prediction_freg_tcu</obj_property>
+      <obj_property name="ObjectShortName">s_btb_prediction_freg_tcu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/s_restore_fdp_tbmm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_restore_fdp_tbmm</obj_property>
+      <obj_property name="ObjectShortName">s_restore_fdp_tbmm</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_wr" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rf_wr</obj_property>
       <obj_property name="ObjectShortName">rf_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegA_PC_MUX/porty" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">porty[31:0]</obj_property>
+      <obj_property name="ObjectShortName">porty[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_addrwr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rf_addrwr[4:0]</obj_property>
@@ -285,6 +310,10 @@
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/dp_reverse_operands" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dp_reverse_operands</obj_property>
+      <obj_property name="ObjectShortName">dp_reverse_operands</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegB_Imm_MUX/porty" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
@@ -2125,6 +2154,7 @@
       <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dram_mem[396]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[396]</obj_property>
          <obj_property name="ObjectShortName">dram_mem[396]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dram_mem[397]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[397]</obj_property>
