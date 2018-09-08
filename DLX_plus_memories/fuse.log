@@ -71,8 +71,8 @@ Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/
 Parsing VHDL file "C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 110324 KB
-Fuse CPU Usage: 1124 ms
+Fuse Memory Usage: 168500 KB
+Fuse CPU Usage: 1374 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package constants
@@ -166,5 +166,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 73 sub-compilation(s) to finish...
 Compiled 168 VHDL Units
 Built simulation executable C:/Users/Alessandro/Documents/GitHub/MyDLX/DLX_plus_memories/TB_DLX_PM_isim_beh.exe
-Fuse Memory Usage: 182660 KB
-Fuse CPU Usage: 3749 ms
+Fuse Memory Usage: 200132 KB
+Fuse CPU Usage: 4531 ms
