@@ -32,9 +32,10 @@ Finished circuit initialization process.
 at 0 ps: Error: Textio read:: called on empty string or line
 at 0 ps: Error: HREAD Error: Read a '?', expected a Hex character (0-F).
 # restart
-# run 700 ns
+# run 150 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_dlx_pm/uut/DLX/BTB_cache/MuxSat/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
 at 0 ps: Error: Textio read:: called on empty string or line
 at 0 ps: Error: HREAD Error: Read a '?', expected a Hex character (0-F).
+# run 150 ns
