@@ -17,7 +17,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="37" />
    <wvobject fp_name="/tb_dlx_pm/dlx_pm_enable" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">dlx_pm_enable</obj_property>
       <obj_property name="ObjectShortName">dlx_pm_enable</obj_property>
@@ -101,11 +101,6 @@
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_wr" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rf_wr</obj_property>
       <obj_property name="ObjectShortName">rf_wr</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/RegA_PC_MUX/porty" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">porty[31:0]</obj_property>
-      <obj_property name="ObjectShortName">porty[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dlx_pm/uut/DLX/DP/DE_Stage/RF/rf_addrwr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rf_addrwr[4:0]</obj_property>
