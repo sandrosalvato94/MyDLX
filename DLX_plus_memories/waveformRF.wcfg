@@ -381,6 +381,7 @@
       <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dram_mem[0]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[0]</obj_property>
          <obj_property name="ObjectShortName">dram_mem[0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_dlx_pm/uut/Data_Memory/dram_mem[1]" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">[1]</obj_property>
