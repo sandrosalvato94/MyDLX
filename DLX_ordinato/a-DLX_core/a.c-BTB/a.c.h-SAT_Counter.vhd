@@ -36,7 +36,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity SAT_Counter_BTB is
-	generic(N : integer := 2);
+	generic(N : integer := 3);
 	port(
 		SAT_clk 		: in  std_logic;
 		SAT_reset 	: in  std_logic;

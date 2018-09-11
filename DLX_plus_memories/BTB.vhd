@@ -50,7 +50,7 @@ entity BTB is
 		N_ENTRY: 		integer := 32;
 		NBIT_ENTRY: 	integer := 32;
 		NBIT_TARGET:	integer := 32;
-		NBIT_PREDICTION:	integer := 2);
+		NBIT_PREDICTION:	integer := 3);
 	port(
 		BTB_clk:			in std_logic;
 		BTB_rst:			in std_logic;

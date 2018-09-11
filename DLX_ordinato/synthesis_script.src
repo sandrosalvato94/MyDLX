@@ -9,7 +9,7 @@ analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.a-PG_network/a.a.a.a.a.b-PG_cell.vhd}
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.a-PG_network.vhd}
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.b-Carry_Network.vhd}
-analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.c-Sum_network.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.c-Sum_Network.vhd}
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead.vhd}
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch.vhd}
 
@@ -89,8 +89,8 @@ analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/
 
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Logic_Unit.vhd}
 
-analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Comparison_Logic/a.a.c.b.d.a-Comparator/a.a.c.d.a.a-ORGate_NX1.vhd}
-analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Comparison_Logic/a.a.c.b.d.a-Comparator.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.d-Comparison_Logic/a.a.c.b.d.a-Comparator/a.a.c.b.d.a.a-ORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.d-Comparison_Logic/a.a.c.b.d.a-Comparator.vhd}
 analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.d-Comparison_Logic.vhd}
 
 elaborate Comparison_Logic -architecture Structural
