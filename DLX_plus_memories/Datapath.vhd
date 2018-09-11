@@ -608,7 +608,7 @@ begin
 	
 	SHIFT_AMOUNT_MUX1 : Mux_NBit_2x1 GENERIC MAP (NBIT_IN => L) PORT MAP (
 		port0 => (others => '0'),
-		port1 => s_NBIT_DATA_div_2,
+		port1 => "10000",
 		sel   => DP_Shift_Amount_sel(0), 
 		portY => s_SA_Fmux_Tmux1
 		);

@@ -1,0 +1,246 @@
+analyze -library WORK -format vhdl {constants.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.e-NRegister.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.f-Reg1Bit.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.f-FCU.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.i-Mux_NBit_2x1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.j-Mux_1Bit_2X1.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.a-PG_network/a.a.a.a.a.a-GeneralGenerate.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.a-PG_network/a.a.a.a.a.b-PG_cell.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.a-PG_network.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.b-Carry_Network.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead/a.a.a.a.c-Sum_network.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch/a.a.a.a-PropagateCarryLookahead.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.a-Fetch.vhd}
+
+elaborate Fetch -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Fetch_t.txt
+report_area > Report/Fetch_a.txt
+report_power > Report/Fetch_p.txt
+
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.a-Register_File/a.a.b.a.a-NDecoder.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.a-Register_File/a.a.b.a.b-Enable_Interface.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.a-Register_File.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.b-NComparatorWithEnable/a.a.b.b.a-ComparatorWithEnable.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.b-NComparatorWithEnable.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.c-Sign_Extender.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode/a.a.b.d-Jmp_Branch_Manager.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.b-Decode.vhd}
+
+elaborate Register_File -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Register_File_t.txt
+report_area > Report/Register_File_a.txt
+report_power > Report/Register_File_p.txt
+
+elaborate Sign_Extender -architecture Behavioral
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Sign_Extender_t.txt
+report_area > Report/Sign_Extender_a.txt
+report_power > Report/Sign_Extender_p.txt
+
+elaborate Jmp_Branch_Manager -architecture Behavioral
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Jmp_Branch_Manager_t.txt
+report_area > Report/Jmp_Branch_Manager_a.txt
+report_power > Report/Jmp_Branch_Manager_p.txt
+
+elaborate Decode -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Decode_t.txt
+report_area > Report/Decode_a.txt
+report_power > Report/Decode_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.a-Barrel_Shifter.vhd}
+
+elaborate Barrel_Shifter -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Barrel_Shifter_t.txt
+report_area > Report/Barrel_Shifter_a.txt
+report_power > Report/Barrel_Shifter_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator/a.a.c.b.b.a.c-PG_network/a.a.c.b.b.a.c.a-PG_cell.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator/a.a.c.b.b.a.c-PG_network/a.a.c.b.b.a.c.b-GeneralGenerate.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator/a.a.c.b.b.a.a-GeneralGenerate.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator/a.a.c.b.b.a.b-GeneralPropagate.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator/a.a.c.b.b.a.c-PG_network.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.a-CarryGenerator.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect/a.a.c.b.b.b.a-CarrySelectBlock/a.a.c.b.b.b.a.a-rca/a.a.c.b.b.b.a.a.a-fa.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect/a.a.c.b.b.b.a-CarrySelectBlock/a.a.c.b.b.b.a.a-rca.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect/a.a.c.b.b.b.a-CarrySelectBlock/a.a.c.b.b.b.a.b-mux_generic/a.a.c.b.b.b.a.b.a-mux21.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect/a.a.c.b.b.b.a-CarrySelectBlock/a.a.c.b.b.b.a.b-mux_generic.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect/a.a.c.b.b.b.a-CarrySelectBlock.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder/a.a.c.b.b.b-CarrySelect.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.b-P4Adder.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Logic_Unit.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Comparison_Logic/a.a.c.b.d.a-Comparator/a.a.c.d.a.a-ORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.c-Comparison_Logic/a.a.c.b.d.a-Comparator.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.d-Comparison_Logic.vhd}
+
+elaborate Comparison_Logic -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Comparison_Logic_t.txt
+report_area > Report/Comparison_Logic_a.txt
+report_power > Report/Comparison_Logic_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.e-Flag_Generator/a.a.c.b.e.a-NORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.e-Flag_Generator/a.a.c.b.e.b-XNORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU/a.a.c.b.e-Flag_Generator.vhd}
+
+elaborate Flag_Generator -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Flag_Generator_t.txt
+report_area > Report/Flag_Generator_a.txt
+report_power > Report/Flag_Generator_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.b-ALU.vhd}
+
+elaborate ALU -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/ALU_t.txt
+report_area > Report/ALU_a.txt
+report_power > Report/ALU_p.txt
+
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.a-Enable_Interface.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage/a.a.c.c-Multiplier.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.c-Execute_Stage.vhd}
+
+elaborate Execute_Stage -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Execute_Stage_t.txt
+report_area > Report/Execute_Stage_a.txt
+report_power > Report/Execute_Stage_p.txt
+
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.d-Memory_Stage/a.a.d.b-Data_Reducer.vhd}
+
+elaborate Data_Reducer -architecture Behavioral
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Data_Reducer_t.txt
+report_area > Report/Data_Reducer_a.txt
+report_power > Report/Data_Reducer_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.d-Memory_Stage.vhd}
+
+elaborate Memory_Stage -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Memory_Stage_t.txt
+report_area > Report/Memory_Stage_a.txt
+report_power > Report/Memory_Stage_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.e-WriteBack_Stage/a.a.e.b-Sign_Reducer.vhd}
+
+elaborate Sign_Reducer -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Sign_Reducer_t.txt
+report_area > Report/Sign_Reducer_a.txt
+report_power > Report/Sign_Reducer_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.e-WriteBack_Stage.vhd}
+
+elaborate WriteBack_Stage -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/WriteBack_Stage_t.txt
+report_area > Report/WriteBack_Stage_a.txt
+report_power > Report/WriteBack_Stage_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath/a.a.f-FCU.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.a-Datapath.vhd}
+
+elaborate Datapath -architecture Structural
+compile
+set_max_delay 10 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/Datapath_t.txt
+report_area > Report/Datapath_a.txt
+report_power > Report/Datapath_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.b-ControlUnit.vhd}
+
+elaborate ControlUnit -architecture Structural
+compile
+set_max_delay 10 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/ControlUnit_t.txt
+report_area > Report/ControlUnit_a.txt
+report_power > Report/ControlUnit_p.txt
+
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.a-NComparatorWithEnable/a.c.a.a-ComparatorWithEnable.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.a-NComparatorWithEnable.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.f-NRotateRegister/a.c.f.a-D_FF.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.f-NRotateRegister/a.c.f.b-Mux_Bit.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.f-NRotateRegister.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.h-SAT_Counter/a.c.h.a-UD_counter_BTB/a.c.h.a.a-t_ff.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.h-SAT_Counter/a.c.h.a-UD_counter_BTB/a.c.h.a.b-t_ff_rst1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.h-SAT_Counter/a.c.h.a-UD_counter_BTB.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.h-SAT_Counter/a.c.h.b-CU_SatCounter.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.h-SAT_Counter.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.b-ORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.c-NPriorityEncoder.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB/a.c.i-Mux_Bit.vhd}
+
+analyze -library WORK -format vhdl {a-DLX_core/a.c-BTB.vhd}
+
+elaborate BTB -architecture Structural
+compile
+set_max_delay 8 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > Report/BTB_t.txt
+report_area > Report/BTB_a.txt
+report_power > Report/BTB_p.txt
+
+
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager/a.d.d-SAT_Counter_BMM/a.d.d.a-ud_counter.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager/a.d.d-SAT_Counter_BMM/a.d.d.b-CU_SatCounter.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager/a.d.d-SAT_Counter_BMM/a.d.d.c-ANDGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager/a.d.d-SAT_Counter_BMM/a.d.d.a-NORGate_NX1.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager/a.d.d-SAT_Counter_BMM.vhd}
+analyze -library WORK -format vhdl {a-DLX_core/a.d-BTB_misprediction_manager.vhd}
+
+
+analyze -library WORK -format vhdl {a-DLX_core.vhd}
+
+elaborate DLX_Core -architecture Structural 
+compile
+set_max_delay 10 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > DLX_core_t.txt
+report_area > DLX_core_a.txt
+report_power > DLX_Core_p.txt
