@@ -1,0 +1,79 @@
+\documentclass[a4paper]{book}
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % custom page layout
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{fixltx2e} % \textsubscript command
+\usepackage{soulutf8} % \ul command
+\usepackage{changepage} % indentation (in title page)
+\usepackage[font=it]{caption} % captions in italics
+\usepackage[font=it]{subcaption} % subcaptions in italics
+\usepackage{multicol}
+\usepackage{cancel} % \cancel command
+\usepackage{textcomp} % symbols
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{listings}
+
+\usepackage{mips}
+
+\usepackage{verbatim}
+\lstset{language=[mips]Assembler,%
+	  keywordstyle=\color{Blue},
+      basicstyle=\small\ttfamily,
+      frame=TB,
+      %commentstyle=\color{red},
+      showstringspaces=false,
+      commentstyle=\color{Gray}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \space - \space #1}}
+\renewcommand{\subsectionmark}[1]{\markright{\thesubsection \space - \space #1}}
+\fancyhf{} \fancyhead[RO, LE]{\bfseries\thepage}
+\fancyhead[CO, CE]{\bfseries\rightmark}
+%\fancyhead[CE]{\bfseries \leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} \fancypagestyle{plain}{
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}}
+\usepackage{url}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Teorema}[chapter] 
+\newtheorem{cor}[thm]{Corollario} 
+\newtheorem{lem}[thm]{Lemma} 
+\newtheorem{prop}[thm]{Proposizione} 
+\theoremstyle{definition} 
+\newtheorem{defn}{Definizione}[section]
+\theoremstyle{remark} 
+\newtheorem{oss}{Osservazione} 
+\frenchspacing
+\author{Alessandro Salvato}
+\title{Appunti di Controlli Automatici}
+
+\begin{document}
+\bibliographystyle{plain}
+\include{Capitoli/titolo}
+
+\tableofcontents
+
+\include{Capitoli/01-Introduction}
+\bibliography{Capitoli/biblio}
+
+
+
+
+
+
+\end{document}
