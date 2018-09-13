@@ -45,5 +45,60 @@ Among pro hints, these are reported:
 
 I targeted the pro version, exploring and implementing the following features:
 \begin{itemize}
-\item 
+\item \textbf{Extended instruction set}
+\begin{itemize}
+\item \textbf{More} instructions
+\item \textbf{Modified} instructions
+\item \textbf{Totally new} instructions
 \end{itemize}
+\item \textbf{Control hazard} management by a \textbf{Branch Target Buffer}
+\item \textbf{Data hazard} management by a \textbf{forwarding logic} (\textit{just r-type and i-type instructions})
+\item \textbf{Extended datapath} by new components
+\end{itemize}
+
+\section{Instruction Set}
+
+Basics information on the DLX instruction structures can be found in \cite{ProjectSpecification}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.4\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+\textbf{Instruction}&\textbf{Type}&\textbf{Annotation}\\ \hline
+add addi and andi beqz bnez j jal lw nop or ori sge sgei sle slei sll slli sne snei srl srli sub subi sw xor xori & Basic DLX & n.27 \\ \hline
+addui subui lhi jr jalr srai seqi slti sgti lb lh lbu lhu sb sh sltui sgtui sleui sgeui sra addu subu seq slt sgt sltu sgtu sleu sgeu & Pro DLX & n.29 \\ \hline
+mult multu & Modified instructions & The binary format is changed. \newline mult(u) r1, r2, r3 has been replaced by \newline \textbf{mult(u) r2, r3}  <-- where the product is stored in two special registers, one for the 32 lowest bits and the other for the 32 highest. \\ \hline
+mflo mfhi & New instructions & \textbf{mflo r1} <-- loads the 32 lowest bits of a product in r1 \newline \textbf{mfhi r1} <-- loads the 32 highest bits in r1\\
+\hline
+\end{tabular}
+\caption{Instruction set}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{Immagini/01}
+\label{01}
+\caption{Mult format}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{Immagini/02}
+\label{02}
+\caption{Multu format}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{Immagini/03}
+\label{03}
+\caption{Mflo format}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{Immagini/04}
+\label{04}
+\caption{Mfhi format}
+\end{figure}
+
+More information on Basic and Pro DLX instruction in \cite{ProjectSpecification}.

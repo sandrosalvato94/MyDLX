@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.1)  13 SEP 2018 12:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.1)  13 SEP 2018 19:15
 entering extended mode
 **./RelazioneDLX.tex
 (RelazioneDLX.tex
@@ -958,7 +958,18 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@thm=\count129
 \c@defn=\count130
 \c@oss=\count131
-(RelazioneDLX.aux (Capitoli/titolo.aux) (Capitoli/01-Introduction.aux))
+(RelazioneDLX.aux (Capitoli/titolo.aux) (Capitoli/01-Introduction.aux)
+(Capitoli/02-RTL.aux
+
+LaTeX Warning: Label `02' multiply defined.
+
+
+LaTeX Warning: Label `02' multiply defined.
+
+
+LaTeX Warning: Label `02' multiply defined.
+
+))
 \openout1 = `RelazioneDLX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -1169,31 +1180,116 @@ Overfull \hbox (24.39706pt too wide) in paragraph at lines 28--30
  [][] 
  []
 
-[5]) [6 <./Immagini/00.png>] (RelazioneDLX.bbl) [7
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/lmr/m/n/10 Modified in-struc-
+ []
 
 
-] (RelazioneDLX.aux
-(Capitoli/titolo.aux) (Capitoli/01-Introduction.aux)) ) 
+Underfull \hbox (badness 4036) in paragraph at lines 70--70
+\T1/lmr/bx/n/10 mult(u) r2, r3
+ []
+
+
+Underfull \hbox (badness 4621) in paragraph at lines 70--70
+\T1/lmr/m/n/10 uct is stored in
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 70--70
+\T1/lmr/m/n/10 two spe-cial reg-is-
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 70--70
+\T1/lmr/m/n/10 ters, one for the
+ []
+
+[6 <./Immagini/00.png>]
+<Immagini/01.png, id=30, 625.1355pt x 107.80275pt>
+File: Immagini/01.png Graphic file (type png)
+<use Immagini/01.png>
+Package pdftex.def Info: Immagini/01.png  used on input line 79.
+(pdftex.def)             Requested size: 375.08418pt x 64.68213pt.
+<Immagini/02.png, id=31, 608.87476pt x 112.62074pt>
+File: Immagini/02.png Graphic file (type png)
+<use Immagini/02.png>
+Package pdftex.def Info: Immagini/02.png  used on input line 85.
+(pdftex.def)             Requested size: 365.32767pt x 67.57295pt.
+<Immagini/03.png, id=32, 608.87476pt x 112.62074pt>
+File: Immagini/03.png Graphic file (type png)
+<use Immagini/03.png>
+Package pdftex.def Info: Immagini/03.png  used on input line 92.
+(pdftex.def)             Requested size: 365.32767pt x 67.57295pt.
+
+Underfull \vbox (badness 1701) has occurred while \output is active []
+
+ [7 <./Immagini/01.png> <./Immagini/02.png>]
+<Immagini/04.png, id=37, 608.87476pt x 112.62074pt>
+File: Immagini/04.png Graphic file (type png)
+<use Immagini/04.png>
+Package pdftex.def Info: Immagini/04.png  used on input line 99.
+(pdftex.def)             Requested size: 365.32767pt x 67.57295pt.
+) [8 <./Immagini/03.png> <./Immagini/04.png>]
+\openout2 = `Capitoli/02-RTL.aux'.
+
+
+(Capitoli/02-RTL.tex
+Chapter 2.
+<Immagini/05.png, id=41, 590.80725pt x 284.86424pt>
+File: Immagini/05.png Graphic file (type png)
+<use Immagini/05.png>
+Package pdftex.def Info: Immagini/05.png  used on input line 6.
+(pdftex.def)             Requested size: 354.48708pt x 170.91986pt.
+<Immagini/06.png, id=42, 746.18774pt x 274.02374pt>
+File: Immagini/06.png Graphic file (type png)
+<use Immagini/06.png>
+Package pdftex.def Info: Immagini/06.png  used on input line 21.
+(pdftex.def)             Requested size: 447.71611pt x 164.41551pt.
+
+Overfull \hbox (29.46243pt too wide) in paragraph at lines 21--23
+ [][] 
+ []
+
+[9
+
+
+
+ <./Immagini/05.png>]
+<Immagini/07.png, id=46, 583.17876pt x 337.26pt>
+File: Immagini/07.png Graphic file (type png)
+<use Immagini/07.png>
+Package pdftex.def Info: Immagini/07.png  used on input line 28.
+(pdftex.def)             Requested size: 349.90996pt x 202.35756pt.
+) [10 <./Immagini/06.png> <./Immagini/07.png>]
+(RelazioneDLX.bbl) [11
+
+
+] (RelazioneDLX.aux (Capitoli/titolo.aux)
+(Capitoli/01-Introduction.aux) (Capitoli/02-RTL.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7948 strings out of 493305
- 117406 string characters out of 3127628
- 191619 words of memory out of 3000000
- 11281 multiletter control sequences out of 15000+200000
+ 7997 strings out of 493305
+ 118340 string characters out of 3127628
+ 193619 words of memory out of 3000000
+ 11316 multiletter control sequences out of 15000+200000
  51939 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,10n,43p,1030b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Alessandro/App
-Data/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Alessand
-ro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/Ale
-ssandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/
-Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12
-.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-lm/lmr10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmri10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/lm/lmtt10.pfb>
-Output written on RelazioneDLX.pdf (7 pages, 405955 bytes).
+{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
+ts1.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/
+lm/lm-ec.enc}<C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmbx10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmbx12.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alessandro/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alessandro/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
+Output written on RelazioneDLX.pdf (11 pages, 500433 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
