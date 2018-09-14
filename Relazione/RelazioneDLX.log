@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.1)  13 SEP 2018 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.1)  14 SEP 2018 20:33
 entering extended mode
 **./RelazioneDLX.tex
 (RelazioneDLX.tex
@@ -969,6 +969,9 @@ LaTeX Warning: Label `02' multiply defined.
 
 LaTeX Warning: Label `02' multiply defined.
 
+
+LaTeX Warning: Label `02' multiply defined.
+
 ))
 \openout1 = `RelazioneDLX.aux'.
 
@@ -1261,35 +1264,129 @@ File: Immagini/07.png Graphic file (type png)
 <use Immagini/07.png>
 Package pdftex.def Info: Immagini/07.png  used on input line 28.
 (pdftex.def)             Requested size: 349.90996pt x 202.35756pt.
-) [10 <./Immagini/06.png> <./Immagini/07.png>]
-(RelazioneDLX.bbl) [11
+ [10 <./Immagini/06.png> <./Immagini/07.png>]
+<Immagini/08.png, id=51, 488.42474pt x 347.49825pt>
+File: Immagini/08.png Graphic file (type png)
+<use Immagini/08.png>
+Package pdftex.def Info: Immagini/08.png  used on input line 47.
+(pdftex.def)             Requested size: 341.89497pt x 243.2471pt.
+
+Overfull \hbox (49.99992pt too wide) in paragraph at lines 55--63
+ [][] 
+ []
 
 
-] (RelazioneDLX.aux (Capitoli/titolo.aux)
-(Capitoli/01-Introduction.aux) (Capitoli/02-RTL.aux))
+Underfull \hbox (badness 1117) in paragraph at lines 72--72
+[]|\T1/lmr/m/n/10 It's the value of the tar-get to be
+ []
+
+
+Overfull \hbox (49.99992pt too wide) in paragraph at lines 67--76
+ [][] 
+ []
+
+[11 <./Immagini/08.png>]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 82.
+ [12]
+<Immagini/09.png, id=60, 1083.44775pt x 367.3725pt>
+File: Immagini/09.png Graphic file (type png)
+<use Immagini/09.png>
+Package pdftex.def Info: Immagini/09.png  used on input line 115.
+(pdftex.def)             Requested size: 433.37143pt x 146.94638pt.
+
+Overfull \hbox (15.11775pt too wide) in paragraph at lines 115--117
+ [][] 
+ []
+
+<Immagini/10.png, id=61, 1081.03876pt x 352.9185pt>
+File: Immagini/10.png Graphic file (type png)
+<use Immagini/10.png>
+Package pdftex.def Info: Immagini/10.png  used on input line 135.
+(pdftex.def)             Requested size: 432.40784pt x 141.16489pt.
+
+Overfull \hbox (14.15416pt too wide) in paragraph at lines 135--137
+ [][] 
+ []
+
+[13 <./Immagini/09.png>]
+<Immagini/11.png, id=70, 854.19125pt x 562.1pt>
+File: Immagini/11.png Graphic file (type png)
+<use Immagini/11.png>
+Package pdftex.def Info: Immagini/11.png  used on input line 149.
+(pdftex.def)             Requested size: 427.09459pt x 281.04932pt.
+
+Overfull \hbox (8.84091pt too wide) in paragraph at lines 149--151
+ [][] 
+ []
+
+<Immagini/12.png, id=71, 607.26875pt x 253.94875pt>
+File: Immagini/12.png Graphic file (type png)
+<use Immagini/12.png>
+Package pdftex.def Info: Immagini/12.png  used on input line 158.
+(pdftex.def)             Requested size: 425.08524pt x 177.76291pt.
+
+Overfull \hbox (6.83156pt too wide) in paragraph at lines 158--160
+ [][] 
+ []
+
+[14 <./Immagini/10.png> <./Immagini/11.png>]
+<Immagini/13.png, id=76, 588.1975pt x 257.96375pt>
+File: Immagini/13.png Graphic file (type png)
+<use Immagini/13.png>
+Package pdftex.def Info: Immagini/13.png  used on input line 166.
+(pdftex.def)             Requested size: 411.73544pt x 180.57338pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./Immagini/12.png> <./Immagini/13.png>]
+<Immagini/14.png, id=82, 784.9325pt x 581.17125pt>
+File: Immagini/14.png Graphic file (type png)
+<use Immagini/14.png>
+Package pdftex.def Info: Immagini/14.png  used on input line 193.
+(pdftex.def)             Requested size: 470.96312pt x 348.70544pt.
+
+Overfull \hbox (52.70944pt too wide) in paragraph at lines 193--195
+ [][] 
+ []
+
+) [16 <./Immagini/14.png>] [17] (RelazioneDLX.bbl [18
+
+
+]) [19] (RelazioneDLX.aux
+(Capitoli/titolo.aux) (Capitoli/01-Introduction.aux) (Capitoli/02-RTL.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7997 strings out of 493305
- 118340 string characters out of 3127628
- 193619 words of memory out of 3000000
- 11316 multiletter control sequences out of 15000+200000
- 51939 words of font info for 45 fonts, out of 3000000 for 9000
+ 8757 strings out of 493305
+ 125469 string characters out of 3127628
+ 204533 words of memory out of 3000000
+ 12066 multiletter control sequences out of 15000+200000
+ 61570 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,10n,43p,1030b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,44p,1030b,1533s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
-ts1.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/
-lm/lm-ec.enc}<C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmbx10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx12.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alessandro/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alessandro/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on RelazioneDLX.pdf (11 pages, 500433 bytes).
+mathsy.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
+ps/lm/lm-rm.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/en
+c/dvips/lm/lm-mathit.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9
+/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Alessandro/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Alessandro/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alessandro/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alessandro/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Alessa
+ndro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/User
+s/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><
+C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr
+i10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmsy10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmtk10.pfb><C:/Users/Alessandro/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Alessandro/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
+Output written on RelazioneDLX.pdf (19 pages, 1293976 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
