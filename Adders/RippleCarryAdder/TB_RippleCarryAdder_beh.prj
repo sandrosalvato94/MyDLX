@@ -1,3 +1,0 @@
-vhdl work "Full_adder.vhd"
-vhdl work "RippleCarryAdder.vhd"
-vhdl work "TB_RippleCarryAdder.vhd"

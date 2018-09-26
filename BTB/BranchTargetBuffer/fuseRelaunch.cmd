@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB/BranchTargetBuffer/TB_BTB_beh.prj" "work.TB_BTB" 

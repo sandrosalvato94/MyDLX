@@ -1,0 +1,195 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Datapath
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:27:21 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DP_enable (input port)
+  Endpoint: DP_NPC[31] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Datapath           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  DP_enable (in)                                          0.00       0.00 r
+  DE_Stage/DE_enable (Decode_NBIT_PC32_NBIT_IR32_NBIT_ADDR5_NBIT_DATA32)
+                                                          0.00       0.00 r
+  DE_Stage/RF/RF_enable (Register_File_NBIT_ADDR5_NBIT_DATA32)
+                                                          0.00       0.00 r
+  DE_Stage/RF/U125/Z (BUF_X1)                             0.09       0.09 r
+  DE_Stage/RF/U127/ZN (AND2_X1)                           0.07       0.15 r
+  DE_Stage/RF/RD1_EI/EI_enable (Enable_Interface_NBIT_DATA5_2)
+                                                          0.00       0.15 r
+  DE_Stage/RF/RD1_EI/U3/ZN (AND2_X1)                      0.05       0.21 r
+  DE_Stage/RF/RD1_EI/EI_dataout[0] (Enable_Interface_NBIT_DATA5_2)
+                                                          0.00       0.21 r
+  DE_Stage/RF/U119/Z (BUF_X1)                             0.11       0.32 r
+  DE_Stage/RF/MUX1_0_30/sel (Mux_NBit_2x1_NBIT_IN32_117)
+                                                          0.00       0.32 r
+  DE_Stage/RF/MUX1_0_30/U12/Z (BUF_X1)                    0.06       0.38 r
+  DE_Stage/RF/MUX1_0_30/U6/Z (BUF_X1)                     0.04       0.42 r
+  DE_Stage/RF/MUX1_0_30/U1/ZN (INV_X1)                    0.05       0.48 f
+  DE_Stage/RF/MUX1_0_30/U20/ZN (AOI22_X1)                 0.07       0.54 r
+  DE_Stage/RF/MUX1_0_30/U22/ZN (INV_X1)                   0.02       0.57 f
+  DE_Stage/RF/MUX1_0_30/portY[0] (Mux_NBit_2x1_NBIT_IN32_117)
+                                                          0.00       0.57 f
+  DE_Stage/RF/MUX1_1_28/port1[0] (Mux_NBit_2x1_NBIT_IN32_109)
+                                                          0.00       0.57 f
+  DE_Stage/RF/MUX1_1_28/U50/ZN (AOI22_X1)                 0.05       0.62 r
+  DE_Stage/RF/MUX1_1_28/U18/ZN (INV_X1)                   0.02       0.64 f
+  DE_Stage/RF/MUX1_1_28/portY[0] (Mux_NBit_2x1_NBIT_IN32_109)
+                                                          0.00       0.64 f
+  DE_Stage/RF/MUX1_2_24/port1[0] (Mux_NBit_2x1_NBIT_IN32_105)
+                                                          0.00       0.64 f
+  DE_Stage/RF/MUX1_2_24/U47/ZN (AOI22_X1)                 0.05       0.69 r
+  DE_Stage/RF/MUX1_2_24/U8/ZN (INV_X1)                    0.02       0.72 f
+  DE_Stage/RF/MUX1_2_24/portY[0] (Mux_NBit_2x1_NBIT_IN32_105)
+                                                          0.00       0.72 f
+  DE_Stage/RF/MUX1_3_16/port1[0] (Mux_NBit_2x1_NBIT_IN32_103)
+                                                          0.00       0.72 f
+  DE_Stage/RF/MUX1_3_16/U39/ZN (AOI22_X1)                 0.05       0.77 r
+  DE_Stage/RF/MUX1_3_16/U5/ZN (INV_X1)                    0.02       0.79 f
+  DE_Stage/RF/MUX1_3_16/portY[0] (Mux_NBit_2x1_NBIT_IN32_103)
+                                                          0.00       0.79 f
+  DE_Stage/RF/MUX1_4_0/port1[0] (Mux_NBit_2x1_NBIT_IN32_102)
+                                                          0.00       0.79 f
+  DE_Stage/RF/MUX1_4_0/U8/ZN (AOI22_X1)                   0.05       0.85 r
+  DE_Stage/RF/MUX1_4_0/U7/ZN (INV_X1)                     0.03       0.88 f
+  DE_Stage/RF/MUX1_4_0/portY[0] (Mux_NBit_2x1_NBIT_IN32_102)
+                                                          0.00       0.88 f
+  DE_Stage/RF/RF_out1[0] (Register_File_NBIT_ADDR5_NBIT_DATA32)
+                                                          0.00       0.88 f
+  DE_Stage/JBM/JBM_Reg[0] (Jmp_Branch_Manager_N32)        0.00       0.88 f
+  DE_Stage/JBM/MUX_TRG/port0[0] (Mux_NBit_2x1_NBIT_IN32_70)
+                                                          0.00       0.88 f
+  DE_Stage/JBM/MUX_TRG/U52/ZN (AOI22_X1)                  0.05       0.93 r
+  DE_Stage/JBM/MUX_TRG/U51/ZN (INV_X1)                    0.03       0.96 f
+  DE_Stage/JBM/MUX_TRG/portY[0] (Mux_NBit_2x1_NBIT_IN32_70)
+                                                          0.00       0.96 f
+  DE_Stage/JBM/ADD/A[0] (PropagateCarryLookahead_N32_1)
+                                                          0.00       0.96 f
+  DE_Stage/JBM/ADD/PG/A[0] (PG_network_N32_2)             0.00       0.96 f
+  DE_Stage/JBM/ADD/PG/U3/Z (XOR2_X1)                      0.08       1.03 f
+  DE_Stage/JBM/ADD/PG/G_cell_0_0/P_ik (GeneralGenerate_11)
+                                                          0.00       1.03 f
+  DE_Stage/JBM/ADD/PG/G_cell_0_0/U2/ZN (AOI21_X1)         0.04       1.07 r
+  DE_Stage/JBM/ADD/PG/G_cell_0_0/U1/ZN (INV_X1)           0.02       1.09 f
+  DE_Stage/JBM/ADD/PG/G_cell_0_0/G_ij (GeneralGenerate_11)
+                                                          0.00       1.09 f
+  DE_Stage/JBM/ADD/PG/G[0] (PG_network_N32_2)             0.00       1.09 f
+  DE_Stage/JBM/ADD/CN/G[0] (Carry_Network_N32_1)          0.00       1.09 f
+  DE_Stage/JBM/ADD/CN/U64/ZN (AOI21_X1)                   0.05       1.15 r
+  DE_Stage/JBM/ADD/CN/U63/ZN (INV_X1)                     0.03       1.18 f
+  DE_Stage/JBM/ADD/CN/U5/ZN (AOI21_X1)                    0.05       1.22 r
+  DE_Stage/JBM/ADD/CN/U4/ZN (INV_X1)                      0.03       1.25 f
+  DE_Stage/JBM/ADD/CN/U7/ZN (AOI21_X1)                    0.05       1.30 r
+  DE_Stage/JBM/ADD/CN/U6/ZN (INV_X1)                      0.03       1.33 f
+  DE_Stage/JBM/ADD/CN/U9/ZN (AOI21_X1)                    0.05       1.37 r
+  DE_Stage/JBM/ADD/CN/U8/ZN (INV_X1)                      0.03       1.40 f
+  DE_Stage/JBM/ADD/CN/U11/ZN (AOI21_X1)                   0.05       1.45 r
+  DE_Stage/JBM/ADD/CN/U10/ZN (INV_X1)                     0.03       1.48 f
+  DE_Stage/JBM/ADD/CN/U13/ZN (AOI21_X1)                   0.05       1.52 r
+  DE_Stage/JBM/ADD/CN/U12/ZN (INV_X1)                     0.03       1.55 f
+  DE_Stage/JBM/ADD/CN/U15/ZN (AOI21_X1)                   0.05       1.60 r
+  DE_Stage/JBM/ADD/CN/U14/ZN (INV_X1)                     0.03       1.63 f
+  DE_Stage/JBM/ADD/CN/U17/ZN (AOI21_X1)                   0.05       1.67 r
+  DE_Stage/JBM/ADD/CN/U16/ZN (INV_X1)                     0.03       1.70 f
+  DE_Stage/JBM/ADD/CN/U19/ZN (AOI21_X1)                   0.05       1.75 r
+  DE_Stage/JBM/ADD/CN/U18/ZN (INV_X1)                     0.03       1.78 f
+  DE_Stage/JBM/ADD/CN/U21/ZN (AOI21_X1)                   0.05       1.82 r
+  DE_Stage/JBM/ADD/CN/U20/ZN (INV_X1)                     0.03       1.85 f
+  DE_Stage/JBM/ADD/CN/U23/ZN (AOI21_X1)                   0.05       1.90 r
+  DE_Stage/JBM/ADD/CN/U22/ZN (INV_X1)                     0.03       1.93 f
+  DE_Stage/JBM/ADD/CN/U25/ZN (AOI21_X1)                   0.05       1.98 r
+  DE_Stage/JBM/ADD/CN/U24/ZN (INV_X1)                     0.03       2.00 f
+  DE_Stage/JBM/ADD/CN/U27/ZN (AOI21_X1)                   0.05       2.05 r
+  DE_Stage/JBM/ADD/CN/U26/ZN (INV_X1)                     0.03       2.08 f
+  DE_Stage/JBM/ADD/CN/U29/ZN (AOI21_X1)                   0.05       2.13 r
+  DE_Stage/JBM/ADD/CN/U28/ZN (INV_X1)                     0.03       2.15 f
+  DE_Stage/JBM/ADD/CN/U31/ZN (AOI21_X1)                   0.05       2.20 r
+  DE_Stage/JBM/ADD/CN/U30/ZN (INV_X1)                     0.03       2.23 f
+  DE_Stage/JBM/ADD/CN/U33/ZN (AOI21_X1)                   0.05       2.28 r
+  DE_Stage/JBM/ADD/CN/U32/ZN (INV_X1)                     0.03       2.30 f
+  DE_Stage/JBM/ADD/CN/U35/ZN (AOI21_X1)                   0.05       2.35 r
+  DE_Stage/JBM/ADD/CN/U34/ZN (INV_X1)                     0.03       2.38 f
+  DE_Stage/JBM/ADD/CN/U37/ZN (AOI21_X1)                   0.05       2.43 r
+  DE_Stage/JBM/ADD/CN/U36/ZN (INV_X1)                     0.03       2.46 f
+  DE_Stage/JBM/ADD/CN/U39/ZN (AOI21_X1)                   0.05       2.50 r
+  DE_Stage/JBM/ADD/CN/U38/ZN (INV_X1)                     0.03       2.53 f
+  DE_Stage/JBM/ADD/CN/U41/ZN (AOI21_X1)                   0.05       2.58 r
+  DE_Stage/JBM/ADD/CN/U40/ZN (INV_X1)                     0.03       2.61 f
+  DE_Stage/JBM/ADD/CN/U43/ZN (AOI21_X1)                   0.05       2.65 r
+  DE_Stage/JBM/ADD/CN/U42/ZN (INV_X1)                     0.03       2.68 f
+  DE_Stage/JBM/ADD/CN/U45/ZN (AOI21_X1)                   0.05       2.73 r
+  DE_Stage/JBM/ADD/CN/U44/ZN (INV_X1)                     0.03       2.76 f
+  DE_Stage/JBM/ADD/CN/U47/ZN (AOI21_X1)                   0.05       2.80 r
+  DE_Stage/JBM/ADD/CN/U46/ZN (INV_X1)                     0.03       2.83 f
+  DE_Stage/JBM/ADD/CN/U49/ZN (AOI21_X1)                   0.05       2.88 r
+  DE_Stage/JBM/ADD/CN/U48/ZN (INV_X1)                     0.03       2.91 f
+  DE_Stage/JBM/ADD/CN/U51/ZN (AOI21_X1)                   0.05       2.95 r
+  DE_Stage/JBM/ADD/CN/U50/ZN (INV_X1)                     0.03       2.98 f
+  DE_Stage/JBM/ADD/CN/U53/ZN (AOI21_X1)                   0.05       3.03 r
+  DE_Stage/JBM/ADD/CN/U52/ZN (INV_X1)                     0.03       3.06 f
+  DE_Stage/JBM/ADD/CN/U55/ZN (AOI21_X1)                   0.05       3.11 r
+  DE_Stage/JBM/ADD/CN/U54/ZN (INV_X1)                     0.03       3.13 f
+  DE_Stage/JBM/ADD/CN/U57/ZN (AOI21_X1)                   0.05       3.18 r
+  DE_Stage/JBM/ADD/CN/U56/ZN (INV_X1)                     0.03       3.21 f
+  DE_Stage/JBM/ADD/CN/U59/ZN (AOI21_X1)                   0.05       3.26 r
+  DE_Stage/JBM/ADD/CN/U58/ZN (INV_X1)                     0.03       3.28 f
+  DE_Stage/JBM/ADD/CN/U61/ZN (AOI21_X1)                   0.05       3.33 r
+  DE_Stage/JBM/ADD/CN/U60/ZN (INV_X1)                     0.03       3.36 f
+  DE_Stage/JBM/ADD/CN/U3/ZN (AOI21_X1)                    0.05       3.41 r
+  DE_Stage/JBM/ADD/CN/U2/ZN (INV_X1)                      0.03       3.43 f
+  DE_Stage/JBM/ADD/CN/Gout[31] (Carry_Network_N32_1)      0.00       3.43 f
+  DE_Stage/JBM/ADD/SN/G[31] (Sum_Network_N32_1)           0.00       3.43 f
+  DE_Stage/JBM/ADD/SN/U8/Z (XOR2_X1)                      0.08       3.51 f
+  DE_Stage/JBM/ADD/SN/S[31] (Sum_Network_N32_1)           0.00       3.51 f
+  DE_Stage/JBM/ADD/Sum[31] (PropagateCarryLookahead_N32_1)
+                                                          0.00       3.51 f
+  DE_Stage/JBM/JBM_Upd_PC[31] (Jmp_Branch_Manager_N32)
+                                                          0.00       3.51 f
+  DE_Stage/DE_new_PC[31] (Decode_NBIT_PC32_NBIT_IR32_NBIT_ADDR5_NBIT_DATA32)
+                                                          0.00       3.51 f
+  IF_Stage/FE_new_PC_from_DE[31] (Fetch_NBIT_PC32_NBIT_IR32)
+                                                          0.00       3.51 f
+  IF_Stage/MUXNPC/port1[31] (Mux_NBit_2x1_NBIT_IN32_176)
+                                                          0.00       3.51 f
+  IF_Stage/MUXNPC/U18/ZN (AOI22_X1)                       0.06       3.57 r
+  IF_Stage/MUXNPC/U17/ZN (INV_X1)                         0.02       3.59 f
+  IF_Stage/MUXNPC/portY[31] (Mux_NBit_2x1_NBIT_IN32_176)
+                                                          0.00       3.59 f
+  IF_Stage/MUX_restore/port0[31] (Mux_NBit_2x1_NBIT_IN32_175)
+                                                          0.00       3.59 f
+  IF_Stage/MUX_restore/U18/ZN (AOI22_X1)                  0.04       3.64 r
+  IF_Stage/MUX_restore/U17/ZN (INV_X1)                    0.03       3.66 f
+  IF_Stage/MUX_restore/portY[31] (Mux_NBit_2x1_NBIT_IN32_175)
+                                                          0.00       3.66 f
+  IF_Stage/FE_NPC[31] (Fetch_NBIT_PC32_NBIT_IR32)         0.00       3.66 f
+  DP_NPC[31] (out)                                        0.00       3.67 f
+  data arrival time                                                  3.67
+
+  max_delay                                              10.00      10.00
+  output external delay                                   0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                 -3.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.33
+
+
+1

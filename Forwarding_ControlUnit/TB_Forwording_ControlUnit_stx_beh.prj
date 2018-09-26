@@ -1,4 +1,0 @@
-vhdl isim_temp "Mux_1Bit_2X1.vhd"
-vhdl isim_temp "Comparator5Bit.vhd"
-vhdl isim_temp "Forwarding_ControlUnit.vhd"
-vhdl isim_temp "TB_Forwording_ControlUnit.vhd"

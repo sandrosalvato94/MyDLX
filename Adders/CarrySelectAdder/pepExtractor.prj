@@ -1,6 +1,0 @@
-work	"CarrySelectAdder.vhd"
-work	"Full_adder.vhd"
-work	"Mux_1Bit_2X1.vhd"
-work	"Mux_NBit_2x1.vhd"
-work	"NCarrySelectAdder.vhd"
-work	"RippleCarryAdder.vhd"

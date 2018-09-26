@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB_misprediction_manager/TB_BTB_misprediction_manager_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/BTB_misprediction_manager/TB_BTB_misprediction_manager_beh.prj" "work.TB_BTB_misprediction_manager" 

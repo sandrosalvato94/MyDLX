@@ -1,8 +1,0 @@
-vhdl work "PG_cell.vhd"
-vhdl work "GeneralGenerate.vhd"
-vhdl work "Sum_Network.vhd"
-vhdl work "PG_network.vhd"
-vhdl work "Carry_Network.vhd"
-vhdl work "PropagateCarryLookahead.vhd"
-vhdl work "Mux_NBit_2x1.vhd"
-vhdl work "Jmp_Branch_Manager.vhd"

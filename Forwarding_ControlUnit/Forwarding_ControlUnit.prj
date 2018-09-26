@@ -1,3 +1,0 @@
-vhdl work "Mux_1Bit_2X1.vhd"
-vhdl work "Comparator5Bit.vhd"
-vhdl work "Forwarding_ControlUnit.vhd"

@@ -1,3 +1,0 @@
-vhdl work "Mux_Bit.vhd"
-vhdl work "D_FF_rst.vhd"
-vhdl work "NShiftRegisterSISO.vhd"

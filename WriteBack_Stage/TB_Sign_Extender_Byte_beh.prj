@@ -1,3 +1,0 @@
-vhdl work "Mux_NBit_2x1.vhd"
-vhdl work "Sign_Extender_Byte.vhd"
-vhdl work "TB_Sign_Extender_Byte.vhd"

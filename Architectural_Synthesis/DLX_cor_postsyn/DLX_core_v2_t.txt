@@ -1,0 +1,251 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'DLX_Core' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_Core
+Version: Z-2007.03-SP1
+Date   : Wed Sep 12 11:59:07 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CU/WB_CW/data_out_reg[3]
+              (rising edge-triggered flip-flop clocked by DLX_CLK)
+  Endpoint: DP/EX_Stage/HI/data_out_reg[31]
+            (rising edge-triggered flip-flop clocked by DLX_CLK)
+  Path Group: DLX_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_Core           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DLX_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CU/WB_CW/data_out_reg[3]/CK (DFFR_X1)                   0.00 #     0.00 r
+  CU/WB_CW/data_out_reg[3]/Q (DFFR_X1)                    0.11       0.11 r
+  CU/WB_CW/data_out[3] (NRegister_N4)                     0.00       0.11 r
+  CU/CU_CW_WB[23] (ControlUnit)                           0.00       0.11 r
+  DP/DP_WB_sel (Datapath_NBIT_DATA32_NBIT_IRAM_ADDR5)     0.00       0.11 r
+  DP/WB_Stage/WB_sel (WriteBack_Stage_NBIT_DATA32)        0.00       0.11 r
+  DP/WB_Stage/WB_MUX/sel (Mux_NBit_2x1_NBIT_IN32_80)      0.00       0.11 r
+  DP/WB_Stage/WB_MUX/U18/ZN (INV_X1)                      0.03       0.14 f
+  DP/WB_Stage/WB_MUX/U78/ZN (AOI22_X1)                    0.05       0.19 r
+  DP/WB_Stage/WB_MUX/U79/ZN (INV_X1)                      0.03       0.21 f
+  DP/WB_Stage/WB_MUX/portY[7] (Mux_NBit_2x1_NBIT_IN32_80)
+                                                          0.00       0.21 f
+  DP/WB_Stage/WB_SGB/SR_data_in[7] (Sign_Reducer_NBIT_data32)
+                                                          0.00       0.21 f
+  DP/WB_Stage/WB_SGB/MUX_msb/port1 (Mux_1Bit_2X1_3)       0.00       0.21 f
+  DP/WB_Stage/WB_SGB/MUX_msb/U2/ZN (NAND2_X1)             0.03       0.24 r
+  DP/WB_Stage/WB_SGB/MUX_msb/U3/ZN (NAND2_X1)             0.04       0.28 f
+  DP/WB_Stage/WB_SGB/MUX_msb/portY (Mux_1Bit_2X1_3)       0.00       0.28 f
+  DP/WB_Stage/WB_SGB/U2/ZN (AND2_X1)                      0.05       0.33 f
+  DP/WB_Stage/WB_SGB/MUX_B_H/port1[30] (Mux_NBit_2x1_NBIT_IN32_9)
+                                                          0.00       0.33 f
+  DP/WB_Stage/WB_SGB/MUX_B_H/U73/ZN (AOI22_X1)            0.06       0.39 r
+  DP/WB_Stage/WB_SGB/MUX_B_H/U67/ZN (INV_X1)              0.02       0.41 f
+  DP/WB_Stage/WB_SGB/MUX_B_H/portY[30] (Mux_NBit_2x1_NBIT_IN32_9)
+                                                          0.00       0.41 f
+  DP/WB_Stage/WB_SGB/MUX_OUT/port1[30] (Mux_NBit_2x1_NBIT_IN32_8)
+                                                          0.00       0.41 f
+  DP/WB_Stage/WB_SGB/MUX_OUT/U25/ZN (AOI22_X1)            0.05       0.47 r
+  DP/WB_Stage/WB_SGB/MUX_OUT/U76/ZN (INV_X1)              0.03       0.50 f
+  DP/WB_Stage/WB_SGB/MUX_OUT/portY[30] (Mux_NBit_2x1_NBIT_IN32_8)
+                                                          0.00       0.50 f
+  DP/WB_Stage/WB_SGB/SR_data_out[30] (Sign_Reducer_NBIT_data32)
+                                                          0.00       0.50 f
+  DP/WB_Stage/WB_out[30] (WriteBack_Stage_NBIT_DATA32)
+                                                          0.00       0.50 f
+  DP/MEM_WB_NULL_TOP_MUX/port0[30] (Mux_NBit_2x1_NBIT_IN32_135)
+                                                          0.00       0.50 f
+  DP/MEM_WB_NULL_TOP_MUX/U79/ZN (AOI22_X1)                0.05       0.54 r
+  DP/MEM_WB_NULL_TOP_MUX/U18/ZN (INV_X1)                  0.02       0.57 f
+  DP/MEM_WB_NULL_TOP_MUX/portY[30] (Mux_NBit_2x1_NBIT_IN32_135)
+                                                          0.00       0.57 f
+  DP/FWD_TOP_MUX/port1[30] (Mux_NBit_2x1_NBIT_IN32_134)
+                                                          0.00       0.57 f
+  DP/FWD_TOP_MUX/U78/ZN (AOI22_X1)                        0.05       0.62 r
+  DP/FWD_TOP_MUX/U79/ZN (INV_X1)                          0.03       0.65 f
+  DP/FWD_TOP_MUX/portY[30] (Mux_NBit_2x1_NBIT_IN32_134)
+                                                          0.00       0.65 f
+  DP/REVERSE_BOT_MUX/port1[30] (Mux_NBit_2x1_NBIT_IN32_129)
+                                                          0.00       0.65 f
+  DP/REVERSE_BOT_MUX/U79/ZN (AOI22_X1)                    0.06       0.70 r
+  DP/REVERSE_BOT_MUX/U78/ZN (INV_X1)                      0.03       0.73 f
+  DP/REVERSE_BOT_MUX/portY[30] (Mux_NBit_2x1_NBIT_IN32_129)
+                                                          0.00       0.73 f
+  DP/EX_Stage/EX_OpB[30] (Execute_Stage_NBIT_DATA32_NBIT_BS_AMOUNT5)
+                                                          0.00       0.73 f
+  DP/EX_Stage/EI_OpB_Mul/EI_datain[30] (Enable_Interface_NBIT_DATA32_1)
+                                                          0.00       0.73 f
+  DP/EX_Stage/EI_OpB_Mul/U30/ZN (AND2_X2)                 0.05       0.78 f
+  DP/EX_Stage/EI_OpB_Mul/EI_dataout[30] (Enable_Interface_NBIT_DATA32_1)
+                                                          0.00       0.78 f
+  DP/EX_Stage/MUL/MUL_OpB[30] (Multiplier_NBIT_DATA32)
+                                                          0.00       0.78 f
+  DP/EX_Stage/MUL/mult_65/B[30] (Multiplier_NBIT_DATA32_DW02_mult_0)
+                                                          0.00       0.78 f
+  DP/EX_Stage/MUL/mult_65/U113/ZN (INV_X1)                0.03       0.81 r
+  DP/EX_Stage/MUL/mult_65/U107/ZN (NOR2_X1)               0.02       0.83 f
+  DP/EX_Stage/MUL/mult_65/U109/ZN (XNOR2_X1)              0.06       0.89 f
+  DP/EX_Stage/MUL/mult_65/S2_2_29/S (FA_X1)               0.13       1.03 r
+  DP/EX_Stage/MUL/mult_65/S2_3_28/S (FA_X1)               0.11       1.14 f
+  DP/EX_Stage/MUL/mult_65/S2_4_27/CO (FA_X1)              0.09       1.23 f
+  DP/EX_Stage/MUL/mult_65/S2_5_27/CO (FA_X1)              0.11       1.34 f
+  DP/EX_Stage/MUL/mult_65/S2_6_27/CO (FA_X1)              0.11       1.45 f
+  DP/EX_Stage/MUL/mult_65/S2_7_27/S (FA_X1)               0.14       1.59 r
+  DP/EX_Stage/MUL/mult_65/S2_8_26/S (FA_X1)               0.11       1.70 f
+  DP/EX_Stage/MUL/mult_65/S2_9_25/S (FA_X1)               0.14       1.84 r
+  DP/EX_Stage/MUL/mult_65/S2_10_24/S (FA_X1)              0.11       1.95 f
+  DP/EX_Stage/MUL/mult_65/S2_11_23/S (FA_X1)              0.14       2.09 r
+  DP/EX_Stage/MUL/mult_65/S2_12_22/S (FA_X1)              0.11       2.20 f
+  DP/EX_Stage/MUL/mult_65/S2_13_21/S (FA_X1)              0.14       2.34 r
+  DP/EX_Stage/MUL/mult_65/S2_14_20/S (FA_X1)              0.11       2.45 f
+  DP/EX_Stage/MUL/mult_65/S2_15_19/S (FA_X1)              0.14       2.58 r
+  DP/EX_Stage/MUL/mult_65/S2_16_18/S (FA_X1)              0.11       2.70 f
+  DP/EX_Stage/MUL/mult_65/S2_17_17/S (FA_X1)              0.14       2.83 r
+  DP/EX_Stage/MUL/mult_65/S2_18_16/S (FA_X1)              0.11       2.94 f
+  DP/EX_Stage/MUL/mult_65/S2_19_15/S (FA_X1)              0.14       3.08 r
+  DP/EX_Stage/MUL/mult_65/S2_20_14/S (FA_X1)              0.11       3.19 f
+  DP/EX_Stage/MUL/mult_65/S2_21_13/S (FA_X1)              0.14       3.33 r
+  DP/EX_Stage/MUL/mult_65/S2_22_12/S (FA_X1)              0.11       3.44 f
+  DP/EX_Stage/MUL/mult_65/S2_23_11/S (FA_X1)              0.14       3.58 r
+  DP/EX_Stage/MUL/mult_65/S2_24_10/S (FA_X1)              0.11       3.69 f
+  DP/EX_Stage/MUL/mult_65/S2_25_9/S (FA_X1)               0.14       3.82 r
+  DP/EX_Stage/MUL/mult_65/S2_26_8/S (FA_X1)               0.11       3.94 f
+  DP/EX_Stage/MUL/mult_65/S2_27_7/S (FA_X1)               0.14       4.07 r
+  DP/EX_Stage/MUL/mult_65/S2_28_6/S (FA_X1)               0.11       4.18 f
+  DP/EX_Stage/MUL/mult_65/S2_29_5/S (FA_X1)               0.14       4.32 r
+  DP/EX_Stage/MUL/mult_65/S2_30_4/S (FA_X1)               0.11       4.43 f
+  DP/EX_Stage/MUL/mult_65/S4_3/S (FA_X1)                  0.14       4.57 r
+  DP/EX_Stage/MUL/mult_65/U86/Z (XOR2_X1)                 0.08       4.65 r
+  DP/EX_Stage/MUL/mult_65/FS_1/A[32] (Multiplier_NBIT_DATA32_DW01_add_0)
+                                                          0.00       4.65 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U42/ZN (NAND2_X1)          0.03       4.69 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U40/ZN (OAI21_X1)          0.04       4.73 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U39/ZN (AOI21_X1)          0.03       4.76 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U37/ZN (OAI21_X1)          0.04       4.80 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U35/ZN (AND2_X1)           0.04       4.85 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U36/ZN (NOR3_X1)           0.02       4.87 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U72/ZN (OAI21_X1)          0.04       4.91 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U69/ZN (AOI21_X1)          0.03       4.94 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U66/ZN (OAI21_X1)          0.04       4.98 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U67/ZN (AOI21_X1)          0.03       5.01 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U101/ZN (OAI21_X1)         0.04       5.05 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U98/ZN (INV_X1)            0.02       5.08 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U96/ZN (OAI21_X1)          0.04       5.12 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U97/ZN (AOI21_X1)          0.03       5.15 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U16/ZN (OAI21_X1)          0.04       5.19 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U172/ZN (AOI21_X1)         0.03       5.22 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U31/ZN (OAI21_X1)          0.04       5.26 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U123/ZN (AOI21_X1)         0.03       5.29 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U116/ZN (OAI21_X1)         0.04       5.33 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U113/ZN (AOI21_X1)         0.03       5.36 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U110/ZN (OAI21_X1)         0.04       5.41 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U112/ZN (AOI21_X1)         0.03       5.44 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U146/ZN (OAI21_X1)         0.04       5.48 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U140/ZN (AOI21_X1)         0.03       5.51 f
+  DP/EX_Stage/MUL/mult_65/FS_1/U139/ZN (OAI21_X1)         0.04       5.56 r
+  DP/EX_Stage/MUL/mult_65/FS_1/U138/ZN (XNOR2_X1)         0.06       5.61 r
+  DP/EX_Stage/MUL/mult_65/FS_1/SUM[61] (Multiplier_NBIT_DATA32_DW01_add_0)
+                                                          0.00       5.61 r
+  DP/EX_Stage/MUL/mult_65/PRODUCT[63] (Multiplier_NBIT_DATA32_DW02_mult_0)
+                                                          0.00       5.61 r
+  DP/EX_Stage/MUL/U1/ZN (NAND2_X1)                        0.03       5.64 f
+  DP/EX_Stage/MUL/U5/ZN (NAND2_X1)                        0.03       5.67 r
+  DP/EX_Stage/MUL/MUL_product[63] (Multiplier_NBIT_DATA32)
+                                                          0.00       5.67 r
+  DP/EX_Stage/HI/data_in[31] (NRegister_N32_35)           0.00       5.67 r
+  DP/EX_Stage/HI/U10/ZN (NAND2_X1)                        0.03       5.70 f
+  DP/EX_Stage/HI/U9/ZN (NAND2_X1)                         0.03       5.73 r
+  DP/EX_Stage/HI/data_out_reg[31]/D (DFFR_X2)             0.01       5.74 r
+  data arrival time                                                  5.74
+
+  clock DLX_CLK (rise edge)                               5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  DP/EX_Stage/HI/data_out_reg[31]/CK (DFFR_X2)            0.00       5.00 r
+  library setup time                                     -0.03       4.97
+  data required time                                                 4.97
+  --------------------------------------------------------------------------
+  data required time                                                 4.97
+  data arrival time                                                 -5.74
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.77
+
+
+  Startpoint: DLX_reset (input port)
+  Endpoint: DLX_written_data[1]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_Core           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  DLX_reset (in)                                          0.00       0.00 f
+  DP/DP_reset (Datapath_NBIT_DATA32_NBIT_IRAM_ADDR5)      0.00       0.00 f
+  DP/U33/ZN (INV_X1)                                      0.03       0.03 r
+  DP/U4/ZN (AND2_X2)                                      0.04       0.07 r
+  DP/FRW_CU/FCU_enable (FCU)                              0.00       0.07 r
+  DP/FRW_CU/U67/ZN (INV_X1)                               0.04       0.11 f
+  DP/FRW_CU/U153/ZN (AOI211_X1)                           0.10       0.21 r
+  DP/FRW_CU/FCU_EX_MEM_MUX (FCU)                          0.00       0.21 r
+  DP/DATA_TB_STORED_MUX/sel (Mux_NBit_2x1_NBIT_IN32_128)
+                                                          0.00       0.21 r
+  DP/DATA_TB_STORED_MUX/U14/Z (BUF_X1)                    0.05       0.25 r
+  DP/DATA_TB_STORED_MUX/U9/Z (BUF_X1)                     0.04       0.29 r
+  DP/DATA_TB_STORED_MUX/U2/ZN (INV_X1)                    0.07       0.36 f
+  DP/DATA_TB_STORED_MUX/U45/ZN (AOI22_X1)                 0.08       0.44 r
+  DP/DATA_TB_STORED_MUX/U44/ZN (INV_X1)                   0.03       0.48 f
+  DP/DATA_TB_STORED_MUX/portY[1] (Mux_NBit_2x1_NBIT_IN32_128)
+                                                          0.00       0.48 f
+  DP/MEM_Stage/ME_data_in[1] (Memory_Stage_NBIT_DATA32_NBIT_ADDRESS32)
+                                                          0.00       0.48 f
+  DP/MEM_Stage/DR/DR_data_in[1] (Data_Reducer_NBIT_DATA32)
+                                                          0.00       0.48 f
+  DP/MEM_Stage/DR/MUX_B_H/port1[1] (Mux_NBit_2x1_NBIT_IN32_11)
+                                                          0.00       0.48 f
+  DP/MEM_Stage/DR/MUX_B_H/U20/ZN (AOI22_X1)               0.06       0.54 r
+  DP/MEM_Stage/DR/MUX_B_H/U19/ZN (INV_X1)                 0.02       0.56 f
+  DP/MEM_Stage/DR/MUX_B_H/portY[1] (Mux_NBit_2x1_NBIT_IN32_11)
+                                                          0.00       0.56 f
+  DP/MEM_Stage/DR/MUX_OUT/port1[1] (Mux_NBit_2x1_NBIT_IN32_10)
+                                                          0.00       0.56 f
+  DP/MEM_Stage/DR/MUX_OUT/U22/ZN (AOI22_X1)               0.05       0.61 r
+  DP/MEM_Stage/DR/MUX_OUT/U21/ZN (INV_X1)                 0.02       0.63 f
+  DP/MEM_Stage/DR/MUX_OUT/portY[1] (Mux_NBit_2x1_NBIT_IN32_10)
+                                                          0.00       0.63 f
+  DP/MEM_Stage/DR/DR_data_out[1] (Data_Reducer_NBIT_DATA32)
+                                                          0.00       0.63 f
+  DP/MEM_Stage/ME_data_to_mem[1] (Memory_Stage_NBIT_DATA32_NBIT_ADDRESS32)
+                                                          0.00       0.63 f
+  DP/DP_data_to_DRAM[1] (Datapath_NBIT_DATA32_NBIT_IRAM_ADDR5)
+                                                          0.00       0.63 f
+  DLX_written_data[1] (out)                               0.00       0.63 f
+  data arrival time                                                  0.63
+
+  max_delay                                              10.00      10.00
+  output external delay                                   0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                 -0.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        9.37
+
+
+1

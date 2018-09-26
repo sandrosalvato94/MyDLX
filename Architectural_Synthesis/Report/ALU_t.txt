@@ -1,0 +1,176 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ALU
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:21:44 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ALU_Opcode[5]
+              (input port)
+  Endpoint: ALU_flags[1]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ALU                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  ALU_Opcode[5] (in)                                      0.00       0.00 f
+  U222/ZN (OR2_X1)                                        0.07       0.07 f
+  U210/ZN (NOR2_X1)                                       0.15       0.22 r
+  BS/BS_opcode[1] (Barrel_Shifter_NBIT_AMOUNT5)           0.00       0.22 r
+  BS/MSB_MUX/sel (Mux_NBit_2x1_NBIT_IN8_21)               0.00       0.22 r
+  BS/MSB_MUX/U1/ZN (INV_X1)                               0.07       0.29 f
+  BS/MSB_MUX/U3/ZN (AOI22_X1)                             0.07       0.37 r
+  BS/MSB_MUX/U2/ZN (INV_X1)                               0.05       0.42 f
+  BS/MSB_MUX/portY[7] (Mux_NBit_2x1_NBIT_IN8_21)          0.00       0.42 f
+  BS/MUX4_3_3/port1[7] (Mux_NBit_2x1_NBIT_IN8_23)         0.00       0.42 f
+  BS/MUX4_3_3/U10/ZN (AOI22_X1)                           0.07       0.50 r
+  BS/MUX4_3_3/U17/ZN (INV_X1)                             0.02       0.52 f
+  BS/MUX4_3_3/portY[7] (Mux_NBit_2x1_NBIT_IN8_23)         0.00       0.52 f
+  BS/MUX1_0_2_0/port1[31] (Mux_NBit_2x1_NBIT_IN40_7)      0.00       0.52 f
+  BS/MUX1_0_2_0/U72/ZN (AOI22_X1)                         0.05       0.57 r
+  BS/MUX1_0_2_0/U19/ZN (INV_X1)                           0.02       0.59 f
+  BS/MUX1_0_2_0/portY[31] (Mux_NBit_2x1_NBIT_IN40_7)      0.00       0.59 f
+  BS/MUX1_1_0/port1[31] (Mux_NBit_2x1_NBIT_IN40_6)        0.00       0.59 f
+  BS/MUX1_1_0/U27/ZN (AOI22_X1)                           0.05       0.65 r
+  BS/MUX1_1_0/U26/ZN (INV_X1)                             0.03       0.67 f
+  BS/MUX1_1_0/portY[31] (Mux_NBit_2x1_NBIT_IN40_6)        0.00       0.67 f
+  BS/MUX_selected_mask/port1[32] (Mux_NBit_2x1_NBIT_IN40_5)
+                                                          0.00       0.67 f
+  BS/MUX_selected_mask/U33/ZN (AOI22_X1)                  0.06       0.73 r
+  BS/MUX_selected_mask/U32/ZN (INV_X1)                    0.05       0.78 f
+  BS/MUX_selected_mask/portY[32] (Mux_NBit_2x1_NBIT_IN40_5)
+                                                          0.00       0.78 f
+  BS/MUX2_0_6/port1[31] (Mux_NBit_2x1_NBIT_IN32_145)      0.00       0.78 f
+  BS/MUX2_0_6/U4/ZN (AOI22_X1)                            0.07       0.85 r
+  BS/MUX2_0_6/U5/ZN (INV_X1)                              0.02       0.87 f
+  BS/MUX2_0_6/portY[31] (Mux_NBit_2x1_NBIT_IN32_145)      0.00       0.87 f
+  BS/MUX2_1_4/port1[31] (Mux_NBit_2x1_NBIT_IN32_143)      0.00       0.87 f
+  BS/MUX2_1_4/U9/ZN (AOI22_X1)                            0.05       0.92 r
+  BS/MUX2_1_4/U5/ZN (INV_X1)                              0.02       0.95 f
+  BS/MUX2_1_4/portY[31] (Mux_NBit_2x1_NBIT_IN32_143)      0.00       0.95 f
+  BS/MUX2_2_0_0/port1[31] (Mux_NBit_2x1_NBIT_IN32_142)
+                                                          0.00       0.95 f
+  BS/MUX2_2_0_0/U10/ZN (AOI22_X1)                         0.05       1.00 r
+  BS/MUX2_2_0_0/U9/ZN (INV_X1)                            0.06       1.06 f
+  BS/MUX2_2_0_0/portY[31] (Mux_NBit_2x1_NBIT_IN32_142)
+                                                          0.00       1.06 f
+  BS/BS_data_out[31] (Barrel_Shifter_NBIT_AMOUNT5)        0.00       1.06 f
+  CMPL/CMPL_OpA[31] (Comparison_Logic_NBIT_DATA32)        0.00       1.06 f
+  CMPL/CMP/CMP_OpA[31] (Comparator_NBIT_DATA32)           0.00       1.06 f
+  CMPL/CMP/U217/Z (XOR2_X1)                               0.10       1.15 f
+  CMPL/CMP/U91/ZN (NOR2_X1)                               0.09       1.24 r
+  CMPL/CMP/U163/ZN (NAND2_X1)                             0.05       1.29 f
+  CMPL/CMP/U90/ZN (XNOR2_X1)                              0.08       1.36 f
+  CMPL/CMP/U216/ZN (NAND3_X1)                             0.05       1.42 r
+  CMPL/CMP/U215/ZN (NAND3_X1)                             0.05       1.47 f
+  CMPL/CMP/U18/ZN (INV_X1)                                0.04       1.51 r
+  CMPL/CMP/U214/ZN (NAND3_X1)                             0.05       1.56 f
+  CMPL/CMP/U129/ZN (AND3_X1)                              0.06       1.61 f
+  CMPL/CMP/U118/ZN (NAND2_X1)                             0.04       1.65 r
+  CMPL/CMP/U31/ZN (NAND2_X1)                              0.04       1.69 f
+  CMPL/CMP/U22/ZN (INV_X1)                                0.04       1.73 r
+  CMPL/CMP/U213/ZN (NAND3_X1)                             0.05       1.78 f
+  CMPL/CMP/U130/ZN (AND3_X1)                              0.06       1.83 f
+  CMPL/CMP/U110/ZN (NAND2_X1)                             0.04       1.87 r
+  CMPL/CMP/U32/ZN (NAND2_X1)                              0.04       1.91 f
+  CMPL/CMP/U23/ZN (INV_X1)                                0.04       1.95 r
+  CMPL/CMP/U212/ZN (NAND3_X1)                             0.05       1.99 f
+  CMPL/CMP/U131/ZN (AND3_X1)                              0.06       2.05 f
+  CMPL/CMP/U112/ZN (NAND2_X1)                             0.04       2.09 r
+  CMPL/CMP/U33/ZN (NAND2_X1)                              0.04       2.13 f
+  CMPL/CMP/U24/ZN (INV_X1)                                0.04       2.17 r
+  CMPL/CMP/U211/ZN (NAND3_X1)                             0.05       2.21 f
+  CMPL/CMP/U132/ZN (AND3_X1)                              0.06       2.27 f
+  CMPL/CMP/U114/ZN (NAND2_X1)                             0.04       2.31 r
+  CMPL/CMP/U34/ZN (NAND2_X1)                              0.04       2.35 f
+  CMPL/CMP/U25/ZN (INV_X1)                                0.04       2.39 r
+  CMPL/CMP/U210/ZN (NAND3_X1)                             0.05       2.43 f
+  CMPL/CMP/U133/ZN (AND3_X1)                              0.06       2.49 f
+  CMPL/CMP/U116/ZN (NAND2_X1)                             0.04       2.53 r
+  CMPL/CMP/U35/ZN (NAND2_X1)                              0.04       2.57 f
+  CMPL/CMP/U26/ZN (INV_X1)                                0.04       2.61 r
+  CMPL/CMP/U209/ZN (NAND3_X1)                             0.05       2.66 f
+  CMPL/CMP/U208/ZN (NAND3_X1)                             0.05       2.71 r
+  CMPL/CMP/U49/ZN (INV_X1)                                0.03       2.74 f
+  CMPL/CMP/U17/ZN (NAND2_X1)                              0.04       2.78 r
+  CMPL/CMP/U207/Z (XOR2_X1)                               0.10       2.88 r
+  CMPL/CMP/U47/ZN (INV_X1)                                0.03       2.91 f
+  CMPL/CMP/U46/ZN (NOR3_X1)                               0.06       2.97 r
+  CMPL/CMP/U124/ZN (NAND2_X1)                             0.04       3.01 f
+  CMPL/CMP/U50/ZN (AND2_X1)                               0.05       3.06 f
+  CMPL/CMP/U108/ZN (NAND2_X1)                             0.04       3.11 r
+  CMPL/CMP/U52/ZN (AND3_X1)                               0.06       3.17 r
+  CMPL/CMP/U126/ZN (NAND2_X1)                             0.04       3.20 f
+  CMPL/CMP/U51/ZN (AND2_X1)                               0.05       3.25 f
+  CMPL/CMP/U106/ZN (NAND2_X1)                             0.04       3.30 r
+  CMPL/CMP/U206/ZN (NAND3_X1)                             0.05       3.35 f
+  CMPL/CMP/U43/ZN (AND3_X1)                               0.05       3.40 f
+  CMPL/CMP/U104/ZN (NAND2_X1)                             0.04       3.45 r
+  CMPL/CMP/U205/ZN (NAND3_X1)                             0.05       3.50 f
+  CMPL/CMP/U100/ZN (AND2_X1)                              0.05       3.55 f
+  CMPL/CMP/U99/ZN (OAI211_X1)                             0.04       3.59 r
+  CMPL/CMP/U41/ZN (NOR2_X1)                               0.03       3.62 f
+  CMPL/CMP/OR_gt/A[0] (ORGate_NX1_N32_0)                  0.00       3.62 f
+  CMPL/CMP/OR_gt/U8/ZN (NOR4_X1)                          0.09       3.71 r
+  CMPL/CMP/OR_gt/U2/ZN (NAND4_X1)                         0.04       3.75 f
+  CMPL/CMP/OR_gt/U9/ZN (OR4_X1)                           0.12       3.87 f
+  CMPL/CMP/OR_gt/Y (ORGate_NX1_N32_0)                     0.00       3.87 f
+  CMPL/CMP/U48/ZN (INV_X1)                                0.03       3.91 r
+  CMPL/CMP/MUX_gt/port1 (Mux_1Bit_2X1_0)                  0.00       3.91 r
+  CMPL/CMP/MUX_gt/U2/ZN (AOI22_X1)                        0.03       3.94 f
+  CMPL/CMP/MUX_gt/U1/ZN (INV_X1)                          0.04       3.98 r
+  CMPL/CMP/MUX_gt/portY (Mux_1Bit_2X1_0)                  0.00       3.98 r
+  CMPL/CMP/U19/ZN (INV_X1)                                0.03       4.01 f
+  CMPL/CMP/U21/ZN (OR2_X1)                                0.05       4.06 f
+  CMPL/CMP/CMP_A_le_B (Comparator_NBIT_DATA32)            0.00       4.06 f
+  CMPL/U4/ZN (AOI22_X1)                                   0.05       4.10 r
+  CMPL/U2/ZN (OAI22_X1)                                   0.03       4.14 f
+  CMPL/U9/ZN (NAND2_X1)                                   0.03       4.17 r
+  CMPL/U8/ZN (NAND2_X1)                                   0.03       4.19 f
+  CMPL/CMPL_Y[0] (Comparison_Logic_NBIT_DATA32)           0.00       4.19 f
+  MUX2/port0[0] (Mux_NBit_2x1_NBIT_IN32_150)              0.00       4.19 f
+  MUX2/U44/ZN (AOI22_X1)                                  0.04       4.24 r
+  MUX2/U3/ZN (INV_X1)                                     0.02       4.26 f
+  MUX2/portY[0] (Mux_NBit_2x1_NBIT_IN32_150)              0.00       4.26 f
+  MUX3/port1[0] (Mux_NBit_2x1_NBIT_IN32_149)              0.00       4.26 f
+  MUX3/U16/ZN (AOI22_X1)                                  0.05       4.31 r
+  MUX3/U15/ZN (INV_X1)                                    0.03       4.34 f
+  MUX3/portY[0] (Mux_NBit_2x1_NBIT_IN32_149)              0.00       4.34 f
+  FG/FG_ALU_out[0] (Flag_Generator_NBIT_ALU32)            0.00       4.34 f
+  FG/XNOR32X1/A[0] (XNORGate_NX1_N32)                     0.00       4.34 f
+  FG/XNOR32X1/U14/ZN (XNOR2_X1)                           0.06       4.41 f
+  FG/XNOR32X1/U39/Z (XOR2_X1)                             0.08       4.48 f
+  FG/XNOR32X1/U38/Z (XOR2_X1)                             0.08       4.56 f
+  FG/XNOR32X1/U34/Z (XOR2_X1)                             0.07       4.63 f
+  FG/XNOR32X1/U33/Z (XOR2_X1)                             0.08       4.70 f
+  FG/XNOR32X1/U32/Z (XOR2_X1)                             0.07       4.77 f
+  FG/XNOR32X1/Y (XNORGate_NX1_N32)                        0.00       4.77 f
+  FG/FG_PF (Flag_Generator_NBIT_ALU32)                    0.00       4.77 f
+  ALU_flags[1] (out)                                      0.00       4.77 f
+  data arrival time                                                  4.77
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -4.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.23
+
+
+1

@@ -1,0 +1,104 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BTB
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:30:35 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: BTB_enable (input port)
+  Endpoint: BTB_target_prediction[1]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BTB                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  BTB_enable (in)                                         0.00       0.00 r
+  U90/ZN (INV_X1)                                         0.06       0.06 f
+  U344/ZN (INV_X1)                                        0.09       0.15 r
+  NCmp_i_1/Enable (NComparatorWithEnable_NBIT32_31)       0.00       0.15 r
+  NCmp_i_1/U2/Z (BUF_X1)                                  0.09       0.24 r
+  NCmp_i_1/CWE_i_20/enable (ComparatorWithEnable_403)     0.00       0.24 r
+  NCmp_i_1/CWE_i_20/U1/ZN (AND2_X1)                       0.05       0.29 r
+  NCmp_i_1/CWE_i_20/y (ComparatorWithEnable_403)          0.00       0.29 r
+  NCmp_i_1/U4/ZN (NAND4_X1)                               0.04       0.33 f
+  NCmp_i_1/U13/ZN (NOR4_X1)                               0.09       0.42 r
+  NCmp_i_1/U11/ZN (AND2_X1)                               0.06       0.48 r
+  NCmp_i_1/ComparatorBit (NComparatorWithEnable_NBIT32_31)
+                                                          0.00       0.48 r
+  PriorityEncoder32X5/data_in[1] (NPriorityEncoder_NBIT_OUT5)
+                                                          0.00       0.48 r
+  PriorityEncoder32X5/U8/ZN (AOI21_X1)                    0.03       0.51 f
+  PriorityEncoder32X5/U7/ZN (OAI21_X1)                    0.05       0.56 r
+  PriorityEncoder32X5/U5/ZN (AOI21_X1)                    0.03       0.59 f
+  PriorityEncoder32X5/U24/ZN (OAI21_X1)                   0.05       0.63 r
+  PriorityEncoder32X5/U22/ZN (AOI21_X1)                   0.03       0.66 f
+  PriorityEncoder32X5/U13/ZN (OAI21_X1)                   0.04       0.71 r
+  PriorityEncoder32X5/U12/ZN (AOI21_X1)                   0.03       0.74 f
+  PriorityEncoder32X5/U11/ZN (OAI21_X1)                   0.05       0.78 r
+  PriorityEncoder32X5/U10/ZN (AOI21_X1)                   0.03       0.81 f
+  PriorityEncoder32X5/U16/ZN (OAI21_X1)                   0.05       0.86 r
+  PriorityEncoder32X5/U14/ZN (AOI21_X1)                   0.03       0.89 f
+  PriorityEncoder32X5/U20/ZN (OAI21_X1)                   0.05       0.93 r
+  PriorityEncoder32X5/U18/ZN (AOI21_X1)                   0.03       0.96 f
+  PriorityEncoder32X5/U29/ZN (OAI21_X1)                   0.05       1.01 r
+  PriorityEncoder32X5/U27/ZN (AOI21_X1)                   0.03       1.04 f
+  PriorityEncoder32X5/U26/ZN (NOR2_X1)                    0.04       1.07 r
+  PriorityEncoder32X5/data_out_reg[0]/Q (DLH_X1)          0.05       1.13 r
+  PriorityEncoder32X5/data_out[0] (NPriorityEncoder_NBIT_OUT5)
+                                                          0.00       1.13 r
+  U35/Z (BUF_X1)                                          0.13       1.26 r
+  MUX1_0_14/sel (Mux_NBit_2x1_NBIT_IN32_214)              0.00       1.26 r
+  MUX1_0_14/U12/Z (BUF_X1)                                0.06       1.32 r
+  MUX1_0_14/U10/Z (BUF_X1)                                0.04       1.36 r
+  MUX1_0_14/U2/ZN (INV_X1)                                0.07       1.43 f
+  MUX1_0_14/U25/ZN (AOI22_X1)                             0.08       1.52 r
+  MUX1_0_14/U56/ZN (INV_X1)                               0.02       1.54 f
+  MUX1_0_14/portY[1] (Mux_NBit_2x1_NBIT_IN32_214)         0.00       1.54 f
+  MUX1_1_12/port1[1] (Mux_NBit_2x1_NBIT_IN32_202)         0.00       1.54 f
+  MUX1_1_12/U56/ZN (AOI22_X1)                             0.05       1.59 r
+  MUX1_1_12/U21/ZN (INV_X1)                               0.02       1.62 f
+  MUX1_1_12/portY[1] (Mux_NBit_2x1_NBIT_IN32_202)         0.00       1.62 f
+  MUX1_2_8/port1[1] (Mux_NBit_2x1_NBIT_IN32_196)          0.00       1.62 f
+  MUX1_2_8/U53/ZN (AOI22_X1)                              0.05       1.67 r
+  MUX1_2_8/U12/ZN (INV_X1)                                0.02       1.69 f
+  MUX1_2_8/portY[1] (Mux_NBit_2x1_NBIT_IN32_196)          0.00       1.69 f
+  MUX1_3_0/port1[1] (Mux_NBit_2x1_NBIT_IN32_193)          0.00       1.69 f
+  MUX1_3_0/U20/ZN (AOI22_X1)                              0.05       1.75 r
+  MUX1_3_0/U19/ZN (INV_X1)                                0.02       1.77 f
+  MUX1_3_0/portY[1] (Mux_NBit_2x1_NBIT_IN32_193)          0.00       1.77 f
+  MUX1_4_0/port0[1] (Mux_NBit_2x1_NBIT_IN32_191)          0.00       1.77 f
+  MUX1_4_0/U31/ZN (AOI22_X1)                              0.04       1.81 r
+  MUX1_4_0/U30/ZN (INV_X1)                                0.02       1.84 f
+  MUX1_4_0/portY[1] (Mux_NBit_2x1_NBIT_IN32_191)          0.00       1.84 f
+  MuxTargOut/port1[1] (Mux_NBit_2x1_NBIT_IN32_190)        0.00       1.84 f
+  MuxTargOut/U34/ZN (AOI22_X1)                            0.05       1.89 r
+  MuxTargOut/U33/ZN (INV_X1)                              0.02       1.91 f
+  MuxTargOut/portY[1] (Mux_NBit_2x1_NBIT_IN32_190)        0.00       1.91 f
+  BTB_target_prediction[1] (out)                          0.00       1.91 f
+  data arrival time                                                  1.91
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -1.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.09
+
+
+1

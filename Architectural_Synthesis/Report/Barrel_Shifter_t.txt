@@ -1,0 +1,79 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Barrel_Shifter
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:20:33 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: BS_opcode[1]
+              (input port)
+  Endpoint: BS_data_out[7]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Barrel_Shifter     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  BS_opcode[1] (in)                                       0.00       0.00 r
+  MSB_MUX/sel (Mux_NBit_2x1_NBIT_IN8_0)                   0.00       0.00 r
+  MSB_MUX/U17/ZN (INV_X1)                                 0.04       0.04 f
+  MSB_MUX/U4/ZN (AOI22_X1)                                0.06       0.11 r
+  MSB_MUX/U3/ZN (INV_X1)                                  0.05       0.16 f
+  MSB_MUX/portY[0] (Mux_NBit_2x1_NBIT_IN8_0)              0.00       0.16 f
+  MUX4_3_1/port1[0] (Mux_NBit_2x1_NBIT_IN8_4)             0.00       0.16 f
+  MUX4_3_1/U1/ZN (AOI22_X1)                               0.07       0.23 r
+  MUX4_3_1/U9/ZN (INV_X1)                                 0.02       0.25 f
+  MUX4_3_1/portY[0] (Mux_NBit_2x1_NBIT_IN8_4)             0.00       0.25 f
+  MUX1_0_2_0/port1[8] (Mux_NBit_2x1_NBIT_IN40_3)          0.00       0.25 f
+  MUX1_0_2_0/U63/ZN (AOI22_X1)                            0.05       0.30 r
+  MUX1_0_2_0/U19/ZN (INV_X1)                              0.02       0.33 f
+  MUX1_0_2_0/portY[8] (Mux_NBit_2x1_NBIT_IN40_3)          0.00       0.33 f
+  MUX1_1_0/port1[8] (Mux_NBit_2x1_NBIT_IN40_2)            0.00       0.33 f
+  MUX1_1_0/U27/ZN (AOI22_X1)                              0.05       0.38 r
+  MUX1_1_0/U26/ZN (INV_X1)                                0.03       0.41 f
+  MUX1_1_0/portY[8] (Mux_NBit_2x1_NBIT_IN40_2)            0.00       0.41 f
+  MUX_selected_mask/port0[8] (Mux_NBit_2x1_NBIT_IN40_1)
+                                                          0.00       0.41 f
+  MUX_selected_mask/U4/ZN (AOI22_X1)                      0.05       0.45 r
+  MUX_selected_mask/U3/ZN (INV_X1)                        0.05       0.50 f
+  MUX_selected_mask/portY[8] (Mux_NBit_2x1_NBIT_IN40_1)
+                                                          0.00       0.50 f
+  MUX2_0_6/port1[7] (Mux_NBit_2x1_NBIT_IN32_138)          0.00       0.50 f
+  MUX2_0_6/U3/ZN (AOI22_X1)                               0.07       0.58 r
+  MUX2_0_6/U16/ZN (INV_X1)                                0.02       0.60 f
+  MUX2_0_6/portY[7] (Mux_NBit_2x1_NBIT_IN32_138)          0.00       0.60 f
+  MUX2_1_4/port1[7] (Mux_NBit_2x1_NBIT_IN32_136)          0.00       0.60 f
+  MUX2_1_4/U8/ZN (AOI22_X1)                               0.06       0.66 r
+  MUX2_1_4/U46/ZN (INV_X1)                                0.02       0.68 f
+  MUX2_1_4/portY[7] (Mux_NBit_2x1_NBIT_IN32_136)          0.00       0.68 f
+  MUX2_2_0_0/port1[7] (Mux_NBit_2x1_NBIT_IN32_135)        0.00       0.68 f
+  MUX2_2_0_0/U26/ZN (AOI22_X1)                            0.06       0.74 r
+  MUX2_2_0_0/U25/ZN (INV_X1)                              0.02       0.76 f
+  MUX2_2_0_0/portY[7] (Mux_NBit_2x1_NBIT_IN32_135)        0.00       0.76 f
+  BS_data_out[7] (out)                                    0.00       0.76 f
+  data arrival time                                                  0.76
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.24
+
+
+1

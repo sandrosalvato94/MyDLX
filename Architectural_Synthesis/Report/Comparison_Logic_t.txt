@@ -1,0 +1,142 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Comparison_Logic
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:20:50 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CMPL_OpB[31]
+              (input port)
+  Endpoint: CMPL_Y[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Comparison_Logic   5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  CMPL_OpB[31] (in)                                       0.00       0.00 f
+  CMP/CMP_OpB[31] (Comparator_NBIT_DATA32)                0.00       0.00 f
+  CMP/U213/Z (XOR2_X1)                                    0.09       0.09 f
+  CMP/U48/ZN (NOR2_X1)                                    0.07       0.16 r
+  CMP/U109/ZN (NAND2_X1)                                  0.04       0.20 f
+  CMP/U47/ZN (XNOR2_X1)                                   0.07       0.27 r
+  CMP/U10/ZN (AND2_X1)                                    0.07       0.34 r
+  CMP/U112/ZN (NAND2_X1)                                  0.04       0.38 f
+  CMP/U42/ZN (XNOR2_X1)                                   0.09       0.47 r
+  CMP/U212/ZN (NAND3_X1)                                  0.06       0.53 f
+  CMP/U211/ZN (NAND3_X1)                                  0.05       0.57 r
+  CMP/U20/ZN (INV_X1)                                     0.03       0.60 f
+  CMP/U128/ZN (NAND2_X1)                                  0.04       0.64 r
+  CMP/U210/Z (XOR2_X1)                                    0.09       0.72 r
+  CMP/U9/ZN (AND2_X1)                                     0.07       0.79 r
+  CMP/U118/ZN (NAND2_X1)                                  0.04       0.83 f
+  CMP/U44/ZN (XNOR2_X1)                                   0.09       0.92 r
+  CMP/U209/ZN (NAND3_X1)                                  0.06       0.98 f
+  CMP/U208/ZN (NAND3_X1)                                  0.05       1.02 r
+  CMP/U17/ZN (INV_X1)                                     0.03       1.05 f
+  CMP/U125/ZN (NAND2_X1)                                  0.04       1.09 r
+  CMP/U207/Z (XOR2_X1)                                    0.09       1.17 r
+  CMP/U6/ZN (AND2_X1)                                     0.07       1.24 r
+  CMP/U116/ZN (NAND2_X1)                                  0.04       1.28 f
+  CMP/U41/ZN (XNOR2_X1)                                   0.09       1.37 r
+  CMP/U206/ZN (NAND3_X1)                                  0.06       1.43 f
+  CMP/U205/ZN (NAND3_X1)                                  0.05       1.47 r
+  CMP/U14/ZN (INV_X1)                                     0.03       1.50 f
+  CMP/U122/ZN (NAND2_X1)                                  0.04       1.54 r
+  CMP/U204/Z (XOR2_X1)                                    0.09       1.62 r
+  CMP/U3/ZN (AND2_X1)                                     0.07       1.69 r
+  CMP/U113/ZN (NAND2_X1)                                  0.04       1.73 f
+  CMP/U38/ZN (XNOR2_X1)                                   0.09       1.82 r
+  CMP/U203/ZN (NAND3_X1)                                  0.06       1.88 f
+  CMP/U202/ZN (NAND3_X1)                                  0.05       1.93 r
+  CMP/U16/ZN (INV_X1)                                     0.03       1.95 f
+  CMP/U124/ZN (NAND2_X1)                                  0.04       1.99 r
+  CMP/U201/Z (XOR2_X1)                                    0.09       2.08 r
+  CMP/U5/ZN (AND2_X1)                                     0.07       2.14 r
+  CMP/U115/ZN (NAND2_X1)                                  0.04       2.18 f
+  CMP/U40/ZN (XNOR2_X1)                                   0.09       2.27 r
+  CMP/U200/ZN (NAND3_X1)                                  0.06       2.33 f
+  CMP/U199/ZN (NAND3_X1)                                  0.05       2.38 r
+  CMP/U15/ZN (INV_X1)                                     0.03       2.40 f
+  CMP/U123/ZN (NAND2_X1)                                  0.04       2.44 r
+  CMP/U198/Z (XOR2_X1)                                    0.09       2.53 r
+  CMP/U4/ZN (AND2_X1)                                     0.07       2.59 r
+  CMP/U114/ZN (NAND2_X1)                                  0.04       2.63 f
+  CMP/U39/ZN (XNOR2_X1)                                   0.09       2.72 r
+  CMP/U197/ZN (NAND3_X1)                                  0.06       2.78 f
+  CMP/U196/ZN (NAND3_X1)                                  0.05       2.83 r
+  CMP/U19/ZN (INV_X1)                                     0.03       2.85 f
+  CMP/U126/ZN (NAND2_X1)                                  0.04       2.89 r
+  CMP/U195/Z (XOR2_X1)                                    0.09       2.98 r
+  CMP/U8/ZN (AND2_X1)                                     0.07       3.04 r
+  CMP/U117/ZN (NAND2_X1)                                  0.04       3.08 f
+  CMP/U37/ZN (XNOR2_X1)                                   0.09       3.17 r
+  CMP/U194/ZN (NAND3_X1)                                  0.06       3.23 f
+  CMP/U193/ZN (NAND3_X1)                                  0.05       3.28 r
+  CMP/U18/ZN (INV_X1)                                     0.03       3.30 f
+  CMP/U127/ZN (NAND2_X1)                                  0.04       3.34 r
+  CMP/U192/Z (XOR2_X1)                                    0.09       3.43 r
+  CMP/U7/ZN (AND2_X1)                                     0.07       3.49 r
+  CMP/U119/ZN (NAND2_X1)                                  0.04       3.54 f
+  CMP/U43/ZN (XNOR2_X1)                                   0.09       3.62 r
+  CMP/U191/ZN (NAND3_X1)                                  0.06       3.68 f
+  CMP/U190/ZN (NAND3_X1)                                  0.05       3.73 r
+  CMP/U11/ZN (INV_X1)                                     0.03       3.76 f
+  CMP/U121/ZN (NAND2_X1)                                  0.04       3.80 r
+  CMP/U189/Z (XOR2_X1)                                    0.11       3.91 r
+  CMP/U187/ZN (NAND3_X1)                                  0.06       3.97 f
+  CMP/U46/ZN (XNOR2_X1)                                   0.08       4.04 f
+  CMP/U13/ZN (AND3_X1)                                    0.05       4.10 f
+  CMP/U110/ZN (NAND2_X1)                                  0.04       4.13 r
+  CMP/U50/ZN (AND2_X1)                                    0.06       4.19 r
+  CMP/U120/ZN (NAND2_X1)                                  0.04       4.23 f
+  CMP/U45/ZN (XNOR2_X1)                                   0.07       4.30 f
+  CMP/U12/ZN (NAND2_X1)                                   0.04       4.34 r
+  CMP/U2/ZN (INV_X1)                                      0.03       4.37 f
+  CMP/U129/ZN (NAND2_X1)                                  0.03       4.40 r
+  CMP/U185/ZN (NAND3_X1)                                  0.04       4.44 f
+  CMP/U49/ZN (NOR2_X1)                                    0.06       4.50 r
+  CMP/U33/ZN (NOR4_X1)                                    0.03       4.53 f
+  CMP/OR_gt/A[0] (ORGate_NX1_N32_0)                       0.00       4.53 f
+  CMP/OR_gt/U1/ZN (NOR4_X1)                               0.09       4.62 r
+  CMP/OR_gt/U2/ZN (NAND4_X1)                              0.04       4.66 f
+  CMP/OR_gt/U6/ZN (OR4_X1)                                0.12       4.78 f
+  CMP/OR_gt/Y (ORGate_NX1_N32_0)                          0.00       4.78 f
+  CMP/U51/ZN (INV_X1)                                     0.03       4.82 r
+  CMP/MUX_gt/port1 (Mux_1Bit_2X1_0)                       0.00       4.82 r
+  CMP/MUX_gt/U2/ZN (AOI22_X1)                             0.03       4.85 f
+  CMP/MUX_gt/U1/ZN (INV_X1)                               0.04       4.89 r
+  CMP/MUX_gt/portY (Mux_1Bit_2X1_0)                       0.00       4.89 r
+  CMP/U21/ZN (INV_X1)                                     0.03       4.92 f
+  CMP/U22/ZN (OR2_X1)                                     0.05       4.97 f
+  CMP/CMP_A_le_B (Comparator_NBIT_DATA32)                 0.00       4.97 f
+  U24/ZN (AOI22_X1)                                       0.05       5.01 r
+  U22/ZN (OAI22_X1)                                       0.03       5.05 f
+  U27/ZN (NAND2_X1)                                       0.03       5.08 r
+  U26/ZN (NAND2_X1)                                       0.02       5.10 f
+  CMPL_Y[0] (out)                                         0.00       5.10 f
+  data arrival time                                                  5.10
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -5.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.90
+
+
+1

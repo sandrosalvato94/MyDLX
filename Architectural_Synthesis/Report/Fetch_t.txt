@@ -1,0 +1,139 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Fetch
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:16:57 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: FE_enable (input port)
+  Endpoint: FE_NPC[31] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Fetch              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  FE_enable (in)                                          0.00       0.00 r
+  U24/ZN (INV_X1)                                         0.02       0.02 f
+  U23/ZN (NOR2_X1)                                        0.05       0.07 r
+  MUXN_INC/sel (Mux_NBit_2x1_NBIT_IN32_0)                 0.00       0.07 r
+  MUXN_INC/U12/Z (BUF_X1)                                 0.04       0.11 r
+  MUXN_INC/U7/Z (BUF_X1)                                  0.04       0.15 r
+  MUXN_INC/U1/ZN (INV_X1)                                 0.05       0.21 f
+  MUXN_INC/U28/ZN (AOI22_X1)                              0.07       0.27 r
+  MUXN_INC/U27/ZN (INV_X1)                                0.03       0.30 f
+  MUXN_INC/portY[0] (Mux_NBit_2x1_NBIT_IN32_0)            0.00       0.30 f
+  ADDPC/B[0] (PropagateCarryLookahead_N32)                0.00       0.30 f
+  ADDPC/PG/B[0] (PG_network_N32)                          0.00       0.30 f
+  ADDPC/PG/U3/Z (XOR2_X1)                                 0.07       0.37 f
+  ADDPC/PG/G_cell_0_0/P_ik (GeneralGenerate)              0.00       0.37 f
+  ADDPC/PG/G_cell_0_0/U2/ZN (AOI21_X1)                    0.04       0.41 r
+  ADDPC/PG/G_cell_0_0/U1/ZN (INV_X1)                      0.02       0.43 f
+  ADDPC/PG/G_cell_0_0/G_ij (GeneralGenerate)              0.00       0.43 f
+  ADDPC/PG/G[0] (PG_network_N32)                          0.00       0.43 f
+  ADDPC/CN/G[0] (Carry_Network_N32)                       0.00       0.43 f
+  ADDPC/CN/U63/ZN (AOI21_X1)                              0.05       0.49 r
+  ADDPC/CN/U62/ZN (INV_X1)                                0.03       0.51 f
+  ADDPC/CN/U3/ZN (AOI21_X1)                               0.05       0.56 r
+  ADDPC/CN/U2/ZN (INV_X1)                                 0.03       0.59 f
+  ADDPC/CN/U5/ZN (AOI21_X1)                               0.05       0.64 r
+  ADDPC/CN/U4/ZN (INV_X1)                                 0.03       0.67 f
+  ADDPC/CN/U7/ZN (AOI21_X1)                               0.05       0.71 r
+  ADDPC/CN/U6/ZN (INV_X1)                                 0.03       0.74 f
+  ADDPC/CN/U9/ZN (AOI21_X1)                               0.05       0.79 r
+  ADDPC/CN/U8/ZN (INV_X1)                                 0.03       0.82 f
+  ADDPC/CN/U11/ZN (AOI21_X1)                              0.05       0.86 r
+  ADDPC/CN/U10/ZN (INV_X1)                                0.03       0.89 f
+  ADDPC/CN/U13/ZN (AOI21_X1)                              0.05       0.94 r
+  ADDPC/CN/U12/ZN (INV_X1)                                0.03       0.97 f
+  ADDPC/CN/U15/ZN (AOI21_X1)                              0.05       1.01 r
+  ADDPC/CN/U14/ZN (INV_X1)                                0.03       1.04 f
+  ADDPC/CN/U17/ZN (AOI21_X1)                              0.05       1.09 r
+  ADDPC/CN/U16/ZN (INV_X1)                                0.03       1.12 f
+  ADDPC/CN/U19/ZN (AOI21_X1)                              0.05       1.16 r
+  ADDPC/CN/U18/ZN (INV_X1)                                0.03       1.19 f
+  ADDPC/CN/U21/ZN (AOI21_X1)                              0.05       1.24 r
+  ADDPC/CN/U20/ZN (INV_X1)                                0.03       1.27 f
+  ADDPC/CN/U23/ZN (AOI21_X1)                              0.05       1.31 r
+  ADDPC/CN/U22/ZN (INV_X1)                                0.03       1.34 f
+  ADDPC/CN/U25/ZN (AOI21_X1)                              0.05       1.39 r
+  ADDPC/CN/U24/ZN (INV_X1)                                0.03       1.42 f
+  ADDPC/CN/U27/ZN (AOI21_X1)                              0.05       1.47 r
+  ADDPC/CN/U26/ZN (INV_X1)                                0.03       1.49 f
+  ADDPC/CN/U29/ZN (AOI21_X1)                              0.05       1.54 r
+  ADDPC/CN/U28/ZN (INV_X1)                                0.03       1.57 f
+  ADDPC/CN/U31/ZN (AOI21_X1)                              0.05       1.62 r
+  ADDPC/CN/U30/ZN (INV_X1)                                0.03       1.64 f
+  ADDPC/CN/U33/ZN (AOI21_X1)                              0.05       1.69 r
+  ADDPC/CN/U32/ZN (INV_X1)                                0.03       1.72 f
+  ADDPC/CN/U35/ZN (AOI21_X1)                              0.05       1.77 r
+  ADDPC/CN/U34/ZN (INV_X1)                                0.03       1.80 f
+  ADDPC/CN/U37/ZN (AOI21_X1)                              0.05       1.84 r
+  ADDPC/CN/U36/ZN (INV_X1)                                0.03       1.87 f
+  ADDPC/CN/U39/ZN (AOI21_X1)                              0.05       1.92 r
+  ADDPC/CN/U38/ZN (INV_X1)                                0.03       1.95 f
+  ADDPC/CN/U41/ZN (AOI21_X1)                              0.05       1.99 r
+  ADDPC/CN/U40/ZN (INV_X1)                                0.03       2.02 f
+  ADDPC/CN/U43/ZN (AOI21_X1)                              0.05       2.07 r
+  ADDPC/CN/U42/ZN (INV_X1)                                0.03       2.10 f
+  ADDPC/CN/U45/ZN (AOI21_X1)                              0.05       2.14 r
+  ADDPC/CN/U44/ZN (INV_X1)                                0.03       2.17 f
+  ADDPC/CN/U47/ZN (AOI21_X1)                              0.05       2.22 r
+  ADDPC/CN/U46/ZN (INV_X1)                                0.03       2.25 f
+  ADDPC/CN/U49/ZN (AOI21_X1)                              0.05       2.29 r
+  ADDPC/CN/U48/ZN (INV_X1)                                0.03       2.32 f
+  ADDPC/CN/U51/ZN (AOI21_X1)                              0.05       2.37 r
+  ADDPC/CN/U50/ZN (INV_X1)                                0.03       2.40 f
+  ADDPC/CN/U53/ZN (AOI21_X1)                              0.05       2.44 r
+  ADDPC/CN/U52/ZN (INV_X1)                                0.03       2.47 f
+  ADDPC/CN/U55/ZN (AOI21_X1)                              0.05       2.52 r
+  ADDPC/CN/U54/ZN (INV_X1)                                0.03       2.55 f
+  ADDPC/CN/U57/ZN (AOI21_X1)                              0.05       2.60 r
+  ADDPC/CN/U56/ZN (INV_X1)                                0.03       2.62 f
+  ADDPC/CN/U59/ZN (AOI21_X1)                              0.05       2.67 r
+  ADDPC/CN/U58/ZN (INV_X1)                                0.03       2.70 f
+  ADDPC/CN/U61/ZN (AOI21_X1)                              0.05       2.75 r
+  ADDPC/CN/U60/ZN (INV_X1)                                0.03       2.77 f
+  ADDPC/CN/Gout[31] (Carry_Network_N32)                   0.00       2.77 f
+  ADDPC/SN/G[31] (Sum_Network_N32)                        0.00       2.77 f
+  ADDPC/SN/U8/Z (XOR2_X1)                                 0.08       2.85 f
+  ADDPC/SN/S[31] (Sum_Network_N32)                        0.00       2.85 f
+  ADDPC/Sum[31] (PropagateCarryLookahead_N32)             0.00       2.85 f
+  MUXBTB/port0[31] (Mux_NBit_2x1_NBIT_IN32_3)             0.00       2.85 f
+  MUXBTB/U15/ZN (AOI22_X1)                                0.05       2.90 r
+  MUXBTB/U14/ZN (INV_X1)                                  0.02       2.93 f
+  MUXBTB/portY[31] (Mux_NBit_2x1_NBIT_IN32_3)             0.00       2.93 f
+  MUXNPC/port0[31] (Mux_NBit_2x1_NBIT_IN32_2)             0.00       2.93 f
+  MUXNPC/U18/ZN (AOI22_X1)                                0.04       2.97 r
+  MUXNPC/U17/ZN (INV_X1)                                  0.02       2.99 f
+  MUXNPC/portY[31] (Mux_NBit_2x1_NBIT_IN32_2)             0.00       2.99 f
+  MUX_restore/port0[31] (Mux_NBit_2x1_NBIT_IN32_1)        0.00       2.99 f
+  MUX_restore/U18/ZN (AOI22_X1)                           0.04       3.04 r
+  MUX_restore/U17/ZN (INV_X1)                             0.02       3.06 f
+  MUX_restore/portY[31] (Mux_NBit_2x1_NBIT_IN32_1)        0.00       3.06 f
+  FE_NPC[31] (out)                                        0.00       3.06 f
+  data arrival time                                                  3.06
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -3.06
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.94
+
+
+1

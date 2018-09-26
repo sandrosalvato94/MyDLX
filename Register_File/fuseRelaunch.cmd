@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Register_File/TB_Register_File_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Register_File/TB_Register_File_beh.prj" "work.TB_Register_File" 

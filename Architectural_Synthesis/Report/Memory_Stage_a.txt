@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : Memory_Stage
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:23:30 2018
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:              197
+Number of nets:               166
+Number of cells:                2
+Number of references:           2
+
+Combinational area:        212.800004
+Noncombinational area:     170.240005
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:           383.040009
+Total area:                 undefined
+1

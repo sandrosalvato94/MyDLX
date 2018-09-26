@@ -1,6 +1,0 @@
-work	"Enable_Interface.vhd"
-work	"Mux_NBit_2x1.vhd"
-work	"NDecoder.vhd"
-work	"NRegister.vhd"
-work	"Register_File.vhd"
-work	"constants.vhd"

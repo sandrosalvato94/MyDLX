@@ -1,0 +1,201 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed Sep 12 12:20:38 2018                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+#@(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+#@(#)CDS: CPE v17.11-s095
+#@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+set defHierChar /
+set delaycal_input_transition_delay 0.1ps
+set fpIsMaxIoHeight 0
+set init_gnd_net gnd
+set init_mmmc_file Default.view
+set init_oa_search_lib {}
+set init_pwr_net vdd
+set init_verilog DLX_core_postsyn.v
+set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+init_design
+init_design
+init_design
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 0.996252879095 0.699991 5.0 5.0 5.0 5.0
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {gnd vdd} -type core_rings -follow core -layer {top metal9 bottom metal9 left metal10 right metal10} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+addStripe -nets {gnd vdd} -layer metal10 -direction vertical -width 0.8 -spacing 0.8 -set_to_set_distance 20 -start_from left -start_offset 15 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal10 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal10 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal10(10) } -nets { gnd vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal10(10) }
+setPlaceMode -prerouteAsObs {1 2 3 4 5 7 8}
+setPlaceMode -fp false
+placeDesign
+gui_select -rect {0.560 231.855 40.873 197.744}
+deselectAll
+selectInst {BTB_cache/EntrReg_i_10/data_out_reg[24]}
+deselectAll
+selectWire 68.4600 204.2250 68.5650 204.2950 2 BTB_cache/NCmp_i_19/CWE_i_0/n2
+gui_select -rect {87.234 175.434 93.726 95.364}
+deselectAll
+selectInst DP/IF_Stage/ADDPC/SN/U10
+gui_select -rect {66.315 189.861 133.400 65.788}
+deselectAll
+zoomIn
+zoomOut
+zoomIn
+zoomOut
+zoomIn
+zoomOut
+zoomIn
+zoomIn
+zoomOut
+zoomOut
+zoomOut
+fit
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Top -layer 1 -spreadType side -pin {{DLX_address_written_data[0]} {DLX_address_written_data[1]} {DLX_address_written_data[2]} {DLX_address_written_data[3]} {DLX_address_written_data[4]} {DLX_address_written_data[5]} {DLX_address_written_data[6]} {DLX_address_written_data[7]} {DLX_address_written_data[8]} {DLX_address_written_data[9]} {DLX_address_written_data[10]} {DLX_address_written_data[11]} {DLX_address_written_data[12]} {DLX_address_written_data[13]} {DLX_address_written_data[14]} {DLX_address_written_data[15]} {DLX_address_written_data[16]} {DLX_address_written_data[17]} {DLX_address_written_data[18]} {DLX_address_written_data[19]} {DLX_address_written_data[20]} {DLX_address_written_data[21]} {DLX_address_written_data[22]} {DLX_address_written_data[23]} {DLX_address_written_data[24]} {DLX_address_written_data[25]} {DLX_address_written_data[26]} {DLX_address_written_data[27]} {DLX_address_written_data[28]} {DLX_address_written_data[29]} {DLX_address_written_data[30]} {DLX_address_written_data[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 1 -spreadType center -spacing 0.14 -pin DLX_clk
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 1 -spreadType center -spacing 0.14 -pin DLX_enable
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 1 -spreadType center -spacing 0.14 -pin DLX_enable_DRAM
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.07 -pinDepth 0.07 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 1 -spreadType center -spacing 0.14 -pin DLX_enable
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+set ptngSprNoRefreshPins 1
+setPtnPinStatus -cell DLX_Core -pin DLX_error -status unplaced -silent
+set ptngSprNoRefreshPins 0
+ptnSprRefreshPinsAndBlockages
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Bottom -layer 1 -assign 0.0 0.0 -pin DLX_error
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Right -layer 1 -spreadType side -pin {{DLX_IR[0]} {DLX_IR[1]} {DLX_IR[2]} {DLX_IR[3]} {DLX_IR[4]} {DLX_IR[5]} {DLX_IR[6]} {DLX_IR[7]} {DLX_IR[8]} {DLX_IR[9]} {DLX_IR[10]} {DLX_IR[11]} {DLX_IR[12]} {DLX_IR[13]} {DLX_IR[14]} {DLX_IR[15]} {DLX_IR[16]} {DLX_IR[17]} {DLX_IR[18]} {DLX_IR[19]} {DLX_IR[20]} {DLX_IR[21]} {DLX_IR[22]} {DLX_IR[23]} {DLX_IR[24]} {DLX_IR[25]} {DLX_IR[26]} {DLX_IR[27]} {DLX_IR[28]} {DLX_IR[29]} {DLX_IR[30]} {DLX_IR[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Left -layer 1 -spreadType side -pin {{DLX_PC[0]} {DLX_PC[1]} {DLX_PC[2]} {DLX_PC[3]} {DLX_PC[4]} {DLX_PC[5]} {DLX_PC[6]} {DLX_PC[7]} {DLX_PC[8]} {DLX_PC[9]} {DLX_PC[10]} {DLX_PC[11]} {DLX_PC[12]} {DLX_PC[13]} {DLX_PC[14]} {DLX_PC[15]} {DLX_PC[16]} {DLX_PC[17]} {DLX_PC[18]} {DLX_PC[19]} {DLX_PC[20]} {DLX_PC[21]} {DLX_PC[22]} {DLX_PC[23]} {DLX_PC[24]} {DLX_PC[25]} {DLX_PC[26]} {DLX_PC[27]} {DLX_PC[28]} {DLX_PC[29]} {DLX_PC[30]} {DLX_PC[31]}}
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Left -layer 1 -spreadType side -pin {{DLX_PC[0]} {DLX_PC[1]} {DLX_PC[2]} {DLX_PC[3]} {DLX_PC[4]} {DLX_PC[5]} {DLX_PC[6]} {DLX_PC[7]} {DLX_PC[8]} {DLX_PC[9]} {DLX_PC[10]} {DLX_PC[11]} {DLX_PC[12]} {DLX_PC[13]} {DLX_PC[14]} {DLX_PC[15]} {DLX_PC[16]} {DLX_PC[17]} {DLX_PC[18]} {DLX_PC[19]} {DLX_PC[20]} {DLX_PC[21]} {DLX_PC[22]} {DLX_PC[23]} {DLX_PC[24]} {DLX_PC[25]} {DLX_PC[26]} {DLX_PC[27]} {DLX_PC[28]} {DLX_PC[29]} {DLX_PC[30]} {DLX_PC[31]}}
+setPinAssignMode -pinEditInBatch false
+selectWire 116.0350 56.5600 116.1750 68.7400 6 BTB_cache/MUX1_0_4/n31
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Bottom -layer 1 -assign 0.0 0.0 -pin DLX_RD_wr_DRAM
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+getPinAssignMode -pinEditInBatch -quiet
+getPinAssignMode -pinEditInBatch -quiet
+deselectAll
+selectWire 25.8750 200.2000 26.0150 204.7850 6 {s_NPC_Fbmm_Tbtb[22]}
+deselectAll
+selectWire 41.7300 1.3200 42.5300 297.1600 10 vdd
+deselectAll
+selectWire 216.5550 211.9600 243.2950 212.1000 5 DP/DE_Stage/RF/MUX1_3_0/n53
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Bottom -layer 1 -spreadType side -pin {{DLX_read_data[0]} {DLX_read_data[1]} {DLX_read_data[2]} {DLX_read_data[3]} {DLX_read_data[4]} {DLX_read_data[5]} {DLX_read_data[6]} {DLX_read_data[7]} {DLX_read_data[8]} {DLX_read_data[9]} {DLX_read_data[10]} {DLX_read_data[11]} {DLX_read_data[12]} {DLX_read_data[13]} {DLX_read_data[14]} {DLX_read_data[15]} {DLX_read_data[16]} {DLX_read_data[17]} {DLX_read_data[18]} {DLX_read_data[19]} {DLX_read_data[20]} {DLX_read_data[21]} {DLX_read_data[22]} {DLX_read_data[23]} {DLX_read_data[24]} {DLX_read_data[25]} {DLX_read_data[26]} {DLX_read_data[27]} {DLX_read_data[28]} {DLX_read_data[29]} {DLX_read_data[30]} {DLX_read_data[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Top -layer 1 -assign 0.0 0.0 -pin DLX_reset
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -spreadDirection clockwise -side Right -layer 1 -spreadType side -pin {{DLX_written_data[0]} {DLX_written_data[1]} {DLX_written_data[2]} {DLX_written_data[3]} {DLX_written_data[4]} {DLX_written_data[5]} {DLX_written_data[6]} {DLX_written_data[7]} {DLX_written_data[8]} {DLX_written_data[9]} {DLX_written_data[10]} {DLX_written_data[11]} {DLX_written_data[12]} {DLX_written_data[13]} {DLX_written_data[14]} {DLX_written_data[15]} {DLX_written_data[16]} {DLX_written_data[17]} {DLX_written_data[18]} {DLX_written_data[19]} {DLX_written_data[20]} {DLX_written_data[21]} {DLX_written_data[22]} {DLX_written_data[23]} {DLX_written_data[24]} {DLX_written_data[25]} {DLX_written_data[26]} {DLX_written_data[27]} {DLX_written_data[28]} {DLX_written_data[29]} {DLX_written_data[30]} {DLX_written_data[31]}}
+setPinAssignMode -pinEditInBatch false
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+optDesign -postCTS
+optDesign -postCTS -hold
+getFillerMode -quiet
+addFiller -cell FILLCELL_X8 FILLCELL_X4 FILLCELL_X32 FILLCELL_X2 FILLCELL_X16 FILLCELL_X1 -prefix FILLER
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+saveDesign DLX_Core
+set_analysis_view -setup {default} -hold {default}
+fit
+reset_parasitics
+extractRC
+rcOut -setload DLX_Core.setload -rc_corner high
+rcOut -setres DLX_Core.setres -rc_corner high
+rcOut -spf DLX_Core.spf -rc_corner high
+rcOut -spef DLX_Core.spef -rc_corner high

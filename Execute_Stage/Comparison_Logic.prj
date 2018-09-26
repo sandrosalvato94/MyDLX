@@ -1,5 +1,0 @@
-vhdl work "constants.vhd"
-vhdl work "ORGate_NX1.vhd"
-vhdl work "Mux_1Bit_2X1.vhd"
-vhdl work "Comparator.vhd"
-vhdl work "Comparison_Logic.vhd"

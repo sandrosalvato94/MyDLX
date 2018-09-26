@@ -1,3 +1,0 @@
-vhdl work "Mux_NBit_2x1.vhd"
-vhdl work "constants.vhd"
-vhdl work "Barrel_Shifter.vhd"

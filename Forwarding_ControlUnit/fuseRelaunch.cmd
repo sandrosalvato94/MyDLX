@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/TB_Forwording_ControlUnit_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Forwarding_ControlUnit/TB_Forwording_ControlUnit_beh.prj" "work.TB_Forwording_ControlUnit" 

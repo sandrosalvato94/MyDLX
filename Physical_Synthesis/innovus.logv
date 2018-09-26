@@ -1,0 +1,45 @@
+[09/12 11:05:42      0s] 
+[09/12 11:05:42      0s] Cadence Innovus(TM) Implementation System.
+[09/12 11:05:42      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/12 11:05:42      0s] 
+[09/12 11:05:42      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[09/12 11:05:42      0s] Options:	
+[09/12 11:05:42      0s] Date:		Wed Sep 12 11:05:42 2018
+[09/12 11:05:42      0s] Host:		microelnsys (x86_64 w/Linux 2.6.18-410.el5) (1core*4cpus*QEMU Virtual CPU version (cpu64-rhel6) 4096KB)
+[09/12 11:05:42      0s] OS:		CentOS release 5.11 (Final)
+[09/12 11:05:42      0s] 
+[09/12 11:05:42      0s] License:
+[09/12 11:05:42      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[09/12 11:05:42      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/12 11:06:06     22s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[09/12 11:06:06     22s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[09/12 11:06:06     22s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[09/12 11:06:06     22s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[09/12 11:06:06     22s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[09/12 11:06:06     22s] @(#)CDS: CPE v17.11-s095
+[09/12 11:06:06     22s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[09/12 11:06:06     22s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[09/12 11:06:06     22s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[09/12 11:06:06     22s] @(#)CDS: RCDB 11.10
+[09/12 11:06:06     22s] --- Running on microelnsys (x86_64 w/Linux 2.6.18-410.el5) (1core*4cpus*QEMU Virtual CPU version (cpu64-rhel6) 4096KB) ---
+[09/12 11:06:06     22s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_4918_microelnsys_ms18.45_F5EKBt.
+
+[09/12 11:06:06     22s] Change the soft stacksize limit to 0.2%RAM (96 mbytes). Set global soft_stack_size_limit to change the value.
+[09/12 11:06:07     23s] 
+[09/12 11:06:07     23s] **INFO:  MMMC transition support version v31-84 
+[09/12 11:06:07     23s] 
+[09/12 11:06:07     23s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/12 11:06:07     23s] <CMD> suppressMessage ENCEXT-2799
+[09/12 11:06:08     24s] <CMD> getDrawView
+[09/12 11:06:08     24s] <CMD> loadWorkspace -name Physical
+[09/12 11:06:08     24s] <CMD> win
+[09/12 11:07:32     25s] <CMD> set defHierChar /
+[09/12 11:07:32     25s] Set Default Input Pin Transition as 0.1 ps.
+[09/12 11:07:32     25s] <CMD> set delaycal_input_transition_delay 0.1ps
+[09/12 11:07:32     25s] <CMD> set fpIsMaxIoHeight 0
+[09/12 11:07:32     25s] <CMD> set init_gnd_net gnd
+[09/12 11:07:32     25s] <CMD> set init_mmmc_file Default.view
+[09/12 11:07:32     25s] <CMD> set init_oa_search_lib {}
+[09/12 11:07:32     25s] <CMD> set init_pwr_net vdd
+[09/12 11:07:32     25s] <CMD> set init_verilog sum.v
+[09/12 11:07:32     25s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef

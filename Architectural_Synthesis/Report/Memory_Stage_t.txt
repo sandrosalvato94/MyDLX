@@ -1,0 +1,57 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Memory_Stage
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:23:30 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ME_BYTE_half
+              (input port)
+  Endpoint: ME_data_to_mem[7]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Memory_Stage       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  ME_BYTE_half (in)                                       0.00       0.00 f
+  DR/DR_BYTE_half (Data_Reducer_NBIT_DATA32)              0.00       0.00 f
+  DR/MUX_B_H/sel (Mux_NBit_2x1_NBIT_IN32_161)             0.00       0.00 f
+  DR/MUX_B_H/U12/Z (BUF_X1)                               0.04       0.04 f
+  DR/MUX_B_H/U10/Z (BUF_X1)                               0.04       0.08 f
+  DR/MUX_B_H/U1/ZN (INV_X1)                               0.11       0.19 r
+  DR/MUX_B_H/U74/ZN (AOI22_X1)                            0.05       0.24 f
+  DR/MUX_B_H/U73/ZN (INV_X1)                              0.03       0.27 r
+  DR/MUX_B_H/portY[7] (Mux_NBit_2x1_NBIT_IN32_161)        0.00       0.27 r
+  DR/MUX_OUT/port1[7] (Mux_NBit_2x1_NBIT_IN32_162)        0.00       0.27 r
+  DR/MUX_OUT/U74/ZN (AOI22_X1)                            0.03       0.30 f
+  DR/MUX_OUT/U73/ZN (INV_X1)                              0.02       0.33 r
+  DR/MUX_OUT/portY[7] (Mux_NBit_2x1_NBIT_IN32_162)        0.00       0.33 r
+  DR/DR_data_out[7] (Data_Reducer_NBIT_DATA32)            0.00       0.33 r
+  ME_data_to_mem[7] (out)                                 0.00       0.33 r
+  data arrival time                                                  0.33
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.67
+
+
+1

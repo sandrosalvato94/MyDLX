@@ -1,0 +1,55 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Execute_Stage
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:22:56 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: EX_sel_mux_out[0]
+              (input port)
+  Endpoint: EX_data_out[7]
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Execute_Stage      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  EX_sel_mux_out[0] (in)                                  0.00       0.00 f
+  MUX2/sel (Mux_NBit_2x1_NBIT_IN32_158)                   0.00       0.00 f
+  MUX2/U76/Z (BUF_X1)                                     0.04       0.04 f
+  MUX2/U10/Z (BUF_X1)                                     0.04       0.08 f
+  MUX2/U1/ZN (INV_X1)                                     0.11       0.19 r
+  MUX2/U49/ZN (AOI22_X1)                                  0.05       0.24 f
+  MUX2/U41/ZN (INV_X1)                                    0.03       0.27 r
+  MUX2/portY[7] (Mux_NBit_2x1_NBIT_IN32_158)              0.00       0.27 r
+  MUX3/port1[7] (Mux_NBit_2x1_NBIT_IN32_157)              0.00       0.27 r
+  MUX3/U71/ZN (AOI22_X1)                                  0.03       0.30 f
+  MUX3/U70/ZN (INV_X1)                                    0.02       0.33 r
+  MUX3/portY[7] (Mux_NBit_2x1_NBIT_IN32_157)              0.00       0.33 r
+  EX_data_out[7] (out)                                    0.00       0.33 r
+  data arrival time                                                  0.33
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.67
+
+
+1

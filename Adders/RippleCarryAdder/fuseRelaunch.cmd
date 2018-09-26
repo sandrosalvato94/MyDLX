@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Adders/RippleCarryAdder/TB_RippleCarryAdder_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Adders/RippleCarryAdder/TB_RippleCarryAdder_beh.prj" "work.TB_RippleCarryAdder" 

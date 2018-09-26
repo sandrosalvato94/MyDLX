@@ -1,8 +1,0 @@
-work	"BTB_misprediction_manager.vhd"
-work	"Mux_1Bit_2X1.vhd"
-work	"Mux_NBit_2x1.vhd"
-work	"NRegister.vhd"
-work	"Reg1Bit.vhd"
-work	"t_ff.vhd"
-work	"t_ff_rst1.vhd"
-work	"ud_counter.vhd"

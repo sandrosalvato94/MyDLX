@@ -1,6 +1,0 @@
-work	"Carry_Network.vhd"
-work	"GeneralGenerate.vhd"
-work	"PG_cell.vhd"
-work	"PG_network.vhd"
-work	"PropagateCarryLookahead.vhd"
-work	"Sum_Network.vhd"

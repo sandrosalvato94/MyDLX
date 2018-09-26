@@ -1,0 +1,72 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Register_File
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:18:11 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: RF_enable (input port)
+  Endpoint: RF_out1[7] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Register_File      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  RF_enable (in)                                          0.00       0.00 r
+  U45/Z (BUF_X1)                                          0.08       0.08 r
+  U49/ZN (AND2_X1)                                        0.07       0.14 r
+  RD1_EI/EI_enable (Enable_Interface_NBIT_DATA5_0)        0.00       0.14 r
+  RD1_EI/U4/ZN (AND2_X1)                                  0.05       0.20 r
+  RD1_EI/EI_dataout[0] (Enable_Interface_NBIT_DATA5_0)
+                                                          0.00       0.20 r
+  U38/Z (BUF_X1)                                          0.11       0.31 r
+  MUX1_0_14/sel (Mux_NBit_2x1_NBIT_IN32_59)               0.00       0.31 r
+  MUX1_0_14/U12/Z (BUF_X1)                                0.06       0.37 r
+  MUX1_0_14/U10/Z (BUF_X1)                                0.04       0.41 r
+  MUX1_0_14/U1/ZN (INV_X1)                                0.06       0.47 f
+  MUX1_0_14/U20/ZN (AOI22_X1)                             0.08       0.55 r
+  MUX1_0_14/U23/ZN (INV_X1)                               0.02       0.57 f
+  MUX1_0_14/portY[7] (Mux_NBit_2x1_NBIT_IN32_59)          0.00       0.57 f
+  MUX1_1_12/port1[7] (Mux_NBit_2x1_NBIT_IN32_47)          0.00       0.57 f
+  MUX1_1_12/U47/ZN (AOI22_X1)                             0.06       0.63 r
+  MUX1_1_12/U20/ZN (INV_X1)                               0.02       0.65 f
+  MUX1_1_12/portY[7] (Mux_NBit_2x1_NBIT_IN32_47)          0.00       0.65 f
+  MUX1_2_8/port1[7] (Mux_NBit_2x1_NBIT_IN32_41)           0.00       0.65 f
+  MUX1_2_8/U49/ZN (AOI22_X1)                              0.06       0.71 r
+  MUX1_2_8/U19/ZN (INV_X1)                                0.02       0.73 f
+  MUX1_2_8/portY[7] (Mux_NBit_2x1_NBIT_IN32_41)           0.00       0.73 f
+  MUX1_3_0/port1[7] (Mux_NBit_2x1_NBIT_IN32_38)           0.00       0.73 f
+  MUX1_3_0/U51/ZN (AOI22_X1)                              0.06       0.79 r
+  MUX1_3_0/U10/ZN (INV_X1)                                0.02       0.82 f
+  MUX1_3_0/portY[7] (Mux_NBit_2x1_NBIT_IN32_38)           0.00       0.82 f
+  MUX1_4_0/port0[7] (Mux_NBit_2x1_NBIT_IN32_36)           0.00       0.82 f
+  MUX1_4_0/U18/ZN (AOI22_X1)                              0.04       0.86 r
+  MUX1_4_0/U17/ZN (INV_X1)                                0.02       0.88 f
+  MUX1_4_0/portY[7] (Mux_NBit_2x1_NBIT_IN32_36)           0.00       0.88 f
+  RF_out1[7] (out)                                        0.00       0.88 f
+  data arrival time                                                  0.88
+
+  max_delay                                               8.00       8.00
+  output external delay                                   0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -0.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.12
+
+
+1

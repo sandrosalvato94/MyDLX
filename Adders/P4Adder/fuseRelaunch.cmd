@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alessandro/Documents/GitHub/MyDLX/Adders/P4Adder/TB_P4Adder_isim_beh.exe" -prj "C:/Users/Alessandro/Documents/GitHub/MyDLX/Adders/P4Adder/TB_P4Adder_beh.prj" "work.TB_P4Adder" 

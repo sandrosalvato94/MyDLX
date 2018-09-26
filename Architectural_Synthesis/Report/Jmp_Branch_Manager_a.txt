@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : Jmp_Branch_Manager
+Version: Z-2007.03-SP1
+Date   : Tue Sep 11 20:18:43 2018
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:              133
+Number of nets:               201
+Number of cells:                7
+Number of references:           7
+
+Combinational area:        333.298001
+Noncombinational area:       0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:           333.298004
+Total area:                 undefined
+1
